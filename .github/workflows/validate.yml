@@ -1,0 +1,78 @@
+name: Validate RDF
+
+on:
+  push:
+    paths:
+      - '**.ttl'
+  pull_request:
+    paths:
+      - '**.ttl'
+
+jobs:
+  validate-turtle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install rdflib
+        run: pip install rdflib
+
+      - name: Parse every .ttl file individually and combined
+        run: |
+          python3 - <<'EOF'
+          import glob, sys
+          import rdflib
+
+          files = sorted(glob.glob('**/*.ttl', recursive=True))
+          if not files:
+              print("No .ttl files found — nothing to validate.")
+              sys.exit(0)
+
+          combined = rdflib.Graph()
+          failed = False
+
+          for f in files:
+              g = rdflib.Graph()
+              try:
+                  g.parse(f, format='turtle')
+                  combined.parse(f, format='turtle')
+                  print(f"OK   {f}  ({len(g)} triples)")
+              except Exception as e:
+                  failed = True
+                  print(f"FAIL {f}\n     {e}")
+
+          print(f"\nCombined graph: {len(combined)} triples across {len(files)} files")
+
+          if failed:
+              sys.exit(1)
+          EOF
+
+      - name: Check every LinkNote has a confidence value
+        run: |
+          python3 - <<'EOF'
+          import glob, sys
+          import rdflib
+          from rdflib import Namespace
+
+          TGS = Namespace("http://example.org/tgs#")
+
+          g = rdflib.Graph()
+          for f in glob.glob('**/*.ttl', recursive=True):
+              g.parse(f, format='turtle')
+
+          missing = []
+          for note in g.subjects(rdflib.RDF.type, TGS.LinkNote):
+              if not list(g.objects(note, TGS.confidence)):
+                  missing.append(str(note))
+
+          if missing:
+              print("LinkNote(s) missing tgs:confidence (must be 'curated' or 'candidate'):")
+              for m in missing:
+                  print(f"  - {m}")
+              sys.exit(1)
+          print("All LinkNotes have a confidence value.")
+          EOF

@@ -1,0 +1,23 @@
+# Versions below are reasonable-as-of-now pins, not guaranteed latest —
+# if `pip install -r requirements.txt` complains a version doesn't exist,
+# drop the ==version and let pip grab current, then re-pin what you get.
+
+# Core RDF
+rdflib==7.1.1
+pyoxigraph==0.5.3     # Python bindings for Oxigraph — lets you query/load
+                      # the store directly from Python instead of shelling
+                      # out to the CLI, useful for the promote_to_rdf script
+
+# Staging DB for the extraction review workflow
+duckdb==1.5.4
+
+# Transcript acquisition + extraction
+requests==2.32.3
+beautifulsoup4==4.12.3
+pdfplumber==0.11.4
+
+# LLM-assisted extraction (optional — only needed if you call the API
+# directly from Python rather than doing extraction passes in-chat)
+anthropic==0.40.0
+
+python-dotenv==1.0.1

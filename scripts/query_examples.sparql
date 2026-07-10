@@ -1,0 +1,55 @@
+# Run any one of these against the store, e.g.:
+#   oxigraph query --location ./tgs_store --query "<paste query here>"
+# or via the SPARQL endpoint if you ran `oxigraph serve`.
+
+PREFIX tgs:  <http://example.org/tgs#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# 1. List every concept with its definition
+# SELECT ?concept ?label ?def WHERE {
+#   ?concept a tgs:Concept ;
+#            rdfs:label ?label ;
+#            skos:definition ?def .
+# } ORDER BY ?label
+
+# 2. Every person linked to a given concept, with the rationale
+# (this is the core "explain the connection" query for the UI)
+SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
+  tgs:Overshoot ?relation ?person .
+  ?person a tgs:Person ;
+          rdfs:label ?personLabel .
+  ?note tgs:aboutSubject tgs:Overshoot ;
+        tgs:aboutObject ?person ;
+        dct:description ?rationale ;
+        tgs:confidence ?confidence .
+  FILTER(?relation != rdfs:label)
+}
+
+# 3. All CURATED (human-reviewed) links only — good default filter for a public-facing view
+# SELECT ?subjLabel ?relation ?objLabel ?rationale WHERE {
+#   ?note tgs:aboutSubject ?subj ;
+#         tgs:aboutObject ?obj ;
+#         dct:description ?rationale ;
+#         tgs:confidence "curated" .
+#   ?subj rdfs:label ?subjLabel .
+#   ?obj rdfs:label ?objLabel .
+#   ?subj ?relation ?obj .
+# }
+
+# 4. All CANDIDATE (unreviewed, LLM-proposed) links — your review queue
+# SELECT ?subjLabel ?objLabel ?rationale WHERE {
+#   ?note tgs:aboutSubject ?subj ;
+#         tgs:aboutObject ?obj ;
+#         dct:description ?rationale ;
+#         tgs:confidence "candidate" .
+#   ?subj rdfs:label ?subjLabel .
+#   ?obj rdfs:label ?objLabel .
+# }
+
+# 5. Concepts with no external links yet (your backlog / gaps)
+# SELECT ?label WHERE {
+#   ?concept a tgs:Concept ; rdfs:label ?label .
+#   FILTER NOT EXISTS { ?concept tgs:relatesTo|tgs:echoesIdeaOf|tgs:influencedBy ?x }
+# }

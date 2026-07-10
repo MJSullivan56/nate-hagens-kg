@@ -1,0 +1,80 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+
+#############################################
+# CROSS-LINKS
+#
+# Each link is a single triple. Because plain RDF triples
+# can't carry metadata (rationale, confidence) directly, each
+# link also gets a companion tgs:LinkNote resource that a
+# SPARQL query can join against. This keeps the graph simple
+# to query while still letting you track "curated (by me)"
+# vs "candidate (LLM-proposed, needs review)" per link — swap
+# for RDF-star (Oxigraph supports it) later if you want triples
+# to carry this natively.
+#############################################
+
+# --- Stoicism <-> Present Bias / discount rates ---
+tgs:DiscountRatesAndPresentBias tgs:echoesIdeaOf tgs:MarcusAurelius .
+tgs:link_discount_marcus a tgs:LinkNote ;
+    tgs:aboutSubject tgs:DiscountRatesAndPresentBias ;
+    tgs:aboutObject tgs:MarcusAurelius ;
+    dct:description "Stoic practice of distinguishing what is/isn't in one's control, and valuing present right action over deferred/imagined future reward, is a philosophical antecedent (not a cited influence) to the behavioral-economics critique of present bias Hagens draws on."@en ;
+    tgs:confidence "curated" .
+
+# --- Wetware / evolutionary mismatch <-> Freud ---
+tgs:Wetware tgs:echoesIdeaOf tgs:SigmundFreud .
+tgs:link_wetware_freud a tgs:LinkNote ;
+    tgs:aboutSubject tgs:Wetware ;
+    tgs:aboutObject tgs:SigmundFreud ;
+    dct:description "Freud's model of unconscious drives overriding rational self-interest anticipates Hagens' claim that evolved sub-conscious wiring, not conscious reasoning, drives collectively destructive behavior. Different mechanism (psychosexual drives vs. evolutionary mismatch) but the same basic move: rational-actor models are wrong about what's driving behavior."@en ;
+    tgs:confidence "curated" .
+
+# --- Overshoot <-> William Catton (direct influence, not just echo) ---
+tgs:Overshoot tgs:influencedBy tgs:WilliamCatton .
+tgs:link_overshoot_catton a tgs:LinkNote ;
+    tgs:aboutSubject tgs:Overshoot ;
+    tgs:aboutObject tgs:WilliamCatton ;
+    dct:description "Catton's 1980 book 'Overshoot' coined the term Hagens uses directly; this is a citable lineage, not just a thematic echo."@en ;
+    tgs:confidence "curated" .
+
+# --- Superorganism <-> E.O. Wilson (direct influence) ---
+tgs:Superorganism tgs:influencedBy tgs:EOWilson .
+tgs:link_superorganism_wilson a tgs:LinkNote ;
+    tgs:aboutSubject tgs:Superorganism ;
+    tgs:aboutObject tgs:EOWilson ;
+    dct:description "Wilson's work on eusociality and superorganisms in insect colonies is the direct biological source of the term Hagens applies (with qualification) to human civilization."@en ;
+    tgs:confidence "curated" .
+
+# --- Circle of Trust / Localism <-> Elinor Ostrom ---
+tgs:CircleOfTrustLocalism tgs:echoesIdeaOf tgs:ElinorOstrom .
+tgs:link_localism_ostrom a tgs:LinkNote ;
+    tgs:aboutSubject tgs:CircleOfTrustLocalism ;
+    tgs:aboutObject tgs:ElinorOstrom ;
+    dct:description "Ostrom's Nobel-winning research on communities self-governing shared resources without top-down control or privatization provides the empirical/theoretical backbone for why small-scale local resilience can actually work, rather than just being a romantic ideal."@en ;
+    tgs:confidence "curated" .
+
+# --- Human Predicament <-> MLK (contrast/application, not echo) ---
+tgs:MartinLutherKingJr tgs:appliesTo tgs:GrowthImperative .
+tgs:link_mlk_growth a tgs:LinkNote ;
+    tgs:aboutSubject tgs:MartinLutherKingJr ;
+    tgs:aboutObject tgs:GrowthImperative ;
+    dct:description "MLK's later writing (e.g. his critique of a society organized around 'thing-oriented' rather than 'person-oriented' values, and his turn toward economic justice/the Poor People's Campaign) is a real-world example of confronting a growth/extraction-oriented system, not primarily an ecological argument but a structurally adjacent one worth surfacing as contrast."@en ;
+    tgs:confidence "curated" .
+
+# --- Metacrisis <-> Gregory Bateson ---
+tgs:Metacrisis tgs:influencedBy tgs:GregoryBateson .
+tgs:link_metacrisis_bateson a tgs:LinkNote ;
+    tgs:aboutSubject tgs:Metacrisis ;
+    tgs:aboutObject tgs:GregoryBateson ;
+    dct:description "Bateson's systems-theoretic argument that fragmented, siloed problem-solving itself generates crises ('the pathologies of epistemology') is a direct intellectual ancestor of metacrisis framing used by Hagens and adjacent thinkers."@en ;
+    tgs:confidence "curated" .
+
+# --- CANDIDATE (unreviewed) example, to show the pattern for LLM-proposed links ---
+tgs:EnergyBlindness tgs:contrastsWith tgs:Buddha .
+tgs:link_energyblindness_buddha a tgs:LinkNote ;
+    tgs:aboutSubject tgs:EnergyBlindness ;
+    tgs:aboutObject tgs:Buddha ;
+    dct:description "LLM-suggested: both concern a kind of collective unawareness of the true conditions shaping suffering/behavior (avidya / ignorance vs. energy blindness). Flagged as speculative — needs review before treating as a real link; risk of forcing a surface parallel."@en ;
+    tgs:confidence "candidate" .

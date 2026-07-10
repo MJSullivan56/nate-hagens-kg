@@ -1,0 +1,114 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# NOTE ON NAMESPACE
+# http://example.org/tgs# is a placeholder.
+# Swap for something you control (e.g. a GitHub Pages
+# URL you own) before publishing, so the URIs resolve.
+#############################################
+
+#############################################
+# Classes
+#############################################
+
+tgs:Concept a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "A term or idea from Nate Hagens' Great Simplification framework (e.g. Energy Blindness, the Superorganism)."@en .
+
+tgs:Person a owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A philosopher, scientist, activist, or thinker being linked to a TGS concept."@en .
+
+tgs:School a owl:Class ;
+    rdfs:label "School of Thought"@en ;
+    rdfs:comment "A philosophical, religious, or intellectual tradition (e.g. Stoicism, Systems Ecology, Behavioral Economics)."@en .
+
+tgs:Work a owl:Class ;
+    rdfs:subClassOf dct:BibliographicResource ;
+    rdfs:label "Work"@en ;
+    rdfs:comment "A book, essay, or other work in which a concept or idea is developed."@en .
+
+tgs:Episode a owl:Class ;
+    rdfs:subClassOf tgs:Work ;
+    rdfs:label "Podcast Episode"@en ;
+    rdfs:comment "A Great Simplification podcast episode or Frankly video."@en .
+
+tgs:LinkNote a owl:Class ;
+    rdfs:label "Link Note"@en ;
+    rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en .
+
+#############################################
+# Object properties (the interesting part)
+#############################################
+
+tgs:aboutSubject a owl:ObjectProperty ;
+    rdfs:domain tgs:LinkNote ;
+    rdfs:label "about subject"@en .
+
+tgs:aboutObject a owl:ObjectProperty ;
+    rdfs:domain tgs:LinkNote ;
+    rdfs:label "about object"@en .
+
+tgs:relatesTo a owl:ObjectProperty ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range [ owl:unionOf ( tgs:Concept tgs:Person tgs:School ) ] ;
+    rdfs:label "relates to"@en ;
+    rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en .
+
+tgs:echoesIdeaOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf tgs:relatesTo ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range tgs:Person ;
+    rdfs:label "echoes idea of"@en ;
+    rdfs:comment "The TGS concept independently converges on / restates an idea this person is known for. No claim of direct influence."@en .
+
+tgs:influencedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tgs:relatesTo ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range [ owl:unionOf ( tgs:Person tgs:School ) ] ;
+    rdfs:label "influenced by"@en ;
+    rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en .
+
+tgs:contrastsWith a owl:ObjectProperty ;
+    rdfs:subPropertyOf tgs:relatesTo ;
+    rdfs:label "contrasts with"@en ;
+    rdfs:comment "Useful tension or disagreement worth surfacing to a learner, not just agreement."@en .
+
+tgs:appliesTo a owl:ObjectProperty ;
+    rdfs:domain tgs:Person ;
+    rdfs:range tgs:Concept ;
+    rdfs:label "provides real-world example of"@en ;
+    rdfs:comment "For activists/practitioners rather than philosophers: this person's work is a concrete instance of the concept (e.g. MLK's organizing as an example of collective-action dynamics discussed under a TGS concept)."@en .
+
+tgs:memberOf a owl:ObjectProperty ;
+    rdfs:domain tgs:Person ;
+    rdfs:range tgs:School ;
+    rdfs:label "member of / associated with"@en .
+
+tgs:discussedIn a owl:ObjectProperty ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range tgs:Episode ;
+    rdfs:label "discussed in episode"@en .
+
+tgs:definedIn a owl:ObjectProperty ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range tgs:Work ;
+    rdfs:label "primarily defined in"@en .
+
+#############################################
+# Data properties
+#############################################
+
+tgs:confidence a owl:DatatypeProperty ;
+    rdfs:domain tgs:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:comment "'curated' (human-reviewed) vs 'candidate' (LLM-proposed, unreviewed). Use this on the *link*, not the concept, in practice — see data/seed/links.ttl for the pattern." .

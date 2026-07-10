@@ -1,0 +1,103 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+
+#############################################
+# PEOPLE — starter set
+# owl:sameAs links to DBpedia give you a free on-ramp to
+# Wikidata (DBpedia entities carry wikidata sameAs links too),
+# so you can pull birth/death dates, schools of thought,
+# related concepts, etc. without hand-curating them.
+#############################################
+
+tgs:MarcusAurelius a tgs:Person ;
+    rdfs:label "Marcus Aurelius"@en ;
+    owl:sameAs dbr:Marcus_Aurelius ;
+    tgs:memberOf tgs:Stoicism .
+
+tgs:Epictetus a tgs:Person ;
+    rdfs:label "Epictetus"@en ;
+    owl:sameAs dbr:Epictetus ;
+    tgs:memberOf tgs:Stoicism .
+
+tgs:SigmundFreud a tgs:Person ;
+    rdfs:label "Sigmund Freud"@en ;
+    owl:sameAs dbr:Sigmund_Freud .
+
+tgs:MartinLutherKingJr a tgs:Person ;
+    rdfs:label "Martin Luther King Jr."@en ;
+    owl:sameAs <http://dbpedia.org/resource/Martin_Luther_King_Jr.> .
+
+tgs:EOWilson a tgs:Person ;
+    rdfs:label "E. O. Wilson"@en ;
+    owl:sameAs dbr:E._O._Wilson .
+
+tgs:EmileDurkheim a tgs:Person ;
+    rdfs:label "Émile Durkheim"@en ;
+    owl:sameAs dbr:Émile_Durkheim .
+
+tgs:DonellaMeadows a tgs:Person ;
+    rdfs:label "Donella Meadows"@en ;
+    owl:sameAs dbr:Donella_Meadows .
+
+tgs:WilliamCatton a tgs:Person ;
+    rdfs:label "William R. Catton Jr."@en ;
+    owl:sameAs <http://dbpedia.org/resource/William_R._Catton_Jr.> .
+
+tgs:ElinorOstrom a tgs:Person ;
+    rdfs:label "Elinor Ostrom"@en ;
+    owl:sameAs dbr:Elinor_Ostrom .
+
+tgs:IvanIllich a tgs:Person ;
+    rdfs:label "Ivan Illich"@en ;
+    owl:sameAs dbr:Ivan_Illich .
+
+tgs:WendellBerry a tgs:Person ;
+    rdfs:label "Wendell Berry"@en ;
+    owl:sameAs dbr:Wendell_Berry .
+
+tgs:RachelCarson a tgs:Person ;
+    rdfs:label "Rachel Carson"@en ;
+    owl:sameAs dbr:Rachel_Carson .
+
+tgs:DanielKahneman a tgs:Person ;
+    rdfs:label "Daniel Kahneman"@en ;
+    owl:sameAs dbr:Daniel_Kahneman .
+
+tgs:Aristotle a tgs:Person ;
+    rdfs:label "Aristotle"@en ;
+    owl:sameAs dbr:Aristotle .
+
+tgs:Buddha a tgs:Person ;
+    rdfs:label "Gautama Buddha"@en ;
+    owl:sameAs dbr:Gautama_Buddha .
+
+tgs:GregoryBateson a tgs:Person ;
+    rdfs:label "Gregory Bateson"@en ;
+    owl:sameAs dbr:Gregory_Bateson .
+
+#############################################
+# Schools of thought
+#############################################
+
+tgs:Stoicism a tgs:School ;
+    rdfs:label "Stoicism"@en ;
+    owl:sameAs dbr:Stoicism .
+
+tgs:SystemsEcology a tgs:School ;
+    rdfs:label "Systems Ecology"@en ;
+    owl:sameAs dbr:Systems_ecology .
+
+tgs:BehavioralEconomics a tgs:School ;
+    rdfs:label "Behavioral Economics"@en ;
+    owl:sameAs dbr:Behavioral_economics .
+
+tgs:DegrowthMovement a tgs:School ;
+    rdfs:label "Degrowth"@en ;
+    owl:sameAs dbr:Degrowth .
+
+tgs:CivilRightsMovement a tgs:School ;
+    rdfs:label "U.S. Civil Rights Movement"@en ;
+    owl:sameAs dbr:Civil_rights_movement .

@@ -1,0 +1,30 @@
+# Oxigraph store (binary, local, regenerated via load_oxigraph.sh)
+tgs_store/
+scripts/tgs_store/
+*.oxigraph/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# DuckDB staging (local review queue — not source of truth)
+extraction/staging.duckdb
+extraction/*.duckdb
+
+# Generated RDF from the promote workflow — decide deliberately whether
+# to commit this or keep regenerating it; gitignored by default here
+data/generated/
+
+# Downloaded transcripts (large, regeneratable — keep the repo lean;
+# store the fetch list/script instead, not the PDFs themselves)
+extraction/transcripts_raw/
+extraction/*.pdf
+
+# OS/editor cruft
+.DS_Store
+*.swp
+
+# Protégé
+.protege.log
