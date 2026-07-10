@@ -12,6 +12,26 @@ the full picture — this file is the condensed version for session start.
   (`extraction/staging.duckdb`, not committed)
 - Python venv (`make venv`) for all scripting
 
+## Current status (last updated 2026-07-09)
+- Repo is live at https://github.com/MJSullivan56/nate-hagens-kg, default branch
+  `main`, `master` deleted both locally and on GitHub.
+- CI ("Validate RDF") is green on the initial push — confirms all `.ttl` files
+  parse and every `tgs:LinkNote` has a confidence value.
+- Local machine setup NOT yet done as of this writing: `.venv` has not been
+  created on this laptop yet (`make venv` still outstanding). Oxigraph install
+  status via Homebrew also unconfirmed — check with `oxigraph --version`
+  before assuming it's there.
+- Content status: seed data only (~14 concepts, ~16 people/schools, 8 curated
+  links, 1 example candidate link). No expansion or extraction pipeline runs
+  have happened yet. This is the actual next-work item, not more setup.
+- VS Code: SPARQL Notebook extension not yet confirmed installed on this
+  machine — check before assuming query-from-editor works.
+
+## For a future session picking this up
+Read this file, then check `git log --oneline -10` and `git status` to see
+what's changed since the "Current status" note above was written — that note
+will go stale, the git history won't.
+
 ## Ground rules for changes in this repo
 - **Never mark a `tgs:LinkNote` as `tgs:confidence "curated"` without a human
   having actually reviewed the specific claim.** This is the most important
