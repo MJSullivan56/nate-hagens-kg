@@ -12,6 +12,15 @@ the full picture — this file is the condensed version for session start.
   (`extraction/staging.duckdb`, not committed)
 - Python venv (`make venv`) for all scripting
 
+## Working agreement (as of 2026-07-10)
+Jim edits the TTL files directly going forward — particularly adding
+verified Wikidata `owl:sameAs` links (see `data/seed/wikidata_links.ttl`
+for the pattern and the disambiguation-page trap it documents) — and
+reports changes back rather than routing every addition through a session
+here first. A future session should NOT assume it has full knowledge of
+the current graph state from this file alone; always check `git log` and
+re-run `make validate` before making assumptions about what exists.
+
 ## Current status (last updated 2026-07-10)
 - Repo is live at https://github.com/MJSullivan56/nate-hagens-kg, default branch
   `main`, `master` deleted both locally and on GitHub.

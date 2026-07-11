@@ -1,6 +1,7 @@
 @prefix tgs:   <http://example.org/tgs#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix dbr:   <http://dbpedia.org/resource/> .
 
@@ -84,20 +85,29 @@ tgs:GregoryBateson a tgs:Person ;
 
 tgs:Stoicism a tgs:School ;
     rdfs:label "Stoicism"@en ;
+    skos:definition "Ancient Greco-Roman philosophical school. Relevant here specifically for its emphasis on distinguishing what is/isn't within one's control and valuing present right action — the philosophical antecedent cited for the Discount Rates / Present Bias concept."@en ;
     owl:sameAs dbr:Stoicism .
 
 tgs:SystemsEcology a tgs:School ;
     rdfs:label "Systems Ecology"@en ;
+    skos:definition "The branch of ecology studying ecosystems as integrated systems, applying concepts like carrying capacity and feedback loops. Relevant here as the disciplinary origin of Overshoot, Ecological Overshoot, and related concepts Hagens draws on directly (Catton, Meadows)."@en ;
     owl:sameAs dbr:Systems_ecology .
 
 tgs:BehavioralEconomics a tgs:School ;
     rdfs:label "Behavioral Economics"@en ;
+    skos:definition "The field studying how real (rather than idealized-rational) human psychology affects economic decisions. Relevant here as the disciplinary framing behind Discount Rates / Present Bias and Human 'Wetware' — Hagens draws on this field's empirical findings to argue markets systematically misprice long-term ecological risk."@en ;
     owl:sameAs dbr:Behavioral_economics .
 
 tgs:DegrowthMovement a tgs:School ;
     rdfs:label "Degrowth"@en ;
+    skos:definition "A political, economic, and social movement critiquing GDP growth as a policy goal and advocating planned reduction of material/energy throughput in wealthy economies. Relevant here as an adjacent (not identical) framework to Hagens' Growth Imperative critique — worth distinguishing rather than conflating, since Hagens' emphasis on biophysical limits and degrowth's emphasis on distributive justice/policy overlap but aren't the same argument."@en ;
     owl:sameAs dbr:Degrowth .
 
 tgs:CivilRightsMovement a tgs:School ;
     rdfs:label "U.S. Civil Rights Movement"@en ;
+    skos:definition "The mid-20th-century U.S. movement for racial equality under law. Relevant here specifically as the context for MLK's later economic-justice organizing (Poor People's Campaign), used as a real-world contrast case for the Growth Imperative concept — not cited for its core civil-rights aims, which are a separate matter from TGS's scope."@en ;
     owl:sameAs dbr:Civil_rights_movement .
+
+tgs:PeakOilMovement a tgs:School ;
+    rdfs:label "Peak Oil (movement/community)"@en ;
+    skos:definition "The loosely-organized, decades-long community of analysts, forecasters, geologists, and commentators studying and publicizing oil depletion dynamics (ASPO, peakoil.com-era forums, etc.) — distinct from tgs:PeakOil, which is the underlying theory/phenomenon itself. Note on scope: this community is genuinely heterogeneous in rigor and ideology, ranging from serious petroleum-geology analysis to more speculative 'doomer' content, and has no single unifying institution. Included despite that heterogeneity because the core theoretical work (Hubbert Peak Theory) has had multi-decade real-world influence and is a direct formative input to Hagens' own analytical background — he worked professionally in this space before founding The Great Simplification."@en .
