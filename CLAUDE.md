@@ -425,6 +425,46 @@ NOT worth building prematurely — revisit once there's been another round or
 two of real content expansion and the patterns (especially the Evidence
 model, if built) have proven durable rather than still shifting.
 
+REUSABILITY GOAL RESTATED 2026-07-11, worth keeping visible: this
+methodology should generalize beyond Hagens (the original thinkr:/tgs:
+namespace split was specifically for this — see the "Reusable methodology"
+section near the top of this file), and it should stay HUMAN-IN-THE-LOOP —
+not a fully-automated pipeline. Every real verification step this session
+(search before trusting memory, check a hit is actually the right entity
+before linking it, distinguish "confirmed absent" from "not yet checked")
+was a human-guided judgment call, not something safe to fully automate.
+
+FIRST-DRAFT "BOOTSTRAP A NEW PERSON" PROCEDURE, extracted 2026-07-11 from
+actually doing this for real (Nate Hagens himself — see persons.ttl,
+schools.ttl). Not yet a formal Skill, just the pattern worth generalizing
+once there's a second real example (ideally a genuinely different
+person/context) to test it against:
+  1. Search to confirm real, verifiable identity and key affiliations —
+     never from memory alone, this project's rule throughout.
+  2. Check for a genuine Wikipedia page — verify it's actually THIS
+     person, not a same-named different individual (hit exactly this trap
+     today: the only Wikidata match for "Nate Hagens" was an unrelated
+     ORCID researcher) or a non-canonical mirror site (EverybodyWiki is
+     not Wikipedia, hit this today too).
+  3. If real: get DBpedia URI (mirrors the Wikipedia title) AND
+     separately verify the Wikidata QID directly — don't assume, check
+     for disambiguation-page traps (the earlier Marcus Aurelius case).
+  4. If NO real Wikipedia page exists: say so explicitly in the
+     individual's own definition/comment, don't just silently omit the
+     link — a future session needs to know "checked, confirmed absent"
+     versus "nobody got around to checking yet," these are different
+     states worth distinguishing (same epistemic-honesty principle as the
+     Contributor/Mention OWA fix).
+  5. Identify key affiliations (organizations, schools of thought) and
+     verify EACH ONE'S own legitimacy before creating it as a School —
+     don't inherit unverified trust from the person onto their affiliations.
+  6. Add `memberOf` links connecting the Person to each verified
+     affiliation.
+  7. Add credentials per the established scope (publications/credentials,
+     not full employment history — see the social graph backlog item).
+  8. Test: run a real query confirming every new link actually resolves
+     before considering the bootstrap done — not just "the file parses."
+
 ## Ground rules for changes in this repo
 - **Never point a `tgs:LinkNote`'s `tgs:confidence` at
   `tgs:ConfidenceLevel.Curated` without a human having actually reviewed
