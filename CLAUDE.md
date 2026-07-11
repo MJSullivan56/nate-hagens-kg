@@ -193,14 +193,15 @@ structural changes:
    actual transcripts/book text. Worth tightening against primary sources
    over time, not urgent.
 
-## Current data state (as of 2026-07-11, post-file-reorganization)
-- 678 triples total (`make validate` should confirm this exactly)
-- 19 Concepts, 20 People, 6 Schools, 14 LinkNotes (13 curated, 1
-  deliberately-marked candidate as a review-queue example), 14 Evidence
-  individuals (one per LinkNote so far — 1:1 for now, but the model
-  supports many-to-one), 0 Source individuals yet (every Evidence so far
-  is unsourced/direct-reasoning, defaulting to Reputable tier), 12 Subject
-  individuals (6 official + 6 derived sub-topics, all 19 Concepts tagged)
+## Current data state (as of 2026-07-11, post-convergesWith)
+- 719 triples total (`make validate` should confirm this exactly)
+- 19 Concepts, 21 People (added Kate Raworth), 7 Schools (added Doughnut
+  Economics), 15 LinkNotes (14 curated, 1 deliberately-marked candidate as
+  a review-queue example), 15 Evidence individuals, 1 Source individual
+  (the CalDEC California Doughnut Report — first real use, was empty until
+  2026-07-11), 1 Work individual (same report — also first real use), 12
+  Subject individuals (6 official + 6 derived sub-topics, all 19 Concepts
+  tagged)
 - **Files, one class per file (governance principle, 2026-07-11)** — see
   README.md's Structure section for the full rationale and per-file
   descriptions. `data/seed/tgs-core.ttl` is the shared vocabulary;
@@ -254,29 +255,34 @@ pointing at it. What's still NOT done: the actual cross-REPO split — everythin
 still lives in one git repo (`nate-hagens-kg`). The file-level separation
 makes a future repo split easier when it happens (just move
 `tgs-core.ttl` + `catalog-v001.xml` out), but isn't the same thing. Still
-cheapest to do while the graph is small (678 triples).
+cheapest to do while the graph is small (719 triples).
 
-**HIGH — Cross-tradition "convergent parallel" property.** Concrete trigger
-case: Stoicism ↔ the Bhagavad Gita — independently-developed traditions
-converging on similar ideas (equanimity toward outcomes, duty without
-attachment to results), with no causal lineage between them. Schema
-currently CANNOT express this at all: every relation property has
-`rdfs:domain tgs:Concept`, so a `tgs:School` can only ever be the *object* of
-a relation, never the subject — no School-to-School or School-to-Work
-property exists yet. Recommended fix: (1) a new symmetric property, e.g.
-`tgs:convergesWith` (`a owl:SymmetricProperty`) — deliberately distinct from
-`influencedBy`/`echoesIdeaOf`, which both imply direction/lineage this
-relationship doesn't have; (2) model specific texts (the Bhagavad Gita) as
-`tgs:Work` instances — that class has existed since the original schema but
-has zero instances so far — rather than stretching `tgs:School` to cover
-individual texts. Link at the text level first (more precise/citable); only
-add a broader tradition-level School (Vedanta, etc.) if multiple texts from
-one tradition need linking at once. Note: this property will need the SAME
-Evidence-backed provenance treatment as the item above, probably more so —
-"these two ancient traditions converge" is a much bigger, more contestable
-claim than a single concept-to-person link, and correspondingly easier for
-an LLM to generate plausible-sounding versions of if extraction ever points
-at it.
+**DONE 2026-07-11 — Cross-tradition "convergent parallel" property.** Built
+as `thinkr:convergesWith` (`owl:ObjectProperty, owl:SymmetricProperty`) in
+`tgs-core.ttl`. First real use: `tgs:Concept.Overshoot` ↔
+`tgs:School.DoughnutEconomics` (Kate Raworth's framework, applied
+regionally by CalDEC — see their CC-BY-licensed 2025 California Doughnut
+Report, which independently uses "overshoot" as a technical term). `Work`
+and `Source` — both declared since the original schema but empty until now
+— got their first real instances and were promoted to their own files
+(`works.ttl`, `sources.ttl`) per the one-class-one-file governance
+principle. Full Evidence-backed provenance chain built: `LinkNote` →
+`Evidence` (Curated, Supports) → `Source` (Authoritative tier, DOI-
+registered) → correctly derives `calculatedConfidence: Curated` via
+`compute_confidence.py`, tested end-to-end.
+CORRECTION CAUGHT DURING BUILD: `owl:SymmetricProperty` is a FORMAL OWL
+semantic — it does NOT make the reverse direction queryable without a
+reasoner. Verified empirically: querying from `School.DoughnutEconomics`
+side returned zero results until the reverse triple was added by hand.
+The property's own original comment claimed the opposite ("no need to
+assert both directions") — wrong, and corrected in `tgs-core.ttl` once
+caught. **Both directions must be explicitly asserted for every future
+`convergesWith` use** — this will not be automatic no matter how many
+times it's tempting to assume OWL semantics mean SPARQL will "just know."
+Case chosen (Stoicism ↔ Bhagavad Gita) was NOT what ended up triggering the
+build — CalDEC/Doughnut Economics came up first in practice. Stoicism ↔
+Gita remains a good candidate for the second use of this property whenever
+it comes up again, same reasoning as originally logged.
 
 **CORRECTION LOGGED 2026-07-10 — blank nodes are NOT the right tool for
 either item above.** Blank nodes were briefly proposed for provenance —
@@ -309,6 +315,80 @@ matters if tracking how Hagens' thinking has shifted over time is a real
 goal, as opposed to "what does he currently believe" — raised during the
 bottom-up-vs-top-down content strategy discussion, not yet prioritized.
 
+**MEDIUM — Social/professional graph layer ("who knows who").** Proposed
+2026-07-11: a parallel layer tracking real-world professional/social
+connections between people in the TGS/Doughnut world — starting with
+everyone Nate Hagens has had on the show or mentioned. SCOPE NARROWED same
+day: not full employment history — specifically publications contributed
+to and credentials relevant to TGS/Doughnut Economics. This actually needs
+little new schema: `thinkr:Work` already exists (see `works.ttl`, first
+real instance already built for the CalDEC report) and Dublin Core's
+`dct:creator`/`dct:contributor` already cover "who contributed to this
+publication" — pure reuse, no new classes needed for that half. Credentials
+specifically still needs a real example before designing the property
+("Policy Lead, CalDEC" vs "PhD Ecological Economics" probably want
+different shapes) — same "let's see what the data tells us" principle as
+the OWL/SKOS split, not designed in the abstract.
+LINKEDIN, RESOLVED: manual login-and-screenshot is fine, meaningfully
+different from automated scraping (which remains off-limits per LinkedIn's
+ToS). Most published authors have CVs elsewhere too, so LinkedIn ends up
+being one manual source among several, not the sole one. Privacy judgment
+call is about what gets PUBLISHED in the graph, not how it was gathered —
+still worth per-person consideration for non-public-figure guests even
+though the collection method itself is now clean.
+CLASSIFICATION RULE RESOLVED 2026-07-11: Contributor IFF their publications
+align with the TGS/Doughnut movement; otherwise, just a "mention." Cleaner
+than the ally/critic axis first proposed — sidesteps sentiment/stance
+detection entirely (a hard NLP problem, not worth bolting onto the rough
+`extraction/index_named_entities.py` triage tool) by grounding the
+classification in something objective and already-scoped: does this
+Person have a `thinkr:Work` (via `dct:creator`/`dct:contributor`) that
+actually aligns? Elon Musk correctly falls out as "mention" — no aligned
+publications, no stance-detection needed. Also correctly handles the
+mirror case (someone with publications explicitly ARGUING AGAINST
+degrowth/limits thinking) without a separate "critic" category — they
+simply don't qualify as Contributor either.
+OPEN WORLD ASSUMPTION CORRECTION, same day: the rule as first stated is a
+CLOSED-world rule and would be wrong if implemented literally in RDF —
+absence of a Work in the graph doesn't mean absence of one in reality, it
+might just mean it hasn't been catalogued yet. Fix, reusing a pattern
+already proven elsewhere in this project (`ConfidenceLevel.Candidate` as
+an epistemic floor state, not a confirmed negative — same shape as
+`Disputed` needing to be an ACTIVE assertion, not a default): `Contributor`
+must be a positively-asserted status, made true only when a qualifying
+`Work` is actually confirmed. "Mention" is NOT a status to assert at
+all — it's just the absence of a `Contributor` assertion. Anyone with a
+`Person` individual lacking that assertion is honestly "not yet
+established as Contributor," freely upgradable the moment a real
+publication surfaces, rather than a claim that would ever need retracting.
+Known, accepted consequence of the underlying rule (unaffected by the OWA
+fix): a genuine personal/professional connection with no aligned
+publications (a collaborator, an activist without formal writing) also
+never gets a `Contributor` assertion — consistent with narrowing this
+layer to publications-and-credentials rather than broader social
+proximity.
+THIRD STATUS ADDED 2026-07-11: `InvitedGuest`, proposed for people Nate has
+personally had on the show who may lack a citable aligned publication (a
+guest with no formal CV is unlikely but possible). Fits the same
+positively-asserted, OWA-safe pattern as `Contributor` — NOT a rung between
+Contributor and Mention on a ladder, an independent fact with its own
+evidence. Not mutually exclusive with Contributor — someone can hold both.
+Precision worth keeping: WHETHER someone was a specific episode's featured
+guest is objectively checkable (in `download_manifest.csv`'s episode
+metadata) and can be Authoritative-tier reliable; the SIGNIFICANCE of being
+invited is Nate's own editorial judgment, which the graph can report as a
+fact about his selection process but can't itself verify — same
+reliability/significance split the ReliabilityTier/EvidencePolarity model
+already handles elsewhere.
+PRACTICAL SHORTCUT: likely mostly derivable from data already downloaded,
+not new manual research — every `type=interview` episode's title in
+`download_manifest.csv` typically has the guest's name baked in
+(`224-rob-hopkins`, `226-matthew-monahan`). Frankly episodes (solo) don't
+apply; this is an interview/roundtable-type signal specifically.
+Still open: does this deserve its own file/data layer, given it's a
+different research question than the idea-linking work? Not started —
+logged for discussion, not build-ready yet.
+
 **MEDIUM — Wikidata verification.** ~21 of ~23 people/schools still need
 verified Wikidata `owl:sameAs` links (pattern established in
 `data/seed/wikidata_links.ttl`, just needs the per-entity verification
@@ -319,9 +399,10 @@ guessing from memory is genuinely risky).
 first-draft paraphrases (design decision #6), never checked against actual
 Hagens transcripts/book text. Not urgent, but a real accuracy gap.
 
-**LOW — `tgs:Episode` still fully unused.** `tgs:Work` is on a path to its
-first real use via the convergence-property backlog item above; `tgs:Episode`
-has no such plan yet — no instances, no concrete trigger case identified.
+**LOW — `tgs:Episode` still fully unused.** `tgs:Work` got its first real
+instance 2026-07-11 (the CalDEC report, see the convergesWith DONE item
+above) and was promoted to its own `works.ttl` file; `tgs:Episode` has no
+such plan yet — no instances, no concrete trigger case identified.
 
 **LOW — `tgs:memberOf` consistency question.** Doesn't chain up to
 `tgs:relatesTo` the way the concept-to-person properties do
@@ -373,6 +454,20 @@ model, if built) have proven durable rather than still shifting.
 Backward-looking, as opposed to the forward-looking Backlog above. Each of
 these actually happened and cost real debugging time; logged so a future
 session (or MJSullivan on a tired evening) doesn't repeat it.
+
+- **`owl:SymmetricProperty` does NOT make the reverse direction queryable
+  without a reasoner.** Built `thinkr:convergesWith` as formally symmetric
+  and wrote a comment claiming "no need to assert both directions" —
+  wrong. Plain SPARQL triple matching (what this project's tooling
+  actually uses, no reasoner in the loop) only finds what's literally
+  asserted. Caught by testing the reverse-direction query and getting
+  zero results despite the forward triple being present. Fixed by adding
+  the reverse triple explicitly and correcting the property's own
+  comment. Any future symmetric property needs BOTH directions asserted
+  as real triples, full stop — this is the same underlying lesson as
+  always explicitly typing `owl:NamedIndividual` instead of relying on
+  `rdfs:subClassOf` inference, just a different OWL feature tripping the
+  same wire.
 
 - **When splitting a graph by class, classes with ZERO instances yet are
   easy to forget entirely.** During the 2026-07-11 one-class-one-file
@@ -477,7 +572,7 @@ session (or MJSullivan on a tired evening) doesn't repeat it.
 ## Common commands
 ```bash
 make venv            # create .venv and install requirements.txt
-make validate         # parse-check every .ttl file (expect 678 triples)
+make validate         # parse-check every .ttl file (expect 719 triples)
 make load-oxigraph    # load everything into a local Oxigraph store
 make init-db           # set up the DuckDB review-queue tables
 make promote-dry       # preview what promote_to_rdf.py would write
