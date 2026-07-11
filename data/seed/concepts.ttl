@@ -1,3 +1,4 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix tgs:   <http://example.org/tgs#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
@@ -13,72 +14,72 @@
 # dct:source pointing at the specific episode/page once you do.
 #############################################
 
-tgs:GreatSimplification a tgs:Concept ;
+tgs:Concept.GreatSimplification a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "The Great Simplification"@en ;
     skos:definition "Hagens' term for a coming, likely non-linear reduction in the complexity, energy throughput, and material consumption of global civilization, as fossil fuel surplus energy declines relative to what the economy has grown to expect."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:Superorganism a tgs:Concept ;
+tgs:Concept.Superorganism a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "The Superorganism"@en ;
     skos:definition "Framing human civilization as a single self-organizing, energy-and-resource-consuming entity whose collective behavior is not simply the sum of individual human intentions — echoing biological superorganism concepts (ant colonies, etc.) applied to techno-industrial society."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:CarbonPulse a tgs:Concept ;
+tgs:Concept.CarbonPulse a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "The Carbon Pulse"@en ;
     skos:definition "The one-time, temporary burst of high-density energy available to humanity via fossil fuels, framed as a short pulse on a geological timescale rather than a permanent baseline."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:EnergyBlindness a tgs:Concept ;
+tgs:Concept.EnergyBlindness a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Energy Blindness"@en ;
     skos:definition "The tendency of economics, policy, and everyday thinking to treat energy as a substitutable input abstracted into monetary terms, obscuring how dependent modern life is on cheap, concentrated, finite energy."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:EROI a tgs:Concept ;
+tgs:Concept.EROI a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "EROI (Energy Return on Investment)"@en ;
     skos:definition "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:EnergySlaves a tgs:Concept ;
+tgs:Concept.EnergySlaves a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Energy Slaves"@en ;
     skos:definition "A framing device measuring the work output of fossil-fuel energy in equivalent human labor-hours, to make the scale of energy subsidy to modern life viscerally graspable."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:HumanPredicament a tgs:Concept ;
+tgs:Concept.HumanPredicament a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "The Human Predicament"@en ;
     skos:definition "Hagens' preferred framing over 'the climate problem' or 'the energy problem' — the interlocking set of ecological overshoot, energy decline, economic dependence on growth, and human behavioral wiring, treated as a single systemic predicament rather than a checklist of separate problems with separate solutions."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:Overshoot a tgs:Concept ;
+tgs:Concept.Overshoot a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Ecological Overshoot"@en ;
     skos:definition "The condition of a population/economy consuming renewable and non-renewable resources faster than natural systems can regenerate or absorb waste from them, borrowed from systems ecology (Catton, Meadows) and applied to the global economy."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:DiscountRatesAndPresentBias a tgs:Concept ;
+tgs:Concept.DiscountRatesAndPresentBias a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Discount Rates / Present Bias"@en ;
     skos:definition "The behavioral and financial tendency to heavily undervalue future costs and benefits relative to present ones, which Hagens treats as a key mechanism by which markets and individuals systematically under-price long-term ecological risk."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:GrowthImperative a tgs:Concept ;
+tgs:Concept.GrowthImperative a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "The Growth Imperative"@en ;
     skos:definition "The structural requirement of debt-based monetary systems and compound interest for continual economic growth, which Hagens argues locks in ever-increasing energy/material throughput regardless of ecological limits."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:Metacrisis a tgs:Concept ;
+tgs:Concept.Metacrisis a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Metacrisis"@en ;
     skos:definition "A term (shared with adjacent thinkers like Daniel Schmachtenberger) for the idea that today's separate crises — climate, biodiversity, inequality, political polarization, mental health — share common generative root causes rather than being independent problems."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:Wetware a tgs:Concept ;
+tgs:Concept.Wetware a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Human 'Wetware' / Evolutionary Mismatch"@en ;
     skos:definition "The idea that human cognitive and emotional wiring evolved for small-group, resource-scarce Pleistocene environments and is poorly matched to modern abundance, abstraction, and global-scale decision-making — a recurring lens Hagens uses to explain collectively self-destructive behavior."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:CircleOfTrustLocalism a tgs:Concept ;
+tgs:Concept.CircleOfTrustLocalism a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Local Resilience / 'Circle of Trust'"@en ;
     skos:definition "Hagens' emphasis on rebuilding smaller-scale, face-to-face community and local resource resilience as an adaptive response to declining energy surplus and institutional fragility."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:TheoryOfChange a tgs:Concept ;
+tgs:Concept.TheoryOfChange a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Theory of Change (Emergence / Initial Conditions)"@en ;
     skos:definition "Hagens' stated approach to influence: rather than trying to reach and convert millions directly, cultivate a smaller network of well-informed people ('scout team') who shift the initial conditions from which broader social emergence unfolds."@en ;
     dct:source <https://www.thegreatsimplification.com/wp-content/uploads/2025/12/TGS-205-Nate-Hagens-Transcript.pdf> .

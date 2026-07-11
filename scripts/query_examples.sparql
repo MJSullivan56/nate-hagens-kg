@@ -17,10 +17,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # 2. Every person linked to a given concept, with the rationale
 # (this is the core "explain the connection" query for the UI)
 SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
-  tgs:Overshoot ?relation ?person .
+  tgs:Concept.Overshoot ?relation ?person .
   ?person a tgs:Person ;
           rdfs:label ?personLabel .
-  ?note tgs:aboutSubject tgs:Overshoot ;
+  ?note tgs:aboutSubject tgs:Concept.Overshoot ;
         tgs:aboutObject ?person ;
         dct:description ?rationale ;
         tgs:confidence ?confidence .

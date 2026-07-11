@@ -17,88 +17,88 @@
 
 # --- New concepts ---
 
-tgs:JevonsParadox a tgs:Concept ;
+tgs:Concept.JevonsParadox a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Jevons Paradox"@en ;
     skos:definition "The observation that increases in efficiency of resource use often lead to increased total consumption of that resource rather than decreased, because efficiency lowers effective cost and expands use — a recurring theme in Hagens' skepticism toward efficiency-alone as a solution to overshoot."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:LimitsToGrowth a tgs:Concept ;
+tgs:Concept.LimitsToGrowth a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Limits to Growth"@en ;
     skos:definition "Reference to the 1972 Club of Rome-commissioned study modeling interactions between population, industrialization, pollution, food production, and resource depletion, projecting overshoot-and-decline dynamics on multi-decade timescales — a direct intellectual predecessor to Hagens' framework."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:PeakOil a tgs:Concept ;
+tgs:Concept.PeakOil a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Peak Oil"@en ;
     skos:definition "The point at which the maximum rate of petroleum extraction is reached, after which production enters terminal decline — a formative concept in Hagens' background (he worked as a peak oil analyst before founding The Great Simplification) and foundational to his energy-decline framing."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:ComplexityCollapse a tgs:Concept ;
+tgs:Concept.ComplexityCollapse a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Complexity and Collapse"@en ;
     skos:definition "The idea that societies invest in increasing complexity (institutions, specialization, infrastructure) to solve problems, but complexity carries rising energy/resource costs with diminishing returns — eventually making collapse (a rapid loss of complexity) a rational, if painful, adaptive response rather than an aberration."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
-tgs:MoneyAsClaimOnEnergy a tgs:Concept ;
+tgs:Concept.MoneyAsClaimOnEnergy a tgs:Concept, owl:NamedIndividual ;
     rdfs:label "Money as a Claim on Future Energy"@en ;
     skos:definition "Hagens' framing of money not as wealth itself but as a social/legal claim on future energy and resources — meaning monetary growth (via debt, interest) implicitly presumes continued growth in real energy throughput, tying the Growth Imperative concept directly to biophysical limits rather than treating them as separate domains."@en ;
     dct:source <https://www.thegreatsimplification.com> .
 
 # --- New people ---
 
-tgs:JosephTainter a tgs:Person ;
+tgs:Person.JosephTainter a tgs:Person, owl:NamedIndividual ;
     rdfs:label "Joseph Tainter"@en ;
     owl:sameAs dbr:Joseph_Tainter .
 
-tgs:DennisMeadows a tgs:Person ;
+tgs:Person.DennisMeadows a tgs:Person, owl:NamedIndividual ;
     rdfs:label "Dennis Meadows"@en ;
     owl:sameAs dbr:Dennis_Meadows .
 
-tgs:WilliamStanleyJevons a tgs:Person ;
+tgs:Person.WilliamStanleyJevons a tgs:Person, owl:NamedIndividual ;
     rdfs:label "William Stanley Jevons"@en ;
     owl:sameAs dbr:William_Stanley_Jevons .
 
-tgs:MKingHubbert a tgs:Person ;
+tgs:Person.MKingHubbert a tgs:Person, owl:NamedIndividual ;
     rdfs:label "M. King Hubbert"@en ;
     owl:sameAs dbr:M._King_Hubbert ;
-    tgs:memberOf tgs:PeakOilMovement .
+    tgs:memberOf tgs:School.PeakOilMovement .
 
 # --- New curated links ---
 
-tgs:ComplexityCollapse tgs:influencedBy tgs:JosephTainter .
-tgs:link_complexity_tainter a tgs:LinkNote ;
-    tgs:aboutSubject tgs:ComplexityCollapse ;
-    tgs:aboutObject tgs:JosephTainter ;
+tgs:Concept.ComplexityCollapse tgs:influencedBy tgs:Person.JosephTainter .
+tgs:LinkNote.ComplexityTainter a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.ComplexityCollapse ;
+    tgs:aboutObject tgs:Person.JosephTainter ;
     dct:description "Tainter's 'The Collapse of Complex Societies' (1988) is the direct academic source for the diminishing-marginal-returns-on-complexity argument Hagens draws on when discussing societal collapse dynamics."@en ;
     tgs:confidence "curated" .
 
-tgs:LimitsToGrowth tgs:influencedBy tgs:DonellaMeadows, tgs:DennisMeadows .
-tgs:link_limits_donella a tgs:LinkNote ;
-    tgs:aboutSubject tgs:LimitsToGrowth ;
-    tgs:aboutObject tgs:DonellaMeadows ;
+tgs:Concept.LimitsToGrowth tgs:influencedBy tgs:Person.DonellaMeadows, tgs:Person.DennisMeadows .
+tgs:LinkNote.LimitsDonella a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.LimitsToGrowth ;
+    tgs:aboutObject tgs:Person.DonellaMeadows ;
     dct:description "Donella Meadows was lead author of the original 1972 'Limits to Growth' study — direct, citable lineage, not just thematic overlap."@en ;
     tgs:confidence "curated" .
-tgs:link_limits_dennis a tgs:LinkNote ;
-    tgs:aboutSubject tgs:LimitsToGrowth ;
-    tgs:aboutObject tgs:DennisMeadows ;
+tgs:LinkNote.LimitsDennis a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.LimitsToGrowth ;
+    tgs:aboutObject tgs:Person.DennisMeadows ;
     dct:description "Dennis Meadows co-led the original 1972 'Limits to Growth' study alongside Donella Meadows — same direct lineage."@en ;
     tgs:confidence "curated" .
 
-tgs:PeakOil tgs:influencedBy tgs:MKingHubbert .
-tgs:link_peakoil_hubbert a tgs:LinkNote ;
-    tgs:aboutSubject tgs:PeakOil ;
-    tgs:aboutObject tgs:MKingHubbert ;
+tgs:Concept.PeakOil tgs:influencedBy tgs:Person.MKingHubbert .
+tgs:LinkNote.PeakoilHubbert a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.PeakOil ;
+    tgs:aboutObject tgs:Person.MKingHubbert ;
     dct:description "Hubbert's 1956 prediction of US oil production peaking (Hubbert Peak Theory) is the direct origin of peak oil analysis as a field, which Hagens worked in professionally before founding The Great Simplification."@en ;
     tgs:confidence "curated" .
 
-tgs:JevonsParadox tgs:influencedBy tgs:WilliamStanleyJevons .
-tgs:link_jevons_jevons a tgs:LinkNote ;
-    tgs:aboutSubject tgs:JevonsParadox ;
-    tgs:aboutObject tgs:WilliamStanleyJevons ;
+tgs:Concept.JevonsParadox tgs:influencedBy tgs:Person.WilliamStanleyJevons .
+tgs:LinkNote.JevonsJevons a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.JevonsParadox ;
+    tgs:aboutObject tgs:Person.WilliamStanleyJevons ;
     dct:description "Jevons first described this dynamic in 'The Coal Question' (1865), observing that more efficient coal-burning steam engines increased total coal consumption rather than reducing it — the term is named directly for him."@en ;
     tgs:confidence "curated" .
 
-tgs:MoneyAsClaimOnEnergy tgs:echoesIdeaOf tgs:Aristotle .
-tgs:link_money_aristotle a tgs:LinkNote ;
-    tgs:aboutSubject tgs:MoneyAsClaimOnEnergy ;
-    tgs:aboutObject tgs:Aristotle ;
+tgs:Concept.MoneyAsClaimOnEnergy tgs:echoesIdeaOf tgs:Person.Aristotle .
+tgs:LinkNote.MoneyAristotle a tgs:LinkNote, owl:NamedIndividual ;
+    tgs:aboutSubject tgs:Concept.MoneyAsClaimOnEnergy ;
+    tgs:aboutObject tgs:Person.Aristotle ;
     dct:description "Aristotle's distinction in Politics Book I between oikonomia (household management, wealth for use) and chrematistics (accumulation of money as an end in itself, which he considered unnatural and potentially limitless) anticipates Hagens' critique of money divorced from its real biophysical backing."@en ;
     tgs:confidence "curated" .

@@ -19,5 +19,5 @@
 # then add here.
 #############################################
 
-tgs:EOWilson owl:sameAs wd:Q211029 .
-tgs:MarcusAurelius owl:sameAs wd:Q1430 .
+tgs:Person.EOWilson owl:sameAs wd:Q211029 .
+tgs:Person.MarcusAurelius owl:sameAs wd:Q1430 .
