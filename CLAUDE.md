@@ -24,7 +24,7 @@ Repo: https://github.com/MJSullivan56/nate-hagens-kg (branch `main`).
 - Python venv (`make venv`) for all scripting — see KNOWN GOTCHA below
   before assuming a fresh `make venv` will just work
 - VS Code: SPARQL Notebook extension (`Zazuko.sparql-notebook`) lets you
-  query `.ttl` files directly in the editor — install status on Jim's
+  query `.ttl` files directly in the editor — install status on MJSullivan's
   machine was never confirmed as of last check, verify before assuming
 
 ## Key design decisions (the "why" behind the schema)
@@ -47,7 +47,7 @@ structural changes:
 2. **Every individual follows `<Domain>:<Class>.<Name>` IRI minting**
    (e.g. `tgs:Person.MarcusAurelius`, `tgs:Concept.Overshoot`,
    `tgs:LinkNote.DiscountMarcus`) and is explicitly typed
-   `a tgs:SomeClass, owl:NamedIndividual` — this is Jim's established
+   `a tgs:SomeClass, owl:NamedIndividual` — this is MJSullivan's established
    convention from his other ontology work, adopted here for consistency.
    Classes and properties themselves (in `ontology/schema.ttl`) are NOT
    renamed under this scheme — only individuals/instances are.
@@ -138,7 +138,7 @@ the provenance note below). One `LinkNote` can have many `Evidence` children.
 hand-asserted, computed from its Evidence set by a script or live SPARQL
 aggregate (same pattern as `promote_to_rdf.py`) — never hand-written into a
 TTL file, or it'll drift out of sync with its own evidence. OPEN DECISION,
-Jim's call when this gets built: aggregation rule. Leaning recommendation:
+MJSullivan's call when this gets built: aggregation rule. Leaning recommendation:
 ordinal not numeric, consistent with how `ConfidenceLevel` already works and
 this project's general allergy to manufactured precision — e.g. `Curated` if
 ≥1 curated Evidence, a possible third tier like `Corroborated` for 2+
@@ -205,7 +205,7 @@ plan has only been tested end-to-end with fake staging data to confirm the
 DuckDB→promote_to_rdf.py→graph pipeline mechanically works — never run
 against actual transcripts yet.
 
-**FUTURE, not yet actionable — dedicated Claude Skill.** Jim intends to
+**FUTURE, not yet actionable — dedicated Claude Skill.** MJSullivan intends to
 eventually build one (mirroring the `uwom-ontology` skill in his other
 `knowledge-graph` repo) once this project's patterns feel more settled.
 Natural candidate content based on what's already stable: the IRI minting
@@ -236,13 +236,13 @@ model, if built) have proven durable rather than still shifting.
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.
 - Before any `git commit`/`git push`, double check the terminal prompt
-  actually says `nate-hagens-kg`, not `knowledge-graph` — Jim has two
+  actually says `nate-hagens-kg`, not `knowledge-graph` — MJSullivan has two
   projects open in separate terminal windows and has mixed them up before
   (harmless once, since `main` vs `master` makes it obvious after the
   fact, but worth avoiding).
 
 ## Known environment gotcha
-`python3 -m venv .venv` on Jim's machine defaults to Python 3.14, which is
+`python3 -m venv .venv` on MJSullivan's machine defaults to Python 3.14, which is
 incompatible with rdflib 7.1.1 (AttributeError at import time — an actual
 rdflib/Python 3.14 compatibility bug, confirmed reproducible, not a local
 misconfiguration). Already fixed by bumping `requirements.txt` to
@@ -262,7 +262,7 @@ make promote            # write approved staging rows into data/generated/
 ```
 
 ## Working agreement
-Jim edits the TTL files directly rather than routing every addition
+MJSullivan edits the TTL files directly rather than routing every addition
 through a Claude session first, and reports changes back. A future
 session should NOT assume full knowledge of current graph state from this
 file alone — always check `git log` and re-run `make validate` before
@@ -271,7 +271,7 @@ making assumptions about what exists.
 ## This is a separate project from other Claude Code work
 This repo is its own git repository and should stay that way — don't nest
 it inside another project's directory or reference files outside this
-repo's tree unless explicitly asked to. Jim's other active project,
+repo's tree unless explicitly asked to. MJSullivan's other active project,
 `~/projects/knowledge-graph`, is unrelated (different domain: units of
 measure / UWOM ontology) and uses branch `master`, not `main` — a useful
 tell if you're ever unsure which repo a terminal session is in.
