@@ -98,3 +98,11 @@ thinkr:Person a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     skos:prefLabel "Person"@en .
 
+tgs:Person.KateRaworth a thinkr:Person, owl:NamedIndividual ;
+    skos:prefLabel "Kate Raworth"@en ;
+    thinkr:memberOf tgs:School.DoughnutEconomics .
+
+tgs:Person.NateHagens a thinkr:Person, owl:NamedIndividual ;
+    skos:prefLabel "Nate Hagens"@en ;
+    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004."@en ;
+    thinkr:memberOf tgs:School.TheOilDrum, tgs:School.PostCarbonInstitute, tgs:School.PeakOilMovement .

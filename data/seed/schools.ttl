@@ -43,3 +43,14 @@ thinkr:School a owl:Class ;
     rdfs:comment "A philosophical, religious, or intellectual tradition (e.g. Stoicism, Systems Ecology, Behavioral Economics)."@en ;
     skos:prefLabel "School of Thought"@en .
 
+tgs:School.DoughnutEconomics a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "Doughnut Economics"@en ;
+    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en .
+
+tgs:School.TheOilDrum a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "The Oil Drum"@en ;
+    skos:definition "A collaborative blog/community devoted to analysis and discussion of energy, peak oil, and sustainability, founded March 2005 by Kyle Saunders ('Prof. Goose') and Dave Summers ('Heading Out'). Active until 2013. Distinct from the broader tgs:School.PeakOilMovement it was part of — a specific, independently-notable institution within that wider community, same relationship as Doughnut Economics sits within broader ecological economics. Nate Hagens was Managing/Lead Editor here before founding TGS — see tgs:Person.NateHagens."@en .
+
+tgs:School.PostCarbonInstitute a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "Post Carbon Institute"@en ;
+    skos:definition "A 501(c)(3) nonprofit (DBA of Metafoundation) founded 2003 by Julian Darley, based in Oregon, focused on the transition away from fossil fuels via systems thinking, energy literacy, and community resilience. Nate Hagens currently sits on its Board — see tgs:Person.NateHagens."@en .
