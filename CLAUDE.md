@@ -98,6 +98,23 @@ designed in the abstract now.
 These are the load-bearing choices — worth understanding before making
 structural changes:
 
+0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
+   relationships, SKOS for informal ones.** Named explicitly by MJSullivan
+   after noticing the pattern already forming — `thinkr:Person`/`Concept`/
+   `Evidence`/`Source`/`ConfidenceLevel` etc. are OWL classes with strict,
+   single-purpose axioms (a `LinkNote` has a valid `calculatedConfidence`
+   or it doesn't — no ambiguity, no multi-parent messiness), while the
+   Subject taxonomy (see `data/seed/subjects.ttl`) is SKOS specifically
+   because real-world topic classification is genuinely multi-parent and
+   fuzzy (a Concept can legitimately belong under more than one Subject).
+   Deliberately NOT formalized as a hard rule yet — "let's see what the
+   data tells us" was the explicit call, consistent with this project's
+   general bottom-up-from-real-need methodology (see the earlier
+   bottom-up-vs-top-down content strategy discussion). Treat this as a
+   lens for judgment calls going forward (does a new relationship need
+   OWL's strictness, or SKOS's looser semantics?), not as a rule to
+   enforce mechanically before there's enough content to test it against.
+
 1. **Curated vs. candidate confidence tracking is the most important
    design decision in the whole project.** An LLM can propose hundreds of
    plausible-sounding parallels between TGS concepts and historical
