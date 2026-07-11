@@ -1,81 +1,128 @@
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix tgs:   <http://example.org/tgs#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinker: <http://example.org/thinker#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-#############################################
-# CROSS-LINKS
-#
-# Each link is a single triple. Because plain RDF triples
-# can't carry metadata (rationale, confidence) directly, each
-# link also gets a companion tgs:LinkNote resource that a
-# SPARQL query can join against. This keeps the graph simple
-# to query while still letting you track "curated (by me)"
-# vs "candidate (LLM-proposed, needs review)" per link — swap
-# for RDF-star (Oxigraph supports it) later if you want triples
-# to carry this natively.
-#############################################
+tgs:LinkNote.DiscountMarcus a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.MarcusAurelius ;
+    thinker:aboutSubject tgs:Concept.DiscountRatesAndPresentBias ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.DiscountMarcus .
 
-# --- Stoicism <-> Present Bias / discount rates ---
-tgs:Concept.DiscountRatesAndPresentBias tgs:echoesIdeaOf tgs:Person.MarcusAurelius .
-tgs:LinkNote.DiscountMarcus a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.DiscountRatesAndPresentBias ;
-    tgs:aboutObject tgs:Person.MarcusAurelius ;
-    dct:description "Stoic practice of distinguishing what is/isn't in one's control, and valuing present right action over deferred/imagined future reward, is a philosophical antecedent (not a cited influence) to the behavioral-economics critique of present bias Hagens draws on."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+tgs:LinkNote.EnergyblindnessBuddha a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.Buddha ;
+    thinker:aboutSubject tgs:Concept.EnergyBlindness ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Candidate ;
+    thinker:hasEvidence tgs:Evidence.EnergyblindnessBuddha .
 
-# --- Wetware / evolutionary mismatch <-> Freud ---
-tgs:Concept.Wetware tgs:echoesIdeaOf tgs:Person.SigmundFreud .
-tgs:LinkNote.WetwareFreud a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.Wetware ;
-    tgs:aboutObject tgs:Person.SigmundFreud ;
-    dct:description "Freud's model of unconscious drives overriding rational self-interest anticipates Hagens' claim that evolved sub-conscious wiring, not conscious reasoning, drives collectively destructive behavior. Different mechanism (psychosexual drives vs. evolutionary mismatch) but the same basic move: rational-actor models are wrong about what's driving behavior."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+tgs:LinkNote.LocalismOstrom a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.ElinorOstrom ;
+    thinker:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.LocalismOstrom .
 
-# --- Overshoot <-> William Catton (direct influence, not just echo) ---
-tgs:Concept.Overshoot tgs:influencedBy tgs:Person.WilliamCatton .
-tgs:LinkNote.OvershootCatton a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.Overshoot ;
-    tgs:aboutObject tgs:Person.WilliamCatton ;
+tgs:LinkNote.MetacrisisBateson a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.GregoryBateson ;
+    thinker:aboutSubject tgs:Concept.Metacrisis ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.MetacrisisBateson .
+
+tgs:LinkNote.MlkGrowth a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Concept.GrowthImperative ;
+    thinker:aboutSubject tgs:Person.MartinLutherKingJr ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.MlkGrowth .
+
+tgs:LinkNote.OvershootCatton a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.WilliamCatton ;
+    thinker:aboutSubject tgs:Concept.Overshoot ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.OvershootCatton .
+
+tgs:LinkNote.SuperorganismWilson a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.EOWilson ;
+    thinker:aboutSubject tgs:Concept.Superorganism ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.SuperorganismWilson .
+
+tgs:LinkNote.WetwareFreud a thinker:LinkNote,
+        owl:NamedIndividual ;
+    thinker:aboutObject tgs:Person.SigmundFreud ;
+    thinker:aboutSubject tgs:Concept.Wetware ;
+    thinker:calculatedConfidence thinker:ConfidenceLevel.Curated ;
+    thinker:hasEvidence tgs:Evidence.WetwareFreud .
+
+tgs:Concept.CircleOfTrustLocalism thinker:echoesIdeaOf tgs:Person.ElinorOstrom .
+
+tgs:Concept.DiscountRatesAndPresentBias thinker:echoesIdeaOf tgs:Person.MarcusAurelius .
+
+tgs:Concept.EnergyBlindness thinker:contrastsWith tgs:Person.Buddha .
+
+tgs:Concept.Metacrisis thinker:influencedBy tgs:Person.GregoryBateson .
+
+tgs:Concept.Overshoot thinker:influencedBy tgs:Person.WilliamCatton .
+
+tgs:Concept.Superorganism thinker:influencedBy tgs:Person.EOWilson .
+
+tgs:Concept.Wetware thinker:echoesIdeaOf tgs:Person.SigmundFreud .
+
+tgs:Evidence.DiscountMarcus a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "Stoic practice of distinguishing what is/isn't in one's control, and valuing present right action over deferred/imagined future reward, is a philosophical antecedent (not a cited influence) to the behavioral-economics critique of present bias Hagens draws on."@en .
+
+tgs:Evidence.EnergyblindnessBuddha a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Candidate ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "LLM-suggested: both concern a kind of collective unawareness of the true conditions shaping suffering/behavior (avidya / ignorance vs. energy blindness). Flagged as speculative — needs review before treating as a real link; risk of forcing a surface parallel."@en .
+
+tgs:Evidence.LocalismOstrom a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "Ostrom's Nobel-winning research on communities self-governing shared resources without top-down control or privatization provides the empirical/theoretical backbone for why small-scale local resilience can actually work, rather than just being a romantic ideal."@en .
+
+tgs:Evidence.MetacrisisBateson a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "Bateson's systems-theoretic argument that fragmented, siloed problem-solving itself generates crises ('the pathologies of epistemology') is a direct intellectual ancestor of metacrisis framing used by Hagens and adjacent thinkers."@en .
+
+tgs:Evidence.MlkGrowth a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "MLK's later writing (e.g. his critique of a society organized around 'thing-oriented' rather than 'person-oriented' values, and his turn toward economic justice/the Poor People's Campaign) is a real-world example of confronting a growth/extraction-oriented system, not primarily an ecological argument but a structurally adjacent one worth surfacing as contrast."@en .
+
+tgs:Evidence.OvershootCatton a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
     dct:description "Catton's 1980 book 'Overshoot' coined the term Hagens uses directly; this is a citable lineage, not just a thematic echo."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+    prov:generatedAtTime "1980"^^xsd:gYear .
 
-# --- Superorganism <-> E.O. Wilson (direct influence) ---
-tgs:Concept.Superorganism tgs:influencedBy tgs:Person.EOWilson .
-tgs:LinkNote.SuperorganismWilson a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.Superorganism ;
-    tgs:aboutObject tgs:Person.EOWilson ;
-    dct:description "Wilson's work on eusociality and superorganisms in insect colonies is the direct biological source of the term Hagens applies (with qualification) to human civilization."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+tgs:Evidence.SuperorganismWilson a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "Wilson's work on eusociality and superorganisms in insect colonies is the direct biological source of the term Hagens applies (with qualification) to human civilization."@en .
 
-# --- Circle of Trust / Localism <-> Elinor Ostrom ---
-tgs:Concept.CircleOfTrustLocalism tgs:echoesIdeaOf tgs:Person.ElinorOstrom .
-tgs:LinkNote.LocalismOstrom a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
-    tgs:aboutObject tgs:Person.ElinorOstrom ;
-    dct:description "Ostrom's Nobel-winning research on communities self-governing shared resources without top-down control or privatization provides the empirical/theoretical backbone for why small-scale local resilience can actually work, rather than just being a romantic ideal."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+tgs:Evidence.WetwareFreud a thinker:Evidence,
+        owl:NamedIndividual ;
+    thinker:confidence thinker:ConfidenceLevel.Curated ;
+    thinker:evidencePolarity thinker:EvidencePolarity.Supports ;
+    dct:description "Freud's model of unconscious drives overriding rational self-interest anticipates Hagens' claim that evolved sub-conscious wiring, not conscious reasoning, drives collectively destructive behavior. Different mechanism (psychosexual drives vs. evolutionary mismatch) but the same basic move: rational-actor models are wrong about what's driving behavior."@en .
 
-# --- Human Predicament <-> MLK (contrast/application, not echo) ---
-tgs:Person.MartinLutherKingJr tgs:appliesTo tgs:Concept.GrowthImperative .
-tgs:LinkNote.MlkGrowth a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Person.MartinLutherKingJr ;
-    tgs:aboutObject tgs:Concept.GrowthImperative ;
-    dct:description "MLK's later writing (e.g. his critique of a society organized around 'thing-oriented' rather than 'person-oriented' values, and his turn toward economic justice/the Poor People's Campaign) is a real-world example of confronting a growth/extraction-oriented system, not primarily an ecological argument but a structurally adjacent one worth surfacing as contrast."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
+tgs:Person.MartinLutherKingJr thinker:appliesTo tgs:Concept.GrowthImperative .
 
-# --- Metacrisis <-> Gregory Bateson ---
-tgs:Concept.Metacrisis tgs:influencedBy tgs:Person.GregoryBateson .
-tgs:LinkNote.MetacrisisBateson a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.Metacrisis ;
-    tgs:aboutObject tgs:Person.GregoryBateson ;
-    dct:description "Bateson's systems-theoretic argument that fragmented, siloed problem-solving itself generates crises ('the pathologies of epistemology') is a direct intellectual ancestor of metacrisis framing used by Hagens and adjacent thinkers."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Curated .
-
-# --- CANDIDATE (unreviewed) example, to show the pattern for LLM-proposed links ---
-tgs:Concept.EnergyBlindness tgs:contrastsWith tgs:Person.Buddha .
-tgs:LinkNote.EnergyblindnessBuddha a tgs:LinkNote, owl:NamedIndividual ;
-    tgs:aboutSubject tgs:Concept.EnergyBlindness ;
-    tgs:aboutObject tgs:Person.Buddha ;
-    dct:description "LLM-suggested: both concern a kind of collective unawareness of the true conditions shaping suffering/behavior (avidya / ignorance vs. energy blindness). Flagged as speculative — needs review before treating as a real link; risk of forcing a surface parallel."@en ;
-    tgs:confidence tgs:ConfidenceLevel.Candidate .

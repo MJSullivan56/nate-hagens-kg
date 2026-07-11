@@ -1,0 +1,215 @@
+@prefix thinker: <http://example.org/thinker#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# NOTE ON NAMESPACE
+# http://example.org/tgs# is a placeholder.
+# Swap for something you control (e.g. a GitHub Pages
+# URL you own) before publishing, so the URIs resolve.
+#############################################
+
+#############################################
+# Classes
+#############################################
+
+thinker:Concept a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    skos:prefLabel "Concept"@en ;
+    rdfs:comment "A term or idea from Nate Hagens' Great Simplification framework (e.g. Energy Blindness, the Superorganism)."@en .
+
+thinker:Person a owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    skos:prefLabel "Person"@en ;
+    rdfs:comment "A philosopher, scientist, activist, or thinker being linked to a TGS concept."@en .
+
+thinker:School a owl:Class ;
+    skos:prefLabel "School of Thought"@en ;
+    rdfs:comment "A philosophical, religious, or intellectual tradition (e.g. Stoicism, Systems Ecology, Behavioral Economics)."@en .
+
+thinker:Work a owl:Class ;
+    rdfs:subClassOf dct:BibliographicResource ;
+    skos:prefLabel "Work"@en ;
+    rdfs:comment "A book, essay, or other work in which a concept or idea is developed."@en .
+
+thinker:Episode a owl:Class ;
+    rdfs:subClassOf thinker:Work ;
+    skos:prefLabel "Podcast Episode"@en ;
+    rdfs:comment "A Great Simplification podcast episode or Frankly video."@en .
+
+thinker:LinkNote a owl:Class ;
+    skos:prefLabel "Link Note"@en ;
+    rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en .
+
+#############################################
+# Object properties (the interesting part)
+#############################################
+
+thinker:aboutSubject a owl:ObjectProperty ;
+    rdfs:domain thinker:LinkNote ;
+    skos:prefLabel "about subject"@en .
+
+thinker:aboutObject a owl:ObjectProperty ;
+    rdfs:domain thinker:LinkNote ;
+    skos:prefLabel "about object"@en .
+
+thinker:relatesTo a owl:ObjectProperty ;
+    rdfs:domain thinker:Concept ;
+    rdfs:range [ owl:unionOf ( thinker:Concept thinker:Person thinker:School ) ] ;
+    skos:prefLabel "relates to"@en ;
+    rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en .
+
+thinker:echoesIdeaOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf thinker:relatesTo ;
+    rdfs:domain thinker:Concept ;
+    rdfs:range thinker:Person ;
+    skos:prefLabel "echoes idea of"@en ;
+    rdfs:comment "The TGS concept independently converges on / restates an idea this person is known for. No claim of direct influence."@en .
+
+thinker:influencedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf thinker:relatesTo ;
+    rdfs:domain thinker:Concept ;
+    rdfs:range [ owl:unionOf ( thinker:Person thinker:School ) ] ;
+    skos:prefLabel "influenced by"@en ;
+    rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en .
+
+thinker:contrastsWith a owl:ObjectProperty ;
+    rdfs:subPropertyOf thinker:relatesTo ;
+    skos:prefLabel "contrasts with"@en ;
+    rdfs:comment "Useful tension or disagreement worth surfacing to a learner, not just agreement."@en .
+
+thinker:appliesTo a owl:ObjectProperty ;
+    rdfs:domain thinker:Person ;
+    rdfs:range thinker:Concept ;
+    skos:prefLabel "provides real-world example of"@en ;
+    rdfs:comment "For activists/practitioners rather than philosophers: this person's work is a concrete instance of the concept (e.g. MLK's organizing as an example of collective-action dynamics discussed under a TGS concept)."@en .
+
+thinker:memberOf a owl:ObjectProperty ;
+    rdfs:domain thinker:Person ;
+    rdfs:range thinker:School ;
+    skos:prefLabel "member of / associated with"@en .
+
+thinker:discussedIn a owl:ObjectProperty ;
+    rdfs:domain thinker:Concept ;
+    rdfs:range thinker:Episode ;
+    skos:prefLabel "discussed in episode"@en .
+
+thinker:definedIn a owl:ObjectProperty ;
+    rdfs:domain thinker:Concept ;
+    rdfs:range thinker:Work ;
+    skos:prefLabel "primarily defined in"@en .
+
+#############################################
+# Data properties
+#############################################
+
+thinker:ConfidenceLevel a owl:Class ;
+    skos:prefLabel "Confidence Level"@en ;
+    rdfs:comment "Enumerated class of allowed review/aggregation states. thinker:Evidence uses only Curated/Candidate (has THIS piece of evidence been human-reviewed?). thinker:LinkNote uses the full range via thinker:calculatedConfidence, which is DERIVED — computed from a LinkNote's Evidence set by scripts/compute_confidence.py, never hand-asserted. Closed enumeration via owl:oneOf."@en ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( thinker:ConfidenceLevel.Curated thinker:ConfidenceLevel.Candidate thinker:ConfidenceLevel.Corroborated thinker:ConfidenceLevel.Disputed )
+    ] .
+
+thinker:ConfidenceLevel.Curated a thinker:ConfidenceLevel, owl:NamedIndividual ;
+    skos:prefLabel "Curated"@en ;
+    skos:definition "On thinker:Evidence: human-reviewed and confirmed, not merely LLM-proposed. On thinker:LinkNote's calculatedConfidence: exactly one independent Curated+Supports evidence from a Reputable-or-better source (see scripts/compute_confidence.py for the full rule)."@en .
+
+thinker:ConfidenceLevel.Candidate a thinker:ConfidenceLevel, owl:NamedIndividual ;
+    skos:prefLabel "Candidate"@en ;
+    skos:definition "On thinker:Evidence: LLM-proposed or otherwise unreviewed. On thinker:LinkNote's calculatedConfidence: no qualifying Curated+Supports evidence exists yet — the default/floor state."@en .
+
+thinker:ConfidenceLevel.Corroborated a thinker:ConfidenceLevel, owl:NamedIndividual ;
+    skos:prefLabel "Corroborated"@en ;
+    skos:definition "LinkNote-only (calculatedConfidence): two or more INDEPENDENT (different thinker:Source individuals) Curated+Supports evidence from Reputable-or-better sources. Unverified-tier support cannot contribute toward this tier no matter how many pieces accumulate."@en .
+
+thinker:ConfidenceLevel.Disputed a thinker:ConfidenceLevel, owl:NamedIndividual ;
+    skos:prefLabel "Disputed"@en ;
+    skos:definition "LinkNote-only (calculatedConfidence): at least one Curated+Contests evidence from a Reputable-or-better source exists. This OVERRIDES Corroborated regardless of how much supporting evidence also exists — a serious rebuttal should surface for human attention, not get mathematically outvoted."@en .
+
+thinker:ReliabilityTier a owl:Class ;
+    skos:prefLabel "Reliability Tier"@en ;
+    rdfs:comment "Enumerated reliability of a thinker:Source (the publication/venue), independent of what any given piece of evidence from it argues. A source's tier is an editorial judgment call, not an objective formula — expect it to need periodic revisiting, the same way Wikipedia's own reliable-sources list is a living, contested, human-adjudicated thing."@en ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( thinker:ReliabilityTier.Authoritative thinker:ReliabilityTier.Reputable thinker:ReliabilityTier.Unverified thinker:ReliabilityTier.Unreliable )
+    ] .
+
+thinker:ReliabilityTier.Authoritative a thinker:ReliabilityTier, owl:NamedIndividual ;
+    skos:prefLabel "Authoritative"@en ;
+    skos:definition "Wikidata, peer-reviewed academic publication, primary historical source. Strongest tier."@en .
+
+thinker:ReliabilityTier.Reputable a thinker:ReliabilityTier, owl:NamedIndividual ;
+    skos:prefLabel "Reputable"@en ;
+    skos:definition "Established journalism, credentialed-expert writing, or direct curator/maintainer reasoning that has itself been human-reviewed (thinker:Evidence with no explicit thinker:aboutSource defaults to this tier — see thinker:aboutSource comment)."@en .
+
+thinker:ReliabilityTier.Unverified a thinker:ReliabilityTier, owl:NamedIndividual ;
+    skos:prefLabel "Unverified"@en ;
+    skos:definition "Personal blogs, unreviewed Medium-style posts, anonymous sources. Can support a base Curated calculatedConfidence but can never push a LinkNote to Corroborated, regardless of volume."@en .
+
+thinker:ReliabilityTier.Unreliable a thinker:ReliabilityTier, owl:NamedIndividual ;
+    skos:prefLabel "Unreliable"@en ;
+    skos:definition "Known propaganda, misinformation, or otherwise discredited outlets. Evidence from Unreliable sources is stored (audit trail — 'we saw this, here's why it doesn't count') but EXCLUDED from calculatedConfidence entirely, regardless of polarity. A bad source doesn't make a claim less true; it just isn't signal worth counting either direction."@en .
+
+thinker:EvidencePolarity a owl:Class ;
+    skos:prefLabel "Evidence Polarity"@en ;
+    rdfs:comment "Whether a piece of evidence supports, contests, or merely mentions a LinkNote's claim. Independent of source reliability — polarity is about the evidence's stance, reliability is about the source's trustworthiness."@en ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( thinker:EvidencePolarity.Supports thinker:EvidencePolarity.Contests thinker:EvidencePolarity.Mentions )
+    ] .
+
+thinker:EvidencePolarity.Supports a thinker:EvidencePolarity, owl:NamedIndividual ;
+    skos:prefLabel "Supports"@en .
+
+thinker:EvidencePolarity.Contests a thinker:EvidencePolarity, owl:NamedIndividual ;
+    skos:prefLabel "Contests"@en .
+
+thinker:EvidencePolarity.Mentions a thinker:EvidencePolarity, owl:NamedIndividual ;
+    skos:prefLabel "Mentions"@en ;
+    skos:definition "Cites/discusses the claim without clearly arguing a position either way. Stored for context, never affects calculatedConfidence."@en .
+
+thinker:Source a owl:Class ;
+    skos:prefLabel "Source"@en ;
+    rdfs:comment "A publication or venue (e.g. Wikidata, a specific journal, a specific blog) that one or more thinker:Evidence individuals cite. Reliability is set ONCE per Source and reused across every Evidence citing it, rather than hand-tuned per assertion."@en .
+
+thinker:Evidence a owl:Class ;
+    skos:prefLabel "Evidence"@en ;
+    rdfs:comment "One individual piece of evidence for/against a thinker:LinkNote's claim. Multiple Evidence individuals can attach to one LinkNote. Never deleted even when superseded (prov:wasRevisionOf) — the historical record of what was believed and why is preserved; superseded evidence is simply excluded from calculatedConfidence."@en .
+
+thinker:hasEvidence a owl:ObjectProperty ;
+    rdfs:domain thinker:LinkNote ;
+    rdfs:range thinker:Evidence ;
+    skos:prefLabel "has evidence"@en .
+
+thinker:aboutSource a owl:ObjectProperty ;
+    rdfs:domain thinker:Evidence ;
+    rdfs:range thinker:Source ;
+    skos:prefLabel "about source"@en ;
+    rdfs:comment "OPTIONAL. Absent when the Evidence is direct curator/maintainer reasoning rather than a citation to an external publication — such Evidence defaults to thinker:ReliabilityTier.Reputable for aggregation purposes (see that individual's definition)."@en .
+
+thinker:evidencePolarity a owl:ObjectProperty ;
+    rdfs:domain thinker:Evidence ;
+    rdfs:range thinker:EvidencePolarity ;
+    skos:prefLabel "evidence polarity"@en .
+
+thinker:reliabilityTier a owl:ObjectProperty ;
+    rdfs:domain thinker:Source ;
+    rdfs:range thinker:ReliabilityTier ;
+    skos:prefLabel "reliability tier"@en .
+
+thinker:calculatedConfidence a owl:ObjectProperty ;
+    rdfs:domain thinker:LinkNote ;
+    rdfs:range thinker:ConfidenceLevel ;
+    skos:prefLabel "calculated confidence"@en ;
+    rdfs:comment "DERIVED — computed from a LinkNote's Evidence set by scripts/compute_confidence.py. Never hand-write this value into a TTL file; it will drift out of sync with its own evidence. Re-run the compute script after adding/editing any Evidence."@en .
+
+thinker:confidence a owl:ObjectProperty ;
+    rdfs:domain thinker:Evidence ;
+    rdfs:range thinker:ConfidenceLevel ;
+    rdfs:comment "Has THIS piece of evidence been human-reviewed? Points to thinker:ConfidenceLevel.Curated or .Candidate only (the other two values, Corroborated/Disputed, are LinkNote-only via thinker:calculatedConfidence). Domain history: originally xsd:string on thinker:Concept (wrong), then an enumerated object property on thinker:LinkNote directly (better, but conflated the assertion with its evidence), now correctly on thinker:Evidence as part of the Evidence/Source provenance model."@en .

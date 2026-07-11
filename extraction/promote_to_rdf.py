@@ -1,7 +1,7 @@
 """
 Promotes APPROVED rows from the DuckDB staging tables into RDF triples,
 following the exact pattern used in data/seed/links.ttl (a relation triple
-+ a tgs:LinkNote carrying rationale and confidence).
++ a thinker:LinkNote carrying rationale and confidence).
 
 Nothing here is auto-marked "curated" just because it's in the graph —
 that's still true; what changes is confidence goes from unset (staging) to
@@ -23,6 +23,7 @@ from rdflib import Graph, Namespace, RDF, RDFS, Literal, URIRef
 from rdflib.namespace import DCTERMS, SKOS, OWL
 
 TGS = Namespace("http://example.org/tgs#")
+THINKER = Namespace("http://example.org/thinker#")
 DB_PATH = "extraction/staging.duckdb"
 GENERATED_CONCEPTS = "data/generated/concepts.ttl"
 GENERATED_LINKS = "data/generated/links.ttl"
@@ -55,7 +56,7 @@ def promote_concepts(con, g, confidence, dry_run):
     ).fetchall()
     for cid, label, definition, source_note in rows:
         uri = TGS[f"Concept.{slugify(label)}"]
-        g.add((uri, RDF.type, TGS.Concept))
+        g.add((uri, RDF.type, THINKER.Concept))
         g.add((uri, RDF.type, OWL.NamedIndividual))
         g.add((uri, SKOS.prefLabel, Literal(label, lang="en")))
         g.add((uri, SKOS.definition, Literal(definition, lang="en")))
@@ -82,16 +83,27 @@ def promote_links(con, g, label_to_uri, confidence, dry_run):
         if obj_label not in label_to_uri:
             print(f"WARNING link id={lid}: object '{obj_label}' not found in existing seed data — check for a typo.")
 
-        g.add((subj_uri, TGS[predicate], obj_uri))
+        g.add((subj_uri, THINKER[predicate], obj_uri))
         note_uri = TGS[f"LinkNote.{slugify(subj_label)}{slugify(obj_label)}"]
-        g.add((note_uri, RDF.type, TGS.LinkNote))
+        g.add((note_uri, RDF.type, THINKER.LinkNote))
         g.add((note_uri, RDF.type, OWL.NamedIndividual))
-        g.add((note_uri, TGS.aboutSubject, subj_uri))
-        confidence_uri = TGS[f"ConfidenceLevel.{confidence.capitalize()}"]
-        g.add((note_uri, TGS.aboutObject, obj_uri))
-        g.add((note_uri, DCTERMS.description, Literal(rationale, lang="en")))
-        g.add((note_uri, TGS.confidence, confidence_uri))
-        print(f"{'[DRY RUN] ' if dry_run else ''}Promoting link: {subj_label} --{predicate}--> {obj_label} [{confidence}]")
+        g.add((note_uri, THINKER.aboutSubject, subj_uri))
+        g.add((note_uri, THINKER.aboutObject, obj_uri))
+
+        # Evidence model (as of the ConfidenceLevel/Evidence/Source refactor):
+        # thinker:confidence now lives on Evidence, not directly on LinkNote.
+        # calculatedConfidence is DERIVED — this script does NOT set it.
+        # Run scripts/compute_confidence.py after promoting to populate it.
+        confidence_level = THINKER[f"ConfidenceLevel.{confidence.capitalize()}"]
+        ev_uri = TGS[f"Evidence.{slugify(subj_label)}{slugify(obj_label)}"]
+        g.add((ev_uri, RDF.type, THINKER.Evidence))
+        g.add((ev_uri, RDF.type, OWL.NamedIndividual))
+        g.add((ev_uri, THINKER.confidence, confidence_level))
+        g.add((ev_uri, THINKER.evidencePolarity, THINKER["EvidencePolarity.Supports"]))
+        g.add((ev_uri, DCTERMS.description, Literal(rationale, lang="en")))
+        g.add((note_uri, THINKER.hasEvidence, ev_uri))
+
+        print(f"{'[DRY RUN] ' if dry_run else ''}Promoting link: {subj_label} --{predicate}--> {obj_label} [{confidence} evidence]")
 
 
 def main():
@@ -108,10 +120,12 @@ def main():
 
     concepts_g = Graph()
     concepts_g.bind("tgs", TGS)
+    concepts_g.bind("thinker", THINKER)
     promote_concepts(con, concepts_g, args.confidence, args.dry_run)
 
     links_g = Graph()
     links_g.bind("tgs", TGS)
+    links_g.bind("thinker", THINKER)
     promote_links(con, links_g, label_to_uri, args.confidence, args.dry_run)
 
     if not args.dry_run:
@@ -128,6 +142,10 @@ def main():
         print("\n[DRY RUN] No files written, no DB rows updated.")
 
     con.close()
+    if not args.dry_run and len(links_g) > 0:
+        print("\nReminder: run `python scripts/compute_confidence.py` now to populate")
+        print("calculatedConfidence for any newly-promoted LinkNotes — this script")
+        print("only creates Evidence, it never sets calculatedConfidence directly.")
 
 
 if __name__ == "__main__":

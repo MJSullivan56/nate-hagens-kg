@@ -27,6 +27,73 @@ Repo: https://github.com/MJSullivan56/nate-hagens-kg (branch `main`).
   query `.ttl` files directly in the editor — install status on MJSullivan's
   machine was never confirmed as of last check, verify before assuming
 
+## Reusable methodology: the thinker:/tgs: namespace split (2026-07-10)
+The project's scope expanded beyond Hagens alone — MJSullivan intends to
+apply this same methodology to other thinkers, with Heather Cox Richardson
+named as the concrete next candidate. This forced a real architectural
+change, not just a naming tweak: `tgs:` literally stands for "The Great
+Simplification," so it can never correctly hold another thinker's data.
+
+**The split**: every CLASS, PROPERTY, and controlled-vocabulary INDIVIDUAL
+(the `ConfidenceLevel`/`ReliabilityTier`/`EvidencePolarity` enum members —
+every domain will reuse the exact same Curated/Candidate/Corroborated/
+Disputed states) now lives under `thinker:` (`http://example.org/thinker#`)
+— this is the reusable ontology. Every actual DOMAIN INDIVIDUAL (every
+`Person`, `Concept`, `School`, `LinkNote`, `Evidence`) stays under `tgs:` —
+this is Hagens-specific data. `ontology/schema.ttl` is now 100% `thinker:`,
+zero `tgs:` — verified by grep, not just assumed.
+
+**A real bug worth knowing about if you extend this pattern again**: the
+first rename pass used a regex matching bare class names like `Person`,
+which incorrectly also matched the START of `tgs:Person.MarcusAurelius`
+(since nothing excluded a following `.`), silently reclassifying every
+`Class.Name`-style domain individual as vocabulary. Caught by actually
+running a live query and getting zero results instead of trusting the
+"successful" parse — the file still parsed as valid Turtle throughout,
+parsing alone would never have caught this. Separately, the two Python
+scripts (`compute_confidence.py`, `promote_to_rdf.py`) and the CI workflow
+all construct vocabulary URIs via `TGS["ConfidenceLevel.Curated"]`-style
+Python code, which the text-based rename never touched at all — required
+a second, manual pass adding a `THINKER` namespace object to each. A third
+subtle bug: `query_examples.sparql`'s query #2 appeared to work after the
+first fix, but only because it was tested against a Python graph object
+that still had `thinker:` bound from an earlier `parse()` call in the same
+session — the file itself was missing its own `PREFIX thinker:` line, which
+would have failed immediately in the Oxigraph CLI (no such inherited-binding
+behavior there). Caught by re-testing against a deliberately fresh graph
+with zero inherited bindings, not by trusting the first "passing" result.
+General lesson, worth remembering for any future refactor of this
+scale: parsing successfully and querying correctly are different bars —
+verify against both, and be suspicious of a first success if the test
+setup could be leaking state from earlier in the same session.
+
+**Two-repo structure planned, NOT yet executed**: ontology as its own repo
+(clean split while small — 575 triples now, cheapest this will ever be),
+data repos per thinker (`nate-hagens-kg` continues as Hagens' data repo
+once the ontology moves out), a future crosswalk repo for links whose
+endpoints span two domains (also where `tgs:convergesWith` — see backlog
+— eventually lives, since Stoicism↔Bhagavad Gita is arguably crosswalk
+content even pre-HCR, not really "Hagens data" either). MJSullivan decided:
+manual version pinning between repos (not git submodules — simpler,
+upgradable later if needed), and defer actually splitting the crosswalk
+repo + viewer tool into their own repos until there's real multi-domain
+content to justify it (folders within `nate-hagens-kg` for now — zero cost
+to defer since nothing exists in either yet). The ontology repo split
+itself (physically separating `ontology/schema.ttl` into its own
+repository) is the one piece still NOT done as of this writing — the
+namespace rename happened first since it was more urgent (every hour of
+delay meant more content minted under the wrong prefix), the physical
+repo split is a mechanical follow-up.
+
+**Also raised, not yet resolved**: reliability tiers may need to be
+domain-scoped per claim-type rather than one fixed tier per Source —
+e.g. Hagens as `Reputable` (generalist synthesist, not a credentialed
+domain expert across everything he covers) vs. Richardson as plausibly
+`Authoritative` specifically on American political/constitutional history
+(she's a credentialed, peer-reviewed historian). Deliberately deferred
+until real HCR content exists to test the distinction against, rather than
+designed in the abstract now.
+
 ## Key design decisions (the "why" behind the schema)
 These are the load-bearing choices — worth understanding before making
 structural changes:
@@ -82,70 +149,59 @@ structural changes:
    actual transcripts/book text. Worth tightening against primary sources
    over time, not urgent.
 
-## Current data state (as of 2026-07-10)
-- 407 triples total (`make validate` should confirm this exactly)
-- ~19 Concepts, ~25 People, 6 Schools (including the Peak Oil movement,
-  deliberately kept distinct from the `PeakOil` Concept — see
-  `data/seed/people.ttl` for the reasoning), 14 LinkNotes (13 curated, 1
-  deliberately-marked candidate as a review-queue example)
+## Current data state (as of 2026-07-10, post-Evidence-model)
+- 575 triples total (`make validate` should confirm this exactly)
+- ~19 Concepts, ~25 People, 6 Schools, 14 LinkNotes (13 curated, 1
+  deliberately-marked candidate as a review-queue example), 14 Evidence
+  individuals (one per LinkNote so far — 1:1 for now, but the model
+  supports many-to-one), 0 Source individuals yet (every Evidence so far
+  is unsourced/direct-reasoning, defaulting to Reputable tier)
 - Files: `data/seed/concepts.ttl`, `people.ttl`, `links.ttl` (original
-  seed), plus `expansion_2026-07-10.ttl` (Jevons Paradox, Limits to
-  Growth, Peak Oil, Complexity/Collapse, Money-as-energy-claim batch) and
+  seed, now includes Evidence individuals post-migration), plus
+  `expansion_2026-07-10.ttl` (Jevons Paradox, Limits to Growth, Peak Oil,
+  Complexity/Collapse, Money-as-energy-claim batch, also migrated) and
   `wikidata_links.ttl` (the 2 verified Wikidata links)
-
-- Extension identified but not yet built: cross-tradition "convergent
-  parallel" links (e.g. Stoicism ↔ the Bhagavad Gita — independently
-  developed traditions converging on similar ideas, with no causal
-  lineage). The current schema CANNOT express this: every relation
-  property has `rdfs:domain tgs:Concept`, so Schools can only ever be the
-  *object* of a relation, never the subject — there's no School-to-School
-  or School-to-Work property at all. Recommended fix when this comes up:
-  (1) a new symmetric property, e.g. `tgs:convergesWith`
-  (`a owl:SymmetricProperty`), distinct from `influencedBy`/`echoesIdeaOf`
-  specifically because those imply direction/lineage and this doesn't;
-  (2) model specific texts (like the Bhagavad Gita) as `tgs:Work`
-  instances — that class has existed since the original schema but has
-  zero instances so far — rather than stretching `tgs:School` to cover
-  individual texts. Link at the text level first (more precise/citable);
-  only add a broader tradition-level School (Vedanta, etc.) if multiple
-  texts from one tradition need linking at once. CORRECTION LOGGED
-  2026-07-10: blank nodes were briefly proposed for provenance on these
-  claims — this would be a mistake. Blank nodes have no stable identity
-  across file re-saves/merges/different-tool-loads, which is exactly why
-  `tgs:LinkNote` was deliberately built as a NAMED individual in the first
-  place (the curated/candidate review workflow depends on being able to
-  reference one specific claim reliably over time — approve it in DuckDB,
-  promote it, audit it later, diff it cleanly in git). If richer
-  provenance than the current LinkNote gives (source citation, reviewer
-  identity, review date, methodology) is wanted later, reach for PROV-O
-  (`prov:wasAttributedTo`, `prov:wasGeneratedBy`, `prov:generatedAtTime`,
-  `prov:wasDerivedFrom`) hung off named individuals, not blank nodes.
-  Blank nodes remain fine for genuinely anonymous structural scaffolding
-  only — e.g. the existing `owl:oneOf` list inside `ConfidenceLevel`'s
-  enumeration, which nothing will ever need to reference by identity.
+- `scripts/compute_confidence.py` is the derivation engine for
+  `calculatedConfidence` — re-run it after ANY Evidence edit, never
+  hand-set that property
 
 ## Backlog (priority-ranked, as of 2026-07-10)
 
-**HIGH — Evidence/claim provenance model.** Currently `tgs:LinkNote` conflates
-the assertion ("Stoicism relates to X") with its evidence (one description,
-one hand-set confidence). Proposed refactor: `LinkNote` becomes the stable
-anchor for the claim itself; a new `tgs:Evidence` class holds individual
-supporting/contesting pieces, each with its own `dct:description`,
-`tgs:confidence`, and PROV-O attribution (`prov:wasAttributedTo`,
-`prov:wasGeneratedBy`, `prov:generatedAtTime`, `prov:wasDerivedFrom` — see
-the provenance note below). One `LinkNote` can have many `Evidence` children.
-`LinkNote` gets a new `tgs:calculatedConfidence` — explicitly DERIVED, never
-hand-asserted, computed from its Evidence set by a script or live SPARQL
-aggregate (same pattern as `promote_to_rdf.py`) — never hand-written into a
-TTL file, or it'll drift out of sync with its own evidence. OPEN DECISION,
-MJSullivan's call when this gets built: aggregation rule. Leaning recommendation:
-ordinal not numeric, consistent with how `ConfidenceLevel` already works and
-this project's general allergy to manufactured precision — e.g. `Curated` if
-≥1 curated Evidence, a possible third tier like `Corroborated` for 2+
-independent curated sources, rather than a weighted numeric score that would
-look more rigorous than it actually is. This is a bigger change than it
-sounds: touches the schema, the review workflow, and probably the DuckDB
-staging tables (Evidence rows would need their own review queue).
+**DONE 2026-07-10 — Evidence/claim provenance model.** Built: `tgs:Evidence`
+and `tgs:Source` classes, `tgs:ReliabilityTier` (Authoritative/Reputable/
+Unverified/Unreliable) and `tgs:EvidencePolarity` (Supports/Contests/Mentions)
+enumerations, `ConfidenceLevel` expanded to 4 values (added Corroborated,
+Disputed). `tgs:confidence` moved from LinkNote to Evidence (has THIS piece
+of evidence been reviewed?); new `tgs:calculatedConfidence` on LinkNote is
+DERIVED via `scripts/compute_confidence.py` — never hand-set. Aggregation
+rule implemented exactly as designed (see that script's docstring): only
+Curated evidence counts; Unreliable-tier sources excluded regardless of
+polarity (the eugenics-publication case); superseded evidence
+(`prov:wasRevisionOf`) excluded (the Neanderthal-taxonomy case); any
+Reputable-or-better Contests evidence forces Disputed, overriding
+Corroborated; 2+ independent Reputable-or-better Supports -> Corroborated;
+Unverified-tier support alone can never reach Corroborated regardless of
+volume. All 5 rule branches individually stress-tested and passing before
+shipping (not just happy-path tested). All 14 existing LinkNotes migrated —
+6 got real `prov:generatedAtTime` years extracted directly from their
+existing rationale text (Catton 1980, Tainter 1988, Meadows/Limits to Growth
+1972, Hubbert 1956, Jevons 1865); the other 8 deliberately left without a
+timestamp rather than fabricating one. `promote_to_rdf.py` and CI both
+updated and re-tested end-to-end under the new model.
+FOLLOW-UP NOT YET DONE: the DuckDB staging tables (`extraction/
+init_staging_db.py`) were NOT extended for Evidence-level review — they
+still operate at the old LinkNote-level granularity. Once real Evidence
+accumulates (multiple pieces per LinkNote, actual Source records), the
+staging/review workflow will need its own Evidence-aware tables. Also:
+`data/seed/` has zero `tgs:Source` individuals yet — every migrated Evidence
+is unsourced (implicit Reputable tier) — so Corroborated/Disputed have never
+actually been exercised on real data, only on the isolated test script.
+
+**HIGH — Physically split the ontology into its own repo.** Namespace
+rename (thinker:/tgs:) is done; the physical repo separation is not. See
+the dedicated section above this one for full context. Cheapest to do
+while the graph is still small (575 triples) — gets more expensive with
+every session of content added under the current single-repo structure.
 
 **HIGH — Cross-tradition "convergent parallel" property.** Concrete trigger
 case: Stoicism ↔ the Bhagavad Gita — independently-developed traditions
@@ -180,6 +236,14 @@ it cleanly in git). Blank nodes remain fine for genuinely anonymous
 structural scaffolding only — e.g. the existing `owl:oneOf` list inside
 `ConfidenceLevel`'s enumeration, which nothing will ever need to reference
 by identity.
+
+**MEDIUM — Domain-scoped reliability tiers.** Current model is one fixed
+`ReliabilityTier` per `Source`, but real epistemics don't quite work that
+way — Hagens is plausibly `Reputable` generally but arguably closer to
+`Authoritative` when reporting his own stated influences/intent; Richardson
+would plausibly be `Authoritative` specifically on American political
+history. Deliberately deferred until real multi-domain content exists to
+test the distinction against — not worth designing in the abstract.
 
 **MEDIUM — Wikidata verification.** ~21 of ~23 people/schools still need
 verified Wikidata `owl:sameAs` links (pattern established in
@@ -259,6 +323,8 @@ make load-oxigraph    # load everything into a local Oxigraph store
 make init-db           # set up the DuckDB review-queue tables
 make promote-dry       # preview what promote_to_rdf.py would write
 make promote            # write approved staging rows into data/generated/
+python scripts/compute_confidence.py --dry-run  # preview calculatedConfidence
+python scripts/compute_confidence.py             # apply it — run after ANY Evidence edit
 ```
 
 ## Working agreement

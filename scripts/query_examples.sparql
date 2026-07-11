@@ -3,53 +3,69 @@
 # or via the SPARQL endpoint if you ran `oxigraph serve`.
 
 PREFIX tgs:  <http://example.org/tgs#>
+PREFIX thinker: <http://example.org/thinker#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dct:  <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 # 1. List every concept with its definition
 # SELECT ?concept ?label ?def WHERE {
-#   ?concept a tgs:Concept ;
+#   ?concept a thinker:Concept ;
 #            skos:prefLabel ?label ;
 #            skos:definition ?def .
 # } ORDER BY ?label
 
-# 2. Every person linked to a given concept, with the rationale
-# (this is the core "explain the connection" query for the UI)
-SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
+# 2. Every person linked to a given concept, with rationale + calculated confidence
+# (this is the core "explain the connection" query for the UI). Evidence model:
+# LinkNote.calculatedConfidence is DERIVED (see scripts/compute_confidence.py) —
+# the raw per-Evidence rationale/confidence is one level deeper, via thinker:hasEvidence.
+SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfidence WHERE {
   tgs:Concept.Overshoot ?relation ?person .
-  ?person a tgs:Person ;
+  ?person a thinker:Person ;
           skos:prefLabel ?personLabel .
-  ?note tgs:aboutSubject tgs:Concept.Overshoot ;
-        tgs:aboutObject ?person ;
-        dct:description ?rationale ;
-        tgs:confidence ?confidence .
+  ?note thinker:aboutSubject tgs:Concept.Overshoot ;
+        thinker:aboutObject ?person ;
+        thinker:calculatedConfidence ?calcLevel ;
+        thinker:hasEvidence ?evidence .
+  ?evidence dct:description ?rationale ;
+            thinker:confidence ?evConfLevel .
+  ?calcLevel skos:prefLabel ?calculatedConfidence .
+  ?evConfLevel skos:prefLabel ?evidenceConfidence .
   FILTER(?relation != skos:prefLabel)
 }
 
-# 3. All CURATED (human-reviewed) links only — good default filter for a public-facing view
-# SELECT ?subjLabel ?relation ?objLabel ?rationale WHERE {
-#   ?note tgs:aboutSubject ?subj ;
-#         tgs:aboutObject ?obj ;
-#         dct:description ?rationale ;
-#         tgs:confidence tgs:ConfidenceLevel.Curated .
+# 3. All CURATED-OR-BETTER links (Curated/Corroborated) — good default filter for a public-facing view
+# SELECT ?subjLabel ?relation ?objLabel ?calcLabel WHERE {
+#   ?note thinker:aboutSubject ?subj ;
+#         thinker:aboutObject ?obj ;
+#         thinker:calculatedConfidence ?calc .
+#   FILTER(?calc IN (thinker:ConfidenceLevel.Curated, thinker:ConfidenceLevel.Corroborated))
+#   ?calc skos:prefLabel ?calcLabel .
 #   ?subj skos:prefLabel ?subjLabel .
 #   ?obj skos:prefLabel ?objLabel .
 #   ?subj ?relation ?obj .
 # }
 
-# 4. All CANDIDATE (unreviewed, LLM-proposed) links — your review queue
-# SELECT ?subjLabel ?objLabel ?rationale WHERE {
-#   ?note tgs:aboutSubject ?subj ;
-#         tgs:aboutObject ?obj ;
-#         dct:description ?rationale ;
-#         tgs:confidence tgs:ConfidenceLevel.Candidate .
+# 4. All CANDIDATE (unreviewed) links — your review queue
+# SELECT ?subjLabel ?objLabel WHERE {
+#   ?note thinker:aboutSubject ?subj ;
+#         thinker:aboutObject ?obj ;
+#         thinker:calculatedConfidence thinker:ConfidenceLevel.Candidate .
+#   ?subj skos:prefLabel ?subjLabel .
+#   ?obj skos:prefLabel ?objLabel .
+# }
+
+# 4b. All DISPUTED links — needs human attention, a serious rebuttal exists
+# SELECT ?subjLabel ?objLabel WHERE {
+#   ?note thinker:aboutSubject ?subj ;
+#         thinker:aboutObject ?obj ;
+#         thinker:calculatedConfidence thinker:ConfidenceLevel.Disputed .
 #   ?subj skos:prefLabel ?subjLabel .
 #   ?obj skos:prefLabel ?objLabel .
 # }
 
 # 5. Concepts with no external links yet (your backlog / gaps)
 # SELECT ?label WHERE {
-#   ?concept a tgs:Concept ; skos:prefLabel ?label .
-#   FILTER NOT EXISTS { ?concept tgs:relatesTo|tgs:echoesIdeaOf|tgs:influencedBy ?x }
+#   ?concept a thinker:Concept ; skos:prefLabel ?label .
+#   FILTER NOT EXISTS { ?concept thinker:relatesTo|thinker:echoesIdeaOf|thinker:influencedBy ?x }
 # }

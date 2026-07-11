@@ -51,7 +51,7 @@ jobs:
               sys.exit(1)
           EOF
 
-      - name: Check every LinkNote has a confidence value
+      - name: Check every LinkNote has valid Evidence and calculatedConfidence
         run: |
           python3 - <<'EOF'
           import glob, sys
@@ -59,32 +59,51 @@ jobs:
           from rdflib import Namespace
 
           TGS = Namespace("http://example.org/tgs#")
-          VALID_CONFIDENCE = {TGS["ConfidenceLevel.Curated"], TGS["ConfidenceLevel.Candidate"]}
+          THINKER = Namespace("http://example.org/thinker#")
+          VALID_LINKNOTE_CONFIDENCE = {
+              THINKER["ConfidenceLevel.Curated"], THINKER["ConfidenceLevel.Candidate"],
+              THINKER["ConfidenceLevel.Corroborated"], THINKER["ConfidenceLevel.Disputed"],
+          }
+          VALID_EVIDENCE_CONFIDENCE = {THINKER["ConfidenceLevel.Curated"], THINKER["ConfidenceLevel.Candidate"]}
 
           g = rdflib.Graph()
           for f in glob.glob('**/*.ttl', recursive=True):
               g.parse(f, format='turtle')
 
-          missing = []
-          invalid = []
-          for note in g.subjects(rdflib.RDF.type, TGS.LinkNote):
-              values = list(g.objects(note, TGS.confidence))
-              if not values:
-                  missing.append(str(note))
-              else:
-                  for v in values:
-                      if v not in VALID_CONFIDENCE:
-                          invalid.append((str(note), str(v)))
+          errors = []
 
-          if missing:
-              print("LinkNote(s) missing tgs:confidence entirely:")
-              for m in missing:
-                  print(f"  - {m}")
-          if invalid:
-              print("LinkNote(s) with a tgs:confidence value that isn't tgs:ConfidenceLevel.Curated or .Candidate:")
-              for note, val in invalid:
-                  print(f"  - {note} -> {val}")
-          if missing or invalid:
+          for note in g.subjects(rdflib.RDF.type, THINKER.LinkNote):
+              evidences = list(g.objects(note, THINKER.hasEvidence))
+              if not evidences:
+                  errors.append(f"{note} has no tgs:hasEvidence at all")
+
+              calc = list(g.objects(note, THINKER.calculatedConfidence))
+              if not calc:
+                  errors.append(f"{note} missing tgs:calculatedConfidence (run scripts/compute_confidence.py)")
+              else:
+                  for v in calc:
+                      if v not in VALID_LINKNOTE_CONFIDENCE:
+                          errors.append(f"{note} has invalid calculatedConfidence: {v}")
+
+              # a LinkNote should NOT carry the old direct tgs:confidence anymore
+              if list(g.objects(note, THINKER.confidence)):
+                  errors.append(f"{note} still has OLD direct tgs:confidence (should be on its Evidence instead)")
+
+          for ev in g.subjects(rdflib.RDF.type, THINKER.Evidence):
+              conf = list(g.objects(ev, THINKER.confidence))
+              if not conf:
+                  errors.append(f"{ev} (Evidence) missing tgs:confidence")
+              else:
+                  for v in conf:
+                      if v not in VALID_EVIDENCE_CONFIDENCE:
+                          errors.append(f"{ev} (Evidence) has invalid confidence: {v}")
+              if not list(g.objects(ev, THINKER.evidencePolarity)):
+                  errors.append(f"{ev} (Evidence) missing tgs:evidencePolarity")
+
+          if errors:
+              print(f"{len(errors)} problem(s) found:")
+              for e in errors:
+                  print(f"  - {e}")
               sys.exit(1)
-          print("All LinkNotes have a valid confidence value.")
+          print("All LinkNotes have valid Evidence and calculatedConfidence; all Evidence is well-formed.")
           EOF
