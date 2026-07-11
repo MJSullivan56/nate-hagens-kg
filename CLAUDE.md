@@ -27,7 +27,7 @@ Repo: https://github.com/MJSullivan56/nate-hagens-kg (branch `main`).
   query `.ttl` files directly in the editor — install status on MJSullivan's
   machine was never confirmed as of last check, verify before assuming
 
-## Reusable methodology: the thinker:/tgs: namespace split (2026-07-10)
+## Reusable methodology: the thinkr:/tgs: namespace split (2026-07-10)
 The project's scope expanded beyond Hagens alone — MJSullivan intends to
 apply this same methodology to other thinkers, with Heather Cox Richardson
 named as the concrete next candidate. This forced a real architectural
@@ -37,10 +37,10 @@ Simplification," so it can never correctly hold another thinker's data.
 **The split**: every CLASS, PROPERTY, and controlled-vocabulary INDIVIDUAL
 (the `ConfidenceLevel`/`ReliabilityTier`/`EvidencePolarity` enum members —
 every domain will reuse the exact same Curated/Candidate/Corroborated/
-Disputed states) now lives under `thinker:` (`http://example.org/thinker#`)
+Disputed states) now lives under `thinkr:` (`http://example.org/thinker#`)
 — this is the reusable ontology. Every actual DOMAIN INDIVIDUAL (every
 `Person`, `Concept`, `School`, `LinkNote`, `Evidence`) stays under `tgs:` —
-this is Hagens-specific data. `ontology/schema.ttl` is now 100% `thinker:`,
+this is Hagens-specific data. `ontology/schema.ttl` is now 100% `thinkr:`,
 zero `tgs:` — verified by grep, not just assumed.
 
 **A real bug worth knowing about if you extend this pattern again**: the
@@ -57,8 +57,8 @@ Python code, which the text-based rename never touched at all — required
 a second, manual pass adding a `THINKER` namespace object to each. A third
 subtle bug: `query_examples.sparql`'s query #2 appeared to work after the
 first fix, but only because it was tested against a Python graph object
-that still had `thinker:` bound from an earlier `parse()` call in the same
-session — the file itself was missing its own `PREFIX thinker:` line, which
+that still had `thinkr:` bound from an earlier `parse()` call in the same
+session — the file itself was missing its own `PREFIX thinkr:` line, which
 would have failed immediately in the Oxigraph CLI (no such inherited-binding
 behavior there). Caught by re-testing against a deliberately fresh graph
 with zero inherited bindings, not by trusting the first "passing" result.
@@ -198,7 +198,7 @@ is unsourced (implicit Reputable tier) — so Corroborated/Disputed have never
 actually been exercised on real data, only on the isolated test script.
 
 **HIGH — Physically split the ontology into its own repo.** Namespace
-rename (thinker:/tgs:) is done; the physical repo separation is not. See
+rename (thinkr:/tgs:) is done; the physical repo separation is not. See
 the dedicated section above this one for full context. Cheapest to do
 while the graph is still small (575 triples) — gets more expensive with
 every session of content added under the current single-repo structure.
@@ -245,6 +245,17 @@ would plausibly be `Authoritative` specifically on American political
 history. Deliberately deferred until real multi-domain content exists to
 test the distinction against — not worth designing in the abstract.
 
+**MEDIUM — Concept evolution over time isn't modeled.** A `thinkr:Concept`'s
+`skos:definition` is a single string — if Hagens revises his framing of
+something between an earlier episode and a later one, there's currently no
+way to represent that the definition CHANGED, only whatever the latest
+paraphrase currently says. The `prov:wasRevisionOf` pattern already built
+for superseded `Evidence` (the Neanderthal-taxonomy case) is the obvious
+template to reuse here, just never applied to `Concept` itself. Only
+matters if tracking how Hagens' thinking has shifted over time is a real
+goal, as opposed to "what does he currently believe" — raised during the
+bottom-up-vs-top-down content strategy discussion, not yet prioritized.
+
 **MEDIUM — Wikidata verification.** ~21 of ~23 people/schools still need
 verified Wikidata `owl:sameAs` links (pattern established in
 `data/seed/wikidata_links.ttl`, just needs the per-entity verification
@@ -271,7 +282,7 @@ against actual transcripts yet.
 
 **FUTURE, not yet actionable — dedicated Claude Skill.** MJSullivan intends to
 eventually build one (mirroring the `uwom-ontology` skill in his other
-`knowledge-graph` repo) once this project's patterns feel more settled.
+`uwom-kg` repo, renamed from `knowledge-graph` on 2026-07-10) once this project's patterns feel more settled.
 Natural candidate content based on what's already stable: the IRI minting
 convention (design decision #2), the curated/candidate review discipline
 (design decision #1, soon to be superseded by the Evidence model above),
@@ -300,20 +311,91 @@ model, if built) have proven durable rather than still shifting.
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.
 - Before any `git commit`/`git push`, double check the terminal prompt
-  actually says `nate-hagens-kg`, not `knowledge-graph` — MJSullivan has two
+  actually says `nate-hagens-kg`, not `uwom-kg` — MJSullivan has two
   projects open in separate terminal windows and has mixed them up before
   (harmless once, since `main` vs `master` makes it obvious after the
   fact, but worth avoiding).
 
-## Known environment gotcha
-`python3 -m venv .venv` on MJSullivan's machine defaults to Python 3.14, which is
-incompatible with rdflib 7.1.1 (AttributeError at import time — an actual
-rdflib/Python 3.14 compatibility bug, confirmed reproducible, not a local
-misconfiguration). Already fixed by bumping `requirements.txt` to
-`rdflib>=7.6.0`. If a future `make venv` fails the same way again (e.g.
-after a `.venv` wipe and rebuild on a machine where pip resolves an old
-rdflib for some reason), `pip install --upgrade rdflib` inside the venv is
-the fix — don't waste time re-diagnosing this one from scratch.
+## Gotchas (lessons learned — read before repeating a mistake)
+Backward-looking, as opposed to the forward-looking Backlog above. Each of
+these actually happened and cost real debugging time; logged so a future
+session (or MJSullivan on a tired evening) doesn't repeat it.
+
+- **rdflib 7.1.1 + Python 3.14 are incompatible** (AttributeError at import
+  time — a real upstream bug, not local misconfiguration). `python3 -m venv
+  .venv` on this Mac defaults to 3.14. Fixed via `requirements.txt` pinning
+  `rdflib>=7.6.0`. If `make venv` ever fails the same way again, `pip
+  install --upgrade rdflib` inside the venv is the fix — don't re-diagnose.
+- **Turtle parses a trailing `.` as end-of-statement**, even inside what
+  looks like a safe prefixed name. Bit us on DBpedia URIs for names ending
+  "Jr." (Martin Luther King Jr., William R. Catton Jr.). Fix: use the full
+  `<http://dbpedia.org/resource/...>` IRI in angle brackets for those cases
+  instead of the `dbr:` prefixed form.
+- **`g.parse()` returns a truthy Graph object**, so `x.parse(f) or
+  print(...)` in a list comprehension NEVER calls print — `or` short-
+  circuits on the truthy left side. Caught in the original `make validate`
+  one-liner; silently produced zero "OK" lines while still reporting a
+  correct triple count, which almost passed as "working."
+- **A schema's formal `rdfs:domain` can silently drift from how a property
+  is actually used.** `tgs:confidence` was declared `rdfs:domain
+  tgs:Concept` for a long stretch while every real usage was on
+  `tgs:LinkNote` (later `thinkr:Evidence`) — the property's own
+  `rdfs:comment` even said "use this on the link, not the concept,"
+  contradicting its own domain axiom. Nothing caught this until a manual
+  audit; SPARQL doesn't enforce domain/range at data-insert time, so wrong
+  axioms don't error, they just quietly lie.
+- **Renaming by regex on class names is dangerous when individuals use a
+  `Class.Name` IRI convention.** A pattern matching bare `Person` also
+  matches the START of `Person.MarcusAurelius` (nothing excluded a
+  following `.`), silently reclassifying every domain individual as
+  vocabulary during the thinkr:/tgs: split. Caught by running a live query
+  and getting zero results, NOT by the file still parsing as valid Turtle —
+  parsing successfully and querying correctly are different bars.
+- **A prefix rename has (at least) FOUR distinct token forms to catch, not
+  one** — learned the hard way across two separate rename passes
+  (`tgs:`→split, then `thinker:`→`thinkr:`). (1) the RDF prefix token
+  itself in `.ttl`/`.sparql` files (`thinker:Foo`), (2) the Python
+  `Namespace` identifier (`THINKER = Namespace(...)`), (3) the namespace
+  URI string (`http://example.org/thinker#`), and — the one that slipped
+  through even after fixing the first three — (4) STRING-LITERAL prefix
+  labels passed to `graph.bind("thinker", THINKER)`. That fourth one is a
+  lowercase string, invisible to a regex targeting the uppercase Python
+  identifier, and produces genuinely confusing output if missed: a
+  serialized file with `@prefix thinker: <.../thinkr#>` — label and URI
+  silently mismatched. Caught only by actually running `promote_to_rdf.py`
+  end-to-end and reading its real output, not by any of the syntax/parse
+  checks. Any future prefix rename needs to explicitly grep for all four
+  forms, not assume fixing three means the job's done.
+- **Text-based find/replace across `.ttl` files never touches vocabulary
+  URIs embedded in Python code** (`TGS["ConfidenceLevel.Curated"]`-style
+  construction in `compute_confidence.py`, `promote_to_rdf.py`, and the CI
+  YAML). Any future namespace/prefix change needs a SEPARATE, deliberate
+  pass through every `.py` and `.yml` file — it will not happen for free
+  alongside the `.ttl` rename.
+- **A SPARQL query can "pass" a test while silently depending on leftover
+  state from earlier in the same script/session** — `query_examples.sparql`
+  appeared correct after the first namespace fix because the test graph
+  still had `thinkr:` bound from an earlier unrelated `parse()` call in
+  the same Python process, masking that the file itself was missing its
+  own `PREFIX thinkr:` line. Would have failed immediately in the real
+  Oxigraph CLI. Caught only by deliberately re-testing against a fresh
+  graph with zero inherited bindings. Be suspicious of a first "pass" if
+  the test setup could be leaking state.
+- **Two terminal tabs open in two different projects is a real, repeated
+  risk**, not a one-off. `main` = this repo (nate-hagens-kg), `master` =
+  the sibling project (folder renamed `knowledge-graph` -> `uwom-kg` on
+  2026-07-10, branch name unchanged). Always glance at the prompt before
+  `git commit`/`git push`. Already happened once — a commit with a
+  Nate-Hagens-KG-themed message landed in the wrong repo's history
+  (harmless, just confusing).
+- **Shell brace-expansion mistakes create silent literal folders** — an
+  early `mkdir -p {ontology,data/seed}`-style command (missing proper
+  expansion) created an actual folder named `{ontology,data` sitting empty
+  alongside the real ones. Always worth a `find . -maxdepth 1` sanity check
+  after any bulk directory-creation command.
+- **macOS Finder hides dotfiles/dotfolders by default** (`.github`,
+  `.gitignore`, `.venv`), which can make a correctly-placed file look
+  "missing." Cmd+Shift+. toggles visibility instantly.
 
 ## Common commands
 ```bash
@@ -338,6 +420,7 @@ making assumptions about what exists.
 This repo is its own git repository and should stay that way — don't nest
 it inside another project's directory or reference files outside this
 repo's tree unless explicitly asked to. MJSullivan's other active project,
-`~/projects/knowledge-graph`, is unrelated (different domain: units of
-measure / UWOM ontology) and uses branch `master`, not `main` — a useful
-tell if you're ever unsure which repo a terminal session is in.
+`~/projects/uwom-kg` (renamed from `knowledge-graph` on 2026-07-10), is
+unrelated (different domain: units of measure / UWOM ontology) and uses
+branch `master`, not `main` — a useful tell if you're ever unsure which
+repo a terminal session is in.
