@@ -296,13 +296,53 @@ structural scaffolding only — e.g. the existing `owl:oneOf` list inside
 `ConfidenceLevel`'s enumeration, which nothing will ever need to reference
 by identity.
 
-**MEDIUM — Domain-scoped reliability tiers.** Current model is one fixed
-`ReliabilityTier` per `Source`, but real epistemics don't quite work that
-way — Hagens is plausibly `Reputable` generally but arguably closer to
-`Authoritative` when reporting his own stated influences/intent; Richardson
-would plausibly be `Authoritative` specifically on American political
-history. Deliberately deferred until real multi-domain content exists to
-test the distinction against — not worth designing in the abstract.
+**MEDIUM — Source reliability isn't a single fixed scalar (expanded 2026-07-11).**
+Three related gaps, all really the same underlying insight — a Source's
+standing isn't one static number, it varies by domain, by time, and by
+relationship to the specific subject:
+  1. DOMAIN-SCOPED (original note): one fixed `ReliabilityTier` per
+     `Source` doesn't fit real epistemics — Hagens is plausibly `Reputable`
+     generally but arguably `Authoritative` on his own stated influences;
+     Richardson would plausibly be `Authoritative` specifically on
+     American political history.
+  2. TEMPORAL DECAY: `prov:wasRevisionOf` already handles explicit
+     supersession (built and tested — the Neanderthal-taxonomy case), but
+     evidence that's simply OLD, with nothing specifically superseding it,
+     currently counts identically to evidence from yesterday. Recency
+     itself should matter, not just explicit supersession. Source standing
+     can also change over time independent of any specific claim (a
+     source assessed as Authoritative in 2010 might not hold that
+     assessment in 2026).
+  3. SOURCE-SUBJECT BIAS: distinct from both of the above and from
+     `EvidencePolarity` — a Source can be reliable in general while having
+     a demonstrated, patterned bias toward one SPECIFIC subject.
+     Concrete example given: if a source has repeatedly, demonstrably
+     shown antagonism specifically toward Nate Hagens, that source's
+     negative claims ABOUT Hagens specifically warrant discount (or
+     inversion — "it should inflate them, but that's another story" — a
+     real, separate future consideration, not resolved here) — without
+     blanket-downgrading that same source's reliability on unrelated
+     subjects, which a flat `ReliabilityTier.Unreliable` on the Source
+     would incorrectly do. This is a Source-Subject RELATIONSHIP, not a
+     property of either alone.
+     IMPORTANT DISTINCTION FROM THE CONTRIBUTOR/MENTION DESIGN: this is
+     NOT asking the system to detect stance from text (that's the hard
+     NLP problem already deliberately avoided in the Contributor rule).
+     This is recording a stance a HUMAN has already determined — a
+     genuinely more tractable problem, just not yet designed.
+ALL THREE deliberately deferred, consistently, same reasoning each time:
+exactly ONE `Source` individual exists in the entire graph as of this
+writing, and zero real multi-period or biased-relationship examples to
+design any of these mechanisms against. Designing blind risks guessing the
+shape instead of discovering it — same trap the Concept-evolution-over-time
+item and the OWL/SKOS "let's see what the data tells us" principle were
+both meant to avoid. Revisit once real Source data with an actual
+multi-period or biased-relationship case exists.
+CONSTRAINT TO HOLD FIRM ON WHENEVER THIS IS BUILT: stays ORDINAL, not
+numeric — this project has repeatedly and explicitly rejected manufactured-
+precision scoring (see e.g. the confidence aggregation rule's own
+reasoning). A weighted numeric decay formula would be a real regression,
+not an enhancement, however tempting it looks on paper.
 
 **MEDIUM — Concept evolution over time isn't modeled.** A `thinkr:Concept`'s
 `skos:definition` is a single string — if Hagens revises his framing of
