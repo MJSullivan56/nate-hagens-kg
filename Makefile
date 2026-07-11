@@ -11,7 +11,7 @@ validate:
 	.venv/bin/python -c "\
 import glob, rdflib; \
 g = rdflib.Graph(); \
-[g.parse(f, format='turtle') or print('OK', f) for f in sorted(glob.glob('**/*.ttl', recursive=True))]; \
+[print('OK', f) for f in sorted(glob.glob('**/*.ttl', recursive=True)) if g.parse(f, format='turtle') is not None]; \
 print('Total triples:', len(g))"
 
 # Requires: brew tap oxigraph/oxigraph && brew install oxigraph

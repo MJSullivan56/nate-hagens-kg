@@ -3,7 +3,9 @@
 # drop the ==version and let pip grab current, then re-pin what you get.
 
 # Core RDF
-rdflib==7.1.1
+rdflib>=7.6.0        # was pinned to 7.1.1 — that version is incompatible with
+                      # Python 3.14 (AttributeError on rdflib.resource.Resource
+                      # at import time). 7.6.0+ confirmed working.
 pyoxigraph==0.5.3     # Python bindings for Oxigraph — lets you query/load
                       # the store directly from Python instead of shelling
                       # out to the CLI, useful for the promote_to_rdf script

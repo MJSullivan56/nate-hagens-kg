@@ -12,20 +12,23 @@ the full picture — this file is the condensed version for session start.
   (`extraction/staging.duckdb`, not committed)
 - Python venv (`make venv`) for all scripting
 
-## Current status (last updated 2026-07-09)
+## Current status (last updated 2026-07-10)
 - Repo is live at https://github.com/MJSullivan56/nate-hagens-kg, default branch
   `main`, `master` deleted both locally and on GitHub.
-- CI ("Validate RDF") is green on the initial push — confirms all `.ttl` files
-  parse and every `tgs:LinkNote` has a confidence value.
-- Local machine setup NOT yet done as of this writing: `.venv` has not been
-  created on this laptop yet (`make venv` still outstanding). Oxigraph install
-  status via Homebrew also unconfirmed — check with `oxigraph --version`
-  before assuming it's there.
+- CI ("Validate RDF") is green on the initial push.
+- Local machine setup CONFIRMED working: `make venv` + `make validate` runs
+  clean, all 251 triples parse. Oxigraph 0.5.0-beta.4 confirmed installed.
+- KNOWN GOTCHA: `python3 -m venv .venv` on this machine defaults to Python
+  3.14, which is incompatible with rdflib 7.1.1 (AttributeError at import
+  time). Fixed by bumping requirements.txt to `rdflib>=7.6.0`. If a future
+  `make venv` fails the same way again, `pip install --upgrade rdflib`
+  inside the venv is the fix — don't waste time re-diagnosing this one.
+- VS Code: SPARQL Notebook extension install status on this machine still
+  unconfirmed — check before assuming query-from-editor works.
 - Content status: seed data only (~14 concepts, ~16 people/schools, 8 curated
   links, 1 example candidate link). No expansion or extraction pipeline runs
-  have happened yet. This is the actual next-work item, not more setup.
-- VS Code: SPARQL Notebook extension not yet confirmed installed on this
-  machine — check before assuming query-from-editor works.
+  have happened yet. This is the actual next-work item, not more setup —
+  local environment is now fully verified functional.
 
 ## For a future session picking this up
 Read this file, then check `git log --oneline -10` and `git status` to see
