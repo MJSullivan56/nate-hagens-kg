@@ -20,6 +20,8 @@ data/generated/
 # Downloaded transcripts (large, regeneratable — keep the repo lean;
 # store the fetch list/script instead, not the PDFs themselves)
 extraction/transcripts_raw/
+extraction/substack_summaries_raw/
+extraction/substack_text_cache/
 extraction/*.pdf
 
 # OS/editor cruft
