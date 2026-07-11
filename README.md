@@ -102,9 +102,10 @@ writes the exact same triple + `tgs:LinkNote` pattern used in
   touches a `.ttl` file — it parses every Turtle file individually and
   combined (catches the kind of syntax error a trailing `.` in a DBpedia URI
   can cause), and checks that every `tgs:LinkNote` has a `tgs:confidence`
-  value set, so an unreviewed candidate link can't silently get treated as
-  curated. Push to a repo and it runs automatically, no setup needed beyond
-  that file being present.
+  value pointing to one of the two valid `tgs:ConfidenceLevel` individuals
+  (not just present, but actually valid), so an unreviewed candidate link
+  can't silently get treated as curated. Push to a repo and it runs
+  automatically, no setup needed beyond that file being present.
 
 ## Quick start
 ```bash

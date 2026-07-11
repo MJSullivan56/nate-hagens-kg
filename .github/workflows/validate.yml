@@ -59,20 +59,32 @@ jobs:
           from rdflib import Namespace
 
           TGS = Namespace("http://example.org/tgs#")
+          VALID_CONFIDENCE = {TGS["ConfidenceLevel.Curated"], TGS["ConfidenceLevel.Candidate"]}
 
           g = rdflib.Graph()
           for f in glob.glob('**/*.ttl', recursive=True):
               g.parse(f, format='turtle')
 
           missing = []
+          invalid = []
           for note in g.subjects(rdflib.RDF.type, TGS.LinkNote):
-              if not list(g.objects(note, TGS.confidence)):
+              values = list(g.objects(note, TGS.confidence))
+              if not values:
                   missing.append(str(note))
+              else:
+                  for v in values:
+                      if v not in VALID_CONFIDENCE:
+                          invalid.append((str(note), str(v)))
 
           if missing:
-              print("LinkNote(s) missing tgs:confidence (must be 'curated' or 'candidate'):")
+              print("LinkNote(s) missing tgs:confidence entirely:")
               for m in missing:
                   print(f"  - {m}")
+          if invalid:
+              print("LinkNote(s) with a tgs:confidence value that isn't tgs:ConfidenceLevel.Curated or .Candidate:")
+              for note, val in invalid:
+                  print(f"  - {note} -> {val}")
+          if missing or invalid:
               sys.exit(1)
-          print("All LinkNotes have a confidence value.")
+          print("All LinkNotes have a valid confidence value.")
           EOF

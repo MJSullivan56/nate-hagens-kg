@@ -45,8 +45,8 @@ what's changed since the "Current status" note above was written — that note
 will go stale, the git history won't.
 
 ## Ground rules for changes in this repo
-- **Never mark a `tgs:LinkNote` as `tgs:confidence "curated"` without a human
-  having actually reviewed the specific claim.** This is the most important
+- **Never point a `tgs:LinkNote`'s `tgs:confidence` at `tgs:ConfidenceLevel.Curated`
+  without a human having actually reviewed the specific claim.** This is the most important
   rule in the repo. Auto-promoting LLM-proposed links defeats the entire
   point — see README.md's "Design choices" section.
 - Concept definitions in `data/seed/concepts.ttl` are paraphrases, not

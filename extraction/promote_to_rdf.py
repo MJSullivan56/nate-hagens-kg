@@ -20,7 +20,7 @@ import argparse
 import re
 import duckdb
 from rdflib import Graph, Namespace, RDF, RDFS, Literal, URIRef
-from rdflib.namespace import DCTERMS, SKOS
+from rdflib.namespace import DCTERMS, SKOS, OWL
 
 TGS = Namespace("http://example.org/tgs#")
 DB_PATH = "extraction/staging.duckdb"
@@ -44,7 +44,7 @@ def load_existing_labels(seed_dir="data/seed"):
     g.parse(f"{seed_dir}/concepts.ttl", format="turtle")
     g.parse(f"{seed_dir}/people.ttl", format="turtle")
     label_to_uri = {}
-    for s, o in g.subject_objects(RDFS.label):
+    for s, o in g.subject_objects(SKOS.prefLabel):
         label_to_uri[str(o)] = s
     return label_to_uri
 
@@ -54,9 +54,10 @@ def promote_concepts(con, g, confidence, dry_run):
         "SELECT id, proposed_label, proposed_def, source_note FROM candidate_concepts WHERE status = 'approved'"
     ).fetchall()
     for cid, label, definition, source_note in rows:
-        uri = TGS[slugify(label)]
+        uri = TGS[f"Concept.{slugify(label)}"]
         g.add((uri, RDF.type, TGS.Concept))
-        g.add((uri, RDFS.label, Literal(label, lang="en")))
+        g.add((uri, RDF.type, OWL.NamedIndividual))
+        g.add((uri, SKOS.prefLabel, Literal(label, lang="en")))
         g.add((uri, SKOS.definition, Literal(definition, lang="en")))
         if source_note:
             g.add((uri, DCTERMS.description, Literal(f"Source note: {source_note}")))
@@ -71,20 +72,25 @@ def promote_links(con, g, label_to_uri, confidence, dry_run):
         if predicate not in VALID_PREDICATES:
             print(f"SKIP link id={lid}: unknown predicate '{predicate}' (must be one of {VALID_PREDICATES})")
             continue
-        subj_uri = label_to_uri.get(subj_label) or TGS[slugify(subj_label)]
-        obj_uri = label_to_uri.get(obj_label) or TGS[slugify(obj_label)]
+        # Fallback naming for unmatched labels defaults to Concept.<slug> — this is a
+        # best guess only; unmatched labels always print a warning below, so review
+        # the resulting URI's class assertion manually if you see one.
+        subj_uri = label_to_uri.get(subj_label) or TGS[f"Concept.{slugify(subj_label)}"]
+        obj_uri = label_to_uri.get(obj_label) or TGS[f"Concept.{slugify(obj_label)}"]
         if subj_label not in label_to_uri:
             print(f"WARNING link id={lid}: subject '{subj_label}' not found in existing seed data — check for a typo.")
         if obj_label not in label_to_uri:
             print(f"WARNING link id={lid}: object '{obj_label}' not found in existing seed data — check for a typo.")
 
         g.add((subj_uri, TGS[predicate], obj_uri))
-        note_uri = TGS[f"link_{slugify(subj_label)}_{slugify(obj_label)}"]
+        note_uri = TGS[f"LinkNote.{slugify(subj_label)}{slugify(obj_label)}"]
         g.add((note_uri, RDF.type, TGS.LinkNote))
+        g.add((note_uri, RDF.type, OWL.NamedIndividual))
         g.add((note_uri, TGS.aboutSubject, subj_uri))
+        confidence_uri = TGS[f"ConfidenceLevel.{confidence.capitalize()}"]
         g.add((note_uri, TGS.aboutObject, obj_uri))
         g.add((note_uri, DCTERMS.description, Literal(rationale, lang="en")))
-        g.add((note_uri, TGS.confidence, Literal(confidence)))
+        g.add((note_uri, TGS.confidence, confidence_uri))
         print(f"{'[DRY RUN] ' if dry_run else ''}Promoting link: {subj_label} --{predicate}--> {obj_label} [{confidence}]")
 
 

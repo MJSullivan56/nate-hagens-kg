@@ -10,7 +10,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # 1. List every concept with its definition
 # SELECT ?concept ?label ?def WHERE {
 #   ?concept a tgs:Concept ;
-#            rdfs:label ?label ;
+#            skos:prefLabel ?label ;
 #            skos:definition ?def .
 # } ORDER BY ?label
 
@@ -19,12 +19,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
   tgs:Concept.Overshoot ?relation ?person .
   ?person a tgs:Person ;
-          rdfs:label ?personLabel .
+          skos:prefLabel ?personLabel .
   ?note tgs:aboutSubject tgs:Concept.Overshoot ;
         tgs:aboutObject ?person ;
         dct:description ?rationale ;
         tgs:confidence ?confidence .
-  FILTER(?relation != rdfs:label)
+  FILTER(?relation != skos:prefLabel)
 }
 
 # 3. All CURATED (human-reviewed) links only — good default filter for a public-facing view
@@ -32,9 +32,9 @@ SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
 #   ?note tgs:aboutSubject ?subj ;
 #         tgs:aboutObject ?obj ;
 #         dct:description ?rationale ;
-#         tgs:confidence "curated" .
-#   ?subj rdfs:label ?subjLabel .
-#   ?obj rdfs:label ?objLabel .
+#         tgs:confidence tgs:ConfidenceLevel.Curated .
+#   ?subj skos:prefLabel ?subjLabel .
+#   ?obj skos:prefLabel ?objLabel .
 #   ?subj ?relation ?obj .
 # }
 
@@ -43,13 +43,13 @@ SELECT ?personLabel ?relation ?rationale ?confidence WHERE {
 #   ?note tgs:aboutSubject ?subj ;
 #         tgs:aboutObject ?obj ;
 #         dct:description ?rationale ;
-#         tgs:confidence "candidate" .
-#   ?subj rdfs:label ?subjLabel .
-#   ?obj rdfs:label ?objLabel .
+#         tgs:confidence tgs:ConfidenceLevel.Candidate .
+#   ?subj skos:prefLabel ?subjLabel .
+#   ?obj skos:prefLabel ?objLabel .
 # }
 
 # 5. Concepts with no external links yet (your backlog / gaps)
 # SELECT ?label WHERE {
-#   ?concept a tgs:Concept ; rdfs:label ?label .
+#   ?concept a tgs:Concept ; skos:prefLabel ?label .
 #   FILTER NOT EXISTS { ?concept tgs:relatesTo|tgs:echoesIdeaOf|tgs:influencedBy ?x }
 # }
