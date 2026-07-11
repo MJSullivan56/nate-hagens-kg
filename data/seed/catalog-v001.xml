@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Protege catalog file. Maps the thinkr# ontology IRI (used in every child
+  file's owl:imports) to the local tgs-core.ttl file, so opening any single
+  child file in Protege resolves the import locally instead of trying to
+  fetch http://example.org/thinkr# over the network (which doesn't exist
+  as a real resolvable URL — see README.md's namespace note).
+
+  Protege auto-detects a file named exactly "catalog-v001.xml" sitting in
+  the same directory as the ontology file being opened. Must stay in
+  data/seed/ alongside the files it maps, or Protege won't find it.
+
+  If you add a new file that imports tgs-core, no change needed here —
+  this only maps the ONE shared import target (thinkr-core), not every
+  individual file.
+-->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://example.org/thinkr#" uri="tgs-core.ttl"/>
+</catalog>

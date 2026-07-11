@@ -15,7 +15,8 @@ legible to students, activists, data people, and general audiences.
 Repo: https://github.com/MJSullivan56/nate-hagens-kg (branch `main`).
 
 ## Stack
-- RDF/Turtle as source of truth (`ontology/`, `data/seed/`)
+- RDF/Turtle as source of truth, all in `data/seed/` (the separate
+  `ontology/` folder was dissolved 2026-07-11 — see governance note below)
 - Oxigraph as the query engine (installed via `brew tap oxigraph/oxigraph
   && brew install oxigraph`; confirmed working, version 0.5.0-beta.4 as of
   last check)
@@ -40,7 +41,9 @@ every domain will reuse the exact same Curated/Candidate/Corroborated/
 Disputed states) now lives under `thinkr:` (`http://example.org/thinker#`)
 — this is the reusable ontology. Every actual DOMAIN INDIVIDUAL (every
 `Person`, `Concept`, `School`, `LinkNote`, `Evidence`) stays under `tgs:` —
-this is Hagens-specific data. `ontology/schema.ttl` is now 100% `thinkr:`,
+this is Hagens-specific data. `data/seed/tgs-core.ttl` (formerly
+`ontology/schema.ttl`, see the 2026-07-11 governance reorganization note
+below) is 100% `thinkr:`,
 zero `tgs:` — verified by grep, not just assumed.
 
 **A real bug worth knowing about if you extend this pattern again**: the
@@ -79,7 +82,7 @@ upgradable later if needed), and defer actually splitting the crosswalk
 repo + viewer tool into their own repos until there's real multi-domain
 content to justify it (folders within `nate-hagens-kg` for now — zero cost
 to defer since nothing exists in either yet). The ontology repo split
-itself (physically separating `ontology/schema.ttl` into its own
+itself (physically separating `data/seed/tgs-core.ttl` into its own
 repository) is the one piece still NOT done as of this writing — the
 namespace rename happened first since it was more urgent (every hour of
 delay meant more content minted under the wrong prefix), the physical
@@ -97,6 +100,30 @@ designed in the abstract now.
 ## Key design decisions (the "why" behind the schema)
 These are the load-bearing choices — worth understanding before making
 structural changes:
+
+0a. **Governance principle (2026-07-11): one class, one file.** Every class
+    with instances gets its own complete, self-contained TTL file (class
+    declaration + all its individuals) — `concepts.ttl`, `persons.ttl`,
+    `schools.ttl`, `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
+    supporting/controlled-vocabulary classes (`ConfidenceLevel`,
+    `ReliabilityTier`, `EvidencePolarity`) and ALL property declarations
+    live together in `tgs-core.ttl` — MJSullivan's framing: `tgs-core.ttl`
+    is the direct successor to the old `ontology/schema.ttl`, which can be
+    thought of as its rough prototype. Classes with zero instances yet
+    (`Work`, `Episode`, `Source`) stay declared in `tgs-core.ttl` until
+    their first real instance, at which point they should be promoted to
+    their own file. External resource mappings get their own dedicated
+    files too (`dbpedia_links.ttl`, `wikidata_links.ttl`) — this same
+    principle extended to "declared external resources." Crosswalk files
+    (once any exist — e.g. for `convergesWith`) should be named by
+    subject + relationship, not yet needed since nothing's been built
+    there. Every file `owl:imports` `tgs-core.ttl`, resolved locally via
+    `data/seed/catalog-v001.xml` (Protege can't resolve
+    `http://example.org/thinkr#` over the network — it's not a real URL —
+    so the catalog maps it to the local file). This means any single file
+    can be opened standalone in Protege and "behave reasonably well," per
+    MJSullivan's explicit goal — was NOT true before this reorganization,
+    when only `ontology/schema.ttl` was really Protege-friendly on its own.
 
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
@@ -124,7 +151,7 @@ structural changes:
    enforced structurally: `tgs:confidence` is an `owl:ObjectProperty`
    pointing to one of exactly two enumerated individuals,
    `tgs:ConfidenceLevel.Curated` or `tgs:ConfidenceLevel.Candidate` (see
-   `ontology/schema.ttl` — closed enumeration via `owl:oneOf`). CI
+   `data/seed/tgs-core.ttl` — closed enumeration via `owl:oneOf`). CI
    actively validates every `tgs:LinkNote` has one of these two values,
    not just that some value is present.
 
@@ -133,7 +160,7 @@ structural changes:
    `tgs:LinkNote.DiscountMarcus`) and is explicitly typed
    `a tgs:SomeClass, owl:NamedIndividual` — this is MJSullivan's established
    convention from his other ontology work, adopted here for consistency.
-   Classes and properties themselves (in `ontology/schema.ttl`) are NOT
+   Classes and properties themselves (in `data/seed/tgs-core.ttl`) are NOT
    renamed under this scheme — only individuals/instances are.
 
 3. **`skos:prefLabel` instead of `rdfs:label`** everywhere, in
@@ -166,18 +193,23 @@ structural changes:
    actual transcripts/book text. Worth tightening against primary sources
    over time, not urgent.
 
-## Current data state (as of 2026-07-10, post-Evidence-model)
-- 575 triples total (`make validate` should confirm this exactly)
-- ~19 Concepts, ~25 People, 6 Schools, 14 LinkNotes (13 curated, 1
+## Current data state (as of 2026-07-11, post-file-reorganization)
+- 678 triples total (`make validate` should confirm this exactly)
+- 19 Concepts, 20 People, 6 Schools, 14 LinkNotes (13 curated, 1
   deliberately-marked candidate as a review-queue example), 14 Evidence
   individuals (one per LinkNote so far — 1:1 for now, but the model
   supports many-to-one), 0 Source individuals yet (every Evidence so far
-  is unsourced/direct-reasoning, defaulting to Reputable tier)
-- Files: `data/seed/concepts.ttl`, `people.ttl`, `links.ttl` (original
-  seed, now includes Evidence individuals post-migration), plus
-  `expansion_2026-07-10.ttl` (Jevons Paradox, Limits to Growth, Peak Oil,
-  Complexity/Collapse, Money-as-energy-claim batch, also migrated) and
-  `wikidata_links.ttl` (the 2 verified Wikidata links)
+  is unsourced/direct-reasoning, defaulting to Reputable tier), 12 Subject
+  individuals (6 official + 6 derived sub-topics, all 19 Concepts tagged)
+- **Files, one class per file (governance principle, 2026-07-11)** — see
+  README.md's Structure section for the full rationale and per-file
+  descriptions. `data/seed/tgs-core.ttl` is the shared vocabulary;
+  every other file `owl:imports` it via `catalog-v001.xml`. The old
+  `ontology/schema.ttl`, `data/seed/people.ttl`, and
+  `data/seed/expansion_2026-07-10.ttl` no longer exist — fully dissolved
+  into the new per-class files by a scripted, triple-count-verified
+  repartition (673 → 678 after adding the new ontology/import
+  declarations themselves).
 - `scripts/compute_confidence.py` is the derivation engine for
   `calculatedConfidence` — re-run it after ANY Evidence edit, never
   hand-set that property
@@ -214,11 +246,15 @@ staging/review workflow will need its own Evidence-aware tables. Also:
 is unsourced (implicit Reputable tier) — so Corroborated/Disputed have never
 actually been exercised on real data, only on the isolated test script.
 
-**HIGH — Physically split the ontology into its own repo.** Namespace
-rename (thinkr:/tgs:) is done; the physical repo separation is not. See
-the dedicated section above this one for full context. Cheapest to do
-while the graph is still small (575 triples) — gets more expensive with
-every session of content added under the current single-repo structure.
+**HIGH — Physically split the ontology into its own repo.** PARTIAL
+PROGRESS 2026-07-11: file-level reorganization done — `tgs-core.ttl` is
+now a genuinely separate, self-contained file (was `ontology/schema.ttl`),
+and every primary class has its own complete file with `owl:imports`
+pointing at it. What's still NOT done: the actual cross-REPO split — everything
+still lives in one git repo (`nate-hagens-kg`). The file-level separation
+makes a future repo split easier when it happens (just move
+`tgs-core.ttl` + `catalog-v001.xml` out), but isn't the same thing. Still
+cheapest to do while the graph is small (678 triples).
 
 **HIGH — Cross-tradition "convergent parallel" property.** Concrete trigger
 case: Stoicism ↔ the Bhagavad Gita — independently-developed traditions
@@ -323,7 +359,7 @@ model, if built) have proven durable rather than still shifting.
   ends in a period-adjacent token (e.g. "Jr.") — Turtle parses a trailing
   `.` as end-of-statement. Use the full
   `<http://dbpedia.org/resource/...>` IRI in those cases (see
-  `data/seed/people.ttl` for examples).
+  `data/seed/persons.ttl`/`schools.ttl` for examples).
 - `data/generated/` is the output of `extraction/promote_to_rdf.py` —
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.
@@ -337,6 +373,30 @@ model, if built) have proven durable rather than still shifting.
 Backward-looking, as opposed to the forward-looking Backlog above. Each of
 these actually happened and cost real debugging time; logged so a future
 session (or MJSullivan on a tired evening) doesn't repeat it.
+
+- **When splitting a graph by class, classes with ZERO instances yet are
+  easy to forget entirely.** During the 2026-07-11 one-class-one-file
+  reorganization, `thinkr:Source` (a real declared class, just with no
+  individuals yet) fell through every categorization rule and printed as
+  "uncategorized" — caught by checking the sanity-check output before
+  trusting the triple-count match, not by the count itself (which would
+  have been wrong too, but a raw mismatch alone doesn't tell you WHICH
+  triples went missing). `Work` and `Episode` had the same zero-instance
+  status and were included correctly only because they were remembered
+  from a previous session's backlog note — worth explicitly listing every
+  declared class before any future repartition, not just the ones with
+  visible data.
+- **A hardcoded file list anywhere is a latent bug waiting for the next
+  reorganization.** `promote_to_rdf.py`'s `load_existing_labels()`
+  hardcoded `concepts.ttl` + `people.ttl` by name — broke silently (no
+  crash, just returned incomplete/wrong matches) the moment `people.ttl`
+  split into `persons.ttl` + `schools.ttl`. Fixed by switching to
+  `glob(f"{seed_dir}/*.ttl")`. Any future script that touches specific
+  seed filenames by name should default to globbing instead, precisely
+  because this project's file structure has already changed twice
+  (2026-07-10 namespace split renamed files, 2026-07-11 governance
+  reorganization split/renamed/dissolved several more) and will likely
+  change again.
 
 - **rdflib 7.1.1 + Python 3.14 are incompatible** (AttributeError at import
   time — a real upstream bug, not local misconfiguration). `python3 -m venv
@@ -417,7 +477,7 @@ session (or MJSullivan on a tired evening) doesn't repeat it.
 ## Common commands
 ```bash
 make venv            # create .venv and install requirements.txt
-make validate         # parse-check every .ttl file (expect 407 triples)
+make validate         # parse-check every .ttl file (expect 678 triples)
 make load-oxigraph    # load everything into a local Oxigraph store
 make init-db           # set up the DuckDB review-queue tables
 make promote-dry       # preview what promote_to_rdf.py would write

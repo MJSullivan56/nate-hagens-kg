@@ -59,12 +59,12 @@ jobs:
           from rdflib import Namespace
 
           TGS = Namespace("http://example.org/tgs#")
-          THINKER = Namespace("http://example.org/thinker#")
+          THINKR = Namespace("http://example.org/thinkr#")
           VALID_LINKNOTE_CONFIDENCE = {
-              THINKER["ConfidenceLevel.Curated"], THINKER["ConfidenceLevel.Candidate"],
-              THINKER["ConfidenceLevel.Corroborated"], THINKER["ConfidenceLevel.Disputed"],
+              THINKR["ConfidenceLevel.Curated"], THINKR["ConfidenceLevel.Candidate"],
+              THINKR["ConfidenceLevel.Corroborated"], THINKR["ConfidenceLevel.Disputed"],
           }
-          VALID_EVIDENCE_CONFIDENCE = {THINKER["ConfidenceLevel.Curated"], THINKER["ConfidenceLevel.Candidate"]}
+          VALID_EVIDENCE_CONFIDENCE = {THINKR["ConfidenceLevel.Curated"], THINKR["ConfidenceLevel.Candidate"]}
 
           g = rdflib.Graph()
           for f in glob.glob('**/*.ttl', recursive=True):
@@ -72,12 +72,12 @@ jobs:
 
           errors = []
 
-          for note in g.subjects(rdflib.RDF.type, THINKER.LinkNote):
-              evidences = list(g.objects(note, THINKER.hasEvidence))
+          for note in g.subjects(rdflib.RDF.type, THINKR.LinkNote):
+              evidences = list(g.objects(note, THINKR.hasEvidence))
               if not evidences:
                   errors.append(f"{note} has no tgs:hasEvidence at all")
 
-              calc = list(g.objects(note, THINKER.calculatedConfidence))
+              calc = list(g.objects(note, THINKR.calculatedConfidence))
               if not calc:
                   errors.append(f"{note} missing tgs:calculatedConfidence (run scripts/compute_confidence.py)")
               else:
@@ -86,18 +86,18 @@ jobs:
                           errors.append(f"{note} has invalid calculatedConfidence: {v}")
 
               # a LinkNote should NOT carry the old direct tgs:confidence anymore
-              if list(g.objects(note, THINKER.confidence)):
+              if list(g.objects(note, THINKR.confidence)):
                   errors.append(f"{note} still has OLD direct tgs:confidence (should be on its Evidence instead)")
 
-          for ev in g.subjects(rdflib.RDF.type, THINKER.Evidence):
-              conf = list(g.objects(ev, THINKER.confidence))
+          for ev in g.subjects(rdflib.RDF.type, THINKR.Evidence):
+              conf = list(g.objects(ev, THINKR.confidence))
               if not conf:
                   errors.append(f"{ev} (Evidence) missing tgs:confidence")
               else:
                   for v in conf:
                       if v not in VALID_EVIDENCE_CONFIDENCE:
                           errors.append(f"{ev} (Evidence) has invalid confidence: {v}")
-              if not list(g.objects(ev, THINKER.evidencePolarity)):
+              if not list(g.objects(ev, THINKR.evidencePolarity)):
                   errors.append(f"{ev} (Evidence) missing tgs:evidencePolarity")
 
           if errors:

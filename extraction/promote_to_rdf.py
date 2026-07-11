@@ -1,7 +1,7 @@
 """
 Promotes APPROVED rows from the DuckDB staging tables into RDF triples,
-following the exact pattern used in data/seed/links.ttl (a relation triple
-+ a thinker:LinkNote carrying rationale and confidence).
+following the exact pattern used in data/seed/linknotes.ttl (a relation triple
++ a thinkr:LinkNote carrying rationale and confidence).
 
 Nothing here is auto-marked "curated" just because it's in the graph —
 that's still true; what changes is confidence goes from unset (staging) to
@@ -23,10 +23,10 @@ from rdflib import Graph, Namespace, RDF, RDFS, Literal, URIRef
 from rdflib.namespace import DCTERMS, SKOS, OWL
 
 TGS = Namespace("http://example.org/tgs#")
-THINKER = Namespace("http://example.org/thinker#")
+THINKR = Namespace("http://example.org/thinkr#")
 DB_PATH = "extraction/staging.duckdb"
 GENERATED_CONCEPTS = "data/generated/concepts.ttl"
-GENERATED_LINKS = "data/generated/links.ttl"
+GENERATED_LINKNOTES = "data/generated/linknotes.ttl"
 
 VALID_PREDICATES = {"echoesIdeaOf", "influencedBy", "contrastsWith", "appliesTo"}
 
@@ -40,10 +40,14 @@ def slugify(label: str) -> str:
 
 def load_existing_labels(seed_dir="data/seed"):
     """So we can validate candidate_links reference real existing entities
-    before promoting — catches typos instead of silently creating orphan URIs."""
+    before promoting — catches typos instead of silently creating orphan URIs.
+    Uses glob rather than hardcoded filenames, so this doesn't silently break
+    again the next time the seed directory gets reorganized (as it did on
+    2026-07-11, when people.ttl split into persons.ttl + schools.ttl)."""
+    import glob
     g = Graph()
-    g.parse(f"{seed_dir}/concepts.ttl", format="turtle")
-    g.parse(f"{seed_dir}/people.ttl", format="turtle")
+    for f in glob.glob(f"{seed_dir}/*.ttl"):
+        g.parse(f, format="turtle")
     label_to_uri = {}
     for s, o in g.subject_objects(SKOS.prefLabel):
         label_to_uri[str(o)] = s
@@ -56,7 +60,7 @@ def promote_concepts(con, g, confidence, dry_run):
     ).fetchall()
     for cid, label, definition, source_note in rows:
         uri = TGS[f"Concept.{slugify(label)}"]
-        g.add((uri, RDF.type, THINKER.Concept))
+        g.add((uri, RDF.type, THINKR.Concept))
         g.add((uri, RDF.type, OWL.NamedIndividual))
         g.add((uri, SKOS.prefLabel, Literal(label, lang="en")))
         g.add((uri, SKOS.definition, Literal(definition, lang="en")))
@@ -83,25 +87,25 @@ def promote_links(con, g, label_to_uri, confidence, dry_run):
         if obj_label not in label_to_uri:
             print(f"WARNING link id={lid}: object '{obj_label}' not found in existing seed data — check for a typo.")
 
-        g.add((subj_uri, THINKER[predicate], obj_uri))
+        g.add((subj_uri, THINKR[predicate], obj_uri))
         note_uri = TGS[f"LinkNote.{slugify(subj_label)}{slugify(obj_label)}"]
-        g.add((note_uri, RDF.type, THINKER.LinkNote))
+        g.add((note_uri, RDF.type, THINKR.LinkNote))
         g.add((note_uri, RDF.type, OWL.NamedIndividual))
-        g.add((note_uri, THINKER.aboutSubject, subj_uri))
-        g.add((note_uri, THINKER.aboutObject, obj_uri))
+        g.add((note_uri, THINKR.aboutSubject, subj_uri))
+        g.add((note_uri, THINKR.aboutObject, obj_uri))
 
         # Evidence model (as of the ConfidenceLevel/Evidence/Source refactor):
-        # thinker:confidence now lives on Evidence, not directly on LinkNote.
+        # thinkr:confidence now lives on Evidence, not directly on LinkNote.
         # calculatedConfidence is DERIVED — this script does NOT set it.
         # Run scripts/compute_confidence.py after promoting to populate it.
-        confidence_level = THINKER[f"ConfidenceLevel.{confidence.capitalize()}"]
+        confidence_level = THINKR[f"ConfidenceLevel.{confidence.capitalize()}"]
         ev_uri = TGS[f"Evidence.{slugify(subj_label)}{slugify(obj_label)}"]
-        g.add((ev_uri, RDF.type, THINKER.Evidence))
+        g.add((ev_uri, RDF.type, THINKR.Evidence))
         g.add((ev_uri, RDF.type, OWL.NamedIndividual))
-        g.add((ev_uri, THINKER.confidence, confidence_level))
-        g.add((ev_uri, THINKER.evidencePolarity, THINKER["EvidencePolarity.Supports"]))
+        g.add((ev_uri, THINKR.confidence, confidence_level))
+        g.add((ev_uri, THINKR.evidencePolarity, THINKR["EvidencePolarity.Supports"]))
         g.add((ev_uri, DCTERMS.description, Literal(rationale, lang="en")))
-        g.add((note_uri, THINKER.hasEvidence, ev_uri))
+        g.add((note_uri, THINKR.hasEvidence, ev_uri))
 
         print(f"{'[DRY RUN] ' if dry_run else ''}Promoting link: {subj_label} --{predicate}--> {obj_label} [{confidence} evidence]")
 
@@ -120,12 +124,12 @@ def main():
 
     concepts_g = Graph()
     concepts_g.bind("tgs", TGS)
-    concepts_g.bind("thinker", THINKER)
+    concepts_g.bind("thinkr", THINKR)
     promote_concepts(con, concepts_g, args.confidence, args.dry_run)
 
     links_g = Graph()
     links_g.bind("tgs", TGS)
-    links_g.bind("thinker", THINKER)
+    links_g.bind("thinkr", THINKR)
     promote_links(con, links_g, label_to_uri, args.confidence, args.dry_run)
 
     if not args.dry_run:
@@ -133,8 +137,8 @@ def main():
             concepts_g.serialize(destination=GENERATED_CONCEPTS, format="turtle")
             print(f"Wrote {GENERATED_CONCEPTS} ({len(concepts_g)} triples)")
         if len(links_g) > 0:
-            links_g.serialize(destination=GENERATED_LINKS, format="turtle")
-            print(f"Wrote {GENERATED_LINKS} ({len(links_g)} triples)")
+            links_g.serialize(destination=GENERATED_LINKNOTES, format="turtle")
+            print(f"Wrote {GENERATED_LINKNOTES} ({len(links_g)} triples)")
 
         con.execute("UPDATE candidate_concepts SET status = 'promoted' WHERE status = 'approved'")
         con.execute("UPDATE candidate_links SET status = 'promoted' WHERE status = 'approved'")

@@ -1,0 +1,140 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+
+tgs:LinkNote.ComplexityTainter a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.JosephTainter ;
+    thinkr:aboutSubject tgs:Concept.ComplexityCollapse ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.ComplexityTainter .
+
+tgs:LinkNote.DiscountMarcus a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.MarcusAurelius ;
+    thinkr:aboutSubject tgs:Concept.DiscountRatesAndPresentBias ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.DiscountMarcus .
+
+tgs:LinkNote.EnergyblindnessBuddha a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.Buddha ;
+    thinkr:aboutSubject tgs:Concept.EnergyBlindness ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.EnergyblindnessBuddha .
+
+tgs:LinkNote.JevonsJevons a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.WilliamStanleyJevons ;
+    thinkr:aboutSubject tgs:Concept.JevonsParadox ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.JevonsJevons .
+
+tgs:LinkNote.LimitsDennis a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.DennisMeadows ;
+    thinkr:aboutSubject tgs:Concept.LimitsToGrowth ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.LimitsDennis .
+
+tgs:LinkNote.LimitsDonella a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.DonellaMeadows ;
+    thinkr:aboutSubject tgs:Concept.LimitsToGrowth ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.LimitsDonella .
+
+tgs:LinkNote.LocalismOstrom a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.ElinorOstrom ;
+    thinkr:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.LocalismOstrom .
+
+tgs:LinkNote.MetacrisisBateson a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.GregoryBateson ;
+    thinkr:aboutSubject tgs:Concept.Metacrisis ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.MetacrisisBateson .
+
+tgs:LinkNote.MlkGrowth a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Concept.GrowthImperative ;
+    thinkr:aboutSubject tgs:Person.MartinLutherKingJr ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.MlkGrowth .
+
+tgs:LinkNote.MoneyAristotle a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.Aristotle ;
+    thinkr:aboutSubject tgs:Concept.MoneyAsClaimOnEnergy ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.MoneyAristotle .
+
+tgs:LinkNote.OvershootCatton a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.WilliamCatton ;
+    thinkr:aboutSubject tgs:Concept.Overshoot ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.OvershootCatton .
+
+tgs:LinkNote.PeakoilHubbert a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.MKingHubbert ;
+    thinkr:aboutSubject tgs:Concept.PeakOil ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.PeakoilHubbert .
+
+tgs:LinkNote.SuperorganismWilson a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.EOWilson ;
+    thinkr:aboutSubject tgs:Concept.Superorganism ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.SuperorganismWilson .
+
+tgs:LinkNote.WetwareFreud a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Person.SigmundFreud ;
+    thinkr:aboutSubject tgs:Concept.Wetware ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.WetwareFreud .
+
+tgs:Concept.CircleOfTrustLocalism thinkr:echoesIdeaOf tgs:Person.ElinorOstrom .
+
+tgs:Concept.ComplexityCollapse thinkr:influencedBy tgs:Person.JosephTainter .
+
+tgs:Concept.DiscountRatesAndPresentBias thinkr:echoesIdeaOf tgs:Person.MarcusAurelius .
+
+tgs:Concept.EnergyBlindness thinkr:contrastsWith tgs:Person.Buddha .
+
+tgs:Concept.JevonsParadox thinkr:influencedBy tgs:Person.WilliamStanleyJevons .
+
+tgs:Concept.Metacrisis thinkr:influencedBy tgs:Person.GregoryBateson .
+
+tgs:Concept.MoneyAsClaimOnEnergy thinkr:echoesIdeaOf tgs:Person.Aristotle .
+
+tgs:Concept.Overshoot thinkr:influencedBy tgs:Person.WilliamCatton .
+
+tgs:Concept.PeakOil thinkr:influencedBy tgs:Person.MKingHubbert .
+
+tgs:Concept.Superorganism thinkr:influencedBy tgs:Person.EOWilson .
+
+tgs:Concept.Wetware thinkr:echoesIdeaOf tgs:Person.SigmundFreud .
+
+tgs:Person.MartinLutherKingJr thinkr:appliesTo tgs:Concept.GrowthImperative .
+
+tgs:Concept.LimitsToGrowth thinkr:influencedBy tgs:Person.DennisMeadows,
+        tgs:Person.DonellaMeadows .
+
+thinkr:LinkNote a owl:Class ;
+    rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;
+    skos:prefLabel "Link Note"@en .
+

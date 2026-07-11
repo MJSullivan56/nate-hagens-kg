@@ -9,7 +9,7 @@ STORE_PATH="${1:-./tgs_store}"
 
 echo "Creating/loading Oxigraph store at ${STORE_PATH}"
 
-for f in ../ontology/schema.ttl ../data/seed/concepts.ttl ../data/seed/people.ttl ../data/seed/links.ttl; do
+for f in ../data/seed/*.ttl; do
     echo "Loading $f ..."
     oxigraph load --location "${STORE_PATH}" --file "$f" --format turtle
 done

@@ -1,24 +1,13 @@
-@prefix thinker: <http://example.org/thinker#> .
-@prefix tgs:  <http://example.org/tgs#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tgs: <http://example.org/tgs#> .
 
-#############################################
-# Wikidata sameAs links — verified batch 1 of N
-# Added ALONGSIDE existing DBpedia owl:sameAs links (data/seed/people.ttl),
-# not replacing them. Each entry below was individually verified against
-# a live Wikidata search, not inferred from memory — Wikidata Q-numbers
-# have no mnemonic structure, so guessing is genuinely risky (see
-# Marcus Aurelius below: the plausible-looking "Marcus Aurelius Antoninus"
-# search hit is a DISAMBIGUATION PAGE, Q1632736 — the real entity is Q1430).
-#
-# Remaining ~19 people/schools in people.ttl and expansion_2026-07-10.ttl
-# still need this same check before adding — do NOT copy Q-numbers from
-# memory for those. Verify each one the same way: search "<name> wikidata",
-# confirm the description on the hit actually matches the person (not a
-# namesake, disambiguation page, or different person by the same name),
-# then add here.
-#############################################
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
 
-tgs:Person.EOWilson owl:sameAs wd:Q211029 .
-tgs:Person.MarcusAurelius owl:sameAs wd:Q1430 .
+
+tgs:Person.EOWilson owl:sameAs <http://www.wikidata.org/entity/Q211029> .
+
+tgs:Person.MarcusAurelius owl:sameAs <http://www.wikidata.org/entity/Q1430> .
+

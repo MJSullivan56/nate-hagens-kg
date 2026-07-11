@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+
+tgs:Subject.BehavioralEconomicsAndCognition a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.HumanBehavior ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "Behavioral Economics and Cognition"@en .
+
+tgs:Subject.CommunityAndResponse a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.HumanBehavior ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "Community and Response"@en .
+
+tgs:Subject.EROIAndEnergyQuality a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.EnergySystems ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "EROI and Energy Quality"@en .
+
+tgs:Subject.Geopolitics a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Geopolitics"@en .
+
+tgs:Subject.MonetarySystemAndGrowth a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.EconomicsAndMonetary ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "Monetary System and Growth"@en .
+
+tgs:Subject.OvershootAndLimits a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.EcologyAndEnvironment ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "Overshoot and Limits"@en .
+
+tgs:Subject.SystemsFrameworks a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:broader tgs:Subject.SystemsScience ;
+    skos:inScheme tgs:ConceptScheme.MJSullivanDerivedSubtopics ;
+    skos:prefLabel "Systems Frameworks"@en .
+
+tgs:Subject.EcologyAndEnvironment a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Ecology and Environment"@en .
+
+tgs:Subject.EconomicsAndMonetary a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Economics and Monetary"@en .
+
+tgs:Subject.EnergySystems a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Energy Systems"@en .
+
+tgs:Subject.SystemsScience a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Systems Science"@en .
+
+tgs:Subject.HumanBehavior a thinkr:Subject,
+        owl:NamedIndividual,
+        skos:Concept ;
+    skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:prefLabel "Human Behavior"@en .
+
+tgs:ConceptScheme.MJSullivanDerivedSubtopics a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    rdfs:comment "Narrower sub-topic breakdown curated by the graph maintainer, not sourced from Hagens' site."@en ;
+    skos:prefLabel "MJSullivan-Curated Sub-Topics"@en .
+
+tgs:ConceptScheme.TGSSiteSubjects a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    dcterms:source <https://www.thegreatsimplification.com/podcast/frankly> ;
+    rdfs:comment "The 6 top-level subject tags used by thegreatsimplification.com's own content filter."@en ;
+    skos:prefLabel "TGS Official Site Subjects"@en .
+
+thinkr:Subject a owl:Class ;
+    rdfs:comment "A topic/subject-classification term — NOT the same as thinkr:Concept, which represents a specific idea/claim within a thinker's framework (e.g. 'Overshoot'). Subject is a classification bucket used to organize Concepts and other individuals (e.g. 'Energy Systems'). Explicitly typed both thinkr:Subject AND skos:Concept on every individual, not relying on subclass inference — this project's query tooling doesn't assume a reasoner is running. Used with real SKOS machinery: skos:ConceptScheme, skos:broader, skos:narrower, skos:inScheme, plus the external dct:subject property (not redefined here) to tag other individuals with their relevant Subject(s)."@en ;
+    rdfs:subClassOf skos:Concept ;
+    skos:prefLabel "Subject"@en .
+

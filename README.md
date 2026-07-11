@@ -13,24 +13,61 @@ pattern). Enough to prove the shape of the thing and start querying — not
 yet comprehensive.
 
 ## Structure
+
+**One class, one file — governance principle adopted 2026-07-11.** Every
+class that has instances gets its own complete, self-contained TTL file
+(class declaration + all its individuals). Small supporting classes
+(controlled vocabularies with no independent meaning of their own) and
+every property declaration live together in `tgs-core.ttl`. External
+resource mappings (DBpedia, Wikidata) get their own dedicated files too.
+Every file `owl:imports` `tgs-core.ttl`, so opening any single file in
+Protege resolves the shared vocabulary via `catalog-v001.xml` — you don't
+need the whole project loaded for one file to make sense on its own.
+
 ```
-ontology/schema.ttl       — classes & properties (reuses SKOS/FOAF/DCTERMS)
-data/seed/concepts.ttl    — Nate Hagens' core TGS concepts
-data/seed/people.ttl      — philosophers/activists/schools, linked to DBpedia
-data/seed/links.ttl       — cross-links between concepts and people, with
-                             rationale + curated/candidate confidence tracking
+data/seed/tgs-core.ttl        — ALL properties + supporting classes with
+                                 their instances (ConfidenceLevel,
+                                 ReliabilityTier, EvidencePolarity) +
+                                 currently-idle classes with zero instances
+                                 yet (Work, Episode, Source — each gets
+                                 promoted to its own file on first instance)
+data/seed/concepts.ttl        — thinkr:Concept: class + all 19 instances
+data/seed/persons.ttl         — thinkr:Person: class + all 20 instances
+data/seed/schools.ttl         — thinkr:School: class + all 6 instances
+data/seed/linknotes.ttl       — thinkr:LinkNote: class + all 14 instances,
+                                 plus the cross-individual relation triples
+                                 each LinkNote explains (a relation without
+                                 its LinkNote is meaningless anyway)
+data/seed/evidences.ttl       — thinkr:Evidence: class + all 14 instances
+data/seed/subjects.ttl        — thinkr:Subject class + Subject/sub-topic
+                                 instances + the 2 skos:ConceptScheme
+                                 individuals that organize them
+data/seed/dbpedia_links.ttl   — owl:sameAs to DBpedia, extracted out of
+                                 persons.ttl/schools.ttl
+data/seed/wikidata_links.ttl  — owl:sameAs to Wikidata (verified batch —
+                                 only 2 of ~23 people/schools done so far)
+data/seed/catalog-v001.xml    — Protege import resolution (maps the
+                                 thinkr# ontology IRI to tgs-core.ttl
+                                 locally, since that IRI isn't a real
+                                 resolvable URL)
 data/generated/           — output of the promote_to_rdf.py workflow (gitignored
                              or committed, your call — not present until you run it)
 scripts/load_oxigraph.sh  — load everything into a local Oxigraph store
 scripts/query_examples.sparql — example queries against the store
+scripts/compute_confidence.py — derives LinkNote calculatedConfidence from
+                             its Evidence set — never hand-set this value
 extraction/README.md      — plan for mining the ~225 podcast transcripts
                              for new concepts and candidate links at scale
+extraction/download_transcripts.py — downloads transcripts into a local
+                             reference library (sitemap + listing page)
+extraction/match_substack_summaries.py — matches locally-saved Substack
+                             PDFs against the transcript index
 extraction/init_staging_db.py — sets up the DuckDB review-queue tables
 extraction/promote_to_rdf.py  — promotes approved DuckDB rows into RDF triples
 requirements.txt          — Python deps for the venv
 Makefile                  — venv / validate / load / review workflow shortcuts
 .github/workflows/validate.yml — CI: parses every .ttl on push, checks every
-                             LinkNote has a confidence value set
+                             LinkNote has valid Evidence and calculatedConfidence
 ```
 
 ## Design choices worth knowing about
@@ -68,7 +105,8 @@ source .venv/bin/activate
   → "SPARQL Notebook: Use File as Store" and you get a live query cell against
   it, no server needed. Good for quick checks; use the Oxigraph store (below)
   once the graph is querying multiple files together regularly.
-- **Protégé** for `ontology/schema.ttl` specifically — see below.
+- **Protégé** works on any `data/seed/*.ttl` file directly now — see below,
+  this changed as of the 2026-07-11 file reorganization.
 
 ## The DuckDB review workflow (for scaling up via extraction/)
 Once you're running the LLM-assisted extraction pipeline in `extraction/`
@@ -82,22 +120,28 @@ make init-db                 # creates extraction/staging.duckdb with two tables
 #     you review by querying the DB directly (DuckDB CLI, a notebook, or
 #     even DBeaver) and UPDATE status = 'approved' on the rows you trust ...
 make promote-dry              # preview what would be written, no files touched
-make promote                  # writes data/generated/{concepts,links}.ttl
+make promote                  # writes data/generated/{concepts,linknotes}.ttl
                                # from approved rows, marks them 'promoted'
 ```
 `promote_to_rdf.py` validates that a candidate link's subject/object labels
 actually match existing seed entities before writing (catches typos), and
-writes the exact same triple + `tgs:LinkNote` pattern used in
-`data/seed/links.ttl` — nothing bypasses the curated/candidate tracking.
+writes the exact same triple + `thinkr:LinkNote` pattern used in
+`data/seed/linknotes.ttl` — nothing bypasses the curated/candidate tracking.
 
 ## Working with Protégé and GitHub
-- **Protégé** is the right tool for `ontology/schema.ttl` — open it directly
-  (File → Open, it reads Turtle natively), use it to sanity-check the class
-  hierarchy and run a reasoner (HermiT/Pellet) for consistency once the
-  schema has enough axioms to make that meaningful. Don't use it to bulk-edit
-  `data/seed/*.ttl` — those are instance data and will grow past what
-  Protégé's individuals UI comfortably handles; keep editing those as text
-  or via scripts.
+- **Every `data/seed/*.ttl` file is self-contained and Protégé-openable on
+  its own** (governance principle adopted 2026-07-11 — see Structure above).
+  Each file `owl:imports` `tgs-core.ttl`; `catalog-v001.xml` sitting
+  alongside them tells Protégé to resolve that import locally instead of
+  trying to fetch `http://example.org/thinkr#` over the network (it isn't a
+  real resolvable URL). Open any single file — `concepts.ttl`,
+  `persons.ttl`, whichever you're working on — and Protégé will pull in the
+  shared classes/properties automatically, no need to load the whole
+  project just to make one file's individuals make sense.
+  Bulk-editing many individuals at once is still more practical as
+  text/scripts than through Protégé's individuals UI, even though each file
+  now opens cleanly on its own — keep editing large batches as text or via
+  scripts.
 - **GitHub**: `.github/workflows/validate.yml` runs on every push/PR that
   touches a `.ttl` file — it parses every Turtle file individually and
   combined (catches the kind of syntax error a trailing `.` in a DBpedia URI
@@ -124,9 +168,10 @@ is free) so the identifiers resolve to something real.
 1. Expand `concepts.ttl` — verify each definition against the actual source
    (transcript/book), not just the paraphrase here, and add real
    `dct:source` references (page numbers / episode timestamps).
-2. Expand `people.ttl` with more philosophers, scientists, and activists as
+2. Expand `persons.ttl` (and `schools.ttl` for traditions/movements) with
+   more philosophers, scientists, and activists as
    concepts demand them — don't pad it preemptively.
-3. Add more curated links in `links.ttl`, by hand, focusing on the concepts
+3. Add more curated links in `linknotes.ttl`, by hand, focusing on the concepts
    with zero links first (query #5 in `query_examples.sparql`).
 4. Once the seed graph feels solid (~50-100 concepts, ~50 people, links
    covering most concepts), run the extraction pipeline in `extraction/`

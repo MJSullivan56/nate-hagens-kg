@@ -1,5 +1,5 @@
 """
-Computes thinker:calculatedConfidence for every thinker:LinkNote from its thinker:Evidence
+Computes thinkr:calculatedConfidence for every thinkr:LinkNote from its thinkr:Evidence
 set. This value is DERIVED — never hand-write it into a TTL file. Re-run this
 script after adding, editing, or reviewing any Evidence, and commit the result.
 
@@ -23,9 +23,9 @@ definitions, and CLAUDE.md's backlog section for the full design rationale):
 6. No qualifying evidence at all -> Candidate (the floor state).
 7. Mentions-polarity evidence never affects the score.
 
-Evidence with no explicit thinker:aboutSource (direct curator/maintainer
+Evidence with no explicit thinkr:aboutSource (direct curator/maintainer
 reasoning, not a citation to an external publication) is treated as
-Reputable tier for this calculation — see thinker:aboutSource's rdfs:comment
+Reputable tier for this calculation — see thinkr:aboutSource's rdfs:comment
 in the schema for why.
 
 Usage:
@@ -40,22 +40,22 @@ from rdflib import Graph, Namespace, RDF
 from rdflib.namespace import DCTERMS
 
 TGS = Namespace("http://example.org/tgs#")
-THINKER = Namespace("http://example.org/thinker#")
+THINKR = Namespace("http://example.org/thinkr#")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 
-CURATED = THINKER["ConfidenceLevel.Curated"]
-CANDIDATE = THINKER["ConfidenceLevel.Candidate"]
-CORROBORATED = THINKER["ConfidenceLevel.Corroborated"]
-DISPUTED = THINKER["ConfidenceLevel.Disputed"]
+CURATED = THINKR["ConfidenceLevel.Curated"]
+CANDIDATE = THINKR["ConfidenceLevel.Candidate"]
+CORROBORATED = THINKR["ConfidenceLevel.Corroborated"]
+DISPUTED = THINKR["ConfidenceLevel.Disputed"]
 
-REPUTABLE = THINKER["ReliabilityTier.Reputable"]
-AUTHORITATIVE = THINKER["ReliabilityTier.Authoritative"]
-UNVERIFIED = THINKER["ReliabilityTier.Unverified"]
-UNRELIABLE = THINKER["ReliabilityTier.Unreliable"]
+REPUTABLE = THINKR["ReliabilityTier.Reputable"]
+AUTHORITATIVE = THINKR["ReliabilityTier.Authoritative"]
+UNVERIFIED = THINKR["ReliabilityTier.Unverified"]
+UNRELIABLE = THINKR["ReliabilityTier.Unreliable"]
 REPUTABLE_OR_BETTER = {REPUTABLE, AUTHORITATIVE}
 
-SUPPORTS = THINKER["EvidencePolarity.Supports"]
-CONTESTS = THINKER["EvidencePolarity.Contests"]
+SUPPORTS = THINKR["EvidencePolarity.Supports"]
+CONTESTS = THINKR["EvidencePolarity.Contests"]
 
 
 def load_full_graph():
@@ -67,10 +67,10 @@ def load_full_graph():
 
 def evidence_tier(g, ev):
     """Reliability tier for one Evidence, applying the unsourced-defaults-to-Reputable rule."""
-    sources = list(g.objects(ev, THINKER.aboutSource))
+    sources = list(g.objects(ev, THINKR.aboutSource))
     if not sources:
         return REPUTABLE
-    tiers = list(g.objects(sources[0], THINKER.reliabilityTier))
+    tiers = list(g.objects(sources[0], THINKR.reliabilityTier))
     return tiers[0] if tiers else REPUTABLE
 
 
@@ -79,14 +79,14 @@ def is_superseded(g, ev):
 
 
 def compute_for_note(g, note):
-    evidences = list(g.objects(note, THINKER.hasEvidence))
+    evidences = list(g.objects(note, THINKR.hasEvidence))
     qualifying_supports_sources = set()  # None allowed once (unsourced), else Source URIs
     unsourced_support_seen = False
     has_disputing = False
     has_unverified_support = False
 
     for ev in evidences:
-        conf = list(g.objects(ev, THINKER.confidence))
+        conf = list(g.objects(ev, THINKR.confidence))
         if not conf or conf[0] != CURATED:
             continue  # rule 1: only Curated evidence counts
         if is_superseded(g, ev):
@@ -94,14 +94,14 @@ def compute_for_note(g, note):
         tier = evidence_tier(g, ev)
         if tier == UNRELIABLE:
             continue  # rule 2
-        polarity = list(g.objects(ev, THINKER.evidencePolarity))
+        polarity = list(g.objects(ev, THINKR.evidencePolarity))
         polarity = polarity[0] if polarity else None
 
         if polarity == CONTESTS and tier in REPUTABLE_OR_BETTER:
             has_disputing = True
         elif polarity == SUPPORTS:
             if tier in REPUTABLE_OR_BETTER:
-                sources = list(g.objects(ev, THINKER.aboutSource))
+                sources = list(g.objects(ev, THINKR.aboutSource))
                 if sources:
                     qualifying_supports_sources.add(sources[0])
                 else:
@@ -129,7 +129,7 @@ def main():
     args = parser.parse_args()
 
     g = load_full_graph()
-    notes = list(g.subjects(RDF.type, THINKER.LinkNote))
+    notes = list(g.subjects(RDF.type, THINKR.LinkNote))
     print(f"Computing calculatedConfidence for {len(notes)} LinkNotes...\n")
 
     results = {}
@@ -150,11 +150,11 @@ def main():
         file_g.parse(path, format='turtle')
         changed = False
         for note, result in results.items():
-            if (note, RDF.type, THINKER.LinkNote) in file_g:
+            if (note, RDF.type, THINKR.LinkNote) in file_g:
                 # remove any stale calculatedConfidence, set the fresh one
-                for old_val in list(file_g.objects(note, THINKER.calculatedConfidence)):
-                    file_g.remove((note, THINKER.calculatedConfidence, old_val))
-                file_g.add((note, THINKER.calculatedConfidence, result))
+                for old_val in list(file_g.objects(note, THINKR.calculatedConfidence)):
+                    file_g.remove((note, THINKR.calculatedConfidence, old_val))
+                file_g.add((note, THINKR.calculatedConfidence, result))
                 changed = True
         if changed:
             file_g.serialize(destination=path, format='turtle')
