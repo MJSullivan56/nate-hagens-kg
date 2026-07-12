@@ -4,10 +4,9 @@
 @prefix tgs: <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 
-<http://example.org/tgs#> a owl:Ontology ;
-    owl:imports <http://example.org/thinkr#> ;
-    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
-
+tgs: a owl:Ontology ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
+    owl:imports thinkr: .
 
 tgs:LinkNote.ComplexityTainter a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -86,6 +85,13 @@ tgs:LinkNote.OvershootCatton a thinkr:LinkNote,
     thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
     thinkr:hasEvidence tgs:Evidence.OvershootCatton .
 
+tgs:LinkNote.OvershootDoughnutEconomics a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:School.DoughnutEconomics ;
+    thinkr:aboutSubject tgs:Concept.Overshoot ;
+    thinkr:calculatedConfidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:hasEvidence tgs:Evidence.OvershootDoughnutEconomics .
+
 tgs:LinkNote.PeakoilHubbert a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Person.MKingHubbert ;
@@ -121,8 +127,6 @@ tgs:Concept.Metacrisis thinkr:influencedBy tgs:Person.GregoryBateson .
 
 tgs:Concept.MoneyAsClaimOnEnergy thinkr:echoesIdeaOf tgs:Person.Aristotle .
 
-tgs:Concept.Overshoot thinkr:influencedBy tgs:Person.WilliamCatton .
-
 tgs:Concept.PeakOil thinkr:influencedBy tgs:Person.MKingHubbert .
 
 tgs:Concept.Superorganism thinkr:influencedBy tgs:Person.EOWilson .
@@ -133,6 +137,11 @@ tgs:Person.MartinLutherKingJr thinkr:appliesTo tgs:Concept.GrowthImperative .
 
 tgs:Concept.LimitsToGrowth thinkr:influencedBy tgs:Person.DennisMeadows,
         tgs:Person.DonellaMeadows .
+
+tgs:School.DoughnutEconomics thinkr:convergesWith tgs:Concept.Overshoot .
+
+tgs:Concept.Overshoot thinkr:convergesWith tgs:School.DoughnutEconomics ;
+    thinkr:influencedBy tgs:Person.WilliamCatton .
 
 thinkr:LinkNote a owl:Class ;
     rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;

@@ -1,0 +1,25 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Source — promoted out of tgs-core.ttl on 2026-07-11, its first
+# real instance.
+#############################################
+
+thinkr:Source a owl:Class ;
+    rdfs:comment "A publication or venue (e.g. Wikidata, a specific journal, a specific blog) that one or more thinkr:Evidence individuals cite. Reliability is set ONCE per Source and reused across every Evidence citing it, rather than hand-tuned per assertion."@en ;
+    skos:prefLabel "Source"@en .
+
+tgs:Source.CalDECCaliforniaDoughnutReport a thinkr:Source, owl:NamedIndividual ;
+    skos:prefLabel "CalDEC — The California Doughnut Snapshot and Report (2025)"@en ;
+    thinkr:reliabilityTier thinkr:ReliabilityTier.Authoritative ;
+    rdfs:comment "Authoritative tier: DOI-registered (10.5281/zenodo.17540639), multi-author collaborative report with academic/government/NGO input, CC-BY 4.0 licensed. See tgs:Work.CaliforniaDoughnutReport2025 for full citation details."@en ;
+    dct:source <https://zenodo.org/records/17540639> .

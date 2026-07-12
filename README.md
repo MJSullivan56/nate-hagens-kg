@@ -38,10 +38,16 @@ data/seed/linknotes.ttl       — thinkr:LinkNote: class + all 14 instances,
                                  plus the cross-individual relation triples
                                  each LinkNote explains (a relation without
                                  its LinkNote is meaningless anyway)
-data/seed/evidences.ttl       — thinkr:Evidence: class + all 14 instances
+data/seed/evidences.ttl       — thinkr:Evidence: class + all 15 instances
 data/seed/subjects.ttl        — thinkr:Subject class + Subject/sub-topic
                                  instances + the 2 skos:ConceptScheme
                                  individuals that organize them
+data/seed/works.ttl           — thinkr:Work: class + 1 instance (promoted
+                                 out of tgs-core.ttl 2026-07-11, its first
+                                 real use — was empty since the original
+                                 schema)
+data/seed/sources.ttl         — thinkr:Source: class + 1 instance (same
+                                 promotion, same date)
 data/seed/dbpedia_links.ttl   — owl:sameAs to DBpedia, extracted out of
                                  persons.ttl/schools.ttl
 data/seed/wikidata_links.ttl  — owl:sameAs to Wikidata (verified batch —

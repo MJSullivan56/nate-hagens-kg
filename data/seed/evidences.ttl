@@ -106,3 +106,10 @@ thinkr:Evidence a owl:Class ;
     rdfs:comment "One individual piece of evidence for/against a thinkr:LinkNote's claim. Multiple Evidence individuals can attach to one LinkNote. Never deleted even when superseded (prov:wasRevisionOf) — the historical record of what was believed and why is preserved; superseded evidence is simply excluded from calculatedConfidence."@en ;
     skos:prefLabel "Evidence"@en .
 
+
+tgs:Evidence.OvershootDoughnutEconomics a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceLevel.Curated ;
+    thinkr:evidencePolarity thinkr:EvidencePolarity.Supports ;
+    thinkr:aboutSource tgs:Source.CalDECCaliforniaDoughnutReport ;
+    dcterms:description "CalDEC's 2025 California Doughnut Report finds California overshooting 89% of ecological indicators assessed (average overshoot 286%), using 'overshoot' as an explicit technical term for exceeding planetary-boundary-derived limits — directly paralleling Hagens' Overshoot concept despite independent development within a different framework (Doughnut Economics traces to Rockstrom et al.'s planetary boundaries work, not Hagens' energy-systems background)."@en ;
+    prov:generatedAtTime "2025"^^xsd:gYear .

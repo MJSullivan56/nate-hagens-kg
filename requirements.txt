@@ -18,6 +18,18 @@ requests==2.32.3
 beautifulsoup4==4.12.3
 pdfplumber==0.11.4
 
+# Named entity recognition (rough first-pass indexing of PDFs — see
+# extraction/index_named_entities.py). Note: pip install alone does NOT
+# include the language model — after installing, also run:
+#   python -m spacy download en_core_web_sm
+# Unpinned (not ==3.8.14 like earlier) after that exact version turned out
+# not to exist for Python 3.14 — same class of issue as the rdflib/3.14
+# problem earlier in this project, different package.
+spacy>=3.8.0
+click>=8.0.0  # spacy's CLI (used for `python -m spacy download`) imports this
+              # directly; on Python 3.14 it wasn't reliably pulled in as a
+              # transitive dependency via typer, so pinning it explicitly
+
 # LLM-assisted extraction (optional — only needed if you call the API
 # directly from Python rather than doing extraction passes in-chat)
 anthropic==0.40.0

@@ -11,6 +11,8 @@ venv/
 
 # DuckDB staging (local review queue — not source of truth)
 extraction/staging.duckdb
+extraction/entity_index.duckdb
+extraction/entity_index.csv
 extraction/*.duckdb
 
 # Generated RDF from the promote workflow — decide deliberately whether
@@ -22,6 +24,7 @@ data/generated/
 extraction/transcripts_raw/
 extraction/substack_summaries_raw/
 extraction/substack_text_cache/
+extraction/transcripts_text_cache/
 extraction/*.pdf
 
 # OS/editor cruft
