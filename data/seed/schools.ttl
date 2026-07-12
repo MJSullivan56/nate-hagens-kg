@@ -62,3 +62,7 @@ tgs:School.MaEarth a thinkr:School, owl:NamedIndividual ;
 tgs:School.BiomeTrust a thinkr:School, owl:NamedIndividual ;
     skos:prefLabel "Biome Trust"@en ;
     skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Person.MatthewMonahan. Limited independent detail available as of 2026-07-11 — flagged honestly rather than embellished; revisit if more source material surfaces."@en .
+
+tgs:School.ConsilienceProject a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "The Consilience Project"@en ;
+    skos:definition "Non-profit media organization (founded 2021, a publication of the Civilization Research Institute) publishing research on public sensemaking, governance design, and global risk mitigation — addressing the erosion of shared epistemics and 'information commons.' Founding member: tgs:Person.DanielSchmachtenberger. NOT separately verified for DBpedia/Wikidata as of 2026-07-11 — flagged honestly rather than guessed; revisit if this becomes independently relevant."@en .
