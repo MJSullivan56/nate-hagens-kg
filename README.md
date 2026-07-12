@@ -64,12 +64,16 @@ data/seed/catalog-v001.xml    — Protege import resolution (maps the
                                  resolvable URL)
 data/generated/           — output of the promote_to_rdf.py workflow (gitignored
                              or committed, your call — not present until you run it)
+docs/                     — cross-cutting design/handoff docs, distinct
+                             from folder-local READMEs — see docs/README.md
 scripts/load_oxigraph.sh  — load everything into a local Oxigraph store
 scripts/query_examples.sparql — example queries against the store
 scripts/compute_confidence.py — derives LinkNote calculatedConfidence from
                              its Evidence set — never hand-set this value
-extraction/README.md      — plan for mining the ~225 podcast transcripts
-                             for new concepts and candidate links at scale
+extraction/README.md      — the built, working transcript/entity-triage
+                             pipeline PLUS the still-aspirational LLM
+                             concept/link-extraction plan, clearly
+                             separated within the file
 extraction/download_transcripts.py — downloads transcripts into a local
                              reference library (sitemap + listing page)
 extraction/match_substack_summaries.py — matches locally-saved Substack

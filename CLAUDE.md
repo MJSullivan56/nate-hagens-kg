@@ -618,10 +618,12 @@ building it: a real downstream need (sortable/alphabetized browse view,
 name-based dedup — which would also need to solve the "Nate" vs "Nate
 Hagens" alias problem already flagged from the entity index).
 
-**LOW — Extraction pipeline never run for real.** `extraction/README.md`'s
-plan has only been tested end-to-end with fake staging data to confirm the
-DuckDB→promote_to_rdf.py→graph pipeline mechanically works — never run
-against actual transcripts yet.
+**LOW — LLM extraction plan never run for real.** `extraction/README.md`'s
+aspirational Steps 3-6 (LLM concept/link mining, distinct from the
+transcript-download and entity-triage infrastructure documented in the
+same file, which IS built and working) has only been tested end-to-end
+with fake staging data to confirm the DuckDB→promote_to_rdf.py→graph
+pipeline mechanically works — never run against actual transcripts yet.
 
 **FUTURE, not yet actionable — dedicated Claude Skill.** MJSullivan intends to
 eventually build one (mirroring the `uwom-ontology` skill in his other
