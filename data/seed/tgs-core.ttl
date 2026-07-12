@@ -1,4 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -113,12 +114,6 @@ thinkr:ConfidenceType.Disputed a thinkr:ConfidenceType,
     skos:definition "LinkNote-only (calculatedConfidence): at least one Curated+Contests evidence from a Reputable-or-better source exists. This OVERRIDES Corroborated regardless of how much supporting evidence also exists — a serious rebuttal should surface for human attention, not get mathematically outvoted."@en ;
     skos:prefLabel "Disputed"@en .
 
-thinkr:Episode a owl:Class ;
-    rdfs:comment "A Great Simplification podcast episode or Frankly video."@en ;
-    rdfs:subClassOf thinkr:Work ;
-    skos:scopeNote "Narrower than thinkr:Work: specifically a TGS podcast episode or Frankly video, not a book/essay/report. Zero instances as of 2026-07-11 — see the Work/Episode/Source backlog note in CLAUDE.md."@en ;
-    skos:prefLabel "Podcast Episode"@en .
-
 thinkr:PolarityType.Contests a thinkr:PolarityType,
         owl:NamedIndividual ;
     skos:prefLabel "Contests"@en .
@@ -227,6 +222,61 @@ thinkr:verifiedOn a owl:DatatypeProperty ;
     rdfs:domain thinkr:CrosswalkNote ;
     rdfs:range xsd:date ;
     skos:prefLabel "verified on"@en .
+
+thinkr:EpisodeType a owl:Class, thinkr:Category ;
+    rdfs:comment "Structural format of a thinkr:Episode — deliberately generic and reusable across any future thinker's graph, independent of any one show's own branding for these formats (e.g. TGS calls its Monologue-type content 'Frankly' and its PanelDiscussion-type content 'Reality Roundtables' — those show-specific terms live as skos:altLabel on the generic values below, not as separate classes)."@en ;
+    skos:prefLabel "Episode Type"@en .
+
+thinkr:EpisodeType.Interview a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Interview"@en ;
+    skos:altLabel "interview"@en, "Guest Interview"@en, "One-on-One Interview"@en .
+
+thinkr:EpisodeType.PanelDiscussion a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Panel Discussion"@en ;
+    skos:altLabel "roundtable"@en, "Reality Roundtable"@en, "Panel"@en, "Multi-Guest Discussion"@en .
+
+thinkr:EpisodeType.Monologue a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Monologue"@en ;
+    skos:altLabel "frankly"@en, "Frankly"@en, "Solo Reflection"@en, "Solo Episode"@en .
+
+thinkr:hasEpisodeType a owl:ObjectProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range thinkr:EpisodeType ;
+    skos:prefLabel "has episode type"@en .
+
+thinkr:hasCanonicalSource a owl:ObjectProperty ;
+    rdfs:subPropertyOf dcterms:source ;
+    rdfs:domain thinkr:Episode ;
+    skos:scopeNote "The canonical page for this Episode — expected cardinality of exactly one, unlike the general dct:source (still used elsewhere in this graph, e.g. Work.CaliforniaDoughnutReport2025, with no such cardinality expectation). subPropertyOf lets this stay a genuine dct:source for anything that reads it generically, while carrying a narrower, Episode-specific meaning here — a scopeNote directly on dct:source itself would incorrectly apply globally to every other use of that property in this graph."@en .
+
+thinkr:hasReplay a owl:ObjectProperty ;
+    rdfs:domain thinkr:Work ;
+    skos:scopeNote "A link to watch/listen to a replay (YouTube, Spotify, etc.) — multi-valued, one triple per platform. Domain deliberately kept at thinkr:Work, not narrowed to Episode: some future Work subtypes (e.g. an audiobook) could plausibly have a replay too. Many Work subtypes (Book, WhitePaper, PhDThesis) genuinely won't — that's a fact about the specific instance, not something enforced structurally."@en .
+
+thinkr:hasTranscript a owl:ObjectProperty ;
+    rdfs:domain thinkr:Work ;
+    skos:scopeNote "A link to a text transcript, distinct from thinkr:hasReplay (audio/video) and thinkr:hasCanonicalSource (the page about the content, not the content itself)."@en .
+
+thinkr:hasHost a owl:ObjectProperty ;
+    rdfs:subPropertyOf dcterms:creator ;
+    rdfs:domain thinkr:Work ;
+    skos:scopeNote "The person who hosts/leads this Work — distinct from dct:creator's broader sense, which for other Work subtypes might mean author, director, etc. instead. Same reasoner caveat as thinkr:hasPersonEntityType: doesn't make the fact queryable via bare dct:creator without a reasoner."@en .
+
+thinkr:hasGuest a owl:ObjectProperty ;
+    rdfs:subPropertyOf dcterms:contributor ;
+    rdfs:domain thinkr:Work ;
+    skos:scopeNote "A person being interviewed/featured — distinct from dct:contributor's broader sense (editor, co-author, etc. for other Work subtypes)."@en .
+
+thinkr:Series a owl:Class ;
+    rdfs:subClassOf thinkr:Work, dcmitype:Collection ;
+    rdfs:comment "The overarching arc itself (e.g. 'How to Think About the Future'), distinct from any single installment. First instance added 2026-07-11 (Series.HowToThinkAboutTheFuture, with 3 stub Frankly installments) — no longer zero-instance."@en ;
+    skos:scopeNote "Dual superclass, same pattern as thinkr:Person (foaf:Person + thinkr:NamedEntity): narrower than thinkr:Work in that it has real Work-like properties (title, host, potentially subject) — but a Series has no standalone content of its own (no replay, no transcript), which is exactly what dcmitype:Collection (an aggregation of resources, membership understood via description of the aggregation) captures and thinkr:Work alone does not. dct:isPartOf/dct:hasPart (used on each installment) are the DCMI-standard properties for exactly this relationship — Collection is their natural target type, not an arbitrary addition."@en ;
+    skos:prefLabel "Series"@en .
+
+thinkr:seriesPosition a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Work ;
+    rdfs:range xsd:integer ;
+    skos:scopeNote "Ordinal position within the thinkr:Series pointed to by dct:isPartOf on the same individual — e.g. 2 for Part 2. No Dublin Core term exists for this specifically, minted directly (unlike dct:references/dct:isPartOf, which are used as-is with no subproperty needed — both already carry the right generic meaning)."@en .
 
 thinkr:relatesTo a owl:ObjectProperty ;
     rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en ;

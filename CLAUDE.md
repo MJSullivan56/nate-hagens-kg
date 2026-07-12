@@ -189,6 +189,46 @@ structural changes:
     (Iain McGilchrist's DBpedia+Wikidata crosswalks, both correctly
     surfacing his name-correction scopeNote) before shipping.
 
+0d. **Naming convention, SUPERSEDED then finalized (2026-07-11):
+    `Source_Number_TitleFragment`, prefixed by the generic EpisodeType,
+    not the source's own branding.** Full pattern:
+    `tgs:<EpisodeTypeName>.<SourceAcronym>_<Number>_<TitleFragment>` —
+    e.g. `tgs:Interview.TGS_226_CanMoneyServeLife`,
+    `tgs:Monologue.TGS_134_AWorldAtTheEdgeOfChange`.
+    THREE separate corrections stacked into this final form, each worth
+    understanding:
+    (1) Original version used `Episode`/`Frankly` as the local-name
+    prefix — `Frankly` being TGS's own branding for the Monologue format.
+    This directly contradicted the reason `thinkr:EpisodeType` was built
+    generic in the first place (TGS-specific terms belong in
+    `skos:altLabel` only, e.g. "frankly"/"roundtable" — see the
+    EpisodeType section above). Fixed by using the EpisodeType's own name
+    (`Interview`/`Monologue`/`PanelDiscussion`) as the prefix instead —
+    `thinkr:Episode` stays the actual `rdf:type` regardless; this is
+    purely about what the IRI itself looks like.
+    (2) MINTING COLLISION RISK, identified same day once it became clear
+    other sources (podcasts, vlogs, books, TED talks, PhD theses, etc.)
+    will eventually get modeled too: a bare episode NUMBER has no
+    uniqueness guarantee across sources — confirmed concretely the same
+    session when Matthew Monahan's own show ("The Regeneration Will Be
+    Funded") surfaced as a second real source with its own numbering.
+    Fixed by requiring a SourceAcronym component (`TGS`, and eventually
+    others as they get modeled) — uniqueness comes from
+    `SourceAcronym + Number` alone, the title fragment is PURE human
+    readability and can be shortened or dropped without breaking
+    anything. No GUIDs (every component stays human-mnemonic), but no
+    silent collision risk either.
+    (3) Source acronyms need to be a genuinely controlled list, not an ad
+    hoc string each session invents fresh — currently just documented
+    here (`TGS`), not yet backed by a formal registry or tied to real
+    `thinkr:Source` individuals. Revisit if/when this actually causes a
+    real collision or confusion, not before — same "don't build ahead of
+    real need" instinct as everything else tonight.
+    Applied retroactively to all 7 existing Episode individuals same
+    session (cheap now, would only get more expensive later) — see the
+    3-step rename in `episodes.ttl`'s git history if the exact mechanics
+    are ever needed again.
+
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
    after noticing the pattern already forming — `thinkr:Person`/`Concept`/
@@ -495,6 +535,49 @@ Still open: does this deserve its own file/data layer, given it's a
 different research question than the idea-linking work? Not started —
 logged for discussion, not build-ready yet.
 
+**MEDIUM — Sidecar naming/structure cleanup.** Proposed 2026-07-11 by
+MJSullivan. Full details, worked examples, and — critically — the real
+open questions NOT yet resolved, in `docs/sidecar-cleanup-handoff.md`.
+Confirmed conventions: underscore between the two cross-referenced
+entities, person/org always first, drop the "Note" suffix from class
+names, stop using "Crosswalk" terminology (reserve it for a genuine
+future cross-ontology alignment concept). NOT confirmed, needs real
+decisions before execution: whether `hasSubject`/`hasObject`/
+`hasRelationshipType` describes a renamed `LinkNote` or an actual
+merge of `LinkNote`+`Evidence`; whether `hasRelationshipType` replaces
+the current multiple-specific-relation-properties design
+(`echoesIdeaOf`/`influencedBy`/etc.) with one generic property + type
+value (a real architectural change, not just a rename); the exact
+replacement names for `LinkNote`, `CrosswalkNote`, and the not-yet-built
+`AffiliationNote`. Scope: 67 individuals across `linknotes.ttl` (15),
+`evidences.ttl` (15), `crosswalknotes.ttl` (37) as of this writing.
+Execute the same way as every other large rename this session — scripted
+and verified, not manual — once the open questions are actually settled.
+ESCALATED same day: `Subject_Object` naming assumes at most one
+relationship-instance per entity pair, which is often false (Aristotle
+may have discussed money in multiple works; Nate's UMN affiliation may
+be multiple distinct periods/roles, not one continuous thing). Genuinely
+harder than the naming cleanup above — no comprehensive solution yet per
+MJSullivan's own assessment. Full candidate directions in the handoff
+doc's own "ESCALATION" section. Do not resolve in the abstract — wait
+for a real case needing it and design against that.
+ALSO RESOLVED same day, fold into the same rework: drop the direct
+`owl:sameAs` triple on CrosswalkNote-linked entities entirely, rely
+solely on `aboutExternalURI` — `owl:sameAs` formally implies full
+bidirectional property inheritance under a reasoner (the well-known
+"sameAs problem"), not something actually meant here; `skos:exactMatch`
+considered and rejected as formally Concept-scoped. See handoff doc's
+"4b" for full reasoning.
+CRITICAL CAVEAT, MJSullivan's own words: "not 'seeing' how real data
+should look while leveraging the pattern developed... need a concrete
+set of inter-related examples to finally 'get it'. At the moment, I
+don't." The handoff doc's isolated before/after examples, discussed one
+at a time, have NOT achieved actual clarity — a genuinely narrative,
+multi-sidecar worked example (ideally confronting the multi-instance
+problem with real values, not placeholders) is still needed before this
+document should be treated as execution-ready. See the doc's own CAVEAT
+section, placed prominently at the top for exactly this reason.
+
 **MEDIUM — Wikidata verification.** ~21 of ~26 people/schools still need
 verified Wikidata `owl:sameAs` links (pattern established in
 `data/seed/crosswalknotes.ttl`, just needs the per-entity verification
@@ -505,10 +588,15 @@ guessing from memory is genuinely risky).
 first-draft paraphrases (design decision #6), never checked against actual
 Hagens transcripts/book text. Not urgent, but a real accuracy gap.
 
-**LOW — `tgs:Episode` still fully unused.** `tgs:Work` got its first real
-instance 2026-07-11 (the CalDEC report, see the convergesWith DONE item
-above) and was promoted to its own `works.ttl` file; `tgs:Episode` has no
-such plan yet — no instances, no concrete trigger case identified.
+**DONE 2026-07-11 — `tgs:Episode` now has real instances.** 7 total, all
+`EpisodeType.Interview` so far, promoted to `episodes.ttl` — see the
+naming-convention section above for the full minting-scheme story. Trigger
+was making explicit how bootstrapped guests relate to `Person.NateHagens`
+directly (`dct:creator`/`dct:contributor`), not left implicit via
+`PersonEntityType.Guest` alone. `Monologue`-type (Frankly) and
+`PanelDiscussion`-type (Reality Roundtable) instances still don't exist —
+same "no concrete trigger yet" status as before, just narrower in scope
+now that Interview-type is resolved.
 
 **LOW — `tgs:memberOf` consistency question.** Doesn't chain up to
 `tgs:relatesTo` the way the concept-to-person properties do
