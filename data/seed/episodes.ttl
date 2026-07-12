@@ -1,0 +1,173 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Episode — promoted out of tgs-core.ttl on 2026-07-11, its first
+# real instances. Declared since the very first schema draft, zero
+# instances the whole time until this: making explicit HOW three already-
+# bootstrapped guests (Monahan, McGilchrist, Schmachtenberger) directly
+# relate to tgs:Person.NateHagens, rather than leaving it implicit via
+# thinkr:PersonEntityType.Guest alone (which never said whose guest they
+# were — a real gap, matters once a second thinker's graph exists).
+# Simple direct triples, not LinkNote/Evidence — these are well-documented,
+# uncontested facts (confirmed via transcript excerpts / episode metadata),
+# not interpretive claims needing confidence tracking.
+# SUPERSEDED same day: originally used bare dct:creator/dct:contributor —
+# too coarse once movies/books/TED talks etc. enter the picture (Nate is
+# host+producer+interviewer, not just generically "creator"; a guest is
+# semantically distinct from a generic "contributor"). Replaced with
+# thinkr:hasHost/hasGuest, both declared in tgs-core.ttl as
+# rdfs:subPropertyOf dcterms:creator/dcterms:contributor respectively —
+# not co-asserted alongside the originals, same precedent as
+# hasPersonEntityType superseding the bare hasNamedEntityType usage.
+#
+# TARGET SHAPE fleshed out 2026-07-11 for the 4 episodes with fully
+# confirmed data (226, 85, 165, 217) — dct:created (recording date) vs
+# dct:issued (publish date) are genuinely different facts, confirmed
+# different for every episode checked; dct:subject reuses this graph's
+# existing Subject taxonomy directly, matching the site's own subject
+# tags where confirmed; thinkr:hasCanonicalSource/hasReplay/hasTranscript
+# (all declared in tgs-core.ttl) replace the flatter dct:source-for-
+# everything approach — canonical page, watch/listen link(s), and text
+# transcript are three genuinely different things.
+# The 3 Schmachtenberger episodes (5, 126, 132) are deliberately NOT yet
+# fleshed out to this same depth — no confirmed data exists for them as
+# of this writing, and this project doesn't fabricate structured facts
+# to fill a template. Flesh out only once actually verified.
+#############################################
+
+thinkr:Episode a owl:Class ;
+    rdfs:comment "A Great Simplification podcast episode or Frankly video."@en ;
+    rdfs:subClassOf thinkr:Work ;
+    skos:scopeNote "Narrower than thinkr:Work: specifically a TGS podcast episode or Frankly video, not a book/essay/report."@en ;
+    skos:prefLabel "Podcast Episode"@en .
+
+tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Can Money Serve Life? How to Fund Communities Doing the Real Work"@en ;
+    rdfs:comment "Note: Nate also appeared as GUEST on Matthew Monahan's own show 'The Regeneration Will Be Funded' (Ma Earth), a reciprocal cross-appearance — confirmed 2026-07-11, not modeled as a thinkr:Episode since that's a different show, out of this class's scope."@en ;
+    dct:created "2026-06-29"^^xsd:date ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.MatthewMonahan ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/226-matthew-monahan> ;
+    thinkr:hasReplay <https://youtu.be/yoJPgx2VlRQ>, <https://open.spotify.com/episode/2L2mSUkikXU72yfwuvldRK> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/TGS-226-Matthew-Monahan-Transcript.docx.pdf> .
+
+tgs:Interview.TGS_85_WisdomNatureAndTheBrain a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Wisdom, Nature, and the Brain"@en ;
+    dct:created "2023-07-13"^^xsd:date ;
+    dct:issued "2023-08-23"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.IainMcGilchrist ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/85-iain-mcgilchrist> ;
+    thinkr:hasReplay <https://youtu.be/dogVQDydRGQ> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/08/TGS85IainMcGilchristTranscript.docx.pdf> .
+
+tgs:Interview.TGS_165_WisdomOverPower a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Wisdom Over Power: Why Contemplation & Wonder Are Essential for the Future of Humanity"@en ;
+    rdfs:comment "A THIRD McGilchrist appearance discovered 2026-07-11 during source verification for the other two — not previously known to this graph."@en ;
+    dct:created "2025-01-02"^^xsd:date ;
+    dct:issued "2025-02-26"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.IainMcGilchrist ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/165-iain-mcgilchrist> ;
+    thinkr:hasReplay <https://youtu.be/F838KOrQrRg>, <https://open.spotify.com/episode/2Vdchibvh0vABOd0eicQrA> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/02/TGS165IainMcGilchristTranscript.pdf> .
+
+tgs:Interview.TGS_217_WisdomInAWorldInCrisis a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Wisdom in a World in Crisis"@en ;
+    rdfs:comment "dct:subject deliberately omitted — confirmed via search snippet only, not a full page fetch, so the site's own subject tags for this specific episode were never directly confirmed (unlike 226/85/165, each confirmed via live fetch)."@en ;
+    dct:created "2026-03-24"^^xsd:date ;
+    dct:issued "2026-04-22"^^xsd:date ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.IainMcGilchrist ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/217-iain-mcgilchrist> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=PQ9_FtLEeoc>, <https://open.spotify.com/episode/2dppmUoSMZsklgRwKeWS8l> .
+
+tgs:Interview.TGS_5_BendNotBreakPart1 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Bend Not Break Part 1: Energy Blindness"@en ;
+    rdfs:comment "URL and all other details not independently verified as of 2026-07-11."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.DanielSchmachtenberger .
+
+tgs:Interview.TGS_126_AVisionForBetterment a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "A Vision for Betterment"@en ;
+    rdfs:comment "URL and all other details not independently verified as of 2026-07-11."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.DanielSchmachtenberger .
+
+tgs:Interview.TGS_132_WideBoundaryImpactsOfAI a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "The Wide Boundary Impacts of AI"@en ;
+    rdfs:comment "URL and all other details not independently verified as of 2026-07-11 — though a strong unverified candidate replay link was found (https://youtu.be/_P8PLHvZygo, explicitly labeled 'Daniel Schmachtenberger episode on AI' in Ep 85's own show notes), not yet added pending direct confirmation it's actually this specific episode."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    thinkr:hasGuest tgs:Person.DanielSchmachtenberger .
+
+# dct:references — Episode 165's own show notes explicitly linked back to
+# Episode 85 as the "prior TGS Episode" — confirmed via live fetch
+# 2026-07-11, not a guess.
+tgs:Interview.TGS_165_WisdomOverPower dct:references tgs:Interview.TGS_85_WisdomNatureAndTheBrain .
+
+#############################################
+# thinkr:Series stub example — "How to Think About the Future", real
+# confirmed Frankly numbers (138, 139, 145 — non-sequential, other Frankly
+# episodes fall between them, which is genuine real numbering, not an
+# error) from the exact Frankly-number matching work earlier tonight.
+# STUBS, not fully fleshed out: no dct:created/issued, no
+# hasCanonicalSource/hasReplay/hasTranscript yet — only what's needed to
+# demonstrate the Series/seriesPosition relationship itself. Flesh out
+# properly (same depth as Episodes 226/85/165/217) before treating these
+# as complete.
+#############################################
+
+tgs:Series.HowToThinkAboutTheFuture a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    skos:prefLabel "How to Think About the Future"@en ;
+    dct:hasPart tgs:Monologue.TGS_138_Part1ChangingTheFuture, tgs:Monologue.TGS_139_Part2FourVariables, tgs:Monologue.TGS_145_Part3UphillFutures .
+# ^ explicit inverse of each member's dct:isPartOf below — same reasoner
+# caveat as convergesWith earlier tonight: dct:hasPart/dct:isPartOf are
+# genuine DCTERMS inverses, but without a reasoner, only asserting one
+# direction means the Collection itself has no queryable list of its own
+# members. Both directions asserted here for exactly that reason.
+
+tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 1): Changing the Future Starts with How You Think"@en ;
+    rdfs:comment "STUB as of 2026-07-11 — created purely to demonstrate dct:isPartOf/thinkr:seriesPosition against real, confirmed Frankly numbering. No dates, canonical source, replay, or transcript links yet. Flesh out to the same depth as Episodes 226/85/165/217 before treating as complete."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 1 .
+
+tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 2): Four Variables Shaping the Coming Decades"@en ;
+    rdfs:comment "STUB as of 2026-07-11 — same caveat as Part 1: created to demonstrate the Series relationship, not yet fleshed out."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 2 .
+
+tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 3): Uphill Futures in a Downhill World"@en ;
+    rdfs:comment "STUB as of 2026-07-11 — same caveat as Parts 1-2, not yet fleshed out."@en ;
+    thinkr:hasHost tgs:Person.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 3 .
