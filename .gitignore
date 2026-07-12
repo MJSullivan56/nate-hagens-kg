@@ -23,6 +23,7 @@ data/generated/
 # store the fetch list/script instead, not the PDFs themselves)
 extraction/transcripts_raw/
 extraction/substack_summaries_raw/
+extraction/cited_sources_raw/
 extraction/substack_text_cache/
 extraction/transcripts_text_cache/
 extraction/*.pdf

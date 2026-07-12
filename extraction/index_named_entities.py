@@ -86,9 +86,36 @@ SUBSTACK_TEXT_CACHE = "extraction/substack_text_cache"
 # other categories (DATE, MONEY, QUANTITY, ORDINAL, CARDINAL, etc.) as noise
 # for this specific use case. This is exactly the kind of rule --refilter
 # is for — change this set, run --refilter, done, no NER re-run needed.
-KEEP_LABELS = {"PERSON", "ORG", "GPE", "NORP", "WORK_OF_ART"}
+KEEP_LABELS = {"PERSON", "ORG", "GPE", "NORP", "WORK_OF_ART", "DATE", "EVENT", "PRODUCT"}
 
 TIMESTAMP_PATTERN = re.compile(r'^\d{1,2}:\d{2}(:\d{2})?$')
+
+# Confirmed wrong TYPE on the real 148-document run, 2026-07-11 — not
+# guesses, each one specifically verified against what actually showed up.
+# RECLASSIFY, not discard: these are legitimate, useful named entities
+# (geological epochs, real events, real products/assets) just mistagged as
+# PERSON by the small model. Correcting the type preserves them for
+# whatever they actually are — e.g. "Holocene"/"Anthropocene" are exactly
+# the kind of term worth linking out to Wikipedia/Wikidata later, same
+# spirit as the DBpedia/Wikidata links already used elsewhere in this
+# project, just not as a PERSON.
+RECLASSIFY_PERSON = {
+    "Bitcoin": "PRODUCT",
+    "COVID": "EVENT",
+    "Holocene": "DATE",       # named geological epoch
+    "Anthropocene": "DATE",    # same category, not yet seen but same pattern
+    "Hormuz": "GPE",           # Strait of Hormuz — an actual place
+    "Jekyll": "WORK_OF_ART",   # fictional character used as metaphor —
+    "Hyde": "WORK_OF_ART",     # fragment of "Dr. Jekyll and Mr. Hyde"
+    "Uncomfortable Questions": "WORK_OF_ART",  # recurring show segment title
+}
+
+# This one needs actual text cleanup, not just a type fix — a genuine
+# tokenization artifact (the show's own branding term "Frankly" fused with
+# a stray possessive), not a real distinct entity at all.
+TEXT_CLEANUP = {
+    "'s Frankly": ("Frankly", "WORK_OF_ART"),
+}
 
 
 def init_db():
@@ -154,31 +181,55 @@ def run_ner(nlp, text):
 
 def apply_filters(entity_text, entity_type):
     """The cheap step — safe to change and rerun via --refilter without
-    touching spaCy. Returns True if this entity should be KEPT."""
+    touching spaCy. Returns (keep: bool, corrected_text, corrected_type).
+
+    Normalizes curly apostrophes (U+2019, ’) to straight ones (U+0027, ')
+    before any dict lookup — confirmed real bug 2026-07-11: spaCy extracted
+    "'s Frankly" using the CURLY apostrophe (typographically correct, from
+    the source PDF text), but TEXT_CLEANUP's key used a plain straight
+    apostrophe, so the lookup silently never matched and the entity stayed
+    unfixed through a --refilter run. Normalizing once here protects
+    against the same mismatch for any future apostrophe-containing entity,
+    not just this one specific case."""
+    lookup_text = entity_text.replace("\u2019", "'")
+    if lookup_text in TEXT_CLEANUP:
+        entity_text, entity_type = TEXT_CLEANUP[lookup_text]
+    elif entity_type == "PERSON" and lookup_text in RECLASSIFY_PERSON:
+        entity_type = RECLASSIFY_PERSON[lookup_text]
+    elif entity_type == "PERSON" and TIMESTAMP_PATTERN.match(entity_text):
+        return False, entity_text, entity_type  # genuinely not an entity at all
+
     if entity_type not in KEEP_LABELS:
-        return False
-    if entity_type == "PERSON" and TIMESTAMP_PATTERN.match(entity_text):
-        return False
-    return True
+        return False, entity_text, entity_type
+    return True, entity_text, entity_type
 
 
 def rebuild_filtered_entities(con):
     """Rebuilds the final `entities` table from raw_entities by applying
     current filter logic. No spaCy, no PDFs — just cached raw data. This
     is what --refilter runs, and what a normal run does at the end for
-    any newly-NER'd documents."""
+    any newly-NER'd documents.
+
+    Aggregates AFTER reclassification, not before — reclassifying e.g.
+    "'s Frankly" and a separately, correctly-extracted "Frankly" in the
+    same document both to (Frankly, WORK_OF_ART) would otherwise produce
+    two rows for the same entity instead of one merged count."""
     con.execute("DELETE FROM entities")
     rows = con.execute("SELECT entity_text, entity_type, source_file, source_type, occurrence_count FROM raw_entities").fetchall()
-    kept = 0
+    merged = Counter()  # (text, type, source_file, source_type) -> total occurrences
+    total_raw = len(rows)
     for entity_text, entity_type, source_file, source_type, occ in rows:
-        if apply_filters(entity_text, entity_type):
-            con.execute(
-                "INSERT INTO entities (id, entity_text, entity_type, source_file, source_type, occurrence_count) "
-                "VALUES (nextval('entities_id_seq'), ?, ?, ?, ?, ?)",
-                [entity_text, entity_type, source_file, source_type, occ],
-            )
-            kept += 1
-    return kept, len(rows)
+        keep, corrected_text, corrected_type = apply_filters(entity_text, entity_type)
+        if keep:
+            merged[(corrected_text, corrected_type, source_file, source_type)] += occ
+
+    for (entity_text, entity_type, source_file, source_type), occ in merged.items():
+        con.execute(
+            "INSERT INTO entities (id, entity_text, entity_type, source_file, source_type, occurrence_count) "
+            "VALUES (nextval('entities_id_seq'), ?, ?, ?, ?, ?)",
+            [entity_text, entity_type, source_file, source_type, occ],
+        )
+    return len(merged), total_raw
 
 
 def print_summary(con):
