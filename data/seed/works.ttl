@@ -1,0 +1,28 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Work — promoted out of tgs-core.ttl on 2026-07-11, its first
+# real instance (governance principle: classes get their own file once
+# they have real content, not before).
+#############################################
+
+thinkr:Work a owl:Class ;
+    rdfs:comment "A book, essay, or other work in which a concept or idea is developed."@en ;
+    rdfs:subClassOf dct:BibliographicResource ;
+    skos:scopeNote "Narrower than dct:BibliographicResource: specifically a work in which a TGS-relevant concept is developed, not any bibliographic item in general."@en ;
+    skos:prefLabel "Work"@en .
+
+tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The California Doughnut Snapshot and Report"@en ;
+    rdfs:comment "Authors: Alaitz Aritza (data manager), Julian Kraus-Polk (editor), California Doughnut Economics Coalition. Published November 6, 2025, v1. Examines 42 social/ecological indicators across 21 categories; finds California overshooting 89% of ecological indicators (average overshoot 286%) while falling short on 100% of social indicators assessed. CC-BY 4.0 licensed — more permissive than most sources in this graph, direct quotation with attribution is explicitly permitted."@en ;
+    dct:source <https://zenodo.org/records/17540639> ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> .

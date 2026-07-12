@@ -146,5 +146,6 @@ tgs:Concept.Wetware a thinkr:Concept,
 thinkr:Concept a owl:Class ;
     rdfs:comment "A term or idea from Nate Hagens' Great Simplification framework (e.g. Energy Blindness, the Superorganism)."@en ;
     rdfs:subClassOf skos:Concept ;
+    skos:scopeNote "Narrower than skos:Concept: specifically an idea from Hagens' TGS framework, not a general classification term — do not confuse with thinkr:Subject, which is also a skos:Concept subclass but for topic classification, a different purpose entirely."@en ;
     skos:prefLabel "Concept"@en .
 

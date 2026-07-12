@@ -95,7 +95,8 @@ tgs:Person.WilliamStanleyJevons a thinkr:Person,
 
 thinkr:Person a owl:Class ;
     rdfs:comment "A philosopher, scientist, activist, or thinker being linked to a TGS concept."@en ;
-    rdfs:subClassOf foaf:Person ;
+    rdfs:subClassOf foaf:Person, thinkr:NamedEntity ;
+    skos:scopeNote "Narrower than foaf:Person: specifically a person being linked to a TGS concept, not any person. Narrower than thinkr:NamedEntity: specifically the subset explicitly typed Person, as distinct from a hypothetical future Organization subclass."@en ;
     skos:prefLabel "Person"@en .
 
 tgs:Person.KateRaworth a thinkr:Person, owl:NamedIndividual ;

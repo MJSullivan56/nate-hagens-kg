@@ -102,5 +102,6 @@ tgs:ConceptScheme.TGSSiteSubjects a owl:NamedIndividual,
 thinkr:Subject a owl:Class ;
     rdfs:comment "A topic/subject-classification term — NOT the same as thinkr:Concept, which represents a specific idea/claim within a thinker's framework (e.g. 'Overshoot'). Subject is a classification bucket used to organize Concepts and other individuals (e.g. 'Energy Systems'). Explicitly typed both thinkr:Subject AND skos:Concept on every individual, not relying on subclass inference — this project's query tooling doesn't assume a reasoner is running. Used with real SKOS machinery: skos:ConceptScheme, skos:broader, skos:narrower, skos:inScheme, plus the external dct:subject property (not redefined here) to tag other individuals with their relevant Subject(s)."@en ;
     rdfs:subClassOf skos:Concept ;
+    skos:scopeNote "Narrower than skos:Concept: specifically a topic-classification term (see tgs:ConceptScheme.TGSSiteSubjects / MJSullivanDerivedSubtopics), not a TGS framework idea — do not confuse with thinkr:Concept, a different skos:Concept subclass entirely."@en ;
     skos:prefLabel "Subject"@en .
 
