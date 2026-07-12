@@ -36,7 +36,7 @@ change, not just a naming tweak: `tgs:` literally stands for "The Great
 Simplification," so it can never correctly hold another thinker's data.
 
 **The split**: every CLASS, PROPERTY, and controlled-vocabulary INDIVIDUAL
-(the `ConfidenceLevel`/`ReliabilityTier`/`EvidencePolarity` enum members —
+(the `ConfidenceType`/`ReliabilityType`/`PolarityType` enum members —
 every domain will reuse the exact same Curated/Candidate/Corroborated/
 Disputed states) now lives under `thinkr:` (`http://example.org/thinker#`)
 — this is the reusable ontology. Every actual DOMAIN INDIVIDUAL (every
@@ -55,7 +55,7 @@ running a live query and getting zero results instead of trusting the
 "successful" parse — the file still parsed as valid Turtle throughout,
 parsing alone would never have caught this. Separately, the two Python
 scripts (`compute_confidence.py`, `promote_to_rdf.py`) and the CI workflow
-all construct vocabulary URIs via `TGS["ConfidenceLevel.Curated"]`-style
+all construct vocabulary URIs via `TGS["ConfidenceType.Curated"]`-style
 Python code, which the text-based rename never touched at all — required
 a second, manual pass adding a `THINKER` namespace object to each. A third
 subtle bug: `query_examples.sparql`'s query #2 appeared to work after the
@@ -105,8 +105,8 @@ structural changes:
     with instances gets its own complete, self-contained TTL file (class
     declaration + all its individuals) — `concepts.ttl`, `persons.ttl`,
     `schools.ttl`, `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
-    supporting/controlled-vocabulary classes (`ConfidenceLevel`,
-    `ReliabilityTier`, `EvidencePolarity`) and ALL property declarations
+    supporting/controlled-vocabulary classes (`ConfidenceType`,
+    `ReliabilityType`, `PolarityType`) and ALL property declarations
     live together in `tgs-core.ttl` — MJSullivan's framing: `tgs-core.ttl`
     is the direct successor to the old `ontology/schema.ttl`, which can be
     thought of as its rough prototype. Classes with zero instances yet
@@ -125,10 +125,40 @@ structural changes:
     MJSullivan's explicit goal — was NOT true before this reorganization,
     when only `ontology/schema.ttl` was really Protege-friendly on its own.
 
+0b. **Governance principle (2026-07-11): OWL class depth capped at 2-3
+    levels; deeper refinement is SKOS's job, not OWL's; category classes
+    end in "Type" or "Kind."** Stated explicitly by MJSullivan after the
+    `NamedEntity`/`PersonEntityType` restructure. Concretely: OWL
+    `rdfs:subClassOf` chains stay shallow (`NamedEntity` -> `Person` is 2
+    levels; `NamedEntityType` -> `PersonEntityType` is 2 levels — both
+    compliant as built). If a class needs genuine hierarchical NUANCE
+    beyond that depth, the right tool is SKOS `skos:broader`/`narrower`
+    between INDIVIDUALS of a category class (exactly how `Subject`
+    already works — official subjects and derived sub-topics are both
+    `skos:Concept` individuals related via `skos:broader`, not nested OWL
+    subclasses) — not deeper OWL subclassing. Refinement per subclass
+    happens via a dedicated Categorization pattern (a class ending in
+    "Type"/"Kind", paired with a `has*Type` property that's
+    `rdfs:subPropertyOf` a more general one) — this is exactly the
+    `PersonEntityType`/`hasPersonEntityType` pattern just built, and the
+    template for any future subclass's equivalent (e.g. a hypothetical
+    `OrganizationEntityType`/`hasOrganizationEntityType`).
+    RETROACTIVE NAMING QUESTION, NOT YET ANSWERED: `ConfidenceType`,
+    `ReliabilityType`, `PolarityType` predate this rule and don't end
+    in "Type"/"Kind." Renaming them would be a large, disruptive job —
+    they're referenced throughout every `LinkNote`/`Evidence`/`Source`
+    and in `compute_confidence.py`'s core logic. Flagged, not resolved —
+    do NOT rename these without an explicit go-ahead, this is a
+    meaningfully bigger change than anything done under this rule so far.
+    GOOD SIGN, not a fix needed: `thinkr:Subject`'s design already
+    followed the "taxonomy belongs in SKOS" half of this principle before
+    it was ever stated as a formal rule — worth noting as validation the
+    instinct was already right.
+
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
    after noticing the pattern already forming — `thinkr:Person`/`Concept`/
-   `Evidence`/`Source`/`ConfidenceLevel` etc. are OWL classes with strict,
+   `Evidence`/`Source`/`ConfidenceType` etc. are OWL classes with strict,
    single-purpose axioms (a `LinkNote` has a valid `calculatedConfidence`
    or it doesn't — no ambiguity, no multi-parent messiness), while the
    Subject taxonomy (see `data/seed/subjects.ttl`) is SKOS specifically
@@ -150,7 +180,7 @@ structural changes:
    connection to an end user until a human has reviewed it. This is
    enforced structurally: `tgs:confidence` is an `owl:ObjectProperty`
    pointing to one of exactly two enumerated individuals,
-   `tgs:ConfidenceLevel.Curated` or `tgs:ConfidenceLevel.Candidate` (see
+   `tgs:ConfidenceType.Curated` or `tgs:ConfidenceType.Candidate` (see
    `data/seed/tgs-core.ttl` — closed enumeration via `owl:oneOf`). CI
    actively validates every `tgs:LinkNote` has one of these two values,
    not just that some value is present.
@@ -218,9 +248,9 @@ structural changes:
 ## Backlog (priority-ranked, as of 2026-07-10)
 
 **DONE 2026-07-10 — Evidence/claim provenance model.** Built: `tgs:Evidence`
-and `tgs:Source` classes, `tgs:ReliabilityTier` (Authoritative/Reputable/
-Unverified/Unreliable) and `tgs:EvidencePolarity` (Supports/Contests/Mentions)
-enumerations, `ConfidenceLevel` expanded to 4 values (added Corroborated,
+and `tgs:Source` classes, `tgs:ReliabilityType` (Authoritative/Reputable/
+Unverified/Unreliable) and `tgs:PolarityType` (Supports/Contests/Mentions)
+enumerations, `ConfidenceType` expanded to 4 values (added Corroborated,
 Disputed). `tgs:confidence` moved from LinkNote to Evidence (has THIS piece
 of evidence been reviewed?); new `tgs:calculatedConfidence` on LinkNote is
 DERIVED via `scripts/compute_confidence.py` — never hand-set. Aggregation
@@ -293,14 +323,14 @@ curated/candidate review workflow depends on referencing one specific claim
 reliably over time — approve it in DuckDB, promote it, audit it later, diff
 it cleanly in git). Blank nodes remain fine for genuinely anonymous
 structural scaffolding only — e.g. the existing `owl:oneOf` list inside
-`ConfidenceLevel`'s enumeration, which nothing will ever need to reference
+`ConfidenceType`'s enumeration, which nothing will ever need to reference
 by identity.
 
 **MEDIUM — Source reliability isn't a single fixed scalar (expanded 2026-07-11).**
 Three related gaps, all really the same underlying insight — a Source's
 standing isn't one static number, it varies by domain, by time, and by
 relationship to the specific subject:
-  1. DOMAIN-SCOPED (original note): one fixed `ReliabilityTier` per
+  1. DOMAIN-SCOPED (original note): one fixed `ReliabilityType` per
      `Source` doesn't fit real epistemics — Hagens is plausibly `Reputable`
      generally but arguably `Authoritative` on his own stated influences;
      Richardson would plausibly be `Authoritative` specifically on
@@ -314,7 +344,7 @@ relationship to the specific subject:
      source assessed as Authoritative in 2010 might not hold that
      assessment in 2026).
   3. SOURCE-SUBJECT BIAS: distinct from both of the above and from
-     `EvidencePolarity` — a Source can be reliable in general while having
+     `PolarityType` — a Source can be reliable in general while having
      a demonstrated, patterned bias toward one SPECIFIC subject.
      Concrete example given: if a source has repeatedly, demonstrably
      shown antagonism specifically toward Nate Hagens, that source's
@@ -322,7 +352,7 @@ relationship to the specific subject:
      inversion — "it should inflate them, but that's another story" — a
      real, separate future consideration, not resolved here) — without
      blanket-downgrading that same source's reliability on unrelated
-     subjects, which a flat `ReliabilityTier.Unreliable` on the Source
+     subjects, which a flat `ReliabilityType.Unreliable` on the Source
      would incorrectly do. This is a Source-Subject RELATIONSHIP, not a
      property of either alone.
      IMPORTANT DISTINCTION FROM THE CONTRIBUTOR/MENTION DESIGN: this is
@@ -392,7 +422,7 @@ OPEN WORLD ASSUMPTION CORRECTION, same day: the rule as first stated is a
 CLOSED-world rule and would be wrong if implemented literally in RDF —
 absence of a Work in the graph doesn't mean absence of one in reality, it
 might just mean it hasn't been catalogued yet. Fix, reusing a pattern
-already proven elsewhere in this project (`ConfidenceLevel.Candidate` as
+already proven elsewhere in this project (`ConfidenceType.Candidate` as
 an epistemic floor state, not a confirmed negative — same shape as
 `Disputed` needing to be an ACTIVE assertion, not a default): `Contributor`
 must be a positively-asserted status, made true only when a qualifying
@@ -418,7 +448,7 @@ guest is objectively checkable (in `download_manifest.csv`'s episode
 metadata) and can be Authoritative-tier reliable; the SIGNIFICANCE of being
 invited is Nate's own editorial judgment, which the graph can report as a
 fact about his selection process but can't itself verify — same
-reliability/significance split the ReliabilityTier/EvidencePolarity model
+reliability/significance split the ReliabilityType/PolarityType model
 already handles elsewhere.
 PRACTICAL SHORTCUT: likely mostly derivable from data already downloaded,
 not new manual research — every `type=interview` episode's title in
@@ -448,6 +478,21 @@ such plan yet — no instances, no concrete trigger case identified.
 `tgs:relatesTo` the way the concept-to-person properties do
 (`echoesIdeaOf`, `influencedBy`, etc. all do). Flagged once, never
 resolved either way — low stakes, revisit whenever convenient.
+
+**LOW — `foaf:firstName`/`foaf:family_name` deliberately deferred.** Proposed
+2026-07-11 during Person bootstrapping — deferred, not rejected. Vocabulary
+already available for free (Person already subclasses foaf:Person), so
+this costs nothing structurally whenever it's actually needed. NOT added
+now because "obvious" breaks down fast on people already in the graph:
+Marcus Aurelius (Roman praenomen/nomen, not modern first/last), William R.
+Catton Jr. (suffix breaks a clean split), Aristotle (single name, no split
+exists), Nate Hagens (is "Nate" the name to record, or "Nathan" with Nate
+as how he's known — a judgment call, not a mechanical split). Adding it
+now only for easy modern names would create inconsistent coverage that
+looks like an oversight, not a deliberate choice. Trigger for actually
+building it: a real downstream need (sortable/alphabetized browse view,
+name-based dedup — which would also need to solve the "Nate" vs "Nate
+Hagens" alias problem already flagged from the entity index).
 
 **LOW — Extraction pipeline never run for real.** `extraction/README.md`'s
 plan has only been tested end-to-end with fake staging data to confirm the
@@ -507,7 +552,7 @@ person/context) to test it against:
 
 ## Ground rules for changes in this repo
 - **Never point a `tgs:LinkNote`'s `tgs:confidence` at
-  `tgs:ConfidenceLevel.Curated` without a human having actually reviewed
+  `tgs:ConfidenceType.Curated` without a human having actually reviewed
   the specific claim.** See design decision #1 — this is the most
   important rule in the repo.
 - Concept/School definitions are paraphrases, not verbatim quotes — keep
@@ -619,7 +664,7 @@ session (or MJSullivan on a tired evening) doesn't repeat it.
   checks. Any future prefix rename needs to explicitly grep for all four
   forms, not assume fixing three means the job's done.
 - **Text-based find/replace across `.ttl` files never touches vocabulary
-  URIs embedded in Python code** (`TGS["ConfidenceLevel.Curated"]`-style
+  URIs embedded in Python code** (`TGS["ConfidenceType.Curated"]`-style
   construction in `compute_confidence.py`, `promote_to_rdf.py`, and the CI
   YAML). Any future namespace/prefix change needs a SEPARATE, deliberate
   pass through every `.py` and `.yml` file — it will not happen for free
