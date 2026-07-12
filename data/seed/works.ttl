@@ -26,3 +26,13 @@ tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Authors: Alaitz Aritza (data manager), Julian Kraus-Polk (editor), California Doughnut Economics Coalition. Published November 6, 2025, v1. Examines 42 social/ecological indicators across 21 categories; finds California overshooting 89% of ecological indicators (average overshoot 286%) while falling short on 100% of social indicators assessed. CC-BY 4.0 licensed — more permissive than most sources in this graph, direct quotation with attribution is explicitly permitted."@en ;
     dct:source <https://zenodo.org/records/17540639> ;
     dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> .
+
+tgs:Work.TheMasterAndHisEmissary a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Master and His Emissary: The Divided Brain and the Making of the Western World"@en ;
+    rdfs:comment "2009 book by Iain McGilchrist (Yale University Press). Argues the brain's two hemispheres offer fundamentally different kinds of attention to the world, and that Western culture has become dominated by narrow, left-hemisphere thinking at the expense of the right's broader, contextual awareness. Sold over 200,000 copies."@en ;
+    dct:creator tgs:Person.IainMcGilchrist .
+
+tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Matter with Things: Our Brains, Our Delusions, and the Unmaking of the World"@en ;
+    rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
+    dct:creator tgs:Person.IainMcGilchrist .

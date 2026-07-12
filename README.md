@@ -26,8 +26,8 @@ need the whole project loaded for one file to make sense on its own.
 
 ```
 data/seed/tgs-core.ttl        — ALL properties + supporting classes with
-                                 their instances (ConfidenceLevel,
-                                 ReliabilityTier, EvidencePolarity) +
+                                 their instances (ConfidenceType,
+                                 ReliabilityType, PolarityType) +
                                  currently-idle classes with zero instances
                                  yet (Work, Episode, Source — each gets
                                  promoted to its own file on first instance)
@@ -48,10 +48,16 @@ data/seed/works.ttl           — thinkr:Work: class + 1 instance (promoted
                                  schema)
 data/seed/sources.ttl         — thinkr:Source: class + 1 instance (same
                                  promotion, same date)
-data/seed/dbpedia_links.ttl   — owl:sameAs to DBpedia, extracted out of
-                                 persons.ttl/schools.ttl
-data/seed/wikidata_links.ttl  — owl:sameAs to Wikidata (verified batch —
-                                 only 2 of ~23 people/schools done so far)
+data/seed/crosswalknotes.ttl  — thinkr:CrosswalkNote: class + one instance
+                                 per owl:sameAs assertion (DBpedia and
+                                 Wikidata alike), each carrying real
+                                 provenance (source database, verification
+                                 date, scopeNote). Replaced separate
+                                 dbpedia_links.ttl/wikidata_links.ttl files
+                                 2026-07-11 — bare owl:sameAs triples had
+                                 nowhere to record caveats or verification
+                                 history, e.g. "this Wikidata entry is
+                                 actually a different person."
 data/seed/catalog-v001.xml    — Protege import resolution (maps the
                                  thinkr# ontology IRI to tgs-core.ttl
                                  locally, since that IRI isn't a real
@@ -152,7 +158,7 @@ writes the exact same triple + `thinkr:LinkNote` pattern used in
   touches a `.ttl` file — it parses every Turtle file individually and
   combined (catches the kind of syntax error a trailing `.` in a DBpedia URI
   can cause), and checks that every `tgs:LinkNote` has a `tgs:confidence`
-  value pointing to one of the two valid `tgs:ConfidenceLevel` individuals
+  value pointing to one of the two valid `tgs:ConfidenceType` individuals
   (not just present, but actually valid), so an unreviewed candidate link
   can't silently get treated as curated. Push to a repo and it runs
   automatically, no setup needed beyond that file being present.

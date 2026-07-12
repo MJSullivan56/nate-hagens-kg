@@ -1,0 +1,395 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:CrosswalkNote — replaces dbpedia_links.ttl and wikidata_links.ttl
+# (both dissolved 2026-07-11) with a unified, provenance-bearing structure.
+# Organized by the new class itself (CrosswalkNote), not by subject class
+# (Person/School/Work) or by target database (DBpedia/Wikidata) — same
+# "one class, one file" principle as everywhere else, and it naturally
+# supersedes the earlier PersonCrosswalk/SchoolCrosswalk/WorkCrosswalk
+# proposal since every crosswalk assertion now has real substantive
+# content (the note) beyond a bare triple, same reasoning as why
+# linknotes.ttl bundles its relation triples rather than splitting by
+# Concept vs Person vs School.
+#############################################
+
+
+tgs:CrosswalkNote.AristotleDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.Aristotle ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Aristotle> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.BehavioralEconomicsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.BehavioralEconomics ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Behavioral_economics> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.BuddhaDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.Buddha ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Gautama_Buddha> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.CivilRightsMovementDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.CivilRightsMovement ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Civil_rights_movement> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DanielKahnemanDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.DanielKahneman ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Daniel_Kahneman> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DanielSchmachtenbergerWikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.DanielSchmachtenberger ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q110189381> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DegrowthMovementDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.DegrowthMovement ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Degrowth> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DennisMeadowsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.DennisMeadows ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Dennis_Meadows> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DonellaMeadowsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.DonellaMeadows ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Donella_Meadows> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.DoughnutEconomicsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.DoughnutEconomics ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.EOWilsonDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.EOWilson ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/E._O._Wilson> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.EOWilsonWikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.EOWilson ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q211029> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.ElinorOstromDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.ElinorOstrom ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Elinor_Ostrom> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.EmileDurkheimDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.EmileDurkheim ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Émile_Durkheim> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.EpictetusDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.Epictetus ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Epictetus> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.GregoryBatesonDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.GregoryBateson ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Gregory_Bateson> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.IainMcGilchristDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.IainMcGilchrist ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Iain_McGilchrist> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Correct spelling confirmed as Iain, not the 'Ian' the NER pipeline originally extracted from transcripts — verified against Wikipedia, Wikidata, and his own official site (channelmcgilchrist.com)."@en .
+
+tgs:CrosswalkNote.IainMcGilchristWikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.IainMcGilchrist ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q16732304> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Correct spelling confirmed as Iain, not the 'Ian' the NER pipeline originally extracted from transcripts — verified against Wikipedia, Wikidata, and his own official site (channelmcgilchrist.com)."@en .
+
+tgs:CrosswalkNote.IvanIllichDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.IvanIllich ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Ivan_Illich> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.JosephTainterDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.JosephTainter ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Joseph_Tainter> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.KateRaworthDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.KateRaworth ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Kate_Raworth> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.MKingHubbertDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.MKingHubbert ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/M._King_Hubbert> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.MarcusAureliusDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.MarcusAurelius ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Marcus_Aurelius> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.MarcusAureliusWikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.MarcusAurelius ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q1430> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.MartinLutherKingJrDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.MartinLutherKingJr ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Martin_Luther_King_Jr.> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.PostCarbonInstituteDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.PostCarbonInstitute ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Post_Carbon_Institute> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Wikidata QID pulled directly from live search results, not separately re-verified via a dedicated Wikidata page visit."@en .
+
+tgs:CrosswalkNote.PostCarbonInstituteWikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.PostCarbonInstitute ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q7233628> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Wikidata QID pulled directly from live search results, not separately re-verified via a dedicated Wikidata page visit."@en .
+
+tgs:CrosswalkNote.RachelCarsonDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.RachelCarson ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Rachel_Carson> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.SigmundFreudDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.SigmundFreud ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Sigmund_Freud> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.StoicismDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.Stoicism ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Stoicism> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.SystemsEcologyDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.SystemsEcology ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Systems_ecology> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.TheMasterAndHisEmissaryDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Work.TheMasterAndHisEmissary ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/The_Master_and_His_Emissary> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.TheMatterWithThingsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Work.TheMatterWithThings ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/The_Matter_with_Things> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.TheOilDrumDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:School.TheOilDrum ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/The_Oil_Drum> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.WendellBerryDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.WendellBerry ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Wendell_Berry> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.WilliamCattonDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.WilliamCatton ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/William_R._Catton_Jr.> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:CrosswalkNote.WilliamStanleyJevonsDBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Person.WilliamStanleyJevons ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/William_Stanley_Jevons> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-11"^^xsd:date ;
+    skos:scopeNote "Verified via direct web search confirming subject match before linking."@en .
+
+tgs:Person.Aristotle owl:sameAs <http://dbpedia.org/resource/Aristotle> .
+
+tgs:Person.Buddha owl:sameAs <http://dbpedia.org/resource/Gautama_Buddha> .
+
+tgs:Person.DanielKahneman owl:sameAs <http://dbpedia.org/resource/Daniel_Kahneman> .
+
+tgs:Person.DanielSchmachtenberger owl:sameAs <http://www.wikidata.org/entity/Q110189381> .
+
+tgs:Person.DennisMeadows owl:sameAs <http://dbpedia.org/resource/Dennis_Meadows> .
+
+tgs:Person.DonellaMeadows owl:sameAs <http://dbpedia.org/resource/Donella_Meadows> .
+
+tgs:Person.ElinorOstrom owl:sameAs <http://dbpedia.org/resource/Elinor_Ostrom> .
+
+tgs:Person.EmileDurkheim owl:sameAs <http://dbpedia.org/resource/Émile_Durkheim> .
+
+tgs:Person.Epictetus owl:sameAs <http://dbpedia.org/resource/Epictetus> .
+
+tgs:Person.GregoryBateson owl:sameAs <http://dbpedia.org/resource/Gregory_Bateson> .
+
+tgs:Person.IvanIllich owl:sameAs <http://dbpedia.org/resource/Ivan_Illich> .
+
+tgs:Person.JosephTainter owl:sameAs <http://dbpedia.org/resource/Joseph_Tainter> .
+
+tgs:Person.KateRaworth owl:sameAs <http://dbpedia.org/resource/Kate_Raworth> .
+
+tgs:Person.MKingHubbert owl:sameAs <http://dbpedia.org/resource/M._King_Hubbert> .
+
+tgs:Person.MartinLutherKingJr owl:sameAs <http://dbpedia.org/resource/Martin_Luther_King_Jr.> .
+
+tgs:Person.RachelCarson owl:sameAs <http://dbpedia.org/resource/Rachel_Carson> .
+
+tgs:Person.SigmundFreud owl:sameAs <http://dbpedia.org/resource/Sigmund_Freud> .
+
+tgs:Person.WendellBerry owl:sameAs <http://dbpedia.org/resource/Wendell_Berry> .
+
+tgs:Person.WilliamCatton owl:sameAs <http://dbpedia.org/resource/William_R._Catton_Jr.> .
+
+tgs:Person.WilliamStanleyJevons owl:sameAs <http://dbpedia.org/resource/William_Stanley_Jevons> .
+
+tgs:School.BehavioralEconomics owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> .
+
+tgs:School.CivilRightsMovement owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> .
+
+tgs:School.DegrowthMovement owl:sameAs <http://dbpedia.org/resource/Degrowth> .
+
+tgs:School.DoughnutEconomics owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> .
+
+tgs:School.Stoicism owl:sameAs <http://dbpedia.org/resource/Stoicism> .
+
+tgs:School.SystemsEcology owl:sameAs <http://dbpedia.org/resource/Systems_ecology> .
+
+tgs:School.TheOilDrum owl:sameAs <http://dbpedia.org/resource/The_Oil_Drum> .
+
+tgs:Work.TheMasterAndHisEmissary owl:sameAs <http://dbpedia.org/resource/The_Master_and_His_Emissary> .
+
+tgs:Work.TheMatterWithThings owl:sameAs <http://dbpedia.org/resource/The_Matter_with_Things> .
+
+tgs:Person.EOWilson owl:sameAs <http://dbpedia.org/resource/E._O._Wilson>,
+        <http://www.wikidata.org/entity/Q211029> .
+
+tgs:Person.IainMcGilchrist owl:sameAs <http://dbpedia.org/resource/Iain_McGilchrist>,
+        <http://www.wikidata.org/entity/Q16732304> .
+
+tgs:Person.MarcusAurelius owl:sameAs <http://dbpedia.org/resource/Marcus_Aurelius>,
+        <http://www.wikidata.org/entity/Q1430> .
+
+tgs:School.PostCarbonInstitute owl:sameAs <http://dbpedia.org/resource/Post_Carbon_Institute>,
+        <http://www.wikidata.org/entity/Q7233628> .
+
+thinkr:CrosswalkNote a owl:Class ;
+    rdfs:comment "Metadata for a single owl:sameAs crosswalk assertion (which database, when verified, caveats). Same sidecar pattern as thinkr:LinkNote — the actual owl:sameAs triple stays direct and reasoner-compatible, this individual references the same entity+URI pair separately via aboutEntity/aboutExternalURI, rather than reifying owl:sameAs itself."@en ;
+    skos:prefLabel "Crosswalk Note"@en .
+

@@ -113,7 +113,9 @@ structural changes:
     (`Work`, `Episode`, `Source`) stay declared in `tgs-core.ttl` until
     their first real instance, at which point they should be promoted to
     their own file. External resource mappings get their own dedicated
-    files too (`dbpedia_links.ttl`, `wikidata_links.ttl`) — this same
+    file too (`crosswalknotes.ttl` as of 2026-07-11, replacing separate
+    `dbpedia_links.ttl`/`wikidata_links.ttl` — see the CrosswalkNote
+    design decision below) — this same
     principle extended to "declared external resources." Crosswalk files
     (once any exist — e.g. for `convergesWith`) should be named by
     subject + relationship, not yet needed since nothing's been built
@@ -154,6 +156,38 @@ structural changes:
     followed the "taxonomy belongs in SKOS" half of this principle before
     it was ever stated as a formal rule — worth noting as validation the
     instinct was already right.
+
+0c. **Governance principle (2026-07-11): crosswalk assertions need their
+    own provenance — `thinkr:CrosswalkNote`.** A bare `owl:sameAs` triple
+    has nowhere to record WHEN it was verified or WHAT caveats apply —
+    real problem, not hypothetical: this session hit two cases (Nate
+    Hagens' Wikidata entry actually being a different person; Iain
+    McGilchrist's name needing correction from what NER extracted) where
+    that context mattered and had nowhere structured to live except a
+    giant prose comment. Fix: reuse the already-proven `thinkr:LinkNote`
+    sidecar pattern rather than invent something new — keep the actual
+    `owl:sameAs` triple direct and reasoner-compatible (nesting the
+    relationship inside a blank node would have broken its formal
+    semantics), and add a separate `thinkr:CrosswalkNote` individual
+    referencing the same entity+URI pair via `thinkr:aboutEntity`/
+    `thinkr:aboutExternalURI`, carrying `thinkr:crosswalkSource`
+    (DBpedia/Wikidata), `thinkr:verifiedOn` (date), and `skos:scopeNote`
+    (reused directly, not redeclared — same property already used for
+    superclass/superproperty documentation).
+    FILE-ORGANIZATION QUESTION RESOLVED AS A SIDE EFFECT: this superseded
+    an earlier live discussion about splitting `dbpedia_links.ttl`/
+    `wikidata_links.ttl` by SUBJECT class (`PersonCrosswalk.ttl`,
+    `SchoolCrosswalk.ttl`, etc.) instead of by TARGET database. Once
+    `CrosswalkNote` became a real class with real substantive content
+    (not just a bare triple), the natural home was its own single file —
+    `crosswalknotes.ttl` — same "one class, one file" reasoning as why
+    `linknotes.ttl` bundles its relation triples rather than splitting by
+    Concept vs Person vs School. Both `dbpedia_links.ttl` and
+    `wikidata_links.ttl` fully dissolved into it, all 37 existing
+    `owl:sameAs` triples (32 DBpedia + 5 Wikidata) retrofitted with real
+    `CrosswalkNote`s in one scripted pass, tested via a live query
+    (Iain McGilchrist's DBpedia+Wikidata crosswalks, both correctly
+    surfacing his name-correction scopeNote) before shipping.
 
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
@@ -207,9 +241,11 @@ structural changes:
 5. **`owl:sameAs` links to BOTH DBpedia and Wikidata** on people/schools
    where possible — DBpedia for broad, low-effort Wikipedia-mirrored
    coverage; Wikidata added deliberately per-entity because it's more
-   actively maintained and has its own SPARQL endpoint. Only 2 of ~23
-   people/schools have verified Wikidata links so far (EOWilson, Marcus
-   Aurelius) — see `data/seed/wikidata_links.ttl`. CRITICAL: Wikidata
+   actively maintained and has its own SPARQL endpoint. 5 of ~26
+   people/schools have verified Wikidata links as of 2026-07-11 (EOWilson,
+   Marcus Aurelius, Post Carbon Institute, Iain McGilchrist, Daniel
+   Schmachtenberger) — see `data/seed/crosswalknotes.ttl` (filter by
+   `thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata`). CRITICAL: Wikidata
    Q-numbers have no mnemonic structure and are genuinely easy to get
    wrong (a plausible-looking search hit for "Marcus Aurelius Antoninus"
    is actually a disambiguation page, Q1632736 — the real entity is
@@ -459,9 +495,9 @@ Still open: does this deserve its own file/data layer, given it's a
 different research question than the idea-linking work? Not started —
 logged for discussion, not build-ready yet.
 
-**MEDIUM — Wikidata verification.** ~21 of ~23 people/schools still need
+**MEDIUM — Wikidata verification.** ~21 of ~26 people/schools still need
 verified Wikidata `owl:sameAs` links (pattern established in
-`data/seed/wikidata_links.ttl`, just needs the per-entity verification
+`data/seed/crosswalknotes.ttl`, just needs the per-entity verification
 legwork — see design decision #5 above; Q-numbers are NOT mnemonic and
 guessing from memory is genuinely risky).
 

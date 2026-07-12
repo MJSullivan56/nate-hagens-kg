@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 
 <http://example.org/thinkr#> a owl:Ontology ;
@@ -184,6 +185,10 @@ thinkr:PersonEntityType.Collaborator a thinkr:PersonEntityType, owl:NamedIndivid
 thinkr:PersonEntityType.CoAuthor a thinkr:PersonEntityType, owl:NamedIndividual ;
     skos:prefLabel "Co-Author"@en .
 
+thinkr:PersonEntityType.Contributor a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Contributor"@en ;
+    rdfs:comment "Designed pre-dinner 2026-07-11 (Contributor IFF publications align with the movement, else just a Mention) but never actually instantiated until Iain McGilchrist's bootstrap gave a real, well-evidenced case: published works (The Master and His Emissary, The Matter with Things) genuinely align with TGS's cognitive/behavioral themes. Not mutually exclusive with Guest — a Person can hold both independently."@en .
+
 thinkr:hasPersonEntityType a owl:ObjectProperty ;
     rdfs:subPropertyOf thinkr:hasNamedEntityType ;
     skos:scopeNote "Narrower than thinkr:hasNamedEntityType: the property to actually use for thinkr:Person individuals in practice."@en ;
@@ -191,6 +196,37 @@ thinkr:hasPersonEntityType a owl:ObjectProperty ;
     rdfs:range thinkr:PersonEntityType ;
     rdfs:comment "The property to actually USE for Person individuals — subPropertyOf the general thinkr:hasNamedEntityType. Same explicit-typing caveat as elsewhere in this project: rdfs:subPropertyOf won't make a hasPersonEntityType triple automatically queryable via hasNamedEntityType without a reasoner (this project's tooling doesn't run one) — assert both explicitly if a query needs to work at the general level."@en ;
     skos:prefLabel "has person entity type"@en .
+
+thinkr:CrosswalkSource a owl:Class, thinkr:Category ;
+    rdfs:comment "Which external database a thinkr:CrosswalkNote's owl:sameAs assertion targets. Closed enumeration."@en ;
+    skos:prefLabel "Crosswalk Source"@en .
+
+thinkr:CrosswalkSource.DBpedia a thinkr:CrosswalkSource, owl:NamedIndividual ;
+    skos:prefLabel "DBpedia"@en .
+
+thinkr:CrosswalkSource.Wikidata a thinkr:CrosswalkSource, owl:NamedIndividual ;
+    skos:prefLabel "Wikidata"@en .
+
+thinkr:aboutEntity a owl:ObjectProperty ;
+    rdfs:domain thinkr:CrosswalkNote ;
+    rdfs:range thinkr:NamedEntity ;
+    rdfs:comment "The Person/School/Work etc. this crosswalk note documents an external mapping for."@en ;
+    skos:prefLabel "about entity"@en .
+
+thinkr:aboutExternalURI a owl:ObjectProperty ;
+    rdfs:domain thinkr:CrosswalkNote ;
+    rdfs:comment "The external URI (DBpedia/Wikidata resource) this crosswalk note documents — mirrors the actual owl:sameAs triple's object, kept direct and reasoner-compatible rather than reified."@en ;
+    skos:prefLabel "about external URI"@en .
+
+thinkr:crosswalkSource a owl:ObjectProperty ;
+    rdfs:domain thinkr:CrosswalkNote ;
+    rdfs:range thinkr:CrosswalkSource ;
+    skos:prefLabel "crosswalk source"@en .
+
+thinkr:verifiedOn a owl:DatatypeProperty ;
+    rdfs:domain thinkr:CrosswalkNote ;
+    rdfs:range xsd:date ;
+    skos:prefLabel "verified on"@en .
 
 thinkr:relatesTo a owl:ObjectProperty ;
     rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en ;
