@@ -54,3 +54,11 @@ tgs:School.TheOilDrum a thinkr:School, owl:NamedIndividual ;
 tgs:School.PostCarbonInstitute a thinkr:School, owl:NamedIndividual ;
     skos:prefLabel "Post Carbon Institute"@en ;
     skos:definition "A 501(c)(3) nonprofit (DBA of Metafoundation) founded 2003 by Julian Darley, based in Oregon, focused on the transition away from fossil fuels via systems thinking, energy literacy, and community resilience. Nate Hagens currently sits on its Board — see tgs:Person.NateHagens."@en .
+
+tgs:School.MaEarth a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "Ma Earth"@en ;
+    skos:definition "Collective/quadratic-funding crowdfunding platform for regenerative land and ecological projects, pairing philanthropic matching funds with community fundraising (e.g. mangrove restoration in the Pacific, a war-amputee farming cooperative in the Congo). Co-founded 2023 by tgs:Person.MatthewMonahan. NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page found — a small organization (~2 employees per one source), plausibly below Wikipedia's notability bar."@en .
+
+tgs:School.BiomeTrust a thinkr:School, owl:NamedIndividual ;
+    skos:prefLabel "Biome Trust"@en ;
+    skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Person.MatthewMonahan. Limited independent detail available as of 2026-07-11 — flagged honestly rather than embellished; revisit if more source material surfaces."@en .
