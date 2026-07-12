@@ -184,6 +184,10 @@ thinkr:PersonEntityType.Contributor a thinkr:PersonEntityType, owl:NamedIndividu
     skos:prefLabel "Contributor"@en ;
     rdfs:comment "Designed pre-dinner 2026-07-11 (Contributor IFF publications align with the movement, else just a Mention) but never actually instantiated until Iain McGilchrist's bootstrap gave a real, well-evidenced case: published works (The Master and His Emissary, The Matter with Things) genuinely align with TGS's cognitive/behavioral themes. Not mutually exclusive with Guest — a Person can hold both independently."@en .
 
+thinkr:PersonEntityType.Critic a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Critic"@en ;
+    rdfs:comment "Motivated by Elon Musk (2026-07-11) — someone whose relationship to TGS is oppositional, distinct from the Contributor/Mention question (which is about publication alignment, not stance). Schema-only for now, per MJSullivan: 'add critic for now and enrich things later' — no Person individual tagged with this yet."@en .
+
 thinkr:hasPersonEntityType a owl:ObjectProperty ;
     rdfs:subPropertyOf thinkr:hasNamedEntityType ;
     skos:scopeNote "Narrower than thinkr:hasNamedEntityType: the property to actually use for thinkr:Person individuals in practice."@en ;
@@ -256,6 +260,37 @@ thinkr:hasReplay a owl:ObjectProperty ;
 thinkr:hasTranscript a owl:ObjectProperty ;
     rdfs:domain thinkr:Work ;
     skos:scopeNote "A link to a text transcript, distinct from thinkr:hasReplay (audio/video) and thinkr:hasCanonicalSource (the page about the content, not the content itself)."@en .
+
+thinkr:ProfessionalRole a owl:Class, thinkr:Category ;
+    rdfs:comment "A person's intrinsic professional identity (Educator, Author, etc.) — deliberately generic and reusable across any future thinker's graph, same reasoning as thinkr:EpisodeType. Distinct from thinkr:PersonEntityType, which describes a person's RELATIONSHIP TO THIS SPECIFIC PROJECT (Guest, Contributor), not something intrinsic to them independent of it."@en ;
+    skos:prefLabel "Professional Role"@en .
+
+thinkr:ProfessionalRole.Educator a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Educator"@en .
+
+thinkr:ProfessionalRole.InstituteExecutive a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Institute Executive"@en .
+
+thinkr:ProfessionalRole.Blogger a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Blogger"@en .
+
+thinkr:ProfessionalRole.Author a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Author"@en .
+
+thinkr:hasProfessionalRole a owl:ObjectProperty ;
+    rdfs:domain thinkr:Person ;
+    rdfs:range thinkr:ProfessionalRole ;
+    skos:scopeNote "General-purpose grouping, NOT provenance-tracked — unlike memberOf/AffiliationNote (still pending its own design, see docs/sidecar-cleanup-handoff.md), this doesn't claim when/how the role was verified, just that it's a useful high-level label."@en .
+
+thinkr:hasTGSRole a owl:ObjectProperty ;
+    rdfs:subPropertyOf thinkr:hasProfessionalRole ;
+    rdfs:range [ a owl:Class ; owl:oneOf (
+        thinkr:ProfessionalRole.Educator
+        thinkr:ProfessionalRole.InstituteExecutive
+        thinkr:ProfessionalRole.Blogger
+        thinkr:ProfessionalRole.Author
+    ) ] ;
+    skos:scopeNote "Curated subset of thinkr:ProfessionalRole specifically useful for people in the TGS orbit. The range restriction is DOCUMENTATION ONLY, not enforced — this project currently has exactly two editors (MJSullivan and Claude), so a manually-respected convention is sufficient; would need a real validation script if that ever changes."@en .
 
 thinkr:hasHost a owl:ObjectProperty ;
     rdfs:subPropertyOf dcterms:creator ;
