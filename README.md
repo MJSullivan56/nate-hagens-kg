@@ -32,8 +32,15 @@ data/seed/tgs-core.ttl        — ALL properties + supporting classes with
                                  yet (Work, Episode, Source — each gets
                                  promoted to its own file on first instance)
 data/seed/concepts.ttl        — thinkr:Concept: class + all 19 instances
-data/seed/persons.ttl         — thinkr:Person: class + all 20 instances
-data/seed/schools.ttl         — thinkr:School: class + all 6 instances
+data/seed/persons.ttl         — thinkr:Person: class + all 25 instances
+data/seed/schoolsofthought.ttl — thinkr:SchoolOfThought: class + 7
+                                 instances (split from the old, overloaded
+                                 thinkr:School 2026-07-11 — see
+                                 docs/sidecar-cleanup-handoff.md)
+data/seed/organizations.ttl   — thinkr:Organization: class + 5 instances
+                                 (same split)
+data/seed/academicinstitutions.ttl — thinkr:AcademicInstitution: class +
+                                 3 instances (same split, first real use)
 data/seed/linknotes.ttl       — thinkr:LinkNote: class + all 14 instances,
                                  plus the cross-individual relation triples
                                  each LinkNote explains (a relation without
@@ -184,7 +191,7 @@ is free) so the identifiers resolve to something real.
 1. Expand `concepts.ttl` — verify each definition against the actual source
    (transcript/book), not just the paraphrase here, and add real
    `dct:source` references (page numbers / episode timestamps).
-2. Expand `persons.ttl` (and `schools.ttl` for traditions/movements) with
+2. Expand `persons.ttl` (and `schoolsofthought.ttl` for traditions/movements) with
    more philosophers, scientists, and activists as
    concepts demand them — don't pad it preemptively.
 3. Add more curated links in `linknotes.ttl`, by hand, focusing on the concepts

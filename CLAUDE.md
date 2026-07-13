@@ -104,7 +104,8 @@ structural changes:
 0a. **Governance principle (2026-07-11): one class, one file.** Every class
     with instances gets its own complete, self-contained TTL file (class
     declaration + all its individuals) — `concepts.ttl`, `persons.ttl`,
-    `schools.ttl`, `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
+    `schoolsofthought.ttl`, `organizations.ttl`, `academicinstitutions.ttl`,
+    `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
     supporting/controlled-vocabulary classes (`ConfidenceType`,
     `ReliabilityType`, `PolarityType`) and ALL property declarations
     live together in `tgs-core.ttl` — MJSullivan's framing: `tgs-core.ttl`
@@ -228,6 +229,35 @@ structural changes:
     session (cheap now, would only get more expensive later) — see the
     3-step rename in `episodes.ttl`'s git history if the exact mechanics
     are ever needed again.
+
+0e. **Design decision (2026-07-11): `thinkr:School` split into
+    `SchoolOfThought`/`Organization`/`AcademicInstitution`.** Raised by
+    MJSullivan as genuinely overloaded, confirmed by checking the actual
+    data rather than assuming — all 12 existing `School` individuals
+    split cleanly into intellectual movements (7: `Stoicism`,
+    `DoughnutEconomics`, `PeakOilMovement`, `BehavioralEconomics`,
+    `DegrowthMovement`, `SystemsEcology`, `CivilRightsMovement`) and real
+    legal entities (5: `TheOilDrum`, `PostCarbonInstitute`, `MaEarth`,
+    `BiomeTrust`, `ConsilienceProject`). Third category,
+    `AcademicInstitution`, added on MJSullivan's own concrete test — "an
+    Organization might sponsor Nate, an Academic Institution never would"
+    — genuinely different relationship verbs, not just a stylistic
+    split. First real `AcademicInstitution` instances: University of
+    Vermont, University of Chicago, University of Minnesota — previously
+    only ever in prose inside `Person.NateHagens`'s own comment, never
+    modeled as individuals. All three new classes `rdfs:subClassOf
+    thinkr:NamedEntity` (exactly the extension point that class was
+    built to support), siblings of each other and of `Person`, NOT
+    nested — `AcademicInstitution` under `Organization` would have
+    blurred the exact distinction that motivated splitting them.
+    `memberOf`'s range widened from `thinkr:School` to a `owl:unionOf`
+    the three new classes. Executed as one scripted, verified pass — 32
+    cross-file references renamed via text substitution (safe here,
+    each old name a distinct non-overlapping string), confirmed zero
+    stray references remained, confirmed the `convergesWith` bidirectional
+    link (which specifically referenced `DoughnutEconomics`) still
+    resolved after the rename, confirmed via live query that the 7/5/3
+    split landed exactly as counted beforehand.
 
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
@@ -366,7 +396,7 @@ cheapest to do while the graph is small (719 triples).
 **DONE 2026-07-11 — Cross-tradition "convergent parallel" property.** Built
 as `thinkr:convergesWith` (`owl:ObjectProperty, owl:SymmetricProperty`) in
 `tgs-core.ttl`. First real use: `tgs:Concept.Overshoot` ↔
-`tgs:School.DoughnutEconomics` (Kate Raworth's framework, applied
+`tgs:SchoolOfThought.DoughnutEconomics` (Kate Raworth's framework, applied
 regionally by CalDEC — see their CC-BY-licensed 2025 California Doughnut
 Report, which independently uses "overshoot" as a technical term). `Work`
 and `Source` — both declared since the original schema but empty until now
@@ -691,7 +721,7 @@ person/context) to test it against:
   ends in a period-adjacent token (e.g. "Jr.") — Turtle parses a trailing
   `.` as end-of-statement. Use the full
   `<http://dbpedia.org/resource/...>` IRI in those cases (see
-  `data/seed/persons.ttl`/`schools.ttl` for examples).
+  `data/seed/persons.ttl`/`schoolsofthought.ttl` for examples).
 - `data/generated/` is the output of `extraction/promote_to_rdf.py` —
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.

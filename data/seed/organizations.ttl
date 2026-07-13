@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Organization — split out of the old, overloaded thinkr:School on
+# 2026-07-11. A real legal entity with actual staff/roles — the kind of
+# thing someone is literally employed by or a board member of. Distinct
+# from thinkr:SchoolOfThought (an idea, no legal existence) and
+# thinkr:AcademicInstitution (a university — different possible
+# relationship verbs; an Organization can sponsor someone, a university
+# generally wouldn't).
+#############################################
+
+thinkr:Organization a owl:Class ;
+    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:comment "A real legal entity — nonprofit, company, community with actual staff/editorial roles — distinct from thinkr:SchoolOfThought (an idea) and thinkr:AcademicInstitution (a university, different relationship verbs apply)."@en ;
+    skos:prefLabel "Organization"@en .
+
+tgs:Organization.TheOilDrum a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "The Oil Drum"@en ;
+    skos:definition "A collaborative blog/community devoted to analysis and discussion of energy, peak oil, and sustainability, founded March 2005 by Kyle Saunders ('Prof. Goose') and Dave Summers ('Heading Out'). Active until 2013. Distinct from the broader tgs:SchoolOfThought.PeakOilMovement it was part of — a specific, independently-notable institution within that wider community, same relationship as Doughnut Economics sits within broader ecological economics. Nate Hagens was Managing/Lead Editor here before founding TGS — see tgs:Person.NateHagens."@en .
+
+tgs:Organization.PostCarbonInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Post Carbon Institute"@en ;
+    skos:definition "A 501(c)(3) nonprofit (DBA of Metafoundation) founded 2003 by Julian Darley, based in Oregon, focused on the transition away from fossil fuels via systems thinking, energy literacy, and community resilience. Nate Hagens currently sits on its Board — see tgs:Person.NateHagens."@en .
+
+tgs:Organization.MaEarth a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Ma Earth"@en ;
+    skos:definition "Collective/quadratic-funding crowdfunding platform for regenerative land and ecological projects, pairing philanthropic matching funds with community fundraising (e.g. mangrove restoration in the Pacific, a war-amputee farming cooperative in the Congo). Co-founded 2023 by tgs:Person.MatthewMonahan. NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page found — a small organization (~2 employees per one source), plausibly below Wikipedia's notability bar."@en .
+
+tgs:Organization.BiomeTrust a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Biome Trust"@en ;
+    skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Person.MatthewMonahan. Limited independent detail available as of 2026-07-11 — flagged honestly rather than embellished; revisit if more source material surfaces."@en .
+
+tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "The Consilience Project"@en ;
+    skos:definition "Non-profit media organization (founded 2021, a publication of the Civilization Research Institute) publishing research on public sensemaking, governance design, and global risk mitigation — addressing the erosion of shared epistemics and 'information commons.' Founding member: tgs:Person.DanielSchmachtenberger. NOT separately verified for DBpedia/Wikidata as of 2026-07-11 — flagged honestly rather than guessed; revisit if this becomes independently relevant."@en .

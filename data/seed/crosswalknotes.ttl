@@ -33,7 +33,7 @@ tgs:CrosswalkNote.AristotleDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.BehavioralEconomicsDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.BehavioralEconomics ;
+    thinkr:aboutEntity tgs:SchoolOfThought.BehavioralEconomics ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Behavioral_economics> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -49,7 +49,7 @@ tgs:CrosswalkNote.BuddhaDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.CivilRightsMovementDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.CivilRightsMovement ;
+    thinkr:aboutEntity tgs:SchoolOfThought.CivilRightsMovement ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Civil_rights_movement> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -73,7 +73,7 @@ tgs:CrosswalkNote.DanielSchmachtenbergerWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DegrowthMovementDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.DegrowthMovement ;
+    thinkr:aboutEntity tgs:SchoolOfThought.DegrowthMovement ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Degrowth> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -97,7 +97,7 @@ tgs:CrosswalkNote.DonellaMeadowsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DoughnutEconomicsDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.DoughnutEconomics ;
+    thinkr:aboutEntity tgs:SchoolOfThought.DoughnutEconomics ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -225,7 +225,7 @@ tgs:CrosswalkNote.MartinLutherKingJrDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.PostCarbonInstituteDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.PostCarbonInstitute ;
+    thinkr:aboutEntity tgs:Organization.PostCarbonInstitute ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Post_Carbon_Institute> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -233,7 +233,7 @@ tgs:CrosswalkNote.PostCarbonInstituteDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.PostCarbonInstituteWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.PostCarbonInstitute ;
+    thinkr:aboutEntity tgs:Organization.PostCarbonInstitute ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q7233628> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -257,7 +257,7 @@ tgs:CrosswalkNote.SigmundFreudDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.StoicismDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.Stoicism ;
+    thinkr:aboutEntity tgs:SchoolOfThought.Stoicism ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Stoicism> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -265,7 +265,7 @@ tgs:CrosswalkNote.StoicismDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.SystemsEcologyDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.SystemsEcology ;
+    thinkr:aboutEntity tgs:SchoolOfThought.SystemsEcology ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Systems_ecology> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -289,7 +289,7 @@ tgs:CrosswalkNote.TheMatterWithThingsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.TheOilDrumDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:School.TheOilDrum ;
+    thinkr:aboutEntity tgs:Organization.TheOilDrum ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/The_Oil_Drum> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -359,19 +359,19 @@ tgs:Person.WilliamCatton owl:sameAs <http://dbpedia.org/resource/William_R._Catt
 
 tgs:Person.WilliamStanleyJevons owl:sameAs <http://dbpedia.org/resource/William_Stanley_Jevons> .
 
-tgs:School.BehavioralEconomics owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> .
+tgs:SchoolOfThought.BehavioralEconomics owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> .
 
-tgs:School.CivilRightsMovement owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> .
+tgs:SchoolOfThought.CivilRightsMovement owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> .
 
-tgs:School.DegrowthMovement owl:sameAs <http://dbpedia.org/resource/Degrowth> .
+tgs:SchoolOfThought.DegrowthMovement owl:sameAs <http://dbpedia.org/resource/Degrowth> .
 
-tgs:School.DoughnutEconomics owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> .
+tgs:SchoolOfThought.DoughnutEconomics owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> .
 
-tgs:School.Stoicism owl:sameAs <http://dbpedia.org/resource/Stoicism> .
+tgs:SchoolOfThought.Stoicism owl:sameAs <http://dbpedia.org/resource/Stoicism> .
 
-tgs:School.SystemsEcology owl:sameAs <http://dbpedia.org/resource/Systems_ecology> .
+tgs:SchoolOfThought.SystemsEcology owl:sameAs <http://dbpedia.org/resource/Systems_ecology> .
 
-tgs:School.TheOilDrum owl:sameAs <http://dbpedia.org/resource/The_Oil_Drum> .
+tgs:Organization.TheOilDrum owl:sameAs <http://dbpedia.org/resource/The_Oil_Drum> .
 
 tgs:Work.TheMasterAndHisEmissary owl:sameAs <http://dbpedia.org/resource/The_Master_and_His_Emissary> .
 
@@ -386,7 +386,7 @@ tgs:Person.IainMcGilchrist owl:sameAs <http://dbpedia.org/resource/Iain_McGilchr
 tgs:Person.MarcusAurelius owl:sameAs <http://dbpedia.org/resource/Marcus_Aurelius>,
         <http://www.wikidata.org/entity/Q1430> .
 
-tgs:School.PostCarbonInstitute owl:sameAs <http://dbpedia.org/resource/Post_Carbon_Institute>,
+tgs:Organization.PostCarbonInstitute owl:sameAs <http://dbpedia.org/resource/Post_Carbon_Institute>,
         <http://www.wikidata.org/entity/Q7233628> .
 
 thinkr:CrosswalkNote a owl:Class ;

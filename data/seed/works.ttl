@@ -4,6 +4,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
@@ -36,3 +37,9 @@ tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Matter with Things: Our Brains, Our Delusions, and the Unmaking of the World"@en ;
     rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
     dct:creator tgs:Person.IainMcGilchrist .
+
+tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Reality Blind: Integrating the Systems Science Underpinning Our Collective Futures, Vol. 1"@en ;
+    rdfs:comment "Co-authored with DJ White — DJ White NOT modeled as a Person individual as of 2026-07-11, would need the same verification pass as every other person tonight (Wikipedia/wrong-person checks), not fabricated as a side effect of fleshing out Nate. Self-published on Amazon (ISBN 9798701116281) specifically so full content could stay free online — was the primary text for Nate's Reality 101 course. Confirmed via multiple independent sources: Amazon, Goodreads, a LinkedIn post from Nate himself, MAHB, Stanford."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:creator tgs:Person.NateHagens .

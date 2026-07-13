@@ -1,0 +1,35 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:AcademicInstitution — split out of the old, overloaded
+# thinkr:School on 2026-07-11. Genuinely distinct from thinkr:Organization
+# per MJSullivan's own test: an Organization might sponsor Nate; a
+# university never would — different possible relationship verbs, not
+# just a stylistic distinction. First real instances: the three
+# institutions already confirmed in tgs:Person.NateHagens's own bio
+# (previously only in prose, never modeled as individuals at all).
+#############################################
+
+thinkr:AcademicInstitution a owl:Class ;
+    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:comment "A university or other formal academic institution — distinct from thinkr:Organization by MJSullivan's own test: an Organization might sponsor someone, an AcademicInstitution generally wouldn't. Sibling of Organization, not nested under it, despite a university technically being an organization — nesting would blur the exact distinction that motivated the split."@en ;
+    skos:prefLabel "Academic Institution"@en .
+
+tgs:AcademicInstitution.UniversityOfVermont a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "University of Vermont"@en .
+
+tgs:AcademicInstitution.UniversityOfChicago a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "University of Chicago"@en ;
+    rdfs:comment "Specifically the Booth School of Business, per tgs:Person.NateHagens's own bio."@en .
+
+tgs:AcademicInstitution.UniversityOfMinnesota a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "University of Minnesota"@en ;
+    rdfs:comment "Teaching relationship, not a degree — see tgs:Person.NateHagens's own bio for the unresolved past/present tense conflict between sources."@en .

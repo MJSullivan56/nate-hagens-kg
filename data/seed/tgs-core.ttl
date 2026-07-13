@@ -79,14 +79,15 @@ thinkr:hasEvidence a owl:ObjectProperty ;
 thinkr:influencedBy a owl:ObjectProperty ;
     rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Person thinkr:School ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Person thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     rdfs:subPropertyOf thinkr:relatesTo ;
     skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case."@en ;
     skos:prefLabel "influenced by"@en .
 
 thinkr:memberOf a owl:ObjectProperty ;
     rdfs:domain thinkr:Person ;
-    rdfs:range thinkr:School ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    skos:comment "Range widened 2026-07-11 when thinkr:School was split into SchoolOfThought/Organization/AcademicInstitution — see the three class declarations below for the reasoning."@en ;
     skos:prefLabel "member of / associated with"@en .
 
 thinkr:reliabilityTier a owl:ObjectProperty ;
@@ -148,7 +149,7 @@ thinkr:ReliabilityType.Unverified a thinkr:ReliabilityType,
     skos:prefLabel "Unverified"@en .
 
 thinkr:convergesWith a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:comment "Independently-developed ideas/frameworks converging on similar conclusions, with NO claimed causal lineage or direct influence — distinct from influencedBy/echoesIdeaOf, which both imply direction. Formally symmetric per OWL semantics, BUT this project's query tooling doesn't run a reasoner (same reason owl:NamedIndividual is asserted explicitly everywhere rather than relied on via subclass inference) — so BOTH directions must be explicitly asserted as real triples, or querying from the 'other' side returns nothing. Verified empirically 2026-07-11: querying tgs:School.DoughnutEconomics thinkr:convergesWith ?x returned zero results until the reverse triple was added by hand, despite the forward direction being asserted and the property being formally symmetric. First used for tgs:Concept.Overshoot <-> tgs:School.DoughnutEconomics."@en ;
+    rdfs:comment "Independently-developed ideas/frameworks converging on similar conclusions, with NO claimed causal lineage or direct influence — distinct from influencedBy/echoesIdeaOf, which both imply direction. Formally symmetric per OWL semantics, BUT this project's query tooling doesn't run a reasoner (same reason owl:NamedIndividual is asserted explicitly everywhere rather than relied on via subclass inference) — so BOTH directions must be explicitly asserted as real triples, or querying from the 'other' side returns nothing. Verified empirically 2026-07-11: querying tgs:SchoolOfThought.DoughnutEconomics thinkr:convergesWith ?x returned zero results until the reverse triple was added by hand, despite the forward direction being asserted and the property being formally symmetric. First used for tgs:Concept.Overshoot <-> tgs:SchoolOfThought.DoughnutEconomics."@en ;
     skos:prefLabel "converges with"@en .
 
 thinkr:NamedEntity a owl:Class ;
@@ -316,7 +317,7 @@ thinkr:seriesPosition a owl:DatatypeProperty ;
 thinkr:relatesTo a owl:ObjectProperty ;
     rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Person thinkr:School ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Person thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     skos:prefLabel "relates to"@en .
 
 thinkr:PolarityType a owl:Class, thinkr:Category ;
