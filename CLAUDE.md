@@ -48,7 +48,7 @@ zero `tgs:` — verified by grep, not just assumed.
 
 **A real bug worth knowing about if you extend this pattern again**: the
 first rename pass used a regex matching bare class names like `Person`,
-which incorrectly also matched the START of `tgs:Person.MarcusAurelius`
+which incorrectly also matched the START of `tgs:Human.MarcusAurelius`
 (since nothing excluded a following `.`), silently reclassifying every
 `Class.Name`-style domain individual as vocabulary. Caught by actually
 running a live query and getting zero results instead of trusting the
@@ -261,7 +261,7 @@ structural changes:
 
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
-   after noticing the pattern already forming — `thinkr:Person`/`Concept`/
+   after noticing the pattern already forming — `thinkr:Human`/`Concept`/
    `Evidence`/`Source`/`ConfidenceType` etc. are OWL classes with strict,
    single-purpose axioms (a `LinkNote` has a valid `calculatedConfidence`
    or it doesn't — no ambiguity, no multi-parent messiness), while the
@@ -290,7 +290,7 @@ structural changes:
    not just that some value is present.
 
 2. **Every individual follows `<Domain>:<Class>.<Name>` IRI minting**
-   (e.g. `tgs:Person.MarcusAurelius`, `tgs:Concept.Overshoot`,
+   (e.g. `tgs:Human.MarcusAurelius`, `tgs:Concept.Overshoot`,
    `tgs:LinkNote.DiscountMarcus`) and is explicitly typed
    `a tgs:SomeClass, owl:NamedIndividual` — this is MJSullivan's established
    convention from his other ontology work, adopted here for consistency.

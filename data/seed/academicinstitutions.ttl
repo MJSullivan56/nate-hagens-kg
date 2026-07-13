@@ -14,7 +14,7 @@
 # per MJSullivan's own test: an Organization might sponsor Nate; a
 # university never would — different possible relationship verbs, not
 # just a stylistic distinction. First real instances: the three
-# institutions already confirmed in tgs:Person.NateHagens's own bio
+# institutions already confirmed in tgs:Human.NateHagens's own bio
 # (previously only in prose, never modeled as individuals at all).
 #############################################
 
@@ -28,8 +28,8 @@ tgs:AcademicInstitution.UniversityOfVermont a thinkr:AcademicInstitution, owl:Na
 
 tgs:AcademicInstitution.UniversityOfChicago a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "University of Chicago"@en ;
-    rdfs:comment "Specifically the Booth School of Business, per tgs:Person.NateHagens's own bio."@en .
+    rdfs:comment "Specifically the Booth School of Business, per tgs:Human.NateHagens's own bio."@en .
 
 tgs:AcademicInstitution.UniversityOfMinnesota a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "University of Minnesota"@en ;
-    rdfs:comment "Teaching relationship, not a degree — see tgs:Person.NateHagens's own bio for the unresolved past/present tense conflict between sources."@en .
+    rdfs:comment "Teaching relationship, not a degree — see tgs:Human.NateHagens's own bio for the unresolved past/present tense conflict between sources."@en .

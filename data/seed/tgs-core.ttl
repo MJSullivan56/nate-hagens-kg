@@ -27,7 +27,7 @@ thinkr:aboutSubject a owl:ObjectProperty ;
 
 thinkr:appliesTo a owl:ObjectProperty ;
     rdfs:comment "For activists/practitioners rather than philosophers: this person's work is a concrete instance of the concept (e.g. MLK's organizing as an example of collective-action dynamics discussed under a TGS concept)."@en ;
-    rdfs:domain thinkr:Person ;
+    rdfs:domain thinkr:Human ;
     rdfs:range thinkr:Concept ;
     skos:prefLabel "provides real-world example of"@en .
 
@@ -61,7 +61,7 @@ thinkr:discussedIn a owl:ObjectProperty ;
 thinkr:echoesIdeaOf a owl:ObjectProperty ;
     rdfs:comment "The TGS concept independently converges on / restates an idea this person is known for. No claim of direct influence."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range thinkr:Person ;
+    rdfs:range thinkr:Human ;
     rdfs:subPropertyOf thinkr:relatesTo ;
     skos:scopeNote "Narrower than thinkr:relatesTo: specifically independent convergence on a similar idea — explicitly NOT a claim of direct influence, see thinkr:influencedBy for that distinct, stronger case."@en ;
     skos:prefLabel "echoes idea of"@en .
@@ -79,13 +79,13 @@ thinkr:hasEvidence a owl:ObjectProperty ;
 thinkr:influencedBy a owl:ObjectProperty ;
     rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Person thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Human thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     rdfs:subPropertyOf thinkr:relatesTo ;
     skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case."@en ;
     skos:prefLabel "influenced by"@en .
 
 thinkr:memberOf a owl:ObjectProperty ;
-    rdfs:domain thinkr:Person ;
+    rdfs:domain thinkr:Human ;
     rdfs:range [ a owl:Class ; owl:unionOf ( thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     skos:comment "Range widened 2026-07-11 when thinkr:School was split into SchoolOfThought/Organization/AcademicInstitution — see the three class declarations below for the reasoning."@en ;
     skos:prefLabel "member of / associated with"@en .
@@ -153,23 +153,23 @@ thinkr:convergesWith a owl:ObjectProperty, owl:SymmetricProperty ;
     skos:prefLabel "converges with"@en .
 
 thinkr:NamedEntity a owl:Class ;
-    rdfs:comment "Superclass for anything that can be surfaced via the NER pipeline (extraction/index_named_entities.py) and formally modeled in the graph. thinkr:Person is currently the only subclass — deliberately left room for others (e.g. an Organization class) to join later without redesigning this. Plain owl:Class, not SKOS — added 2026-07-11 at MJSullivan's direction, correcting an earlier proposal to use SKOS for the same purpose."@en ;
+    rdfs:comment "Superclass for anything that can be surfaced via the NER pipeline (extraction/index_named_entities.py) and formally modeled in the graph. thinkr:Human is currently the only subclass — deliberately left room for others (e.g. an Organization class) to join later without redesigning this. Plain owl:Class, not SKOS — added 2026-07-11 at MJSullivan's direction, correcting an earlier proposal to use SKOS for the same purpose."@en ;
     skos:prefLabel "Named Entity"@en .
 
 thinkr:NamedEntityType a owl:Class ;
-    rdfs:comment "ABSTRACT top-level category class — restructured 2026-07-11 per MJSullivan: each thinkr:NamedEntity subclass gets its OWN more specific categorization as a subclass of this one (e.g. thinkr:PersonEntityType for thinkr:Person), rather than one flat enumeration shared across every subclass. Mirrors the class hierarchy: thinkr:NamedEntity -> thinkr:Person is paralleled by thinkr:NamedEntityType -> thinkr:PersonEntityType. A future Organization subclass would get its own thinkr:OrganizationEntityType sibling, not reuse Person's categories."@en ;
+    rdfs:comment "ABSTRACT top-level category class — restructured 2026-07-11 per MJSullivan: each thinkr:NamedEntity subclass gets its OWN more specific categorization as a subclass of this one (e.g. thinkr:PersonEntityType for thinkr:Human), rather than one flat enumeration shared across every subclass. Mirrors the class hierarchy: thinkr:NamedEntity -> thinkr:Human is paralleled by thinkr:NamedEntityType -> thinkr:PersonEntityType. A future Organization subclass would get its own thinkr:OrganizationEntityType sibling, not reuse Person's categories."@en ;
     skos:prefLabel "Named Entity Type"@en .
 
 thinkr:hasNamedEntityType a owl:ObjectProperty ;
     rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:NamedEntityType ;
-    rdfs:comment "GENERAL, top-level property — in practice, use a subclass-specific subproperty instead (e.g. thinkr:hasPersonEntityType for a thinkr:Person). This property exists mainly for uniform querying across ALL NamedEntity subclasses at once, once more than one exists."@en ;
+    rdfs:comment "GENERAL, top-level property — in practice, use a subclass-specific subproperty instead (e.g. thinkr:hasPersonEntityType for a thinkr:Human). This property exists mainly for uniform querying across ALL NamedEntity subclasses at once, once more than one exists."@en ;
     skos:prefLabel "has named entity type"@en .
 
 thinkr:PersonEntityType a owl:Class, thinkr:Category ;
     rdfs:subClassOf thinkr:NamedEntityType ;
-    skos:scopeNote "Narrower than thinkr:NamedEntityType: specifically the categorization scheme for thinkr:Person individuals. A hypothetical future OrganizationEntityType would be a SIBLING of this, not a further subclass — see the OWL-depth-cap governance rule in CLAUDE.md."@en ;
-    rdfs:comment "Categorizes a thinkr:Person's relationship to TGS specifically. Flat categories, deliberately NOT SKOS — unlike Subject/sub-topics, these don't nest hierarchically. ReallyBadActor/Critic-style category proposed but NOT YET CONFIRMED as of 2026-07-11 — only add if/when explicitly confirmed, don't guess."@en ;
+    skos:scopeNote "Narrower than thinkr:NamedEntityType: specifically the categorization scheme for thinkr:Human individuals. A hypothetical future OrganizationEntityType would be a SIBLING of this, not a further subclass — see the OWL-depth-cap governance rule in CLAUDE.md."@en ;
+    rdfs:comment "Categorizes a thinkr:Human's relationship to TGS specifically. Flat categories, deliberately NOT SKOS — unlike Subject/sub-topics, these don't nest hierarchically. ReallyBadActor/Critic-style category proposed but NOT YET CONFIRMED as of 2026-07-11 — only add if/when explicitly confirmed, don't guess."@en ;
     skos:prefLabel "Person Entity Type"@en .
 
 thinkr:PersonEntityType.Guest a thinkr:PersonEntityType, owl:NamedIndividual ;
@@ -191,8 +191,8 @@ thinkr:PersonEntityType.Critic a thinkr:PersonEntityType, owl:NamedIndividual ;
 
 thinkr:hasPersonEntityType a owl:ObjectProperty ;
     rdfs:subPropertyOf thinkr:hasNamedEntityType ;
-    skos:scopeNote "Narrower than thinkr:hasNamedEntityType: the property to actually use for thinkr:Person individuals in practice."@en ;
-    rdfs:domain thinkr:Person ;
+    skos:scopeNote "Narrower than thinkr:hasNamedEntityType: the property to actually use for thinkr:Human individuals in practice."@en ;
+    rdfs:domain thinkr:Human ;
     rdfs:range thinkr:PersonEntityType ;
     rdfs:comment "The property to actually USE for Person individuals — subPropertyOf the general thinkr:hasNamedEntityType. Same explicit-typing caveat as elsewhere in this project: rdfs:subPropertyOf won't make a hasPersonEntityType triple automatically queryable via hasNamedEntityType without a reasoner (this project's tooling doesn't run one) — assert both explicitly if a query needs to work at the general level."@en ;
     skos:prefLabel "has person entity type"@en .
@@ -279,7 +279,7 @@ thinkr:ProfessionalRole.Author a thinkr:ProfessionalRole, owl:NamedIndividual ;
     skos:prefLabel "Author"@en .
 
 thinkr:hasProfessionalRole a owl:ObjectProperty ;
-    rdfs:domain thinkr:Person ;
+    rdfs:domain thinkr:Human ;
     rdfs:range thinkr:ProfessionalRole ;
     skos:scopeNote "General-purpose grouping, NOT provenance-tracked — unlike memberOf/AffiliationNote (still pending its own design, see docs/sidecar-cleanup-handoff.md), this doesn't claim when/how the role was verified, just that it's a useful high-level label."@en .
 
@@ -336,7 +336,7 @@ thinkr:hasObject a owl:ObjectProperty ;
     skos:prefLabel "has object"@en .
 
 thinkr:hasPersonalRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Person ;
+    rdfs:domain thinkr:Human ;
     rdfs:range thinkr:Relationship ;
     skos:comment "Links a Person to their Relationship individuals. Named specifically (not just 'hasRelationship') matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family — only this one built so far, the others deliberately not invented ahead of real need."@en ;
     skos:prefLabel "has personal relationship"@en .
@@ -379,7 +379,7 @@ thinkr:showName a owl:DatatypeProperty ;
 
 thinkr:hostedBy a owl:ObjectProperty ;
     rdfs:domain thinkr:PodcastAppearance ;
-    rdfs:range thinkr:Person ;
+    rdfs:range thinkr:Human ;
     skos:comment "Who hosted this specific appearance — used together with showName for appearances on shows not otherwise modeled in this graph."@en ;
     skos:prefLabel "hosted by"@en .
 
@@ -396,7 +396,7 @@ thinkr:hasGuest a owl:ObjectProperty ;
 thinkr:Series a owl:Class ;
     rdfs:subClassOf thinkr:Work, dcmitype:Collection ;
     rdfs:comment "The overarching arc itself (e.g. 'How to Think About the Future'), distinct from any single installment. First instance added 2026-07-11 (Series.HowToThinkAboutTheFuture, with 3 stub Frankly installments) — no longer zero-instance."@en ;
-    skos:scopeNote "Dual superclass, same pattern as thinkr:Person (foaf:Person + thinkr:NamedEntity): narrower than thinkr:Work in that it has real Work-like properties (title, host, potentially subject) — but a Series has no standalone content of its own (no replay, no transcript), which is exactly what dcmitype:Collection (an aggregation of resources, membership understood via description of the aggregation) captures and thinkr:Work alone does not. dct:isPartOf/dct:hasPart (used on each installment) are the DCMI-standard properties for exactly this relationship — Collection is their natural target type, not an arbitrary addition."@en ;
+    skos:scopeNote "Dual superclass, same pattern as thinkr:Human (foaf:Person + thinkr:NamedEntity): narrower than thinkr:Work in that it has real Work-like properties (title, host, potentially subject) — but a Series has no standalone content of its own (no replay, no transcript), which is exactly what dcmitype:Collection (an aggregation of resources, membership understood via description of the aggregation) captures and thinkr:Work alone does not. dct:isPartOf/dct:hasPart (used on each installment) are the DCMI-standard properties for exactly this relationship — Collection is their natural target type, not an arbitrary addition."@en ;
     skos:prefLabel "Series"@en .
 
 thinkr:seriesPosition a owl:DatatypeProperty ;
@@ -407,7 +407,7 @@ thinkr:seriesPosition a owl:DatatypeProperty ;
 thinkr:relatesTo a owl:ObjectProperty ;
     rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Person thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Human thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     skos:prefLabel "relates to"@en .
 
 thinkr:PolarityType a owl:Class, thinkr:Category ;

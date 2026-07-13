@@ -38,7 +38,7 @@ def main():
             id              INTEGER PRIMARY KEY,
             subject_label   VARCHAR NOT NULL,   -- must match an existing tgs:Concept rdfs:label
             predicate       VARCHAR NOT NULL,   -- one of: echoesIdeaOf | influencedBy | contrastsWith | appliesTo
-            object_label    VARCHAR NOT NULL,   -- must match an existing tgs:Person / tgs:School rdfs:label
+            object_label    VARCHAR NOT NULL,   -- must match an existing tgs:Human / tgs:School rdfs:label
             rationale       VARCHAR NOT NULL,
             status          VARCHAR DEFAULT 'pending', -- pending | approved | rejected
             reviewer_notes  VARCHAR,

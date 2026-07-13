@@ -79,7 +79,7 @@ Human Behavior, etc.) — different meanings, same word. If this pattern
 gets built, `WorkRelationship` avoids the collision (`thinkr:Work` already
 exists for the publication concept).
 
-## RESOLVED (2026-07-12): name/birthdate vocabulary for `thinkr:Person`
+## RESOLVED (2026-07-12): name/birthdate vocabulary for `thinkr:Human`
 
 Reopens the deferred firstName/family_name backlog item from earlier —
 vocabulary now decided, though the actual name-splitting judgment calls
@@ -140,7 +140,7 @@ more genuinely personal. `natehagens.com` is genuinely ambiguous either
 way. The property was correct in shape (`foaf:homepage`, multi-valued)
 but wrong in WHOSE homepage it was attaching them to.
 
-**The proposed fix — `thinkr:Persona`, distinct from `thinkr:Person`**:
+**The proposed fix — `thinkr:Persona`, distinct from `thinkr:Human`**:
 motivated by a second, sharper example — Heather Cox Richardson (the
 planned second thinker for this whole reusable-methodology project) uses
 her newsletter, YouTube, AND Facebook together as "the face of her
@@ -265,7 +265,7 @@ embedded in.
 **SUPERSEDED (2026-07-12), same session — better solution found**:
 MJSullivan pushed back on compromising away from "Persona" (which he
 explicitly likes) and proposed the inverse fix instead — rename
-`thinkr:Person` to `thinkr:Human`, keeping `Persona` for the public-
+`thinkr:Human` to `thinkr:Human`, keeping `Persona` for the public-
 identity concept. This solves the collision more completely than
 `Identity`/`PublicIdentity` did (`Persona`/`Human` share zero characters,
 vs. `Persona`/`Person` sharing six) AND is arguably more semantically
@@ -288,7 +288,7 @@ executed — captured here as the naming decision to actually run with
 next session, superseding `Identity`/`PublicIdentity` above.
 One open sub-question from MJSullivan's own example worth flagging:
 his illustrative `tgs:Human.NathanHagens` used "Nathan" rather than the
-current `tgs:Person.NateHagens` — unclear if that individual-renaming
+current `tgs:Human.NateHagens` — unclear if that individual-renaming
 was intentional (connecting to the `foaf:givenName "Nathan"` vs.
 commonly-known-as-"Nate" distinction already resolved earlier) or just
 illustrative shorthand. Confirm before executing, don't assume either
@@ -312,7 +312,7 @@ five minutes:
    should these cascade to `HumanEntityType`/`hasHumanEntityType` too?
    A blind find/replace would silently decide "yes" without it ever
    being a deliberate choice.
-Safe patterns, if/when this executes: `thinkr:Person ` and `tgs:Person.`
+Safe patterns, if/when this executes: `thinkr:Human ` and `tgs:Human.`
 (WITH the trailing space/period specifically to exclude
 `PersonEntityType` and `Personal`) — never bare `Person`. `foaf:Person`
 needs an explicit exclusion regardless of how the search is scoped.
@@ -432,13 +432,13 @@ tgs:Evidence.Aristotle_Money a thinkr:Evidence, owl:NamedIndividual ;
 # OLD:
 tgs:LinkNote.OvershootCatton a thinkr:LinkNote, owl:NamedIndividual ;
     thinkr:aboutSubject tgs:Concept.Overshoot ;
-    thinkr:aboutObject tgs:Person.WilliamCatton ;
+    thinkr:aboutObject tgs:Human.WilliamCatton ;
     thinkr:hasEvidence tgs:Evidence.OvershootCatton ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated .
 
 # NEW (naming only — entity order + underscore + dropped "Note"):
 tgs:Link.Catton_Overshoot a thinkr:Link, owl:NamedIndividual ;
-    thinkr:aboutSubject tgs:Person.WilliamCatton ;
+    thinkr:aboutSubject tgs:Human.WilliamCatton ;
     thinkr:aboutObject tgs:Concept.Overshoot ;
     thinkr:hasEvidence tgs:Evidence.Catton_Overshoot ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated .
@@ -449,7 +449,7 @@ tgs:Link.Catton_Overshoot a thinkr:Link, owl:NamedIndividual ;
 ```turtle
 # OLD:
 tgs:CrosswalkNote.AristotleDBpedia a thinkr:CrosswalkNote, owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Person.Aristotle ;
+    thinkr:aboutEntity tgs:Human.Aristotle ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Aristotle> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -460,7 +460,7 @@ tgs:CrosswalkNote.AristotleDBpedia a thinkr:CrosswalkNote, owl:NamedIndividual ;
 # thinkr:CrosswalkSource would ALSO need renaming for consistency,
 # not shown here since the replacement term isn't decided yet):
 tgs:IdentityLink.Aristotle_DBpedia a thinkr:IdentityLink, owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Person.Aristotle ;
+    thinkr:aboutEntity tgs:Human.Aristotle ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Aristotle> ;
     ...
 ```
@@ -502,7 +502,7 @@ tgs:IdentityLink.Aristotle_DBpedia a thinkr:IdentityLink, owl:NamedIndividual ;
    under OWL reasoning (a well-documented, legitimate community concern —
    the "sameAs problem," widely misused across the Linked Open Data
    cloud for exactly this reason) — not something we actually mean when
-   linking e.g. `tgs:Person.Aristotle` to a DBpedia URI. This doesn't
+   linking e.g. `tgs:Human.Aristotle` to a DBpedia URI. This doesn't
    currently cause a practical problem (nothing in this project's
    toolchain ever runs a reasoner — same caveat repeated for every
    subClassOf/subPropertyOf relationship built tonight), but "doesn't

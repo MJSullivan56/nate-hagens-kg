@@ -37,8 +37,8 @@ thinkr:Relationship a owl:Class ;
 
 # --- Matthew Monahan: RECIPROCAL — roles flip between the two interactions ---
 tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndividual ;
-    thinkr:hasSubject tgs:Person.NateHagens ;
-    thinkr:hasObject tgs:Person.MatthewMonahan ;
+    thinkr:hasSubject tgs:Human.NateHagens ;
+    thinkr:hasObject tgs:Human.MatthewMonahan ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' relationship with Matthew Monahan"@en ;
     thinkr:hasInteraction
@@ -49,13 +49,13 @@ tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndiv
         [ a thinkr:PodcastAppearance ;
           thinkr:role thinkr:InteractionRole.Guest ;
           thinkr:showName "The Regeneration Will Be Funded"@en ;
-          thinkr:hostedBy tgs:Person.MatthewMonahan ;
+          thinkr:hostedBy tgs:Human.MatthewMonahan ;
           skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down."@en ] .
 
 # --- Iain McGilchrist: THREE separate instances, same role each time ---
 tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndividual ;
-    thinkr:hasSubject tgs:Person.NateHagens ;
-    thinkr:hasObject tgs:Person.IainMcGilchrist ;
+    thinkr:hasSubject tgs:Human.NateHagens ;
+    thinkr:hasObject tgs:Human.IainMcGilchrist ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' relationship with Iain McGilchrist"@en ;
     thinkr:hasInteraction
@@ -74,8 +74,8 @@ tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndi
 
 # --- Daniel Schmachtenberger: 3 confirmed of a likely-larger real total ---
 tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:NamedIndividual ;
-    thinkr:hasSubject tgs:Person.NateHagens ;
-    thinkr:hasObject tgs:Person.DanielSchmachtenberger ;
+    thinkr:hasSubject tgs:Human.NateHagens ;
+    thinkr:hasObject tgs:Human.DanielSchmachtenberger ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' relationship with Daniel Schmachtenberger"@en ;
     skos:scopeNote "One source describes 'half a dozen' appearances — only 3 specific episodes individually confirmed/modeled as of 2026-07-11."@en ;
@@ -95,7 +95,7 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
 # 101 is both Academic AND (per his own bio's "taught," implying a
 # formal/paid role) Professional simultaneously. ---
 tgs:Relationship.NateHagens_UniversityOfMinnesota a thinkr:Relationship, owl:NamedIndividual ;
-    thinkr:hasSubject tgs:Person.NateHagens ;
+    thinkr:hasSubject tgs:Human.NateHagens ;
     thinkr:hasObject tgs:AcademicInstitution.UniversityOfMinnesota ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Academic, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' relationship with University of Minnesota"@en ;

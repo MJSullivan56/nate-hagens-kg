@@ -12,100 +12,100 @@
     rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
 
 
-tgs:Person.Aristotle a thinkr:Person,
+tgs:Human.Aristotle a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Aristotle"@en .
 
-tgs:Person.Buddha a thinkr:Person,
+tgs:Human.Buddha a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Gautama Buddha"@en .
 
-tgs:Person.DanielKahneman a thinkr:Person,
+tgs:Human.DanielKahneman a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Daniel Kahneman"@en .
 
-tgs:Person.DennisMeadows a thinkr:Person,
+tgs:Human.DennisMeadows a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Dennis Meadows"@en .
 
-tgs:Person.DonellaMeadows a thinkr:Person,
+tgs:Human.DonellaMeadows a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Donella Meadows"@en .
 
-tgs:Person.EOWilson a thinkr:Person,
+tgs:Human.EOWilson a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "E. O. Wilson"@en .
 
-tgs:Person.ElinorOstrom a thinkr:Person,
+tgs:Human.ElinorOstrom a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Elinor Ostrom"@en .
 
-tgs:Person.EmileDurkheim a thinkr:Person,
+tgs:Human.EmileDurkheim a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Émile Durkheim"@en .
 
-tgs:Person.Epictetus a thinkr:Person,
+tgs:Human.Epictetus a thinkr:Human,
         owl:NamedIndividual ;
     thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
     skos:prefLabel "Epictetus"@en .
 
-tgs:Person.GregoryBateson a thinkr:Person,
+tgs:Human.GregoryBateson a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Gregory Bateson"@en .
 
-tgs:Person.IvanIllich a thinkr:Person,
+tgs:Human.IvanIllich a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Ivan Illich"@en .
 
-tgs:Person.JosephTainter a thinkr:Person,
+tgs:Human.JosephTainter a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Joseph Tainter"@en .
 
-tgs:Person.MKingHubbert a thinkr:Person,
+tgs:Human.MKingHubbert a thinkr:Human,
         owl:NamedIndividual ;
     thinkr:memberOf tgs:SchoolOfThought.PeakOilMovement ;
     skos:prefLabel "M. King Hubbert"@en .
 
-tgs:Person.MarcusAurelius a thinkr:Person,
+tgs:Human.MarcusAurelius a thinkr:Human,
         owl:NamedIndividual ;
     thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
     skos:prefLabel "Marcus Aurelius"@en .
 
-tgs:Person.MartinLutherKingJr a thinkr:Person,
+tgs:Human.MartinLutherKingJr a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Martin Luther King Jr."@en .
 
-tgs:Person.RachelCarson a thinkr:Person,
+tgs:Human.RachelCarson a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Rachel Carson"@en .
 
-tgs:Person.SigmundFreud a thinkr:Person,
+tgs:Human.SigmundFreud a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Sigmund Freud"@en .
 
-tgs:Person.WendellBerry a thinkr:Person,
+tgs:Human.WendellBerry a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Wendell Berry"@en .
 
-tgs:Person.WilliamCatton a thinkr:Person,
+tgs:Human.WilliamCatton a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "William R. Catton Jr."@en .
 
-tgs:Person.WilliamStanleyJevons a thinkr:Person,
+tgs:Human.WilliamStanleyJevons a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "William Stanley Jevons"@en .
 
-thinkr:Person a owl:Class ;
+thinkr:Human a owl:Class ;
     rdfs:comment "A philosopher, scientist, activist, or thinker being linked to a TGS concept."@en ;
     rdfs:subClassOf foaf:Person, thinkr:NamedEntity ;
     skos:scopeNote "Narrower than foaf:Person: specifically a person being linked to a TGS concept, not any person. Narrower than thinkr:NamedEntity: specifically the subset explicitly typed Person, as distinct from a hypothetical future Organization subclass."@en ;
     skos:prefLabel "Person"@en .
 
-tgs:Person.KateRaworth a thinkr:Person, owl:NamedIndividual ;
+tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Kate Raworth"@en ;
     thinkr:memberOf tgs:SchoolOfThought.DoughnutEconomics .
 
-tgs:Person.NateHagens a thinkr:Person, owl:NamedIndividual ;
+tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Nate Hagens"@en ;
     rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
     foaf:givenName "Nathan"@en ;
@@ -117,18 +117,18 @@ tgs:Person.NateHagens a thinkr:Person, owl:NamedIndividual ;
     thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
     thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger .
 
-tgs:Person.MatthewMonahan a thinkr:Person, owl:NamedIndividual ;
+tgs:Human.MatthewMonahan a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Matthew Monahan"@en ;
     rdfs:comment "Co-founder/co-instigator of Ma Earth (2023-present, a collective/quadratic-funding crowdfunding platform for regenerative land projects) and co-founder/co-steward of Biome Trust (2022-present, a philanthropic foundation). Hosts Ma Earth's own interview series 'The Regeneration Will Be Funded.' NO owl:sameAs: verified 2026-07-11 — the only 'Matthew Monahan' Wikipedia page is a completely different person (an unrelated Los Angeles contemporary artist, b. 1972, Cooper Union graduate) — confirmed via search, not assumed. TGS guest, Episode 226 'Can Money Serve Life? How to Fund Communities Doing the Real Work' (https://www.thegreatsimplification.com/episode/226-matthew-monahan)."@en ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
     thinkr:memberOf tgs:Organization.MaEarth, tgs:Organization.BiomeTrust .
 
-tgs:Person.IainMcGilchrist a thinkr:Person, owl:NamedIndividual ;
+tgs:Human.IainMcGilchrist a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Iain McGilchrist"@en ;
     rdfs:comment "FRSA, born 1953. British psychiatrist, philosopher, and neuroscientist. Fellow of the Royal College of Psychiatrists; Quondam Fellow of All Souls College, Oxford; former associate fellow of Green Templeton College, Oxford; emeritus consultant at the Maudsley and Bethlem Royal hospitals, London; former research fellow in Neuroimaging at Johns Hopkins University. Chancellor of Ralston College since October 2025 (succeeding Jordan Peterson). Confirmed via direct transcript excerpt as a repeat TGS guest: Episode 85 'Wisdom, Nature and the Brain' (2023) and Episode 217 'Wisdom in a World in Crisis' (April 2026, Nate explicitly says 'rejoined by,' confirming the second appearance). NOTE the correct spelling is IAIN, not the 'Ian' the NER pipeline extracted — confirmed via Wikipedia/Wikidata/his own official site (channelmcgilchrist.com)."@en ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor .
 
-tgs:Person.DanielSchmachtenberger a thinkr:Person, owl:NamedIndividual ;
+tgs:Human.DanielSchmachtenberger a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Daniel Schmachtenberger"@en ;
     rdfs:comment "Social philosopher and systems thinker known for work on the 'metacrisis,' sensemaking, and civilization design. Founding member of The Consilience Project (2021). Founder of Civilization Research Institute (2024). Also co-founder of Neurohacker Collective (2015, commercial nootropic/wellness supplement company, later Qualia Life Sciences) — noted factually as a distinct commercial venture, not modeled as a School (not a school of thought). Studied at Body Mind College (San Diego) and Maharishi International University (counseling, psychology, mathematics) — largely self-taught since. NO owl:sameAs to DBpedia: verified 2026-07-11, no genuine ENGLISH Wikipedia page exists (only a Swedish-language article and non-canonical mirror sites like Wikitia/EverybodyWiki, both carrying '[citation needed]' tags throughout suggesting even they are uncertain of their own content) — DBpedia URIs are specifically derived from English Wikipedia, so none applies. A genuine Wikidata entry DOES exist independently (multilingual, linked from the Swedish article) — see crosswalknotes.ttl. Extensively confirmed repeat TGS guest — 'half a dozen times' per one source; specific episodes found include Ep 5 'Bend Not Break Part 1: Energy Blindness', Ep 126 'A Vision for Betterment', and Ep 132 'The Wide Boundary Impacts of AI'."@en ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;

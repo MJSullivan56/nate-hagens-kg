@@ -10,56 +10,56 @@ tgs: a owl:Ontology ;
 
 tgs:LinkNote.ComplexityTainter a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.JosephTainter ;
+    thinkr:aboutObject tgs:Human.JosephTainter ;
     thinkr:aboutSubject tgs:Concept.ComplexityCollapse ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.ComplexityTainter .
 
 tgs:LinkNote.DiscountMarcus a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.MarcusAurelius ;
+    thinkr:aboutObject tgs:Human.MarcusAurelius ;
     thinkr:aboutSubject tgs:Concept.DiscountRatesAndPresentBias ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.DiscountMarcus .
 
 tgs:LinkNote.EnergyblindnessBuddha a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.Buddha ;
+    thinkr:aboutObject tgs:Human.Buddha ;
     thinkr:aboutSubject tgs:Concept.EnergyBlindness ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
     thinkr:hasEvidence tgs:Evidence.EnergyblindnessBuddha .
 
 tgs:LinkNote.JevonsJevons a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.WilliamStanleyJevons ;
+    thinkr:aboutObject tgs:Human.WilliamStanleyJevons ;
     thinkr:aboutSubject tgs:Concept.JevonsParadox ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.JevonsJevons .
 
 tgs:LinkNote.LimitsDennis a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.DennisMeadows ;
+    thinkr:aboutObject tgs:Human.DennisMeadows ;
     thinkr:aboutSubject tgs:Concept.LimitsToGrowth ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.LimitsDennis .
 
 tgs:LinkNote.LimitsDonella a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.DonellaMeadows ;
+    thinkr:aboutObject tgs:Human.DonellaMeadows ;
     thinkr:aboutSubject tgs:Concept.LimitsToGrowth ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.LimitsDonella .
 
 tgs:LinkNote.LocalismOstrom a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.ElinorOstrom ;
+    thinkr:aboutObject tgs:Human.ElinorOstrom ;
     thinkr:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.LocalismOstrom .
 
 tgs:LinkNote.MetacrisisBateson a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.GregoryBateson ;
+    thinkr:aboutObject tgs:Human.GregoryBateson ;
     thinkr:aboutSubject tgs:Concept.Metacrisis ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.MetacrisisBateson .
@@ -67,20 +67,20 @@ tgs:LinkNote.MetacrisisBateson a thinkr:LinkNote,
 tgs:LinkNote.MlkGrowth a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.GrowthImperative ;
-    thinkr:aboutSubject tgs:Person.MartinLutherKingJr ;
+    thinkr:aboutSubject tgs:Human.MartinLutherKingJr ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.MlkGrowth .
 
 tgs:LinkNote.MoneyAristotle a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.Aristotle ;
+    thinkr:aboutObject tgs:Human.Aristotle ;
     thinkr:aboutSubject tgs:Concept.MoneyAsClaimOnEnergy ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.MoneyAristotle .
 
 tgs:LinkNote.OvershootCatton a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.WilliamCatton ;
+    thinkr:aboutObject tgs:Human.WilliamCatton ;
     thinkr:aboutSubject tgs:Concept.Overshoot ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.OvershootCatton .
@@ -94,54 +94,54 @@ tgs:LinkNote.OvershootDoughnutEconomics a thinkr:LinkNote,
 
 tgs:LinkNote.PeakoilHubbert a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.MKingHubbert ;
+    thinkr:aboutObject tgs:Human.MKingHubbert ;
     thinkr:aboutSubject tgs:Concept.PeakOil ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.PeakoilHubbert .
 
 tgs:LinkNote.SuperorganismWilson a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.EOWilson ;
+    thinkr:aboutObject tgs:Human.EOWilson ;
     thinkr:aboutSubject tgs:Concept.Superorganism ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.SuperorganismWilson .
 
 tgs:LinkNote.WetwareFreud a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Person.SigmundFreud ;
+    thinkr:aboutObject tgs:Human.SigmundFreud ;
     thinkr:aboutSubject tgs:Concept.Wetware ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.WetwareFreud .
 
-tgs:Concept.CircleOfTrustLocalism thinkr:echoesIdeaOf tgs:Person.ElinorOstrom .
+tgs:Concept.CircleOfTrustLocalism thinkr:echoesIdeaOf tgs:Human.ElinorOstrom .
 
-tgs:Concept.ComplexityCollapse thinkr:influencedBy tgs:Person.JosephTainter .
+tgs:Concept.ComplexityCollapse thinkr:influencedBy tgs:Human.JosephTainter .
 
-tgs:Concept.DiscountRatesAndPresentBias thinkr:echoesIdeaOf tgs:Person.MarcusAurelius .
+tgs:Concept.DiscountRatesAndPresentBias thinkr:echoesIdeaOf tgs:Human.MarcusAurelius .
 
-tgs:Concept.EnergyBlindness thinkr:contrastsWith tgs:Person.Buddha .
+tgs:Concept.EnergyBlindness thinkr:contrastsWith tgs:Human.Buddha .
 
-tgs:Concept.JevonsParadox thinkr:influencedBy tgs:Person.WilliamStanleyJevons .
+tgs:Concept.JevonsParadox thinkr:influencedBy tgs:Human.WilliamStanleyJevons .
 
-tgs:Concept.Metacrisis thinkr:influencedBy tgs:Person.GregoryBateson .
+tgs:Concept.Metacrisis thinkr:influencedBy tgs:Human.GregoryBateson .
 
-tgs:Concept.MoneyAsClaimOnEnergy thinkr:echoesIdeaOf tgs:Person.Aristotle .
+tgs:Concept.MoneyAsClaimOnEnergy thinkr:echoesIdeaOf tgs:Human.Aristotle .
 
-tgs:Concept.PeakOil thinkr:influencedBy tgs:Person.MKingHubbert .
+tgs:Concept.PeakOil thinkr:influencedBy tgs:Human.MKingHubbert .
 
-tgs:Concept.Superorganism thinkr:influencedBy tgs:Person.EOWilson .
+tgs:Concept.Superorganism thinkr:influencedBy tgs:Human.EOWilson .
 
-tgs:Concept.Wetware thinkr:echoesIdeaOf tgs:Person.SigmundFreud .
+tgs:Concept.Wetware thinkr:echoesIdeaOf tgs:Human.SigmundFreud .
 
-tgs:Person.MartinLutherKingJr thinkr:appliesTo tgs:Concept.GrowthImperative .
+tgs:Human.MartinLutherKingJr thinkr:appliesTo tgs:Concept.GrowthImperative .
 
-tgs:Concept.LimitsToGrowth thinkr:influencedBy tgs:Person.DennisMeadows,
-        tgs:Person.DonellaMeadows .
+tgs:Concept.LimitsToGrowth thinkr:influencedBy tgs:Human.DennisMeadows,
+        tgs:Human.DonellaMeadows .
 
 tgs:SchoolOfThought.DoughnutEconomics thinkr:convergesWith tgs:Concept.Overshoot .
 
 tgs:Concept.Overshoot thinkr:convergesWith tgs:SchoolOfThought.DoughnutEconomics ;
-    thinkr:influencedBy tgs:Person.WilliamCatton .
+    thinkr:influencedBy tgs:Human.WilliamCatton .
 
 thinkr:LinkNote a owl:Class ;
     rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;

@@ -21,7 +21,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # the raw per-Evidence rationale/confidence is one level deeper, via thinkr:hasEvidence.
 SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfidence WHERE {
   tgs:Concept.Overshoot ?relation ?person .
-  ?person a thinkr:Person ;
+  ?person a thinkr:Human ;
           skos:prefLabel ?personLabel .
   ?note thinkr:aboutSubject tgs:Concept.Overshoot ;
         thinkr:aboutObject ?person ;

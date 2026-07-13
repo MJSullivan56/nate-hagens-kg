@@ -32,7 +32,7 @@ data/seed/tgs-core.ttl        — ALL properties + supporting classes with
                                  yet (Work, Episode, Source — each gets
                                  promoted to its own file on first instance)
 data/seed/concepts.ttl        — thinkr:Concept: class + all 19 instances
-data/seed/persons.ttl         — thinkr:Person: class + all 25 instances
+data/seed/persons.ttl         — thinkr:Human: class + all 25 instances
 data/seed/schoolsofthought.ttl — thinkr:SchoolOfThought: class + 7
                                  instances (split from the old, overloaded
                                  thinkr:School 2026-07-11 — see

@@ -31,15 +31,15 @@ tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work, owl:NamedIndividual ;
 tgs:Work.TheMasterAndHisEmissary a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Master and His Emissary: The Divided Brain and the Making of the Western World"@en ;
     rdfs:comment "2009 book by Iain McGilchrist (Yale University Press). Argues the brain's two hemispheres offer fundamentally different kinds of attention to the world, and that Western culture has become dominated by narrow, left-hemisphere thinking at the expense of the right's broader, contextual awareness. Sold over 200,000 copies."@en ;
-    dct:creator tgs:Person.IainMcGilchrist .
+    dct:creator tgs:Human.IainMcGilchrist .
 
 tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Matter with Things: Our Brains, Our Delusions, and the Unmaking of the World"@en ;
     rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
-    dct:creator tgs:Person.IainMcGilchrist .
+    dct:creator tgs:Human.IainMcGilchrist .
 
 tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Reality Blind: Integrating the Systems Science Underpinning Our Collective Futures, Vol. 1"@en ;
     rdfs:comment "Co-authored with DJ White — DJ White NOT modeled as a Person individual as of 2026-07-11, would need the same verification pass as every other person tonight (Wikipedia/wrong-person checks), not fabricated as a side effect of fleshing out Nate. Self-published on Amazon (ISBN 9798701116281) specifically so full content could stay free online — was the primary text for Nate's Reality 101 course. Confirmed via multiple independent sources: Amazon, Goodreads, a LinkedIn post from Nate himself, MAHB, Stanford."@en ;
     dct:issued "2021"^^xsd:gYear ;
-    dct:creator tgs:Person.NateHagens .
+    dct:creator tgs:Human.NateHagens .
