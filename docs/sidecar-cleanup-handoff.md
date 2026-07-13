@@ -79,6 +79,249 @@ Human Behavior, etc.) — different meanings, same word. If this pattern
 gets built, `WorkRelationship` avoids the collision (`thinkr:Work` already
 exists for the publication concept).
 
+## RESOLVED (2026-07-12): name/birthdate vocabulary for `thinkr:Person`
+
+Reopens the deferred firstName/family_name backlog item from earlier —
+vocabulary now decided, though the actual name-splitting judgment calls
+(Marcus Aurelius's praenomen, Catton's "Jr.", Aristotle having no
+surname) remain exactly as unresolved as before. This only settles WHICH
+vocabulary, not WHEN to apply it to any given individual.
+
+- **Names**: `foaf:givenName`/`foaf:familyName` — `Person` already
+  `rdfs:subClassOf foaf:Person`, so this extends an already-adopted
+  vocabulary rather than introducing a new one.
+- **Birthdate**: `dbo:birthDate` (DBpedia Ontology), NOT `foaf:birthday`
+  (that FOAF term is specifically scoped to a RECURRING birthday —
+  month/day only, no year — wrong shape for an actual date of birth) and
+  NOT `schema:birthDate` (schema.org has zero prior usage in this graph,
+  whereas DBpedia is already a first-class citizen — every
+  `CrosswalkNote` targets `dbpedia.org` URIs).
+- **Precision varies by what's actually known — same pattern already
+  proven on `Work.RealityBlind`'s `dct:issued "2021"^^xsd:gYear`**:
+  `dbo:birthDate "1969"^^xsd:gYear` when only the year is public (the
+  common case — confirmed real-world instance: Nate Hagens' own birth
+  year is publicly known, but no month/day is), `"1969-03-15"^^xsd:date`
+  when the full date is genuinely known. Deliberately NOT range-
+  restricting `dbo:birthDate` to one datatype — either choice would make
+  the other, equally valid case a documented violation.
+- **Real ambiguity surfaced and deliberately left unresolved, not
+  papered over**: Nate Hagens is commonly known as "Nate" (matches
+  `skos:prefLabel`) but his fuller given name is "Nathan" (confirmed via
+  his own X handle, @NJHagens = Nathan John Hagens). Prototype uses
+  "Nathan" for `foaf:givenName` with a `scopeNote` flagging the
+  distinction explicitly, rather than silently picking one form.
+
+Prototyped in `relationship_prototype.ttl` (shared with MJSullivan,
+2026-07-12) — parses correctly, `dbo:birthDate`'s `xsd:gYear` datatype
+confirmed preserved via live query. **UPDATE, same day**: discovered to
+have been sitting in `data/seed/` the entire time (not actually external
+to the graph as intended), and formally adopted rather than removed —
+schema redistributed into `tgs-core.ttl`, `Relationship`'s own instances
+promoted to a new `relationships.ttl` (same one-class-one-file rule as
+`Work`/`Source`/`Episode`), Nate's merged data folded into his single
+real declaration in `persons.ttl` (previously duplicated across two
+files). All 4 originally-tested queries re-confirmed identical after the
+merge. `relationship_prototype.ttl` no longer exists as a separate file.
+
+## ESCALATION (2026-07-12): `thinkr:Show` and `thinkr:Persona` — a new
+## architectural direction, NOT prototyped yet, next session's starting point
+
+Raised by MJSullivan immediately after the `foaf:homepage` addition
+above — and directly exposed a real category error in that same addition,
+worth understanding precisely rather than glossing over.
+
+**The triggering mistake**: `foaf:homepage` was added directly to
+`Person.NateHagens` for `natehagens.com`, `natehagens.substack.com`, and
+his LinkedIn — but these aren't actually uniform. `natehagens.substack.com`
+is explicitly branded **"The Great Simplification | Nate Hagens"** on the
+page itself — that's a link belonging to his public, professional
+identity as TGS's host, not to him as a private individual. LinkedIn reads
+more genuinely personal. `natehagens.com` is genuinely ambiguous either
+way. The property was correct in shape (`foaf:homepage`, multi-valued)
+but wrong in WHOSE homepage it was attaching them to.
+
+**The proposed fix — `thinkr:Persona`, distinct from `thinkr:Person`**:
+motivated by a second, sharper example — Heather Cox Richardson (the
+planned second thinker for this whole reusable-methodology project) uses
+her newsletter, YouTube, AND Facebook together as "the face of her
+brand." Her Facebook page isn't about her as a private individual, it's
+about her PERSONA as a historian/public commentator. A `Person` may have
+one or more `Persona`s (most people modeled here would have exactly one,
+but the distinction matters even at cardinality one — a pen name or
+stage name would be the clean, obvious case for more than one).
+Candidate shape: `thinkr:Persona rdfs:subClassOf thinkr:NamedEntity`,
+`thinkr:isPersonaOf` linking a `Persona` back to its `Person`, with
+`foaf:homepage`-style properties moving OFF `Person` and ONTO `Persona`
+for anything that's actually brand/public-role-level rather than
+genuinely personal.
+
+**The proposed `thinkr:Show` concept, connected but distinct**:
+platform-agnostic on purpose — HCR's "show" isn't one platform, it's
+newsletter+YouTube+Facebook together functioning as one brand. TGS's
+show spans its own website, YouTube, and Substack the same way. A `Show`
+would aggregate `Episode`s (likely via the same `dct:isPartOf`/
+`dct:hasPart` pattern already proven on `Series`), and a `Persona` would
+be "the face of" one or more `Show`s.
+
+**Genuinely open, NOT decided — this is why it's next-session work, not
+a quick addition**:
+1. Is `Show` structurally more like `Series` (`Work` + `dcmitype:Collection`
+   — a content aggregation) or more like `Organization` (has a team, a
+   revenue model, ongoing business existence) — or does it need BOTH
+   superclasses, same as `Series` itself needed both `Work` and
+   `Collection`? Unresolved.
+2. How does `Show` relate to the ALREADY-BUILT `Series`? A `Show` is
+   ongoing/indefinite; a `Series` is bounded/finishable ("How to Think
+   About the Future," 3 parts, done). Likely BOTH aggregate `Episode`s
+   simultaneously (one `Monologue` could be `dct:isPartOf` both its
+   `Series` AND the overarching `Show` at once, multi-valued, no
+   conflict) — but not yet tested against real data.
+3. Which SPECIFIC existing `foaf:homepage` links move from `Person` to
+   `Persona`? Substack clearly moves (explicitly branded). LinkedIn
+   probably stays on `Person`. `natehagens.com` is genuinely ambiguous —
+   needs a real decision, not a default.
+4. Does `thegreatsimplification.com` and its YouTube channel belong to
+   `Show` directly, or to the `Persona` as "host of the show," or both
+   via different properties? Not yet worked through.
+5. ISEOF (Nate's employer, confirmed real — "Executive Director of The
+   Institute for the Study of Energy & Our Future" — but still not
+   modeled as any individual at all) is a DIFFERENT, separate gap that
+   surfaced during this same discussion — worth deciding whether it's an
+   `Organization` (most likely fit) at the same time as this work, not a
+   reason to conflate it with `Show`/`Persona`.
+
+NOT prototyped tonight per MJSullivan's own call, given the hour — this
+is the concrete next-session starting point, with the real triggering
+example (the `foaf:homepage` mistake) already caught and preserved above
+so it doesn't need rediscovering.
+
+**NAMING RECONSIDERATION (2026-07-12, same discussion)**: MJSullivan
+flagged "Persona" as visually too close to "Person" for his stated
+flattened/editorial VS Code workflow — a real concern given how many
+naming decisions tonight were driven by exactly this preference.
+Gemini research (see below) surfaced real, established alternatives from
+actual ontology engineering: RiC-O (International Council on Archives)
+explicitly separates Person from Persona; DOLCE uses SocialAgent/
+SocialRole; a dedicated "PersonasOnto" model exists. ONE claim spot-
+checked and confirmed real: `foaf:Person rdfs:subClassOf foaf:Agent` in
+the actual FOAF spec (`foaf:Organization` too) — the "shared superclass"
+pattern is structurally genuine, though Gemini's specific claim that
+`foaf:Agent` itself encodes the pseudonym/persona distinction was
+overstated (`foaf:Agent` is just FOAF's broad person-or-org-or-bot
+category, not specifically about public vs. private identity). RiC-O/
+DOLCE/PersonasOnto specifics NOT independently verified — diminishing
+returns for a capture-and-defer task, and the core insight doesn't
+depend on those citations being exactly right.
+CANDIDATE NAMES, none decided: `Identity` (clean, no collision, no
+jargon) or `PublicIdentity` (more verbose, leaves zero ambiguity).
+EXPLICITLY REJECTED: `Role`/`SocialRole` — collides with the
+already-existing `thinkr:InteractionRole` (`Host`/`Guest` in the
+prototype), same word for a genuinely different concept, exactly the
+kind of collision this project has caught and avoided elsewhere
+(`School`→`SchoolOfThought`, the `Subject` overloading discussion).
+
+**STRONG VALIDATION (2026-07-12): real DOLCE+DnS Ultralite ontology
+examined directly** (MJSullivan downloaded and reformatted it into
+Turtle, ~2980 lines, a genuine established foundational ontology from
+LOA-CNR, not a toy example). Two findings worth treating as load-bearing:
+
+1. **DOLCE's own creators made almost exactly the naming mistake being
+   avoided here, and had to fix it.** `SocialPerson`'s own
+   `owl:versionInfo`: *"Formerly: Person (changed to avoid confusion
+   with commonsense intuition)."* They originally named the
+   social-identity concept `Person` — same word as the general concept —
+   and renamed it after real confusion resulted. This isn't abstract
+   caution, it's a documented historical correction from established
+   practice. Treat the `Identity`/`PublicIdentity` naming question as
+   effectively settled by this — reusing `Person`-adjacent naming for
+   the persona concept has a real, precedented failure mode, not just a
+   hypothetical one.
+2. **DOLCE's `Role` independently confirms the `InteractionRole`
+   collision-avoidance was correct**: DOLCE's `Role` is
+   `rdfs:subClassOf :Concept`, defined as "a Concept that classifies an
+   Object" — a CLASSIFIER, not an entity type. Much closer to how
+   `PersonEntityType`/`ProfessionalRole`/`InteractionRole` already work
+   in this graph than to what a `Persona`-replacement class needs to be.
+   Independent confirmation from an unrelated ontology that ruling out
+   `Role` for the new class was the right call.
+
+PRACTICAL WARNING, worth remembering beyond just this decision: DOLCE's
+core distinctions (`Agent`, `Person`, `SocialObject`) all rely on
+`owl:equivalentClass`+`owl:unionOf` — elegant on paper, but that
+construct is INERT without a reasoner actually running inference, and
+this project's toolchain never does (same caveat repeated for every
+`subClassOf`/`subPropertyOf` relationship built tonight). Adopting
+DOLCE's actual patterns wholesale would mean decorative triples doing
+nothing, the same trap `owl:sameAs` turned out to be. DOLCE's `Person`/
+`SocialAgent`/`Agent` architecture is confirmed too complex to adopt
+directly — one loosely-useful idea worth keeping as inspiration only:
+`actsThrough`/`actsFor` (a cardinality-constrained, directional pair
+linking a social identity back to whichever physical person(s) are
+behind it, general enough to support delegation chains) is a clean shape
+for the eventual `Person`↔`Identity` link, without needing DOLCE's
+surrounding `Situation`/`Description`/`Concept` apparatus it's actually
+embedded in.
+
+**SUPERSEDED (2026-07-12), same session — better solution found**:
+MJSullivan pushed back on compromising away from "Persona" (which he
+explicitly likes) and proposed the inverse fix instead — rename
+`thinkr:Person` to `thinkr:Human`, keeping `Persona` for the public-
+identity concept. This solves the collision more completely than
+`Identity`/`PublicIdentity` did (`Persona`/`Human` share zero characters,
+vs. `Persona`/`Person` sharing six) AND is arguably more semantically
+honest — every current `Person` individual (Nate Hagens, Iain
+McGilchrist, Aristotle, Marcus Aurelius) genuinely IS a human being;
+"Person" always carried a faint legal/philosophical connotation (as in
+"corporate legal person") that was never actually what this graph meant.
+No technical obstacle: `Human` would stay `rdfs:subClassOf foaf:Person`
+exactly as now — the external vocabulary term doesn't need to match our
+own local class name, same precedent as `Work` sitting atop
+`dct:BibliographicResource` without being called that itself.
+SCALE, why this is its own pass and not folded into the Show/Persona/
+Identity prototype work: `Person` is almost certainly the single most
+cross-referenced class in the entire graph — every `CrosswalkNote`,
+`LinkNote`, `Evidence`'s implicit chain, `hasHost`/`hasGuest` on every
+`Episode`, `dct:creator` on every `Work`, `memberOf` on every
+`School`-descendant all touch `Person` individuals. Closer in scale to
+the `School`→3-classes split than to a simple naming tweak. NOT
+executed — captured here as the naming decision to actually run with
+next session, superseding `Identity`/`PublicIdentity` above.
+One open sub-question from MJSullivan's own example worth flagging:
+his illustrative `tgs:Human.NathanHagens` used "Nathan" rather than the
+current `tgs:Person.NateHagens` — unclear if that individual-renaming
+was intentional (connecting to the `foaf:givenName "Nathan"` vs.
+commonly-known-as-"Nate" distinction already resolved earlier) or just
+illustrative shorthand. Confirm before executing, don't assume either
+way.
+
+**EXECUTION CAUTION (2026-07-12, same discussion)**: MJSullivan proposed
+a simple VS Code global find/replace as "trivial, low-risk" for the RDF
+side. Checked directly rather than taking that at face value — it's
+NOT actually low-risk unscoped, three concrete problems found in under
+five minutes:
+1. `foaf:Person` (the real external vocabulary link, live in
+   `persons.ttl` line 98) would corrupt to `foaf:Human` — not a real
+   FOAF term.
+2. Common English words get mangled — confirmed real example:
+   "Personal" (as in "Personal blogs" in `tgs-core.ttl`) → "Humanal,"
+   not a real word. Any future prose using "person" generically has the
+   same risk.
+3. `PersonEntityType`/`hasPersonEntityType` — 19 occurrences across
+   `episodes.ttl`, `persons.ttl`, `tgs-core.ttl` — a genuine, UNDECIDED
+   design question hiding inside what looked like a mechanical rename:
+   should these cascade to `HumanEntityType`/`hasHumanEntityType` too?
+   A blind find/replace would silently decide "yes" without it ever
+   being a deliberate choice.
+Safe patterns, if/when this executes: `thinkr:Person ` and `tgs:Person.`
+(WITH the trailing space/period specifically to exclude
+`PersonEntityType` and `Personal`) — never bare `Person`. `foaf:Person`
+needs an explicit exclusion regardless of how the search is scoped.
+RECOMMENDATION: execute this the same way as every other large rename
+this session (`ConfidenceLevel`→`ConfidenceType`, the `School` split) —
+scripted with a baseline triple count and `compute_confidence.py`
+before/after comparison, plus a full `grep -rn "Person\b"` sweep after,
+not a manual VS Code find/replace however mechanical it looks going in.
+
 ## `thinkr:School` overloading (2026-07-11) — real, not hypothetical
 
 MJSullivan flagged `School` as heavily overloaded — candidates

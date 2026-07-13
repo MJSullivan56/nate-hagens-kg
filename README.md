@@ -53,6 +53,11 @@ data/seed/works.ttl           — thinkr:Work: class + 1 instance (promoted
                                  out of tgs-core.ttl 2026-07-11, its first
                                  real use — was empty since the original
                                  schema)
+data/seed/relationships.ttl   — thinkr:Relationship: class + 4 instances,
+                                 formally adopted 2026-07-12 from a sandbox
+                                 prototype discovered to have been sitting
+                                 in data/seed/ the whole time — see
+                                 docs/sidecar-cleanup-handoff.md
 data/seed/sources.ttl         — thinkr:Source: class + 1 instance (same
                                  promotion, same date)
 data/seed/crosswalknotes.ttl  — thinkr:CrosswalkNote: class + one instance

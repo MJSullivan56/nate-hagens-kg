@@ -1,9 +1,11 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tgs: <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
@@ -106,8 +108,14 @@ tgs:Person.KateRaworth a thinkr:Person, owl:NamedIndividual ;
 tgs:Person.NateHagens a thinkr:Person, owl:NamedIndividual ;
     skos:prefLabel "Nate Hagens"@en ;
     rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
+    foaf:givenName "Nathan"@en ;
+    foaf:familyName "Hagens"@en ;
+    skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. ALSO: foaf:homepage below deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
+    dbo:birthDate "1969"^^xsd:gYear ;
+    foaf:homepage <https://www.natehagens.com/>, <https://natehagens.substack.com/>, <https://www.linkedin.com/in/nate-hagens-004810b/> ;
     thinkr:memberOf tgs:Organization.TheOilDrum, tgs:Organization.PostCarbonInstitute, tgs:SchoolOfThought.PeakOilMovement, tgs:AcademicInstitution.UniversityOfVermont, tgs:AcademicInstitution.UniversityOfChicago, tgs:AcademicInstitution.UniversityOfMinnesota ;
-    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author .
+    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger .
 
 tgs:Person.MatthewMonahan a thinkr:Person, owl:NamedIndividual ;
     skos:prefLabel "Matthew Monahan"@en ;

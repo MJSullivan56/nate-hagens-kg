@@ -293,6 +293,96 @@ thinkr:hasTGSRole a owl:ObjectProperty ;
     ) ] ;
     skos:scopeNote "Curated subset of thinkr:ProfessionalRole specifically useful for people in the TGS orbit. The range restriction is DOCUMENTATION ONLY, not enforced — this project currently has exactly two editors (MJSullivan and Claude), so a manually-respected convention is sufficient; would need a real validation script if that ever changes."@en .
 
+#############################################
+# thinkr:Relationship family — formally adopted 2026-07-12 from
+# relationship_prototype.ttl (originally built as a sandbox exercise,
+# discovered to have been sitting in data/seed/ the whole time, formally
+# promoted rather than removed per MJSullivan's explicit decision).
+# thinkr:Relationship itself + its instances live in relationships.ttl
+# (real instances already exist, same "one class one file" promotion
+# rule as Work/Source/Episode). Everything below is supporting
+# schema/category infrastructure that belongs in tgs-core.ttl.
+#############################################
+
+thinkr:RelationshipType a owl:Class, thinkr:Category ;
+    rdfs:comment "What KIND of relationship this is — deliberately multi-valued (a relationship can be BOTH Professional AND have a Legal dimension simultaneously, not competing options). Live-tested on Nate Hagens' University of Minnesota relationship, which genuinely needs both Academic and Professional simultaneously."@en ;
+    skos:prefLabel "Relationship Type"@en .
+
+thinkr:RelationshipType.Professional a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Professional"@en .
+
+thinkr:RelationshipType.Personal a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Personal"@en .
+
+thinkr:RelationshipType.Academic a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Academic"@en .
+
+thinkr:RelationshipType.Legal a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Legal"@en .
+
+thinkr:hasRelationshipType a owl:ObjectProperty ;
+    rdfs:domain thinkr:Relationship ;
+    rdfs:range thinkr:RelationshipType ;
+    skos:prefLabel "has relationship type"@en .
+
+thinkr:hasSubject a owl:ObjectProperty ;
+    rdfs:domain thinkr:Relationship ;
+    skos:comment "Explicitly names the relationship's OWN subject, not just its target (hasObject) — makes each Relationship individual a fully self-contained statement, not requiring a reverse lookup through hasPersonalRelationship to know whose relationship this is. Mirrors LinkNote's aboutSubject/aboutObject shape without directly reusing those (domain-restricted to LinkNote specifically)."@en ;
+    skos:prefLabel "has subject"@en .
+
+thinkr:hasObject a owl:ObjectProperty ;
+    rdfs:domain thinkr:Relationship ;
+    skos:comment "The other party in the Relationship — paired with hasSubject for full self-containment."@en ;
+    skos:prefLabel "has object"@en .
+
+thinkr:hasPersonalRelationship a owl:ObjectProperty ;
+    rdfs:domain thinkr:Person ;
+    rdfs:range thinkr:Relationship ;
+    skos:comment "Links a Person to their Relationship individuals. Named specifically (not just 'hasRelationship') matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family — only this one built so far, the others deliberately not invented ahead of real need."@en ;
+    skos:prefLabel "has personal relationship"@en .
+
+thinkr:PodcastAppearance a owl:Class ;
+    rdfs:comment "A single interaction instance within a Relationship — nested as a blank node under hasInteraction, deliberately unnamed (solves the multi-instance naming problem: McGilchrist's 3 separate appearances needed zero additional naming decisions)."@en ;
+    skos:prefLabel "Podcast Appearance"@en .
+
+thinkr:hasInteraction a owl:ObjectProperty ;
+    rdfs:domain thinkr:Relationship ;
+    rdfs:range thinkr:PodcastAppearance ;
+    skos:comment "Multi-valued — one triple per interaction instance, each a separate blank node."@en ;
+    skos:prefLabel "has interaction"@en .
+
+thinkr:InteractionRole a owl:Class, thinkr:Category ;
+    rdfs:comment "Host or Guest for a single PodcastAppearance instance."@en ;
+    skos:prefLabel "Interaction Role"@en .
+
+thinkr:InteractionRole.Host a thinkr:InteractionRole, owl:NamedIndividual ;
+    skos:prefLabel "Host"@en .
+
+thinkr:InteractionRole.Guest a thinkr:InteractionRole, owl:NamedIndividual ;
+    skos:prefLabel "Guest"@en .
+
+thinkr:role a owl:ObjectProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    rdfs:range thinkr:InteractionRole ;
+    skos:prefLabel "role"@en .
+
+thinkr:episode a owl:ObjectProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    rdfs:range thinkr:Episode ;
+    skos:comment "Used when the appearance is a real, already-modeled Episode individual. For appearances on OTHER shows not modeled in this graph, use showName/hostedBy instead (see the reciprocal Matthew Monahan case)."@en ;
+    skos:prefLabel "episode"@en .
+
+thinkr:showName a owl:DatatypeProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    skos:comment "The name of a show NOT modeled as its own Episode individual in this graph — e.g. Nate's reciprocal guest appearance on Matthew Monahan's own show."@en ;
+    skos:prefLabel "show name"@en .
+
+thinkr:hostedBy a owl:ObjectProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    rdfs:range thinkr:Person ;
+    skos:comment "Who hosted this specific appearance — used together with showName for appearances on shows not otherwise modeled in this graph."@en ;
+    skos:prefLabel "hosted by"@en .
+
 thinkr:hasHost a owl:ObjectProperty ;
     rdfs:subPropertyOf dcterms:creator ;
     rdfs:domain thinkr:Work ;

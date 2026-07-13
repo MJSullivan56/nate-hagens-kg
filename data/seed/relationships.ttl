@@ -1,0 +1,102 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Relationship — formally adopted 2026-07-12 from
+# relationship_prototype.ttl. Built as a sandbox exercise to answer "what
+# would a fully fleshed-out Person actually look like," discovered to
+# have been sitting in data/seed/ (and therefore parsed by every
+# make validate/CI run) the whole time rather than staying an external
+# artifact — formally promoted rather than removed per MJSullivan's
+# explicit decision, since the content had already been extensively
+# tested and held up.
+# PATTERN: a stable, NAMED Relationship individual per entity-pair (the
+# "anchor" — queryable, referenceable, one per pair, never renamed)
+# holding nested BLANK NODE interaction instances (thinkr:PodcastAppearance,
+# declared in tgs-core.ttl) — solves the multi-instance-naming problem
+# raised earlier: McGilchrist's 3 separate TGS appearances needed zero
+# additional naming decisions, just 3 more blank nodes under one stable
+# Relationship anchor.
+# Uses dcterms:date (not a minted thinkr:date) for interaction dates,
+# consistent with this project's reuse-over-invention discipline.
+#############################################
+
+thinkr:Relationship a owl:Class ;
+    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:comment "A stable, self-contained record of a Person's relationship with another entity — carries hasSubject/hasObject explicitly (not relying on reverse lookup through hasPersonalRelationship), hasRelationshipType (multi-valued), and hasInteraction (nested blank-node instances, solving the multi-instance naming problem)."@en ;
+    skos:prefLabel "Relationship"@en .
+
+# --- Matthew Monahan: RECIPROCAL — roles flip between the two interactions ---
+tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Person.NateHagens ;
+    thinkr:hasObject tgs:Person.MatthewMonahan ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' relationship with Matthew Monahan"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_226_CanMoneyServeLife ;
+          dcterms:date "2026-06-29"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Guest ;
+          thinkr:showName "The Regeneration Will Be Funded"@en ;
+          thinkr:hostedBy tgs:Person.MatthewMonahan ;
+          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down."@en ] .
+
+# --- Iain McGilchrist: THREE separate instances, same role each time ---
+tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Person.NateHagens ;
+    thinkr:hasObject tgs:Person.IainMcGilchrist ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' relationship with Iain McGilchrist"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+          dcterms:date "2023-07-13"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_165_WisdomOverPower ;
+          dcterms:date "2025-01-02"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+          dcterms:date "2026-03-24"^^xsd:date ] .
+
+# --- Daniel Schmachtenberger: 3 confirmed of a likely-larger real total ---
+tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Person.NateHagens ;
+    thinkr:hasObject tgs:Person.DanielSchmachtenberger ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' relationship with Daniel Schmachtenberger"@en ;
+    skos:scopeNote "One source describes 'half a dozen' appearances — only 3 specific episodes individually confirmed/modeled as of 2026-07-11."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_5_BendNotBreakPart1 ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_126_AVisionForBetterment ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:role thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ] .
+
+# --- Nate's academic relationships genuinely need MULTIPLE RelationshipType
+# values at once — real, not a hypothetical stress test. Teaching Reality
+# 101 is both Academic AND (per his own bio's "taught," implying a
+# formal/paid role) Professional simultaneously. ---
+tgs:Relationship.NateHagens_UniversityOfMinnesota a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Person.NateHagens ;
+    thinkr:hasObject tgs:AcademicInstitution.UniversityOfMinnesota ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Academic, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' relationship with University of Minnesota"@en ;
+    skos:scopeNote "Both Academic (teaching an honors course) AND Professional (a formal role) simultaneously — confirmed via live query this correctly returns BOTH types, not just one."@en .
