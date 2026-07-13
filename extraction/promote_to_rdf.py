@@ -43,7 +43,7 @@ def load_existing_labels(seed_dir="data/seed"):
     before promoting — catches typos instead of silently creating orphan URIs.
     Uses glob rather than hardcoded filenames, so this doesn't silently break
     again the next time the seed directory gets reorganized (as it did on
-    2026-07-11, when people.ttl split into persons.ttl + schools.ttl)."""
+    2026-07-11, when people.ttl split into humans.ttl + schools.ttl)."""
     import glob
     g = Graph()
     for f in glob.glob(f"{seed_dir}/*.ttl"):

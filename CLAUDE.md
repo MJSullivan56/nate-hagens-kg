@@ -103,7 +103,7 @@ structural changes:
 
 0a. **Governance principle (2026-07-11): one class, one file.** Every class
     with instances gets its own complete, self-contained TTL file (class
-    declaration + all its individuals) — `concepts.ttl`, `persons.ttl`,
+    declaration + all its individuals) — `concepts.ttl`, `humans.ttl`,
     `schoolsofthought.ttl`, `organizations.ttl`, `academicinstitutions.ttl`,
     `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
     supporting/controlled-vocabulary classes (`ConfidenceType`,
@@ -717,7 +717,7 @@ before linking it, distinguish "confirmed absent" from "not yet checked")
 was a human-guided judgment call, not something safe to fully automate.
 
 FIRST-DRAFT "BOOTSTRAP A NEW PERSON" PROCEDURE, extracted 2026-07-11 from
-actually doing this for real (Nate Hagens himself — see persons.ttl,
+actually doing this for real (Nate Hagens himself — see humans.ttl,
 schools.ttl). Not yet a formal Skill, just the pattern worth generalizing
 once there's a second real example (ideally a genuinely different
 person/context) to test it against:
@@ -762,7 +762,7 @@ person/context) to test it against:
   ends in a period-adjacent token (e.g. "Jr.") — Turtle parses a trailing
   `.` as end-of-statement. Use the full
   `<http://dbpedia.org/resource/...>` IRI in those cases (see
-  `data/seed/persons.ttl`/`schoolsofthought.ttl` for examples).
+  `data/seed/humans.ttl`/`schoolsofthought.ttl` for examples).
 - `data/generated/` is the output of `extraction/promote_to_rdf.py` —
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.
@@ -807,7 +807,7 @@ session (or MJSullivan on a tired evening) doesn't repeat it.
   reorganization.** `promote_to_rdf.py`'s `load_existing_labels()`
   hardcoded `concepts.ttl` + `people.ttl` by name — broke silently (no
   crash, just returned incomplete/wrong matches) the moment `people.ttl`
-  split into `persons.ttl` + `schools.ttl`. Fixed by switching to
+  split into `humans.ttl` + `schools.ttl`. Fixed by switching to
   `glob(f"{seed_dir}/*.ttl")`. Any future script that touches specific
   seed filenames by name should default to globbing instead, precisely
   because this project's file structure has already changed twice

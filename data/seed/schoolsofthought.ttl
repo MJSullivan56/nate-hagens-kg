@@ -54,6 +54,8 @@ tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
     skos:definition "The branch of ecology studying ecosystems as integrated systems, applying concepts like carrying capacity and feedback loops. Relevant here as the disciplinary origin of Overshoot, Ecological Overshoot, and related concepts Hagens draws on directly (Catton, Meadows)."@en ;
     skos:prefLabel "Systems Ecology"@en .
 
-tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought, owl:NamedIndividual ;
+tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought, 
+        owl:NamedIndividual ;
+    skos:altLabel "Donut Economics"@en ;
     skos:prefLabel "Doughnut Economics"@en ;
     skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en .

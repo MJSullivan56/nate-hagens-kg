@@ -119,7 +119,7 @@ to the graph as intended), and formally adopted rather than removed —
 schema redistributed into `tgs-core.ttl`, `Relationship`'s own instances
 promoted to a new `relationships.ttl` (same one-class-one-file rule as
 `Work`/`Source`/`Episode`), Nate's merged data folded into his single
-real declaration in `persons.ttl` (previously duplicated across two
+real declaration in `humans.ttl` (previously duplicated across two
 files). All 4 originally-tested queries re-confirmed identical after the
 merge. `relationship_prototype.ttl` no longer exists as a separate file.
 
@@ -300,14 +300,14 @@ side. Checked directly rather than taking that at face value — it's
 NOT actually low-risk unscoped, three concrete problems found in under
 five minutes:
 1. `foaf:Person` (the real external vocabulary link, live in
-   `persons.ttl` line 98) would corrupt to `foaf:Human` — not a real
+   `humans.ttl` line 98) would corrupt to `foaf:Human` — not a real
    FOAF term.
 2. Common English words get mangled — confirmed real example:
    "Personal" (as in "Personal blogs" in `tgs-core.ttl`) → "Humanal,"
    not a real word. Any future prose using "person" generically has the
    same risk.
 3. `PersonEntityType`/`hasPersonEntityType` — 19 occurrences across
-   `episodes.ttl`, `persons.ttl`, `tgs-core.ttl` — a genuine, UNDECIDED
+   `episodes.ttl`, `humans.ttl`, `tgs-core.ttl` — a genuine, UNDECIDED
    design question hiding inside what looked like a mechanical rename:
    should these cascade to `HumanEntityType`/`hasHumanEntityType` too?
    A blind find/replace would silently decide "yes" without it ever

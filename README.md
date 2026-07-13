@@ -32,7 +32,7 @@ data/seed/tgs-core.ttl        — ALL properties + supporting classes with
                                  yet (Work, Episode, Source — each gets
                                  promoted to its own file on first instance)
 data/seed/concepts.ttl        — thinkr:Concept: class + all 19 instances
-data/seed/persons.ttl         — thinkr:Human: class + all 25 instances
+data/seed/humans.ttl         — thinkr:Human: class + all 25 instances
 data/seed/schoolsofthought.ttl — thinkr:SchoolOfThought: class + 7
                                  instances (split from the old, overloaded
                                  thinkr:School 2026-07-11 — see
@@ -163,7 +163,7 @@ writes the exact same triple + `thinkr:LinkNote` pattern used in
   alongside them tells Protégé to resolve that import locally instead of
   trying to fetch `http://example.org/thinkr#` over the network (it isn't a
   real resolvable URL). Open any single file — `concepts.ttl`,
-  `persons.ttl`, whichever you're working on — and Protégé will pull in the
+  `humans.ttl`, whichever you're working on — and Protégé will pull in the
   shared classes/properties automatically, no need to load the whole
   project just to make one file's individuals make sense.
   Bulk-editing many individuals at once is still more practical as
@@ -196,7 +196,7 @@ is free) so the identifiers resolve to something real.
 1. Expand `concepts.ttl` — verify each definition against the actual source
    (transcript/book), not just the paraphrase here, and add real
    `dct:source` references (page numbers / episode timestamps).
-2. Expand `persons.ttl` (and `schoolsofthought.ttl` for traditions/movements) with
+2. Expand `humans.ttl` (and `schoolsofthought.ttl` for traditions/movements) with
    more philosophers, scientists, and activists as
    concepts demand them — don't pad it preemptively.
 3. Add more curated links in `linknotes.ttl`, by hand, focusing on the concepts
