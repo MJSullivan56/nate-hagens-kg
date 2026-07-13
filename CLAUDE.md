@@ -383,15 +383,44 @@ staging/review workflow will need its own Evidence-aware tables. Also:
 is unsourced (implicit Reputable tier) — so Corroborated/Disputed have never
 actually been exercised on real data, only on the isolated test script.
 
-**HIGH — Physically split the ontology into its own repo.** PARTIAL
-PROGRESS 2026-07-11: file-level reorganization done — `tgs-core.ttl` is
-now a genuinely separate, self-contained file (was `ontology/schema.ttl`),
-and every primary class has its own complete file with `owl:imports`
-pointing at it. What's still NOT done: the actual cross-REPO split — everything
-still lives in one git repo (`nate-hagens-kg`). The file-level separation
-makes a future repo split easier when it happens (just move
-`tgs-core.ttl` + `catalog-v001.xml` out), but isn't the same thing. Still
-cheapest to do while the graph is small (719 triples).
+**MEDIUM (downgraded from HIGH, 2026-07-12) — Physically split the
+ontology into its own repo.** Repo renamed same day:
+`nate-hagens-kg` → `thinkr-nate-hagens-kg` (folder-level only, git
+history unaffected — `mv` doesn't touch `.git/`). Convention going
+forward: every `thinkr:`-related repo starts with `thinkr-` (a future
+ontology repo would be `thinkr-core`, sibling to
+`thinkr-nate-hagens-kg`, not nested inside it).
+Downgraded from HIGH because the actual trigger for needing this — a
+second thinker's graph (Heather Cox Richardson, per the original
+reusable-methodology goal) — doesn't exist yet. Revisit as HIGH again
+once that experiment actually starts.
+NOT just a folder move when it does happen — three concrete breakage
+points identified 2026-07-12, worth having ready rather than
+rediscovering:
+  1. `make validate`, `compute_confidence.py`, the CI check, and
+     `promote_to_rdf.py`'s label-loading all `glob.glob('**/*.ttl',
+     recursive=True)` scoped to the current repo — the moment
+     `tgs-core.ttl` (rename to `thinkr-core.ttl` at the same time, see
+     below) leaves this repo's directory tree, all of them silently stop
+     seeing its class/property declarations. Validation would still
+     technically "pass" (rdflib doesn't error on undeclared classes)
+     while validating an incomplete picture.
+  2. `catalog-v001.xml` maps the `thinkr:` namespace to a same-directory
+     relative path — breaks the moment the target file isn't a sibling.
+  3. GitHub Actions CI checks out only the one repo it's defined in —
+     needs explicit updating to also check out the sibling `thinkr-core`
+     repo, or it'll validate against a broken subset with no warning.
+Also worth doing at the same time, not a separate rename later:
+`tgs-core.ttl` → `thinkr-core.ttl`. Its own content is already almost
+entirely `thinkr:` namespace (classes, properties, Category enum
+individuals) — the current name is actively misleading about what's
+inside it.
+File-level reorganization already done (2026-07-11): `tgs-core.ttl` is a
+genuinely separate, self-contained file, and every primary class has its
+own complete file with `owl:imports` pointing at it — this groundwork
+makes the eventual repo split mechanically easier (just move the one
+file + `catalog-v001.xml` + update the three breakage points above) even
+though the actual cross-repo split hasn't happened yet.
 
 **DONE 2026-07-11 — Cross-tradition "convergent parallel" property.** Built
 as `thinkr:convergesWith` (`owl:ObjectProperty, owl:SymmetricProperty`) in
@@ -665,6 +694,18 @@ the DBpedia+Wikidata verification workflow (design decision #5). Explicitly
 NOT worth building prematurely — revisit once there's been another round or
 two of real content expansion and the patterns (especially the Evidence
 model, if built) have proven durable rather than still shifting.
+LOCATION CLARIFIED 2026-07-12: lives OUTSIDE any single git repo entirely
+— same pattern as `uwom-ontology` itself, which sits in Claude's own
+skill-loading system (`/mnt/skills/user/`), not checked into `uwom-kg`'s
+git history. Not tied to `thinkr-core`, `thinkr-nate-hagens-kg`, or any
+future `thinkr-`-prefixed repo specifically — loaded into any session
+regardless of which repo is open that day. Practical consequence for
+content: needs to be the DISTILLED, thinker-agnostic half of what's in
+this file only — one-class-one-file governance, the IRI conventions, the
+`LinkNote`/`Evidence`/`CrosswalkNote` sidecar pattern, the OWL-depth-cap/
+SKOS-for-taxonomy split, the bootstrap-a-person procedure — stripped of
+anything Hagens-specific (the backlog, the gotchas log, current data-state
+counts all stay in each individual repo's own `CLAUDE.md`, not the skill).
 
 REUSABILITY GOAL RESTATED 2026-07-11, worth keeping visible: this
 methodology should generalize beyond Hagens (the original thinkr:/tgs:
