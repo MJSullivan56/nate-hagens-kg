@@ -9,101 +9,163 @@
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
-    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
+    .
 
 
-tgs:Human.Aristotle a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Aristotle"@en .
-
-tgs:Human.Buddha a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Gautama Buddha"@en .
-
-tgs:Human.DanielKahneman a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Daniel Kahneman"@en .
-
-tgs:Human.DennisMeadows a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Dennis Meadows"@en .
-
-tgs:Human.DonellaMeadows a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Donella Meadows"@en .
-
-tgs:Human.EOWilson a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "E. O. Wilson"@en .
-
-tgs:Human.ElinorOstrom a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Elinor Ostrom"@en .
-
-tgs:Human.EmileDurkheim a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Émile Durkheim"@en .
-
-tgs:Human.Epictetus a thinkr:Human,
-        owl:NamedIndividual ;
-    thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
-    skos:prefLabel "Epictetus"@en .
-
-tgs:Human.GregoryBateson a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Gregory Bateson"@en .
-
-tgs:Human.IvanIllich a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Ivan Illich"@en .
-
-tgs:Human.JosephTainter a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Joseph Tainter"@en .
-
-tgs:Human.MKingHubbert a thinkr:Human,
-        owl:NamedIndividual ;
-    thinkr:memberOf tgs:SchoolOfThought.PeakOilMovement ;
-    skos:prefLabel "M. King Hubbert"@en .
-
-tgs:Human.MarcusAurelius a thinkr:Human,
-        owl:NamedIndividual ;
-    thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
-    skos:prefLabel "Marcus Aurelius"@en .
-
-tgs:Human.MartinLutherKingJr a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Martin Luther King Jr."@en .
-
-tgs:Human.RachelCarson a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Rachel Carson"@en .
-
-tgs:Human.SigmundFreud a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Sigmund Freud"@en .
-
-tgs:Human.WendellBerry a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Wendell Berry"@en .
-
-tgs:Human.WilliamCatton a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "William R. Catton Jr."@en .
-
-tgs:Human.WilliamStanleyJevons a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "William Stanley Jevons"@en .
+#############################################
+# Classes and Properties
+#############################################
 
 thinkr:Human a owl:Class ;
     rdfs:comment "A philosopher, scientist, activist, or thinker being linked to a TGS concept."@en ;
     rdfs:subClassOf foaf:Person, thinkr:NamedEntity ;
     skos:scopeNote "Narrower than foaf:Person: specifically a person being linked to a TGS concept, not any person. Narrower than thinkr:NamedEntity: specifically the subset explicitly typed Person, as distinct from a hypothetical future Organization subclass."@en ;
-    skos:prefLabel "Person"@en .
+    skos:prefLabel "Person"@en ;
+    .
+
+#############################################
+# Instances
+#############################################
+
+tgs:Human.Aristotle a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Aristotle"@en ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/Aristotle>,
+        <http://www.wikidata.org/entity/Q868>;
+    .
+
+tgs:Human.Buddha a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Gautama Buddha"@en ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/Gautama_Buddha>,
+        <http://www.wikidata.org/entity/Q9441> ;
+    .
+
+tgs:Human.DanielKahneman a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Daniel Kahneman"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Daniel_Kahneman> ;
+    .
+
+tgs:Human.DennisMeadows a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Dennis Meadows"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Dennis_Meadows> ;
+    .
+
+tgs:Human.DonellaMeadows a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Donella Meadows"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Donella_Meadows> ;
+    .
+
+tgs:Human.EOWilson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "E. O. Wilson"@en ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/E._O._Wilson> ,
+        <http://www.wikidata.org/entity/Q211029> ;
+    .
+
+tgs:Human.ElinorOstrom a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Elinor Ostrom"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Elinor_Ostrom> ;
+    .
+
+tgs:Human.EmileDurkheim a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Émile Durkheim"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Émile_Durkheim> ;
+    .
+
+tgs:Human.Epictetus a thinkr:Human,
+        owl:NamedIndividual ;
+    thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
+    skos:prefLabel "Epictetus"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Epictetus>  ;
+    .
+
+tgs:Human.GregoryBateson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Gregory Bateson"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Gregory_Bateson> ;
+    .
+
+tgs:Human.IvanIllich a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Ivan Illich"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Ivan_Illich> ;
+    .
+
+tgs:Human.JosephTainter a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Joseph Tainter"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Joseph_Tainter> ;
+    .
+
+tgs:Human.MKingHubbert a thinkr:Human,
+        owl:NamedIndividual ;
+    thinkr:memberOf tgs:SchoolOfThought.PeakOilMovement ;
+    skos:prefLabel "M. King Hubbert"@en ;
+    owl:sameAs <http://dbpedia.org/resource/M._King_Hubbert> ;
+    .
+
+tgs:Human.MarcusAurelius a thinkr:Human,
+        owl:NamedIndividual ;
+    thinkr:memberOf tgs:SchoolOfThought.Stoicism ;
+    skos:prefLabel "Marcus Aurelius"@en ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/Marcus_Aurelius> ,
+        <http://www.wikidata.org/entity/Q1430> ;
+    .
+
+tgs:Human.MartinLutherKingJr a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Martin Luther King Jr."@en ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/Martin_Luther_King_Jr.>,
+        <http://www.wikidata.org/entity/Q8027> ;
+    .
+
+tgs:Human.RachelCarson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Rachel Carson"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Rachel_Carson> ;
+    .
+
+tgs:Human.SigmundFreud a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Sigmund Freud"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Sigmund_Freud> ;
+    .
+
+tgs:Human.WendellBerry a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Wendell Berry"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Wendell_Berry> ;
+    .
+
+tgs:Human.WilliamCatton a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "William R. Catton Jr."@en ;
+    owl:sameAs <http://dbpedia.org/resource/William_R._Catton_Jr.> ;
+    .
+
+tgs:Human.WilliamStanleyJevons a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "William Stanley Jevons"@en ;
+    owl:sameAs <http://dbpedia.org/resource/William_Stanley_Jevons> ;
+    .
 
 tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Kate Raworth"@en ;
-    thinkr:memberOf tgs:SchoolOfThought.DoughnutEconomics .
+    thinkr:memberOf tgs:SchoolOfThought.DoughnutEconomics ;
+    owl:sameAs <http://dbpedia.org/resource/Kate_Raworth> ;
+    .
 
 tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Nate Hagens"@en ;
@@ -126,10 +188,17 @@ tgs:Human.MatthewMonahan a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.IainMcGilchrist a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Iain McGilchrist"@en ;
     rdfs:comment "FRSA, born 1953. British psychiatrist, philosopher, and neuroscientist. Fellow of the Royal College of Psychiatrists; Quondam Fellow of All Souls College, Oxford; former associate fellow of Green Templeton College, Oxford; emeritus consultant at the Maudsley and Bethlem Royal hospitals, London; former research fellow in Neuroimaging at Johns Hopkins University. Chancellor of Ralston College since October 2025 (succeeding Jordan Peterson). Confirmed via direct transcript excerpt as a repeat TGS guest: Episode 85 'Wisdom, Nature and the Brain' (2023) and Episode 217 'Wisdom in a World in Crisis' (April 2026, Nate explicitly says 'rejoined by,' confirming the second appearance). NOTE the correct spelling is IAIN, not the 'Ian' the NER pipeline extracted — confirmed via Wikipedia/Wikidata/his own official site (channelmcgilchrist.com)."@en ;
-    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor .
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor ;
+    owl:sameAs 
+        <http://dbpedia.org/resource/Iain_McGilchrist> ,
+        <http://www.wikidata.org/entity/Q16732304> ;
+    .
 
 tgs:Human.DanielSchmachtenberger a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Daniel Schmachtenberger"@en ;
     rdfs:comment "Social philosopher and systems thinker known for work on the 'metacrisis,' sensemaking, and civilization design. Founding member of The Consilience Project (2021). Founder of Civilization Research Institute (2024). Also co-founder of Neurohacker Collective (2015, commercial nootropic/wellness supplement company, later Qualia Life Sciences) — noted factually as a distinct commercial venture, not modeled as a School (not a school of thought). Studied at Body Mind College (San Diego) and Maharishi International University (counseling, psychology, mathematics) — largely self-taught since. NO owl:sameAs to DBpedia: verified 2026-07-11, no genuine ENGLISH Wikipedia page exists (only a Swedish-language article and non-canonical mirror sites like Wikitia/EverybodyWiki, both carrying '[citation needed]' tags throughout suggesting even they are uncertain of their own content) — DBpedia URIs are specifically derived from English Wikipedia, so none applies. A genuine Wikidata entry DOES exist independently (multilingual, linked from the Swedish article) — see crosswalknotes.ttl. Extensively confirmed repeat TGS guest — 'half a dozen times' per one source; specific episodes found include Ep 5 'Bend Not Break Part 1: Energy Blindness', Ep 126 'A Vision for Betterment', and Ep 132 'The Wide Boundary Impacts of AI'."@en ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
-    thinkr:memberOf tgs:Organization.ConsilienceProject .
+    thinkr:memberOf tgs:Organization.ConsilienceProject ;
+    owl:sameAs <http://www.wikidata.org/entity/Q110189381> ;
+    .
+

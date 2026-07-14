@@ -48,7 +48,7 @@ zero `tgs:` — verified by grep, not just assumed.
 
 **A real bug worth knowing about if you extend this pattern again**: the
 first rename pass used a regex matching bare class names like `Person`,
-which incorrectly also matched the START of `tgs:Human.MarcusAurelius`
+which incorrectly also matched the START of `tgs:Person.MarcusAurelius`
 (since nothing excluded a following `.`), silently reclassifying every
 `Class.Name`-style domain individual as vocabulary. Caught by actually
 running a live query and getting zero results instead of trusting the
@@ -103,7 +103,7 @@ structural changes:
 
 0a. **Governance principle (2026-07-11): one class, one file.** Every class
     with instances gets its own complete, self-contained TTL file (class
-    declaration + all its individuals) — `concepts.ttl`, `humans.ttl`,
+    declaration + all its individuals) — `concepts.ttl`, `persons.ttl`,
     `schoolsofthought.ttl`, `organizations.ttl`, `academicinstitutions.ttl`,
     `linknotes.ttl`, `evidences.ttl`, `subjects.ttl`. Small
     supporting/controlled-vocabulary classes (`ConfidenceType`,
@@ -261,7 +261,7 @@ structural changes:
 
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
-   after noticing the pattern already forming — `thinkr:Human`/`Concept`/
+   after noticing the pattern already forming — `thinkr:Person`/`Concept`/
    `Evidence`/`Source`/`ConfidenceType` etc. are OWL classes with strict,
    single-purpose axioms (a `LinkNote` has a valid `calculatedConfidence`
    or it doesn't — no ambiguity, no multi-parent messiness), while the
@@ -290,7 +290,7 @@ structural changes:
    not just that some value is present.
 
 2. **Every individual follows `<Domain>:<Class>.<Name>` IRI minting**
-   (e.g. `tgs:Human.MarcusAurelius`, `tgs:Concept.Overshoot`,
+   (e.g. `tgs:Person.MarcusAurelius`, `tgs:Concept.Overshoot`,
    `tgs:LinkNote.DiscountMarcus`) and is explicitly typed
    `a tgs:SomeClass, owl:NamedIndividual` — this is MJSullivan's established
    convention from his other ontology work, adopted here for consistency.
@@ -637,11 +637,33 @@ problem with real values, not placeholders) is still needed before this
 document should be treated as execution-ready. See the doc's own CAVEAT
 section, placed prominently at the top for exactly this reason.
 
-**MEDIUM — Wikidata verification.** ~21 of ~26 people/schools still need
-verified Wikidata `owl:sameAs` links (pattern established in
-`data/seed/crosswalknotes.ttl`, just needs the per-entity verification
-legwork — see design decision #5 above; Q-numbers are NOT mnemonic and
-guessing from memory is genuinely risky).
+**MEDIUM — Wikidata verification.** 8 of ~35 people/schools/orgs/institutions
+now have verified Wikidata `owl:sameAs` links as of 2026-07-13 (Aristotle,
+Gautama Buddha, Martin Luther King Jr. added this session, alongside the
+earlier 5) — pattern established in `data/seed/crosswalknotes.ttl`, just
+needs the remaining per-entity verification legwork — see design decision
+#5 above; Q-numbers are NOT mnemonic and guessing from memory is
+genuinely risky.
+
+**MEDIUM — New person-bootstrap candidates from entity index refresh
+(2026-07-13).** After running the Roundtable/Frankly downloads and
+re-indexing (166 documents now known, 18 newly indexed), two names
+surfaced with real, already-confirmed connections to the graph, not just
+plausible cold-start candidates:
+- **Nora Bateson** (100 mentions, 9 docs) — Gregory Bateson's daughter;
+  Gregory Bateson is already in the graph via `Concept.Metacrisis`'s
+  `influencedBy` link. Real, findable family/intellectual lineage.
+- **Zak Stein** (65 mentions, 3 docs) — a real, already-encountered name:
+  Daniel Schmachtenberger's own LinkedIn post about the Civilization
+  Research Institute specifically named "Zachary Stein" as a colleague
+  there, found during his own bootstrap earlier this session.
+Other real, substantial figures worth a bootstrap pass, lower priority
+since no pre-existing graph connection confirmed yet: Tom Murphy
+(physicist, "Do the Math" energy-limits blog — thematically close to
+TGS's core thesis), Shanna Swan (epidemiologist, fertility/endocrine
+research), Nancy McWilliams (psychoanalyst), Linda Birnbaum (toxicologist,
+former NIEHS director), Theo Dawson (developmental psychology).
+Full current worklist always available via `python extraction/top_persons.py`.
 
 **MEDIUM — Primary-source verification.** Concept/School definitions are
 first-draft paraphrases (design decision #6), never checked against actual
@@ -717,7 +739,7 @@ before linking it, distinguish "confirmed absent" from "not yet checked")
 was a human-guided judgment call, not something safe to fully automate.
 
 FIRST-DRAFT "BOOTSTRAP A NEW PERSON" PROCEDURE, extracted 2026-07-11 from
-actually doing this for real (Nate Hagens himself — see humans.ttl,
+actually doing this for real (Nate Hagens himself — see persons.ttl,
 schools.ttl). Not yet a formal Skill, just the pattern worth generalizing
 once there's a second real example (ideally a genuinely different
 person/context) to test it against:
@@ -762,7 +784,7 @@ person/context) to test it against:
   ends in a period-adjacent token (e.g. "Jr.") — Turtle parses a trailing
   `.` as end-of-statement. Use the full
   `<http://dbpedia.org/resource/...>` IRI in those cases (see
-  `data/seed/humans.ttl`/`schoolsofthought.ttl` for examples).
+  `data/seed/persons.ttl`/`schoolsofthought.ttl` for examples).
 - `data/generated/` is the output of `extraction/promote_to_rdf.py` —
   don't hand-edit it; edit the DuckDB staging rows and re-run the promote
   script.
@@ -807,7 +829,7 @@ session (or MJSullivan on a tired evening) doesn't repeat it.
   reorganization.** `promote_to_rdf.py`'s `load_existing_labels()`
   hardcoded `concepts.ttl` + `people.ttl` by name — broke silently (no
   crash, just returned incomplete/wrong matches) the moment `people.ttl`
-  split into `humans.ttl` + `schools.ttl`. Fixed by switching to
+  split into `persons.ttl` + `schools.ttl`. Fixed by switching to
   `glob(f"{seed_dir}/*.ttl")`. Any future script that touches specific
   seed filenames by name should default to globbing instead, precisely
   because this project's file structure has already changed twice

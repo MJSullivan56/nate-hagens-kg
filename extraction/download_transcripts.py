@@ -19,7 +19,7 @@ What it does:
      alone, confirmed by inspecting a real episode page.
   3. Downloads the PDF into transcripts_raw/ (gitignored — see repo's
      .gitignore, this was anticipated from the start)
-  4. Writes/updates transcripts_index.csv (COMMITTED to git — small, and
+  4. Writes/updates download_manifest.csv (COMMITTED to git — small, and
      it's the actually-reusable artifact: episode #, title, guest, date,
      type, transcript URL, local filename)
   5. Resumable — skips anything already in the index unless --force
@@ -60,7 +60,7 @@ INDEX_PAGES = {
     "roundtable": "/podcast/reality-roundtables",
 }
 OUTPUT_DIR = Path("extraction/transcripts_raw")
-INDEX_FILE = Path("extraction/transcripts_index.csv")
+INDEX_FILE = Path("extraction/download_manifest.csv")
 NO_TRANSCRIPT_FILE = Path("extraction/no_transcript_available.csv")
 HEADERS = {"User-Agent": "nate-hagens-kg research tool (personal reference archive, contact via GitHub)"}
 

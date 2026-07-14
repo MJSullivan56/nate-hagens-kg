@@ -6,7 +6,8 @@
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
-    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
+    .
 
 #############################################
 # thinkr:SchoolOfThought — split out of the old, overloaded thinkr:School
@@ -22,40 +23,59 @@
 thinkr:SchoolOfThought a owl:Class ;
     rdfs:subClassOf thinkr:NamedEntity ;
     rdfs:comment "A philosophical, religious, or intellectual tradition/movement/discipline (e.g. Stoicism, Systems Ecology, Behavioral Economics) — no legal existence, no staff, distinct from thinkr:Organization."@en ;
-    skos:prefLabel "School of Thought"@en .
+    skos:prefLabel "School of Thought"@en ;
+    .
+
+#############################################
+# Instances
+#############################################
 
 tgs:SchoolOfThought.BehavioralEconomics a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "The field studying how real (rather than idealized-rational) human psychology affects economic decisions. Relevant here as the disciplinary framing behind Discount Rates / Present Bias and Human 'Wetware' — Hagens draws on this field's empirical findings to argue markets systematically misprice long-term ecological risk."@en ;
-    skos:prefLabel "Behavioral Economics"@en .
+    skos:prefLabel "Behavioral Economics"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> ;
+    .
 
 tgs:SchoolOfThought.CivilRightsMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "The mid-20th-century U.S. movement for racial equality under law. Relevant here specifically as the context for MLK's later economic-justice organizing (Poor People's Campaign), used as a real-world contrast case for the Growth Imperative concept — not cited for its core civil-rights aims, which are a separate matter from TGS's scope."@en ;
-    skos:prefLabel "U.S. Civil Rights Movement"@en .
+    skos:prefLabel "U.S. Civil Rights Movement"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> ;
+    .
 
 tgs:SchoolOfThought.DegrowthMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "A political, economic, and social movement critiquing GDP growth as a policy goal and advocating planned reduction of material/energy throughput in wealthy economies. Relevant here as an adjacent (not identical) framework to Hagens' Growth Imperative critique — worth distinguishing rather than conflating, since Hagens' emphasis on biophysical limits and degrowth's emphasis on distributive justice/policy overlap but aren't the same argument."@en ;
-    skos:prefLabel "Degrowth"@en .
+    skos:prefLabel "Degrowth"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Degrowth> ;
+    .
 
 tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "The loosely-organized, decades-long community of analysts, forecasters, geologists, and commentators studying and publicizing oil depletion dynamics (ASPO, peakoil.com-era forums, etc.) — distinct from tgs:Concept.PeakOil, which is the underlying theory/phenomenon itself. Note on scope: this community is genuinely heterogeneous in rigor and ideology, ranging from serious petroleum-geology analysis to more speculative 'doomer' content, and has no single unifying institution. Included despite that heterogeneity because the core theoretical work (Hubbert Peak Theory) has had multi-decade real-world influence and is a direct formative input to Hagens' own analytical background — he worked professionally in this space before founding The Great Simplification."@en ;
-    skos:prefLabel "Peak Oil (movement/community)"@en .
+    skos:prefLabel "Peak Oil (movement/community)"@en ;
+    .
 
 tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "Ancient Greco-Roman philosophical school. Relevant here specifically for its emphasis on distinguishing what is/isn't within one's control and valuing present right action — the philosophical antecedent cited for the Discount Rates / Present Bias concept."@en ;
-    skos:prefLabel "Stoicism"@en .
+    skos:prefLabel "Stoicism"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Stoicism> ;
+    .
 
 tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "The branch of ecology studying ecosystems as integrated systems, applying concepts like carrying capacity and feedback loops. Relevant here as the disciplinary origin of Overshoot, Ecological Overshoot, and related concepts Hagens draws on directly (Catton, Meadows)."@en ;
-    skos:prefLabel "Systems Ecology"@en .
+    skos:prefLabel "Systems Ecology"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Systems_ecology> ;
+    .
 
 tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought, 
         owl:NamedIndividual ;
     skos:altLabel "Donut Economics"@en ;
     skos:prefLabel "Doughnut Economics"@en ;
-    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en .
+    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
+    owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
+    .
+
