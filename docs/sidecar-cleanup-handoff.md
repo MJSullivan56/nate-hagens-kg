@@ -11,6 +11,128 @@ treat its internal ordering as reliable but its completeness as
 possibly missing earlier moves from the same session that occurred
 before the point the recovered transcript begins.**
 
+## LOCAL ENVIRONMENT REFERENCE (living section, not dated/superseded —
+## keep this current rather than appending a new dated copy each time
+## something changes)
+
+**Repo root**: `nate-hagens-kg/`
+
+```
+nate-hagens-kg/
+├── CLAUDE.md
+├── README.md
+├── requirements.txt
+├── Makefile
+├── docs/
+│   ├── sidecar-cleanup-handoff.md   (this file)
+│   └── docs_README.md
+├── scripts/
+│   ├── tgs_store/                   (Oxigraph RocksDB storage — gitignored, regenerated via load_oxigraph.sh)
+│   ├── load_oxigraph.sh             (bulk-loads every data/seed/*.ttl into tgs_store via `oxigraph load`)
+│   ├── query_examples.sparql
+│   └── compute_confidence.py        (derives LinkNote.calculatedConfidence from Evidence — never hand-asserted)
+├── extraction/
+└── data/
+    └── seed/                        (one-class-one-file governance — every .ttl here is loaded as a unit)
+        ├── tgs-core.ttl             (schema: classes, properties, Category enumerations)
+        ├── humans.ttl
+        ├── personas.ttl
+        ├── relationships.ttl
+        ├── episodes.ttl
+        ├── organizations.ttl
+        ├── academicinstitutions.ttl
+        ├── schoolsofthought.ttl
+        ├── concepts.ttl
+        ├── subjects.ttl
+        ├── works.ttl
+        ├── sources.ttl
+        ├── evidences.ttl
+        ├── linknotes.ttl
+        ├── crosswalknotes.ttl
+        └── catalog-v001.xml         (Protégé catalog file — resolves thinkr:/tgs: imports across split files)
+```
+
+**Triplestore**: Oxigraph, served locally at `http://127.0.0.1:7878`.
+NOT a background daemon — `oxigraph serve --location ./tgs_store --bind
+127.0.0.1:7878` runs in the foreground in its own terminal tab and must
+stay open. Run from `scripts/` specifically (both `tgs_store` and
+`load_oxigraph.sh`'s relative paths — `../data/seed/*.ttl` — assume
+that working directory). `oxigraph load` (used internally by
+`load_oxigraph.sh`) is an offline bulk-load command and needs exclusive
+access to `tgs_store` — `serve` must be stopped (Ctrl-C) before
+reloading, never run concurrently with it.
+
+**Standard reload sequence after any seed data change**, confirmed
+working 2026-07-14:
+```bash
+# Ctrl-C the running serve process first
+cd nate-hagens-kg/scripts
+rm -rf ./tgs_store
+./load_oxigraph.sh
+oxigraph serve --location ./tgs_store --bind 127.0.0.1:7878
+```
+`load_oxigraph.sh` does NOT clear the store itself — it only adds
+triples via `oxigraph load` per file. Skipping the `rm -rf` step before
+a reload leaves stale triples (e.g. old Human-pointing values alongside
+new Persona-pointing ones) coexisting rather than being replaced —
+confirmed the hard way earlier this session.
+
+**Querying**: the Oxigraph browser UI (YASGUI-based) at
+`http://127.0.0.1:7878` is MJSullivan's preferred way to run SPARQL —
+same standing preference as UWOM's Oxigraph workflow, not curl.
+Programmatic queries when needed: `curl http://127.0.0.1:7878/query -H
+'Content-Type: application/sparql-query' --data '<query>'`.
+
+**Protégé**: used for validation/visual inspection only, not editing —
+every `data/seed/*.ttl` file's own header comment ("Imports tgs-core
+for Protege compatibility — editing this file alone will resolve
+thinkr: classes/properties via the catalog file") confirms
+`catalog-v001.xml` exists specifically to let Protégé resolve the
+cross-file `thinkr:`/`tgs:` imports when opening the split ontology.
+Real editing happens directly in the `.ttl` files via VS Code / Claude
+Code, not inside Protégé itself.
+
+**Editing tools**: VS Code with the Claude Code extension for real
+implementation work (multi-file edits, scripted migrations). Claude
+Chat (this doc's origin) for architecture/planning/prototyping — the
+division of labor matches the parallel `uwom-kg` project's own
+established pattern. `nate-hagens-kg` and `uwom-kg` are separate repos,
+opened in separate VS Code windows when working on both — multi-root
+workspace switching was confirmed unreliable in the current Claude Code
+VS Code extension (open GitHub issues on context not following the
+active file), so each project stays in its own window rather than a
+shared workspace.
+
+**Validation**: `scripts/compute_confidence.py` derives
+`LinkNote.calculatedConfidence` from `Evidence` sets — never
+hand-asserted, matches UWOM's `validate_repo.py` discipline of a
+scripted, re-runnable check rather than manual verification. No
+project-specific SHACL shapes confirmed either way for this repo as of
+2026-07-14 (unlike UWOM, which has a mature SHACL validator) —
+MJSullivan confirmed he genuinely doesn't know if one exists, not
+worth assuming parity with the sibling project's tooling until checked
+directly (e.g. `find . -iname "*.shacl*" -o -iname "*shapes*"`).
+
+**Personal laptop, package manager available**: this is MJSullivan's
+own machine, not a shared/managed environment — Homebrew is available
+and anything reasonably needed (a SHACL engine, a different Oxigraph
+version, etc.) can be installed freely. Don't hold back on suggesting a
+tool because of an assumed environment-approval or install-permission
+barrier that doesn't actually apply here.
+
+**MJSullivan is NOT a professional developer** — explicitly confirmed
+2026-07-14, worth calibrating future sessions accordingly, not just
+this one. He's clearly capable (running Oxigraph, VS Code, git, Claude
+Code day to day) but doesn't have deep devops/terminal fluency to fall
+back on — commands should be given as complete, copy-pasteable
+sequences with the working directory made explicit, not assumed
+implicit or left as "adjust as needed." Error messages should be
+walked through rather than assumed self-explanatory (e.g. distinguishing
+"the process isn't running" from "wrong path" from "port conflict" when
+a connection fails, rather than a single generic fix). This isn't a
+one-off caveat for this thread — it should shape how technical
+instructions are given in general on this project going forward.
+
 ## SESSION CUT OFF (2026-07-14): Persona-centered architecture fully
 ## rebuilt and stress-tested; core mechanism migration still the real
 ## next step

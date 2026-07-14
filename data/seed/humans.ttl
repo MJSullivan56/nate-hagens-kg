@@ -175,30 +175,39 @@ tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
     skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. ALSO: foaf:homepage below deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
     dbo:birthDate "1969"^^xsd:gYear ;
     foaf:homepage <https://www.natehagens.com/>, <https://natehagens.substack.com/>, <https://www.linkedin.com/in/nate-hagens-004810b/> ;
-    thinkr:memberOf tgs:Organization.TheOilDrum, tgs:Organization.PostCarbonInstitute, tgs:SchoolOfThought.PeakOilMovement, tgs:AcademicInstitution.UniversityOfVermont, tgs:AcademicInstitution.UniversityOfChicago, tgs:AcademicInstitution.UniversityOfMinnesota ;
-    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
-    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger .
+    thinkr:memberOf tgs:Organization.TheOilDrum, tgs:Organization.PostCarbonInstitute, tgs:SchoolOfThought.PeakOilMovement, tgs:AcademicInstitution.UniversityOfVermont, tgs:AcademicInstitution.UniversityOfChicago, tgs:AcademicInstitution.UniversityOfMinnesota .
+# hasTGSRole and hasPersonalRelationship MOVED to tgs:Persona.NateHagens
+# (personas.ttl) 2026-07-14, Batch 3 of the Persona-centered refactor —
+# both are public-facing facts, not biography. thinkr:memberOf stays
+# here for now (Batch 4 territory, not yet migrated to Relationship
+# individuals for the non-UofM organizations). foaf:homepage above
+# deliberately untouched — which specific links belong on Persona vs.
+# Human remains an open question from the 2026-07-12 escalation entry,
+# not resolved in this batch.
 
 tgs:Human.MatthewMonahan a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Matthew Monahan"@en ;
     rdfs:comment "Co-founder/co-instigator of Ma Earth (2023-present, a collective/quadratic-funding crowdfunding platform for regenerative land projects) and co-founder/co-steward of Biome Trust (2022-present, a philanthropic foundation). Hosts Ma Earth's own interview series 'The Regeneration Will Be Funded.' NO owl:sameAs: verified 2026-07-11 — the only 'Matthew Monahan' Wikipedia page is a completely different person (an unrelated Los Angeles contemporary artist, b. 1972, Cooper Union graduate) — confirmed via search, not assumed. TGS guest, Episode 226 'Can Money Serve Life? How to Fund Communities Doing the Real Work' (https://www.thegreatsimplification.com/episode/226-matthew-monahan)."@en ;
-    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
     thinkr:memberOf tgs:Organization.MaEarth, tgs:Organization.BiomeTrust .
+# hasPersonEntityType MOVED to tgs:Persona.MatthewMonahan (personas.ttl)
+# 2026-07-14, Batch 3.
 
 tgs:Human.IainMcGilchrist a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Iain McGilchrist"@en ;
     rdfs:comment "FRSA, born 1953. British psychiatrist, philosopher, and neuroscientist. Fellow of the Royal College of Psychiatrists; Quondam Fellow of All Souls College, Oxford; former associate fellow of Green Templeton College, Oxford; emeritus consultant at the Maudsley and Bethlem Royal hospitals, London; former research fellow in Neuroimaging at Johns Hopkins University. Chancellor of Ralston College since October 2025 (succeeding Jordan Peterson). Confirmed via direct transcript excerpt as a repeat TGS guest: Episode 85 'Wisdom, Nature and the Brain' (2023) and Episode 217 'Wisdom in a World in Crisis' (April 2026, Nate explicitly says 'rejoined by,' confirming the second appearance). NOTE the correct spelling is IAIN, not the 'Ian' the NER pipeline extracted — confirmed via Wikipedia/Wikidata/his own official site (channelmcgilchrist.com)."@en ;
-    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor ;
     owl:sameAs 
         <http://dbpedia.org/resource/Iain_McGilchrist> ,
         <http://www.wikidata.org/entity/Q16732304> ;
     .
+# hasPersonEntityType MOVED to tgs:Persona.IainMcGilchrist (personas.ttl)
+# 2026-07-14, Batch 3.
 
 tgs:Human.DanielSchmachtenberger a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Daniel Schmachtenberger"@en ;
     rdfs:comment "Social philosopher and systems thinker known for work on the 'metacrisis,' sensemaking, and civilization design. Founding member of The Consilience Project (2021). Founder of Civilization Research Institute (2024). Also co-founder of Neurohacker Collective (2015, commercial nootropic/wellness supplement company, later Qualia Life Sciences) — noted factually as a distinct commercial venture, not modeled as a School (not a school of thought). Studied at Body Mind College (San Diego) and Maharishi International University (counseling, psychology, mathematics) — largely self-taught since. NO owl:sameAs to DBpedia: verified 2026-07-11, no genuine ENGLISH Wikipedia page exists (only a Swedish-language article and non-canonical mirror sites like Wikitia/EverybodyWiki, both carrying '[citation needed]' tags throughout suggesting even they are uncertain of their own content) — DBpedia URIs are specifically derived from English Wikipedia, so none applies. A genuine Wikidata entry DOES exist independently (multilingual, linked from the Swedish article) — see crosswalknotes.ttl. Extensively confirmed repeat TGS guest — 'half a dozen times' per one source; specific episodes found include Ep 5 'Bend Not Break Part 1: Energy Blindness', Ep 126 'A Vision for Betterment', and Ep 132 'The Wide Boundary Impacts of AI'."@en ;
-    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
     thinkr:memberOf tgs:Organization.ConsilienceProject ;
     owl:sameAs <http://www.wikidata.org/entity/Q110189381> ;
     .
+# hasPersonEntityType MOVED to tgs:Persona.DanielSchmachtenberger
+# (personas.ttl) 2026-07-14, Batch 3.
 

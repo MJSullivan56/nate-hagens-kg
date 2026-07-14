@@ -1,0 +1,233 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+#############################################
+# TGS-core enumerations: every thinkr:Category-marked Class (formerly
+# in tgs-core.ttl) TOGETHER WITH its own owl:NamedIndividual members.
+# Moved out of tgs-core.ttl on 2026-07-14 per MJSullivan's explicit
+# governance decision: tgs-core.ttl holds general classes/properties
+# only, never individuals or their owning enumeration classes, going
+# forward. REVISED same day from the first cut of this split, which had
+# left the 9 Category classes (ConfidenceType, PolarityType,
+# ReliabilityType, PersonEntityType, CrosswalkSource, EpisodeType,
+# ProfessionalRole, RelationshipType, InteractionRole) behind in
+# tgs-core.ttl — MJSullivan confirmed each class belongs WITH its own
+# enumerated members, restoring one-class-one-file for this family too.
+# thinkr:Category itself (the meta-class marking these 9 as categories)
+# stays in tgs-core.ttl — it's not an enumeration class, it's the
+# organizing abstraction that names the pattern.
+# No separate <http://example.org/thinkr#> a owl:Ontology declaration
+# here — that already lives in tgs-core.ttl; redeclaring it here would
+# just add a second, competing rdfs:comment on the same ontology IRI.
+#############################################
+
+#############################################
+# ConfidenceType
+#############################################
+
+thinkr:ConfidenceType a owl:Class, thinkr:Category ;
+    rdfs:comment "Enumerated class of allowed review/aggregation states. thinkr:Evidence uses only Curated/Candidate (has THIS piece of evidence been human-reviewed?). thinkr:LinkNote uses the full range via thinkr:calculatedConfidence, which is DERIVED — computed from a LinkNote's Evidence set by scripts/compute_confidence.py, never hand-asserted. Closed enumeration via owl:oneOf."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( thinkr:ConfidenceType.Curated thinkr:ConfidenceType.Candidate thinkr:ConfidenceType.Corroborated thinkr:ConfidenceType.Disputed ) ] ;
+    skos:prefLabel "Confidence Type"@en .
+
+thinkr:ConfidenceType.Candidate a thinkr:ConfidenceType,
+        owl:NamedIndividual ;
+    skos:definition "On thinkr:Evidence: LLM-proposed or otherwise unreviewed. On thinkr:LinkNote's calculatedConfidence: no qualifying Curated+Supports evidence exists yet — the default/floor state."@en ;
+    skos:prefLabel "Candidate"@en .
+
+thinkr:ConfidenceType.Corroborated a thinkr:ConfidenceType,
+        owl:NamedIndividual ;
+    skos:definition "LinkNote-only (calculatedConfidence): two or more INDEPENDENT (different thinkr:Source individuals) Curated+Supports evidence from Reputable-or-better sources. Unverified-tier support cannot contribute toward this tier no matter how many pieces accumulate."@en ;
+    skos:prefLabel "Corroborated"@en .
+
+thinkr:ConfidenceType.Curated a thinkr:ConfidenceType,
+        owl:NamedIndividual ;
+    skos:definition "On thinkr:Evidence: human-reviewed and confirmed, not merely LLM-proposed. On thinkr:LinkNote's calculatedConfidence: exactly one independent Curated+Supports evidence from a Reputable-or-better source (see scripts/compute_confidence.py for the full rule)."@en ;
+    skos:prefLabel "Curated"@en .
+
+thinkr:ConfidenceType.Disputed a thinkr:ConfidenceType,
+        owl:NamedIndividual ;
+    skos:definition "LinkNote-only (calculatedConfidence): at least one Curated+Contests evidence from a Reputable-or-better source exists. This OVERRIDES Corroborated regardless of how much supporting evidence also exists — a serious rebuttal should surface for human attention, not get mathematically outvoted."@en ;
+    skos:prefLabel "Disputed"@en .
+
+
+#############################################
+# PolarityType
+#############################################
+
+thinkr:PolarityType a owl:Class, thinkr:Category ;
+    rdfs:comment "Whether a piece of evidence supports, contests, or merely mentions a LinkNote's claim. Independent of source reliability — polarity is about the evidence's stance, reliability is about the source's trustworthiness."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( thinkr:PolarityType.Supports thinkr:PolarityType.Contests thinkr:PolarityType.Mentions ) ] ;
+    skos:prefLabel "Polarity Type"@en .
+
+thinkr:PolarityType.Contests a thinkr:PolarityType,
+        owl:NamedIndividual ;
+    skos:prefLabel "Contests"@en .
+
+thinkr:PolarityType.Mentions a thinkr:PolarityType,
+        owl:NamedIndividual ;
+    skos:definition "Cites/discusses the claim without clearly arguing a position either way. Stored for context, never affects calculatedConfidence."@en ;
+    skos:prefLabel "Mentions"@en .
+
+thinkr:PolarityType.Supports a thinkr:PolarityType,
+        owl:NamedIndividual ;
+    skos:prefLabel "Supports"@en .
+
+
+#############################################
+# ReliabilityType
+#############################################
+
+thinkr:ReliabilityType a owl:Class, thinkr:Category ;
+    rdfs:comment "Enumerated reliability of a thinkr:Source (the publication/venue), independent of what any given piece of evidence from it argues. A source's tier is an editorial judgment call, not an objective formula — expect it to need periodic revisiting, the same way Wikipedia's own reliable-sources list is a living, contested, human-adjudicated thing."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( thinkr:ReliabilityType.Authoritative thinkr:ReliabilityType.Reputable thinkr:ReliabilityType.Unverified thinkr:ReliabilityType.Unreliable ) ] ;
+    skos:prefLabel "Reliability Type"@en .
+
+thinkr:ReliabilityType.Authoritative a thinkr:ReliabilityType,
+        owl:NamedIndividual ;
+    skos:definition "Wikidata, peer-reviewed academic publication, primary historical source. Strongest tier."@en ;
+    skos:prefLabel "Authoritative"@en .
+
+thinkr:ReliabilityType.Reputable a thinkr:ReliabilityType,
+        owl:NamedIndividual ;
+    skos:definition "Established journalism, credentialed-expert writing, or direct curator/maintainer reasoning that has itself been human-reviewed (thinkr:Evidence with no explicit thinkr:aboutSource defaults to this tier — see thinkr:aboutSource comment)."@en ;
+    skos:prefLabel "Reputable"@en .
+
+thinkr:ReliabilityType.Unreliable a thinkr:ReliabilityType,
+        owl:NamedIndividual ;
+    skos:definition "Known propaganda, misinformation, or otherwise discredited outlets. Evidence from Unreliable sources is stored (audit trail — 'we saw this, here's why it doesn't count') but EXCLUDED from calculatedConfidence entirely, regardless of polarity. A bad source doesn't make a claim less true; it just isn't signal worth counting either direction."@en ;
+    skos:prefLabel "Unreliable"@en .
+
+thinkr:ReliabilityType.Unverified a thinkr:ReliabilityType,
+        owl:NamedIndividual ;
+    skos:definition "Personal blogs, unreviewed Medium-style posts, anonymous sources. Can support a base Curated calculatedConfidence but can never push a LinkNote to Corroborated, regardless of volume."@en ;
+    skos:prefLabel "Unverified"@en .
+
+
+#############################################
+# PersonEntityType
+#############################################
+
+thinkr:PersonEntityType a owl:Class, thinkr:Category ;
+    rdfs:subClassOf thinkr:NamedEntityType ;
+    skos:scopeNote "Narrower than thinkr:NamedEntityType: specifically the categorization scheme for thinkr:Human individuals. A hypothetical future OrganizationEntityType would be a SIBLING of this, not a further subclass — see the OWL-depth-cap governance rule in CLAUDE.md."@en ;
+    rdfs:comment "Categorizes a thinkr:Human's relationship to TGS specifically. Flat categories, deliberately NOT SKOS — unlike Subject/sub-topics, these don't nest hierarchically. ReallyBadActor/Critic-style category proposed but NOT YET CONFIRMED as of 2026-07-11 — only add if/when explicitly confirmed, don't guess."@en ;
+    skos:prefLabel "Person Entity Type"@en .
+
+thinkr:PersonEntityType.Guest a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Guest"@en .
+
+thinkr:PersonEntityType.Collaborator a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Collaborator"@en .
+
+thinkr:PersonEntityType.CoAuthor a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Co-Author"@en .
+
+thinkr:PersonEntityType.Contributor a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Contributor"@en ;
+    rdfs:comment "Designed pre-dinner 2026-07-11 (Contributor IFF publications align with the movement, else just a Mention) but never actually instantiated until Iain McGilchrist's bootstrap gave a real, well-evidenced case: published works (The Master and His Emissary, The Matter with Things) genuinely align with TGS's cognitive/behavioral themes. Not mutually exclusive with Guest — a Person can hold both independently."@en .
+
+thinkr:PersonEntityType.Critic a thinkr:PersonEntityType, owl:NamedIndividual ;
+    skos:prefLabel "Critic"@en ;
+    rdfs:comment "Motivated by Elon Musk (2026-07-11) — someone whose relationship to TGS is oppositional, distinct from the Contributor/Mention question (which is about publication alignment, not stance). Schema-only for now, per MJSullivan: 'add critic for now and enrich things later' — no Person individual tagged with this yet."@en .
+
+
+#############################################
+# CrosswalkSource
+#############################################
+
+thinkr:CrosswalkSource a owl:Class, thinkr:Category ;
+    rdfs:comment "Which external database a thinkr:CrosswalkNote's owl:sameAs assertion targets. Closed enumeration."@en ;
+    skos:prefLabel "Crosswalk Source"@en .
+
+thinkr:CrosswalkSource.DBpedia a thinkr:CrosswalkSource, owl:NamedIndividual ;
+    skos:prefLabel "DBpedia"@en .
+
+thinkr:CrosswalkSource.Wikidata a thinkr:CrosswalkSource, owl:NamedIndividual ;
+    skos:prefLabel "Wikidata"@en .
+
+
+#############################################
+# EpisodeType
+#############################################
+
+thinkr:EpisodeType a owl:Class, thinkr:Category ;
+    rdfs:comment "Structural format of a thinkr:Episode — deliberately generic and reusable across any future thinker's graph, independent of any one show's own branding for these formats (e.g. TGS calls its Monologue-type content 'Frankly' and its PanelDiscussion-type content 'Reality Roundtables' — those show-specific terms live as skos:altLabel on the generic values below, not as separate classes)."@en ;
+    skos:prefLabel "Episode Type"@en .
+
+thinkr:EpisodeType.Interview a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Interview"@en ;
+    skos:altLabel "interview"@en, "Guest Interview"@en, "One-on-One Interview"@en .
+
+thinkr:EpisodeType.PanelDiscussion a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Panel Discussion"@en ;
+    skos:altLabel "roundtable"@en, "Reality Roundtable"@en, "Panel"@en, "Multi-Guest Discussion"@en .
+
+thinkr:EpisodeType.Monologue a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Monologue"@en ;
+    skos:altLabel "frankly"@en, "Frankly"@en, "Solo Reflection"@en, "Solo Episode"@en .
+
+
+#############################################
+# ProfessionalRole
+#############################################
+
+thinkr:ProfessionalRole a owl:Class, thinkr:Category ;
+    rdfs:comment "A person's intrinsic professional identity (Educator, Author, etc.) — deliberately generic and reusable across any future thinker's graph, same reasoning as thinkr:EpisodeType. Distinct from thinkr:PersonEntityType, which describes a person's RELATIONSHIP TO THIS SPECIFIC PROJECT (Guest, Contributor), not something intrinsic to them independent of it."@en ;
+    skos:prefLabel "Professional Role"@en .
+
+thinkr:ProfessionalRole.Educator a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Educator"@en .
+
+thinkr:ProfessionalRole.InstituteExecutive a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Institute Executive"@en .
+
+thinkr:ProfessionalRole.Blogger a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Blogger"@en .
+
+thinkr:ProfessionalRole.Author a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Author"@en .
+
+
+#############################################
+# RelationshipType
+#############################################
+
+thinkr:RelationshipType a owl:Class, thinkr:Category ;
+    rdfs:comment "What KIND of relationship this is — deliberately multi-valued (a relationship can be BOTH Professional AND have a Legal dimension simultaneously, not competing options). Live-tested on Nate Hagens' University of Minnesota relationship, which genuinely needs both Academic and Professional simultaneously."@en ;
+    skos:prefLabel "Relationship Type"@en .
+
+thinkr:RelationshipType.Professional a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Professional"@en .
+
+thinkr:RelationshipType.Personal a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Personal"@en .
+
+thinkr:RelationshipType.Academic a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Academic"@en .
+
+thinkr:RelationshipType.Legal a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Legal"@en .
+
+
+#############################################
+# InteractionRole
+#############################################
+
+thinkr:InteractionRole a owl:Class, thinkr:Category ;
+    rdfs:comment "Host or Guest for a single PodcastAppearance instance."@en ;
+    skos:prefLabel "Interaction Role"@en .
+
+thinkr:InteractionRole.Host a thinkr:InteractionRole, owl:NamedIndividual ;
+    skos:prefLabel "Host"@en .
+
+thinkr:InteractionRole.Guest a thinkr:InteractionRole, owl:NamedIndividual ;
+    skos:prefLabel "Guest"@en .
+

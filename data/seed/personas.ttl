@@ -1,0 +1,183 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:Persona — Batch 0/1 of the Persona-centered refactor
+# (docs/sidecar-cleanup-handoff.md, "SESSION CUT OFF (2026-07-14)").
+# Same promotion precedent as thinkr:Relationship: class + its own
+# instances live together in their own file (one-class-one-file),
+# rather than splitting class into tgs-core.ttl.
+#
+# FINAL PRINCIPLE (settled 2026-07-14, prototyped in
+# persona_human_prototype-8.ttl): no Human-to-Human relationships
+# anywhere in this graph. The ONLY relationship type touching Human at
+# all is thinkr:actsThrough (Persona -> Human, biographical anchor).
+# Every other relationship — Episode hosting/guesting, Relationship
+# individuals, eventually Concept->influencedBy/echoesIdeaOf — runs
+# through Persona instead. Human becomes a pure leaf node: biographical
+# facts only (name, birthdate, earned credentials, employment history).
+#
+# SCOPE OF THIS BATCH, deliberately narrow: create ONE Persona per
+# existing Human, uniformly MINIMAL (actsThrough + prefLabel only) —
+# including Nate's, even though the prototype gave his a rich buildout
+# (hasTGSRole, foaf:homepage, hasPersonalRelationship/
+# hasProfessionalRelationship). That richer content is deliberately NOT
+# ported here: it only becomes meaningful once Batch 3 actually flips
+# Relationship.hasSubject from Human to Persona. Moving it early would
+# create a duplicate, conflicting source of truth between
+# Human.NateHagens and Persona.NateHagens for the batches in between.
+# Same discipline for Marcus Aurelius's "purer persona" case (near-empty
+# Human, Persona carrying essentially all content, per the 2026-07-13
+# escalation) — deferred to Batch 5 (the core Concept->Persona
+# migration), not built here.
+#
+# NAMING NOTE: uses tgs:Persona.<X> matching the REAL tgs:Human.<X> IRI
+# suffix already in humans.ttl — NOT persona_human_prototype-8.ttl's
+# tgs:Human.NathanHagens, which was prototype-only naming and never
+# matched the real graph's tgs:Human.NateHagens.
+#############################################
+
+thinkr:Persona a owl:Class ;
+    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:comment "The public-facing identity a Human operates under. Every Relationship, Episode hosting/guesting fact, and (eventually) intellectual-influence claim in this graph belongs to a Persona, not a Human directly — Human holds only biographical facts and is reached solely via thinkr:actsThrough. A new Persona is warranted ONLY when the public name/brand itself genuinely differs from the Human's name (Cher-vs-legal-name level) — not for different professional capacities under one consistent public name, which are multiple thinkr:hasTGSRole values on a single Persona instead."@en ;
+    skos:prefLabel "Persona"@en .
+
+thinkr:actsThrough a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Human ;
+    rdfs:comment "Links a Persona back to the Human(s) behind it — the ONLY property in this graph that connects a Persona to a Human. Naming/directionality borrowed from DOLCE+DnS Ultralite's actsThrough/actsFor pair (examined directly 2026-07-12; this was the one piece of DOLCE flagged as worth keeping)."@en ;
+    skos:prefLabel "acts through"@en .
+
+thinkr:hasPersona a owl:ObjectProperty ;
+    rdfs:domain thinkr:Human ;
+    rdfs:range thinkr:Persona ;
+    skos:comment "Explicit inverse of thinkr:actsThrough, asserted directly rather than via owl:inverseOf — consistent with this project's standing practice of asserting both directions explicitly since the toolchain never runs a reasoner (same precedent as dct:hasPart/dct:isPartOf on Series). Multi-valued: Human->Persona is 1..n — one Human may have more than one genuinely distinct public identity, though most individuals in this graph have exactly one."@en ;
+    skos:prefLabel "has persona"@en .
+
+#############################################
+# Instances — one minimal Persona per existing Human (humans.ttl, 25
+# individuals as of 2026-07-14). Uniformly minimal per the scope note
+# above: actsThrough + prefLabel (mirroring the Human's own prefLabel)
+# only. hasPersonEntityType (Guest/Contributor, currently on the Human
+# individuals for Monahan/McGilchrist/Schmachtenberger) deliberately
+# NOT moved here yet — same "don't build ahead of real need" discipline,
+# revisit once Batch 3 clarifies whether that property belongs on
+# Persona instead.
+#############################################
+
+tgs:Persona.Aristotle a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.Aristotle ;
+    skos:prefLabel "Aristotle"@en .
+
+tgs:Persona.Buddha a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.Buddha ;
+    skos:prefLabel "Gautama Buddha"@en .
+
+tgs:Persona.DanielKahneman a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanielKahneman ;
+    skos:prefLabel "Daniel Kahneman"@en .
+
+tgs:Persona.DennisMeadows a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DennisMeadows ;
+    skos:prefLabel "Dennis Meadows"@en .
+
+tgs:Persona.DonellaMeadows a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DonellaMeadows ;
+    skos:prefLabel "Donella Meadows"@en .
+
+tgs:Persona.EOWilson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.EOWilson ;
+    skos:prefLabel "E. O. Wilson"@en .
+
+tgs:Persona.ElinorOstrom a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ElinorOstrom ;
+    skos:prefLabel "Elinor Ostrom"@en .
+
+tgs:Persona.EmileDurkheim a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.EmileDurkheim ;
+    skos:prefLabel "Émile Durkheim"@en .
+
+tgs:Persona.Epictetus a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.Epictetus ;
+    skos:prefLabel "Epictetus"@en .
+
+tgs:Persona.GregoryBateson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GregoryBateson ;
+    skos:prefLabel "Gregory Bateson"@en .
+
+tgs:Persona.IvanIllich a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IvanIllich ;
+    skos:prefLabel "Ivan Illich"@en .
+
+tgs:Persona.JosephTainter a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JosephTainter ;
+    skos:prefLabel "Joseph Tainter"@en .
+
+tgs:Persona.MKingHubbert a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MKingHubbert ;
+    skos:prefLabel "M. King Hubbert"@en .
+
+tgs:Persona.MarcusAurelius a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MarcusAurelius ;
+    skos:prefLabel "Marcus Aurelius"@en ;
+    skos:scopeNote "MINIMAL shell only, deliberately. Marcus Aurelius is flagged in the 2026-07-13 handoff entry as a PURER Persona case than any modern guest (his public role IS essentially the entire historical record — no separately-attested private individual exists). That richer treatment belongs to Batch 5 (the Concept->Persona core mechanism migration), not this batch — do not build it out here ahead of that work."@en .
+
+tgs:Persona.MartinLutherKingJr a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MartinLutherKingJr ;
+    skos:prefLabel "Martin Luther King Jr."@en .
+
+tgs:Persona.RachelCarson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RachelCarson ;
+    skos:prefLabel "Rachel Carson"@en .
+
+tgs:Persona.SigmundFreud a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SigmundFreud ;
+    skos:prefLabel "Sigmund Freud"@en .
+
+tgs:Persona.WendellBerry a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WendellBerry ;
+    skos:prefLabel "Wendell Berry"@en .
+
+tgs:Persona.WilliamCatton a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WilliamCatton ;
+    skos:prefLabel "William R. Catton Jr."@en .
+
+tgs:Persona.WilliamStanleyJevons a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WilliamStanleyJevons ;
+    skos:prefLabel "William Stanley Jevons"@en .
+
+tgs:Persona.KateRaworth a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KateRaworth ;
+    skos:prefLabel "Kate Raworth"@en .
+
+tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.NateHagens ;
+    skos:prefLabel "Nate Hagens"@en ;
+    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger, tgs:Relationship.NateHagens_TheOilDrum, tgs:Relationship.NateHagens_PostCarbonInstitute, tgs:Relationship.NateHagens_PeakOilMovement, tgs:Relationship.NateHagens_UniversityOfMinnesota ;
+    skos:scopeNote "Rebuilt 2026-07-14, Batch 3 of the Persona-centered refactor: hasTGSRole and hasPersonalRelationship moved here from tgs:Human.NateHagens (both public-facing facts, not biography) — Human.NateHagens no longer asserts either. EXTENDED Batch 4 (same day): hasPersonalRelationship now includes the 3 organization/school Relationship individuals folded in from persona_human_prototype-8.ttl (Oil Drum, Post Carbon Institute, Peak Oil movement), plus Relationship.NateHagens_UniversityOfMinnesota — which already existed in relationships.ttl before this session but was never actually linked back here, a real pre-existing gap closed in passing. NOTE: this individual still does NOT carry foaf:homepage (Substack/natehagens.com/LinkedIn all remain on Human.NateHagens for now) — that split is an unresolved open question from the 2026-07-12 escalation entry, not resolved in this batch."@en .
+
+tgs:Persona.MatthewMonahan a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MatthewMonahan ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    skos:prefLabel "Matthew Monahan"@en ;
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.MatthewMonahan, 2026-07-14, Batch 3."@en .
+
+tgs:Persona.IainMcGilchrist a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IainMcGilchrist ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor ;
+    skos:prefLabel "Iain McGilchrist"@en ;
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.IainMcGilchrist, 2026-07-14, Batch 3."@en .
+
+tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    skos:prefLabel "Daniel Schmachtenberger"@en ;
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.DanielSchmachtenberger, 2026-07-14, Batch 3."@en .

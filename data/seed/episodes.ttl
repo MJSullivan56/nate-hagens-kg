@@ -60,8 +60,8 @@ tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
     dct:issued "2026-07-08"^^xsd:date ;
     thinkr:discusses tgs:Concept.MoneyAsClaimOnEnergy ;
     dct:subject tgs:Subject.EconomicsAndMonetary ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.MatthewMonahan ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MatthewMonahan ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/226-matthew-monahan> ;
     thinkr:hasReplay <https://youtu.be/yoJPgx2VlRQ>, <https://open.spotify.com/episode/2L2mSUkikXU72yfwuvldRK> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/TGS-226-Matthew-Monahan-Transcript.docx.pdf> .
@@ -72,8 +72,8 @@ tgs:Interview.TGS_85_WisdomNatureAndTheBrain a thinkr:Episode, owl:NamedIndividu
     dct:created "2023-07-13"^^xsd:date ;
     dct:issued "2023-08-23"^^xsd:date ;
     dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.IainMcGilchrist ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.IainMcGilchrist ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/85-iain-mcgilchrist> ;
     thinkr:hasReplay <https://youtu.be/dogVQDydRGQ> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/08/TGS85IainMcGilchristTranscript.docx.pdf> .
@@ -85,8 +85,8 @@ tgs:Interview.TGS_165_WisdomOverPower a thinkr:Episode, owl:NamedIndividual ;
     dct:created "2025-01-02"^^xsd:date ;
     dct:issued "2025-02-26"^^xsd:date ;
     dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.IainMcGilchrist ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.IainMcGilchrist ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/165-iain-mcgilchrist> ;
     thinkr:hasReplay <https://youtu.be/F838KOrQrRg>, <https://open.spotify.com/episode/2Vdchibvh0vABOd0eicQrA> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/02/TGS165IainMcGilchristTranscript.pdf> .
@@ -97,8 +97,8 @@ tgs:Interview.TGS_217_WisdomInAWorldInCrisis a thinkr:Episode, owl:NamedIndividu
     rdfs:comment "dct:subject deliberately omitted — confirmed via search snippet only, not a full page fetch, so the site's own subject tags for this specific episode were never directly confirmed (unlike 226/85/165, each confirmed via live fetch)."@en ;
     dct:created "2026-03-24"^^xsd:date ;
     dct:issued "2026-04-22"^^xsd:date ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.IainMcGilchrist ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.IainMcGilchrist ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/217-iain-mcgilchrist> ;
     thinkr:hasReplay <https://www.youtube.com/watch?v=PQ9_FtLEeoc>, <https://open.spotify.com/episode/2dppmUoSMZsklgRwKeWS8l> .
 
@@ -106,8 +106,8 @@ tgs:Interview.TGS_5_BendNotBreakPart1 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     skos:prefLabel "Bend Not Break Part 1: Energy Blindness"@en ;
     rdfs:comment "Confirmed 2026-07-13 as Part 1 of a real 5-part series discovered while verifying this episode — not independently known before. Note the URL slug's confirmed typo: 'schmactenberger' not 'schmachtenberger', an inconsistency in TGS's own URLs, not an error introduced here."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/05-daniel-schmactenberger> ;
     dct:isPartOf tgs:Series.BendNotBreak ;
     thinkr:seriesPosition 1 .
@@ -116,8 +116,8 @@ tgs:Interview.TGS_20_MaximumPowerHyperAgents a thinkr:Episode, owl:NamedIndividu
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     skos:prefLabel "Bend Not Break Part 2: Maximum Power and Hyper Agents"@en ;
     dct:created "2022-05-25"^^xsd:date ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/20-daniel-schmactenberger> ;
     thinkr:hasReplay <https://www.youtube.com/watch?v=Nkv5mpBA8o4> ;
     dct:isPartOf tgs:Series.BendNotBreak ;
@@ -128,8 +128,8 @@ tgs:Interview.TGS_31_SensemakingUncertaintyPurpose a thinkr:Episode, owl:NamedIn
     skos:prefLabel "Bend Not Break Part 3: Sensemaking, Uncertainty, and Purpose"@en ;
     rdfs:comment "Nate's own Substack post about this episode explicitly says the conversation diverged from its planned topic, 'and this divergence means we've extended this Bend Not Break series to (at least) 5 installments' — this is the episode where the series grew from its original shorter plan."@en ;
     dct:created "2022-08-10"^^xsd:date ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/31-daniel-schmachtenberger> ;
     thinkr:hasReplay <https://www.youtube.com/watch?v=kTFqnPEyweE> ;
     dct:isPartOf tgs:Series.BendNotBreak ;
@@ -140,8 +140,8 @@ tgs:Interview.TGS_42_ModelingDriversMetacrisis a thinkr:Episode, owl:NamedIndivi
     skos:prefLabel "Bend Not Break Part 4: Modeling the Drivers of the Metacrisis"@en ;
     dct:created "2022-10-26"^^xsd:date ;
     thinkr:discusses tgs:Concept.Metacrisis ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/42-daniel-schmachtenberger> ;
     dct:isPartOf tgs:Series.BendNotBreak ;
     thinkr:seriesPosition 4 .
@@ -150,8 +150,8 @@ tgs:Interview.TGS_50_CriteriaCategoriesResponse a thinkr:Episode, owl:NamedIndiv
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     skos:prefLabel "Bend Not Break Part 5: Criteria and Categories for Response"@en ;
     rdfs:comment "The final installment — confirmed via multiple sources as the series close, though 'How does it end' framing throughout the search results leaves open whether Daniel/Nate consider this genuinely final or just final-for-now."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/50-daniel-schmachtenberger> ;
     thinkr:hasReplay <https://youtu.be/Kep8Fi_rUUI> ;
     dct:isPartOf tgs:Series.BendNotBreak ;
@@ -161,15 +161,15 @@ tgs:Interview.TGS_126_AVisionForBetterment a thinkr:Episode, owl:NamedIndividual
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     skos:prefLabel "A Vision for Betterment"@en ;
     rdfs:comment "URL and all other details not independently verified as of 2026-07-11."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger .
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger .
 
 tgs:Interview.TGS_132_WideBoundaryImpactsOfAI a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     skos:prefLabel "The Wide Boundary Impacts of AI"@en ;
     rdfs:comment "URL and all other details not independently verified as of 2026-07-11 — though a strong unverified candidate replay link was found (https://youtu.be/_P8PLHvZygo, explicitly labeled 'Daniel Schmachtenberger episode on AI' in Ep 85's own show notes), not yet added pending direct confirmation it's actually this specific episode."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
-    thinkr:hasGuest tgs:Human.DanielSchmachtenberger .
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger .
 
 # dct:references — Episode 165's own show notes explicitly linked back to
 # Episode 85 as the "prior TGS Episode" — confirmed via live fetch
@@ -207,7 +207,7 @@ tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividu
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 1): Changing the Future Starts with How You Think"@en ;
     rdfs:comment "STUB as of 2026-07-11 — created purely to demonstrate dct:isPartOf/thinkr:seriesPosition against real, confirmed Frankly numbering. No dates, canonical source, replay, or transcript links yet. Flesh out to the same depth as Episodes 226/85/165/217 before treating as complete."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 1 .
 
@@ -215,7 +215,7 @@ tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 2): Four Variables Shaping the Coming Decades"@en ;
     rdfs:comment "STUB as of 2026-07-11 — same caveat as Part 1: created to demonstrate the Series relationship, not yet fleshed out."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 2 .
 
@@ -223,6 +223,6 @@ tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 3): Uphill Futures in a Downhill World"@en ;
     rdfs:comment "STUB as of 2026-07-11 — same caveat as Parts 1-2, not yet fleshed out."@en ;
-    thinkr:hasHost tgs:Human.NateHagens ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 3 .
