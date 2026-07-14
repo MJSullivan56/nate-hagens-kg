@@ -4,7 +4,165 @@
 chronological order, LATEST FIRST, per MJSullivan's request. Section
 dates are preserved in each header. Within a single date, sub-ordering
 is a best-effort reconstruction from internal cross-references — flag
-anything that reads out of order.
+anything that reads out of order. **2026-07-14 update: session cut off
+before this doc was refreshed live — the top section below was
+reconstructed after the fact from the tail of that conversation, so
+treat its internal ordering as reliable but its completeness as
+possibly missing earlier moves from the same session that occurred
+before the point the recovered transcript begins.**
+
+## SESSION CUT OFF (2026-07-14): Persona-centered architecture fully
+## rebuilt and stress-tested; core mechanism migration still the real
+## next step
+
+**Status: prototype-only (`persona_human_prototype-8.ttl`), NOT yet
+folded into the real graph.** Picked up directly from the MAJOR
+GENERALIZATION entry immediately below and executed against it.
+
+**THE final, settled principle — no Human-to-Human relationships
+anywhere in this graph:**
+> There will be Persona-to-Human relationships (via `actsThrough`
+> only — a `Persona` pointing back to its `Human`). Every OTHER
+> relationship in the graph is Persona-to-something: Persona↔Persona
+> (guest-to-guest), Persona↔Organization/SchoolOfThought/
+> AcademicInstitution (professional ties), Concept↔Persona
+> (intellectual influence — NOT YET EXECUTED, see gap 3 below),
+> Episode↔Persona (hosting/guesting, already built).
+
+This is a real revision from the "Persona is a proxy for the Human"
+framing settled just two messages earlier in the same thread (where
+`Relationship.hasSubject` stayed `Human`, with `Persona` merely
+cross-referencing via `hasPersonalRelationship`/
+`hasProfessionalRelationship` held on both individuals). Both readings
+were internally coherent; this session explicitly chose the more
+sweeping one: `Human` is now a **pure leaf node** — biographical facts
+only (name, birthdate, earned credentials, employment history),
+reachable by exactly one relationship type (`actsThrough`, incoming
+from its Persona/s) — while `Persona` owns every `Relationship`
+(`hasSubject`/`hasObject` both `Persona`, never `Human`).
+`thinkr:memberOf` (legal/formal weight) moves back to being asserted
+via the Persona-owned `Relationship` structure rather than a flat
+property on either individual; the earlier `thinkr:affiliatedWith`
+property is superseded/dropped as a result.
+
+**Rebuild executed and validated**: `Relationship.hasSubject` flipped
+from `Human` to `Persona` across all 7 real `Relationship` individuals
+in the prototype; the guest relationships (Monahan, McGilchrist,
+Schmachtenberger) flipped from Human↔Human to Persona↔Persona.
+Confirmed via live query: zero `Human` leakage anywhere in
+`Relationship` subjects/objects.
+
+**Real bug caught mid-rebuild, not hypothetical**: all three guest
+`Relationship` individuals (Monahan, McGilchrist, Schmachtenberger)
+silently lost their actual property declarations somewhere during an
+earlier rebuild pass in the same thread — only bare references to them
+survived elsewhere in the file. Caught by noticing McGilchrist's
+relationship query came back empty, traced, and all three fully
+reconstructed with original content restored (interaction dates,
+roles, episodes intact). Worth remembering generally: "it parses"
+isn't the same as "it's complete" — worth a verification pass even
+late in a long rebuild session.
+
+**Schema enrichment, same session, two real gaps caught and fixed:**
+1. **Single `thinkr:role` → `subjectRole`/`objectRole` pair.** The old
+   design assumed every `PodcastAppearance` is a clean host/guest
+   binary with the guest's role left implicit; breaks the moment a
+   relationship isn't (co-host, moderator, panelist — `InteractionRole`
+   as a category is already extensible, the missing piece was one role
+   slot per party). Every existing interaction rebuilt with both roles
+   explicit. Proven to matter concretely via the reciprocal Monahan
+   case (Nate hosted him on TGS episode 226; Monahan hosted Nate on his
+   own show "The Regeneration Will Be Funded") — without the fix there
+   was no clean way to distinguish direction except by which property
+   happened to be populated.
+2. **`dcterms:date` added to every `PodcastAppearance`.** Checking
+   revealed some appearances had dates sitting on the real `Episode`
+   individual but never copied onto the interaction blank node; others
+   (Bend Not Break Part 1, episode 50, the off-show Monahan appearance)
+   have no confirmed date at all. Resolved 8 of 10 appearances with
+   real dates; the other 2 get an honest `skos:scopeNote` flagging the
+   date as unconfirmed rather than fabricating one or blocking the
+   interaction from existing. Explicit design choice, confirmed by
+   MJSullivan: date is present-when-known, not a hard requirement —
+   consistent with this project's standing practice of asserting
+   uncertainty rather than omitting the fact.
+
+**prefLabels updated on all 7 `Relationship` individuals** to include
+the relationship type in the label text (e.g. "Nate Hagens'
+professional relationship with Post Carbon Institute"), including the
+one multi-valued case (University of Minnesota, both Academic and
+Professional) reading naturally as "academic and professional" rather
+than needing a workaround. Flagged for later, not now: a third type or
+more multi-valued cases would make hand-written "X and Y" conjunctions
+unwieldy — fine for the current single two-valued case.
+
+**Real merge test against the live graph** (same "what insights, what
+gaps" question asked in an earlier session, re-run for real this time
+by actually merging the prototype and running live queries):
+
+What worked:
+- Role-reversal detection (the Monahan case) resolves correctly via a
+  real query — only possible because of the subjectRole/objectRole
+  split above.
+- A full professional-footprint query for Nate (institutional ties,
+  type, provenance, honest about unconfirmed dates) works cleanly in
+  one query.
+
+What's confirmed still broken/missing, not speculation:
+1. **Real IRI collision on merge, demonstrated not hypothesized.**
+   `relationships.ttl` (already adopted into the real graph earlier the
+   same night) already has an individual at the same IRI the prototype
+   reuses — built Human-to-Human. Merged naively, one individual ends
+   up with two subjects (`Human.NateHagens` and `Persona.NateHagens`),
+   two objects, two labels, four interaction blank nodes, all
+   simultaneously true. Folding this in requires a real migration —
+   removing the old Human-based triples, not just adding Persona-based
+   ones alongside — same category of work as the `Person`→`Human`
+   rename described further down this doc.
+2. **Only Nate has a rich Persona.** McGilchrist's real credentials
+   (Royal College Fellowship, Ralston College Chancellorship) are still
+   sitting in prose, not modeled — his `hasProfessionalRelationship`
+   count is confirmed zero. The pattern exists but has only been
+   applied to one person so far.
+3. **The graph's actual core mechanism is still untouched.** Every
+   `Concept`→`influencedBy`/`echoesIdeaOf` link still points at
+   `Human`, confirmed zero pointing at `Persona` — meaning the
+   "sweeping implication" flagged in the MAJOR GENERALIZATION entry
+   immediately below (that `Concept`↔thinker links, reaching
+   `linknotes.ttl`/`crosswalknotes.ttl`, are where Persona should
+   matter most, not just the episode layer) has NOT been executed.
+   This whole session built and stress-tested the pattern without yet
+   touching the thing it was ultimately meant to fix.
+
+**Documentation debt surfaced, not yet fixed**: the prototype file's
+own header comment (marked "v4") still describes the SUPERSEDED
+"Persona is a proxy, hasSubject stays Human" model — stale relative to
+the actual body of the file, which is fully rebuilt to the
+Persona-owns-relationships model. Needs updating before this file is
+trusted as a reference next session.
+
+**Explicitly flagged by MJSullivan as needing to travel beyond this
+doc**: the "Persona takes a back seat to Human... no, Persona IS the
+load-bearing entity, Human takes a back seat" framing inverts what most
+general-purpose ontology engineers (FOAF, schema.org, DOLCE background)
+will instinctively expect — worth a clear, standalone explanation in
+`CLAUDE.md` or the skill documentation itself, not just buried in this
+handoff doc. NOT yet written — `CLAUDE.md` currently has no
+Persona/Human architecture section at all (confirmed by search of the
+uploaded copy).
+
+**Not yet done, explicit next-session scope, in likely priority order:**
+1. Real, non-destructive migration of `relationships.ttl`'s existing
+   Human-based individuals to Persona-based (resolves the IRI collision
+   above).
+2. The actual core-mechanism migration: `Concept`→`influencedBy`/
+   `echoesIdeaOf`/`contrastsWith` and `CrosswalkNote.aboutEntity`
+   repointed from `Human` to `Persona` — the biggest, most consequential
+   piece, not yet even fully scoped.
+3. Build out a real (non-minimal) Persona for McGilchrist.
+4. Write the Persona-over-Human architectural rationale into
+   `CLAUDE.md`.
+5. Fix the prototype file's stale header comment.
 
 ## MAJOR GENERALIZATION (2026-07-13, same thread): historical figures
 ## are PURER Persona cases than modern guests, and this reaches the
