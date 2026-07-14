@@ -25,16 +25,58 @@ nate-hagens-kg/
 ├── Makefile
 ├── docs/
 │   ├── sidecar-cleanup-handoff.md   (this file)
-│   └── docs_README.md
+│   ├── docs_README.md
+│   └── persona_human_prototype-8.ttl  (moved here 2026-07-14, out of data/seed/ —
+│                                        historical/reference only, its non-canonical
+│                                        content (tgs:Human.NathanHagens, a different
+│                                        Schmachtenberger interaction subset) must never
+│                                        be loaded by load_oxigraph.sh's *.ttl glob)
 ├── scripts/
 │   ├── tgs_store/                   (Oxigraph RocksDB storage — gitignored, regenerated via load_oxigraph.sh)
 │   ├── load_oxigraph.sh             (bulk-loads every data/seed/*.ttl into tgs_store via `oxigraph load`)
 │   ├── query_examples.sparql
 │   └── compute_confidence.py        (derives LinkNote.calculatedConfidence from Evidence — never hand-asserted)
-├── extraction/
+├── extraction/                      (expanded 2026-07-14 — see the "extraction/
+│   │                                  investigation" entry below for full context;
+│   │                                  two genuinely different maturity levels live here,
+│   │                                  see extraction_README.md's own framing)
+│   ├── download_transcripts.py      (WORKING — sitemap-based, resumable, respects Crawl-delay)
+│   ├── download_manifest.csv        (tracks what's downloaded; resumable — skipped on rerun)
+│   ├── no_transcript_available.csv  (tracks confirmed-no-transcript episodes; resumable)
+│   ├── transcripts_raw/             (raw downloaded source files, pre-text-extraction)
+│   ├── transcripts_text_cache/      (WORKING, real content — 115 files as of 2026-07-14;
+│   │                                  gitignored, text never committed, per this project's
+│   │                                  standing copyright discipline)
+│   ├── match_substack_summaries.py  (WORKING — Frankly-number exact match, fuzzy-title fallback)
+│   ├── substack_summaries_index.csv (metadata only — extracted text stays in local cache)
+│   ├── substack_text_cache/
+│   ├── substack_summaries_raw/
+│   ├── index_named_entities.py      (WORKING — spaCy NER, two-layer: expensive raw pass
+│   │                                  cached once per doc, cheap `--refilter` rerunnable)
+│   ├── entity_index.duckdb          (raw NER cache)
+│   ├── entity_index.csv
+│   ├── top_persons.py               (WORKING — ranked PERSON-entity worklist for bootstrapping)
+│   ├── promote_to_rdf.py            (writes reviewed staging rows into data/generated/ —
+│   │                                  never hand-edit that output, edit staging + rerun)
+│   ├── init_staging_db.py           (sets up the DuckDB review-queue tables)
+│   ├── cited_sources_raw/
+│   │   └── California Doughnut...Report 2025.pdf
+│   └── extraction_README.md         (CAVEAT: on 2026-07-14 MJSullivan initially said this
+│                                      file doesn't exist and shared the repo-ROOT README.md
+│                                      instead — but a screenshot the same session showed a
+│                                      file literally named extraction_README.md inside this
+│                                      folder, dated 2026-07-12. Never resolved which is
+│                                      authoritative. The content actually used this session —
+│                                      confirming Steps 1-2 + entity-triage are WORKING, Steps
+│                                      3-6 (LLM concept/link mining) are aspirational, never
+│                                      run at scale — came from whatever MJSullivan pasted,
+│                                      not independently confirmed against the file on disk.
+│                                      Worth a `diff` next session before trusting either copy.)
 └── data/
     └── seed/                        (one-class-one-file governance — every .ttl here is loaded as a unit)
-        ├── tgs-core.ttl             (schema: classes, properties, Category enumerations)
+        ├── tgs-core.ttl             (schema: classes, properties — zero individuals as of 2026-07-14)
+        ├── enumerations.ttl         (all thinkr:Category-marked classes + their enumerated
+        │                             individuals — split out of tgs-core.ttl 2026-07-14)
         ├── humans.ttl
         ├── personas.ttl
         ├── relationships.ttl
@@ -132,6 +174,218 @@ walked through rather than assumed self-explanatory (e.g. distinguishing
 a connection fails, rather than a single generic fix). This isn't a
 one-off caveat for this thread — it should shape how technical
 instructions are given in general on this project going forward.
+
+## PAUSED (2026-07-14, third conversation of the day): insight-gap
+## review led to a real extraction/ investigation — closing the
+## `discusses` gap looks doable, one hand-verified pilot done, more
+## needed before automating
+
+**Starting point**: re-ran the "what insights, what gaps" question
+against the now-fully-migrated Persona graph (post Batches 0-6). Real
+findings, via live query, not speculation:
+- Only 2 of 14 Episodes have any `thinkr:discusses` link to a `Concept`
+  (`TGS_226`→`MoneyAsClaimOnEnergy`, `TGS_42`→`Metacrisis`) — the
+  property built specifically to close the "zero Episode->Concept
+  links" gap flagged back on 2026-07-13, still 12 episodes short.
+- 7 Concepts have zero intellectual lineage of any kind asserted
+  (`CarbonPulse`, `EROI`, `EnergySlaves`, `GreatSimplification`,
+  `GrowthImperative`, `HumanPredicament`, `TheoryOfChange`) — though
+  some of these may be genuinely Nate-original with no historical
+  lineage to trace, not necessarily a modeling gap.
+- `Persona.NateHagens` has NO `CrosswalkNote` — no DBpedia/Wikidata
+  mapping exists for the seed subject of the entire graph.
+- Persona richness is heavily skewed toward Nate (16 predicates) with
+  every other Persona flat at 4-7 — expected given today's earlier
+  batches were architecture, not content enrichment.
+- Nate's `memberOf` list has 2 organizations (University of Vermont,
+  University of Chicago) with no matching structured `Relationship` —
+  same category of gap Batch 4 already closed for Oil Drum/Post
+  Carbon/Peak Oil, just not extended to these two yet.
+
+**Decision**: closing the `discusses` gap ranked as the highest
+insight-value-per-effort target, since it's the piece that would let
+you query "what ideas came up across the show" at all, not just "who
+was on which episode." MJSullivan confirmed the transcript library +
+NER extraction infrastructure exists, though was unsure of its current
+state — investigated for real rather than assuming.
+
+**What `extraction/`'s own README says exists vs. is aspirational**
+(content as pasted by MJSullivan this session — see the
+LOCAL ENVIRONMENT REFERENCE section above for an unresolved caveat
+about whether this matches the actual `extraction_README.md` on disk):
+- WORKING: transcript download (sitemap-based, resumable), Substack
+  summary matching, and named-entity triage (`index_named_entities.py`
+  / `top_persons.py`, spaCy-based, two-layer expensive-NER +
+  cheap-refilter design).
+- ASPIRATIONAL, NEVER RUN AT SCALE: the actual LLM concept/link mining
+  plan (Steps 3-6) — per `CLAUDE.md`'s own prior note, only tested
+  against fake staging data, never real transcripts. This is precisely
+  the step that would produce `discusses` links.
+- A real, previously undocumented design gap surfaced by reading this
+  README closely: `discusses` is never mentioned in the Evidence/
+  Candidate-Curated review section that `echoesIdeaOf`/`influencedBy`/
+  `contrastsWith` explicitly get (Step 4-5) — no stated confidence
+  model for it at all. Flagged as an open decision, not resolved
+  unilaterally.
+
+**Real findings from actually inspecting `transcripts_text_cache/`
+(115 files, uploaded this session)**, not assumptions:
+- ZERO of the 9 uncovered Interview-type episodes (`TGS_5`, `20`, `31`,
+  `42`, `50`, `85`, `126`, `132`, `165`, `217`) have a downloaded
+  transcript in the cache at all — a gap in the source library itself,
+  not something extraction can fix by re-running anything. Worth
+  checking against `no_transcript_available.csv`/`download_manifest.csv`
+  next session to see if this is already known/tracked or a fresh
+  discovery.
+- Of the 3 uncovered Monologues, `Frankly-138` and `Frankly-139` DO
+  have real transcripts; `Frankly-145` has only show notes, not a full
+  transcript — another real source-library gap, not an extraction bug.
+- Bonus, out-of-scope-for-now discovery: an unmodeled Reality Roundtable
+  transcript (`RR10...Schmachtenerger...`, filename misspelled) very
+  likely featuring Daniel Schmachtenberger on an episode format
+  (`RR`/Roundtable) this graph has never seeded at all — zero
+  Roundtable `Episode` individuals exist currently. Flagged as a
+  separate future "new episode" discovery, deliberately not chased
+  this session.
+
+**One real hand-verified pilot completed**: read `Frankly-138`
+("How to Think About the Future, Part 1") in full and manually ran what
+Step 3 would automate — checked all 19 existing Concepts against the
+transcript for substantive discussion vs. mere name-drop. Results:
+- Confident matches: `ComplexityCollapse`, `Wetware` — both sustained,
+  multi-paragraph discussion, not incidental.
+- Weaker/genuine-judgment-call matches: `HumanPredicament` (the exact
+  phrase used once, briefly), `Metacrisis` (the idea is clearly present
+  — coupled, mutually-amplifying crises — but the term itself never
+  appears), `GreatSimplification` (invoked as one of several scenario
+  branches, but also literally the show's own name, genuinely
+  ambiguous), `TheoryOfChange` (loosely echoed, not the specific
+  framing from the concept's own definition).
+- Correctly excluded despite the word appearing — this is the important
+  part, the exact failure mode Step 3 exists to catch: `PeakOil`
+  (appears only inside a list of professional-identity camps, a
+  name-drop) and `CircleOfTrustLocalism` (one passing phrase at the very
+  end, undeveloped).
+- Two strong NEW concept candidates surfaced, exactly matching Step 3's
+  item 2: "Scenario Thinking" (explicitly named, defined, the organizing
+  device for this whole 4-part series) and "Shortfall Risk" (explicitly
+  defined, borrowed from Hagens' own Salomon Brothers background,
+  reapplied to ecological/civilizational thresholds) — neither exists
+  in `concepts.ttl` currently.
+- Incidental corroboration, not a new fact: Iain McGilchrist mentioned
+  by name as a recent-or-upcoming guest, consistent with the existing
+  `TGS_217` relationship (dated 2026-03-24).
+
+**This pilot concretely resolved the open `discusses`-confidence-model
+question, at least as a recommendation**: given how genuinely
+ambiguous the `GreatSimplification`/`TheoryOfChange` cases were, even
+under careful by-hand review, `discusses` should get the same
+Evidence-backed Candidate->Curated review treatment as
+`echoesIdeaOf`/`influencedBy`/`contrastsWith` — NOT a direct
+high-confidence assertion like `hasHost`/`hasGuest`. Recommendation
+only, not yet formally confirmed by MJSullivan.
+
+**Explicitly NOT done, next-session starting point:**
+1. Pilot `Frankly-139` too — README's own advice is to validate on a
+   handful before scaling, one episode isn't enough.
+2. Check `download_manifest.csv`/`no_transcript_available.csv` to
+   understand why zero Interview-episode transcripts are downloaded —
+   possibly straightforward to fix by re-running
+   `download_transcripts.py --type interview`, possibly a genuine
+   never-published-transcript situation. Not yet investigated.
+3. Formalize the by-hand Step 3 pass into an actual script once 2-3
+   pilot episodes validate the pattern.
+4. Get MJSullivan's explicit confirmation on the `discusses`
+   confidence-model recommendation above before building anything that
+   assumes it.
+5. Resolve the `extraction_README.md` file-vs-pasted-content discrepancy
+   flagged in the LOCAL ENVIRONMENT REFERENCE section.
+6. The RR10 Roundtable discovery, whenever it becomes a priority — would
+   require first deciding whether to seed a `RoundtableEpisode`
+   type/individual pattern at all, not yet scoped.
+
+## RESOLVED (2026-07-14, same day as the entry below, different
+## conversation): the Persona-centered refactor is COMPLETE and
+## live-verified — Batches 0 through 6
+
+**This closes out the "SESSION CUT OFF" entry immediately below.**
+Everything that entry flagged as prototype-only, not-yet-executed, or
+next-session scope is now done, loaded into the real Oxigraph store,
+and validated via live SPARQL query at every step — not just parsed
+successfully. Full batch-by-batch detail lives in this session's own
+transcript; this entry is the closing summary a future session (or a
+future you) needs without re-reading the whole thing.
+
+**Batches 0-2** (schema, 25 minimal `Persona` shells for every existing
+`Human`, `Episode.hasHost`/`hasGuest` migrated to `Persona`) — done,
+live-verified.
+
+**Batch 3** (`relationships.ttl` fully rebuilt: `hasSubject`/`hasObject`
+→ `Persona` on all 4 original relationships, `thinkr:role` retired in
+favor of explicit `subjectRole`/`objectRole` on every interaction,
+`dcterms:date` added wherever `episodes.ttl` confirms one with an
+honest `scopeNote` where it doesn't, prefLabels naming the relationship
+type. Also migrated `hasPersonalRelationship`/`hasPersonEntityType`/
+`hasProfessionalRole` domains `Human`→`Persona` — a scope expansion
+beyond the original plan, made explicitly and flagged at the time, not
+silently folded in. **Closed a real, previously-undetected gap**: Daniel
+Schmachtenberger's `Relationship` only modeled 3 of his 7 confirmed
+`episodes.ttl` guest appearances — expanded to all 7.) — done,
+live-verified.
+
+**Batch 4** (folded in `persona_human_prototype-8.ttl`'s Oil Drum/Post
+Carbon Institute/Peak Oil movement `Relationship` individuals; fixed an
+orphaned `University of Minnesota` `Relationship` that existed but was
+never actually linked back via `hasPersonalRelationship`) — done,
+live-verified.
+
+**File reorganization** (all 31 `owl:NamedIndividual`s AND their 9
+owning `Category` classes moved out of `tgs-core.ttl` into a new
+`enumerations.ttl` — one-class-one-file restored for that family.
+First attempt at this had a real bug, a fragile string-splitting script
+that misaligned classes with the wrong instance groups — caught by
+actually reading the output rather than trusting the script ran without
+an error, then rebuilt correctly.) — done, live-verified.
+
+**Batch 5** (the actual core mechanism: `influencedBy`/`echoesIdeaOf`/
+`contrastsWith`/`relatesTo` range flipped `Human`→`Persona`; every
+instance in `linknotes.ttl` repointed — both the direct `Concept`
+statements AND every `LinkNote.aboutObject`/`aboutSubject`, since each
+pair asserts the same fact and migrating one without the other would
+have split it; all 29 Human-targeting `CrosswalkNote.aboutEntity`
+triples repointed, the 11 non-Human ones correctly left alone;
+`thinkr:appliesTo` migrated too on MJSullivan's explicit approval — its
+one instance turned out to already be repointed as a side effect of an
+earlier blanket text replacement, only the schema domain needed a
+follow-up fix to match.) — done, live-verified. **This was the
+migration flagged as "not yet executed, not even fully scoped" across
+two separate earlier sessions — it's the reason `LinkNote`/`Evidence`/
+`compute_confidence.py` exist at all, not a peripheral cleanup.**
+
+**Batch 6** (documentation close-out): the full architectural rationale
+written into `CLAUDE.md` as a new `0f.` governance entry, alongside the
+existing `0a`-`0e` foundational decisions. `persona_human_prototype-8.ttl`'s
+stale header comment (still describing the superseded "Persona is a
+proxy" model despite the file's own body having moved on) corrected.
+This entry.
+
+**What's still genuinely open, not resolved today, worth carrying
+forward:**
+1. Which specific `foaf:homepage` links (Substack/personal site/
+   LinkedIn) belong on `Persona` vs. stay on `Human` — flagged as an
+   open question back on 2026-07-12, still not decided.
+2. `thinkr:memberOf` stays flat on `Human` rather than being fully
+   converted to `Relationship` individuals for every organization —
+   confirmed intentional (coexists with the structured version, per the
+   University of Minnesota precedent), not a gap, but worth knowing this
+   was a deliberate scope boundary, not an oversight.
+3. `CLAUDE.md`'s "Current data state" and "Backlog" sections (further
+   down in that file) were NOT touched today and are stale relative to
+   everything in this doc — genuinely out of scope for this pass, not
+   forgotten.
+4. No SHACL validator or equivalent confirmed to exist for this repo —
+   still genuinely unknown as of this writing, per the Local Environment
+   Reference section above.
 
 ## SESSION CUT OFF (2026-07-14): Persona-centered architecture fully
 ## rebuilt and stress-tested; core mechanism migration still the real

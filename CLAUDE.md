@@ -259,7 +259,92 @@ structural changes:
     resolved after the rename, confirmed via live query that the 7/5/3
     split landed exactly as counted beforehand.
 
+0f. **Architectural revision (2026-07-14): `thinkr:Persona` introduced
+    as the graph's primary unit of analysis; `thinkr:Human` demoted to a
+    pure biographical leaf node.** The single biggest structural change
+    made in this project to date — worth understanding before touching
+    any Human/Persona-adjacent file. Full blow-by-blow lives in
+    `docs/sidecar-cleanup-handoff.md` (the "SESSION CUT OFF (2026-07-14)"
+    entry and everything below it); this is the load-bearing summary.
+
+    **The principle, stated plainly:** there are no Human-to-Human
+    relationships anywhere in this graph. `thinkr:actsThrough` (Persona
+    -> Human) is the ONLY property that ever touches a `Human` from the
+    relationship side. Every other relationship — who hosted/guested an
+    Episode, who has a professional/personal `Relationship`, which
+    external database a `CrosswalkNote` maps, and critically, which
+    `Concept` a thinker influenced or echoed or applies to — runs through
+    `Persona`, never `Human` directly. `Human` holds only genuine
+    biography: legal name, birthdate, earned credentials, employment
+    history. This inverts what most general-purpose ontology backgrounds
+    (FOAF, schema.org, DOLCE) would assume — Person/Human as the
+    load-bearing entity, roles as annotations on top. That assumption is
+    backwards FOR THIS PROJECT SPECIFICALLY: a thinker ontology's entire
+    job is modeling public intellectual reach, and every fact this graph
+    actually cares about (who influenced whom, who guested with whom,
+    who's affiliated with which institution) is definitionally about the
+    public role, never the private biography. `Human` still exists
+    underneath (biographical anchor) — it just correctly stops being
+    architecturally central.
+
+    **Why this matters more than it sounds like it should:** the
+    `Concept`->thinker connection (`influencedBy`/`echoesIdeaOf`/
+    `contrastsWith`/`appliesTo`, and `CrosswalkNote.aboutEntity`) is the
+    actual reason `LinkNote`/`Evidence`/`compute_confidence.py` exist at
+    all — it's the graph's real core mechanism, not a peripheral detail.
+    This was flagged as "not yet executed, not even fully scoped" across
+    two separate earlier sessions before finally landing 2026-07-14.
+
+    **Executed as six sequential, independently-validated batches**
+    (schema -> minimal Persona shells for all 25 existing Humans ->
+    Episode hasHost/hasGuest -> full relationships.ttl rebuild
+    (including subjectRole/objectRole replacing the old single-role
+    design, and dcterms:date honesty-over-fabrication) -> folding in
+    organization/school relationships -> the core Concept-facing
+    migration) plus a follow-on file reorganization splitting
+    `thinkr:Category`-marked classes and their enumerated individuals out
+    of `tgs-core.ttl` into `enumerations.ttl` (one-class-one-file
+    restored for that family too). Every batch validated via live SPARQL
+    query against the running Oxigraph store before being considered
+    done, not just parsed successfully — "it parses" and "it's correct"
+    are different claims, learned the hard way mid-session when a
+    class/instance file split was initially built wrong and caught only
+    by actually reading the output, not trusting the script ran without
+    an error.
+
+    **Two real bugs caught and fixed as a byproduct, not the point of
+    the exercise:** three guest `Relationship` individuals had silently
+    lost their actual property declarations in an earlier, unrelated
+    rebuild (only bare references survived); `relationships.ttl` was
+    missing 4 of Daniel Schmachtenberger's 7 confirmed `episodes.ttl`
+    guest appearances, a different incomplete subset than an earlier
+    prototype file had independently built.
+
+    **What's still open, deliberately not resolved 2026-07-14:** which
+    specific `foaf:homepage` links (Substack/personal site/LinkedIn)
+    belong on `Persona` vs. stay on `Human` — a real judgment call, not
+    yet made. `thinkr:memberOf` stays flat on `Human` for now rather than
+    being fully converted to `Relationship` individuals — coexists with
+    the structured version rather than being superseded by it, confirmed
+    intentional via the University of Minnesota case, which correctly
+    carries both.
+
 0. **Emerging principle (2026-07-11, not yet fully tested): OWL for formal
+   relationships, SKOS for informal ones.** Named explicitly by MJSullivan
+   after noticing the pattern already forming — `thinkr:Person`/`Concept`/
+   `Evidence`/`Source`/`ConfidenceType` etc. are OWL classes with strict,
+   single-purpose axioms (a `LinkNote` has a valid `calculatedConfidence`
+   or it doesn't — no ambiguity, no multi-parent messiness), while the
+   Subject taxonomy (see `data/seed/subjects.ttl`) is SKOS specifically
+   because real-world topic classification is genuinely multi-parent and
+   fuzzy (a Concept can legitimately belong under more than one Subject).
+   Deliberately NOT formalized as a hard rule yet — "let's see what the
+   data tells us" was the explicit call, consistent with this project's
+   general bottom-up-from-real-need methodology (see the earlier
+   bottom-up-vs-top-down content strategy discussion). Treat this as a
+   lens for judgment calls going forward (does a new relationship need
+   OWL's strictness, or SKOS's looser semantics?), not as a rule to
+   enforce mechanically before there's enough content to test it against.
    relationships, SKOS for informal ones.** Named explicitly by MJSullivan
    after noticing the pattern already forming — `thinkr:Person`/`Concept`/
    `Evidence`/`Source`/`ConfidenceType` etc. are OWL classes with strict,

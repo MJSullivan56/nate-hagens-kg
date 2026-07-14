@@ -1,0 +1,287 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ============================================================
+# PROTOTYPE ONLY — v8, but the header below was STALE relative to this
+# file's own body for some time and has now been corrected (fixed
+# 2026-07-14, flagged as a known doc-drift bug in
+# docs/sidecar-cleanup-handoff.md's "SESSION CUT OFF (2026-07-14)"
+# entry). The body of this file uses hasSubject=Persona throughout (see
+# the Relationship individuals below) — the FINAL principle from the
+# session this prototype was built in, NOT the "Persona is a proxy for
+# the Human" framing a previous draft of this comment described. That
+# proxy framing (hasSubject stays Human, Persona merely
+# cross-references via hasPersonalRelationship/hasProfessionalRelationship
+# held on BOTH individuals) was explicitly REVISED two messages later in
+# the same conversation, once it became clear that a thinker ontology's
+# actual purpose (modeling public intellectual reach, not biography)
+# makes Persona the primary unit of analysis, not a mere proxy. Human
+# became a pure leaf node instead — biographical facts only, reachable
+# solely via thinkr:actsThrough — and every Relationship's hasSubject/
+# hasObject became Persona. thinkr:memberOf staying on Human and
+# thinkr:affiliatedWith being dropped in favor of hasProfessionalRelationship
+# are both still accurate as described below; only the hasSubject/Persona
+# framing above them was stale.
+#
+# This prototype was later formally adopted into the real graph across
+# Batches 0-5 of the Persona-centered refactor (2026-07-14) — see
+# docs/sidecar-cleanup-handoff.md for the full migration record. The
+# real graph now matches this file's Persona-owns-relationships shape,
+# with some real differences worth knowing if diffing against it:
+# real IRIs use tgs:Human.NateHagens (this file uses the non-canonical
+# tgs:Human.NathanHagens), and Daniel Schmachtenberger's interaction set
+# in the real graph is the union of this file's 5 interactions (5, 20,
+# 31, 42, 50) and the real graph's own previously-existing 3 (5, 126,
+# 132) — 7 total, not the 5 modeled here.
+# ============================================================
+
+
+#############################################
+# Classes and Properties
+#############################################
+
+thinkr:Persona a owl:Class ;
+    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:comment "The public-facing identity a Human operates under — a PROXY for the Human, not an independent actor. Never owns a Relationship (hasSubject is always the Human); surfaces the Human's relationships through hasPersonalRelationship/hasProfessionalRelationship as cross-references instead. New Persona warranted ONLY when the public name/brand itself differs (Cher-vs-legal-name level), not for different professional capacities under one name (use multiple hasTGSRole values instead)."@en ;
+    skos:prefLabel "Persona"@en ;
+    .
+
+thinkr:actsThrough a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Human ;
+    rdfs:comment "Links a Persona back to the Human(s) behind it. Naming/directionality from DOLCE+DnS Ultralite's actsThrough/actsFor pair."@en ;
+    skos:prefLabel "acts through"@en ;
+    .
+
+thinkr:hasPersona a owl:ObjectProperty ;
+    rdfs:domain thinkr:Human ;
+    rdfs:range thinkr:Persona ;
+    skos:comment "Explicit inverse of thinkr:actsThrough. Multi-valued: Human->Persona is 1..n."@en ;
+    skos:prefLabel "has persona"@en ;
+    .
+
+thinkr:hasHost a owl:ObjectProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range thinkr:Persona ;
+    skos:prefLabel "has host"@en ;
+    .
+
+thinkr:hasGuest 
+    rdfs:domain thinkr:Episode ;
+    rdfs:range thinkr:Persona ;
+    skos:prefLabel "has guest"@en ;
+    .
+
+thinkr:subjectRole a owl:ObjectProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    rdfs:range thinkr:InteractionRole ;
+    rdfs:comment "The role played by the containing Relationship's hasSubject in THIS SPECIFIC appearance — explicit, not inferred."@en ;
+    skos:prefLabel "subject role"@en ;
+    .
+
+thinkr:objectRole a owl:ObjectProperty ;
+    rdfs:domain thinkr:PodcastAppearance ;
+    rdfs:range thinkr:InteractionRole ;
+    rdfs:comment "The role played by the containing Relationship's hasObject in THIS SPECIFIC appearance — explicit, not inferred. Together with subjectRole, replaces the old singular thinkr:role, which only ever captured one party's role and left the other permanently implicit."@en ;
+    skos:prefLabel "object role"@en ;
+    .
+
+
+#############################################
+# Human Instances
+#############################################
+
+tgs:Human.NathanHagens a thinkr:Human, owl:NamedIndividual ;
+    foaf:givenName "Nathan"@en ;
+    foaf:familyName "Hagens"@en ;
+    dbo:birthDate "1969"^^xsd:gYear ;
+    foaf:homepage <https://www.linkedin.com/in/nate-hagens-004810b/> ;
+    thinkr:memberOf 
+        tgs:AcademicInstitution.UniversityOfVermont, 
+        tgs:AcademicInstitution.UniversityOfChicago, 
+        tgs:Organization.TheOilDrum, 
+        tgs:Organization.PostCarbonInstitute, 
+        tgs:SchoolOfThought.PeakOilMovement, 
+        tgs:AcademicInstitution.UniversityOfMinnesota ;
+    thinkr:hasPersona tgs:Persona.NateHagens ;
+    skos:scopeNote "REVISED v5: kept genuinely FLAT per MJSullivan's explicit correction — memberOf only, no Relationship cross-references at all. hasPersonalRelationship/hasProfessionalRelationship now live SOLELY on Persona.NateHagens below, even though each Relationship's own hasSubject still correctly points back to THIS individual as the true legal party — that underlying fact doesn't require a redundant pointer here too."@en ;
+    rdfs:comment "NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page. Credentials EARNED personally: PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004."@en ;
+    skos:prefLabel "Nathan Hagens"@en ;
+    .
+
+#############################################
+# Persona Instances
+#############################################
+
+tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.NathanHagens ;
+    foaf:homepage 
+        <https://www.natehagens.com/>, 
+        <https://natehagens.substack.com/> ;
+    thinkr:hasTGSRole 
+        thinkr:ProfessionalRole.Educator, 
+        thinkr:ProfessionalRole.Blogger, 
+        thinkr:ProfessionalRole.Author, 
+        thinkr:ProfessionalRole.InstituteExecutive ;
+    thinkr:hasPersonalRelationship 
+        tgs:Relationship.NateHagens_MatthewMonahan, 
+        tgs:Relationship.NateHagens_IainMcGilchrist, 
+        tgs:Relationship.NateHagens_DanielSchmachtenberger ;
+    thinkr:hasProfessionalRelationship 
+        tgs:Relationship.NateHagens_TheOilDrum, 
+        tgs:Relationship.NateHagens_PostCarbonInstitute, 
+        tgs:Relationship.NateHagens_PeakOilMovement, 
+        tgs:Relationship.NateHagens_UniversityOfMinnesota ;
+    rdfs:comment "ONE public identity, MULTIPLE roles. A PROXY, not an owner — every relationship below is a cross-reference to a relationship whose real hasSubject is Human.NathanHagens, surfaced here as part of the public narrative. TEACHING tense conflict, RealityBlind connection, etc. all live here."@en ;
+    skos:prefLabel "Nate Hagens"@en ;
+    .
+
+tgs:Persona.MatthewMonahan a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MatthewMonahan ;
+    rdfs:comment "MINIMAL persona — conferred by his one TGS appearance (Episode 226), not a cultivated public brand distinct from Human.MatthewMonahan. Same name as the Human on purpose; nothing here claims a genuinely separate identity, unlike Nate's persona."@en ;
+    skos:prefLabel "Matthew Monahan"@en ;
+    .
+
+tgs:Persona.IainMcGilchrist a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IainMcGilchrist ;
+    rdfs:comment "MINIMAL persona for now — conferred by his 3 TGS appearances. Arguably a candidate for a RICHER persona later (he's a genuine public author/psychiatrist with his own independent public profile), not built out here — same 'don't build ahead of real need' discipline as everything else tonight."@en ;
+    skos:prefLabel "Iain McGilchrist"@en ;
+    .
+
+tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanielSchmachtenberger ;
+    rdfs:comment "MINIMAL persona — conferred by his TGS appearances (8 total, including the Bend Not Break series)."@en ;
+    skos:prefLabel "Daniel Schmachtenberger"@en ;
+    .
+
+#############################################
+# Relationship Instances
+#############################################
+
+tgs:Relationship.NateHagens_TheOilDrum a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Organization.TheOilDrum ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:scopeNote "End boundary is an INFERENCE, not directly confirmed for Nate specifically — Organization.TheOilDrum's own definition says the site was 'Active until 2013'; his role there necessarily ended no later than that, but no exact departure date is independently confirmed. Deliberately NOT asserting a fabricated date — the uncertainty itself is the honest fact."@en ;
+    skos:prefLabel "Nate Hagens' professional relationship with The Oil Drum"@en ;
+    .
+
+tgs:Relationship.NateHagens_PostCarbonInstitute a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Organization.PostCarbonInstitute ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:scopeNote "Currently sits on the Board — ongoing, no start date confirmed, no end (still active)."@en ;
+    skos:prefLabel "Nate Hagens' professional relationship with Post Carbon Institute"@en ;
+    .
+
+tgs:Relationship.NateHagens_PeakOilMovement a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:SchoolOfThought.PeakOilMovement ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:scopeNote "No specific dates confirmed — professional/intellectual community association via his pre-TGS career background, not a formal joinable organization."@en ;
+    skos:prefLabel "Nate Hagens' professional relationship with the Peak Oil movement"@en ;
+    .
+
+tgs:Relationship.NateHagens_UniversityOfMinnesota a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:AcademicInstitution.UniversityOfMinnesota ;
+    thinkr:hasRelationshipType 
+        thinkr:RelationshipType.Academic, 
+        thinkr:RelationshipType.Professional ;
+    skos:scopeNote "THE original AffiliationNote gap case, now resolved via this structure: genuine tense conflict between sources — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. 'Eight years' gives a real DURATION even without exact start/end dates. Not resolved either way — flagged honestly."@en ;
+    skos:prefLabel "Nate Hagens' academic and professional relationship with University of Minnesota"@en ;
+    .
+
+tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MatthewMonahan ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_226_CanMoneyServeLife ;
+          dcterms:date "2026-06-29"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Guest ;
+          thinkr:objectRole thinkr:InteractionRole.Host ;
+          thinkr:showName "The Regeneration Will Be Funded"@en ;
+          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above. hostedBy dropped as redundant once objectRole existed — hasObject (Persona.MatthewMonahan) + objectRole (Host) together already say who hosted, without needing a third property to say it a different way."@en ] ;
+    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
+    .
+
+tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.IainMcGilchrist ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+          dcterms:date "2023-07-13"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_165_WisdomOverPower ;
+          dcterms:date "2025-01-02"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+          dcterms:date "2026-03-24"^^xsd:date ] ;
+    skos:prefLabel "Nate Hagens' professional relationship with Iain McGilchrist"@en ;
+    .
+
+tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DanielSchmachtenberger ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_5_BendNotBreakPart1 ;
+          skos:scopeNote "No exact air date independently confirmed as of this writing." ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_20_MaximumPowerHyperAgents ;
+          dcterms:date "2022-05-25"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_31_SensemakingUncertaintyPurpose ;
+          dcterms:date "2022-08-10"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+          dcterms:date "2022-10-26"^^xsd:date ] ,
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
+          skos:scopeNote "No exact air date independently confirmed as of this writing." ] ;
+    skos:scopeNote "One source describes 'half a dozen' appearances — only a subset individually confirmed/modeled."@en ;
+    skos:prefLabel "Nate Hagens' professional relationship with Daniel Schmachtenberger"@en ;
+   .
+
+#############################################
+# Episode Instances
+#############################################
+
+tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:hasEpisodeType.Interview ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MatthewMonahan ;
+    # other metadata about the interview goes here
+    skos:prefLabel "Can Money Serve Life?"@en ;
+    .

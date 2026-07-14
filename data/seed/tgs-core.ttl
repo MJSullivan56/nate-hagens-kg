@@ -26,8 +26,9 @@ thinkr:aboutSubject a owl:ObjectProperty ;
 
 thinkr:appliesTo a owl:ObjectProperty ;
     rdfs:comment "For activists/practitioners rather than philosophers: this person's work is a concrete instance of the concept (e.g. MLK's organizing as an example of collective-action dynamics discussed under a TGS concept)."@en ;
-    rdfs:domain thinkr:Human ;
+    rdfs:domain thinkr:Persona ;
     rdfs:range thinkr:Concept ;
+    skos:scopeNote "DOMAIN CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor): was thinkr:Human, moved to thinkr:Persona, per MJSullivan's explicit approval — same reasoning as every other Concept-facing property migrated in this batch. The single existing instance (MLK->GrowthImperative, linknotes.ttl) was already pointing at tgs:Persona.MartinLutherKingJr by the time this domain was fixed — caught as a side effect of an earlier blanket Human->Persona text replacement in that file, not a separate deliberate step; this declaration just brings the schema in line with what the data already said."@en ;
     skos:prefLabel "provides real-world example of"@en .
 
 thinkr:calculatedConfidence a owl:ObjectProperty ;
@@ -60,9 +61,9 @@ thinkr:discussedIn a owl:ObjectProperty ;
 thinkr:echoesIdeaOf a owl:ObjectProperty ;
     rdfs:comment "The TGS concept independently converges on / restates an idea this person is known for. No claim of direct influence."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range thinkr:Human ;
+    rdfs:range thinkr:Persona ;
     rdfs:subPropertyOf thinkr:relatesTo ;
-    skos:scopeNote "Narrower than thinkr:relatesTo: specifically independent convergence on a similar idea — explicitly NOT a claim of direct influence, see thinkr:influencedBy for that distinct, stronger case."@en ;
+    skos:scopeNote "Narrower than thinkr:relatesTo: specifically independent convergence on a similar idea — explicitly NOT a claim of direct influence, see thinkr:influencedBy for that distinct, stronger case. RANGE CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: this is the graph's actual core mechanism — every Concept->thinker connection is fundamentally about that person's PUBLIC INTELLECTUAL ROLE, never a private biographical fact. All existing echoesIdeaOf triples (linknotes.ttl) migrated Human->Persona in the same pass."@en ;
     skos:prefLabel "echoes idea of"@en .
 
 thinkr:evidencePolarity a owl:ObjectProperty ;
@@ -78,9 +79,9 @@ thinkr:hasEvidence a owl:ObjectProperty ;
 thinkr:influencedBy a owl:ObjectProperty ;
     rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Human thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Persona thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     rdfs:subPropertyOf thinkr:relatesTo ;
-    skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case."@en ;
+    skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case. RANGE CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor): Human replaced with Persona in the union — same reasoning as echoesIdeaOf. All existing influencedBy triples (linknotes.ttl) migrated Human->Persona in the same pass."@en ;
     skos:prefLabel "influenced by"@en .
 
 thinkr:memberOf a owl:ObjectProperty ;
@@ -277,7 +278,8 @@ thinkr:seriesPosition a owl:DatatypeProperty ;
 thinkr:relatesTo a owl:ObjectProperty ;
     rdfs:comment "Generic, loosely-typed link. Use a more specific property below when it fits."@en ;
     rdfs:domain thinkr:Concept ;
-    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Human thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    rdfs:range [ owl:unionOf ( thinkr:Concept thinkr:Persona thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
+    skos:scopeNote "RANGE CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor): Human replaced with Persona in the union — this is the parent property of contrastsWith (which has no range of its own), influencedBy, and echoesIdeaOf, all migrated in the same pass."@en ;
     skos:prefLabel "relates to"@en .
 
 thinkr:Category a owl:Class ;

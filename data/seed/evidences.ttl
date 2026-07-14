@@ -9,107 +9,130 @@
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
-    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
+    .
 
+#############################################
+# Classees and Properties
+#############################################
+
+thinkr:Evidence a owl:Class ;
+    rdfs:comment "One individual piece of evidence for/against a thinkr:LinkNote's claim. Multiple Evidence individuals can attach to one LinkNote. Never deleted even when superseded (prov:wasRevisionOf) — the historical record of what was believed and why is preserved; superseded evidence is simply excluded from calculatedConfidence."@en ;
+    skos:prefLabel "Evidence"@en ;
+    .
+
+#############################################
+# Instances
+#############################################
 
 tgs:Evidence.ComplexityTainter a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Tainter's 'The Collapse of Complex Societies' (1988) is the direct academic source for the diminishing-marginal-returns-on-complexity argument Hagens draws on when discussing societal collapse dynamics."@en ;
-    prov:generatedAtTime "1988"^^xsd:gYear .
+    prov:generatedAtTime "1988"^^xsd:gYear ;
+    .
 
 tgs:Evidence.DiscountMarcus a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Stoic practice of distinguishing what is/isn't in one's control, and valuing present right action over deferred/imagined future reward, is a philosophical antecedent (not a cited influence) to the behavioral-economics critique of present bias Hagens draws on."@en .
+    dcterms:description "Stoic practice of distinguishing what is/isn't in one's control, and valuing present right action over deferred/imagined future reward, is a philosophical antecedent (not a cited influence) to the behavioral-economics critique of present bias Hagens draws on."@en ;
+    .
 
 tgs:Evidence.EnergyblindnessBuddha a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Candidate ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "LLM-suggested: both concern a kind of collective unawareness of the true conditions shaping suffering/behavior (avidya / ignorance vs. energy blindness). Flagged as speculative — needs review before treating as a real link; risk of forcing a surface parallel."@en .
+    dcterms:description "LLM-suggested: both concern a kind of collective unawareness of the true conditions shaping suffering/behavior (avidya / ignorance vs. energy blindness). Flagged as speculative — needs review before treating as a real link; risk of forcing a surface parallel."@en ;
+    .
 
 tgs:Evidence.JevonsJevons a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Jevons first described this dynamic in 'The Coal Question' (1865), observing that more efficient coal-burning steam engines increased total coal consumption rather than reducing it — the term is named directly for him."@en ;
-    prov:generatedAtTime "1865"^^xsd:gYear .
+    prov:generatedAtTime "1865"^^xsd:gYear ;
+    .
 
 tgs:Evidence.LimitsDennis a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Dennis Meadows co-led the original 1972 'Limits to Growth' study alongside Donella Meadows — same direct lineage."@en ;
-    prov:generatedAtTime "1972"^^xsd:gYear .
+    prov:generatedAtTime "1972"^^xsd:gYear ;
+    .
 
 tgs:Evidence.LimitsDonella a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Donella Meadows was lead author of the original 1972 'Limits to Growth' study — direct, citable lineage, not just thematic overlap."@en ;
-    prov:generatedAtTime "1972"^^xsd:gYear .
+    prov:generatedAtTime "1972"^^xsd:gYear ;
+    .
 
 tgs:Evidence.LocalismOstrom a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Ostrom's Nobel-winning research on communities self-governing shared resources without top-down control or privatization provides the empirical/theoretical backbone for why small-scale local resilience can actually work, rather than just being a romantic ideal."@en .
+    dcterms:description "Ostrom's Nobel-winning research on communities self-governing shared resources without top-down control or privatization provides the empirical/theoretical backbone for why small-scale local resilience can actually work, rather than just being a romantic ideal."@en ;
+    .
 
 tgs:Evidence.MetacrisisBateson a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Bateson's systems-theoretic argument that fragmented, siloed problem-solving itself generates crises ('the pathologies of epistemology') is a direct intellectual ancestor of metacrisis framing used by Hagens and adjacent thinkers."@en .
+    dcterms:description "Bateson's systems-theoretic argument that fragmented, siloed problem-solving itself generates crises ('the pathologies of epistemology') is a direct intellectual ancestor of metacrisis framing used by Hagens and adjacent thinkers."@en ;
+    .
 
 tgs:Evidence.MlkGrowth a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "MLK's later writing (e.g. his critique of a society organized around 'thing-oriented' rather than 'person-oriented' values, and his turn toward economic justice/the Poor People's Campaign) is a real-world example of confronting a growth/extraction-oriented system, not primarily an ecological argument but a structurally adjacent one worth surfacing as contrast."@en .
+    dcterms:description "MLK's later writing (e.g. his critique of a society organized around 'thing-oriented' rather than 'person-oriented' values, and his turn toward economic justice/the Poor People's Campaign) is a real-world example of confronting a growth/extraction-oriented system, not primarily an ecological argument but a structurally adjacent one worth surfacing as contrast."@en ;
+    .
 
 tgs:Evidence.MoneyAristotle a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Aristotle's distinction in Politics Book I between oikonomia (household management, wealth for use) and chrematistics (accumulation of money as an end in itself, which he considered unnatural and potentially limitless) anticipates Hagens' critique of money divorced from its real biophysical backing."@en .
+    dcterms:description "Aristotle's distinction in Politics Book I between oikonomia (household management, wealth for use) and chrematistics (accumulation of money as an end in itself, which he considered unnatural and potentially limitless) anticipates Hagens' critique of money divorced from its real biophysical backing."@en ;
+    .
 
 tgs:Evidence.OvershootCatton a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Catton's 1980 book 'Overshoot' coined the term Hagens uses directly; this is a citable lineage, not just a thematic echo."@en ;
-    prov:generatedAtTime "1980"^^xsd:gYear .
+    prov:generatedAtTime "1980"^^xsd:gYear ;
+    .
 
 tgs:Evidence.PeakoilHubbert a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "Hubbert's 1956 prediction of US oil production peaking (Hubbert Peak Theory) is the direct origin of peak oil analysis as a field, which Hagens worked in professionally before founding The Great Simplification."@en ;
-    prov:generatedAtTime "1956"^^xsd:gYear .
+    prov:generatedAtTime "1956"^^xsd:gYear ;
+    .
 
 tgs:Evidence.SuperorganismWilson a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Wilson's work on eusociality and superorganisms in insect colonies is the direct biological source of the term Hagens applies (with qualification) to human civilization."@en .
+    dcterms:description "Wilson's work on eusociality and superorganisms in insect colonies is the direct biological source of the term Hagens applies (with qualification) to human civilization."@en ;
+    .
 
 tgs:Evidence.WetwareFreud a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Freud's model of unconscious drives overriding rational self-interest anticipates Hagens' claim that evolved sub-conscious wiring, not conscious reasoning, drives collectively destructive behavior. Different mechanism (psychosexual drives vs. evolutionary mismatch) but the same basic move: rational-actor models are wrong about what's driving behavior."@en .
-
-thinkr:Evidence a owl:Class ;
-    rdfs:comment "One individual piece of evidence for/against a thinkr:LinkNote's claim. Multiple Evidence individuals can attach to one LinkNote. Never deleted even when superseded (prov:wasRevisionOf) — the historical record of what was believed and why is preserved; superseded evidence is simply excluded from calculatedConfidence."@en ;
-    skos:prefLabel "Evidence"@en .
-
+    dcterms:description "Freud's model of unconscious drives overriding rational self-interest anticipates Hagens' claim that evolved sub-conscious wiring, not conscious reasoning, drives collectively destructive behavior. Different mechanism (psychosexual drives vs. evolutionary mismatch) but the same basic move: rational-actor models are wrong about what's driving behavior."@en ;
+    .
 
 tgs:Evidence.OvershootDoughnutEconomics a thinkr:Evidence, owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Curated ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     thinkr:aboutSource tgs:Source.CalDECCaliforniaDoughnutReport ;
     dcterms:description "CalDEC's 2025 California Doughnut Report finds California overshooting 89% of ecological indicators assessed (average overshoot 286%), using 'overshoot' as an explicit technical term for exceeding planetary-boundary-derived limits — directly paralleling Hagens' Overshoot concept despite independent development within a different framework (Doughnut Economics traces to Rockstrom et al.'s planetary boundaries work, not Hagens' energy-systems background)."@en ;
-    prov:generatedAtTime "2025"^^xsd:gYear .
+    prov:generatedAtTime "2025"^^xsd:gYear ;
+    .

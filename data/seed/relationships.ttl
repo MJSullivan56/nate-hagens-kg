@@ -56,7 +56,6 @@ tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndiv
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.MatthewMonahan ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -67,14 +66,15 @@ tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Guest ;
           thinkr:objectRole thinkr:InteractionRole.Host ;
           thinkr:showName "The Regeneration Will Be Funded"@en ;
-          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down. thinkr:hostedBy dropped as redundant now that objectRole exists — hasObject (Persona.MatthewMonahan) + objectRole (Host) together already say who hosted, without a third property saying it a different way."@en ] .
+          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down. thinkr:hostedBy dropped as redundant now that objectRole exists — hasObject (Persona.MatthewMonahan) + objectRole (Host) together already say who hosted, without a third property saying it a different way."@en ] ;
+    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
+    .
 
 # --- Iain McGilchrist: THREE separate instances, same role each time ---
 tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.IainMcGilchrist ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Iain McGilchrist"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -90,7 +90,9 @@ tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndi
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
-          dcterms:date "2026-03-24"^^xsd:date ] .
+          dcterms:date "2026-03-24"^^xsd:date ] ;
+    skos:prefLabel "Nate Hagens' professional relationship with Iain McGilchrist"@en ;
+    .
 
 # --- Daniel Schmachtenberger: ALL 7 currently confirmed appearances
 # (episodes.ttl hasGuest tgs:Persona.DanielSchmachtenberger) as of
@@ -99,12 +101,11 @@ tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndi
 # 5 (5, 20, 31, 42, 50). Union of both is the full 7 below. Dates
 # populated only where episodes.ttl carries a confirmed dct:created;
 # the other 4 get an honest scopeNote rather than a fabricated date. ---
+
 tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Daniel Schmachtenberger"@en ;
-    skos:scopeNote "One source describes 'half a dozen' appearances; 7 specific episodes are individually confirmed/modeled as of 2026-07-14 (the Bend Not Break 5-part series plus episodes 126 and 132) — likely the complete set, not yet independently verified as exhaustive."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -140,12 +141,16 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
-          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ] .
+          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ] ;
+    skos:scopeNote "One source describes 'half a dozen' appearances; 7 specific episodes are individually confirmed/modeled as of 2026-07-14 (the Bend Not Break 5-part series plus episodes 126 and 132) — likely the complete set, not yet independently verified as exhaustive."@en ;
+    skos:prefLabel "Nate Hagens' professional relationship with Daniel Schmachtenberger"@en ;
+    .
 
 # --- Nate's academic relationships genuinely need MULTIPLE RelationshipType
 # values at once — real, not a hypothetical stress test. Teaching Reality
 # 101 is both Academic AND (per his own bio's "taught," implying a
 # formal/paid role) Professional simultaneously. ---
+
 tgs:Relationship.NateHagens_UniversityOfMinnesota a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:AcademicInstitution.UniversityOfMinnesota ;

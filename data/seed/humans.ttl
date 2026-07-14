@@ -168,14 +168,28 @@ tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
     .
 
 tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
-    skos:prefLabel "Nate Hagens"@en ;
-    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
+    thinkr:hasPersona tgs:Persona.NateHagens ;
     foaf:givenName "Nathan"@en ;
     foaf:familyName "Hagens"@en ;
-    skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. ALSO: foaf:homepage below deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
     dbo:birthDate "1969"^^xsd:gYear ;
-    foaf:homepage <https://www.natehagens.com/>, <https://natehagens.substack.com/>, <https://www.linkedin.com/in/nate-hagens-004810b/> ;
-    thinkr:memberOf tgs:Organization.TheOilDrum, tgs:Organization.PostCarbonInstitute, tgs:SchoolOfThought.PeakOilMovement, tgs:AcademicInstitution.UniversityOfVermont, tgs:AcademicInstitution.UniversityOfChicago, tgs:AcademicInstitution.UniversityOfMinnesota .
+    foaf:homepage 
+        <https://www.natehagens.com/>, 
+        <https://natehagens.substack.com/>, 
+        <https://www.linkedin.com/in/nate-hagens-004810b/> ;
+    thinkr:memberOf 
+        tgs:Organization.TheOilDrum, 
+        tgs:Organization.PostCarbonInstitute, 
+        tgs:SchoolOfThought.PeakOilMovement, 
+        tgs:AcademicInstitution.UniversityOfVermont, 
+        tgs:AcademicInstitution.UniversityOfChicago, 
+        tgs:AcademicInstitution.UniversityOfMinnesota ;
+    skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. ALSO: foaf:homepage below deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
+    skos:scopeNote "REVISED v5: kept genuinely FLAT per MJSullivan's explicit correction — memberOf only, no Relationship cross-references at all. hasPersonalRelationship/hasProfessionalRelationship now live SOLELY on Persona.NateHagens below, even though each Relationship's own hasSubject still correctly points back to THIS individual as the true legal party — that underlying fact doesn't require a redundant pointer here too."@en ;
+    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
+    rdfs:comment "NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page. Credentials EARNED personally: PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004."@en ;
+    skos:prefLabel "Nate Hagens"@en ;
+    .
+
 # hasTGSRole and hasPersonalRelationship MOVED to tgs:Persona.NateHagens
 # (personas.ttl) 2026-07-14, Batch 3 of the Persona-centered refactor —
 # both are public-facing facts, not biography. thinkr:memberOf stays
@@ -184,6 +198,7 @@ tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
 # deliberately untouched — which specific links belong on Persona vs.
 # Human remains an open question from the 2026-07-12 escalation entry,
 # not resolved in this batch.
+
 
 tgs:Human.MatthewMonahan a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Matthew Monahan"@en ;

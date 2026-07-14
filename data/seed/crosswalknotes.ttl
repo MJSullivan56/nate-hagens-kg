@@ -11,6 +11,19 @@
     .
 
 #############################################
+# BATCH 5 MIGRATION (2026-07-14, Persona-centered refactor, see
+# docs/sidecar-cleanup-handoff.md): all 29 thinkr:aboutEntity triples
+# that targeted a tgs:Human individual repointed to the corresponding
+# tgs:Persona individual — a DBpedia/Wikidata identity mapping is
+# fundamentally about the PUBLIC figure, the same reasoning applied
+# throughout this whole refactor. The other 11 aboutEntity triples
+# (targeting Organization/SchoolOfThought/Work individuals) are
+# untouched — thinkr:aboutEntity's range was already the general
+# thinkr:NamedEntity, no schema change needed, only the Human-specific
+# instance data.
+#############################################
+
+#############################################
 # thinkr:CrosswalkNote — replaces dbpedia_links.ttl and wikidata_links.ttl
 # (both dissolved 2026-07-11) with a unified, provenance-bearing structure.
 # Organized by the new class itself (CrosswalkNote), not by subject class
@@ -34,7 +47,7 @@ thinkr:CrosswalkNote a owl:Class ;
 
 tgs:CrosswalkNote.AristotleDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.Aristotle ;
+    thinkr:aboutEntity tgs:Persona.Aristotle ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Aristotle> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -52,7 +65,7 @@ tgs:CrosswalkNote.BehavioralEconomicsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.BuddhaDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.Buddha ;
+    thinkr:aboutEntity tgs:Persona.Buddha ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Gautama_Buddha> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -70,7 +83,7 @@ tgs:CrosswalkNote.CivilRightsMovementDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DanielKahnemanDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.DanielKahneman ;
+    thinkr:aboutEntity tgs:Persona.DanielKahneman ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Daniel_Kahneman> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -79,7 +92,7 @@ tgs:CrosswalkNote.DanielKahnemanDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DanielSchmachtenbergerWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.DanielSchmachtenberger ;
+    thinkr:aboutEntity tgs:Persona.DanielSchmachtenberger ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q110189381> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -97,7 +110,7 @@ tgs:CrosswalkNote.DegrowthMovementDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DennisMeadowsDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.DennisMeadows ;
+    thinkr:aboutEntity tgs:Persona.DennisMeadows ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Dennis_Meadows> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -106,7 +119,7 @@ tgs:CrosswalkNote.DennisMeadowsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.DonellaMeadowsDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.DonellaMeadows ;
+    thinkr:aboutEntity tgs:Persona.DonellaMeadows ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Donella_Meadows> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -124,7 +137,7 @@ tgs:CrosswalkNote.DoughnutEconomicsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.EOWilsonDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.EOWilson ;
+    thinkr:aboutEntity tgs:Persona.EOWilson ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/E._O._Wilson> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -133,7 +146,7 @@ tgs:CrosswalkNote.EOWilsonDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.EOWilsonWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.EOWilson ;
+    thinkr:aboutEntity tgs:Persona.EOWilson ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q211029> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -142,7 +155,7 @@ tgs:CrosswalkNote.EOWilsonWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.ElinorOstromDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.ElinorOstrom ;
+    thinkr:aboutEntity tgs:Persona.ElinorOstrom ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Elinor_Ostrom> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -151,7 +164,7 @@ tgs:CrosswalkNote.ElinorOstromDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.EmileDurkheimDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.EmileDurkheim ;
+    thinkr:aboutEntity tgs:Persona.EmileDurkheim ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Émile_Durkheim> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -160,7 +173,7 @@ tgs:CrosswalkNote.EmileDurkheimDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.EpictetusDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.Epictetus ;
+    thinkr:aboutEntity tgs:Persona.Epictetus ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Epictetus> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -169,7 +182,7 @@ tgs:CrosswalkNote.EpictetusDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.GregoryBatesonDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.GregoryBateson ;
+    thinkr:aboutEntity tgs:Persona.GregoryBateson ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Gregory_Bateson> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -178,7 +191,7 @@ tgs:CrosswalkNote.GregoryBatesonDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.IainMcGilchristDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.IainMcGilchrist ;
+    thinkr:aboutEntity tgs:Persona.IainMcGilchrist ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Iain_McGilchrist> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -187,7 +200,7 @@ tgs:CrosswalkNote.IainMcGilchristDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.IainMcGilchristWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.IainMcGilchrist ;
+    thinkr:aboutEntity tgs:Persona.IainMcGilchrist ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q16732304> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -196,7 +209,7 @@ tgs:CrosswalkNote.IainMcGilchristWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.IvanIllichDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.IvanIllich ;
+    thinkr:aboutEntity tgs:Persona.IvanIllich ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Ivan_Illich> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -205,7 +218,7 @@ tgs:CrosswalkNote.IvanIllichDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.JosephTainterDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.JosephTainter ;
+    thinkr:aboutEntity tgs:Persona.JosephTainter ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Joseph_Tainter> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -214,7 +227,7 @@ tgs:CrosswalkNote.JosephTainterDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.KateRaworthDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.KateRaworth ;
+    thinkr:aboutEntity tgs:Persona.KateRaworth ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Kate_Raworth> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -223,7 +236,7 @@ tgs:CrosswalkNote.KateRaworthDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.MKingHubbertDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.MKingHubbert ;
+    thinkr:aboutEntity tgs:Persona.MKingHubbert ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/M._King_Hubbert> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -232,7 +245,7 @@ tgs:CrosswalkNote.MKingHubbertDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.MarcusAureliusDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.MarcusAurelius ;
+    thinkr:aboutEntity tgs:Persona.MarcusAurelius ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Marcus_Aurelius> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -241,7 +254,7 @@ tgs:CrosswalkNote.MarcusAureliusDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.MarcusAureliusWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.MarcusAurelius ;
+    thinkr:aboutEntity tgs:Persona.MarcusAurelius ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q1430> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -250,7 +263,7 @@ tgs:CrosswalkNote.MarcusAureliusWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.MartinLutherKingJrDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.MartinLutherKingJr ;
+    thinkr:aboutEntity tgs:Persona.MartinLutherKingJr ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Martin_Luther_King_Jr.> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -277,7 +290,7 @@ tgs:CrosswalkNote.PostCarbonInstituteWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.RachelCarsonDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.RachelCarson ;
+    thinkr:aboutEntity tgs:Persona.RachelCarson ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Rachel_Carson> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -286,7 +299,7 @@ tgs:CrosswalkNote.RachelCarsonDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.SigmundFreudDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.SigmundFreud ;
+    thinkr:aboutEntity tgs:Persona.SigmundFreud ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Sigmund_Freud> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -340,7 +353,7 @@ tgs:CrosswalkNote.TheOilDrumDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.WendellBerryDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.WendellBerry ;
+    thinkr:aboutEntity tgs:Persona.WendellBerry ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/Wendell_Berry> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -349,7 +362,7 @@ tgs:CrosswalkNote.WendellBerryDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.WilliamCattonDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.WilliamCatton ;
+    thinkr:aboutEntity tgs:Persona.WilliamCatton ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/William_R._Catton_Jr.> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -358,7 +371,7 @@ tgs:CrosswalkNote.WilliamCattonDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.WilliamStanleyJevonsDBpedia a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.WilliamStanleyJevons ;
+    thinkr:aboutEntity tgs:Persona.WilliamStanleyJevons ;
     thinkr:aboutExternalURI <http://dbpedia.org/resource/William_Stanley_Jevons> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
     thinkr:verifiedOn "2026-07-11"^^xsd:date ;
@@ -367,7 +380,7 @@ tgs:CrosswalkNote.WilliamStanleyJevonsDBpedia a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.AristotleWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.Aristotle ;
+    thinkr:aboutEntity tgs:Persona.Aristotle ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q868> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-13"^^xsd:date ;
@@ -376,7 +389,7 @@ tgs:CrosswalkNote.AristotleWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.BuddhaWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.Buddha ;
+    thinkr:aboutEntity tgs:Persona.Buddha ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q9441> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-13"^^xsd:date ;
@@ -385,7 +398,7 @@ tgs:CrosswalkNote.BuddhaWikidata a thinkr:CrosswalkNote,
 
 tgs:CrosswalkNote.MartinLutherKingJrWikidata a thinkr:CrosswalkNote,
         owl:NamedIndividual ;
-    thinkr:aboutEntity tgs:Human.MartinLutherKingJr ;
+    thinkr:aboutEntity tgs:Persona.MartinLutherKingJr ;
     thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q8027> ;
     thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
     thinkr:verifiedOn "2026-07-13"^^xsd:date ;
