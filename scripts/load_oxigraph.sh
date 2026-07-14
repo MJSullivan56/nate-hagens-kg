@@ -11,7 +11,7 @@ echo "Creating/loading Oxigraph store at ${STORE_PATH}"
 
 for f in ../data/seed/*.ttl; do
     echo "Loading $f ..."
-    oxigraph load --location "${STORE_PATH}" --file "$f" --format turtle
+    oxigraph load --location "${STORE_PATH}" --file "$f"
 done
 
 echo "Done. Query it with:"
