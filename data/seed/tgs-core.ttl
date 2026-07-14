@@ -254,6 +254,12 @@ thinkr:hasCanonicalSource a owl:ObjectProperty ;
     rdfs:domain thinkr:Episode ;
     skos:scopeNote "The canonical page for this Episode — expected cardinality of exactly one, unlike the general dct:source (still used elsewhere in this graph, e.g. Work.CaliforniaDoughnutReport2025, with no such cardinality expectation). subPropertyOf lets this stay a genuine dct:source for anything that reads it generically, while carrying a narrower, Episode-specific meaning here — a scopeNote directly on dct:source itself would incorrectly apply globally to every other use of that property in this graph."@en .
 
+thinkr:discusses a owl:ObjectProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range thinkr:Concept ;
+    skos:comment "Which Concept(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings."@en ;
+    skos:prefLabel "discusses"@en .
+
 thinkr:hasReplay a owl:ObjectProperty ;
     rdfs:domain thinkr:Work ;
     skos:scopeNote "A link to watch/listen to a replay (YouTube, Spotify, etc.) — multi-valued, one triple per platform. Domain deliberately kept at thinkr:Work, not narrowed to Episode: some future Work subtypes (e.g. an audiobook) could plausibly have a replay too. Many Work subtypes (Book, WhitePaper, PhDThesis) genuinely won't — that's a fact about the specific instance, not something enforced structurally."@en .

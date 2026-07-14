@@ -39,7 +39,7 @@ SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfiden
 #   ?note thinkr:aboutSubject ?subj ;
 #         thinkr:aboutObject ?obj ;
 #         thinkr:calculatedConfidence ?calc .
-#   FILTER(?calc IN (thinkr:ConfidenceLevel.Curated, thinkr:ConfidenceLevel.Corroborated))
+#   FILTER(?calc IN (thinkr:ConfidenceType.Curated, thinkr:ConfidenceType.Corroborated))
 #   ?calc skos:prefLabel ?calcLabel .
 #   ?subj skos:prefLabel ?subjLabel .
 #   ?obj skos:prefLabel ?objLabel .
@@ -50,7 +50,7 @@ SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfiden
 # SELECT ?subjLabel ?objLabel WHERE {
 #   ?note thinkr:aboutSubject ?subj ;
 #         thinkr:aboutObject ?obj ;
-#         thinkr:calculatedConfidence thinkr:ConfidenceLevel.Candidate .
+#         thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate .
 #   ?subj skos:prefLabel ?subjLabel .
 #   ?obj skos:prefLabel ?objLabel .
 # }
@@ -59,7 +59,7 @@ SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfiden
 # SELECT ?subjLabel ?objLabel WHERE {
 #   ?note thinkr:aboutSubject ?subj ;
 #         thinkr:aboutObject ?obj ;
-#         thinkr:calculatedConfidence thinkr:ConfidenceLevel.Disputed .
+#         thinkr:calculatedConfidence thinkr:ConfidenceType.Disputed .
 #   ?subj skos:prefLabel ?subjLabel .
 #   ?obj skos:prefLabel ?objLabel .
 # }
@@ -68,4 +68,37 @@ SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfiden
 # SELECT ?label WHERE {
 #   ?concept a thinkr:Concept ; skos:prefLabel ?label .
 #   FILTER NOT EXISTS { ?concept thinkr:relatesTo|thinkr:echoesIdeaOf|thinkr:influencedBy ?x }
+# }
+
+# 6. Who has appeared on the show the most, and in what roles (tested 2026-07-13,
+# part of the "what insights can we get" gap-finding exercise)
+# SELECT ?objLabel (COUNT(?i) as ?cnt) WHERE {
+#   ?rel thinkr:hasObject ?obj ; thinkr:hasInteraction ?i .
+#   ?obj skos:prefLabel ?objLabel .
+# } GROUP BY ?objLabel ORDER BY DESC(?cnt)
+
+# 7. GAP CHECK: Concepts with zero links to any Episode (originally returned
+# EVERY Concept — 2 now closed, 2026-07-13, via thinkr:discusses: Metacrisis
+# and MoneyAsClaimOnEnergy. Should now return every Concept EXCEPT those two.)
+# SELECT ?label WHERE {
+#   ?concept a thinkr:Concept ; skos:prefLabel ?label .
+#   FILTER NOT EXISTS { ?ep a thinkr:Episode ; thinkr:discusses ?concept }
+# }
+
+# 8. GAP CHECK: memberOf relationships with no temporal data (should currently
+# return every memberOf triple — confirms the AffiliationNote gap, still open
+# as of 2026-07-13)
+# SELECT ?humanLabel ?orgLabel WHERE {
+#   ?h thinkr:memberOf ?org ; skos:prefLabel ?humanLabel .
+#   ?org skos:prefLabel ?orgLabel .
+#   FILTER NOT EXISTS { ?h thinkr:memberOfStartDate ?d }
+# }
+
+# 9. GAP CHECK: Relationship individuals NOT involving Nate Hagens as subject
+# (should currently return ZERO — confirms the "hub not network" structural
+# limit identified 2026-07-13: every Relationship currently radiates from Nate,
+# none exist directly between two guests)
+# SELECT (COUNT(?r) as ?cnt) WHERE {
+#   ?r a thinkr:Relationship ; thinkr:hasSubject ?s .
+#   FILTER(?s != tgs:Human.NateHagens)
 # }
