@@ -70,6 +70,30 @@ TURN_PATTERN_B = re.compile(
     re.MULTILINE,
 )
 
+# Repeated PDF page header/footer boilerplate ("Page X of Y", a bare
+# page-number line, "The Great Simplification" running header) — confirmed
+# present in this transcript library 2026-07-15 via direct inspection.
+# Added here (Stage 1's own output) rather than as a separate cleanup
+# script/pass: this is Stage 1's job (produce a genuinely clean window),
+# and it's a precisely-matched, whole-line-only pattern — deliberately NOT
+# a broad "remove repeated words" or "stitch line-wraps" transformation.
+# Real guest dialogue legitimately repeats words for emphasis ("Money,
+# Money, Money"); a fuzzy dedup pass would silently eat that, which is
+# exactly the corruption pattern caught and reverted the same day this
+# was added (see docs/sidecar-cleanup-handoff.md). Line-wraps are left
+# alone too — Stage 2 reading works fine with wrapped lines, and
+# collapsing them adds transformation risk for no real benefit.
+BOILERPLATE_LINE_PATTERN = re.compile(
+    r'^[ \t]*(Page \d+ of \d+|\d+|The Great Simplification)[ \t]*\n', re.MULTILINE
+)
+
+
+def strip_boilerplate(text):
+    """Removes only whole-line matches of known page header/footer
+    boilerplate. Does not touch anything else — no word-level edits, no
+    line-wrap joining."""
+    return BOILERPLATE_LINE_PATTERN.sub('', text)
+
 
 def segment_intro(text, k_turns=K_TURNS_DEFAULT):
     """Returns the first k_turns speaker turns of a transcript's timestamped
@@ -149,7 +173,7 @@ def main():
             print(f"SKIP (no [00:00:00]-style timestamp found): {txt_file.name}")
             continue
         out_path = out_dir / f"{txt_file.stem}.intro.txt"
-        out_path.write_text(segment)
+        out_path.write_text(strip_boilerplate(segment))
         processed += 1
 
     print(f"\n{processed} intro segments written to {out_dir}/")
