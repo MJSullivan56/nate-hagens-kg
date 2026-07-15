@@ -376,11 +376,40 @@ structural changes:
 
 2. **Every individual follows `<Domain>:<Class>.<Name>` IRI minting**
    (e.g. `tgs:Person.MarcusAurelius`, `tgs:Concept.Overshoot`,
-   `tgs:LinkNote.DiscountMarcus`) and is explicitly typed
-   `a tgs:SomeClass, owl:NamedIndividual` — this is MJSullivan's established
-   convention from his other ontology work, adopted here for consistency.
-   Classes and properties themselves (in `data/seed/tgs-core.ttl`) are NOT
-   renamed under this scheme — only individuals/instances are.
+   `tgs:LinkNote.DiscountRatesAndPresentBias_MarcusAurelius`) and is
+   explicitly typed `a tgs:SomeClass, owl:NamedIndividual` — this is
+   MJSullivan's established convention from his other ontology work,
+   adopted here for consistency. Classes and properties themselves (in
+   `data/seed/tgs-core.ttl`) are NOT renamed under this scheme — only
+   individuals/instances are.
+
+2a. **Relationship-type individuals (an individual whose whole job is
+    representing a connection between two other named entities —
+    `Relationship`, `LinkNote`, `Evidence`, `CrosswalkNote`) get a local
+    name of exactly `{Subject-property's target}_{Object-property's
+    target}`, using each referenced entity's REAL local name verbatim
+    (class prefix stripped, e.g. `tgs:Persona.ArtBerman` contributes
+    `ArtBerman`, never abbreviated to `Berman`) — retrofitted 2026-07-15
+    (76 individuals renamed: 17 `LinkNote`, 40 `CrosswalkNote`, 19
+    `Evidence`; `Relationship` was already compliant). Per class:
+    `Relationship`: `{hasSubject}_{hasObject}`. `LinkNote`:
+    `{aboutSubject}_{aboutObject}`. `CrosswalkNote`:
+    `{aboutEntity}_{crosswalkSource}`. `Evidence` (trickier — one
+    `LinkNote` can have multiple `Evidence`): base name is the owning
+    `LinkNote`'s own name; when 2+ `Evidence` support the same
+    `LinkNote`, the general/original one keeps the bare base name and
+    any episode-specific one gets `_TGS_<number>` appended (short number
+    token, not the full `Episode` individual's own long IRI). **Known
+    unresolved gap in this sub-rule, not yet needing a decision because
+    it hasn't come up on real data**: this only cleanly covers "exactly
+    one general + N episode-specific" — it does NOT yet say what
+    happens if a future `LinkNote` ends up with two-or-more
+    episode-specific `Evidence` and zero general ones (which one, if
+    any, gets the bare base name?). Don't guess at this in the abstract;
+    resolve it against a real case when one actually shows up, same
+    "let's see what the data tells us" principle used elsewhere in this
+    file. See `docs/sidecar-cleanup-handoff.md`'s 2026-07-15 naming
+    audit entry for the full violation list and rename mapping.
 
 3. **`skos:prefLabel` instead of `rdfs:label`** everywhere, in
    anticipation of using `skos:altLabel` for alternate names down the

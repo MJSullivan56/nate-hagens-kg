@@ -195,6 +195,626 @@ a connection fails, rather than a single generic fix). This isn't a
 one-off caveat for this thread — it should shape how technical
 instructions are given in general on this project going forward.
 
+## BACKLOG — FUTURE / ORTHOGONAL IDEAS (living section, not
+## dated/superseded, add to in place — genuinely different from the
+## dated entries below: these are things explicitly NOT being worked on
+## yet, captured so a real idea doesn't get lost between sessions)
+
+**GUI / public product roadmap (raised 2026-07-14).** End goal
+confirmed: a real public-facing product ("my contribution to the world
+of TGS"), not just a personal research tool — but explicitly PHASED,
+timeline confirmed as "many months away," and Nate's approval is a
+confirmed hard requirement before anything goes public (his brand/IP,
+built entirely from his show's content — this should mean reaching out
+to him or his team BEFORE launch, not after it's already public).
+MJSullivan is the sole beta user for the foreseeable near term — build
+accordingly, don't over-invest in public-launch infrastructure yet.
+
+Two explicit phases, don't blur them:
+- PHASE 1 (now, sole-beta-user): local tool, hits Oxigraph directly at
+  127.0.0.1:7878, same trust model as everything else currently in this
+  project. No API layer, no auth, no SPARQL-hiding needed yet — that's
+  real, but premature, work for later.
+- PHASE 2 (public launch, months out, gated on Nate's approval): SPARQL
+  can NOT be exposed directly to a public audience (DoS/cost vector, no
+  query-level auth) — needs a real API layer in front of Oxigraph, a
+  curated set of endpoints, not raw passthrough. Confidence-tier
+  visual distinction (Candidate vs. Curated) goes from nice-to-have to
+  necessary — an unreviewed Candidate claim read by a stranger as
+  established fact about a real person is a real liability, not just an
+  epistemic nicety. Privacy posture needs to be MORE conservative for
+  public-facing profiles than for the working graph — a podcast guest
+  consenting to a recorded conversation is different from, e.g., a
+  Discord community member surfaced via the social-media discovery idea
+  above; not everyone bootstrapped into the graph should necessarily
+  get a public page.
+
+Proposed views, once GUI work actually starts (Phase 1):
+- Encyclopedic view (per-entity page, all triples where the entity is
+  subject/object) — likely the highest-value FIRST view: most legible
+  entry point for the eventual students/casual-users audience from the
+  gamification idea above, and matches MJSullivan's own stated
+  editorial/flattened-entity-view preference from the sibling UWOM
+  project.
+- Concept graph view — natural fit for the actual RDF shape
+  (influencedBy/echoesIdeaOf/contrastsWith/convergesWith as edges).
+  Confidence tier should be visually distinct from day one, not
+  retrofitted later.
+- Social graph view — fully supported by today's Relationship/
+  subjectRole/objectRole work already, but payoff scales with the
+  person-bootstrap queue — not very interesting yet at 27 Personas,
+  sequence behind bootstrapping, not ahead of it.
+- Confidence/evidence-transparency view (4th view, not in MJSullivan's
+  original list) — click any claim, see its LinkNote->Evidence->Source
+  chain. Real potential point of differentiation from a typical wiki,
+  not just a debug tool, given how much of this project's actual value
+  is "here's how we know this and how confident we are."
+
+Real prior art worth reviewing before designing any of this fresh: the
+sibling UWOM project already has a working `browse.html` GUI
+(`visualize_subgraph.py`, PyVis/vis.js) — interactive graph viz, hidden
+bidirectional peer edges, physics tuned per hop-count, a client-side
+color palette as single source of truth, L2 domain subdivisions for
+oversized groups. Same underlying problems (dense graphs get
+unreadable past a node-count threshold, physics defaults don't scale)
+will recur here — worth knowing what worked/needed fixing there first.
+
+**Architectural input from MJSullivan (2026-07-14): much of that other
+interface is driven by static JSON-LD with lightweight presentation
+wrappers, NOT live queries against a running triplestore.** This
+significantly simplifies the Phase 2 security posture noted above — a
+static JSON-LD export has no live SPARQL surface to attack at all, so
+the "needs an API layer with auth in front of Oxigraph" concern mostly
+evaporates if the public interface works this way instead. Concrete
+implications, none yet built:
+- Needs a real, repeatable export/build step (Oxigraph -> static
+  JSON-LD snapshot) — does NOT exist yet; `load_oxigraph.sh` only goes
+  the other direction (.ttl -> live store). Given how fast this graph
+  is currently changing, this should be scripted from day one, not done
+  by hand.
+- Gives a clean, concrete enforcement mechanism for the
+  Candidate-vs-Curated concern above: the export step itself can
+  exclude/flag non-Curated LinkNotes, which is a stronger guarantee
+  than relying on frontend styling alone (can't be bypassed by a UI
+  bug).
+- A JSON-LD `@context` document (mapping thinkr:/tgs: URIs to
+  consumption-friendly terms) is real, undone design work, not
+  something that falls out for free.
+- DECIDED (2026-07-14): assume the PATTERNS are reusable (the overall
+  static-export-plus-thin-wrapper architecture, the general shape of
+  going from a live triplestore to a JSON-LD snapshot, presentation
+  conventions), NOT the code itself — UWOM's export logic is written
+  around units-of-measure classes with no overlap with this project's
+  Persona/Concept/LinkNote structure, so a fresh build for this
+  project's own classes is the right expectation, following UWOM's
+  proven approach rather than inventing the pattern from scratch.
+
+**Action-item "gamified knowledge" layer (raised 2026-07-14).**
+MJSullivan's idea: as a user encounters a `Concept` via some future
+interface, surface a list of concrete, checkable real-world actions
+related to it (local/state/national), with progress tracking and
+awards — making the graph's content accessible to students/casual
+users who won't engage with the full intellectual content directly.
+
+Real design forks discussed, not yet decided:
+- This is a DIFFERENT epistemic character than everything else in the
+  graph — descriptive/verifiable (Evidence, Candidate->Curated) vs.
+  prescriptive (no citation makes "you should do this" true or false).
+  Leaning toward a genuinely separate namespace/layer (maybe even a
+  separate store), bridged to Concept via something like the existing
+  `thinkr:convergesWith` pattern, rather than folding it into `thinkr:`
+  proper alongside LinkNote/Evidence.
+- Content-ops burden is real and different: local specifics (phone
+  numbers, org contact info, program status) rot fast, unlike anything
+  else in this graph so far. Leaning toward NOT trying to be the
+  source of truth for hyper-local facts — model durable action
+  TEMPLATES ("find your nearest X via [org]'s own directory") that
+  point outward at organizations who already own that freshness
+  problem, rather than storing the volatile specifics directly.
+- Gamification itself: real, not just a footnote — extrinsic
+  rewards (points/badges) can crowd out intrinsic motivation, and this
+  project has been deliberately non-trivializing about the underlying
+  ideas throughout. Whatever gets built should be intentional about
+  what the points actually reinforce, not just "engagement for its own
+  sake."
+- Proposed rough shape if/when this gets built: an `ActionItem` class
+  in its OWN namespace (e.g. `civic:`, not `thinkr:`), a
+  `relatesToConcept` bridge back to `Concept`, a scope/specificity
+  level (local/state/national — different verification burdens), a
+  freshness timestamp forcing periodic re-verification. Actual
+  gamification STATE (who's checked what, point totals) is user-account
+  application data, not knowledge-graph content — belongs in a separate
+  app database referencing ActionItems by ID, not inside the graph
+  itself.
+- Genuinely undecided: whether this becomes its own project reading off
+  `nate-hagens-kg`, or an extension folded into it.
+
+**Discovery channel: boots-on-the-ground organizations implementing
+these concepts, not necessarily connected to/influenced by Nate at all
+(raised 2026-07-14).** MJSullivan's framing: there must be hundreds of
+real organizations independently practicing what a given Concept
+describes (community land trusts for CircleOfTrustLocalism/localism,
+Transition Towns for de-growth-adjacent resilience work, etc.) — a
+different, complementary discovery channel from mining Nate's own
+content.
+- Fits the EXISTING schema close to for free: `Organization`/
+  `SchoolOfThought`/`AcademicInstitution` already exist as classes, and
+  `thinkr:convergesWith` is ALREADY defined for exactly this epistemic
+  shape ("independently converges on a similar idea, no claim of direct
+  influence") — likely just needs new individuals, not new schema.
+- Obvious non-cold-start starting point: Post Carbon Institute
+  (already `Organization.PostCarbonInstitute`, already linked to Nate)
+  runs/ran resilience.org, which has historically cataloged exactly
+  this kind of local-initiative network — check this first before
+  researching from scratch.
+- Real candidate movements with their own existing directories (so the
+  graph never has to own hyper-local freshness): Transition Network,
+  TimeBanks.org, Repair Café Foundation, Grounded Solutions Network,
+  solidarity-economy/mutual-aid networks.
+- Same "search, verify, don't inherit unverified trust" discipline as
+  person-bootstrapping applies here too, just applied to organizations
+  — confirm real/active/legitimately-connected before modeling, same
+  wrong-person-trap instinct.
+- Undecided: research broadly (many movement-types, each thin) vs.
+  deeply (pilot 2-3 movements end-to-end first) — same fork as the
+  person-bootstrap queue, likely same answer (pilot first).
+
+**Discovery channel: Nate's social media presence — TikTok, LinkedIn,
+Twitter/X, Substack, Instagram, Discord (raised 2026-07-14).**
+Scrapers reportedly exist for each; NOT yet evaluated individually, and
+they are NOT one uniform bucket — each platform is a genuinely
+different problem:
+- Substack is the strong lead candidate — `extraction/` already has
+  `substack_summaries_raw/`, `substack_text_cache/`, and
+  `match_substack_summaries.py` (built for a different original
+  purpose, matching Substack summaries against episode transcripts, but
+  structurally close to what mining his own long-form writing for
+  entities/concepts would need). Closest thing to "another transcript,"
+  most naturally continuous with the existing, proven pipeline.
+- LinkedIn and Twitter/X both explicitly prohibit scraping in their ToS
+  — LinkedIn has pursued real litigation over this (hiQ v. LinkedIn is
+  the well-known case). Worth confirming current legal/ToS status
+  before building anything, not after.
+- Discord flagged as a DIFFERENT kind of concern, not just legal: a
+  privacy-posture question, not a ToS one. Everything mined so far
+  (podcast transcripts, presumably Substack) involves public figures
+  who consented to a recorded, published conversation. A Discord
+  community — even publicly joinable — is casual conversation with a
+  very different expectation of privacy/permanence. Cataloguing
+  individual community members by name from chat logs would be a real
+  departure from this project's practice so far, worth deciding
+  deliberately rather than backing into because a scraper exists.
+- TikTok/Instagram: primarily short-form video/engagement metrics —
+  would likely need video transcription (a new pipeline stage, not a
+  small extension of the existing text-based one) to be useful for
+  entity/concept extraction at all.
+- The wrong-person-trap discipline from the bootstrap procedure needs
+  to get STRICTER here, not stay the same — a podcast guest credit is
+  close to unambiguous; a social handle is not (impersonation accounts,
+  common-name collisions, pseudonymous handles are the norm on every
+  one of these platforms, not the exception).
+
+## SIDECAR NAMING RETROFIT (2026-07-15, later the same day): LinkNote/
+## Evidence/CrosswalkNote brought into compliance with Relationship's
+## already-correct {Subject}_{Object} pattern — 76 individuals renamed,
+## zero triples lost, found while reviewing the Berman/Farley pilot's
+## own output
+
+**Trigger**: reviewing the bio-intro pilot entry immediately below (the
+one that added `LinkNote.SuperorganismFarley`) surfaced that its name
+didn't match `Relationship`'s already-established
+`{Subject}_{Object}`-with-real-local-names convention — MJSullivan caught
+this by eye, not tooling.
+
+**Audit, run before touching anything, per MJSullivan's explicit request
+to see the full violation list first:**
+- `thinkr:Relationship` (13 individuals): 0 violations — confirmed
+  compliant, not assumed, by checking every `hasSubject`/`hasObject`
+  pair's bare local name against the individual's own name.
+- `thinkr:LinkNote` (17 individuals): 17/17 violations (e.g.
+  `SuperorganismFarley` should be `Superorganism_JoshFarley`).
+- `thinkr:CrosswalkNote`: reported as 39/39 in the initial write-up,
+  corrected to the actual **40**/40 once the rename map was built
+  programmatically — a real, if small, undercount in the manual
+  audit-report pass, caught by the script's own count rather than
+  trusted blindly. All 40 violated (e.g. `AristotleDBpedia` should be
+  `Aristotle_DBpedia`).
+- `thinkr:Evidence` (19 individuals): 19/19 violations, with the added
+  wrinkle that 2 `LinkNote`s (`EnergyBlindness_ArtBerman`,
+  `Superorganism_JoshFarley` — both from the pilot two entries below)
+  each have 2 `Evidence`, needing a disambiguation rule beyond simple
+  base-renaming.
+
+**One real aside caught and deliberately NOT fixed under this task**:
+`LinkNote.MlkGrowth`'s `aboutSubject`/`aboutObject` are reversed relative
+to every other `LinkNote` in the file (`Persona.MartinLutherKingJr` is
+the subject, `Concept.GrowthImperative` the object — everywhere else a
+`Concept` is the subject). Flagged, not touched — a rename task that
+also quietly "corrects" a semantic assignment along the way is a rename
+task that's hard to trust later. Its new name
+(`LinkNote.MartinLutherKingJr_GrowthImperative`) faithfully reflects
+whatever `aboutSubject`/`aboutObject` actually say, reversed order and
+all — MJSullivan confirmed this was exactly the right call before
+execution.
+
+**Evidence-disambiguation rule, the one real judgment call, confirmed by
+MJSullivan before execution**: base name = owning `LinkNote`'s new name;
+when a `LinkNote` has 2+ `Evidence`, the general/original one keeps the
+bare base name and any episode-specific one gets `_TGS_<number>`
+appended. Applied: `EnergyblindnessBermanTranscript` →
+`EnergyBlindness_ArtBerman_TGS_220` (renamed suffix from the ad hoc
+"Transcript" to match the episode-number convention already used on the
+Farley case); `SuperorganismFarleyTGS185` →
+`Superorganism_JoshFarley_TGS_185`. **Explicitly flagged as an
+unresolved gap, not solved here, per MJSullivan's own instruction**: the
+rule only cleanly covers "exactly one general + N episode-specific" —
+it does not yet say what happens if a future `LinkNote` gets two-or-more
+episode-specific `Evidence` and zero general ones. Written into
+`CLAUDE.md`'s new 2a as an explicit open question rather than silently
+glossed over, to save re-deriving it from scratch next time.
+
+**Pre-flight sanity check MJSullivan specifically asked for, not just
+assumed**: confirmed `thinkr:CrosswalkSource.DBpedia` and
+`thinkr:CrosswalkSource.Wikidata` are the actual, exact local names in
+`data/seed/enumerations.ttl` (grepped directly) before trusting all 40
+CrosswalkNote renames were correctly formed — both confirmed exactly as
+expected.
+
+**Execution — boundary-safe text substitution, not an rdflib
+parse-and-reserialize round trip**: deliberately NOT done via rdflib
+graph rewrite + `.serialize()`, unlike `compute_confidence.py`'s write
+pass two entries below (which is why that pass silently dropped this
+file's decorative section-comments) — a plain-text regex substitution
+with `\b` word-boundaries around each full `ClassName.OldLocalName`
+token preserves 100% of existing formatting/comments while still being
+exact (word boundaries correctly prevent `EnergyblindnessBerman` from
+matching inside `EnergyblindnessBermanTranscript`, confirmed by design
+before running, not by luck). Built the full old->new mapping
+programmatically from live triples (never hand-typed), checked it for
+name collisions before writing anything (none found), then applied all
+98 substitutions (17+40+19, plus every `hasEvidence`/cross-reference
+occurrence of each renamed IRI) across the 3 owning files
+(`linknotes.ttl`, `evidences.ttl`, `crosswalknotes.ttl`).
+
+**Verification, same discipline as every batch this week:**
+- Baseline triple count: 2,022 (matching the pilot entry below's final
+  count). After the rename: 2,022 — exactly unchanged, as a pure rename
+  should be.
+- Grepped all of `data/seed/` for every one of the 76 old names after
+  the substitution pass: zero residual references anywhere, including
+  files never touched by the substitution itself (confirms nothing
+  outside the 3 owning files was pointing at an old IRI — true by
+  schema design, `LinkNote`/`Evidence`/`CrosswalkNote` are never
+  themselves the object of any other class's property, but checked
+  directly rather than assumed).
+- `scripts/validate_class_purity.py --check-scratch-empty`: clean except
+  the same 2 already-known, already-flagged violations
+  (`episodes.ttl`/Series, `subjects.ttl`/ConceptScheme) — untouched,
+  unworsened.
+- Reloaded the live Oxigraph store (stop `serve`, `rm -rf ./tgs_store`,
+  reload, restart `serve`) and live-SPARQL-queried: every sampled OLD
+  name (`LinkNote.SuperorganismFarley`, `LinkNote.MlkGrowth`,
+  `Evidence.EnergyblindnessBermanTranscript`,
+  `CrosswalkNote.AristotleDBpedia`,
+  `CrosswalkNote.MartinLutherKingJrWikidata`) returns zero triples;
+  every sampled NEW name resolves with its full original property set
+  intact, including that `LinkNote.Superorganism_JoshFarley`'s
+  `hasEvidence` correctly points at the newly-renamed
+  `Evidence.Superorganism_JoshFarley_TGS_185`, not a dangling reference
+  to the old name. Class counts confirmed unchanged: 17 `LinkNote`, 19
+  `Evidence`, 40 `CrosswalkNote`.
+- Updated the prose cross-references this rename would otherwise leave
+  stale: this doc's own bio-intro pilot entry (below) and
+  `CLAUDE.md`'s IRI-minting worked example (which, unhelpfully, had
+  been citing the exact non-compliant pattern this task fixes). Left
+  the handoff doc's older (2026-07-11) "Worked examples"/"Open
+  Questions" sections alone — those are explicitly framed as historical
+  OLD/NEW illustrations of a different, already-closed design
+  discussion, not live current-state claims.
+
+**Documentation decision**: written into `CLAUDE.md` as new decision
+2a, directly under the existing IRI-minting convention (decision #2) —
+not a new dedicated `NamingConventions.md` file. MJSullivan's call: one
+additional rule doesn't justify mirroring UWOM's separate doc; a single
+CLAUDE.md bullet is the right-sized home for it.
+
+## BIO-INTRO EXTRACTION PILOT, 2nd application (2026-07-15): Art Berman +
+## Josh Farley — mostly RelationshipType corrections and Evidence-
+## strengthening on already-known people, not new-entity discovery like
+## Monahan; a real infrastructure bug (compute_confidence.py) found and
+## fixed along the way
+
+**Starting point / two real discrepancies caught before any work began,
+worth recording so they don't recur:** the task brief for this session
+described `scripts/segment_intros.py` as "already exists (built this
+week)" — it did not exist anywhere in the repo (confirmed via `find` and
+`git log`); MJSullivan supplied it mid-session from wherever it had
+actually been saved (turned out to belong in `extraction/`, not
+`scripts/` — moved/used from there instead). Separately, this doc's own
+STEP 0 instructions pointed at "the most recent dated entries about...
+the bio-intro extraction pilot done on Matthew Monahan" — no such dated
+entry exists in this file; the Monahan pilot's real output (Mangaroa
+Farms, the Mangaroa Farms->Biome Trust Relationship, the corrected
+RelationshipType.Personal on Relationship.NateHagens_MatthewMonahan) only
+ever landed as an **uncommitted** diff against `organizations.ttl` and
+`relationships.ttl`, cross-referencing "see docs/sidecar-cleanup-
+handoff.md for the fuller discussion" — a discussion that was never
+actually written here. **Still not fixed as of this entry** — flagged,
+not resolved, since writing that retroactive entry wasn't this session's
+job. Do it before/alongside actually committing the Monahan diff.
+
+**Scope, matching the task's own "small and deliberate" instruction:**
+two already-bootstrapped Personas, both single-guest Interviews, 7
+episodes total — Art Berman (TGS_3, TGS_92, TGS_101, TGS_220) and Josh
+Farley (TGS_7, TGS_29, TGS_185). Explicitly did NOT touch the Roundtable
+transcripts (RR01, RR03) both guests also appear in, or the 2 additional
+real Berman appearances (TGS_44/"ArtBermanPt2", TGS_54/"ArtBerman3")
+whose existence gets corroborated below — all deliberately deferred, not
+forgotten.
+
+**Stage 1 (`extraction/segment_intros.py`) — the manifest-type-filter gap
+flagged in the task brief was real and got fixed** (the eligible-types
+check existed as a variable but was never actually applied to the file
+loop — now keyed off `download_manifest.csv`'s `local_filename`, skips
+Frankly transcripts for real). **A second, more consequential gap was
+found independently this session, not previously flagged anywhere:** the
+transcript corpus actually has TWO incompatible timestamp formats, not
+one — `[HH:MM:SS] Name: text` (newer transcripts, e.g. TGS-220, TGS-185)
+and `Name (HH:MM:SS):` / `Name (MM:SS):` (older transcripts — confirmed
+on TGS03/TGS92/TGS101/TGS07/TGS29, i.e. 5 of this pilot's own 7 targets).
+Without support for the second format, Stage 1 would have silently
+produced usable output for only 2 of the 7 episodes this pilot actually
+needed. Fixed by trying both patterns in sequence. Real corpus-wide
+effect, not just a fix for this pilot's narrow target list: re-running
+Stage 1 against the full `transcripts_text_cache/` went from 118
+processed intro segments (manifest-filter fix only) to 244 (both fixes)
+— roughly half the interview/roundtable library was on the older format.
+The Roundtable multi-guest window-width gap flagged in the task brief
+remains genuinely untouched, as instructed (Berman/Farley are both
+single-guest).
+
+**Stage 2 (by-hand reading, same as the Monahan pilot — no LLM API call
+made, per the task's own explicit instruction not to build that
+automation yet for a pilot this small):**
+
+*Art Berman* — no new Organization surfaced (unlike Monahan). What the
+intros surfaced instead:
+- `RelationshipType.Personal` added to `Relationship.NateHagens_ArtBerman`
+  (previously Professional only) — Nate calls him "my friend" directly in
+  3 of the 4 modeled episodes (TGS_92, TGS_101, TGS_220).
+- The relationship's existing "incomplete roster" scopeNote (already
+  flagging TGS_44/TGS_54 as probable additional, unmodeled appearances)
+  gets real primary-source corroboration: in TGS_101 (aired 2023-11-29)
+  Nate says "I think this is his fifth appearance" — consistent with
+  TGS_3 + 44 + 54 + 92 + 101 = 5. Still not modeling 44/54 as individuals
+  this session (out of scope), just upgrading the existing flag from
+  "the transcript library suggests" to "Nate's own words confirm."
+  Also captured, same scopeNote: Nate's own account of how they met —
+  both wrote for The Oil Drum, corroborating the pre-existing
+  `Relationship.NateHagens_TheOilDrum` / `Relationship.ArtBerman_TheOilDrum`
+  pair as the actual origin of this relationship, not a coincidence.
+- A new `Evidence` (`Evidence.EnergyBlindness_ArtBerman_TGS_220` — renamed
+  2026-07-15, see the naming-convention entry below) added to
+  the ALREADY-EXISTING Candidate-confidence
+  `LinkNote.EnergyBlindness_ArtBerman` — that LinkNote's original Evidence
+  explicitly flagged "not yet cross-checked against a specific TGS
+  episode... establishing first use"; TGS_220 closes exactly that gap:
+  Berman himself says "it's a blunder based on energy blindness" on
+  Nate's own show. Still left Candidate, not upgraded to Curated — that's
+  a human-review call (design decision #1), not something a pilot script
+  or this session gets to decide unilaterally, however strong the new
+  citation looks.
+
+*Josh Farley* — also no new Organization. The Gund Institute for
+Environment (already documented as prose on `Human.JoshFarley`, repeated
+in TGS_185's intro) was considered and deliberately NOT minted as its own
+individual — it's a research institute within UVM, not the kind of
+legally-distinct entity Mangaroa Farms was, and nothing here is actually
+NEW information versus what the original bootstrap already captured.
+Same deferred status as Berman's ASPO-USA. What DID surface:
+- `RelationshipType.Personal` AND `RelationshipType.Academic` added to
+  `Relationship.NateHagens_JoshFarley` (previously Professional only) —
+  repeated across all 3 modeled episodes: Farley was "the chair of my PhD
+  committee" and "one of my best friends" (TGS_7), "my old friend" (TGS_29),
+  "my friend and PhD advisor" / "my PhD chair" (TGS_185). Academic here is
+  deliberately distinct from the existing institutional
+  `Relationship.JoshFarley_UniversityOfVermont` — this is "personally
+  chaired Nate's own PhD committee," not just "both connected to UVM."
+- The clean, unambiguous instance of the "host-asserted explicit
+  concept-connection" pattern this whole pilot was designed to test for
+  (the Robert Lustig precedent discussed before piloting): a new
+  `LinkNote.Superorganism_JoshFarley` (renamed 2026-07-15, see the
+  naming-convention entry below) (`Persona.JoshFarley echoesIdeaOf
+  Concept.Superorganism`, Candidate confidence), backed by TWO Evidence
+  individuals — Nate's own words in TGS_7 ("We have followed parallel
+  paths to agree that humanity is currently functioning as a mindless,
+  energy-hungry, superorganism...") and independent corroboration in
+  TGS_185, where Farley himself uses the term unprompted. `echoesIdeaOf`
+  (not `influencedBy`) is the correct property here — "parallel paths"
+  is explicitly independent convergence, not one-directional influence.
+- `Human.JoshFarley`'s bio comment enriched with a specific current-
+  research-focus list from his own TGS_185 introduction (essential
+  resources, monetary/financial system democratization, cooperation,
+  information economics, the commons) — minor, but a direct, accurate
+  addition sourced from the primary text rather than the original
+  general-web-search bootstrap.
+
+**Real, unplanned infrastructure bug found and fixed:**
+`scripts/compute_confidence.py` still referenced the PRE-RENAME
+vocabulary (`ConfidenceLevel.*`, `ReliabilityTier.*`, `EvidencePolarity.*`)
+from before this project's `ConfidenceType`/`ReliabilityType`/
+`PolarityType` renames — exactly the "text-based rename never touches
+vocabulary URIs embedded in Python code" gotcha CLAUDE.md already warns
+about, just never actually caught for THIS particular rename. Practical
+effect: every comparison in the script silently matched nothing against
+the real graph, so every LinkNote fell through to the rule-6 floor state
+regardless of its actual Evidence, and `--write` mode would have
+serialized undefined `ConfidenceLevel.*` individuals into the seed files
+(exactly the kind of value the CI check is supposed to catch, since it's
+not one of the two real `ConfidenceType` individuals). Caught by
+`--dry-run` returning a suspiciously uniform 17/17 "Candidate" — including
+LinkNotes with a single Curated+Supports, no-Source Evidence that should
+be a textbook rule-5 "exactly 1 -> Curated" case. Fixed (3 namespace
+constants), re-verified via `--dry-run` and a live-query spot-check
+(`LinkNote.JevonsJevons` now correctly resolves `Curated`), then actually
+run — this was necessary to complete this session's own required
+verification step (design decision #1's "never hand-set calculatedConfidence"
+rule), not optional cleanup layered on top of the pilot.
+
+**Verification, same discipline as every batch this week:** baseline
+1,990 triples in `data/seed/*.ttl` before this session's edits (already
+including the still-uncommitted Monahan enrichments from earlier this
+week); 2,022 after this pilot's edits + a real `compute_confidence.py`
+run (+32). `scripts/validate_class_purity.py --check-scratch-empty`
+clean except for the 2 already-known, already-flagged, untouched
+violations (`episodes.ttl`'s Series mixing, `subjects.ttl`'s ConceptScheme
+mixing) — nothing from this session made either worse.
+`data/seed/scratch.ttl` never used this session — everything found was
+confident enough (backed by primary-source transcript quotes, no brand-
+new unverified entity) to go directly to its real destination file.
+Live-reloaded the Oxigraph store (stopped the running `serve` process,
+`rm -rf ./tgs_store`, reloaded, restarted `serve`) and individually
+SPARQL-queried every new/corrected fact above — all resolve correctly
+against the live store, not just "the file parses."
+
+**Is the pattern worth Stage 2 automation at real scale? Recommendation,
+not yet decided by MJSullivan:** worth continuing to pilot, but this 2nd
+run changes the picture from Monahan's alone. Stage 1's dual-format
+window-capture held up robustly once both real formats were supported.
+But this pilot's actual YIELD was more modest than Monahan's — mostly
+RelationshipType corrections and Evidence-strengthening on people already
+well-modeled, not a brand-new Organization/Relationship — which may mean
+the technique's marginal value is highest on FIRST-appearance/newly-
+bootstrapped guests (where basic facts are still being established) and
+lower on repeat guests whose relationships are already fairly complete,
+rather than a sign the pattern itself is weakening. Worth testing next on
+a guest who has NOT yet been bootstrapped at all, to properly compare
+against Monahan's outcome instead of against this session's. Stage 2
+itself is still 100% by-hand reading across both pilots now (2 data
+points) — genuinely not yet enough volume to justify real LLM-API
+automation per the task's own explicit guidance, but the 4-category
+extraction pattern (bio/credential facts, org mentions, explicit
+host-asserted concept-connections, relationship-type signals) has now
+worked cleanly and consistently twice, which is a reasonable signal for
+eventually turning it into a structured prompt once volume actually
+justifies building that.
+
+**Explicitly NOT done, next-session starting point:** write the
+retroactive Monahan dated entry this doc's own STEP 0 already assumed
+existed; the Roundtable window-width gap; any additional Personas beyond
+Berman/Farley (explicit checkpoint per the task brief — stop here, don't
+auto-continue).
+
+## BIO-INTRO EXTRACTION PILOT, 1st application (2026-07-14): Matthew
+## Monahan — the original pilot the 2nd-application entry above
+## references but that was never actually written up here; done
+## retroactively 2026-07-15 in Claude Chat, documenting real work from
+## the prior day
+
+**Why this entry is dated 2026-07-14 despite being written 2026-07-15:**
+this records when the actual enrichment work happened, not when the
+write-up was produced — matching this doc's own standing convention
+(dated entries reflect the work, not the authoring session). The gap
+itself — real Persona/Organization/Relationship edits sitting as an
+uncommitted diff for a full day, cited by their own scopeNotes as
+pointing to a discussion that didn't exist yet — is exactly the kind of
+mistake this doc exists to prevent, and it happened anyway. Caught by
+Claude Code during the 2nd-application pilot (see entry above), not by
+the original session that produced the diff.
+
+**Origin**: MJSullivan noticed that Nate's own guest introductions
+(the first few minutes of most Interview episodes) are a different,
+richer kind of source than either generic NER or general web search —
+concretely illustrated with a Robert Lustig snippet where Nate directly,
+explicitly maps the guest's work onto an existing Concept
+(`Concept.Superorganism`) in his own words. Rather than pilot on a
+fresh, unbootstrapped guest, the decision was to first enrich a handful
+of ALREADY-bootstrapped Personas and see what actually surfaced —
+deliberately testing the technique against known context before
+deciding whether to extend the standard bootstrap workflow.
+
+**Only one existing Persona had real transcript text actually available
+in this session** (Claude Chat, not Claude Code — no direct filesystem
+access to `extraction/transcripts_raw/`): Matthew Monahan, `TGS_226`,
+from the `transcripts_text_cache/` archive MJSullivan had uploaded
+earlier the same day. Berman, Farley, and McGilchrist's real transcripts
+existed on MJSullivan's machine but were never uploaded to this
+conversation — genuinely why this pilot was 1 person, not more, and why
+the natural continuation became "hand this to Claude Code, which
+already has the full corpus on disk" (see the 2nd-application entry
+above).
+
+**What reading the actual intro segment (first ~2 minutes, read by hand,
+no script) surfaced, all independently verified before being asserted,
+same discipline as every bootstrap this week:**
+
+1. **`Organization.MangaroaFarms` — a genuinely new individual**, not
+   previously in the graph at all. The transcript itself only says
+   Monahan is "involved... through Mangaroa Farms... a regenerative farm
+   and educational hub" — thin enough that it was treated as a lead, not
+   a fact, and independently verified via 7 separate sources (mangaroa.org's
+   own About page, NZBusiness Magazine, Good Magazine, Quorum Sense,
+   Waterford Press, Crunchbase, Commonweal) before being written into
+   `organizations.ttl`. Real: founded 2018 by Matthew and his brother
+   Brian Monahan (with Catlin Powers), a working farm/food hub/education
+   centre in Upper Hutt, New Zealand.
+2. **A real structural fact the transcript itself never quite stated,
+   only surfaced by the independent verification pass**: Mangaroa Farms
+   is owned by/part of `Organization.BiomeTrust`, per Mangaroa's own
+   About page — already a real individual in this graph. Modeled as
+   `Relationship.MangaroaFarms_BiomeTrust`, the FIRST Organization-to-
+   Organization `Relationship` in the graph. Checked, not assumed: confirmed
+   `thinkr:hasSubject`/`hasObject` have no `rdfs:range` restriction that
+   would have made an Org-to-Org pairing schema-invalid before asserting
+   this was safe.
+3. **`RelationshipType.Personal` added to `Relationship.NateHagens_MatthewMonahan`**
+   (previously Professional only) — direct textual evidence, not
+   inference: Nate's own words in the transcript, "my friend Matthew
+   Monahan" and "despite the fact that we are friends" as his stated
+   reason for having him on.
+4. **Noted, deliberately NOT formally modeled**: Ma Earth being "on
+   their third round of funding... as of the release of this episode" —
+   a real, point-in-time fact, but exactly the kind of volatile,
+   dated-status detail flagged as a bad fit for permanent graph content
+   in the GUI/product-roadmap backlog discussion the same day (content-ops
+   burden, facts that rot). Left as transcript content, not asserted as
+   a graph fact.
+
+**Verification**: combined graph triple count 1,970 -> 1,990 (+20) after
+this pilot — confirmed via `rdflib` parse of the full `data/seed/`
+directory at the time, not just the individually-touched files.
+`Organization.MangaroaFarms` confirmed correctly typed; both new
+`Relationship` individuals confirmed resolving `hasSubject`/`hasObject`
+correctly; `Relationship.NateHagens_MatthewMonahan`'s `hasRelationshipType`
+confirmed returning both `Personal` and `Professional`.
+`scripts/validate_class_purity.py --check-scratch-empty` run clean —
+only the 2 already-known, already-flagged violations (`episodes.ttl`
+Series, `subjects.ttl` ConceptScheme), `scratch.ttl` correctly empty
+throughout (everything found was confident/verified enough to write
+directly to its real destination file, same as the 2nd-application
+pilot's own later finding that scratch wasn't needed either).
+**NOT independently confirmed against a live-reloaded Oxigraph store in
+this same session** — that reload/live-query step happened later, as
+part of the 2nd-application pilot above, which explicitly re-verified
+these Monahan facts alongside its own Berman/Farley additions before
+declaring the store good. Recorded here for completeness, not because
+this entry did that verification itself.
+
+**What this pilot's outcome, compared against the 2nd-application
+pilot's outcome, actually tells us**: Monahan (a relatively thin
+original bootstrap) yielded a brand-new Organization and a new
+cross-organization Relationship. Berman and Farley (both more thoroughly
+bootstrapped via general web search originally) yielded relationship-
+type corrections and Evidence-strengthening, not new entities. Two data
+points is not a lot, but the direction is consistent and worth taking
+seriously when deciding how to prioritize this technique going forward:
+its marginal value looks highest on thin/early bootstraps, lower on
+already-well-modeled people — suggesting this might belong as a
+standard STEP in the bootstrap procedure itself (read the intro before
+or alongside the general web search, not after), rather than a separate
+enrichment pass applied retroactively to already-finished Personas.
+Not yet decided by MJSullivan.
+
 ## GOVERNANCE + FILESYSTEM CLEANUP (2026-07-14, later the same day):
 ## the same class-purity mistake happened twice, so a real fix got
 ## built instead of a third manual correction; a parallel filesystem

@@ -55,8 +55,9 @@ thinkr:Relationship a owl:Class ;
 tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.MatthewMonahan ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Matthew Monahan"@en ;
+    skos:scopeNote "RelationshipType.Personal ADDED 2026-07-14 (was Professional only) — direct evidence from Nate's own words in the TGS_226 transcript: he introduces Monahan as 'my friend' and separately states 'despite the fact that we are friends' as his reason for having him on. Stronger-than-usual evidence for a Personal tag — Nate's own direct statement in the primary source, not inferred."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -99,7 +100,6 @@ tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndi
 # 5 (5, 20, 31, 42, 50). Union of both is the full 7 below. Dates
 # populated only where episodes.ttl carries a confirmed dct:created;
 # the other 4 get an honest scopeNote rather than a fabricated date. ---
-
 tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.DanielSchmachtenberger ;
@@ -203,9 +203,9 @@ tgs:Relationship.NateHagens_PeakOilMovement a thinkr:Relationship, owl:NamedIndi
 tgs:Relationship.NateHagens_ArtBerman a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.ArtBerman ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Art Berman"@en ;
-    skos:scopeNote "4 of Art Berman's confirmed guest appearances modeled here (episodes 3, 92, 101, 220) — the transcript library shows evidence of more (an unnumbered 'ArtBermanPt2' and a 'TGS54ArtBerman3' suggesting a 3rd appearance by internal count) not yet individually researched/dated. Treat this Relationship as incomplete, not exhaustive, as of 2026-07-14."@en ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Art Berman"@en ;
+    skos:scopeNote "4 of Art Berman's confirmed guest appearances modeled here (episodes 3, 92, 101, 220) — the transcript library shows evidence of more (an unnumbered 'ArtBermanPt2' and a 'TGS54ArtBerman3' suggesting a 3rd appearance by internal count) not yet individually researched/dated. Treat this Relationship as incomplete, not exhaustive, as of 2026-07-14. CORROBORATED 2026-07-15 via the bio-intro extraction pilot (see docs/sidecar-cleanup-handoff.md): in TGS_101's own intro (aired 2023-11-29) Nate says 'I think this is his fifth appearance on The Great Simplification' — consistent with TGS_3 + ArtBermanPt2(44) + TGS54ArtBerman3(54) + TGS_92 + TGS_101 = 5, direct primary-source support for the 'incomplete' flag above, still not itself sufficient to model episodes 44/54 as individuals (out of scope for this pilot). RelationshipType.Personal ADDED 2026-07-15 — direct evidence from Nate's own words, repeated across 3 of the 4 modeled episodes: 'Art is a friend, a colleague...' (TGS_92), 'my friend and colleague, Art Berman' (TGS_101), 'my friend Art Berman' (TGS_220). How they met, per Nate's own words in TGS_3: 'writing articles and analysis for the energy website, The Oil Drum 10 years ago, which is where we became colleagues' — corroborates the existing Relationship.ArtBerman_TheOilDrum / Nate's own TheOilDrum affiliation as the actual origin of this relationship, not just a coincidental shared affiliation."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -242,9 +242,9 @@ tgs:Relationship.ArtBerman_TheOilDrum a thinkr:Relationship, owl:NamedIndividual
 tgs:Relationship.NateHagens_JoshFarley a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.JoshFarley ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Josh Farley"@en ;
-    skos:scopeNote "3 confirmed appearances modeled (episodes 7, 29, 185) matching the transcript library as of 2026-07-14; 232 mentions across 16 documents in the entity index suggests possible additional Frankly/roundtable mentions beyond dedicated interview episodes, not yet individually researched."@en ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Academic, thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal, academic, and professional relationship with Josh Farley"@en ;
+    skos:scopeNote "3 confirmed appearances modeled (episodes 7, 29, 185) matching the transcript library as of 2026-07-14; 232 mentions across 16 documents in the entity index suggests possible additional Frankly/roundtable mentions beyond dedicated interview episodes, not yet individually researched. RelationshipType.Personal and RelationshipType.Academic ADDED 2026-07-15 via the bio-intro extraction pilot (see docs/sidecar-cleanup-handoff.md) — direct evidence from Nate's own words, repeated across all 3 modeled episodes: Farley was 'the chair of my PhD committee 15 years ago, and he is one of my best friends' (TGS_7); 'my old friend'... 'it will be 18 years coming up where I met you and started my PhD program at the University of Vermont' (TGS_29); 'my friend and PhD advisor'... 'the chairman of my PhD committee back in the day'... 'this was my first semester of my PhD program with you as my PhD chair' (TGS_185). This is a person-to-person academic mentorship distinct from Relationship.JoshFarley_UniversityOfVermont's institutional-affiliation claim below — Academic here specifically means 'was Nate's own PhD committee chair,' not just 'both connected to UVM.'"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -268,3 +268,22 @@ tgs:Relationship.JoshFarley_UniversityOfVermont a thinkr:Relationship, owl:Named
     thinkr:hasRelationshipType thinkr:RelationshipType.Academic ;
     skos:prefLabel "Josh Farley's academic relationship with University of Vermont"@en ;
     skos:scopeNote "Same institution Nate Hagens has his own structured Relationship with (Relationship.NateHagens_UniversityOfMinnesota is a different school — this is University of VERMONT, matching Nate's memberOf list, not Minnesota). Genuine institutional overlap, not a personal-connection claim."@en .
+
+#############################################
+# ENRICHED 2026-07-14 — see organizations.ttl for the Mangaroa Farms
+# discovery/verification trail (TGS_226 bio-intro pilot).
+#############################################
+
+tgs:Relationship.MatthewMonahan_MangaroaFarms a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.MatthewMonahan ;
+    thinkr:hasObject tgs:Organization.MangaroaFarms ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Matthew Monahan's professional relationship with Mangaroa Farms"@en ;
+    skos:scopeNote "Co-founder (with his brother Brian Monahan, not yet modeled in this graph), 2018 — verified via mangaroa.org and independent press coverage."@en .
+
+tgs:Relationship.MangaroaFarms_BiomeTrust a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Organization.MangaroaFarms ;
+    thinkr:hasObject tgs:Organization.BiomeTrust ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Mangaroa Farms' professional relationship with Biome Trust"@en ;
+    skos:scopeNote "Structural: Mangaroa Farms operates as a project wholly owned by/part of Biome Trust, per Mangaroa Farms' own 'About Us' page. First Organization-to-Organization Relationship in this graph — hasSubject/hasObject aren't restricted to Persona-involving pairs, confirmed working here."@en .

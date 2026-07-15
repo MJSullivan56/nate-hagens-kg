@@ -57,3 +57,17 @@ tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "The Consilience Project"@en ;
     skos:definition "Non-profit media organization (founded 2021, a publication of the Civilization Research Institute) publishing research on public sensemaking, governance design, and global risk mitigation — addressing the erosion of shared epistemics and 'information commons.' Founding member: tgs:Human.DanielSchmachtenberger. NOT separately verified for DBpedia/Wikidata as of 2026-07-11 — flagged honestly rather than guessed; revisit if this becomes independently relevant."@en ;
     .
+
+#############################################
+# ENRICHED 2026-07-14 — surfaced by actually reading Nate's own bio
+# intro for Matthew Monahan (TGS_226 transcript), not general web
+# search. New extraction pattern being piloted: episode intros are a
+# different, richer kind of source than generic NER — Nate's own
+# framing, not inferred entity mentions. See
+# docs/sidecar-cleanup-handoff.md for the fuller discussion.
+#############################################
+
+tgs:Organization.MangaroaFarms a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Mangaroa Farms"@en ;
+    skos:definition "A community food hub, regenerative agriculture project, and resilience education centre in the Hutt Valley, Upper Hutt, New Zealand (near the Mangaroa River). Founded 2018 by brothers Matthew and Brian Monahan (with Catlin Powers) as a living laboratory for transitioning former dairy and pine plantation land into regenerative agriculture and native forest. Structurally part of/owned by tgs:Organization.BiomeTrust, per Mangaroa Farms' own 'About Us' page and multiple independent sources. Originally surfaced via Nate Hagens' own guest introduction for Matthew Monahan (TGS_226 transcript) — a new extraction pattern piloted 2026-07-14, reading episode intros as a distinct primary source rather than relying on generic NER or web search alone (see docs/sidecar-cleanup-handoff.md). Independently verified 2026-07-14 via multiple sources (mangaroa.org, NZBusiness Magazine, Good Magazine, Quorum Sense, Waterford Press) — real, active, well-documented. NO owl:sameAs asserted: no Wikipedia/DBpedia/Wikidata entry found, plausibly below the notability bar for a small regional farm."@en ;
+    .

@@ -26,6 +26,7 @@ extraction/substack_summaries_raw/
 extraction/cited_sources_raw/
 extraction/substack_text_cache/
 extraction/transcripts_text_cache/
+extraction/intro_segments/
 extraction/*.pdf
 
 # OS/editor cruft

@@ -3,8 +3,23 @@ Computes thinkr:calculatedConfidence for every thinkr:LinkNote from its thinkr:E
 set. This value is DERIVED — never hand-write it into a TTL file. Re-run this
 script after adding, editing, or reviewing any Evidence, and commit the result.
 
-Rule (see ontology/schema.ttl's ConfidenceLevel individuals for the canonical
-definitions, and CLAUDE.md's backlog section for the full design rationale):
+Rule (see data/seed/enumerations.ttl's ConfidenceType individuals for the
+canonical definitions, and CLAUDE.md's backlog section for the full design
+rationale):
+
+FIXED 2026-07-15: this script's namespace constants (ConfidenceLevel/
+ReliabilityTier/EvidencePolarity) were stale leftovers from before this
+project's ConfidenceType/ReliabilityType/PolarityType renames — the exact
+"text-based rename never touches vocabulary URIs embedded in Python code"
+gotcha CLAUDE.md already warns about, just never actually caught here.
+Practical effect: every CURATED/REPUTABLE/etc. comparison in this file
+silently matched nothing against the real graph, so every LinkNote fell
+through to the rule-6 floor state regardless of its actual Evidence — and
+--write mode would have serialized bogus, undefined ConfidenceLevel.*
+individuals into the seed files. Caught by a --dry-run showing 17/17
+LinkNotes (including ones with a single Curated+Supports, no-Source
+Evidence — a textbook rule-5 "exactly 1 -> Curated" case) all coming back
+Candidate, which is a strong prior against something ordinary.
 
 1. Only Curated (human-reviewed) Evidence counts toward anything.
 2. Evidence from an Unreliable-tier Source is excluded entirely, regardless
@@ -43,19 +58,19 @@ TGS = Namespace("http://example.org/tgs#")
 THINKR = Namespace("http://example.org/thinkr#")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 
-CURATED = THINKR["ConfidenceLevel.Curated"]
-CANDIDATE = THINKR["ConfidenceLevel.Candidate"]
-CORROBORATED = THINKR["ConfidenceLevel.Corroborated"]
-DISPUTED = THINKR["ConfidenceLevel.Disputed"]
+CURATED = THINKR["ConfidenceType.Curated"]
+CANDIDATE = THINKR["ConfidenceType.Candidate"]
+CORROBORATED = THINKR["ConfidenceType.Corroborated"]
+DISPUTED = THINKR["ConfidenceType.Disputed"]
 
-REPUTABLE = THINKR["ReliabilityTier.Reputable"]
-AUTHORITATIVE = THINKR["ReliabilityTier.Authoritative"]
-UNVERIFIED = THINKR["ReliabilityTier.Unverified"]
-UNRELIABLE = THINKR["ReliabilityTier.Unreliable"]
+REPUTABLE = THINKR["ReliabilityType.Reputable"]
+AUTHORITATIVE = THINKR["ReliabilityType.Authoritative"]
+UNVERIFIED = THINKR["ReliabilityType.Unverified"]
+UNRELIABLE = THINKR["ReliabilityType.Unreliable"]
 REPUTABLE_OR_BETTER = {REPUTABLE, AUTHORITATIVE}
 
-SUPPORTS = THINKR["EvidencePolarity.Supports"]
-CONTESTS = THINKR["EvidencePolarity.Contests"]
+SUPPORTS = THINKR["PolarityType.Supports"]
+CONTESTS = THINKR["PolarityType.Contests"]
 
 
 def load_full_graph():

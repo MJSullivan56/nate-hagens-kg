@@ -140,6 +140,7 @@ tgs:Concept.Superorganism a thinkr:Concept,
     dcterms:subject tgs:Subject.SystemsFrameworks ;
     skos:definition "Framing human civilization as a single self-organizing, energy-and-resource-consuming entity whose collective behavior is not simply the sum of individual human intentions — echoing biological superorganism concepts (ant colonies, etc.) applied to techno-industrial society."@en ;
     skos:prefLabel "The Superorganism"@en ;
+    thinkr:echoesIdeaOf tgs:Persona.JoshFarley ;
     thinkr:influencedBy tgs:Persona.EOWilson .
 
 tgs:Concept.TheoryOfChange a thinkr:Concept,
