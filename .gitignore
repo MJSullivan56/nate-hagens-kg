@@ -9,6 +9,10 @@ __pycache__/
 .venv/
 venv/
 
+# Secrets — never commit
+.env
+.env.*
+
 # DuckDB staging (local review queue — not source of truth)
 extraction/staging.duckdb
 extraction/entity_index.duckdb
@@ -27,6 +31,7 @@ extraction/cited_sources_raw/
 extraction/substack_text_cache/
 extraction/transcripts_text_cache/
 extraction/intro_segments/
+extraction/intro_candidates.csv
 extraction/*.pdf
 
 # OS/editor cruft

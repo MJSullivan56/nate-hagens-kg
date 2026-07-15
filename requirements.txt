@@ -33,5 +33,6 @@ click>=8.0.0  # spacy's CLI (used for `python -m spacy download`) imports this
 # LLM-assisted extraction (optional — only needed if you call the API
 # directly from Python rather than doing extraction passes in-chat)
 anthropic==0.40.0
+pyyaml==6.0.3         # parsing Stage 2's YAML output (extraction/eval_stage2_yaml.py)
 
 python-dotenv==1.0.1

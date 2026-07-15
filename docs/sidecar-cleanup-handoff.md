@@ -394,6 +394,393 @@ different problem:
   common-name collisions, pseudonymous handles are the norm on every
   one of these platforms, not the exception).
 
+## STAGE 2 SCOPE, PART 2 (2026-07-15, continuing the same conversation
+## after a stated "may pick this up in a few hours" pause that never
+## actually broke): stub-Human minting settled, a 10-segment taxonomy
+## exercise surfaced 5 real new extraction categories plus a 4th
+## Human/Persona case, concept-mining scoped (and prototyped outside the
+## repo), and a real evaluation methodology replaced a proposed point
+## system
+
+**Picks up directly from the STAGE 2 SCHEMA DESIGN entry above — read
+that one first.** That entry landed on "mint only Persona, park bio-leads
+in a scopeNote, defer Human entirely to Pass 2." Everything below either
+refines or extends that, in the order it actually came up.
+
+### Stub-Human minting, refining (not reversing) the Persona-only call
+
+MJSullivan's own example, sharpened further: `Persona.NateHagens`'s
+public name is "Nate Hagens"; `Human.NathanHagens`'s actual given name,
+"Nathan," came from an entirely different source than the show. Question
+raised: does "defer Human entirely" actually work, given `actsThrough`
+is the only thing that ever reaches `Human` — doesn't every new Persona
+still need *something* to act through?
+
+**Resolution**: mint a **stub `Human`** alongside every new `Persona`,
+not a deferred one. The stub's `skos:prefLabel` is simply copied from the
+Persona's public name — an explicit, calibrated bet: right roughly 90%
+of the time, wrong the other 10% (Nate/Nathan, Cher-style splits), and
+consciously accepted rather than blocked on. **What licenses accepting
+that risk, stated plainly by MJSullivan**: "we are not building a
+general-purpose social graph here... everyone mentioned in this Thinkr
+ontology will be a Persona one way or the other — they are after all
+true 'thinkers'." Every individual that actually matters to this graph
+*is* a thinker, which means the Human record's entire job is satisfying
+one structural link (`actsThrough`), not carrying research weight the
+way it would in a genealogy or social-network project. That changes the
+risk calculus enough that "best-guess stub, honestly flagged" beats
+"block on verification."
+
+**Practical fold-in**: the `human_lead` scopeNote from the prior entry
+now has an obvious home — it becomes the stub Human's own
+`rdfs:comment`/scopeNote, honestly marked as name-unverified-copied-
+from-Persona plus whatever bio-shaped leads the transcript surfaced. No
+separate holding field needed. **Not yet done**: `extraction/
+eval_stage2_yaml.py` still only emits the `persona`/`human_lead` shape
+from the prior entry — it has NOT been updated to actually emit a stub
+`Human` block. Flagged, not forgotten.
+
+### 10-segment taxonomy exercise: what else is actually in these things
+
+MJSullivan's framing of the real difficulty: "How to determine what is
+'good stuff' is the issue I am having." Randomly sampled 10 fresh intro
+segments (seed 20260715, explicitly excluding every segment already
+picked apart this session — Berman, Farley, Pinsky, Monahan) and read
+all 10 in full, cataloguing what's actually extractable rather than
+speculating: Peter Brannen, Alexa Firmenich, Nora Bateson, Vanessa
+Andreotti, Pedro Prieto, Giorgos Kallis, Gaya Herrington, James Fleay,
+Daniel Zetah, Doomberg.
+
+**Five real, new candidate categories surfaced, none present in the
+Berman/Farley/Pinsky set at all — pure luck of an 8-9-file prior sample,
+confirming the value of actually sampling wider rather than assuming the
+first pilot generalizes:**
+1. **Named published works** (Brannen: 2 books; Andreotti: 1 book;
+   Prieto: 1 co-authored book naming a real third-party co-author,
+   Charlie Hall) — already schema-supported (`thinkr:Work` +
+   `dct:creator`), just never triggered by the earlier sample.
+2. **Past-vs-current affiliation status** (Brannen: "was previously a
+   visiting scholar"; Herrington: KPMG then Schneider Electric) — nothing
+   in the current schema distinguishes "was" from "is."
+3. **Founder roles** (Firmenich: co-founded Ground Effect; Fleay:
+   founder of DUNE) — reads differently than plain membership, no
+   current property distinguishes it.
+4. **Guest-stated relationship TO the host**, reverse of every signal
+   captured so far (Fleay: "I'm a longtime listener and fan... been
+   quite affected by your work" — the guest describing a relationship to
+   Nate, not the usual host-to-guest direction).
+5. **Third-party mentions with enough specificity to be a real lead vs.
+   too thin to chase** — contrast Pinsky's earlier "Daniel Pauly, a
+   friend of mine" (full name + explicit relationship + institutional
+   context, worth chasing) against Zetah's "a Canadian fella named
+   Lance" (first name only, incidental, correctly discarded).
+
+**Real negative/calibration examples, equally valuable**: Kallis's
+segment has zero relationship-signal language at all — confirms empty
+output is a valid, expected result, not an extraction failure. Zetah has
+zero institutional relationships — he's a farmer, correctly yields
+nothing there. Bateson's segment is almost entirely substantive
+philosophical discussion with thin structured yield despite ~1,000 words
+— also expected, not a failure. Prieto's `discusses`-shaped content is a
+one-off news event (an April 2026 Iberian blackout), a real case for NOT
+forcing every topic into the durable `Concept` scheme. Andreotti's
+segment independently produced a SECOND real instance of the host-
+asserted explicit-concept-connection pattern ("at the core of your story
+is the superorganism... our stories rhyme") — confirms the pattern
+recurs across guests, not a Farley one-off.
+
+### Human/Persona taxonomy: a real 4th case, resolved as a Pass-2 triage
+### note rather than a Stage 2 field
+
+Doomberg's segment ("an anonymous energy finance professional, part of a
+team of analysts") broke the stub-Human assumption above outright — not
+a hidden-but-real Human (the Cher case), but plausibly **no singular
+Human to stub at all**. Checked against the schema directly: `thinkr:
+actsThrough` carries no cardinality constraint anywhere in `tgs-core.ttl`
+— nothing currently forces a Persona to have a Human. So this needs a
+documented decision, not a schema change: **for a Doomberg-shaped case,
+leave `actsThrough` deliberately unasserted**, with a scopeNote on the
+Persona explaining why ("anonymous team, no individual(s) disclosed") —
+same open-world-safe move already used for the Contributor/Mention
+design elsewhere in this project (absence isn't a claim nothing exists,
+just an honest "not disclosed," freely upgradable later).
+
+MJSullivan proposed a 4th case on top of this: the well-known-celebrity
+case (Al Gore was the example) — real, but resolved as a **triage note
+on case 1, not a new structural case**. Al Gore is identical in shape to
+an ordinary guest (Persona + stub Human, `actsThrough` asserted) — what
+differs is only how much effort Pass 2 needs to verify him (trivial,
+given how thoroughly documented he is), not the RDF shape itself.
+Recommended keeping this out of Stage 2's extraction prompt entirely:
+"is this person externally well-documented" is a fact about source
+availability outside the transcript, which Stage 2 structurally can't
+check without doing the same web lookup that IS Pass 2's job — let Pass
+2 notice it's fast as a natural byproduct of actually doing the check,
+rather than asking Stage 2 to predict fame level from ~1,000 words of
+transcript.
+
+**Settled 4-case taxonomy**:
+1. Ordinary guest — Persona + stub Human, name copied, Pass 2 verifies (moderate effort)
+2. Deliberately-obscured public figure (Cher) — Persona + Human, but Human stays thin even after real verification
+3. Anonymous/pseudonymous collective (Doomberg) — Persona, `actsThrough` deliberately unasserted, flagged not guessed
+4. Well-known celebrity (Al Gore) — same shape as case 1, just trivially fast for Pass 2 to verify; not a Stage 2 concern
+
+### Concept-mining: scoped, and prototyped OUTSIDE the repo per MJSullivan's explicit request
+
+Trigger: reviewing the Doomberg segment by hand, MJSullivan noticed how
+many topic/keyphrase mentions it contains ("economy decisions," "energy
+transactions," "geopolitical stage," etc.) and proposed ranking mentions
+by frequency across episodes, with high-ranking ones minted and linked
+to Wikipedia/Wikidata.
+
+**Two real corrections before any building happened:**
+1. **The extraction step needs different machinery than the existing
+   person-bootstrap tooling.** `top_persons.py`/`index_named_entities.py`
+   already do exactly the "rank by frequency, surface a worklist"
+   pattern — but they run on spaCy NER, which is scoped to PERSON/ORG/
+   GPE-style proper nouns and will NOT reliably catch abstract topic
+   phrases like "global supply chain" (confirmed by direct inspection of
+   what spaCy's model is actually built to tag, not assumed). Real
+   automation here needs LLM-based keyphrase extraction, Stage-2-shaped,
+   not a new mode of the existing NER tool. The ranking/worklist logic
+   is reusable; the extraction logic is not.
+2. **Most high-frequency terms are `Subject`-shaped, not `Concept`-
+   shaped**, and frequency alone can't tell the two apart. Every
+   individual in `Concept` today (19 total: EnergyBlindness,
+   Superorganism, JevonsParadox, CarbonPulse, etc.) is a specific,
+   named, definable theoretical framework. "Global supply chain,"
+   "energy transactions," "international labor" are generic domain
+   vocabulary that would appear in any macro-energy-economics
+   conversation — much closer to the existing `thinkr:Subject` SKOS
+   taxonomy (already 12 individuals: EnergySystems, Geopolitics,
+   MonetarySystemAndGrowth, SystemsFrameworks, etc.) than to `Concept`.
+   Minting "energy shortages" as a `Concept` alongside "the
+   Superorganism" would dilute a class that's stayed genuinely curated
+   so far — the same one-class-purity instinct that's been protecting
+   file boundaries all session, one level up at the modeling level.
+
+**Prototype built and validated, explicitly per MJSullivan's own
+request to keep it OUT of the repo**: `concept_mining_prototype.ttl`,
+written to the session scratchpad (NOT `nate-hagens-kg/`, not committed,
+not loaded into Oxigraph), hand-extracted from the same 10 segments
+above, sorted into four buckets — (A) matches an existing `Concept`,
+a `discusses`-link candidate (8 hits — CarbonPulse/Brannen,
+Superorganism+Metacrisis/Andreotti, EROI/Prieto, GrowthImperative/
+Kallis, LimitsToGrowth/Herrington, EnergyBlindness+MoneyAsClaimOnEnergy/
+Doomberg); (B) plausible new `Concept` candidate, deliberately kept to
+ONE entry (Andreotti's "Modernity as a who" framework, later downgraded
+— see below); (C) matches the existing `Subject` taxonomy, tagging
+candidates only, not new individuals (5 entries — this bucket absorbed
+most of what looked Concept-shaped at first glance, including the whole
+original Doomberg list); (D) discarded, shown explicitly rather than
+silently dropped, including two flagged as genuinely borderline calls
+rather than clean cuts. Parses clean (24 triples). This confirmed the
+Bucket A/C split empirically, not just as a stated hypothesis — the
+Doomberg-derived list MJSullivan pulled out by hand landed almost
+entirely in Bucket C once checked against the real Subject taxonomy.
+
+### Concept-candidate evaluation: a proposed point system rejected in
+### favor of reusing the existing Evidence/Confidence machinery — with a
+### real worked example
+
+MJSullivan asked directly how to evaluate a Bucket-B candidate (the
+Andreotti "Modernity as a who" prototype entry) and proposed a points
+system: Wikipedia page = 10, own webpage = 10, 1 point per episode
+mention, etc.
+
+**Rejected, with a specific citation, not just a preference**: additive
+point scoring conflicts with a constraint this project already set for
+itself in `CLAUDE.md`'s backlog — "stays ORDINAL, not numeric... a
+weighted numeric decay formula would be a real regression." The concrete
+failure mode: `compute_confidence.py` already encodes that a strong
+Reputable-or-better rebuttal must *override* a pile of supporting
+evidence ("forces Disputed, overriding Corroborated even if supporting
+evidence also exists") — a point sum can't represent that asymmetry,
+more points always wins under addition. **Recommendation, adopted**:
+don't build a new scoring axis at all — treat "should this become a
+Concept" as a claim needing Evidence, using the exact `LinkNote` →
+`Evidence` → `calculatedConfidence` machinery that already exists.
+
+**Then actually tested against the real candidate, not left as
+architecture-only reasoning** — MJSullivan explicitly asked "is there
+any other supporting websites or organizations" for the Andreotti
+candidate, so real `WebSearch` calls were run rather than reasoned about
+in the abstract. Findings: Andreotti herself is genuinely well-
+documented (real Wikidata entry Q57450974, confirmed her actual
+UBC-then-UVic career sequence — which incidentally corrected an earlier
+flag from the per-segment review, where the transcript's own phrasing
+had conflated UBC and UVic into one institution); "Hospicing Modernity"
+the book is independently reviewed and cited (Goodreads, a blog review,
+an e-flux journal conversation, a named UBC professor's endorsement) —
+Curated-tier-worthy on both counts. But the specific proposed Concept,
+"Modernity as a who," is NOT independently cited by anyone as a
+reusable, named idea the way "Jevons Paradox" or "EROI" are — it reads
+as a rhetorical device within the book, not (yet, externally) a
+standalone concept.
+
+**Concrete resulting recommendation, a real refinement of the candidate
+itself, not just a confidence downgrade**: mint the underlying
+`thinkr:Work` (the book — clean bibliographic path, real external
+verification available) with the guest as `dct:creator`, rather than a
+freestanding abstract `Concept` the evidence doesn't actually support.
+Same content, lower-risk container. MJSullivan's own reaction, worth
+recording verbatim since it's a real confirmation of the whole approach
+(real verification over speculation, holding the project's own stated
+principles even against MJSullivan's own suggested shortcut): "wow.
+excellent summary. Much better than I could do in a day's worth of
+work."
+
+### Explicitly not resolved, still genuinely open
+
+- `extraction/eval_stage2_yaml.py` has NOT been updated to emit the
+  stub-Human block (target_class Human + name-copied-from-Persona +
+  scopeNote), only the `persona`/`human_lead` shape from the prior
+  entry.
+- Whether "is this guest already in the graph" (new mint vs. addition
+  to an existing Persona) belongs inside Stage 2's own output or stays a
+  separate reconciliation step against `personas.ttl` — still leaning
+  the latter, still not a final decision.
+- Concept-mining automation itself (the LLM keyphrase-extraction step)
+  is scoped and prototyped by hand on 10 segments, but no actual script
+  exists yet — `concept_mining_prototype.ttl` was explicitly a by-hand,
+  outside-the-repo exercise to let MJSullivan "see" the idea before any
+  build commitment, not a first version of real tooling.
+- How Pass 2 itself gets triggered/scoped (per-guest, batch, manual-only)
+  — unchanged from the prior entry, still open.
+
+## STAGE 2 SCHEMA DESIGN (2026-07-15, later the same day): guest_biography
+## extraction schema corrected twice in one conversation — Persona not
+## Human is the mint target, and the transcript itself can only ever
+## source Persona-level facts
+
+**Trigger**: reviewing `extraction/eval_stage2_yaml.py`'s YAML schema
+against a real `Relationship` individual MJSullivan had open in the IDE
+(`Relationship.JoshFarley_UniversityOfVermont`, `hasSubject:
+Persona.JoshFarley`) surfaced that the schema's own `guest_biography`
+shape — `target_class: thinkr:Human`, `property: thinkr:memberOf` — was
+never actually correct. It mirrors the legacy flat-`memberOf`-on-Human
+pattern, not the structured `Relationship`-with-`Persona`-subject pattern
+this project has used for every real bootstrap since the 2026-07-14
+Persona-centered refactor (design decision 0f, `CLAUDE.md`).
+
+**Correction #1 — mint target is `Persona`, relationship shape is
+`hasPersonalRelationship` → `Relationship` sidecar, not flat
+`memberOf`.** Per decision 0f: `Human` is a pure leaf node reachable only
+via `actsThrough`; every other relationship — including institutional
+ones — runs through `Persona` via a `Relationship` individual
+(`hasSubject`: the Persona; `hasObject`: the institution/org;
+`hasRelationshipType`: Academic/Professional/etc.). Corrected schema
+shape:
+
+```yaml
+persona:
+  target_class: thinkr:Persona
+  public_name: <name as publicly known>
+  relationships:
+    - property: thinkr:hasPersonalRelationship
+      hasObject_name: <org/institution name>
+      hasObject_type: thinkr:AcademicInstitution | thinkr:Organization
+      hasRelationshipType: thinkr:RelationshipType.Academic | .Professional
+      role_or_position: <title, if stated>
+      department: <dept, only if AcademicInstitution and stated>
+```
+
+Kept `hasPersonalRelationship` as the property name despite it being a
+known-imprecise name for non-personal relationships too (documented
+elsewhere in this doc as a real, deliberately-deferred rename) — not
+something to silently fix inside a schema-correctness pass.
+
+**A concrete real-data check confirmed the correction's premise, not
+just the naming**: `extraction/eval_stage2_yaml.py`'s own two test
+files turned out to already span the two real downstream cases this
+schema needs to handle — `Human.JoshFarley` / `Persona.JoshFarley` both
+already exist (grep-confirmed in `humans.ttl`/`personas.ttl`); Malin
+Pinsky has **zero** hits anywhere in the graph. So the schema has to
+work for both "add a Relationship to an existing Persona" and "mint a
+new Persona from scratch" — it wasn't accounting for either.
+
+**Correction #2, deeper — the "mint a new Persona from scratch" case
+does NOT mean minting a `Human` alongside it.** MJSullivan's own example,
+already true in the live graph: `Persona.NateHagens`'s public name is
+"Nate Hagens"; `Human.NathanHagens`'s given name "Nathan" came from an
+entirely different source (his own X handle), never from anything TGS
+itself said. **A podcast intro is structurally a Persona-generating
+source, not a Human-verifying one** — it reliably tells you the guest's
+public role, affiliations, and how they're publicly known; it does not
+reliably tell you their actual legal name, birthdate, or other private
+biographical facts, because the source was never positioned to state
+those accurately regardless of how confidently it reads.
+
+**The Human/Persona split itself is genuinely blurry, not just
+under-sourced, and gets harder to execute for less famous guests, not
+easier.** For a maximally public figure (MJSullivan's example: Cher),
+the split is clean because it's total — the entire public surface,
+*including anything that looks like a personal website*, is still
+Persona content; the Human is deliberately almost fully hidden except
+scraps on something like a Wikipedia page. For a university-faculty-page
+guest — most actual TGS guests — the same document is simultaneously
+Persona content (their public professional role) and genuine Human
+content (an earned PhD is a real biographical fact, not branding). There
+is no mechanical rule that cleanly separates those two readings of one
+source; it takes real human judgment per source, sometimes per sentence,
+matching the "wrong-person-trap" discipline already required elsewhere
+in the bootstrap procedure.
+
+**Resulting design decision, confirmed by MJSullivan**: Stage 2 mints
+**only** `Persona` individuals from transcript extraction. Any
+bio-shaped details the intro happens to surface (credentials, career
+history, degrees) get written into a `scopeNote`-style `human_lead`
+field, explicitly framed as unverified candidate Human facts for a
+**separate Pass 2** — not asserted as `Human` facts from the transcript
+extraction itself. Pass 2 reuses the *existing* bootstrap procedure's
+verification discipline (`CLAUDE.md`'s "FIRST-DRAFT BOOTSTRAP A NEW
+PERSON PROCEDURE" — confirm identity, check for a genuine Wikipedia
+page, explicitly distinguish "confirmed absent" from "not yet
+checked") — and needs to stay alert to the Cher trap specifically: a
+"personal website" found during that later verification pass may itself
+just be more Persona surface, not real evidence about the Human
+underneath.
+
+```yaml
+human_lead:
+  scopeNote: |
+    <unverified candidate Human-level facts stated in the transcript —
+    credentials, career history, degrees — explicitly flagged as leads
+    for a separate Pass 2 that does real web verification before
+    creating/updating a Human individual. NOT asserted as fact here.>
+```
+
+**Explicitly not resolved, flagged for whenever Pass 2 actually gets
+built**: how Pass 2 itself should be scoped/triggered (per-guest, batch,
+manual-only), and whether "is this guest already in the graph" (the
+Farley-vs-Pinsky distinction above) belongs inside Stage 2's own output
+or stays a separate reconciliation step run against `personas.ttl`
+afterward — current lean is the latter (keep Stage 2's job narrow:
+extract facts from text, don't also decide identity), not yet a final
+decision.
+
+**`extraction/eval_stage2_yaml.py` updated to this schema and re-run the
+same session, immediately after this entry was drafted** — both gold
+files (Josh Farley, Malin Pinsky) came back 100% recall on relationships
+(2/2 and 3/3), `target_class: thinkr:Persona` correct on both,
+`human_lead` populated on both with real, non-filler content. Spot-
+checked Josh Farley's raw output directly: the split worked as designed
+— his Columbia degree, the Herman Daly correspondence, and his Brazil
+fellowship all landed in `human_lead` as unverified leads rather than
+being asserted as Persona relationships, and `hasRelationshipType`
+mapped correctly (Academic for the AcademicInstitution, Professional for
+the Organization) without that mapping rule needing a second pass. Real,
+not hypothetical, corroboration that the split is learnable from a
+single system-prompt instruction, at least on these 2 examples.
+
+**Session paused here** — MJSullivan may pick this back up in a few
+hours. Genuinely still open, not resolved by this re-run: the two
+"explicitly not resolved" items above (how Pass 2 gets triggered/scoped;
+whether new-vs-existing-guest detection belongs in Stage 2's own output
+or stays a separate reconciliation step) — the re-run demonstrates the
+schema extracts cleanly, not that either of those two design questions
+has been answered.
+
 ## SIDECAR NAMING RETROFIT (2026-07-15, later the same day): LinkNote/
 ## Evidence/CrosswalkNote brought into compliance with Relationship's
 ## already-correct {Subject}_{Object} pattern — 76 individuals renamed,
