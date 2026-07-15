@@ -437,6 +437,19 @@ whatever `aboutSubject`/`aboutObject` actually say, reversed order and
 all — MJSullivan confirmed this was exactly the right call before
 execution.
 
+**FOLLOW-UP, same day, MJSullivan's own catch**: flagging this only in
+this doc and in chat wasn't enough — once the individual has a
+well-formed, internally-consistent-looking name, the anomaly is
+invisible to anyone just browsing or querying `linknotes.ttl` directly,
+since the name and its own properties agree with each other (just not
+with the rest of the file's pattern). Fixed by adding an explicit
+`skos:scopeNote` directly on `tgs:LinkNote.MartinLutherKingJr_GrowthImperative`
+itself stating the reversal, that it's unreviewed, and pointing back
+here — live-verified via SPARQL query against the reloaded store.
+General lesson worth keeping: when a rename makes a pre-existing
+anomaly look ordinary, the flag needs to live IN the data, not just in
+a doc about the data.
+
 **Evidence-disambiguation rule, the one real judgment call, confirmed by
 MJSullivan before execution**: base name = owning `LinkNote`'s new name;
 when a `LinkNote` has 2+ `Evidence`, the general/original one keeps the

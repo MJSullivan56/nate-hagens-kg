@@ -90,7 +90,8 @@ tgs:LinkNote.MartinLutherKingJr_GrowthImperative a thinkr:LinkNote,
     thinkr:aboutObject tgs:Concept.GrowthImperative ;
     thinkr:aboutSubject tgs:Persona.MartinLutherKingJr ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
-    thinkr:hasEvidence tgs:Evidence.MartinLutherKingJr_GrowthImperative .
+    thinkr:hasEvidence tgs:Evidence.MartinLutherKingJr_GrowthImperative ;
+    skos:scopeNote "NAMING CAUGHT, SEMANTICS NOT YET REVIEWED (flagged 2026-07-15 during the LinkNote/Evidence/CrosswalkNote naming retrofit): aboutSubject/aboutObject here are REVERSED relative to every other LinkNote in this file — everywhere else a Concept is aboutSubject and a Persona/SchoolOfThought is aboutObject; here a Persona (MartinLutherKingJr) is aboutSubject and a Concept (GrowthImperative) is aboutObject. This individual's own local name is internally consistent with its own (possibly-backwards) properties — a plausible-looking name is NOT the same claim as a semantically-correct one. Deliberately NOT corrected as part of the naming retrofit (a rename task that also silently fixes semantics is a rename task that's hard to trust later) — needs its own deliberate review to determine whether aboutSubject/aboutObject should be swapped, or whether this one is intentionally different for a reason not yet documented. See docs/sidecar-cleanup-handoff.md's 2026-07-15 naming-retrofit entry."@en .
 
 tgs:LinkNote.MoneyAsClaimOnEnergy_Aristotle a thinkr:LinkNote,
         owl:NamedIndividual ;
