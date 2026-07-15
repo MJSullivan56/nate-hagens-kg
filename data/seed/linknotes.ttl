@@ -9,6 +9,26 @@ tgs: a owl:Ontology ;
     owl:imports thinkr: .
 
 #############################################
+# GOVERNANCE FIX (2026-07-14, same day as the Batch 5 migration below):
+# every direct Concept/Persona/SchoolOfThought-subject property
+# statement that had been sitting in this file (influencedBy/
+# echoesIdeaOf/contrastsWith/appliesTo/convergesWith) has been MOVED to
+# each statement's own subject's home file — 12 to concepts.ttl, 1
+# (Persona.MartinLutherKingJr appliesTo) to personas.ttl, 1
+# (SchoolOfThought.DoughnutEconomics convergesWith) to
+# schoolsofthought.ttl — per MJSullivan's explicit governance rule:
+# this file (and every file like it) should contain instances of its
+# own titular class ONLY, nothing else, no exceptions. This file now
+# holds ONLY thinkr:LinkNote individuals (plus the LinkNote class
+# declaration itself, consistent with the Relationship/Persona
+# precedent of a class living in its own file alongside its instances).
+# A parallel audit found two more real violations elsewhere
+# (episodes.ttl mixes in Series individuals; subjects.ttl mixes in
+# ConceptScheme individuals) — flagged separately, NOT fixed in this
+# pass, pending confirmation before restructuring those too.
+#############################################
+
+#############################################
 # BATCH 5 MIGRATION (2026-07-14, Persona-centered refactor, see
 # docs/sidecar-cleanup-handoff.md): every tgs:Human.X reference in this
 # file repointed to the corresponding tgs:Persona.X — both the direct
@@ -53,6 +73,14 @@ tgs:LinkNote.EnergyblindnessBuddha a thinkr:LinkNote,
     thinkr:aboutSubject tgs:Concept.EnergyBlindness ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
     thinkr:hasEvidence tgs:Evidence.EnergyblindnessBuddha .
+
+tgs:LinkNote.EnergyblindnessBerman a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Persona.ArtBerman ;
+    thinkr:aboutSubject tgs:Concept.EnergyBlindness ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.EnergyblindnessBerman ;
+    skos:scopeNote "calculatedConfidence set here to match its single Evidence's Candidate confidence, following the same pattern as LinkNote.EnergyblindnessBuddha — but NOT verified by actually running scripts/compute_confidence.py, since that script wasn't available in this session. Re-run it before trusting this value as authoritative."@en .
 
 tgs:LinkNote.JevonsJevons a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -137,36 +165,6 @@ tgs:LinkNote.WetwareFreud a thinkr:LinkNote,
     thinkr:aboutSubject tgs:Concept.Wetware ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.WetwareFreud .
-
-tgs:Concept.CircleOfTrustLocalism thinkr:echoesIdeaOf tgs:Persona.ElinorOstrom .
-
-tgs:Concept.ComplexityCollapse thinkr:influencedBy tgs:Persona.JosephTainter .
-
-tgs:Concept.DiscountRatesAndPresentBias thinkr:echoesIdeaOf tgs:Persona.MarcusAurelius .
-
-tgs:Concept.EnergyBlindness thinkr:contrastsWith tgs:Persona.Buddha .
-
-tgs:Concept.JevonsParadox thinkr:influencedBy tgs:Persona.WilliamStanleyJevons .
-
-tgs:Concept.Metacrisis thinkr:influencedBy tgs:Persona.GregoryBateson .
-
-tgs:Concept.MoneyAsClaimOnEnergy thinkr:echoesIdeaOf tgs:Persona.Aristotle .
-
-tgs:Concept.PeakOil thinkr:influencedBy tgs:Persona.MKingHubbert .
-
-tgs:Concept.Superorganism thinkr:influencedBy tgs:Persona.EOWilson .
-
-tgs:Concept.Wetware thinkr:echoesIdeaOf tgs:Persona.SigmundFreud .
-
-tgs:Persona.MartinLutherKingJr thinkr:appliesTo tgs:Concept.GrowthImperative .
-
-tgs:Concept.LimitsToGrowth thinkr:influencedBy tgs:Persona.DennisMeadows,
-        tgs:Persona.DonellaMeadows .
-
-tgs:SchoolOfThought.DoughnutEconomics thinkr:convergesWith tgs:Concept.Overshoot .
-
-tgs:Concept.Overshoot thinkr:convergesWith tgs:SchoolOfThought.DoughnutEconomics ;
-    thinkr:influencedBy tgs:Persona.WilliamCatton .
 
 thinkr:LinkNote a owl:Class ;
     rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;

@@ -168,27 +168,14 @@ tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
     .
 
 tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
-    thinkr:hasPersona tgs:Persona.NateHagens ;
+    skos:prefLabel "Nate Hagens"@en ;
+    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
     foaf:givenName "Nathan"@en ;
     foaf:familyName "Hagens"@en ;
-    dbo:birthDate "1969"^^xsd:gYear ;
-    foaf:homepage 
-        <https://www.natehagens.com/>, 
-        <https://natehagens.substack.com/>, 
-        <https://www.linkedin.com/in/nate-hagens-004810b/> ;
-    thinkr:memberOf 
-        tgs:Organization.TheOilDrum, 
-        tgs:Organization.PostCarbonInstitute, 
-        tgs:SchoolOfThought.PeakOilMovement, 
-        tgs:AcademicInstitution.UniversityOfVermont, 
-        tgs:AcademicInstitution.UniversityOfChicago, 
-        tgs:AcademicInstitution.UniversityOfMinnesota ;
     skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. ALSO: foaf:homepage below deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
-    skos:scopeNote "REVISED v5: kept genuinely FLAT per MJSullivan's explicit correction — memberOf only, no Relationship cross-references at all. hasPersonalRelationship/hasProfessionalRelationship now live SOLELY on Persona.NateHagens below, even though each Relationship's own hasSubject still correctly points back to THIS individual as the true legal party — that underlying fact doesn't require a redundant pointer here too."@en ;
-    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
-    rdfs:comment "NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page. Credentials EARNED personally: PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004."@en ;
-    skos:prefLabel "Nate Hagens"@en ;
-    .
+    dbo:birthDate "1969"^^xsd:gYear ;
+    foaf:homepage <https://www.natehagens.com/>, <https://natehagens.substack.com/>, <https://www.linkedin.com/in/nate-hagens-004810b/> ;
+    thinkr:memberOf tgs:Organization.TheOilDrum, tgs:Organization.PostCarbonInstitute, tgs:SchoolOfThought.PeakOilMovement, tgs:AcademicInstitution.UniversityOfVermont, tgs:AcademicInstitution.UniversityOfChicago, tgs:AcademicInstitution.UniversityOfMinnesota .
 
 # hasTGSRole and hasPersonalRelationship MOVED to tgs:Persona.NateHagens
 # (personas.ttl) 2026-07-14, Batch 3 of the Persona-centered refactor —
@@ -199,11 +186,11 @@ tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
 # Human remains an open question from the 2026-07-12 escalation entry,
 # not resolved in this batch.
 
-
 tgs:Human.MatthewMonahan a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Matthew Monahan"@en ;
     rdfs:comment "Co-founder/co-instigator of Ma Earth (2023-present, a collective/quadratic-funding crowdfunding platform for regenerative land projects) and co-founder/co-steward of Biome Trust (2022-present, a philanthropic foundation). Hosts Ma Earth's own interview series 'The Regeneration Will Be Funded.' NO owl:sameAs: verified 2026-07-11 — the only 'Matthew Monahan' Wikipedia page is a completely different person (an unrelated Los Angeles contemporary artist, b. 1972, Cooper Union graduate) — confirmed via search, not assumed. TGS guest, Episode 226 'Can Money Serve Life? How to Fund Communities Doing the Real Work' (https://www.thegreatsimplification.com/episode/226-matthew-monahan)."@en ;
     thinkr:memberOf tgs:Organization.MaEarth, tgs:Organization.BiomeTrust .
+
 # hasPersonEntityType MOVED to tgs:Persona.MatthewMonahan (personas.ttl)
 # 2026-07-14, Batch 3.
 
@@ -214,6 +201,7 @@ tgs:Human.IainMcGilchrist a thinkr:Human, owl:NamedIndividual ;
         <http://dbpedia.org/resource/Iain_McGilchrist> ,
         <http://www.wikidata.org/entity/Q16732304> ;
     .
+
 # hasPersonEntityType MOVED to tgs:Persona.IainMcGilchrist (personas.ttl)
 # 2026-07-14, Batch 3.
 
@@ -223,6 +211,33 @@ tgs:Human.DanielSchmachtenberger a thinkr:Human, owl:NamedIndividual ;
     thinkr:memberOf tgs:Organization.ConsilienceProject ;
     owl:sameAs <http://www.wikidata.org/entity/Q110189381> ;
     .
+
 # hasPersonEntityType MOVED to tgs:Persona.DanielSchmachtenberger
 # (personas.ttl) 2026-07-14, Batch 3.
 
+
+#############################################
+# BOOTSTRAPPED 2026-07-14, first real application of the Persona-era
+# bootstrap procedure (see docs/sidecar-cleanup-handoff.md), surfaced
+# via extraction/top_persons.py's entity-index worklist (519 mentions
+# across 20 documents — a clear, well-evidenced recurring guest, not a
+# marginal signal).
+#############################################
+
+tgs:Human.ArtBerman a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Arthur E. Berman"@en ;
+    rdfs:comment "Also publicly known as 'Art Berman.' Petroleum geologist, 40+ years in the oil and gas industry as of 2026 (bio pages give varying year-counts, e.g. 36/40/42/45, depending on when each was written — not a real discrepancy, just an incrementing 'years of experience' figure across different publication dates). M.S. Geology, Colorado School of Mines; B.A. History, Amherst College. Worked 20 years at Amoco (now BP), independent consulting geologist since. Associate editor, AAPG (American Association of Petroleum Geologists) Bulletin. Past Editor, Houston Geological Society Bulletin (2004-2005); past Vice-President of that Society (2008-2009). Director, ASPO-USA (Association for the Study of Peak Oil & Gas USA) — not yet modeled as its own Organization individual, deferred. Adjunct lecturer, University of Houston — not yet modeled as an AcademicInstitution relationship, deferred. Widely credited with coining the term 'energy blindness' — see thinkr:influencedBy on tgs:Concept.EnergyBlindness, added as Candidate-confidence pending human review, not yet Curated. NO owl:sameAs asserted: checked for a genuine Wikipedia page across two separate searches 2026-07-14, none found despite extensive independent bio coverage (Forbes, OilPrice.com, Financial Sense, Resilience.org, and thegreatsimplification.com's own episode pages) — confirmed absent, not merely unchecked. Wikidata was NOT independently checked (distinct from the Wikipedia check) — a real gap, not a confirmed absence, flag for follow-up before assuming no Wikidata entry exists either."@en ;
+    thinkr:memberOf tgs:Organization.TheOilDrum ;
+    .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — Josh Farley, second real application of the
+# updated bootstrap procedure. 232 mentions/16 documents in the entity
+# index.
+#############################################
+
+tgs:Human.JoshFarley a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Joshua C. Farley"@en ;
+    rdfs:comment "Also publicly known as 'Josh Farley.' Ecological economist, Professor of Community Development & Applied Economics and Public Administration, University of Vermont; Fellow, Gund Institute for Environment (formerly Gund Institute for Ecological Economics). Past President, International Society for Ecological Economics (ISEE). BS Biology (Grinnell College), MIA (Columbia University), PhD Agricultural and Resource Economics (Cornell University). Co-author with Herman Daly of 'Ecological Economics: Principles and Applications' (Island Press, 2003; 2nd ed. 2010) — a foundational textbook in the field. NOTE: Herman Daly is himself a confirmed real TGS guest (extraction/transcripts_raw/TGS06HermanDalyTranscript.docx.pdf) but is NOT yet modeled in this graph — a real, well-evidenced future bootstrap candidate surfaced as a byproduct of this one, not yet acted on. NO owl:sameAs asserted: checked for a genuine Wikipedia page across two separate searches 2026-07-14, none found despite extensive independent academic documentation (UVM's own faculty profile, Google Scholar citation record, ResearchGate, a full CV) — confirmed absent, not merely unchecked. Wikidata was NOT independently checked."@en ;
+    thinkr:memberOf tgs:AcademicInstitution.UniversityOfVermont ;
+    .

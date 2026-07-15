@@ -56,6 +56,7 @@ tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndiv
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.MatthewMonahan ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -66,15 +67,14 @@ tgs:Relationship.NateHagens_MatthewMonahan a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Guest ;
           thinkr:objectRole thinkr:InteractionRole.Host ;
           thinkr:showName "The Regeneration Will Be Funded"@en ;
-          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down. thinkr:hostedBy dropped as redundant now that objectRole exists — hasObject (Persona.MatthewMonahan) + objectRole (Host) together already say who hosted, without a third property saying it a different way."@en ] ;
-    skos:prefLabel "Nate Hagens' professional relationship with Matthew Monahan"@en ;
-    .
+          skos:scopeNote "Reciprocal appearance, roles reversed from the TGS episode above — confirmed via search 2026-07-11, exact date not independently pinned down. thinkr:hostedBy dropped as redundant now that objectRole exists — hasObject (Persona.MatthewMonahan) + objectRole (Host) together already say who hosted, without a third property saying it a different way."@en ] .
 
 # --- Iain McGilchrist: THREE separate instances, same role each time ---
 tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.IainMcGilchrist ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Iain McGilchrist"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -90,9 +90,7 @@ tgs:Relationship.NateHagens_IainMcGilchrist a thinkr:Relationship, owl:NamedIndi
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
-          dcterms:date "2026-03-24"^^xsd:date ] ;
-    skos:prefLabel "Nate Hagens' professional relationship with Iain McGilchrist"@en ;
-    .
+          dcterms:date "2026-03-24"^^xsd:date ] .
 
 # --- Daniel Schmachtenberger: ALL 7 currently confirmed appearances
 # (episodes.ttl hasGuest tgs:Persona.DanielSchmachtenberger) as of
@@ -106,6 +104,8 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Daniel Schmachtenberger"@en ;
+    skos:scopeNote "One source describes 'half a dozen' appearances; 7 specific episodes are individually confirmed/modeled as of 2026-07-14 (the Bend Not Break 5-part series plus episodes 126 and 132) — likely the complete set, not yet independently verified as exhaustive."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -141,16 +141,12 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
-          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ] ;
-    skos:scopeNote "One source describes 'half a dozen' appearances; 7 specific episodes are individually confirmed/modeled as of 2026-07-14 (the Bend Not Break 5-part series plus episodes 126 and 132) — likely the complete set, not yet independently verified as exhaustive."@en ;
-    skos:prefLabel "Nate Hagens' professional relationship with Daniel Schmachtenberger"@en ;
-    .
+          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ] .
 
 # --- Nate's academic relationships genuinely need MULTIPLE RelationshipType
 # values at once — real, not a hypothetical stress test. Teaching Reality
 # 101 is both Academic AND (per his own bio's "taught," implying a
 # formal/paid role) Professional simultaneously. ---
-
 tgs:Relationship.NateHagens_UniversityOfMinnesota a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:AcademicInstitution.UniversityOfMinnesota ;
@@ -192,3 +188,83 @@ tgs:Relationship.NateHagens_PeakOilMovement a thinkr:Relationship, owl:NamedIndi
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' professional relationship with the Peak Oil movement"@en ;
     skos:scopeNote "No specific dates confirmed — professional/intellectual community association via his pre-TGS career background, not a formal joinable organization."@en .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — Art Berman. See humans.ttl/episodes.ttl for
+# provenance. A genuinely interesting cross-link, not overclaimed: Berman
+# was "a Managing Director and frequent contributor at The Oil Drum" per
+# multiple independent bio sources — the SAME organization Nate himself
+# has a structured Relationship with (Relationship.NateHagens_TheOilDrum
+# above). Asserting only the shared institutional fact here, NOT a claim
+# that they worked together directly there — that would need separate,
+# specific evidence not yet found.
+#############################################
+
+tgs:Relationship.NateHagens_ArtBerman a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ArtBerman ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Art Berman"@en ;
+    skos:scopeNote "4 of Art Berman's confirmed guest appearances modeled here (episodes 3, 92, 101, 220) — the transcript library shows evidence of more (an unnumbered 'ArtBermanPt2' and a 'TGS54ArtBerman3' suggesting a 3rd appearance by internal count) not yet individually researched/dated. Treat this Relationship as incomplete, not exhaustive, as of 2026-07-14."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_3_OilBestAndWorstOfFuels ;
+          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics ;
+          dcterms:date "2023-10-05"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound ;
+          dcterms:date "2023-11-29"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_220_AWorldOnThePrecipice ;
+          skos:scopeNote "Air date inferred, not directly confirmed — see episodes.ttl comment on this Episode individual for the specific reasoning."@en ] .
+
+tgs:Relationship.ArtBerman_TheOilDrum a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.ArtBerman ;
+    thinkr:hasObject tgs:Organization.TheOilDrum ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Art Berman's professional relationship with The Oil Drum"@en ;
+    skos:scopeNote "Confirmed via multiple independent bio sources: 'Managing Director and frequent contributor.' No specific start/end dates confirmed."@en .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — Josh Farley.
+#############################################
+
+tgs:Relationship.NateHagens_JoshFarley a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JoshFarley ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Josh Farley"@en ;
+    skos:scopeNote "3 confirmed appearances modeled (episodes 7, 29, 185) matching the transcript library as of 2026-07-14; 232 mentions across 16 documents in the entity index suggests possible additional Frankly/roundtable mentions beyond dedicated interview episodes, not yet individually researched."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_7_JoshFarleyAppearance1 ;
+          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_29_JoshFarleyAppearance2 ;
+          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_185_MythsShapingOurEconomies ;
+          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ] .
+
+tgs:Relationship.JoshFarley_UniversityOfVermont a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.JoshFarley ;
+    thinkr:hasObject tgs:AcademicInstitution.UniversityOfVermont ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Academic ;
+    skos:prefLabel "Josh Farley's academic relationship with University of Vermont"@en ;
+    skos:scopeNote "Same institution Nate Hagens has his own structured Relationship with (Relationship.NateHagens_UniversityOfMinnesota is a different school — this is University of VERMONT, matching Nate's memberOf list, not Minnesota). Genuine institutional overlap, not a personal-connection claim."@en .

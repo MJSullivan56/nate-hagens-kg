@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# SCRATCH FILE — established 2026-07-14, after the second real
+# instance of the same mistake (Concept-lineage facts landing in
+# linknotes.ttl instead of concepts.ttl, mid-Batch-5-migration; before
+# that, similar mid-task drift into whatever file happened to be open).
+# See docs/sidecar-cleanup-handoff.md for the full incident and the
+# discussion that led to this file.
+#
+# THE RULE THIS FILE EXISTS TO PROTECT: every other file in data/seed/
+# holds instances of exactly ONE class (its own titular class) and
+# nothing else — enforced by scripts/validate_class_purity.py. That
+# rule is easy to break mid-task: a new fact naturally wants to go
+# wherever the current work is already centered, not necessarily its
+# own actual home file. This file is the legitimate place for that
+# impulse to go instead, so mid-task flow doesn't require a context
+# switch to the "correct" file before the surrounding work is even
+# finished.
+#
+# HOW TO USE THIS FILE:
+# 1. Add a partial/provisional statement here, with an explicit
+#    destination comment directly above it — e.g.:
+#      # destined for: concepts.ttl (Concept.EnergyBlindness's own block)
+#      tgs:Concept.EnergyBlindness thinkr:influencedBy tgs:Persona.ArtBerman .
+# 2. This file IS loaded by scripts/load_oxigraph.sh like every other
+#    seed file — scratch content is queryable and testable while it's
+#    still here, not invisible until promoted.
+# 3. Before considering ANY batch/task done: sweep every statement here
+#    into its real destination file (merged into the subject's own
+#    existing individual block, not left as an orphaned triple — see
+#    concepts.ttl for the pattern), then delete it from this file.
+# 4. A task is NOT complete while this file has content in it. Run
+#    scripts/validate_class_purity.py --check-scratch-empty as part of
+#    the same "verify before declaring done" pass every other batch in
+#    this project already requires.
+#
+# WHAT NEVER BELONGS HERE: schema (classes/properties — those go in
+# tgs-core.ttl or enumerations.ttl directly, they're not "partial"),
+# anything you're confident is a permanent, complete fact (just write
+# it to its real file directly), or anything you intend to leave
+# unswept across sessions (if it needs to survive a session boundary
+# incomplete, it belongs in docs/sidecar-cleanup-handoff.md as a
+# tracked open item instead, not silently parked here).
+#############################################
+
+# (currently empty — nothing in flight)

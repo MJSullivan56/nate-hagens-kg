@@ -1,4 +1,3 @@
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix tgs:   <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
@@ -132,6 +131,7 @@ tgs:Persona.MarcusAurelius a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.MartinLutherKingJr a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MartinLutherKingJr ;
+    thinkr:appliesTo tgs:Concept.GrowthImperative ;
     skos:prefLabel "Martin Luther King Jr."@en .
 
 tgs:Persona.RachelCarson a thinkr:Persona, owl:NamedIndividual ;
@@ -158,29 +158,12 @@ tgs:Persona.KateRaworth a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.KateRaworth ;
     skos:prefLabel "Kate Raworth"@en .
 
-
 tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
-    thinkr:actsThrough tgs:Human.NathanHagens ;
-    foaf:homepage 
-        <https://www.natehagens.com/>, 
-        <https://natehagens.substack.com/> ;
-    thinkr:hasTGSRole 
-        thinkr:ProfessionalRole.Educator, 
-        thinkr:ProfessionalRole.Blogger, 
-        thinkr:ProfessionalRole.Author, 
-        thinkr:ProfessionalRole.InstituteExecutive ;
-    thinkr:hasPersonalRelationship 
-        tgs:Relationship.NateHagens_MatthewMonahan, 
-        tgs:Relationship.NateHagens_IainMcGilchrist, 
-        tgs:Relationship.NateHagens_DanielSchmachtenberger ;
-    thinkr:hasProfessionalRelationship 
-        tgs:Relationship.NateHagens_TheOilDrum, 
-        tgs:Relationship.NateHagens_PostCarbonInstitute, 
-        tgs:Relationship.NateHagens_PeakOilMovement, 
-        tgs:Relationship.NateHagens_UniversityOfMinnesota ;
-    rdfs:comment "ONE public identity, MULTIPLE roles. A PROXY, not an owner — every relationship above is a cross-reference to a relationship whose real hasSubject is Human.NathanHagens, surfaced here as part of the public narrative. TEACHING tense conflict, RealityBlind connection, etc. all live here."@en ;
+    thinkr:actsThrough tgs:Human.NateHagens ;
     skos:prefLabel "Nate Hagens"@en ;
-    .
+    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger, tgs:Relationship.NateHagens_TheOilDrum, tgs:Relationship.NateHagens_PostCarbonInstitute, tgs:Relationship.NateHagens_PeakOilMovement, tgs:Relationship.NateHagens_UniversityOfMinnesota ;
+    skos:scopeNote "Rebuilt 2026-07-14, Batch 3 of the Persona-centered refactor: hasTGSRole and hasPersonalRelationship moved here from tgs:Human.NateHagens (both public-facing facts, not biography) — Human.NateHagens no longer asserts either. EXTENDED Batch 4 (same day): hasPersonalRelationship now includes the 3 organization/school Relationship individuals folded in from persona_human_prototype-8.ttl (Oil Drum, Post Carbon Institute, Peak Oil movement), plus Relationship.NateHagens_UniversityOfMinnesota — which already existed in relationships.ttl before this session but was never actually linked back here, a real pre-existing gap closed in passing. NOTE: this individual still does NOT carry foaf:homepage (Substack/natehagens.com/LinkedIn all remain on Human.NateHagens for now) — that split is an unresolved open question from the 2026-07-12 escalation entry, not resolved in this batch."@en .
 
 tgs:Persona.MatthewMonahan a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MatthewMonahan ;
@@ -199,3 +182,21 @@ tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
     skos:prefLabel "Daniel Schmachtenberger"@en ;
     skos:scopeNote "hasPersonEntityType moved here from tgs:Human.DanielSchmachtenberger, 2026-07-14, Batch 3."@en .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — see humans.ttl for provenance/discovery
+# notes. hasPersonEntityType.Guest asserted directly here per the
+# Batch 3 domain migration (Persona, not Human).
+#############################################
+
+tgs:Persona.ArtBerman a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ArtBerman ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ArtBerman, tgs:Relationship.ArtBerman_TheOilDrum ;
+    skos:prefLabel "Art Berman"@en .
+
+tgs:Persona.JoshFarley a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JoshFarley ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JoshFarley, tgs:Relationship.JoshFarley_UniversityOfVermont ;
+    skos:prefLabel "Josh Farley"@en .

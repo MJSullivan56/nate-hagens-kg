@@ -31,9 +31,19 @@ nate-hagens-kg/
 │                                        content (tgs:Human.NathanHagens, a different
 │                                        Schmachtenberger interaction subset) must never
 │                                        be loaded by load_oxigraph.sh's *.ttl glob)
+├── tgs_store/                        (Oxigraph RocksDB storage — gitignored, regenerated
+│                                       via load_oxigraph.sh. MOVED HERE 2026-07-14, was
+│                                       nested under scripts/ — that was an artifact of
+│                                       load_oxigraph.sh's own original relative-path choice,
+│                                       never a deliberate decision. tgs_store is a
+│                                       materialized, fully-derived view of data/seed/*.ttl —
+│                                       conceptually data, not tooling, so it belongs at the
+│                                       repo root next to data/, not inside scripts/.)
 ├── scripts/
-│   ├── tgs_store/                   (Oxigraph RocksDB storage — gitignored, regenerated via load_oxigraph.sh)
-│   ├── load_oxigraph.sh             (bulk-loads every data/seed/*.ttl into tgs_store via `oxigraph load`)
+│   ├── load_oxigraph.sh             (bulk-loads every data/seed/*.ttl into ../tgs_store via `oxigraph load`)
+│   ├── validate_class_purity.py     (NEW 2026-07-14 — confirms every data/seed/*.ttl file
+│   │                                 holds instances of exactly one class; run with
+│   │                                 --check-scratch-empty before considering any batch done)
 │   ├── query_examples.sparql
 │   └── compute_confidence.py        (derives LinkNote.calculatedConfidence from Evidence — never hand-asserted)
 ├── extraction/                      (expanded 2026-07-14 — see the "extraction/
@@ -74,6 +84,9 @@ nate-hagens-kg/
 │                                      Worth a `diff` next session before trusting either copy.)
 └── data/
     └── seed/                        (one-class-one-file governance — every .ttl here is loaded as a unit)
+        ├── scratch.ttl               (NEW 2026-07-14 — dedicated staging file for mid-task
+        │                              partial enrichments; must be empty before any batch is
+        │                              considered done, see its own header for the convention)
         ├── tgs-core.ttl             (schema: classes, properties — zero individuals as of 2026-07-14)
         ├── enumerations.ttl         (all thinkr:Category-marked classes + their enumerated
         │                             individuals — split out of tgs-core.ttl 2026-07-14)
@@ -95,23 +108,26 @@ nate-hagens-kg/
 ```
 
 **Triplestore**: Oxigraph, served locally at `http://127.0.0.1:7878`.
-NOT a background daemon — `oxigraph serve --location ./tgs_store --bind
+NOT a background daemon — `oxigraph serve --location ../tgs_store --bind
 127.0.0.1:7878` runs in the foreground in its own terminal tab and must
-stay open. Run from `scripts/` specifically (both `tgs_store` and
-`load_oxigraph.sh`'s relative paths — `../data/seed/*.ttl` — assume
-that working directory). `oxigraph load` (used internally by
-`load_oxigraph.sh`) is an offline bulk-load command and needs exclusive
-access to `tgs_store` — `serve` must be stopped (Ctrl-C) before
-reloading, never run concurrently with it.
+stay open, still run FROM `scripts/` (`load_oxigraph.sh`'s relative
+paths — `../tgs_store` for the store, `../data/seed/*.ttl` for the
+source files — both assume that working directory; the store's location
+changed 2026-07-14, the working directory requirement did not).
+`oxigraph load` (used internally by `load_oxigraph.sh`) is an offline
+bulk-load command and needs exclusive access to `tgs_store` — `serve`
+must be stopped (Ctrl-C) before reloading, never run concurrently with
+it.
 
 **Standard reload sequence after any seed data change**, confirmed
-working 2026-07-14:
+working 2026-07-14 (updated same day for the relocated store):
 ```bash
 # Ctrl-C the running serve process first
-cd nate-hagens-kg/scripts
+cd nate-hagens-kg
 rm -rf ./tgs_store
+cd scripts
 ./load_oxigraph.sh
-oxigraph serve --location ./tgs_store --bind 127.0.0.1:7878
+oxigraph serve --location ../tgs_store --bind 127.0.0.1:7878
 ```
 `load_oxigraph.sh` does NOT clear the store itself — it only adds
 triples via `oxigraph load` per file. Skipping the `rm -rf` step before
@@ -148,12 +164,16 @@ shared workspace.
 **Validation**: `scripts/compute_confidence.py` derives
 `LinkNote.calculatedConfidence` from `Evidence` sets — never
 hand-asserted, matches UWOM's `validate_repo.py` discipline of a
-scripted, re-runnable check rather than manual verification. No
-project-specific SHACL shapes confirmed either way for this repo as of
-2026-07-14 (unlike UWOM, which has a mature SHACL validator) —
-MJSullivan confirmed he genuinely doesn't know if one exists, not
-worth assuming parity with the sibling project's tooling until checked
-directly (e.g. `find . -iname "*.shacl*" -o -iname "*shapes*"`).
+scripted, re-runnable check rather than manual verification.
+`scripts/validate_class_purity.py` (NEW 2026-07-14) confirms every
+`data/seed/*.ttl` file holds instances of exactly one class and that
+`scratch.ttl` is empty — a real, narrow, permanent check, but NOT a
+SHACL validator and not a substitute for one: it catches file-placement
+violations specifically, nothing about dangling references, cardinality,
+or enumeration-value validity. No project-specific SHACL shapes
+confirmed either way for this repo as of 2026-07-14 (unlike UWOM, which
+has a mature SHACL validator) — still genuinely open, not resolved by
+today's narrower script.
 
 **Personal laptop, package manager available**: this is MJSullivan's
 own machine, not a shared/managed environment — Homebrew is available
@@ -174,6 +194,239 @@ walked through rather than assumed self-explanatory (e.g. distinguishing
 a connection fails, rather than a single generic fix). This isn't a
 one-off caveat for this thread — it should shape how technical
 instructions are given in general on this project going forward.
+
+## GOVERNANCE + FILESYSTEM CLEANUP (2026-07-14, later the same day):
+## the same class-purity mistake happened twice, so a real fix got
+## built instead of a third manual correction; a parallel filesystem
+## version of the identical mistake got caught and fixed too
+
+**The RDF-level problem**: `linknotes.ttl` had accumulated 14 direct
+property statements on `Concept`/`Persona`/`SchoolOfThought` subjects
+(`influencedBy`/`echoesIdeaOf`/`contrastsWith`/`appliesTo`/
+`convergesWith`) — facts that belonged in `concepts.ttl`/`personas.ttl`/
+`schoolsofthought.ttl`, landed in `linknotes.ttl` instead because that's
+where the surrounding work (the Batch 5 Persona migration) happened to
+be centered. MJSullivan named this explicitly as a repeat offense, not
+a one-off. Fixed: every statement moved to its OWN subject's actual
+home file, merged into that subject's existing individual block (not
+left as an orphaned triple) — 12 to `concepts.ttl`, 1 to `personas.ttl`
+(`Persona.MartinLutherKingJr`'s `appliesTo`), 1 to `schoolsofthought.ttl`
+(`SchoolOfThought.DoughnutEconomics`'s `convergesWith`). Verified via
+exact triple-count match before/after (1970 -> 1970) and all 17
+individual facts confirmed still resolving correctly post-move.
+`linknotes.ttl` now holds ONLY `thinkr:LinkNote` individuals (plus the
+`LinkNote` class declaration itself — consistent with the
+`Relationship`/`Persona` precedent of a class living in its own
+instances' file).
+
+**A parallel audit found the same violation pattern in 2 more files,
+NOT yet fixed, confirmed real via a proper subject-class-prefix script
+(not just eyeballing)**: `episodes.ttl` mixes `Series` individuals in
+with `Episode` instances; `subjects.ttl` mixes `ConceptScheme`
+individuals in with `Subject` instances. Both would need a genuinely
+new file each (`series.ttl`, `conceptschemes.ttl`) — bigger than a
+same-day relocation, deliberately left open pending confirmation.
+
+**Root-cause fix, not just this one correction**: MJSullivan proposed
+`data/seed/scratch.ttl` — a dedicated staging file for mid-task partial
+enrichments, with every entry requiring an explicit destination comment,
+swept to its real home before any task counts as done. Built, with a
+full header explaining the convention. Deliberately IS loaded by
+`load_oxigraph.sh` like every other seed file (queryable while content
+is still in flight, not invisible until promoted) — the violation isn't
+"data existing somewhere provisional," it's "provisional data with no
+designated legitimate home, forcing it into whatever file's already
+open."
+
+**`scripts/validate_class_purity.py` built alongside it** — confirms
+every `data/seed/*.ttl` file's named subjects belong to exactly one
+class, and (via `--check-scratch-empty`) that `scratch.ttl` has no real
+content beyond its own header. Tested against the actual repo state,
+not just written and assumed correct: confirmed it catches the two
+still-open violations, confirmed `linknotes.ttl` now reads clean,
+confirmed the scratch-non-empty case genuinely fails (exit 1) — caught
+one real testing mistake along the way (a shell pipe silently swallowed
+the script's actual exit code on the first attempt; re-tested properly
+before trusting the result). This does NOT close the SHACL-validator
+gap flagged repeatedly earlier — it's one narrow, permanent check, not
+a general-purpose validator.
+
+**The identical mistake, one layer down, same day**: a second
+`tgs_store` had accumulated at the repo root, duplicate of the real one
+under `scripts/tgs_store` — near-certainly from a `load_oxigraph.sh` or
+`oxigraph serve` invocation run from the wrong working directory at
+some earlier point (`load_oxigraph.sh`'s paths are relative to
+wherever it's launched from, not to its own location on disk — the
+same category of mistake as the class-purity issue above, just at the
+filesystem level: something landed in the wrong place because of
+*where you happened to be standing*, not a deliberate choice).
+Diagnosed properly before touching anything: confirmed via `ps aux`
+which server process was actually running, then `lsof -a -d cwd -p
+<pid>` to confirm its real working directory (`scripts/`) rather than
+trusting file-modification timestamps alone. Once confirmed which
+`tgs_store` was live, deleting the stale root-level one was safe
+immediately, no `Ctrl-C` needed first — the running server had zero
+open file handles into it.
+
+**Then, on reflection, relocated the LIVE store too**: `scripts/` was
+never a deliberate home for `tgs_store`, just an artifact of
+`load_oxigraph.sh`'s own original relative-path default. `tgs_store` is
+a materialized, fully-derived view of `data/seed/*.ttl` — conceptually
+data, not tooling — so it now lives at the repo root, alongside `data/`,
+not nested inside `scripts/`. `load_oxigraph.sh`'s `STORE_PATH` default
+changed from `./tgs_store` to `../tgs_store`; the requirement to still
+RUN the script from `scripts/` itself did NOT change (only the store's
+own location moved, not the script's working-directory assumption).
+Full migration: stop the server, `mv scripts/tgs_store ./tgs_store`
+from repo root, restart with `--location ../tgs_store` from `scripts/`.
+
+## SCALE TRANSITION (2026-07-14, same day, following the `discusses`-gap
+## investigation below): first real Persona bootstrap completed, model
+## confirmed ready for VERY LARGE expansion, two blockers checked and
+## cleared
+
+**Context**: `extraction/download_transcripts.py` was re-run 3x, landing
+344 real transcript PDFs in `extraction/transcripts_raw/` (one real
+mid-session bug: the folder briefly went missing between two runs —
+never conclusively diagnosed, `download_manifest.csv` stayed accurate
+throughout so no data was lost, just flagged in case it recurs).
+`extraction/index_named_entities.py` and `top_persons.py` — confirmed
+genuinely incremental/safe to rerun by reading the actual source, not
+just the README — surfaced a real, much larger corpus than the graph's
+current 25 people / 14 episodes: ~230 real Interview transcripts, 96
+Frankly monologues, 18 Reality Roundtables, and a long roster of
+frequently-recurring guests not yet modeled at all.
+
+**MJSullivan's framing, worth keeping close through the expansion
+phase**: "the expectation is that this will become a VERY LARGE graph...
+this is why we needed to get the model right." Today's batches 0-6 were
+explicitly validated against that bar, not just against today's small
+seed set.
+
+**First real bootstrap completed end-to-end**: Art Berman (519
+mentions/20 documents in the entity index) — `Human.ArtBerman`/
+`Persona.ArtBerman`, 4 confirmed guest episodes (2 exactly dated via
+thegreatsimplification.com's own episode pages, 2 honestly flagged
+date-unconfirmed), 2 `Relationship` individuals (his TGS guest history,
+and a genuine cross-link to `Organization.TheOilDrum` — he was a
+Managing Director/contributor there, the same org Nate has his own
+`Relationship` with), and `Concept.EnergyBlindness`'s first-ever
+intellectual lineage (`influencedBy`, `Candidate` confidence — he's
+widely credited with coining the term). Confirmed via search: no
+genuine Wikipedia page exists (checked twice, stated explicitly per the
+bootstrap procedure rather than silently omitted) — Wikidata was NOT
+separately checked, a real gap distinct from "confirmed absent," not yet
+resolved. One real process bug caught mid-bootstrap: validated against
+a stale copy of `personas.ttl` (forgot to re-sync the working copy after
+editing it), got a false "25/25" Human/Persona count, caught by not
+trusting the surprising number, traced to the actual cause, fixed.
+Lesson: always re-copy before validating, every time, no exceptions.
+
+**The bootstrap procedure itself needed updating before this could
+happen** — `CLAUDE.md`'s existing version (2026-07-11) predates the
+`Person`->`Human` rename, the `School` 3-way split, AND the whole
+Persona architecture. Updated version used for Berman (not yet written
+back into `CLAUDE.md` — do that before the next bootstrap session):
+verify identity -> Human gets biography only -> Persona gets
+`actsThrough` + everything public-facing -> verify each affiliation's
+own legitimacy before creating it -> `memberOf` stays on Human ->
+`Relationship` (Persona-Persona/Persona-Org) for anything structured ->
+`CrosswalkNote.aboutEntity` points at Persona, never Human -> test with
+a real query, not just "the file parses."
+
+**Two structural questions raised, both checked and cleared before
+scaling further** (small, cheap to verify now; would have been
+expensive to discover wrong after dozens more individuals depended on a
+false assumption):
+1. Does `thinkr:hasGuest` actually support multiple values on one
+   `Episode`, cleanly? Tested directly (isolated test triple, never
+   written to real data) — confirmed yes, resolves correctly, no schema
+   change needed.
+2. Does a Roundtable `EpisodeType` need minting? No — `thinkr:
+   EpisodeType.PanelDiscussion` already exists, already carries
+   `skos:altLabel "roundtable"`/`"Reality Roundtable"` — someone
+   anticipated this exact mapping when the schema was originally built.
+   Just needs to actually get used.
+
+**A real episode-numbering risk surfaced, confirming an existing design
+decision was right rather than revealing a new problem**: raw "TGS+
+number" is NOT a safe unique identifier across the real corpus —
+`TGS118`, `TGS140`, `TGS60`, `TGS46`, `TGS80`, `TGS97` all have TWO
+different guests sharing the same number (a site-side numbering quirk
+over the show's history, not a local bug). `CLAUDE.md`'s existing IRI
+convention already mandates a title fragment alongside the number for
+exactly this reason — zero tolerance for a future shortcut that treats
+number-alone as sufficient. Related, confirmed via
+`download_manifest.csv`: episode TYPE should always come from that
+manifest's own `type` column (sourced from which index page the URL was
+discovered under on the real site) — never inferred from filename
+pattern, which has visibly drifted in style over the show's history
+(concatenated-no-hyphens early on, hyphenated-with-title-words later,
+confirmed across Frankly/TGS/RR filenames alike).
+
+**Real structural risks flagged for the scale-up, ranked by
+priority — none blocking, all worth deciding deliberately rather than
+discovering the answer implicitly a hundred bootstraps from now:**
+1. **No confirmed validator for this repo** (unlike UWOM's
+   `validate_repo.py`). All validation this entire session has been
+   ad hoc `rdflib`/live-SPARQL checks, hand-run and hand-read after every
+   batch — works because the batches were small enough to eyeball.
+   Will NOT hold up at "very large." Single highest-priority
+   infrastructure gap before mass expansion, ranked above all of the
+   items below.
+2. **`compute_confidence.py` was never actually run this session** —
+   every `calculatedConfidence` value touched (the `EnergyBlindness`/
+   Berman `LinkNote`) was hand-approximated to match its Evidence,
+   explicitly flagged as needing the real script run before being
+   trusted. Fine as a one-off caveat; a real liability if it accumulates
+   across dozens of new `LinkNote`s without ever being reconciled
+   against the actual script.
+3. **`hasPersonalRelationship` is a known-wrong name** — used for
+   professional/academic relationships too, since
+   `hasOrganizationRelationship`/`hasSchoolRelationship` were never
+   built out (documented, deliberate simplification from Batch 3, not a
+   new problem). Cheap to fix now at ~9 `Relationship` individuals;
+   genuinely disruptive to fix after hundreds more exist under the
+   current name.
+4. **`memberOf` + structured `Relationship` deliberately coexist**
+   (confirmed intentional, University of Minnesota precedent) — fine at
+   Nate's handful of affiliations, real ongoing double-maintenance cost
+   at hundreds of guests each with real institutional histories. Worth
+   deciding now whether this is permanent or transitional.
+5. **The bootstrap procedure is intentionally human-in-the-loop** (by
+   design, per `CLAUDE.md` — wrong-person traps need judgment, this is
+   correct and should NOT change) **but the delivery mechanism doesn't
+   scale to "very large" done one person at a time in a chat window.**
+   Discipline should survive; move the actual execution to Claude Code,
+   which can run the same verify-then-build-then-validate loop across
+   many candidates per session while a human spot-checks rather than
+   hand-types every triple.
+6. **The `discusses` confidence-model recommendation from the earlier
+   entry below is still not formally confirmed by MJSullivan** — lock
+   this in before Step 3 (LLM concept-mining) ever runs at volume;
+   retrofitting hundreds of already-asserted direct claims into the
+   Evidence structure later is far more painful than deciding it once
+   now.
+
+**Concrete next-session plan, in order:**
+1. Build a real, repeatable validation script (item 1 above) before
+   anything else at volume.
+2. Write the updated bootstrap procedure back into `CLAUDE.md` (it's
+   proven now, on a real second example, per the original 2026-07-11
+   note's own stated bar for generalizing it).
+3. Move primary bootstrap/seeding execution to Claude Code; keep Claude
+   Chat for architecture/planning per this project's established
+   division of labor.
+4. Lock in the `discusses` and `hasPersonalRelationship`-family
+   decisions.
+5. Seed the 18 real Roundtable episodes from `download_manifest.csv`
+   (title/URL/type all ground-truth, no filename parsing) — first real
+   test of the multi-guest `hasGuest` pattern at true scale, not just an
+   isolated 3-guest test triple.
+6. Continue the `top_persons.py` bootstrap queue — Josh Farley, Jeremy
+   Grantham, Steve Keen, Chuck Watson, Simon Michaux next in line by
+   mention count among genuinely new (not-yet-modeled, not name
+   fragments) candidates.
 
 ## PAUSED (2026-07-14, third conversation of the day): insight-gap
 ## review led to a real extraction/ investigation — closing the

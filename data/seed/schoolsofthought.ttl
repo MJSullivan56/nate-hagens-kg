@@ -77,5 +77,6 @@ tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought,
     skos:prefLabel "Doughnut Economics"@en ;
     skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
     owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
+    thinkr:convergesWith tgs:Concept.Overshoot ;
     .
 

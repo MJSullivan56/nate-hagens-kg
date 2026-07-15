@@ -226,3 +226,88 @@ tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 3 .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — Art Berman's confirmed guest appearances,
+# surfaced via extraction/top_persons.py (519 mentions/20 documents).
+# Two of his appearances (92, 101) have exact recorded+published dates
+# confirmed via thegreatsimplification.com's own episode pages; two
+# more (3, 220) are confirmed real but not yet date-verified — matching
+# this project's honesty-over-fabrication practice (see Schmachtenberger
+# in relationships.ttl for the same pattern). The transcript library
+# (extraction/transcripts_raw/) shows evidence of additional Berman
+# appearances beyond these 4 (an unnumbered "ArtBermanPt2" transcript,
+# and "TGS54ArtBerman3Transcript" implying a numbered 3rd appearance by
+# their own internal count) — NOT yet individually researched or dated,
+# deliberately deferred rather than guessed.
+#############################################
+
+tgs:Interview.TGS_3_OilBestAndWorstOfFuels a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Oil: It Was the Best of Fuels, It Was the Worst of Fuels"@en ;
+    rdfs:comment "Date not yet confirmed — very early in TGS's numbering (before Episode 5), consistent with being one of the show's first guest interviews, but no exact date independently verified as of 2026-07-14."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/03-arthurberman> .
+
+tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "BRICS+, Strategic Petroleum Reserve & Metaphysics"@en ;
+    dct:created "2023-10-05"^^xsd:date ;
+    dct:issued "2023-10-11"^^xsd:date ;
+    dct:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/92-art-berman> .
+
+tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Shale Oil and the Slurping Sound"@en ;
+    dct:created "2023-11-29"^^xsd:date ;
+    dct:issued "2023-12-13"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/101-art-berman> .
+
+tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "A World on the Precipice"@en ;
+    rdfs:comment "Publication date not directly confirmed for this specific episode — inferred as on or near 2026-05-13 based on its position in a chronologically-ordered episode list directly adjacent to Episode 219 (explicitly dated 2026-05-06), not independently verified against the episode's own page."@en ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman .
+
+#############################################
+# BOOTSTRAPPED 2026-07-14 — Josh Farley's confirmed guest appearances.
+# Only Episode 185's title/topic is independently confirmed via search
+# (thegreatsimplification.com's own episode page); Episodes 7 and 29 are
+# confirmed real via the transcript library (TGS07JoshFarleyTranscript,
+# TGS29JoshFarley2Transcript.docx — the "2" in the filename strongly
+# implies TGS's own internal second-appearance labeling) but their
+# titles and dates are NOT yet independently verified — real titles
+# deliberately not invented.
+#############################################
+
+tgs:Interview.TGS_7_JoshFarleyAppearance1 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS07JoshFarleyTranscript.docx.pdf existing in the transcript library. Placeholder skos:prefLabel below states this honestly rather than inventing a title."@en ;
+    skos:prefLabel "Josh Farley (Episode 7, title unconfirmed)"@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoshFarley .
+
+tgs:Interview.TGS_29_JoshFarleyAppearance2 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS29JoshFarley2Transcript.docx.pdf existing in the transcript library (the '2' in the filename strongly implies this is TGS's own internally-tracked second Farley appearance)."@en ;
+    skos:prefLabel "Josh Farley (Episode 29, title unconfirmed)"@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoshFarley .
+
+tgs:Interview.TGS_185_MythsShapingOurEconomies a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "The Myths Shaping Our Economies: The Disconnect between Economic Theory and Reality"@en ;
+    rdfs:comment "Exact air date not confirmed in the source checked as of 2026-07-14 — title and guest confirmed via thegreatsimplification.com's own episode page."@en ;
+    dct:subject tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoshFarley ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/185-josh-farley> .
