@@ -467,6 +467,20 @@ structural changes:
 
 ## Backlog (priority-ranked, as of 2026-07-10)
 
+**LOW — Retroactive multi-value-per-line formatting cleanup.** The
+one-value-per-line ground rule (see Ground rules section) was written down
+2026-07-15, enforced going forward (including in
+`scripts/compute_relationships.py`'s output), but NOT applied retroactively
+to existing violations found the same day: `episodes.ttl`'s `thinkr:hasReplay`
+and `dct:subject` lines (~15 occurrences across existing episodes) and
+`relationships.ttl`'s 2 `thinkr:hasRelationshipType` lines are all still
+single-line multi-value as of this writing. MJSullivan's explicit call:
+enforce going forward, don't block on a full retroactive pass right now —
+consistent with treating this as a bootstrap phase, not a hand-editing/
+curation phase (see the has*Relationship derivation-script discussion the
+same day). Revisit as a real cleanup pass once the graph is in a more
+steady-state curation mode.
+
 **DONE 2026-07-10 — Evidence/claim provenance model.** Built: `tgs:Evidence`
 and `tgs:Source` classes, `tgs:ReliabilityType` (Authoritative/Reputable/
 Unverified/Unreliable) and `tgs:PolarityType` (Supports/Contests/Mentions)
@@ -888,6 +902,28 @@ person/context) to test it against:
   `tgs:ConfidenceType.Curated` without a human having actually reviewed
   the specific claim.** See design decision #1 — this is the most
   important rule in the repo.
+- **A property with 2+ values gets one value per line; a property with
+  exactly 1 value stays on the same line as the predicate.** MJSullivan's
+  explicit requirement (2026-07-15): as an editor, being able to tell
+  "this is multi-valued" at a glance — from the shape of the text alone,
+  before reading a single token — matters more than compactness. Example:
+  ```turtle
+  tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
+      thinkr:actsThrough tgs:Human.NateHagens ;
+      foaf:homepage
+          <https://www.natehagens.com/>,
+          <https://natehagens.substack.com/>,
+          <https://www.linkedin.com/in/nate-hagens-004810b/> ;
+      thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_PeakOilMovement ;
+  ```
+  `foaf:homepage` (3 values) breaks across lines; `hasIntellectualRelationship`
+  (1 value) doesn't. Applies everywhere in `data/seed/`, not just
+  `personas.ttl`. Any script that writes TTL (see
+  `scripts/compute_relationships.py`) must follow this too — that script's
+  first version always emitted single-line comma-joined values regardless
+  of count, a real gap caught only because the graph already happened to
+  match by hand when it was first tested, not because the script enforced
+  it.
 - Concept/School definitions are paraphrases, not verbatim quotes — keep
   it that way (see design decision #6).
 - Every `.ttl` file must parse individually and combined — run

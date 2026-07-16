@@ -210,8 +210,32 @@ thinkr:hasObject a owl:ObjectProperty ;
 thinkr:hasPersonalRelationship a owl:ObjectProperty ;
     rdfs:domain thinkr:Persona ;
     rdfs:range thinkr:Relationship ;
-    skos:comment "Links a Persona to their Relationship individuals. Named specifically (not just 'hasRelationship') matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family — only this one built so far, the others deliberately not invented ahead of real need. DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
+    skos:comment "Links a Persona to Relationship individuals that are genuinely PERSONAL in nature (thinkr:hasRelationshipType includes RelationshipType.Personal on the Relationship itself). RETROFITTED 2026-07-15: until this date every Relationship a Persona was party to was asserted here regardless of its actual hasRelationshipType, discovered as a real modeling bug when Gaya Herrington's host-guest Relationship (Professional-only, no Personal language found) and her two purely institutional Relationships were caught being mis-filed under this property. Now one of a 4-member sibling family mirroring thinkr:RelationshipType exactly (hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship/hasLegalRelationship) — matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family in spirit (index by relationship nature, not by the other party's class), though the actual discriminator ended up being thinkr:hasRelationshipType rather than the object's own class. A single Relationship with multiple hasRelationshipType values (e.g. Josh Farley's, which is Academic+Personal+Professional) is correctly asserted under ALL matching sibling properties — not a data-quality problem, an honest reflection that one Relationship individual can genuinely be more than one kind of relationship. NOT YET DERIVED via script the way calculatedConfidence is (see scripts/compute_confidence.py) even though this is 100% redundant with each Relationship's own hasRelationshipType — flagged as a natural next step, not built in this retrofit pass. DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
     skos:prefLabel "has personal relationship"@en .
+
+thinkr:hasProfessionalRelationship a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Relationship ;
+    skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Professional. See hasPersonalRelationship's own comment for the full family design and the Herrington case that surfaced the need for this split."@en ;
+    skos:prefLabel "has professional relationship"@en .
+
+thinkr:hasAcademicRelationship a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Relationship ;
+    skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Academic. See hasPersonalRelationship's own comment for the full family design."@en ;
+    skos:prefLabel "has academic relationship"@en .
+
+thinkr:hasLegalRelationship a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Relationship ;
+    skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit for RelationshipType completeness — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Legal. No instances yet as of this writing (no Legal-type Relationship exists in the graph), built alongside its 3 siblings anyway since the full family was the explicit request rather than a wait-for-real-need case like most other classes in this project."@en ;
+    skos:prefLabel "has legal relationship"@en .
+
+thinkr:hasIntellectualRelationship a owl:ObjectProperty ;
+    rdfs:domain thinkr:Persona ;
+    rdfs:range thinkr:Relationship ;
+    skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 alongside the new thinkr:RelationshipType.Intellectual — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Intellectual (subscribes to / aligns with a school of thought's ideas, distinct from formal employment or academic credentialing). Surfaced by MJSullivan's own review: Relationship.NateHagens_PeakOilMovement (Persona->SchoolOfThought) had been mistagged Professional purely because it was institutional rather than person-to-person — the real discriminator this whole property family uses is thinkr:hasRelationshipType, not the object's class, and this was the one case where the wrong RelationshipType had been picked in the first place, not just filed under the wrong property."@en ;
+    skos:prefLabel "has intellectual relationship"@en .
 
 thinkr:PodcastAppearance a owl:Class ;
     rdfs:comment "A single interaction instance within a Relationship — nested as a blank node under hasInteraction, deliberately unnamed (solves the multi-instance naming problem: McGilchrist's 3 separate appearances needed zero additional naming decisions)."@en ;

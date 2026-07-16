@@ -3,6 +3,7 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
@@ -33,6 +34,9 @@
 # Relationship.hasSubject from Human to Persona. Moving it early would
 # create a duplicate, conflicting source of truth between
 # Human.NateHagens and Persona.NateHagens for the batches in between.
+# foaf:homepage specifically landed here 2026-07-15, once Batch 3+ made
+# the "public-facing fact -> Persona" rule concrete enough to apply to it
+# too — see Persona.NateHagens's own scopeNote.
 # Same discipline for Marcus Aurelius's "purer persona" case (near-empty
 # Human, Persona carrying essentially all content, per the 2026-07-13
 # escalation) — deferred to Batch 5 (the core Concept->Persona
@@ -161,27 +165,60 @@ tgs:Persona.KateRaworth a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.NateHagens ;
     skos:prefLabel "Nate Hagens"@en ;
-    thinkr:hasTGSRole thinkr:ProfessionalRole.Educator, thinkr:ProfessionalRole.InstituteExecutive, thinkr:ProfessionalRole.Blogger, thinkr:ProfessionalRole.Author ;
-    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan, tgs:Relationship.NateHagens_IainMcGilchrist, tgs:Relationship.NateHagens_DanielSchmachtenberger, tgs:Relationship.NateHagens_TheOilDrum, tgs:Relationship.NateHagens_PostCarbonInstitute, tgs:Relationship.NateHagens_PeakOilMovement, tgs:Relationship.NateHagens_UniversityOfMinnesota ;
-    skos:scopeNote "Rebuilt 2026-07-14, Batch 3 of the Persona-centered refactor: hasTGSRole and hasPersonalRelationship moved here from tgs:Human.NateHagens (both public-facing facts, not biography) — Human.NateHagens no longer asserts either. EXTENDED Batch 4 (same day): hasPersonalRelationship now includes the 3 organization/school Relationship individuals folded in from persona_human_prototype-8.ttl (Oil Drum, Post Carbon Institute, Peak Oil movement), plus Relationship.NateHagens_UniversityOfMinnesota — which already existed in relationships.ttl before this session but was never actually linked back here, a real pre-existing gap closed in passing. NOTE: this individual still does NOT carry foaf:homepage (Substack/natehagens.com/LinkedIn all remain on Human.NateHagens for now) — that split is an unresolved open question from the 2026-07-12 escalation entry, not resolved in this batch."@en .
+    foaf:homepage
+        <https://www.natehagens.com/>,
+        <https://natehagens.substack.com/>,
+        <https://www.linkedin.com/in/nate-hagens-004810b/> ;
+    thinkr:hasTGSRole
+        thinkr:ProfessionalRole.Educator, 
+        thinkr:ProfessionalRole.InstituteExecutive, 
+        thinkr:ProfessionalRole.Blogger, 
+        thinkr:ProfessionalRole.Author ;
+    thinkr:hasPersonalRelationship
+        tgs:Relationship.NateHagens_MatthewMonahan,
+        tgs:Relationship.NateHagens_ArtBerman,
+        tgs:Relationship.NateHagens_JoshFarley ;
+    thinkr:hasProfessionalRelationship
+        tgs:Relationship.NateHagens_MatthewMonahan,
+        tgs:Relationship.NateHagens_IainMcGilchrist,
+        tgs:Relationship.NateHagens_DanielSchmachtenberger,
+        tgs:Relationship.NateHagens_TheOilDrum,
+        tgs:Relationship.NateHagens_PostCarbonInstitute,
+        tgs:Relationship.NateHagens_UniversityOfMinnesota,
+        tgs:Relationship.NateHagens_ArtBerman,
+        tgs:Relationship.NateHagens_JoshFarley,
+        tgs:Relationship.NateHagens_GayaHerrington ;
+    thinkr:hasAcademicRelationship 
+        tgs:Relationship.NateHagens_UniversityOfMinnesota, 
+        tgs:Relationship.NateHagens_JoshFarley ;
+    thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_PeakOilMovement ;
+    skos:scopeNote "Rebuilt 2026-07-14, Batch 3 of the Persona-centered refactor: hasTGSRole and hasPersonalRelationship moved here from tgs:Human.NateHagens (both public-facing facts, not biography) — Human.NateHagens no longer asserts either. EXTENDED Batch 4 (same day): hasPersonalRelationship now includes the 3 organization/school Relationship individuals folded in from persona_human_prototype-8.ttl (Oil Drum, Post Carbon Institute, Peak Oil movement), plus Relationship.NateHagens_UniversityOfMinnesota — which already existed in relationships.ttl before this session but was never actually linked back here, a real pre-existing gap closed in passing. foaf:homepage (natehagens.com/Substack/LinkedIn) MOVED here from tgs:Human.NateHagens 2026-07-15, resolving the open question from the 2026-07-12 escalation entry: ALL homepage links belong on Persona, no split — a homepage is a public-facing fact like every other property already migrated under design decision 0f, not biography (see tgs:Human.NateHagens's own updated comment). RETROFITTED 2026-07-15: hasPersonalRelationship had incorrectly held all 7 Relationships regardless of actual thinkr:hasRelationshipType — split across the new hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship family per each Relationship's own asserted type(s) (see tgs-core.ttl's hasPersonalRelationship comment for the full retrofit story). Only Relationship.NateHagens_MatthewMonahan carries RelationshipType.Personal, so it's the only one still under hasPersonalRelationship; UniversityOfMinnesota alone also carries Academic. SECOND CORRECTION same day: Relationship.NateHagens_PeakOilMovement was itself mistagged RelationshipType.Professional (not just filed under the wrong property) — MJSullivan caught that a Persona->SchoolOfThought 'subscribes to this movement's ideas' connection isn't Professional at all, prompting the new RelationshipType.Intellectual/hasIntellectualRelationship pair. Moved here accordingly, no longer under hasProfessionalRelationship. THIRD CORRECTION same day: has*Relationship had only ever been asserted on ONE side of each Relationship (whichever Persona happened to get bootstrapped/enriched), never symmetrically — Nate is thinkr:hasSubject on Relationship.NateHagens_ArtBerman/_JoshFarley/_GayaHerrington but none were listed here despite being listed on the guest's own Persona. MJSullivan confirmed both parties should list a Relationship (when both are Personas) — added here accordingly, matching each Relationship's real hasRelationshipType exactly (Berman: Personal+Professional; Farley: Personal+Professional+Academic; Herrington: Professional only, unchanged from her own original bootstrap)."@en .
 
 tgs:Persona.MatthewMonahan a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MatthewMonahan ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MatthewMonahan ;
+    thinkr:hasProfessionalRelationship 
+        tgs:Relationship.NateHagens_MatthewMonahan, 
+        tgs:Relationship.MatthewMonahan_MangaroaFarms ;
     skos:prefLabel "Matthew Monahan"@en ;
-    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.MatthewMonahan, 2026-07-14, Batch 3."@en .
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.MatthewMonahan, 2026-07-14, Batch 3. has*Relationship ADDED 2026-07-15: this Persona previously had none at all despite being thinkr:hasSubject on Relationship.MatthewMonahan_MangaroaFarms and thinkr:hasObject on Relationship.NateHagens_MatthewMonahan — a real completeness gap caught during the symmetric-indexing audit (see Persona.NateHagens's own scopeNote for the fuller story)."@en .
 
 tgs:Persona.IainMcGilchrist a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.IainMcGilchrist ;
-    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest, thinkr:PersonEntityType.Contributor ;
+    thinkr:hasPersonEntityType 
+        thinkr:PersonEntityType.Guest, 
+        thinkr:PersonEntityType.Contributor ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IainMcGilchrist ;
     skos:prefLabel "Iain McGilchrist"@en ;
-    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.IainMcGilchrist, 2026-07-14, Batch 3."@en .
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.IainMcGilchrist, 2026-07-14, Batch 3. hasProfessionalRelationship ADDED 2026-07-15: closing a symmetric-indexing gap found during the has*Relationship audit (see Persona.NateHagens's own scopeNote)."@en .
 
 tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.DanielSchmachtenberger ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DanielSchmachtenberger ;
     skos:prefLabel "Daniel Schmachtenberger"@en ;
-    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.DanielSchmachtenberger, 2026-07-14, Batch 3."@en .
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.DanielSchmachtenberger, 2026-07-14, Batch 3. hasProfessionalRelationship ADDED 2026-07-15: closing a symmetric-indexing gap found during the has*Relationship audit (see Persona.NateHagens's own scopeNote)."@en .
 
 #############################################
 # BOOTSTRAPPED 2026-07-14 — see humans.ttl for provenance/discovery
@@ -192,11 +229,39 @@ tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.ArtBerman a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ArtBerman ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
-    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ArtBerman, tgs:Relationship.ArtBerman_TheOilDrum ;
-    skos:prefLabel "Art Berman"@en .
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ArtBerman ;
+    thinkr:hasProfessionalRelationship 
+        tgs:Relationship.NateHagens_ArtBerman, 
+        tgs:Relationship.ArtBerman_TheOilDrum ;
+    skos:prefLabel "Art Berman"@en ;
+    skos:scopeNote "RETROFITTED 2026-07-15: split from a single hasPersonalRelationship list per each Relationship's actual thinkr:hasRelationshipType — see tgs-core.ttl's hasPersonalRelationship comment for the full retrofit story."@en .
 
 tgs:Persona.JoshFarley a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.JoshFarley ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
-    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JoshFarley, tgs:Relationship.JoshFarley_UniversityOfVermont ;
-    skos:prefLabel "Josh Farley"@en .
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JoshFarley ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JoshFarley ;
+    thinkr:hasAcademicRelationship 
+        tgs:Relationship.NateHagens_JoshFarley, 
+        tgs:Relationship.JoshFarley_UniversityOfVermont ;
+    skos:prefLabel "Josh Farley"@en ;
+    skos:scopeNote "RETROFITTED 2026-07-15: split from a single hasPersonalRelationship list per each Relationship's actual thinkr:hasRelationshipType — see tgs-core.ttl's hasPersonalRelationship comment for the full retrofit story. Relationship.NateHagens_JoshFarley carries all three types (Academic+Personal+Professional) and is correctly asserted under all three sibling properties here, not a duplication error."@en .
+
+#############################################
+# BOOTSTRAPPED 2026-07-15 — Gaya Herrington, first real end-to-end
+# bootstrap under the corrected Stage 2 design. See humans.ttl for full
+# provenance/discovery notes.
+#############################################
+
+tgs:Persona.GayaHerrington a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GayaHerrington ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship
+        tgs:Relationship.NateHagens_GayaHerrington,
+        tgs:Relationship.GayaHerrington_SchneiderElectric,
+        tgs:Relationship.GayaHerrington_StopStraatintimidatie,
+        tgs:Relationship.GayaHerrington_PostCarbonInstitute,
+        tgs:Relationship.GayaHerrington_ClubOfRome ;
+    thinkr:hasAcademicRelationship tgs:Relationship.GayaHerrington_HarvardUniversity ;
+    skos:prefLabel "Gaya Herrington"@en ;
+    skos:scopeNote "RETROFITTED 2026-07-15: no Relationship here carries RelationshipType.Personal (all are Professional or Academic), so no hasPersonalRelationship is asserted at all — a real, correct absence, not an oversight, and a genuine test of the new property family (the original filing of all 3 initial Relationships under hasPersonalRelationship was the bug that triggered this whole retrofit). ClubOfRome and PostCarbonInstitute Relationships added same day after a deeper WebFetch of her own bio site surfaced further real, independently-verifiable affiliations beyond the original podcast-intro-driven bootstrap — see humans.ttl for the fuller trail."@en .

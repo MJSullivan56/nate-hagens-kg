@@ -394,6 +394,230 @@ different problem:
   common-name collisions, pseudonymous handles are the norm on every
   one of these platforms, not the exception).
 
+## GAYA HERRINGTON REAL BOOTSTRAP + has*Relationship PROPERTY FAMILY
+## (2026-07-15, new session): first real end-to-end guest bootstrap under
+## the corrected Stage 2 design (not just an eval-harness metric), which
+## surfaced a genuine modeling bug in hasPersonalRelationship — fixed by
+## minting a full RelationshipType-mirroring property family, auditing it
+## for symmetric completeness across the whole graph, and building a
+## derivation script for it. Also resolved the long-open foaf:homepage
+## Persona-vs-Human question and documented a formatting convention that
+## had never been written down.
+
+**Part 1 — Gaya Herrington bootstrap.** Real triples written (not a dry
+run): `Human.GayaHerrington`/`Persona.GayaHerrington`,
+`Organization.SchneiderElectric`/`StopStraatintimidatie`/`ClubOfRome`,
+`AcademicInstitution.HarvardUniversity`, `Interview.TGS_57_...`,
+`Work.UpdateToLimitsToGrowth2021`/`FiveInsightsForAvoidingGlobalCollapse`,
+5 `Relationship` individuals, `LinkNote`/`Evidence.LimitsToGrowth_GayaHerrington`,
+2 `CrosswalkNote`s (Wikidata + DBpedia). Real WebSearch/WebFetch used
+throughout, not memory — confirmed her Wikipedia/Wikidata/DBpedia pages,
+the exact 2021 JIE paper citation (DOI 10.1111/jiec.13084), and the TGS_57
+episode's real air dates via the show's own page.
+
+MJSullivan pushed for a deeper research pass beyond the podcast intro
+("I'm 100% sure that if I spent five minutes I would find a handful of
+other resources") — correct. A direct WebFetch of her own bio site
+(gayaherrington.com/about) surfaced: Schneider Electric is now a PAST
+role, not current (she's been an independent advisor since 2026) —
+corrected everywhere it had been asserted as current; a Post Carbon
+Institute board seat, which is especially notable because that
+Organization already exists in this graph and Nate Hagens sits on the
+same board — a real, verified cross-connection between two bootstrapped
+guests, confirmed live via SPARQL; a current Adjunct Professor role at
+Harvard (distinct from her Harvard degree, which stays prose-only); and
+Club of Rome membership — thematically the sharpest find, since the Club
+of Rome is literally the organization that commissioned the 1972 Limits
+to Growth study she later empirically re-tested. Lower-confidence leads
+(Cascadia/Bioregional Finance, R3.0 board, York University collaboration,
+guest lecturing at Berkeley/Cambridge/UCLA/Shizenkan) were deliberately
+left as prose only — not independently verified against a primary source,
+flagged honestly rather than modeled as structured facts.
+
+REAL, FLAGGED SCHEMA GAP: none of the 4 existing Concept-facing relation
+properties (`echoesIdeaOf`, `influencedBy`, `appliesTo`, `relatesTo`)
+cleanly fit "direct empirical re-test of a named study" — `relatesTo`
+(the generic escape hatch) was used with a full scopeNote explaining why,
+same posture as the deliberately-unfixed
+`LinkNote.MartinLutherKingJr_GrowthImperative` reversed-subject/object
+case. Worth a future backlog line: a dedicated "empirically
+validates/updates" property if a second case like this surfaces.
+
+METHODOLOGICAL FINDING worth keeping: the "stub Human, defer real
+verification to Pass 2" convention (see the STAGE 2 SCOPE entries below)
+effectively collapsed into a single pass here — real WebSearch/WebFetch
+verification was already happening in the same session as the mint, so
+there was no meaningful "later" to defer to. Pass 2 may naturally
+collapse into Pass 1 whenever the person doing the bootstrap is already
+verifying as they go, rather than being a strictly separate later step.
+
+A privacy judgment call, flagged not silently made: a one-year-old
+daughter mentioned in the TGS_57 transcript was excluded from
+`Human.GayaHerrington`'s comment as privacy-sensitive and not central to
+her public Persona — consistent with this project's publications/
+credentials/public-role scope, not a hard rule.
+
+**Part 2 — the has*Relationship property family retrofit.** MJSullivan
+caught, correctly, that `Relationship.GayaHerrington_SchneiderElectric`
+and `_StopStraatintimidatie` had been filed under
+`thinkr:hasPersonalRelationship` even though neither is personal —
+`thinkr:hasRelationshipType` on the Relationship itself already said
+Professional. Root cause: `hasPersonalRelationship` had always been a
+catch-all (see its pre-2026-07-15 comment: "only this one built so far"),
+asserted regardless of a Relationship's actual type.
+
+Fix, after some real back-and-forth: MJSullivan first proposed a
+hasObject-CLASS-based rule (Persona->Persona = Personal,
+Persona->Organization = Professional) — flagged as contradicted by real
+data already in the graph (`Relationship.NateHagens_IainMcGilchrist` and
+`_DanielSchmachtenberger` are Persona->Persona but Professional-only, and
+`Relationship.NateHagens_GayaHerrington` — the exact case that started
+this — is also Persona->Persona but Professional-only; applying the
+proposed rule would have reverted the very fix being made). MJSullivan
+then confirmed the right rule: "whatever relationshipType you land on
+should be the has*Relationship property" — i.e. `hasRelationshipType`
+(already evidence-based, already hand-verified against real transcript
+quotes) stays the sole discriminator, and a Relationship with multiple
+types (Monahan, Farley — both Personal+Professional, evidenced with
+direct quotes) legitimately appears under multiple properties. Minted
+3 new sibling properties in `tgs-core.ttl`: `hasProfessionalRelationship`,
+`hasAcademicRelationship`, `hasLegalRelationship` (the last with zero
+instances yet, built anyway since the full family was the explicit ask).
+
+Separately, MJSullivan caught that `Relationship.NateHagens_PeakOilMovement`
+(Persona->SchoolOfThought) was itself MISTAGGED Professional, not just
+filed under the wrong property — "That's not professional... more of a
+'I subscribe to this' relationship." Its own pre-existing scopeNote had
+already half-admitted the mismatch ("not a formal joinable organization").
+Minted a 5th type, `RelationshipType.Intellectual` (and
+`hasIntellectualRelationship`), specifically for "subscribes to/aligns
+with a school of thought's ideas" — distinct from Professional
+(employment) and Academic (institutional/teaching ties). Only one
+Relationship in the graph needed retyping.
+
+MJSullivan also flagged a genuine misunderstanding worth naming for future
+sessions: seeing the same Relationship IRI listed under two different
+has*Relationship properties initially read as "duplication/bloat," until
+tracing it back to the Relationship's own multi-valued
+`hasRelationshipType` clarified it was correct, not a bug — worth
+remembering that this specific shape (one Relationship, multiple sibling
+properties) will keep looking surprising to a human editor scanning the
+file unless the reason is visible nearby.
+
+**Part 3 — symmetric-indexing audit.** While verifying the retype was
+complete, a live SPARQL audit (both subject-side and object-side) found a
+SEPARATE, real gap: `has*Relationship` had only ever been asserted on
+whichever Persona happened to get bootstrapped/enriched, never
+symmetrically on both parties. Concretely: Nate is `hasSubject` on
+`Relationship.NateHagens_ArtBerman`/`_JoshFarley`/`_GayaHerrington` but
+none were listed on `Persona.NateHagens` itself (only on the guest's own
+Persona); `Persona.MatthewMonahan` had ZERO `has*Relationship` at all
+despite being a party to 2 Relationships; `Persona.IainMcGilchrist`/
+`DanielSchmachtenberger` were each missing their one entry. MJSullivan
+chose symmetric indexing (both parties list a shared Relationship, when
+both are Personas) over a single-canonical-side rule, given the
+alternative would hide real facts unless a reader opened the Relationship
+itself. Backfilled all 4 Personas; a full audit query afterward confirmed
+zero subject-side gaps, zero object-side gaps, zero type/property
+mismatches.
+
+**Part 4 — `scripts/compute_relationships.py`.** MJSullivan asked for
+pros/cons of deriving has*Relationship via script (mirroring
+`compute_confidence.py`) rather than hand-maintaining it, given how many
+times this session's own manual audits had already caught drift. Real
+cost flagged before building: `compute_confidence.py` reserializes via
+`rdflib.Graph.serialize()`, which strips every hand-authored section
+comment (confirmed happening to `linknotes.ttl` earlier this same
+session). MJSullivan's resolving framing: "I see the current state as
+bootstrap phase not a hand-editing phase which can and will come later"
+— i.e. that cost matters less right now than it would in a mature
+curation phase, but should still be minimized where cheap.
+
+Built with literal-safe targeted text surgery instead of a full rdflib
+round-trip: every string literal in `personas.ttl` is placeholdered out
+first (confirmed via grep that literals genuinely contain `;`/`.`/`,`,
+making naive structural regex unsafe), then only `has*Relationship`
+predicate-object chunks are located and rewritten; every comment and
+`skos:scopeNote` survives untouched. Self-verifies by re-parsing the
+written file and diffing against the intended state, hard-failing if they
+don't match — added specifically because the script's OWN development
+caught two real "reports success but silently does nothing/does the
+wrong thing" bugs: (1) a key-mismatch (`Persona.IainMcGilchrist` vs.
+`IainMcGilchrist`) that made every apply-mode block-rewrite a silent
+no-op while still printing "Updated ... rewritten"; (2) a double-prefix
+bug (`tgs:Relationship.Relationship.X`) caught immediately by the
+self-verification step on the very next test run. Both were only caught
+by actually inspecting the written output and re-parsing it — not by
+trusting "the script ran without an error," the same lesson CLAUDE.md's
+Gotchas section already documents for this exact class of mistake.
+Tested via a disposable sandbox copy (never against the real repo until
+proven correct): addition, removal, and idempotency (a second dry-run
+after applying correctly reports zero remaining changes) all confirmed.
+Run against the real repo: zero changes needed, confirming the manual
+retrofit work above already matched what the script independently
+derives.
+
+**Part 5 — foaf:homepage: Persona, not Human, no split.** Closed the
+open question flagged twice already (Persona.NateHagens's own
+2026-07-14 scopeNote, and CLAUDE.md's design-decision-0f "still open"
+list): a homepage is a public-facing fact, same category as every other
+property already migrated under 0f (Relationships, Episode hosting,
+Concept-influence), not biography — so all 3 links
+(natehagens.com/Substack/LinkedIn) moved from `Human.NateHagens` to
+`Persona.NateHagens`, no split. The LinkedIn case was the one worth
+stress-testing (reads more CV-like than the other two) — resolved by
+noting LinkedIn had ALREADY been used as Persona-shaped public evidence
+elsewhere this session (Herrington's current affiliations, a citation for
+a public claim about Nate's Reality Blind), not biography, so a uniform
+rule beats a per-link judgment call. Both stale scopeNotes referencing
+this as unresolved were updated to say it's resolved, not left dangling.
+
+**Part 6 — multi-value-per-line formatting, newly documented.**
+MJSullivan flagged, while reviewing the has*Relationship work directly in
+the IDE, a real requirement that had never been written down: a property
+with 2+ values needs one value per line (so a human editor can tell
+"multi-valued" at a glance, from the text's shape alone); a property with
+exactly 1 value stays on one line. This was ALREADY being followed by
+hand throughout this session's edits (coincidentally), but
+`compute_relationships.py`'s first version always emitted single-line
+comma-joined values regardless of count — meaning the derivation script
+would have silently regressed the very convention it was just asked to
+respect, the next time it actually had a real change to write (it hadn't
+yet, since the graph already matched by hand when first tested). Fixed
+the script's line-generation logic and added a new CLAUDE.md ground rule
+(2nd bullet, right after the confidence rule) with the worked example.
+NOT applied retroactively: `episodes.ttl`'s `hasReplay`/`dct:subject`
+lines (~15 occurrences) and `relationships.ttl`'s 2
+`hasRelationshipType` lines are still single-line as of this writing —
+MJSullivan's explicit call was to enforce going forward only, consistent
+with the bootstrap-phase framing from Part 4; tracked as a LOW-priority
+CLAUDE.md backlog item, not silently dropped.
+
+**Triple count**: 2,023 (session start) -> 2,201 (data/seed/, after all 6
+parts). Validated throughout via `make validate`,
+`scripts/validate_class_purity.py --check-scratch-empty` (2 pre-existing
+violations, both unrelated to this session's work), and repeated live
+Oxigraph queries after every reload — never trusted a script's own
+"success" message without independently re-querying, per the lesson Part
+4 relearned the hard way.
+
+**Explicitly not resolved, still genuinely open:**
+- The `relatesTo`-as-escape-hatch schema gap for
+  Herrington/LimitsToGrowth (Part 1) — no dedicated "empirically
+  validates/updates" property exists yet, deliberately not invented for
+  a single instance.
+- Retroactive multi-value-per-line cleanup for `episodes.ttl`/
+  `relationships.ttl` (Part 6) — tracked in CLAUDE.md's backlog, not
+  scheduled.
+- Whether `has*Relationship` should eventually be extended to
+  Organization/SchoolOfThought-to-Organization Relationships (the
+  MangaroaFarms<->BiomeTrust case has no Persona party at all, so it's
+  out of scope for this property family entirely — not yet discussed
+  whether that gap needs its own solution or is fine as-is).
+- Whether the "Pass 2 collapses into Pass 1 when the bootstrapper is
+  already verifying" finding (Part 1) should change how the stub-Human
+  convention is described going forward, or stays situational.
+
 ## STAGE 2 SCOPE, PART 2 (2026-07-15, continuing the same conversation
 ## after a stated "may pick this up in a few hours" pause that never
 ## actually broke): stub-Human minting settled, a 10-segment taxonomy

@@ -185,9 +185,9 @@ tgs:Relationship.NateHagens_PostCarbonInstitute a thinkr:Relationship, owl:Named
 tgs:Relationship.NateHagens_PeakOilMovement a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:SchoolOfThought.PeakOilMovement ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with the Peak Oil movement"@en ;
-    skos:scopeNote "No specific dates confirmed — professional/intellectual community association via his pre-TGS career background, not a formal joinable organization."@en .
+    thinkr:hasRelationshipType thinkr:RelationshipType.Intellectual ;
+    skos:prefLabel "Nate Hagens' intellectual affiliation with the Peak Oil movement"@en ;
+    skos:scopeNote "RETYPED 2026-07-15: was RelationshipType.Professional, corrected to the new RelationshipType.Intellectual (see tgs-core.ttl's hasIntellectualRelationship comment and enumerations.ttl's RelationshipType.Intellectual definition) — this relationship's own original scopeNote already admitted the mismatch ('not a formal joinable organization'), MJSullivan's review caught what the hedge was pointing at. No specific dates confirmed — intellectual community association via his pre-TGS career background, not formal employment or membership."@en .
 
 #############################################
 # BOOTSTRAPPED 2026-07-14 — Art Berman. See humans.ttl/episodes.ttl for
@@ -287,3 +287,73 @@ tgs:Relationship.MangaroaFarms_BiomeTrust a thinkr:Relationship, owl:NamedIndivi
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Mangaroa Farms' professional relationship with Biome Trust"@en ;
     skos:scopeNote "Structural: Mangaroa Farms operates as a project wholly owned by/part of Biome Trust, per Mangaroa Farms' own 'About Us' page. First Organization-to-Organization Relationship in this graph — hasSubject/hasObject aren't restricted to Persona-involving pairs, confirmed working here."@en .
+
+#############################################
+# BOOTSTRAPPED 2026-07-15 — Gaya Herrington, first real end-to-end
+# bootstrap under the corrected Stage 2 (Persona-centered) design. See
+# humans.ttl for full provenance/discovery notes. RelationshipType kept
+# Professional-only for the host-guest pair (no "friend"/personal
+# language detected anywhere in the transcript, unlike Josh Farley) — a
+# real, deliberate test of the earlier taxonomy finding that not every
+# guest gets a Personal relationship.
+#############################################
+
+tgs:Relationship.NateHagens_GayaHerrington a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.GayaHerrington ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Gaya Herrington"@en ;
+    skos:scopeNote "Single confirmed appearance (Episode 57) as of 2026-07-15. No personal/friendship language found in the portion of the transcript reviewed — kept Professional-only rather than defaulting to Personal, unlike Relationship.NateHagens_JoshFarley."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth ;
+          dcterms:date "2022-12-29"^^xsd:date ] .
+
+tgs:Relationship.GayaHerrington_SchneiderElectric a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.GayaHerrington ;
+    thinkr:hasObject tgs:Organization.SchneiderElectric ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Gaya Herrington's professional relationship with Schneider Electric"@en ;
+    skos:scopeNote "PAST role: Vice-President of Sustainability Research, 12 years advising multinationals. CORRECTED 2026-07-15: originally recorded as current based on a general WebSearch; a direct WebFetch of her own bio site (gayaherrington.com/about) confirmed she has been an independent advisor since 2026 and this Schneider Electric role is now former — see tgs:Organization.SchneiderElectric's own definition for the same correction. Kept as a structured Relationship despite now being past, same precedent as tgs:Relationship.ArtBerman_TheOilDrum (a past role central to public reputation still gets structured treatment, not demoted to prose)."@en .
+
+tgs:Relationship.GayaHerrington_StopStraatintimidatie a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.GayaHerrington ;
+    thinkr:hasObject tgs:Organization.StopStraatintimidatie ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Gaya Herrington's founding role with Stop Straatintimidatie"@en ;
+    skos:scopeNote "Founder, 2014 (formal nonprofit foundation status from 2016). Modeled as a structured Relationship rather than left as prose because it's central to her current public Persona as a women's-rights activist, not merely an incidental past fact — same judgment call as Matthew Monahan's Mangaroa Farms relationship. No dedicated 'Founder' role property exists on plain (non-PodcastAppearance) Relationship individuals — RelationshipType.Professional plus this scopeNote is the closest available fit, same honest-gap-flagging approach as LinkNote.LimitsToGrowth_GayaHerrington's property choice below."@en .
+
+#############################################
+# ADDED 2026-07-15 — surfaced by a direct WebFetch of Gaya Herrington's
+# own bio site (gayaherrington.com/about), prompted by MJSullivan's own
+# push to look harder for independently-verifiable resources beyond the
+# original podcast-intro-driven bootstrap. Post-Carbon Institute is
+# especially notable: it's an ALREADY-MODELED Organization in this graph
+# (tgs:Organization.PostCarbonInstitute), and Nate Hagens himself sits on
+# its Board too (tgs:Relationship.NateHagens_PostCarbonInstitute) — a
+# genuine, real cross-connection between two bootstrapped guests, not
+# just two independent facts.
+#############################################
+
+tgs:Relationship.GayaHerrington_PostCarbonInstitute a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.GayaHerrington ;
+    thinkr:hasObject tgs:Organization.PostCarbonInstitute ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Gaya Herrington's board membership at Post Carbon Institute"@en ;
+    skos:scopeNote "Current Board member, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15). Nate Hagens also currently sits on this same Board (tgs:Relationship.NateHagens_PostCarbonInstitute) — a real, independently-verified cross-connection between two guests bootstrapped in this graph, not an inferred or coincidental one."@en .
+
+tgs:Relationship.GayaHerrington_HarvardUniversity a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.GayaHerrington ;
+    thinkr:hasObject tgs:AcademicInstitution.HarvardUniversity ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Academic ;
+    skos:prefLabel "Gaya Herrington's academic relationship with Harvard University"@en ;
+    skos:scopeNote "Current Adjunct Professor, teaching a semester course 'Economic transformation for post-growth flourishing' — per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15). Distinct from her MSc Sustainability Studies degree from the same institution, which stays prose-only on tgs:Human.GayaHerrington per this project's degree-history-stays-prose precedent — this Relationship specifically captures the CURRENT teaching role, not the historical degree."@en .
+
+tgs:Relationship.GayaHerrington_ClubOfRome a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.GayaHerrington ;
+    thinkr:hasObject tgs:Organization.ClubOfRome ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Gaya Herrington's membership in the Club of Rome"@en ;
+    skos:scopeNote "Member, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15). Thematically the most on-point affiliation surfaced in this bootstrap: the Club of Rome is the organization that originally commissioned the 1972 Limits to Growth study (tgs:Concept.LimitsToGrowth) she later empirically re-tested (tgs:Work.UpdateToLimitsToGrowth2021) — her membership closes a real loop between the original study's institutional origin and her own contribution to it."@en .

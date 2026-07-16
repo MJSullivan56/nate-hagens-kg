@@ -311,3 +311,20 @@ tgs:Interview.TGS_185_MythsShapingOurEconomies a thinkr:Episode, owl:NamedIndivi
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.JoshFarley ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/185-josh-farley> .
+
+#############################################
+# BOOTSTRAPPED 2026-07-15 — Gaya Herrington. Recording and publication
+# dates both independently confirmed via WebFetch of the episode's own
+# page (thegreatsimplification.com/episode/57-gaya-herrington), not
+# inferred from adjacency the way TGS_220's date was.
+#############################################
+
+tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Gaya Herrington: \"Humanity's Soul: Life or Growth?\""@en ;
+    dct:created "2022-12-29"^^xsd:date ;
+    dct:issued "2023-02-08"^^xsd:date ;
+    dct:subject tgs:Subject.OvershootAndLimits ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.GayaHerrington ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/57-gaya-herrington> .

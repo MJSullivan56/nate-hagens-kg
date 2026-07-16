@@ -404,3 +404,21 @@ tgs:CrosswalkNote.MartinLutherKingJr_Wikidata a thinkr:CrosswalkNote,
     thinkr:verifiedOn "2026-07-13"^^xsd:date ;
     skos:scopeNote "Verified via direct web search confirming subject match before linking."@en ;
     .
+
+tgs:CrosswalkNote.GayaHerrington_Wikidata a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Persona.GayaHerrington ;
+    thinkr:aboutExternalURI <http://www.wikidata.org/entity/Q110607845> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.Wikidata ;
+    thinkr:verifiedOn "2026-07-15"^^xsd:date ;
+    skos:scopeNote "Verified via WebSearch/WebFetch confirming subject match (name, birth year, econometrics/sustainability education, De Nederlandsche Bank/KPMG/Schneider Electric career history) before linking."@en ;
+    .
+
+tgs:CrosswalkNote.GayaHerrington_DBpedia a thinkr:CrosswalkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutEntity tgs:Persona.GayaHerrington ;
+    thinkr:aboutExternalURI <http://dbpedia.org/resource/Gaya_Herrington> ;
+    thinkr:crosswalkSource thinkr:CrosswalkSource.DBpedia ;
+    thinkr:verifiedOn "2026-07-15"^^xsd:date ;
+    skos:scopeNote "Independently confirmed via direct WebFetch of the DBpedia page itself 2026-07-15 (not assumed just because a Wikipedia page exists) — page correctly identifies her, includes birth year 1981 and Harvard/VU Amsterdam alma maters, and links to The Limits to Growth via dbo:wikiPageWikiLink."@en ;
+    .

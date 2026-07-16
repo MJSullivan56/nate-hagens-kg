@@ -55,3 +55,23 @@ tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.NateHagens ;
     .
+
+#############################################
+# BOOTSTRAPPED 2026-07-15 — Gaya Herrington's 2021 paper, direct
+# empirical basis for tgs:LinkNote.LimitsToGrowth_GayaHerrington. See
+# humans.ttl for the fuller bootstrap trail.
+#############################################
+
+tgs:Work.UpdateToLimitsToGrowth2021 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Update to limits to growth: Comparing the World3 model with empirical data"@en ;
+    rdfs:comment "Peer-reviewed article, Journal of Industrial Ecology (Yale University), 2021. DOI 10.1111/jiec.13084. Re-tests the original 1972 Limits to Growth study's World3 model against real-world 2020-era data; finds current trends track most closely with the study's 'Business as Usual 2' and 'Comprehensive Technology' scenarios, both projecting overshoot-and-decline dynamics within the 21st century. Verified via WebSearch 2026-07-15."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:creator tgs:Human.GayaHerrington ;
+    dct:source <https://doi.org/10.1111/jiec.13084> ;
+    .
+
+tgs:Work.FiveInsightsForAvoidingGlobalCollapse a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Five Insights for Avoiding Global Collapse"@en ;
+    rdfs:comment "Book by Gaya Herrington, containing an exclusive research update based on 2022 data extending her original World3 empirical re-test (see tgs:Work.UpdateToLimitsToGrowth2021). Confirmed via WebFetch of her own bio site (gayaherrington.com/about) 2026-07-15 — exact publisher/ISBN/year not yet independently verified, flagged honestly rather than guessed, same discipline as tgs:Work.RealityBlind's DJ White note."@en ;
+    dct:creator tgs:Human.GayaHerrington ;
+    .

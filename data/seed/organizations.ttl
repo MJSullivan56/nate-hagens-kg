@@ -71,3 +71,31 @@ tgs:Organization.MangaroaFarms a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Mangaroa Farms"@en ;
     skos:definition "A community food hub, regenerative agriculture project, and resilience education centre in the Hutt Valley, Upper Hutt, New Zealand (near the Mangaroa River). Founded 2018 by brothers Matthew and Brian Monahan (with Catlin Powers) as a living laboratory for transitioning former dairy and pine plantation land into regenerative agriculture and native forest. Structurally part of/owned by tgs:Organization.BiomeTrust, per Mangaroa Farms' own 'About Us' page and multiple independent sources. Originally surfaced via Nate Hagens' own guest introduction for Matthew Monahan (TGS_226 transcript) — a new extraction pattern piloted 2026-07-14, reading episode intros as a distinct primary source rather than relying on generic NER or web search alone (see docs/sidecar-cleanup-handoff.md). Independently verified 2026-07-14 via multiple sources (mangaroa.org, NZBusiness Magazine, Good Magazine, Quorum Sense, Waterford Press) — real, active, well-documented. NO owl:sameAs asserted: no Wikipedia/DBpedia/Wikidata entry found, plausibly below the notability bar for a small regional farm."@en ;
     .
+
+#############################################
+# BOOTSTRAPPED 2026-07-15 — Gaya Herrington's current professional
+# affiliations, surfaced via real WebSearch/WebFetch verification (not
+# the podcast intro alone, which never mentions either — see
+# docs/sidecar-cleanup-handoff.md for the fuller bootstrap trail).
+# KPMG and De Nederlandsche Bank (both past employers) deliberately kept
+# as prose only in tgs:Human.GayaHerrington's own comment, not modeled
+# as separate Organization individuals — same "current/most-relevant
+# affiliation gets structured, degree/employment history stays prose"
+# precedent as tgs:Human.JoshFarley (Columbia/Cornell/Grinnell stayed
+# prose; only University of Vermont got a structured Relationship).
+#############################################
+
+tgs:Organization.SchneiderElectric a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Schneider Electric"@en ;
+    skos:definition "French multinational energy management and industrial automation company. Gaya Herrington served as Vice-President of Sustainability Research there (12 years advising multinationals per her own bio) — CORRECTED 2026-07-15: initially recorded as her current role via general WebSearch, but a direct WebFetch of her own site (gayaherrington.com/about) confirms this is now a PAST role ('Former ... Vice President Sustainability Research at Schneider Electric'); she has been an independent advisor since 2026. Real, on-the-record fact worth knowing for future sessions: a general WebSearch summary and a primary-source fetch of the subject's own site can disagree, and the primary source wins."@en ;
+    .
+
+tgs:Organization.ClubOfRome a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Club of Rome"@en ;
+    skos:definition "International think tank/NGO founded 1968, best known for commissioning the original 1972 'Limits to Growth' study (see tgs:Concept.LimitsToGrowth) that this Persona family's LinkNote/Work provenance chain already traces back to. Gaya Herrington is a confirmed member per her own bio (gayaherrington.com/about) — verified via WebFetch 2026-07-15. Thematically the single most on-point affiliation surfaced in her bootstrap: the organization that commissioned the study she later empirically re-tested."@en ;
+    .
+
+tgs:Organization.StopStraatintimidatie a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Stop Straatintimidatie"@en ;
+    skos:definition "Dutch anti-street-harassment advocacy organization, founded 2014 by Gaya Herrington (then publicly known as Gaya Branderhorst) as a citizen's initiative targeting 40,000 signatures (reached approximately 19,000 by 2016); became a formal nonprofit foundation in May 2016. Deliberately kept roughly 50/50 gender-balanced team. Real, documented policy impact: street harassment began being formally fined in Amsterdam and Rotterdam starting 2018. Verified via WebSearch 2026-07-15 (not mentioned in the TGS_57 podcast intro itself — surfaced entirely through independent verification, not the transcript)."@en ;
+    .

@@ -99,7 +99,8 @@ tgs:Concept.LimitsToGrowth a thinkr:Concept,
     dcterms:subject tgs:Subject.OvershootAndLimits ;
     skos:definition "Reference to the 1972 Club of Rome-commissioned study modeling interactions between population, industrialization, pollution, food production, and resource depletion, projecting overshoot-and-decline dynamics on multi-decade timescales — a direct intellectual predecessor to Hagens' framework."@en ;
     skos:prefLabel "Limits to Growth"@en ;
-    thinkr:influencedBy tgs:Persona.DennisMeadows, tgs:Persona.DonellaMeadows .
+    thinkr:influencedBy tgs:Persona.DennisMeadows, tgs:Persona.DonellaMeadows ;
+    thinkr:relatesTo tgs:Persona.GayaHerrington .
 
 tgs:Concept.Metacrisis a thinkr:Concept,
         owl:NamedIndividual ;

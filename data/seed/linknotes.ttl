@@ -8,17 +8,12 @@ tgs: a owl:Ontology ;
     rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
     owl:imports thinkr: .
 
-############################################
-# Classes and Properties
-#############################################
-
-thinkr:LinkNote a owl:Class ;
-    rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;
-    skos:prefLabel "Link Note"@en .
-
-############################################
-# Instances
-#############################################
+tgs:LinkNote.CircleOfTrustLocalism_ElinorOstrom a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Persona.ElinorOstrom ;
+    thinkr:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
+    thinkr:hasEvidence tgs:Evidence.CircleOfTrustLocalism_ElinorOstrom .
 
 tgs:LinkNote.ComplexityCollapse_JosephTainter a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -71,19 +66,13 @@ tgs:LinkNote.LimitsToGrowth_DonellaMeadows a thinkr:LinkNote,
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.LimitsToGrowth_DonellaMeadows .
 
-tgs:LinkNote.CircleOfTrustLocalism_ElinorOstrom a thinkr:LinkNote,
+tgs:LinkNote.LimitsToGrowth_GayaHerrington a thinkr:LinkNote,
         owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Persona.ElinorOstrom ;
-    thinkr:aboutSubject tgs:Concept.CircleOfTrustLocalism ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
-    thinkr:hasEvidence tgs:Evidence.CircleOfTrustLocalism_ElinorOstrom .
-
-tgs:LinkNote.Metacrisis_GregoryBateson a thinkr:LinkNote,
-        owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Persona.GregoryBateson ;
-    thinkr:aboutSubject tgs:Concept.Metacrisis ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
-    thinkr:hasEvidence tgs:Evidence.Metacrisis_GregoryBateson .
+    thinkr:aboutObject tgs:Persona.GayaHerrington ;
+    thinkr:aboutSubject tgs:Concept.LimitsToGrowth ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.LimitsToGrowth_GayaHerrington ;
+    skos:scopeNote "calculatedConfidence to be (re-)derived via scripts/compute_confidence.py, not hand-set. Arguably the strongest match surfaced across this whole extraction-pilot lineage (see the concept-mining prototype's own note on this exact case, scratchpad-only, not part of this repo): a direct, named, citable empirical update of the ORIGINAL Limits to Growth study, not a thematic echo. See this LinkNote's own header comment above for the real property-choice gap this case exposed."@en .
 
 tgs:LinkNote.MartinLutherKingJr_GrowthImperative a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -93,19 +82,19 @@ tgs:LinkNote.MartinLutherKingJr_GrowthImperative a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.MartinLutherKingJr_GrowthImperative ;
     skos:scopeNote "NAMING CAUGHT, SEMANTICS NOT YET REVIEWED (flagged 2026-07-15 during the LinkNote/Evidence/CrosswalkNote naming retrofit): aboutSubject/aboutObject here are REVERSED relative to every other LinkNote in this file — everywhere else a Concept is aboutSubject and a Persona/SchoolOfThought is aboutObject; here a Persona (MartinLutherKingJr) is aboutSubject and a Concept (GrowthImperative) is aboutObject. This individual's own local name is internally consistent with its own (possibly-backwards) properties — a plausible-looking name is NOT the same claim as a semantically-correct one. Deliberately NOT corrected as part of the naming retrofit (a rename task that also silently fixes semantics is a rename task that's hard to trust later) — needs its own deliberate review to determine whether aboutSubject/aboutObject should be swapped, or whether this one is intentionally different for a reason not yet documented. See docs/sidecar-cleanup-handoff.md's 2026-07-15 naming-retrofit entry."@en .
 
+tgs:LinkNote.Metacrisis_GregoryBateson a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Persona.GregoryBateson ;
+    thinkr:aboutSubject tgs:Concept.Metacrisis ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
+    thinkr:hasEvidence tgs:Evidence.Metacrisis_GregoryBateson .
+
 tgs:LinkNote.MoneyAsClaimOnEnergy_Aristotle a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Persona.Aristotle ;
     thinkr:aboutSubject tgs:Concept.MoneyAsClaimOnEnergy ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.MoneyAsClaimOnEnergy_Aristotle .
-
-tgs:LinkNote.Overshoot_WilliamCatton a thinkr:LinkNote,
-        owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Persona.WilliamCatton ;
-    thinkr:aboutSubject tgs:Concept.Overshoot ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
-    thinkr:hasEvidence tgs:Evidence.Overshoot_WilliamCatton .
 
 tgs:LinkNote.Overshoot_DoughnutEconomics a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -114,12 +103,26 @@ tgs:LinkNote.Overshoot_DoughnutEconomics a thinkr:LinkNote,
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
     thinkr:hasEvidence tgs:Evidence.Overshoot_DoughnutEconomics .
 
+tgs:LinkNote.Overshoot_WilliamCatton a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Persona.WilliamCatton ;
+    thinkr:aboutSubject tgs:Concept.Overshoot ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
+    thinkr:hasEvidence tgs:Evidence.Overshoot_WilliamCatton .
+
 tgs:LinkNote.PeakOil_MKingHubbert a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Persona.MKingHubbert ;
     thinkr:aboutSubject tgs:Concept.PeakOil ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.PeakOil_MKingHubbert .
+
+tgs:LinkNote.Superorganism_EOWilson a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Persona.EOWilson ;
+    thinkr:aboutSubject tgs:Concept.Superorganism ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
+    thinkr:hasEvidence tgs:Evidence.Superorganism_EOWilson .
 
 tgs:LinkNote.Superorganism_JoshFarley a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -130,17 +133,14 @@ tgs:LinkNote.Superorganism_JoshFarley a thinkr:LinkNote,
         tgs:Evidence.Superorganism_JoshFarley_TGS_185 ;
     skos:scopeNote "calculatedConfidence correctly derived via scripts/compute_confidence.py (re-run 2026-07-15, see LinkNote.EnergyBlindness_ArtBerman's scopeNote for the stale-namespace bug this caught). Stays Candidate — both Evidence individuals are Candidate-confidence, not yet human-reviewed. This is the pilot's clearest example of the 'host-asserted explicit concept-connection' pattern the task was designed to test for (the Robert Lustig/Superorganism precedent discussed pre-pilot): Nate directly maps Farley's own thinking onto this Concept in his own words, not an inferred parallel."@en .
 
-tgs:LinkNote.Superorganism_EOWilson a thinkr:LinkNote,
-        owl:NamedIndividual ;
-    thinkr:aboutObject tgs:Persona.EOWilson ;
-    thinkr:aboutSubject tgs:Concept.Superorganism ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
-    thinkr:hasEvidence tgs:Evidence.Superorganism_EOWilson .
-
 tgs:LinkNote.Wetware_SigmundFreud a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Persona.SigmundFreud ;
     thinkr:aboutSubject tgs:Concept.Wetware ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.Wetware_SigmundFreud .
+
+thinkr:LinkNote a owl:Class ;
+    rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;
+    skos:prefLabel "Link Note"@en .
 

@@ -216,6 +216,10 @@ thinkr:RelationshipType.Academic a thinkr:RelationshipType, owl:NamedIndividual 
 thinkr:RelationshipType.Legal a thinkr:RelationshipType, owl:NamedIndividual ;
     skos:prefLabel "Legal"@en .
 
+thinkr:RelationshipType.Intellectual a thinkr:RelationshipType, owl:NamedIndividual ;
+    skos:prefLabel "Intellectual"@en ;
+    skos:scopeNote "ADDED 2026-07-15. Subscribes to / aligns with a school of thought's ideas — distinct from Professional (implies employment or paid work) and Academic (implies formal institutional/teaching/credentialing ties). First real use: Relationship.NateHagens_PeakOilMovement, previously mistagged Professional even though its own scopeNote already admitted 'professional/intellectual community association... not a formal joinable organization' — the hedge was already visible before this type existed to resolve it."@en .
+
 
 #############################################
 # InteractionRole

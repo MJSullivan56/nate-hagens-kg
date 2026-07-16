@@ -146,3 +146,11 @@ tgs:Evidence.EnergyBlindness_ArtBerman_TGS_220 a thinkr:Evidence,
     dcterms:description "Direct primary-source citation, surfaced 2026-07-15 by the bio-intro extraction pilot: in TGS_220 (aired 2026-05-06), Berman himself says of the Iran/Strait-of-Hormuz war, 'mostly it's a blunder based on energy blindness and a failure to grasp system implications' — Berman using the exact term on Nate's own show, in his own words, not a secondhand bio credit. Still flagged Candidate rather than Curated per this project's standing rule (design decision #1, CLAUDE.md) — a strong lead, but not yet human-reviewed."@en ;
     dcterms:source <https://www.thegreatsimplification.com/episode/220-art-berman> ;
     prov:generatedAtTime "2026"^^xsd:gYear .
+
+tgs:Evidence.LimitsToGrowth_GayaHerrington a thinkr:Evidence,
+        owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "Herrington's own peer-reviewed paper, 'Update to limits to growth: Comparing the World3 model with empirical data' (Journal of Industrial Ecology, 2021, DOI 10.1111/jiec.13084 — see tgs:Work.UpdateToLimitsToGrowth2021), directly re-tests the original 1972 Limits to Growth study's World3 model against real-world 2020-era data, finding current trends track most closely with the study's own 'Business as Usual 2' and 'Comprehensive Technology' scenarios. A direct empirical continuation of the named study itself, not an inferred thematic parallel. Verified via WebSearch 2026-07-15. Flagged Candidate, not Curated: real and strong, but not yet human-reviewed per design decision #1."@en ;
+    dcterms:source <https://doi.org/10.1111/jiec.13084> ;
+    prov:generatedAtTime "2021"^^xsd:gYear .
