@@ -33,6 +33,7 @@ tgs:Organization.TheOilDrum a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "The Oil Drum"@en ;
     skos:definition "A collaborative blog/community devoted to analysis and discussion of energy, peak oil, and sustainability, founded March 2005 by Kyle Saunders ('Prof. Goose') and Dave Summers ('Heading Out'). Active until 2013. Distinct from the broader tgs:SchoolOfThought.PeakOilMovement it was part of — a specific, independently-notable institution within that wider community, same relationship as Doughnut Economics sits within broader ecological economics. Nate Hagens was Managing/Lead Editor here before founding TGS — see tgs:Human.NateHagens."@en ;
     owl:sameAs <http://dbpedia.org/resource/The_Oil_Drum>  ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TheOilDrum, tgs:Relationship.ArtBerman_TheOilDrum ;
     .
 
 tgs:Organization.PostCarbonInstitute a thinkr:Organization, owl:NamedIndividual ;
@@ -41,6 +42,7 @@ tgs:Organization.PostCarbonInstitute a thinkr:Organization, owl:NamedIndividual 
     owl:sameAs 
         <http://dbpedia.org/resource/Post_Carbon_Institute>,
         <http://www.wikidata.org/entity/Q7233628> ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PostCarbonInstitute, tgs:Relationship.GayaHerrington_PostCarbonInstitute ;
     .
 
 tgs:Organization.MaEarth a thinkr:Organization, owl:NamedIndividual ;
@@ -51,6 +53,7 @@ tgs:Organization.MaEarth a thinkr:Organization, owl:NamedIndividual ;
 tgs:Organization.BiomeTrust a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Biome Trust"@en ;
     skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Human.MatthewMonahan. Limited independent detail available as of 2026-07-11 — flagged honestly rather than embellished; revisit if more source material surfaces."@en ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.MangaroaFarms_BiomeTrust ;
     .
 
 tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
@@ -70,6 +73,7 @@ tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
 tgs:Organization.MangaroaFarms a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Mangaroa Farms"@en ;
     skos:definition "A community food hub, regenerative agriculture project, and resilience education centre in the Hutt Valley, Upper Hutt, New Zealand (near the Mangaroa River). Founded 2018 by brothers Matthew and Brian Monahan (with Catlin Powers) as a living laboratory for transitioning former dairy and pine plantation land into regenerative agriculture and native forest. Structurally part of/owned by tgs:Organization.BiomeTrust, per Mangaroa Farms' own 'About Us' page and multiple independent sources. Originally surfaced via Nate Hagens' own guest introduction for Matthew Monahan (TGS_226 transcript) — a new extraction pattern piloted 2026-07-14, reading episode intros as a distinct primary source rather than relying on generic NER or web search alone (see docs/sidecar-cleanup-handoff.md). Independently verified 2026-07-14 via multiple sources (mangaroa.org, NZBusiness Magazine, Good Magazine, Quorum Sense, Waterford Press) — real, active, well-documented. NO owl:sameAs asserted: no Wikipedia/DBpedia/Wikidata entry found, plausibly below the notability bar for a small regional farm."@en ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.MangaroaFarms_BiomeTrust, tgs:Relationship.MatthewMonahan_MangaroaFarms ;
     .
 
 #############################################
@@ -88,14 +92,17 @@ tgs:Organization.MangaroaFarms a thinkr:Organization, owl:NamedIndividual ;
 tgs:Organization.SchneiderElectric a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Schneider Electric"@en ;
     skos:definition "French multinational energy management and industrial automation company. Gaya Herrington served as Vice-President of Sustainability Research there (12 years advising multinationals per her own bio) — CORRECTED 2026-07-15: initially recorded as her current role via general WebSearch, but a direct WebFetch of her own site (gayaherrington.com/about) confirms this is now a PAST role ('Former ... Vice President Sustainability Research at Schneider Electric'); she has been an independent advisor since 2026. Real, on-the-record fact worth knowing for future sessions: a general WebSearch summary and a primary-source fetch of the subject's own site can disagree, and the primary source wins."@en ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.GayaHerrington_SchneiderElectric ;
     .
 
 tgs:Organization.ClubOfRome a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Club of Rome"@en ;
     skos:definition "International think tank/NGO founded 1968, best known for commissioning the original 1972 'Limits to Growth' study (see tgs:Concept.LimitsToGrowth) that this Persona family's LinkNote/Work provenance chain already traces back to. Gaya Herrington is a confirmed member per her own bio (gayaherrington.com/about) — verified via WebFetch 2026-07-15. Thematically the single most on-point affiliation surfaced in her bootstrap: the organization that commissioned the study she later empirically re-tested."@en ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.GayaHerrington_ClubOfRome ;
     .
 
 tgs:Organization.StopStraatintimidatie a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Stop Straatintimidatie"@en ;
     skos:definition "Dutch anti-street-harassment advocacy organization, founded 2014 by Gaya Herrington (then publicly known as Gaya Branderhorst) as a citizen's initiative targeting 40,000 signatures (reached approximately 19,000 by 2016); became a formal nonprofit foundation in May 2016. Deliberately kept roughly 50/50 gender-balanced team. Real, documented policy impact: street harassment began being formally fined in Amsterdam and Rotterdam starting 2018. Verified via WebSearch 2026-07-15 (not mentioned in the TGS_57 podcast intro itself — surfaced entirely through independent verification, not the transcript)."@en ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.GayaHerrington_StopStraatintimidatie ;
     .

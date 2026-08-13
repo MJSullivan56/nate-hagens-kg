@@ -55,6 +55,7 @@ tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:definition "The loosely-organized, decades-long community of analysts, forecasters, geologists, and commentators studying and publicizing oil depletion dynamics (ASPO, peakoil.com-era forums, etc.) — distinct from tgs:Concept.PeakOil, which is the underlying theory/phenomenon itself. Note on scope: this community is genuinely heterogeneous in rigor and ideology, ranging from serious petroleum-geology analysis to more speculative 'doomer' content, and has no single unifying institution. Included despite that heterogeneity because the core theoretical work (Hubbert Peak Theory) has had multi-decade real-world influence and is a direct formative input to Hagens' own analytical background — he worked professionally in this space before founding The Great Simplification."@en ;
     skos:prefLabel "Peak Oil (movement/community)"@en ;
+    thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_PeakOilMovement ;
     .
 
 tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,

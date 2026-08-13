@@ -156,8 +156,12 @@ tgs:Concept.Wetware a thinkr:Concept,
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.BehavioralEconomicsAndCognition ;
     skos:definition "The idea that human cognitive and emotional wiring evolved for small-group, resource-scarce Pleistocene environments and is poorly matched to modern abundance, abstraction, and global-scale decision-making — a recurring lens Hagens uses to explain collectively self-destructive behavior."@en ;
-    skos:prefLabel "Human 'Wetware' / Evolutionary Mismatch"@en ;
-    thinkr:echoesIdeaOf tgs:Persona.SigmundFreud .
+    skos:prefLabel "Human 'Wetware'"@en ;
+    thinkr:echoesIdeaOf tgs:Persona.SigmundFreud ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Evolutionary Mismatch"@en ;
+        skos:scopeNote "PILOT CASE for the alternate-term mechanism, 2026-07-16 — split out of this Concept's own former compound prefLabel (\"Human 'Wetware' / Evolutionary Mismatch\"), which had jammed two real terms into one string. Kept as an anonymous blank node (Tier 2, per MJSullivan's own hasAlternateTerm pattern) rather than promoted to a named thinkr:AlternateTerm individual — not yet reused across any other Concept, no independent citable history captured yet. Promote to a named individual if/when either changes." ] .
 
 thinkr:Concept a owl:Class ;
     rdfs:comment "A term or idea from Nate Hagens' Great Simplification framework (e.g. Energy Blindness, the Superorganism)."@en ;
@@ -165,3 +169,65 @@ thinkr:Concept a owl:Class ;
     skos:scopeNote "Narrower than skos:Concept: specifically an idea from Hagens' TGS framework, not a general classification term — do not confuse with thinkr:Subject, which is also a skos:Concept subclass but for topic classification, a different purpose entirely."@en ;
     skos:prefLabel "Concept"@en .
 
+
+#############################################
+# ADDED 2026-07-16 — stubbed out of TGS_138's official show-notes topic
+# list (thegreatsimplification.com/frankly-original/138-...), not from
+# transcript-reading alone. See episodes.ttl's TGS_138 record for the
+# discusses links this batch supports, and docs/sidecar-cleanup-handoff.md
+# for the full triage this session did before minting anything (several
+# show-notes items were deliberately NOT minted — real-world current
+# events, external citations better modeled as Work, or genuinely
+# covered by an existing Concept already).
+#############################################
+
+tgs:Concept.TerrorManagementTheory a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Terror Management Theory"@en ;
+    skos:definition "The theory (developed by Sheldon Solomon, Tom Pyszczynski, and Jeff Greenberg starting the early 1980s, building on Ernest Becker's work) that human awareness of mortality generates a background existential anxiety managed largely unconsciously through cultural worldviews, self-esteem, and close relationships — and that reminders of death ('mortality salience') measurably intensify attachment to one's own cultural in-group and hostility toward out-groups."@en ;
+    skos:scopeNote "THIRD independent confirmation as of 2026-07-16 that this deserves real modeling: (1) surfaced during an earlier session's investigation of the TGS_199 Sheldon Solomon transcript, which found the co-founder name 'Budzinski' in that transcript is almost certainly a mishearing of Tom Pyszczynski — NOT yet independently verified, flagged here again since this stub is the natural place to resolve it; (2) TGS_138's own show notes reference it directly with a link to 'more info' and a cross-reference to the TGS episode on it; (3) general public awareness that this is real, citable psychological theory, not a Hagens coinage. thinkr:influencedBy tgs:Persona.EmileDurkheim considered but NOT asserted — Solomon cites Durkheim's 'religion existed before gods' framing approvingly in the TGS_199 transcript, but that is Solomon's OWN citation of Durkheim within a discussion of religion's function, not a claim that Durkheim shaped Terror Management Theory's origin (which the same transcript traces to Becker, not yet modeled as a Persona in this graph)."@en .
+
+tgs:Concept.ShortfallRisk a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Shortfall Risk"@en ;
+    skos:definition "A framing Hagens borrows from portfolio management/finance and repurposes for civilizational risk assessment: the danger that something essential (topsoil, social trust, grid stability, the nuclear-use taboo, an aquifer) drops below a threshold it cannot easily recover from — distinct from more commonly discussed AVERAGE-outcome risk, and argued to be the more important lens for genuinely existential threats specifically because average-case thinking systematically undercounts them."@en ;
+    skos:scopeNote "DOUBLY CONFIRMED: independently surfaced during an earlier session's by-hand pilot read of this same episode's transcript, and again via this session's official show-notes review — TGS_138's own team-written description states this concept explicitly functions as connective tissue across the rest of the 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture)."@en .
+
+tgs:Concept.ScenarioThinking a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Scenario Thinking"@en ;
+    skos:definition "Deliberately holding multiple plausible futures at once rather than committing to a single predicted storyline — the organizing methodology behind the entire 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture and tgs:Scenario) and explicitly contrasted by Hagens with forecasting."@en ;
+    skos:scopeNote "Has a real, independently citable external source: TGS_138's show notes link a specific book/resource, 'Scenario Thinking: A Historical Evolution of Strategic Foresight' — worth minting as its own tgs:Work once the exact author/publication details are verified (not yet done as of 2026-07-16, title alone insufficient to mint safely)."@en .
+
+tgs:Concept.MoreThanHumanPredicament a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "More-Than-Human Predicament"@en ;
+    skos:scopeNote "GENUINE OPEN QUESTION, not resolved as of 2026-07-16: may be the SAME underlying idea as the existing tgs:Concept.HumanPredicament, just reframed with explicitly non-anthropocentric ('more-than-human') language — or may be a real, deliberate broadening Hagens is making, extending the predicament framing to include non-human life rather than only humanity's own situation. Deliberately stubbed SEPARATELY rather than silently merged into HumanPredicament or silently treated as a duplicate — a later pass with more source material (this stub currently has only its show-notes timestamp label, no elaborated definition) should resolve which reading is correct, and either merge the two or keep them genuinely distinct with a real thinkr:relatesTo link explaining why."@en .
+
+tgs:Concept.NarrativeAsActiveInference a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Narrative as Active Inference"@en ;
+    skos:definition "The idea (drawing on active inference/predictive-processing frameworks from cognitive science) that the stories people tell themselves about the world function partly as a cognitive-effort-reduction mechanism — a pre-built interpretive frame that reduces the real-time processing cost of making sense of new information, at the cost of resisting genuinely novel or disconfirming input."@en ;
+    skos:scopeNote "TGS_138's show notes list this as two adjacent timestamped bullets ('Narrative as active inference' / 'Narrative as reducing cognitive effort') — read here as two facets of one idea, not two separate concepts, since they describe the same mechanism from two angles rather than two distinct claims."@en .
+
+tgs:Concept.Rebuildables a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Rebuildables"@en ;
+    skos:definition "Hagens' own reframing of 'renewable energy' infrastructure (solar panels, wind turbines, batteries): since manufacturing, installing, and eventually replacing this infrastructure depends on fossil-fuel-powered mining, transport, and industrial processes at every stage, he argues 'rebuildable' is a more honest description than 'renewable,' which implies a self-sustaining energy source independent of the fossil fuel base it currently depends on."@en ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
+        skos:prefLabel "Renewables"@en ;
+        skos:scopeNote "The mainstream/conventional term for the SAME physical technologies Hagens is discussing — CloseMatch rather than ExactMatch specifically because his own point is that the terms carry meaningfully different implications (self-sustaining vs. fossil-fuel-dependent), not that they're neutral synonyms for identical claims. Kept as an anonymous blank node (Tier 2) — not yet reused elsewhere, no independent citable history captured." ] .
+
+tgs:Concept.ComplexSystemsThinking a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Complex Systems Thinking"@en ;
+    skos:definition "The general toolkit of concepts Hagens draws on for reasoning about civilizational dynamics: systems move in fits and starts rather than smoothly; ecological phase shifts exhibit path dependency (once crossed, a threshold is not easily uncrossed); non-linear causality and feedback loops mean small inputs can produce disproportionate effects; and real tipping points (ice sheets, soil systems, per the Global Tipping Points Report 2025) can be crossed well before they become visible in conventional metrics."@en ;
+    skos:scopeNote "A deliberately GENERAL cluster stub, not split into 4+ separate Concepts for each named sub-idea (fits-and-starts, phase shifts, feedback loops, tipping points) — matches this session's 'don't over-model before a shape reveals itself' approach. Clearly related to the existing tgs:Concept.ComplexityCollapse and tgs:Concept.Metacrisis, but that relation is deliberately NOT formally linked yet (no thinkr:relatesTo asserted) — flagged in prose rather than prematurely formalized, pending more real content to judge the actual relationship by."@en .

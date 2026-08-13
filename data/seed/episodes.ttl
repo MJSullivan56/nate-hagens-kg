@@ -189,9 +189,16 @@ tgs:Interview.TGS_165_WisdomOverPower dct:references tgs:Interview.TGS_85_Wisdom
 #############################################
 
 tgs:Series.HowToThinkAboutTheFuture a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    dct:hasPart 
+        tgs:Monologue.TGS_138_Part1ChangingTheFuture, 
+        tgs:Monologue.TGS_139_Part2FourVariables, 
+        tgs:Monologue.TGS_145_Part3UphillFutures, 
+        tgs:Monologue.TGS_148_Part4CompositeWorlds, 
+        tgs:Monologue.TGS_150_Part5PersonalLandscapes, 
+        tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty ;
     skos:prefLabel "How to Think About the Future"@en ;
-    rdfs:comment "INCOMPLETE as of 2026-07-13 — incidentally discovered while verifying the unrelated Bend Not Break series that this one ALSO has at least a Part 4 (Frankly #148, 'Mordor to the Long Repair: How Might Daily Life Feel in the Next Decades?'), not yet added here. Flagged, not chased down — separate loop for another pass."@en ;
-    dct:hasPart tgs:Monologue.TGS_138_Part1ChangingTheFuture, tgs:Monologue.TGS_139_Part2FourVariables, tgs:Monologue.TGS_145_Part3UphillFutures .
+    rdfs:comment "6-part Frankly series (Frankly #138/139/145/148/150/151), confirmed complete 2026-07-15/16 via all 6 real transcripts. Grew organically, same pattern as Bend Not Break below — Part 4's own opening notes the series kept getting longer than planned, and Part 5 was originally meant to be the finale before Hagens split it into a personal-application aside (Part 5) plus a separate planning-methodology closer (Part 6). Part 4 is the framework-defining episode (the 4-Dimension/16-Facet/256-combination scenario matrix, modeled in scenariodimensions.ttl/scenariofacets.ttl/scenarios.ttl) — Parts 1-3 build the conceptual groundwork (holding the future as a landscape of possibilities; the 4 grids themselves; a valleys/ridges/switchbacks/erosion landscape metaphor), Parts 5-6 apply it (to individual lives; to real-world planning/action under uncertainty)."@en ;
+    .
 # ^ explicit inverse of each member's dct:isPartOf below — same reasoner
 # caveat as convergesWith earlier tonight: dct:hasPart/dct:isPartOf are
 # genuine DCTERMS inverses, but without a reasoner, only asserting one
@@ -199,17 +206,49 @@ tgs:Series.HowToThinkAboutTheFuture a thinkr:Series, dcmitype:Collection, owl:Na
 # members. Both directions asserted here for exactly that reason.
 
 tgs:Series.BendNotBreak a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    dct:hasPart 
+        tgs:Interview.TGS_5_BendNotBreakPart1, 
+        tgs:Interview.TGS_20_MaximumPowerHyperAgents, 
+        tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, 
+        tgs:Interview.TGS_42_ModelingDriversMetacrisis, 
+        tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
     skos:prefLabel "Bend Not Break"@en ;
     rdfs:comment "Discovered 2026-07-13 while verifying 3 previously-unrelated Schmachtenberger episode entries — turned out to be a real, distinct 5-part series never before modeled. Confirmed via Nate's own words (a Substack post about Part 3) that the series wasn't originally planned as 5 parts — it grew organically from conversation, first to 4 planned parts, then 5 once Part 3 diverged from its intended topic."@en ;
-    dct:hasPart tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_50_CriteriaCategoriesResponse .
+    .
 
 tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 1): Changing the Future Starts with How You Think"@en ;
-    rdfs:comment "STUB as of 2026-07-11 — created purely to demonstrate dct:isPartOf/thinkr:seriesPosition against real, confirmed Frankly numbering. No dates, canonical source, replay, or transcript links yet. Flesh out to the same depth as Episodes 226/85/165/217 before treating as complete."@en ;
+    skos:definition "Opens the series by naming a pattern Hagens says he hears repeatedly from the audience: people who have already settled on one storyline about the future and filter everything else through it. Introduces Scenario Thinking as the alternative, names 3 reasons holding multiple futures at once is hard in practice (the nervous system wants resolution, careers/identities attach to particular futures, cultural incentives reward confident stories over honest uncertainty), and closes by introducing Shortfall Risk, which the episode's own description states will act as connective tissue across the rest of the series."@en ;
+    dct:created "2026-04-11"^^xsd:date ;
+    dct:issued "2026-04-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
-    thinkr:seriesPosition 1 .
+    thinkr:seriesPosition 1 ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/138-how-to-think-about-the-future-part-1> ;
+    thinkr:hasReplay <https://youtu.be/vgq_6GIHmCA> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-138-Transcript-How-to-Think-About-the-Future-Part-1.pdf> ;
+    dct:source <https://natehagens.substack.com/p/essay-how-to-think-about-the-future> ;
+    thinkr:discusses
+        tgs:Concept.GreatSimplification,
+        tgs:Concept.Wetware,
+        tgs:Concept.TerrorManagementTheory,
+        tgs:Concept.ShortfallRisk,
+        tgs:Concept.ScenarioThinking,
+        tgs:Concept.MoreThanHumanPredicament,
+        tgs:Concept.NarrativeAsActiveInference,
+        tgs:Concept.Rebuildables,
+        tgs:Concept.ComplexSystemsThinking ;
+    dct:references
+        tgs:Organization.TheOilDrum,
+        tgs:Monologue.Frankly_129_DesperatelySeekingAgency,
+        tgs:Monologue.Frankly_132_FrameworkForAction,
+        tgs:Interview.TGS_85_WisdomNatureAndTheBrain,
+        tgs:Interview.TGS_165_WisdomOverPower,
+        tgs:Work.ComplexityAndPostmodernism,
+        tgs:Work.GlobalTippingPointsReport2025 ;
+    skos:scopeNote "REBUILT 2026-07-16 from TGS_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
 
 tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
@@ -217,15 +256,48 @@ tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     rdfs:comment "STUB as of 2026-07-11 — same caveat as Part 1: created to demonstrate the Series relationship, not yet fleshed out."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
-    thinkr:seriesPosition 2 .
+    thinkr:seriesPosition 2 ;
+    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2"^^xsd:anyURI ;
+    .
 
 tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 3): Uphill Futures in a Downhill World"@en ;
-    rdfs:comment "STUB as of 2026-07-11 — same caveat as Parts 1-2, not yet fleshed out."@en ;
+    skos:definition "Introduces a landscape metaphor (borrowed from developmental biology's Waddington landscape and lake-ecology succession) for thinking about civilizational futures: valleys (stable states systems settle into), ridges (the barriers/cost of transitioning between them), switchbacks (deliberate human effort — trust-building, institution-building — that makes an otherwise-too-steep transition possible), and erosion (neglect or active harm that makes a transition permanently harder). Central claim: the easiest-to-reach futures are not the same as the most desirable ones — desirable futures generally require sustained uphill effort to both reach and remain in, while undesirable ones tend to be the default downhill path requiring no coordinated effort at all."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
-    thinkr:seriesPosition 3 .
+    thinkr:seriesPosition 3 ;
+    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/145-how-to-think-about-the-future-part-3"^^xsd:anyURI ;.
+
+tgs:Monologue.TGS_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 4): Mordor to the Long Repair - How Might Daily Life Feel in the Next Decades?"@en ;
+    skos:definition "The framework-defining episode of this series: proposes 4 Dimensions (grids) - Economic, Power & Distribution, Geopolitical, Earth Systems - each with 4 Facet options, for 256 mathematically possible composite futures, and builds out 4 representative named examples in detail (The Long Repair, Mordor Persists, Fortress World, The Unraveling - modeled as thinkr:Scenario individuals in scenarios.ttl). Explicit that these 4 are chosen to stretch thinking, not presented as an exhaustive or equally-likely set, and that the real future will likely be some regional patchwork of all of them rather than any single one holding globally."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 4 ;
+    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/148-how-to-think-about-the-future-part-4"^^xsd:anyURI ;
+    .
+
+tgs:Monologue.TGS_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 5): Applying the Landscape to a Single Human Life"@en ;
+    skos:definition "Applies the same landscape/valleys/ridges framework from Part 3, at the scale of an individual person's life rather than civilizational futures - originally intended as the series finale (no-regret responses to the 4 composite worlds from Part 4) before Hagens split that material off into Part 6, once he realized a personal/individual-scale version of the same macro dynamics was worth its own episode."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 5 ;
+    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/150-how-to-think-about-the-future-part-5"^^xsd:anyURI ;
+    .
+
+tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "How to Think About the Future (Part 6): Planning Under Uncertainty"@en ;
+    skos:definition "The series' closer - a methodology for individual/community planning and action given the 4-Dimension framework, rather than a specific list of recommended actions. Opens with a type-1/type-2-error framing (false positives vs. false negatives in how people respond to uncertain threats) as a lens for thinking about failure modes in planning, before laying out Hagens' own approach to prioritizing action under deep uncertainty."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 6 ;
+    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/151-how-to-think-about-the-future-part-6"^^xsd:anyURI ;
+    .
 
 #############################################
 # BOOTSTRAPPED 2026-07-14 — Art Berman's confirmed guest appearances,
@@ -328,3 +400,27 @@ tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndivi
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.GayaHerrington ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/57-gaya-herrington> .
+
+#############################################
+# ADDED 2026-07-16 — minimal stubs for 2 Franklys cross-referenced by
+# TGS_138's own show notes (dct:references above). Genuinely minimal —
+# title/number/host only, no dates/definition/canonical source — same
+# "stub now, flesh out later if it earns it" discipline as every other
+# thin stub in this graph. NOT modeled as part of any Series — no
+# evidence either belongs to a numbered multi-part series the way
+# TGS_138 itself does.
+#############################################
+
+tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
+    rdfs:comment "STUB as of 2026-07-16 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    .
+
+tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "What to Do as the World Falls Apart: A Framework for Action"@en ;
+    rdfs:comment "STUB as of 2026-07-16 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    .

@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-07-16 — thinkr:AlternateTermType fits thinkr:Category
+# exactly (enumerated, curated values categorizing thinkr:AlternateTerm
+# instances) and would normally live in enumerations.ttl alongside the
+# other 9 Category classes — given its own file here instead, same
+# reasoning and same unresolved status as scenariodimensions.ttl:
+# enumerations.ttl wasn't available to safely edit this session.
+# CONSOLIDATE enumerations.ttl, scenariodimensions.ttl, AND this file
+# together in a future pass — now TWO deferred consolidations tracked,
+# not just one; worth doing together rather than as separate passes.
+#
+# This file's FIRST DRAFT mistakenly lived inside tgs-core.ttl directly
+# — caught via an actual parse failure (tgs-core.ttl has never declared
+# the tgs: prefix, since its own governance rule is classes/properties
+# only, zero NamedIndividuals) rather than a style-only catch. See
+# tgs-core.ttl's own note at thinkr:hasAlternateTermType for the fuller
+# account.
+#############################################
+
+thinkr:AlternateTermType a owl:Class, thinkr:Category ;
+    rdfs:comment "The TYPE of relationship an AlternateTerm has to its parent Concept — genuinely interchangeable (ExactMatch), close but not identical (CloseMatch), broader/narrower in a hierarchical sense (BroadMatch/NarrowMatch), a loose non-hierarchical association (Related), or an opposing idea (Antonym). This typing is the whole point of this mechanism over a bare skos:altLabel string — it's what lets a future discovery UI distinguish 'search for this and get the exact same thing' from 'search for this and get pointed somewhere adjacent.'"@en ;
+    skos:prefLabel "Alternate Term Type"@en .
+
+tgs:AlternateTermType.ExactMatch a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Exact Match"@en ;
+    skos:definition "Genuinely interchangeable terms for the same idea — reusing SKOS's own skos:exactMatch semantics."@en .
+
+tgs:AlternateTermType.CloseMatch a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Close Match"@en ;
+    skos:definition "Close enough for most purposes, but not strictly identical — reusing SKOS's own skos:closeMatch semantics."@en .
+
+tgs:AlternateTermType.BroadMatch a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Broad Match"@en ;
+    skos:definition "The alternate term is a broader, more general concept than the parent — reusing SKOS's own skos:broadMatch semantics."@en .
+
+tgs:AlternateTermType.NarrowMatch a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Narrow Match"@en ;
+    skos:definition "The alternate term is a narrower, more specific concept than the parent — reusing SKOS's own skos:narrowMatch semantics."@en .
+
+tgs:AlternateTermType.Related a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Related"@en ;
+    skos:definition "A loose, non-hierarchical association — reusing SKOS's own skos:related semantics. The expected default/catch-all for most real-world cross-vocabulary connections."@en .
+
+tgs:AlternateTermType.Antonym a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Antonym"@en ;
+    skos:scopeNote "The one type NOT reused from SKOS, which has no native opposition relation. Whether this should instead defer to the already-existing thinkr:contrastsWith is a real open question, not yet resolved — flagged here rather than decided, pending a real antonym case to test the distinction against."@en .

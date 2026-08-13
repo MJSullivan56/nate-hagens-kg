@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-07-15/16 — the 16 quadrant options (4 per
+# thinkr:ScenarioDimension) from Nate Hagens' 2026 scenario-matrix
+# framework. See tgs-core.ttl and scenariodimensions.ttl for full
+# context. Names/labels confirmed directly from screenshots MJSullivan
+# captured of the framework's own visual grids (each grid shows all 16
+# labels regardless of which are highlighted/selected in a given named
+# Scenario). Definitions sourced from Part 4 (Frankly #148) where he
+# gives one directly; HONESTLY FLAGGED as undefined-in-available-source
+# where he doesn't — several facets are visible in the grids but never
+# get their own explanatory sentence in the 6 transcripts reviewed this
+# session (Part 2, where the grids were first built, was not available
+# this session — likely has the missing definitions).
+#############################################
+
+thinkr:ScenarioFacet a owl:Class ;
+    rdfs:comment "One of the 4 quadrant options for a given thinkr:ScenarioDimension in Nate Hagens' 2026 scenario-matrix framework — e.g. 'Mordor' is one of the 4 Economic-dimension options. A thinkr:Scenario picks exactly one Facet per Dimension (4 total) to form a named composite future."@en ;
+    skos:prefLabel "Scenario Facet"@en .
+
+#############################################
+# Economic
+#############################################
+
+tgs:ScenarioFacet.GreenGrowth a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
+    skos:prefLabel "Green Growth"@en ;
+    skos:scopeNote "Not defined in any of the 6 transcripts reviewed this session — visible in the grid screenshots, never selected in any of the 4 named Scenarios Hagens describes in detail. Hagens explicitly states (Part 4) that he does NOT build a 'green growth' composite world at all, calling continued material growth alongside biosphere healing two forces that pull against each other too hard to hold together at a global scale — so this Facet exists in the grid but is treated by Hagens himself as the least realistic option on this Dimension."@en .
+
+tgs:ScenarioFacet.Mordor a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
+    skos:prefLabel "Mordor"@en ;
+    skos:definition "Continued economic growth on paper while materially and ecologically digging deeper into biophysical overshoot — spending down ecological principal rather than living off any sustainable interest. Growth that benefits the biosphere's books while liquidating the biosphere itself."@en .
+
+tgs:Concept.GreatSimplification a thinkr:ScenarioFacet ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
+    skos:scopeNote "ADDITIONAL TYPE added 2026-07-16 to the EXISTING tgs:Concept.GreatSimplification individual (declared in concepts.ttl) — genuinely reused, not duplicated under a similar new name. Part 4 (Frankly #148) confirms this is the same idea Hagens has used all along, here given a specific structural role as one Economic-dimension Facet option (deliberate contraction combined with real ecological stewardship) rather than only a standalone concept. Resolves an ambiguity flagged earlier (2026-07-14/15): whether GreatSimplification is branding vs. one specific named outcome-state — confirmed here as genuinely both, the show's namesake AND one of 4 concrete Economic-dimension options in this framework. NOTE: a first draft of this file mistakenly minted a NEW, differently-named individual (ScenarioFacet.TheGreatSimplification) while claiming it was the same as this one — caught via live query (asked whether this IRI was typed both Concept and ScenarioFacet; it wasn't), fixed before this was ever loaded into a live store."@en .
+
+tgs:ScenarioFacet.MadMax a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
+    skos:prefLabel "Mad Max"@en ;
+    skos:definition "Economic contraction with no ecological stewardship at all — decline without any deliberate management or care for what's left of the biosphere."@en .
+
+#############################################
+# Power and Distribution
+#############################################
+
+tgs:ScenarioFacet.CivicIdeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
+    skos:prefLabel "Civic Ideal"@en ;
+    skos:definition "Broadly shared power and broadly shared material gains — the Power & Distribution facet selected for 'The Long Repair,' inferred from that Scenario's own description in Part 4 rather than stated as a standalone quadrant definition."@en .
+
+tgs:ScenarioFacet.TheStewardshipDeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
+    skos:prefLabel "The Stewardship Deal"@en ;
+    skos:scopeNote "Not defined in any of the 6 transcripts reviewed this session — visible in the grid screenshots, never selected in any of the 4 named Scenarios Hagens describes in detail."@en .
+
+tgs:ScenarioFacet.ACapturedDemocracy a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
+    skos:prefLabel "A Captured Democracy"@en ;
+    skos:definition "Democratic in form/appearance, but where the real material gains flow overwhelmingly to a small slice of the population — democracy as surface legitimacy over a hollowed-out reality."@en .
+
+tgs:ScenarioFacet.ForcedFeudalism a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
+    skos:prefLabel "Forced Feudalism"@en ;
+    skos:definition "Those at the top manage decline primarily for their own benefit, distributing just enough to the rest of the population to forestall open revolt."@en .
+
+#############################################
+# Geopolitical
+#############################################
+
+tgs:ScenarioFacet.TheGlobalizationIdeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
+    skos:prefLabel "The Globalization Ideal"@en ;
+    skos:scopeNote "Not defined in any of the 6 transcripts reviewed this session — visible in the grid screenshots, never selected in any of the 4 named Scenarios Hagens describes in detail."@en .
+
+tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
+    skos:prefLabel "Friendly Neighbors With Good Fences"@en ;
+    skos:definition "Cooperative geopolitics combined with meaningful regional self-sufficiency — trading partners who genuinely get along, but who have also deliberately shortened their own critical supply chains so that a shock in one region doesn't cascade everywhere."@en .
+
+tgs:ScenarioFacet.TheGeopoliticalDangerZone a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
+    skos:prefLabel "The Geopolitical Danger Zone"@en ;
+    skos:definition "Nations that are geopolitical rivals yet remain economically interdependent on each other — a genuinely unstable combination Hagens draws a direct real-world parallel to (the Strait of Hormuz situation, as of this framework's release)."@en .
+
+tgs:ScenarioFacet.TheColdWarScenario a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
+    skos:prefLabel "The Cold War Scenario"@en ;
+    skos:definition "Hostile, largely self-sufficient geopolitical blocs — used by Hagens for two of the four named Scenarios (Fortress World and The Unraveling), with the latter explicitly described as fracturing into active conflict, hopefully without nuclear exchange."@en .
+
+#############################################
+# Earth Systems
+#############################################
+
+tgs:ScenarioFacet.StrainedButWorkable a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
+    skos:prefLabel "Strained But Workable"@en ;
+    skos:definition "The best realistic case on the Earth Systems dimension, given that humanity is not starting from ecological neutral — a biosphere under real, acknowledged strain that is nonetheless still functional."@en .
+
+tgs:ScenarioFacet.QuietUnraveling a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
+    skos:prefLabel "Quiet Unraveling"@en ;
+    skos:definition "Ecological degradation (soils, pollinators, fisheries) proceeding slowly enough that mainstream economic indicators like GDP and stock markets don't register it — decline that is real but invisible to the metrics societies actually watch."@en .
+
+tgs:ScenarioFacet.HothouseTriage a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
+    skos:prefLabel "Hothouse Triage"@en ;
+    skos:scopeNote "Named and used (as the Earth Systems facet of 'Fortress World') but not given its own dedicated explanatory sentence in the transcripts reviewed this session, unlike its 3 sibling Facets on this Dimension — the label itself (climate conditions severe enough to force active triage/rationing of ecological resources or protected zones) is inferable from context but not independently confirmed."@en .
+
+tgs:ScenarioFacet.CascadingBreakdown a thinkr:ScenarioFacet, owl:NamedIndividual ;
+    thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
+    skos:prefLabel "Cascading Breakdown"@en ;
+    skos:definition "Earth systems failure that feeds on itself — used as the Earth Systems facet of 'The Unraveling,' the most severe of the 4 named Scenarios on this Dimension."@en .

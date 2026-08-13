@@ -1,0 +1,43 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-07-15/16 — see tgs-core.ttl's own comment block on
+# thinkr:hasScenarioDimension for full context. This class fits
+# thinkr:Category exactly (4 enumerated, curated values categorizing
+# thinkr:ScenarioFacet instances) and would normally live in
+# enumerations.ttl alongside the other 9 Category classes — given its
+# own file here instead because the current enumerations.ttl wasn't
+# available to safely edit this session (Claude Code has touched it
+# since). CONSOLIDATE INTO enumerations.ttl in a future pass — flagged,
+# not forgotten, matching this project's standing discipline about
+# tracked-not-silently-dropped follow-ups.
+#############################################
+
+thinkr:ScenarioDimension a owl:Class, thinkr:Category ;
+    rdfs:comment "One of the 4 fixed axes in Nate Hagens' 2026 scenario-matrix framework (the 'How to Think About the Future' Frankly series) — Economic, Power & Distribution, Geopolitical, Earth Systems. Each has exactly 4 thinkr:ScenarioFacet options."@en ;
+    skos:prefLabel "Scenario Dimension"@en .
+
+tgs:ScenarioDimension.Economic a thinkr:ScenarioDimension, owl:NamedIndividual ;
+    skos:prefLabel "Economic"@en ;
+    skos:definition "Whether the economy is growing or contracting. Per Part 4 (Frankly #148), the same direction of economic change can play out very differently depending on the other 3 Dimensions — this axis alone doesn't determine what daily life actually feels like."@en .
+
+tgs:ScenarioDimension.PowerAndDistribution a thinkr:ScenarioDimension, owl:NamedIndividual ;
+    skos:prefLabel "Power and Distribution"@en ;
+    skos:definition "Who holds power and how material gains/surplus get shared. Per Part 4, Hagens treats this as the single biggest determinant of lived experience — two Scenarios can have near-identical material/energy conditions and still be radically different places to live, based on this Dimension alone."@en .
+
+tgs:ScenarioDimension.Geopolitical a thinkr:ScenarioDimension, owl:NamedIndividual ;
+    skos:prefLabel "Geopolitical"@en ;
+    skos:definition "The degree of cooperation vs. hostility/fragmentation between nations and regions."@en .
+
+tgs:ScenarioDimension.EarthSystems a thinkr:ScenarioDimension, owl:NamedIndividual ;
+    skos:prefLabel "Earth Systems"@en ;
+    skos:definition "The state of the biosphere/climate. Per Part 4, Hagens treats this Dimension as structurally different from the other 3: humanity isn't starting from a neutral baseline (real ecological damage is already locked in), and severe Earth-system stress constrains what's achievable on every other Dimension rather than being just one more independent variable."@en .

@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-07-15/16 — the 4 named, fully-described composite futures
+# from Part 4 (Frankly #148) of Nate Hagens' 2026 "How to Think About
+# the Future" series. Each is one specific pick of exactly one
+# thinkr:ScenarioFacet per thinkr:ScenarioDimension (4 facets total per
+# Scenario), out of 256 mathematically possible combinations — Hagens
+# is explicit that these 4 are representative examples he chose to
+# stretch thinking, not an exhaustive or equally-likely set, and
+# invites viewers to build their own composites from the same grids.
+# He also states the 4 are not equally likely: he weights economic
+# CONTRACTION as more probable than continued growth going forward
+# (energy limits, resource depletion, debt, ecological overshoot), and
+# structurally rules out a "green growth" composite entirely (growth
+# and biosphere healing "pull against each other too hard" at global
+# scale, paraphrased) — hence 3 of the 4 named Scenarios share economic
+# contraction, differing entirely on the other 3 Dimensions.
+#############################################
+
+thinkr:Scenario a owl:Class ;
+    rdfs:comment "One specific, named composite future from Nate Hagens' 2026 scenario-matrix framework — a particular combination of exactly one thinkr:ScenarioFacet per thinkr:ScenarioDimension (4 facets total)."@en ;
+    skos:scopeNote "4 named individuals modeled here, out of 256 mathematically possible combinations (4 Dimensions ^ 4 Facets each) — these 4 are Hagens' own chosen representative examples, not claimed to be exhaustive or equally likely. See scenariofacets.ttl for the 16 individual Facet options this class combines."@en ;
+    skos:prefLabel "Scenario"@en .
+
+tgs:Scenario.TheLongRepair a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "The Long Repair"@en ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    thinkr:hasFacet
+        tgs:Concept.GreatSimplification,
+        tgs:ScenarioFacet.CivicIdeal,
+        tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences,
+        tgs:ScenarioFacet.StrainedButWorkable ;
+    skos:definition "Managed contraction combined with broadly shared power, cooperative regionally-self-sufficient geopolitics, and a strained-but-still-functional biosphere. Explicitly named by Hagens as the aspirational path — hard to reach and, in his own framing, the hardest of the 4 to hold once reached (since it depends entirely on maintaining trust and legitimacy while material throughput is falling), but the one he considers most worth striving toward. He notes it will read as failure/decline by every conventional growth-based metric even while representing genuine improvement in lived experience — a healing-vs-dying confusion he considers one of the deepest challenges in the whole framework."@en .
+
+tgs:Scenario.MordorPersists a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Mordor Persists"@en ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    thinkr:hasFacet
+        tgs:ScenarioFacet.Mordor,
+        tgs:ScenarioFacet.ACapturedDemocracy,
+        tgs:ScenarioFacet.TheGeopoliticalDangerZone,
+        tgs:ScenarioFacet.QuietUnraveling ;
+    skos:definition "Growth that persists on paper while deepening real ecological and social overshoot underneath — roughly a continuation and intensification of the present. Hagens frames it as broadly comfortable for a global minority and genuinely precarious for most of the world, already the lived reality rather than a future scenario for large parts of the Global South. He compares its apparent stability to a cancer's stability within a body — self-perpetuating and outwardly 'healthy' by the metrics used to measure it, right up until the underlying foundation it depends on gives out, at which point collapse is fast rather than gradual."@en .
+
+tgs:Scenario.FortressWorld a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Fortress World"@en ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    thinkr:hasFacet
+        tgs:Concept.GreatSimplification,
+        tgs:ScenarioFacet.ForcedFeudalism,
+        tgs:ScenarioFacet.TheColdWarScenario,
+        tgs:ScenarioFacet.HothouseTriage ;
+    skos:definition "What happens when real economic contraction arrives and those in power choose to hoard rather than share it. Hagens describes daily life here as tightly controlled but not necessarily chaotic — a grim, known order (his own comparison: The Hunger Games) where some people and regions are actively written off to protect others. He argues it's fragile over the long run because active control/surveillance is itself energy- and complexity-intensive, which becomes progressively harder to sustain as the underlying resource base contracts."@en .
+
+tgs:Scenario.TheUnraveling a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "The Unraveling"@en ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    thinkr:hasFacet
+        tgs:ScenarioFacet.MadMax,
+        tgs:ScenarioFacet.ForcedFeudalism,
+        tgs:ScenarioFacet.TheColdWarScenario,
+        tgs:ScenarioFacet.CascadingBreakdown ;
+    skos:definition "Large-scale human coordination failing across most fronts — local, low-institutional-trust survival, with the complex, just-in-time systems modern life depends on ceasing to function. Explicitly named by Hagens as the darkest of the 4, and framed not as an independent fourth possibility but as the state the other 3 Scenarios slide toward if their own particular sources of stability give out (The Long Repair losing public trust, Mordor Persists hitting an ecological wall it can no longer paper over, Fortress World no longer able to afford its own control apparatus)."@en .

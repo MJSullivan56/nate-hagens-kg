@@ -24,7 +24,9 @@ thinkr:AcademicInstitution a owl:Class ;
     skos:prefLabel "Academic Institution"@en .
 
 tgs:AcademicInstitution.UniversityOfVermont a thinkr:AcademicInstitution, owl:NamedIndividual ;
-    skos:prefLabel "University of Vermont"@en .
+    skos:prefLabel "University of Vermont"@en ;
+    thinkr:hasAcademicRelationship tgs:Relationship.JoshFarley_UniversityOfVermont ;
+    .
 
 tgs:AcademicInstitution.UniversityOfChicago a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "University of Chicago"@en ;
@@ -32,8 +34,13 @@ tgs:AcademicInstitution.UniversityOfChicago a thinkr:AcademicInstitution, owl:Na
 
 tgs:AcademicInstitution.UniversityOfMinnesota a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "University of Minnesota"@en ;
-    rdfs:comment "Teaching relationship, not a degree — see tgs:Human.NateHagens's own bio for the unresolved past/present tense conflict between sources."@en .
+    rdfs:comment "Teaching relationship, not a degree — see tgs:Human.NateHagens's own bio for the unresolved past/present tense conflict between sources."@en ;
+    thinkr:hasAcademicRelationship tgs:Relationship.NateHagens_UniversityOfMinnesota ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_UniversityOfMinnesota ;
+    .
 
 tgs:AcademicInstitution.HarvardUniversity a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "Harvard University"@en ;
-    rdfs:comment "BOOTSTRAPPED 2026-07-15 — Gaya Herrington's own MSc Sustainability Studies alma mater AND, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15), a current Adjunct Professor appointment where she teaches a semester course, 'Economic transformation for post-growth flourishing.' Both facts about the same institution — see tgs:Relationship.GayaHerrington_HarvardUniversity for the current teaching relationship specifically (the degree itself stays prose-only on tgs:Human.GayaHerrington, matching this project's degree-history-stays-prose precedent)."@en .
+    rdfs:comment "BOOTSTRAPPED 2026-07-15 — Gaya Herrington's own MSc Sustainability Studies alma mater AND, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15), a current Adjunct Professor appointment where she teaches a semester course, 'Economic transformation for post-growth flourishing.' Both facts about the same institution — see tgs:Relationship.GayaHerrington_HarvardUniversity for the current teaching relationship specifically (the degree itself stays prose-only on tgs:Human.GayaHerrington, matching this project's degree-history-stays-prose precedent)."@en ;
+    thinkr:hasAcademicRelationship tgs:Relationship.GayaHerrington_HarvardUniversity ;
+    .

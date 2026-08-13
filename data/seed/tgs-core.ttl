@@ -53,11 +53,6 @@ thinkr:definedIn a owl:ObjectProperty ;
     rdfs:range thinkr:Work ;
     skos:prefLabel "primarily defined in"@en .
 
-thinkr:discussedIn a owl:ObjectProperty ;
-    rdfs:domain thinkr:Concept ;
-    rdfs:range thinkr:Episode ;
-    skos:prefLabel "discussed in episode"@en .
-
 thinkr:echoesIdeaOf a owl:ObjectProperty ;
     rdfs:comment "The TGS concept independently converges on / restates an idea this person is known for. No claim of direct influence."@en ;
     rdfs:domain thinkr:Concept ;
@@ -155,7 +150,7 @@ thinkr:hasCanonicalSource a owl:ObjectProperty ;
 thinkr:discusses a owl:ObjectProperty ;
     rdfs:domain thinkr:Episode ;
     rdfs:range thinkr:Concept ;
-    skos:comment "Which Concept(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings."@en ;
+    skos:comment "Which Concept(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings. thinkr:discussedIn itself REMOVED 2026-07-16 — confirmed via grep across the full data/seed/ directory to have zero real usage (only ever appeared in this comment and its own now-deleted declaration), same for thinkr:hostedBy (confirmed dead in relationships.ttl's own scopeNote explaining its deprecation) — both were leftover schema that outlived the decisions that superseded them."@en ;
     skos:prefLabel "discusses"@en .
 
 thinkr:hasReplay a owl:ObjectProperty ;
@@ -208,31 +203,31 @@ thinkr:hasObject a owl:ObjectProperty ;
     skos:prefLabel "has object"@en .
 
 thinkr:hasPersonalRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Persona ;
+    rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
-    skos:comment "Links a Persona to Relationship individuals that are genuinely PERSONAL in nature (thinkr:hasRelationshipType includes RelationshipType.Personal on the Relationship itself). RETROFITTED 2026-07-15: until this date every Relationship a Persona was party to was asserted here regardless of its actual hasRelationshipType, discovered as a real modeling bug when Gaya Herrington's host-guest Relationship (Professional-only, no Personal language found) and her two purely institutional Relationships were caught being mis-filed under this property. Now one of a 4-member sibling family mirroring thinkr:RelationshipType exactly (hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship/hasLegalRelationship) — matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family in spirit (index by relationship nature, not by the other party's class), though the actual discriminator ended up being thinkr:hasRelationshipType rather than the object's own class. A single Relationship with multiple hasRelationshipType values (e.g. Josh Farley's, which is Academic+Personal+Professional) is correctly asserted under ALL matching sibling properties — not a data-quality problem, an honest reflection that one Relationship individual can genuinely be more than one kind of relationship. NOT YET DERIVED via script the way calculatedConfidence is (see scripts/compute_confidence.py) even though this is 100% redundant with each Relationship's own hasRelationshipType — flagged as a natural next step, not built in this retrofit pass. DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
+    skos:comment "Links a Persona to Relationship individuals that are genuinely PERSONAL in nature (thinkr:hasRelationshipType includes RelationshipType.Personal on the Relationship itself). RETROFITTED 2026-07-15: until this date every Relationship a Persona was party to was asserted here regardless of its actual hasRelationshipType, discovered as a real modeling bug when Gaya Herrington's host-guest Relationship (Professional-only, no Personal language found) and her two purely institutional Relationships were caught being mis-filed under this property. Now one of a 4-member sibling family mirroring thinkr:RelationshipType exactly (hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship/hasLegalRelationship) — matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family in spirit (index by relationship nature, not by the other party's class), though the actual discriminator ended up being thinkr:hasRelationshipType rather than the object's own class. A single Relationship with multiple hasRelationshipType values (e.g. Josh Farley's, which is Academic+Personal+Professional) is correctly asserted under ALL matching sibling properties — not a data-quality problem, an honest reflection that one Relationship individual can genuinely be more than one kind of relationship. NOT YET DERIVED via script the way calculatedConfidence is (see scripts/compute_confidence.py) even though this is 100% redundant with each Relationship's own hasRelationshipType — flagged as a natural next step, not built in this retrofit pass. DOMAIN WIDENED 2026-07-16 from thinkr:Persona to thinkr:NamedEntity (same for all 4 siblings) after a full audit found 12 real Organization/SchoolOfThought/AcademicInstitution entities that were party to a real Relationship but structurally unable to carry a reverse-index pointer back to it — the exact same class of gap the 2026-07-15 retrofit fixed for Personas, just not extended to non-Persona parties at the time. All 12 backfilled in the same pass (organizations.ttl/academicinstitutions.ttl/schoolsofthought.ttl). DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
     skos:prefLabel "has personal relationship"@en .
 
 thinkr:hasProfessionalRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Persona ;
+    rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
     skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Professional. See hasPersonalRelationship's own comment for the full family design and the Herrington case that surfaced the need for this split."@en ;
     skos:prefLabel "has professional relationship"@en .
 
 thinkr:hasAcademicRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Persona ;
+    rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
     skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Academic. See hasPersonalRelationship's own comment for the full family design."@en ;
     skos:prefLabel "has academic relationship"@en .
 
 thinkr:hasLegalRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Persona ;
+    rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
     skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit for RelationshipType completeness — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Legal. No instances yet as of this writing (no Legal-type Relationship exists in the graph), built alongside its 3 siblings anyway since the full family was the explicit request rather than a wait-for-real-need case like most other classes in this project."@en ;
     skos:prefLabel "has legal relationship"@en .
 
 thinkr:hasIntellectualRelationship a owl:ObjectProperty ;
-    rdfs:domain thinkr:Persona ;
+    rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
     skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 alongside the new thinkr:RelationshipType.Intellectual — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Intellectual (subscribes to / aligns with a school of thought's ideas, distinct from formal employment or academic credentialing). Surfaced by MJSullivan's own review: Relationship.NateHagens_PeakOilMovement (Persona->SchoolOfThought) had been mistagged Professional purely because it was institutional rather than person-to-person — the real discriminator this whole property family uses is thinkr:hasRelationshipType, not the object's class, and this was the one case where the wrong RelationshipType had been picked in the first place, not just filed under the wrong property."@en ;
     skos:prefLabel "has intellectual relationship"@en .
@@ -270,12 +265,6 @@ thinkr:showName a owl:DatatypeProperty ;
     skos:comment "The name of a show NOT modeled as its own Episode individual in this graph — e.g. Nate's reciprocal guest appearance on Matthew Monahan's own show."@en ;
     skos:prefLabel "show name"@en .
 
-thinkr:hostedBy a owl:ObjectProperty ;
-    rdfs:domain thinkr:PodcastAppearance ;
-    rdfs:range thinkr:Human ;
-    skos:comment "Who hosted this specific appearance — used together with showName for appearances on shows not otherwise modeled in this graph."@en ;
-    skos:prefLabel "hosted by"@en .
-
 thinkr:hasHost a owl:ObjectProperty ;
     rdfs:subPropertyOf dcterms:creator ;
     rdfs:domain thinkr:Work ;
@@ -309,3 +298,85 @@ thinkr:relatesTo a owl:ObjectProperty ;
 thinkr:Category a owl:Class ;
     rdfs:comment "A special class whose instances are enumerated and curated, used to further categorize instances of OTHER classes for more specificity — not a domain entity itself. Formalized 2026-07-11 per MJSullivan's exact definition, marking a pattern that was already implicit in ConfidenceType/ReliabilityType/PolarityType and just-built PersonEntityType. Classes are marked as Category via 'a thinkr:Category' (OWL punning — a class doubling as an instance of this meta-class), not rdfs:subClassOf, since Category-ness is a property of the CLASS itself, not something its own individuals (e.g. ConfidenceType.Curated) inherit. NOTE: thinkr:NamedEntityType is deliberately NOT marked Category — it has zero direct instances of its own (only its subclass PersonEntityType does), so it doesn't meet 'has enumerated curated instances' literally. It's an organizing abstraction, not a Category proper."@en ;
     skos:prefLabel "Category"@en .
+
+#############################################
+# ADDED 2026-07-15/16 — scenario-matrix framework, modeling Nate's
+# 2026 "How to Think About the Future" Frankly series (parts 1-6,
+# Frankly #138/139/145/148/150/151). Sourced primarily from Part 4
+# (Frankly #148), the composite-worlds-defining episode: he proposes 4
+# grids (Economic, Power & Distribution, Geopolitical, Earth Systems),
+# each with 4 quadrant options — 4^4 = 256 mathematically possible
+# combinations, of which he names and describes 4 representative ones
+# ("The Long Repair," "Mordor Persists," "Fortress World," "The
+# Unraveling"). Modeled as three new classes rather than folding into
+# thinkr:Concept: this is a strict, combinatorial, rule-bound structure
+# (every Scenario has exactly one Facet per Dimension) — different in
+# kind from Concept's looser "a named idea from the TGS framework."
+# thinkr:ScenarioDimension lives in its own file (scenariodimensions.ttl)
+# rather than enumerations.ttl for now, despite fitting thinkr:Category
+# exactly — the current enumerations.ttl wasn't available to edit
+# safely this session; flagged for later consolidation, not forgotten.
+#############################################
+
+thinkr:hasScenarioDimension a owl:ObjectProperty ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range thinkr:ScenarioDimension ;
+    rdfs:comment "Which of the 4 grids (Economic, Power & Distribution, Geopolitical, Earth Systems) this Facet is one quadrant option of."@en ;
+    skos:prefLabel "has scenario dimension"@en .
+
+thinkr:hasFacet a owl:ObjectProperty ;
+    rdfs:domain thinkr:Scenario ;
+    rdfs:range thinkr:ScenarioFacet ;
+    skos:scopeNote "Multi-valued — exactly 4 per Scenario, one per ScenarioDimension, by convention (not enforced as an OWL cardinality restriction, consistent with this project's lighter-weight documented-rule style elsewhere over strict axioms)."@en ;
+    skos:prefLabel "has facet"@en .
+
+#############################################
+# ADDED 2026-07-16 — the alternate-term thesaurus mechanism. Raised by
+# MJSullivan: skos:altLabel (a bare string) can't carry relationship
+# TYPE (exact/close/related/broad/narrow/antonym), provenance, or
+# independent identity — a real gap for serendipitous discovery, since
+# most people won't search for Hagens' own colorful coinages (e.g.
+# "Wetware") but WILL search for the formal term from their own field
+# (e.g. "evolutionary mismatch"). MJSullivan's own proposed pattern
+# (reused directly): a term can be minted as either an anonymous blank
+# node (context-bound, first appearance, not yet reused elsewhere) OR a
+# named individual (thinkr:AlternateTerm.X — promoted once it's reused
+# across multiple Concepts or earns independent citable history) — the
+# SAME hasAlternateTerm property works for both, so promotion from
+# blank node to named individual never requires touching the property
+# itself, only minting the new IRI and repointing.
+#
+# TYPE VOCABULARY reuses SKOS's own existing thesaurus relations
+# (exactMatch/closeMatch/broadMatch/narrowMatch/related) rather than
+# inventing parallel terms — same reuse-over-invention discipline as
+# this project's use of DCTERMS elsewhere. Antonym is the one addition:
+# SKOS itself has no native opposition relation. NOTE: thinkr:contrastsWith
+# already exists for Concept-to-Persona/School "useful tension" —
+# whether Antonym here should defer to that instead of being a genuinely
+# new relation is a real open question, not yet resolved; flagged, not
+# decided, pending a real antonym case to test against.
+#############################################
+
+thinkr:AlternateTerm a owl:Class ;
+    rdfs:comment "A term related to a thinkr:Concept from a different vocabulary, field, or community — may be an anonymous blank node (context-bound, first appearance) or a named individual (promoted once reused across multiple Concepts or once it earns independent citable history of its own)."@en ;
+    skos:prefLabel "Alternate Term"@en .
+
+thinkr:hasAlternateTerm a owl:ObjectProperty ;
+    rdfs:domain thinkr:Concept ;
+    rdfs:range thinkr:AlternateTerm ;
+    skos:scopeNote "Domain deliberately Concept-only for now — Persona (real people going by different names) or Organization may need this too eventually, but not built ahead of real demonstrated need, same discipline as the has*Relationship family's original Persona-only scoping."@en ;
+    skos:prefLabel "has alternate term"@en .
+
+thinkr:hasAlternateTermType a owl:ObjectProperty ;
+    rdfs:domain thinkr:AlternateTerm ;
+    rdfs:range thinkr:AlternateTermType ;
+    skos:prefLabel "has alternate term type"@en .
+# thinkr:AlternateTermType class + its 6 individuals moved to their own
+# file, alternatetermtypes.ttl — belongs with its enumerated members,
+# NOT here. First draft of this addition mistakenly put them directly in
+# this file, violating this project's own established rule that
+# tgs-core.ttl holds classes/properties only, zero NamedIndividuals —
+# caught by an actual parse failure (tgs-core.ttl has never declared the
+# tgs: prefix, since it was never meant to hold tgs:-namespaced
+# individuals), not just a style nitpick. Fixed same session.
+

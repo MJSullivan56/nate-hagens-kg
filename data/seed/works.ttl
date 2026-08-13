@@ -75,3 +75,24 @@ tgs:Work.FiveInsightsForAvoidingGlobalCollapse a thinkr:Work, owl:NamedIndividua
     rdfs:comment "Book by Gaya Herrington, containing an exclusive research update based on 2022 data extending her original World3 empirical re-test (see tgs:Work.UpdateToLimitsToGrowth2021). Confirmed via WebFetch of her own bio site (gayaherrington.com/about) 2026-07-15 — exact publisher/ISBN/year not yet independently verified, flagged honestly rather than guessed, same discipline as tgs:Work.RealityBlind's DJ White note."@en ;
     dct:creator tgs:Human.GayaHerrington ;
     .
+
+#############################################
+# ADDED 2026-07-16 — external citations from TGS_138's official show
+# notes. NOTE: the show notes also cite "Scenario Thinking: A Historical
+# Evolution of Strategic Foresight" as the source behind
+# tgs:Concept.ScenarioThinking — deliberately NOT minted as a Work here,
+# title alone is insufficient to safely verify authorship/publication
+# details without real search, same discipline as every other bootstrap
+# this project has done. Flagged in Concept.ScenarioThinking's own
+# scopeNote instead of guessed at here.
+#############################################
+
+tgs:Work.ComplexityAndPostmodernism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Complexity and Postmodernism: Understanding Complex Systems"@en ;
+    rdfs:comment "1998 book by Paul Cilliers (Routledge), cited in TGS_138's show notes alongside the episode's complex-systems-thinking discussion. Author/title NOT independently re-verified this session — taken directly from the official show notes' own citation, which is itself a stronger source than an unverified transcript mention."@en ;
+    .
+
+tgs:Work.GlobalTippingPointsReport2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Global Tipping Points Report 2025"@en ;
+    rdfs:comment "Cited in TGS_138's show notes specifically for its treatment of ice-sheet and soil-system tipping points. Full authorship/publisher NOT independently verified this session — real, citable report per the official show notes' own link, worth a proper WebFetch verification pass before treating this stub as complete."@en ;
+    .
