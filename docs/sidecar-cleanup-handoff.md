@@ -1,15 +1,28 @@
 # Sidecar Cleanup — Handoff Doc
 
 **Status: BACKLOG, NOT YET EXECUTED.** Reordered 2026-07-13 into
-chronological order, LATEST FIRST, per MJSullivan's request. Section
-dates are preserved in each header. Within a single date, sub-ordering
-is a best-effort reconstruction from internal cross-references — flag
-anything that reads out of order. **2026-07-14 update: session cut off
-before this doc was refreshed live — the top section below was
-reconstructed after the fact from the tail of that conversation, so
-treat its internal ordering as reliable but its completeness as
-possibly missing earlier moves from the same session that occurred
-before the point the recovered transcript begins.**
+chronological order, LATEST FIRST, per MJSullivan's request at the
+time. **PREFERENCE REVERSED 2026-07-16: MJSullivan now prefers TRUE
+CHRONOLOGICAL order (oldest first)** — raised directly after a real
+instance of confusion this session, where an old (2026-07-11),
+since-abandoned design section was mistaken for a live open question
+because it sat mid-document with no immediately obvious signal of its
+age. Split the difference rather than risk a full manual reorder: the
+existing ~25 sections stay exactly where they are (latest-first,
+unchanged); a `## CONVENTION CHANGE` marker near the end of this
+document marks the exact point where the ordering flips; everything
+from that marker onward is true chronological order, appended at the
+BOTTOM as it happens, starting from the 2026-07-16 session entry.
+Physically reordering the pre-2026-07-16 material is tracked as
+`[2026-07-16-8]`, not done in this pass. Section dates are preserved in each header.
+Within a single date, sub-ordering is a best-effort reconstruction
+from internal cross-references — flag anything that reads out of
+order. **2026-07-14 update: session cut off before this doc was
+refreshed live — the top section below was reconstructed after the
+fact from the tail of that conversation, so treat its internal
+ordering as reliable but its completeness as possibly missing earlier
+moves from the same session that occurred before the point the
+recovered transcript begins.**
 
 ## LOCAL ENVIRONMENT REFERENCE (living section, not dated/superseded —
 ## keep this current rather than appending a new dated copy each time
@@ -202,449 +215,13 @@ a connection fails, rather than a single generic fix). This isn't a
 one-off caveat for this thread — it should shape how technical
 instructions are given in general on this project going forward.
 
-## BACKLOG — FUTURE / ORTHOGONAL IDEAS (living section, not
-## dated/superseded, add to in place — genuinely different from the
-## dated entries below: these are things explicitly NOT being worked on
-## yet, captured so a real idea doesn't get lost between sessions)
+## BACKLOG moved out to its own git-versioned file, 2026-07-16
 
-**GUI / public product roadmap (raised 2026-07-14).** End goal
-confirmed: a real public-facing product ("my contribution to the world
-of TGS"), not just a personal research tool — but explicitly PHASED,
-timeline confirmed as "many months away," and Nate's approval is a
-confirmed hard requirement before anything goes public (his brand/IP,
-built entirely from his show's content — this should mean reaching out
-to him or his team BEFORE launch, not after it's already public).
-MJSullivan is the sole beta user for the foreseeable near term — build
-accordingly, don't over-invest in public-launch infrastructure yet.
-
-Two explicit phases, don't blur them:
-- PHASE 1 (now, sole-beta-user): local tool, hits Oxigraph directly at
-  127.0.0.1:7878, same trust model as everything else currently in this
-  project. No API layer, no auth, no SPARQL-hiding needed yet — that's
-  real, but premature, work for later.
-- PHASE 2 (public launch, months out, gated on Nate's approval): SPARQL
-  can NOT be exposed directly to a public audience (DoS/cost vector, no
-  query-level auth) — needs a real API layer in front of Oxigraph, a
-  curated set of endpoints, not raw passthrough. Confidence-tier
-  visual distinction (Candidate vs. Curated) goes from nice-to-have to
-  necessary — an unreviewed Candidate claim read by a stranger as
-  established fact about a real person is a real liability, not just an
-  epistemic nicety. Privacy posture needs to be MORE conservative for
-  public-facing profiles than for the working graph — a podcast guest
-  consenting to a recorded conversation is different from, e.g., a
-  Discord community member surfaced via the social-media discovery idea
-  above; not everyone bootstrapped into the graph should necessarily
-  get a public page.
-
-Proposed views, once GUI work actually starts (Phase 1):
-- Encyclopedic view (per-entity page, all triples where the entity is
-  subject/object) — likely the highest-value FIRST view: most legible
-  entry point for the eventual students/casual-users audience from the
-  gamification idea above, and matches MJSullivan's own stated
-  editorial/flattened-entity-view preference from the sibling UWOM
-  project.
-- Concept graph view — natural fit for the actual RDF shape
-  (influencedBy/echoesIdeaOf/contrastsWith/convergesWith as edges).
-  Confidence tier should be visually distinct from day one, not
-  retrofitted later.
-- Social graph view — fully supported by today's Relationship/
-  subjectRole/objectRole work already, but payoff scales with the
-  person-bootstrap queue — not very interesting yet at 27 Personas,
-  sequence behind bootstrapping, not ahead of it.
-- Confidence/evidence-transparency view (4th view, not in MJSullivan's
-  original list) — click any claim, see its LinkNote->Evidence->Source
-  chain. Real potential point of differentiation from a typical wiki,
-  not just a debug tool, given how much of this project's actual value
-  is "here's how we know this and how confident we are."
-
-Real prior art worth reviewing before designing any of this fresh: the
-sibling UWOM project already has a working `browse.html` GUI
-(`visualize_subgraph.py`, PyVis/vis.js) — interactive graph viz, hidden
-bidirectional peer edges, physics tuned per hop-count, a client-side
-color palette as single source of truth, L2 domain subdivisions for
-oversized groups. Same underlying problems (dense graphs get
-unreadable past a node-count threshold, physics defaults don't scale)
-will recur here — worth knowing what worked/needed fixing there first.
-
-**Architectural input from MJSullivan (2026-07-14): much of that other
-interface is driven by static JSON-LD with lightweight presentation
-wrappers, NOT live queries against a running triplestore.** This
-significantly simplifies the Phase 2 security posture noted above — a
-static JSON-LD export has no live SPARQL surface to attack at all, so
-the "needs an API layer with auth in front of Oxigraph" concern mostly
-evaporates if the public interface works this way instead. Concrete
-implications, none yet built:
-- Needs a real, repeatable export/build step (Oxigraph -> static
-  JSON-LD snapshot) — does NOT exist yet; `load_oxigraph.sh` only goes
-  the other direction (.ttl -> live store). Given how fast this graph
-  is currently changing, this should be scripted from day one, not done
-  by hand.
-- Gives a clean, concrete enforcement mechanism for the
-  Candidate-vs-Curated concern above: the export step itself can
-  exclude/flag non-Curated LinkNotes, which is a stronger guarantee
-  than relying on frontend styling alone (can't be bypassed by a UI
-  bug).
-- A JSON-LD `@context` document (mapping thinkr:/tgs: URIs to
-  consumption-friendly terms) is real, undone design work, not
-  something that falls out for free.
-- DECIDED (2026-07-14): assume the PATTERNS are reusable (the overall
-  static-export-plus-thin-wrapper architecture, the general shape of
-  going from a live triplestore to a JSON-LD snapshot, presentation
-  conventions), NOT the code itself — UWOM's export logic is written
-  around units-of-measure classes with no overlap with this project's
-  Persona/Concept/LinkNote structure, so a fresh build for this
-  project's own classes is the right expectation, following UWOM's
-  proven approach rather than inventing the pattern from scratch.
-
-**Action-item "gamified knowledge" layer (raised 2026-07-14).**
-MJSullivan's idea: as a user encounters a `Concept` via some future
-interface, surface a list of concrete, checkable real-world actions
-related to it (local/state/national), with progress tracking and
-awards — making the graph's content accessible to students/casual
-users who won't engage with the full intellectual content directly.
-
-Real design forks discussed, not yet decided:
-- This is a DIFFERENT epistemic character than everything else in the
-  graph — descriptive/verifiable (Evidence, Candidate->Curated) vs.
-  prescriptive (no citation makes "you should do this" true or false).
-  Leaning toward a genuinely separate namespace/layer (maybe even a
-  separate store), bridged to Concept via something like the existing
-  `thinkr:convergesWith` pattern, rather than folding it into `thinkr:`
-  proper alongside LinkNote/Evidence.
-- Content-ops burden is real and different: local specifics (phone
-  numbers, org contact info, program status) rot fast, unlike anything
-  else in this graph so far. Leaning toward NOT trying to be the
-  source of truth for hyper-local facts — model durable action
-  TEMPLATES ("find your nearest X via [org]'s own directory") that
-  point outward at organizations who already own that freshness
-  problem, rather than storing the volatile specifics directly.
-- Gamification itself: real, not just a footnote — extrinsic
-  rewards (points/badges) can crowd out intrinsic motivation, and this
-  project has been deliberately non-trivializing about the underlying
-  ideas throughout. Whatever gets built should be intentional about
-  what the points actually reinforce, not just "engagement for its own
-  sake."
-- Proposed rough shape if/when this gets built: an `ActionItem` class
-  in its OWN namespace (e.g. `civic:`, not `thinkr:`), a
-  `relatesToConcept` bridge back to `Concept`, a scope/specificity
-  level (local/state/national — different verification burdens), a
-  freshness timestamp forcing periodic re-verification. Actual
-  gamification STATE (who's checked what, point totals) is user-account
-  application data, not knowledge-graph content — belongs in a separate
-  app database referencing ActionItems by ID, not inside the graph
-  itself.
-- Genuinely undecided: whether this becomes its own project reading off
-  `nate-hagens-kg`, or an extension folded into it.
-
-**Discovery channel: boots-on-the-ground organizations implementing
-these concepts, not necessarily connected to/influenced by Nate at all
-(raised 2026-07-14).** MJSullivan's framing: there must be hundreds of
-real organizations independently practicing what a given Concept
-describes (community land trusts for CircleOfTrustLocalism/localism,
-Transition Towns for de-growth-adjacent resilience work, etc.) — a
-different, complementary discovery channel from mining Nate's own
-content.
-- Fits the EXISTING schema close to for free: `Organization`/
-  `SchoolOfThought`/`AcademicInstitution` already exist as classes, and
-  `thinkr:convergesWith` is ALREADY defined for exactly this epistemic
-  shape ("independently converges on a similar idea, no claim of direct
-  influence") — likely just needs new individuals, not new schema.
-- Obvious non-cold-start starting point: Post Carbon Institute
-  (already `Organization.PostCarbonInstitute`, already linked to Nate)
-  runs/ran resilience.org, which has historically cataloged exactly
-  this kind of local-initiative network — check this first before
-  researching from scratch.
-- Real candidate movements with their own existing directories (so the
-  graph never has to own hyper-local freshness): Transition Network,
-  TimeBanks.org, Repair Café Foundation, Grounded Solutions Network,
-  solidarity-economy/mutual-aid networks.
-- Same "search, verify, don't inherit unverified trust" discipline as
-  person-bootstrapping applies here too, just applied to organizations
-  — confirm real/active/legitimately-connected before modeling, same
-  wrong-person-trap instinct.
-- Undecided: research broadly (many movement-types, each thin) vs.
-  deeply (pilot 2-3 movements end-to-end first) — same fork as the
-  person-bootstrap queue, likely same answer (pilot first).
-
-**Discovery channel: Nate's social media presence — TikTok, LinkedIn,
-Twitter/X, Substack, Instagram, Discord (raised 2026-07-14).**
-Scrapers reportedly exist for each; NOT yet evaluated individually, and
-they are NOT one uniform bucket — each platform is a genuinely
-different problem:
-- Substack is the strong lead candidate — `extraction/` already has
-  `substack_summaries_raw/`, `substack_text_cache/`, and
-  `match_substack_summaries.py` (built for a different original
-  purpose, matching Substack summaries against episode transcripts, but
-  structurally close to what mining his own long-form writing for
-  entities/concepts would need). Closest thing to "another transcript,"
-  most naturally continuous with the existing, proven pipeline.
-- LinkedIn and Twitter/X both explicitly prohibit scraping in their ToS
-  — LinkedIn has pursued real litigation over this (hiQ v. LinkedIn is
-  the well-known case). Worth confirming current legal/ToS status
-  before building anything, not after.
-- Discord flagged as a DIFFERENT kind of concern, not just legal: a
-  privacy-posture question, not a ToS one. Everything mined so far
-  (podcast transcripts, presumably Substack) involves public figures
-  who consented to a recorded, published conversation. A Discord
-  community — even publicly joinable — is casual conversation with a
-  very different expectation of privacy/permanence. Cataloguing
-  individual community members by name from chat logs would be a real
-  departure from this project's practice so far, worth deciding
-  deliberately rather than backing into because a scraper exists.
-- TikTok/Instagram: primarily short-form video/engagement metrics —
-  would likely need video transcription (a new pipeline stage, not a
-  small extension of the existing text-based one) to be useful for
-  entity/concept extraction at all.
-- The wrong-person-trap discipline from the bootstrap procedure needs
-  to get STRICTER here, not stay the same — a podcast guest credit is
-  close to unambiguous; a social handle is not (impersonation accounts,
-  common-name collisions, pseudonymous handles are the norm on every
-  one of these platforms, not the exception).
-
-## SESSION WRAP-UP (2026-07-16): schema audit + fixes, alternate-term
-## thesaurus mechanism, first real show-notes-to-graph conversion pass —
-## and the tgs_store loading saga that ate a good chunk of the session
-
-**Context**: this session picked up after Claude Code's Herrington
-bootstrap + LinkNote/Evidence/Relationship/CrosswalkNote naming retrofit
-(see the entry below). Split roughly into four threads: an architecture
-discussion (discusses/LinkNote-as-generic-crosswalk, resolved by NOT
-over-formalizing), a full schema audit with real fixes, a new thesaurus
-mechanism (AlternateTerm), and the first real pass converting an
-episode's official show notes into graph content. Plus a genuinely
-instructive infrastructure failure late in the session, worth its own
-lessons-learned section below. **Going forward, a session write-up like
-this one should happen at the end of every session, not just when
-something goes wrong or gets asked for explicitly** — MJSullivan made
-this a standing practice this session, not a one-off.
-
-### Thread 1: discusses / generic-crosswalk architecture decision
-
-MJSullivan raised: while still learning what Nate's content actually
-covers, don't over-model — stay mostly flat, use a generic
-confidence-bearing crosswalk mechanism, formalize specific relationship
-types only once a real shape reveals itself from the data. Resolved:
-
-- `thinkr:discusses` (Episode->Concept) stays a plain direct triple,
-  NOT retrofitted to Evidence-backed treatment despite an earlier
-  session's recommendation to do so — deliberately deferred, not
-  decided against permanently.
-- The "generic crosswalk with confidence and metadata" MJSullivan asked
-  for ALREADY EXISTS: `thinkr:LinkNote`'s `aboutSubject`/`aboutObject`
-  have zero range restriction — genuinely any-entity-to-any-entity
-  already, just never used that way since every existing instance
-  happens to involve a Concept. No new class needed. Rejected: a
-  parallel new "Crosswalk" class (would itself be over-modeling — 3
-  overlapping mechanisms instead of 1 reused one) and moving Evidence
-  to blank nodes (would lose real, working functionality — named
-  Evidence individuals are independently queryable and already proven;
-  blank nodes fit the disposable, never-reused PodcastAppearance
-  pattern, not this one).
-- A full relationship-type inventory was produced by extracting every
-  `owl:ObjectProperty`'s actual domain/range directly from the live
-  schema (not from memory) — surfaced 2 genuinely dead properties (see
-  Thread 2) as a byproduct.
-
-### Thread 2: full schema/data audit, real fixes
-
-Triggered by the relationship-inventory work above surfacing 2
-suspicious properties. Given the full real `data/seed/` (uploaded fresh
-this session — the working set had drifted from what Claude Code had
-actually committed), ran a comprehensive audit rather than spot-fixing:
-
-- **`thinkr:discussedIn` and `thinkr:hostedBy` removed** — both
-  confirmed via grep across every file to have ZERO real usage as
-  predicates, only appearing inside comments explaining their own
-  historical deprecation. Genuine leftover schema that outlived the
-  decisions that superseded them. The reasoning stayed discoverable —
-  folded into `discusses`'s own comment rather than lost when the
-  declarations disappeared.
-- **Full parse check**: all 20 files clean, individually and combined.
-- **Zero dangling references** across the whole graph (every object
-  referenced is a properly typed subject somewhere) — checked before
-  AND after every subsequent change this session, never assumed to
-  still hold.
-- **Naming convention (`{Subject}_{Object}`) audit**: zero violations
-  across all of `Relationship` (19), `LinkNote` (18), `CrosswalkNote`
-  (42), `Evidence` (20, including the documented `_TGS_NNN` suffix
-  cases) — confirms the earlier retrofit held up against the full real
-  dataset, not just the examples checked at the time.
-- **`has*Relationship` family found genuinely `Persona`-only**, despite
-  real non-Persona parties existing in the graph. Widened all 5
-  properties' domain to `thinkr:NamedEntity`. Full audit (not just the
-  one known `MangaroaFarms`/`BiomeTrust` case) found **12 distinct
-  entities across 14 relationships** needing backfill — TheOilDrum,
-  PostCarbonInstitute, MangaroaFarms, BiomeTrust, SchneiderElectric,
-  ClubOfRome, StopStraatintimidatie, UniversityOfVermont,
-  UniversityOfMinnesota (both Academic and Professional, matching its
-  dual-typed Relationship), HarvardUniversity, PeakOilMovement. Verified
-  via exact triple-count math (+15, matching the count of backfilled
-  pointers precisely) and a full re-run of the symmetric-indexing query
-  confirming zero remaining gaps.
-- Class-purity re-run clean throughout — only the 2 already-known,
-  deliberately-unfixed violations (`episodes.ttl`/Series,
-  `subjects.ttl`/ConceptScheme) ever appeared.
-
-### Thread 3: AlternateTerm thesaurus mechanism (new)
-
-MJSullivan's insight: `skos:altLabel` can't carry relationship TYPE
-(exact/close/broad/narrow/related/antonym), provenance, or independent
-identity — a real gap for serendipitous discovery, since most people
-will search using their own field's terminology, not Hagens' own
-coinages. Built:
-
-- `thinkr:AlternateTerm` class, `thinkr:hasAlternateTerm` (domain
-  Concept), `thinkr:hasAlternateTermType`, `thinkr:AlternateTermType`
-  (Category-marked, 6 individuals: ExactMatch/CloseMatch/BroadMatch/
-  NarrowMatch/Related/Antonym) — the first 5 deliberately reuse SKOS's
-  own thesaurus vocabulary rather than inventing parallel terms; Antonym
-  is the one genuine addition, since SKOS has no native opposition
-  relation. Open question, not resolved: whether Antonym should instead
-  defer to the already-existing `thinkr:contrastsWith` — flagged,
-  pending a real antonym case to test against.
-- MJSullivan's own proposed pattern preserved exactly: a term can be an
-  anonymous blank node (context-bound, first appearance) OR a named
-  individual (promoted once reused across multiple Concepts or once it
-  earns independent citable history) — same property either way, so
-  promotion never requires touching the schema.
-- **Pilot case, real not hypothetical**: `Concept.Wetware`'s own
-  `skos:prefLabel` was found to be a compound string ("Human 'Wetware' /
-  Evolutionary Mismatch") — two real terms jammed into one label, the
-  exact anti-pattern this mechanism exists to fix. Split cleanly:
-  `prefLabel` now just "Human 'Wetware'", "Evolutionary Mismatch" now a
-  properly `ExactMatch`-typed `AlternateTerm` blank node.
-- **A real bug caught and fixed mid-build, worth remembering**: first
-  draft put `AlternateTermType`'s 6 individuals directly inside
-  `tgs-core.ttl`, violating this project's own established rule
-  (tgs-core.ttl holds classes/properties only, zero NamedIndividuals —
-  the exact reason `ScenarioDimension` got its own file weeks ago).
-  Caught via an ACTUAL PARSE FAILURE, not a style review — tgs-core.ttl
-  has never declared the `tgs:` prefix, since it was never meant to
-  reference tgs:-namespaced individuals. Fixed by moving everything to
-  a new `alternatetermtypes.ttl`, matching the `scenariodimensions.ttl`
-  precedent exactly. Lesson: even careful work benefits from an actual
-  parse check, not just re-reading the text — this mistake would have
-  been easy to miss by eye.
-- `alternatetermtypes.ttl` joins `scenariodimensions.ttl` as a SECOND
-  file that belongs in `enumerations.ttl` once that file is safely
-  editable again — worth consolidating both together in one future
-  pass, not as two separate cleanups.
-
-### Thread 4: first real show-notes-to-graph conversion (TGS_138)
-
-MJSullivan discovered Nate's team maintains structured, timestamped
-show-notes pages per episode (thegreatsimplification.com/frankly-
-original/...) — confirmed via direct fetch to be clean, consistent,
-WordPress-generated HTML, not just unstructured video description text.
-Far stronger extraction source than transcript-reading or generic NER:
-official editorial curation, not inference. MJSullivan did a rough
-manual first-pass categorization of TGS_138's full show-notes list
-(marked with his own bracket notation); this session triaged and built
-it into the graph:
-
-- **7 new Concepts minted**: TerrorManagementTheory (3rd independent
-  confirmation across sessions — flagging again the still-unresolved
-  Becker/Pyszczynski verification from an earlier session's Solomon
-  transcript investigation), ShortfallRisk (doubly confirmed, an
-  earlier by-hand pilot AND this official source both surfaced it —
-  the official description explicitly calls it connective tissue across
-  the whole series), ScenarioThinking (has a real citable external
-  source, not yet independently verified enough to mint as a Work),
-  MoreThanHumanPredicament (explicit OPEN QUESTION flagged in its own
-  scopeNote — may be the same idea as the existing HumanPredicament
-  under different framing, deliberately not silently merged or
-  duplicated), NarrativeAsActiveInference, Rebuildables (Hagens' own
-  reframing of "renewable" energy infrastructure — first real
-  AlternateTerm pilot beyond Wetware, "Renewables" linked as
-  CloseMatch, not ExactMatch, since the whole point is a meaningful
-  distinction in connotation, not a neutral synonym), ComplexSystems
-  Thinking (deliberately a general cluster stub, not split into 4+
-  separate concepts for each named sub-idea — related to but NOT
-  formally linked to existing ComplexityCollapse/Metacrisis, flagged in
-  prose rather than prematurely formalized).
-- **2 new Works**: the Cilliers book, the Global Tipping Points Report
-  2025 — both cited directly by the official show notes, author/details
-  not independently re-verified this session (taken from an already-
-  authoritative source).
-- **TGS_138 fully rebuilt**: real dates (created 2026-04-11, issued
-  2026-04-17) and Subject tags pulled directly from the fetched page;
-  real definition; 9 `discusses` links; 7 `dct:references` (an
-  Organization, 2 new minimal episode stubs for cross-referenced
-  Franklys #129/#132, 2 existing McGilchrist episodes, the 2 new
-  Works). **Also fixed 2 real bugs that had been sitting in this stub
-  since an earlier session**: `hasCanonicalSource` had been used twice
-  (violates its own documented cardinality-one scopeNote — the essay
-  link now correctly uses the general `dct:source` instead) and was
-  typed as an `xsd:anyURI` string literal rather than a proper linked
-  resource (the property is declared `owl:ObjectProperty`, range should
-  be a bare IRI, matching every other use of it in the graph).
-- **Deliberately NOT modeled**, per an explicit triage before building
-  anything: real-world current events (Iran War 2026, the Hormuz
-  situation's sub-threats), generic term definitions (Recession vs.
-  Depression, portfolio management basics, nuclear taboo/game theory),
-  and the "Oil 101-301" series mention (too little information — no
-  episode numbers — to responsibly stub).
-- **Scope honestly limited**: this is ONE episode's show notes,
-  converted and validated end-to-end as a real proof of the method —
-  NOT a comprehensive pass. The same triage-and-build process needs to
-  repeat for the other 5 parts of this series, and eventually the rest
-  of the real corpus, before this is anything close to comprehensive.
-
-### Lessons learned: the tgs_store loading saga
-
-A real, multi-step infrastructure failure worth remembering as a
-pattern, not just a one-off annoyance — THREE separate, unrelated
-problems stacked on top of each other, each one masking the next until
-diagnosed individually:
-
-1. **"Address already in use"** — a previous `oxigraph serve` process
-   was still running and had never actually been stopped, holding port
-   7878. Diagnosed via `lsof -i :7878` to get the real PID before
-   killing anything, rather than guessing.
-2. **A load that appeared to complete but produced an empty store** —
-   traced to `load_oxigraph.sh` having LOST ITS EXECUTE PERMISSION at
-   some point (likely a side effect of how an updated copy was saved
-   onto disk in an earlier session, not an intentional change) — meaning
-   `./load_oxigraph.sh` had been silently failing with "Permission
-   denied" and no one had been reading the actual terminal output
-   closely enough to notice, for possibly multiple prior reload
-   attempts. Fixed with `chmod +x`.
-3. **Even after fixing both of the above, the triple count still came
-   back short** (2377 instead of an expected 2392) — traced to the
-   local `data/seed/` files simply being STALE relative to what had
-   actually been posted in chat a few messages earlier (a real fix's
-   files were never actually downloaded/replacing the old ones on
-   disk).
-
-**The actual lesson, worth carrying forward explicitly**: a "successful-
-looking" reload is not the same claim as a correct one. The right
-diagnostic sequence when something's off — confirm no server is running
-(`lsof`), confirm the load script actually has permission to run and
-actually completes without silent errors (read its real output, don't
-just check the exit code), confirm the files on disk are actually the
-current ones (grep for a specific expected string) — caught every one
-of these in turn, but only because each step was verified independently
-rather than assumed. A single "did the count match" check would have
-caught SOMETHING was wrong, but not which of three unrelated things.
-
-### Explicitly NOT done this session, next-session starting points
-
-1. Consolidate `scenariodimensions.ttl` and `alternatetermtypes.ttl`
-   into `enumerations.ttl` once that file is safely accessible.
-2. Resolve `MoreThanHumanPredicament` vs. `HumanPredicament` — same
-   idea reframed, or a genuine deliberate broadening?
-3. Resolve whether `AlternateTermType.Antonym` should defer to the
-   existing `thinkr:contrastsWith` instead of being a separate relation.
-4. Independently verify the "Scenario Thinking" book citation enough to
-   mint it as a real Work.
-5. Continue the show-notes-to-graph conversion for the other 5 parts of
-   the "How to Think About the Future" series, then beyond it.
-6. The still-open Becker/Pyszczynski verification from the Solomon
-   transcript investigation, now flagged a second time via
-   TerrorManagementTheory's own scopeNote.
-7. The 2 pre-existing, still-unfixed class-purity violations
-   (`episodes.ttl`/Series, `subjects.ttl`/ConceptScheme) — untouched
-   again this session, deliberately out of scope each time so far.
+**See `docs/backlog.md`** — moved out of this document specifically so
+backlog items (real ideas not yet being worked on) have their own
+visible git history, separate from this doc's session-by-session
+narrative. Same append-only convention as this file; status changes
+get noted inline there, never silently deleted.
 
 ## GAYA HERRINGTON REAL BOOTSTRAP + has*Relationship PROPERTY FAMILY
 ## (2026-07-15, new session): first real end-to-end guest bootstrap under
@@ -2709,6 +2286,48 @@ same rework as the sidecar cleanup above or as its own separate pass —
 these touch genuinely different parts of the graph (classes/instances,
 not sidecar naming) so may not need to be bundled together at all.
 
+## ⚠️ SUPERSEDED (flagged 2026-07-16, original material 2026-07-11) —
+## everything from here to the end of this document is an ABANDONED
+## design path, not a live open question. Read for historical context
+## only; do not execute against it.
+
+**What this whole block actually is**: an early, exploratory planning
+session from 2026-07-11 — BEFORE the Persona architecture existed at
+all (it still references `tgs:Person.Aristotle`, not
+`tgs:Persona.Aristotle` — a strong, unambiguous sign of its age). It
+proposed a much bigger redesign than what actually got built: merging
+`LinkNote`/`Evidence` into one class, collapsing `influencedBy`/
+`echoesIdeaOf`/`contrastsWith`/`convergesWith` into one generic property
+plus a type value, renaming `LinkNote` and `CrosswalkNote` entirely, and
+dropping `owl:sameAs`. NONE of that happened.
+
+**What actually got built instead, weeks later** (Claude Code, commits
+`cea3de0`/`a36a8ce`, confirmed clean via `validate_class_purity.py` as
+recently as 2026-07-16): a much NARROWER fix — just correcting the
+LOCAL-NAME pattern (`{Subject}_{Object}`) on `Relationship`/`LinkNote`/
+`Evidence`/`CrosswalkNote` exactly as those classes already existed,
+using the properties exactly as they already existed. No class merging,
+no renaming, no property collapsing. `LinkNote` is still called
+`LinkNote`. `CrosswalkNote` is still called `CrosswalkNote`.
+`owl:sameAs` is still live and used 42 times across the graph (28 of
+them in `humans.ttl` alone) — confirmed via direct grep 2026-07-16, NOT
+the zero this block's own "RESOLVED" note (4b, below) claims.
+
+**Why this is being marked rather than deleted**: it's a real record of
+reasoning that led AWAY from a design path, which has some value — but
+it was sitting mid-document with no clear signal that it had been
+bypassed, which caused genuine confusion this session (MJSullivan
+brought its "Open Questions" back as if they were still live). Left
+in place, clearly marked, rather than silently removed.
+
+**If any of this ever becomes worth reconsidering for real** (the
+`LinkNote`/`Evidence` merge question in particular still has some
+underlying merit, per the 2026-07-16 architecture discussion that
+independently arrived at a compatible but not identical conclusion —
+see that session's entry higher in this doc) — treat it as a fresh
+design question informed by how the graph has ACTUALLY evolved since,
+not as resuming this abandoned thread where it left off.
+
 ## Editorial sketch (2026-07-11) and what it surfaced
 
 MJSullivan sketched a full illustrative example (VS Code-editor-friendly,
@@ -3007,3 +2626,279 @@ triple count and `compute_confidence.py` output before touching anything,
 verify identical results after, confirm zero stray references anywhere
 in scripts/docs via `grep -rl` across the whole repo before declaring it
 done.
+
+
+## CONVENTION CHANGE (2026-07-16): everything ABOVE this point is in
+## latest-first order (per the 2026-07-13 convention); everything BELOW
+## is in true chronological order, oldest-to-newest, per MJSullivan's
+## 2026-07-16 preference reversal (see this doc's own top-of-file
+## note). New entries append at the BOTTOM from here forward. The
+## existing sections above have NOT been physically reordered — see
+## `[2026-07-16-8]` below for that tracked, not-yet-done task.
+
+## SESSION WRAP-UP (2026-07-16): schema audit + fixes, alternate-term
+## thesaurus mechanism, first real show-notes-to-graph conversion pass —
+## and the tgs_store loading saga that ate a good chunk of the session
+
+**Context**: this session picked up after Claude Code's Herrington
+bootstrap + LinkNote/Evidence/Relationship/CrosswalkNote naming retrofit
+(see the entry below). Split roughly into four threads: an architecture
+discussion (discusses/LinkNote-as-generic-crosswalk, resolved by NOT
+over-formalizing), a full schema audit with real fixes, a new thesaurus
+mechanism (AlternateTerm), and the first real pass converting an
+episode's official show notes into graph content. Plus a genuinely
+instructive infrastructure failure late in the session, worth its own
+lessons-learned section below. **Going forward, a session write-up like
+this one should happen at the end of every session, not just when
+something goes wrong or gets asked for explicitly** — MJSullivan made
+this a standing practice this session, not a one-off.
+
+### Thread 1: discusses / generic-crosswalk architecture decision
+
+MJSullivan raised: while still learning what Nate's content actually
+covers, don't over-model — stay mostly flat, use a generic
+confidence-bearing crosswalk mechanism, formalize specific relationship
+types only once a real shape reveals itself from the data. Resolved:
+
+- `thinkr:discusses` (Episode->Concept) stays a plain direct triple,
+  NOT retrofitted to Evidence-backed treatment despite an earlier
+  session's recommendation to do so — deliberately deferred, not
+  decided against permanently.
+- The "generic crosswalk with confidence and metadata" MJSullivan asked
+  for ALREADY EXISTS: `thinkr:LinkNote`'s `aboutSubject`/`aboutObject`
+  have zero range restriction — genuinely any-entity-to-any-entity
+  already, just never used that way since every existing instance
+  happens to involve a Concept. No new class needed. Rejected: a
+  parallel new "Crosswalk" class (would itself be over-modeling — 3
+  overlapping mechanisms instead of 1 reused one) and moving Evidence
+  to blank nodes (would lose real, working functionality — named
+  Evidence individuals are independently queryable and already proven;
+  blank nodes fit the disposable, never-reused PodcastAppearance
+  pattern, not this one).
+- A full relationship-type inventory was produced by extracting every
+  `owl:ObjectProperty`'s actual domain/range directly from the live
+  schema (not from memory) — surfaced 2 genuinely dead properties (see
+  Thread 2) as a byproduct.
+
+### Thread 2: full schema/data audit, real fixes
+
+Triggered by the relationship-inventory work above surfacing 2
+suspicious properties. Given the full real `data/seed/` (uploaded fresh
+this session — the working set had drifted from what Claude Code had
+actually committed), ran a comprehensive audit rather than spot-fixing:
+
+- **`thinkr:discussedIn` and `thinkr:hostedBy` removed** — both
+  confirmed via grep across every file to have ZERO real usage as
+  predicates, only appearing inside comments explaining their own
+  historical deprecation. Genuine leftover schema that outlived the
+  decisions that superseded them. The reasoning stayed discoverable —
+  folded into `discusses`'s own comment rather than lost when the
+  declarations disappeared.
+- **Full parse check**: all 20 files clean, individually and combined.
+- **Zero dangling references** across the whole graph (every object
+  referenced is a properly typed subject somewhere) — checked before
+  AND after every subsequent change this session, never assumed to
+  still hold.
+- **Naming convention (`{Subject}_{Object}`) audit**: zero violations
+  across all of `Relationship` (19), `LinkNote` (18), `CrosswalkNote`
+  (42), `Evidence` (20, including the documented `_TGS_NNN` suffix
+  cases) — confirms the earlier retrofit held up against the full real
+  dataset, not just the examples checked at the time.
+- **`has*Relationship` family found genuinely `Persona`-only**, despite
+  real non-Persona parties existing in the graph. Widened all 5
+  properties' domain to `thinkr:NamedEntity`. Full audit (not just the
+  one known `MangaroaFarms`/`BiomeTrust` case) found **12 distinct
+  entities across 14 relationships** needing backfill — TheOilDrum,
+  PostCarbonInstitute, MangaroaFarms, BiomeTrust, SchneiderElectric,
+  ClubOfRome, StopStraatintimidatie, UniversityOfVermont,
+  UniversityOfMinnesota (both Academic and Professional, matching its
+  dual-typed Relationship), HarvardUniversity, PeakOilMovement. Verified
+  via exact triple-count math (+15, matching the count of backfilled
+  pointers precisely) and a full re-run of the symmetric-indexing query
+  confirming zero remaining gaps.
+- Class-purity re-run clean throughout — only the 2 already-known,
+  deliberately-unfixed violations (`episodes.ttl`/Series,
+  `subjects.ttl`/ConceptScheme) ever appeared.
+
+### Thread 3: AlternateTerm thesaurus mechanism (new)
+
+MJSullivan's insight: `skos:altLabel` can't carry relationship TYPE
+(exact/close/broad/narrow/related/antonym), provenance, or independent
+identity — a real gap for serendipitous discovery, since most people
+will search using their own field's terminology, not Hagens' own
+coinages. Built:
+
+- `thinkr:AlternateTerm` class, `thinkr:hasAlternateTerm` (domain
+  Concept), `thinkr:hasAlternateTermType`, `thinkr:AlternateTermType`
+  (Category-marked, 6 individuals: ExactMatch/CloseMatch/BroadMatch/
+  NarrowMatch/Related/Antonym) — the first 5 deliberately reuse SKOS's
+  own thesaurus vocabulary rather than inventing parallel terms; Antonym
+  is the one genuine addition, since SKOS has no native opposition
+  relation. Open question, not resolved: whether Antonym should instead
+  defer to the already-existing `thinkr:contrastsWith` — flagged,
+  pending a real antonym case to test against.
+- MJSullivan's own proposed pattern preserved exactly: a term can be an
+  anonymous blank node (context-bound, first appearance) OR a named
+  individual (promoted once reused across multiple Concepts or once it
+  earns independent citable history) — same property either way, so
+  promotion never requires touching the schema.
+- **Pilot case, real not hypothetical**: `Concept.Wetware`'s own
+  `skos:prefLabel` was found to be a compound string ("Human 'Wetware' /
+  Evolutionary Mismatch") — two real terms jammed into one label, the
+  exact anti-pattern this mechanism exists to fix. Split cleanly:
+  `prefLabel` now just "Human 'Wetware'", "Evolutionary Mismatch" now a
+  properly `ExactMatch`-typed `AlternateTerm` blank node.
+- **A real bug caught and fixed mid-build, worth remembering**: first
+  draft put `AlternateTermType`'s 6 individuals directly inside
+  `tgs-core.ttl`, violating this project's own established rule
+  (tgs-core.ttl holds classes/properties only, zero NamedIndividuals —
+  the exact reason `ScenarioDimension` got its own file weeks ago).
+  Caught via an ACTUAL PARSE FAILURE, not a style review — tgs-core.ttl
+  has never declared the `tgs:` prefix, since it was never meant to
+  reference tgs:-namespaced individuals. Fixed by moving everything to
+  a new `alternatetermtypes.ttl`, matching the `scenariodimensions.ttl`
+  precedent exactly. Lesson: even careful work benefits from an actual
+  parse check, not just re-reading the text — this mistake would have
+  been easy to miss by eye.
+- `alternatetermtypes.ttl` joins `scenariodimensions.ttl` as a SECOND
+  file that belongs in `enumerations.ttl` once that file is safely
+  editable again — worth consolidating both together in one future
+  pass, not as two separate cleanups.
+
+### Thread 4: first real show-notes-to-graph conversion (TGS_138)
+
+MJSullivan discovered Nate's team maintains structured, timestamped
+show-notes pages per episode (thegreatsimplification.com/frankly-
+original/...) — confirmed via direct fetch to be clean, consistent,
+WordPress-generated HTML, not just unstructured video description text.
+Far stronger extraction source than transcript-reading or generic NER:
+official editorial curation, not inference. MJSullivan did a rough
+manual first-pass categorization of TGS_138's full show-notes list
+(marked with his own bracket notation); this session triaged and built
+it into the graph:
+
+- **7 new Concepts minted**: TerrorManagementTheory (3rd independent
+  confirmation across sessions — flagging again the still-unresolved
+  Becker/Pyszczynski verification from an earlier session's Solomon
+  transcript investigation), ShortfallRisk (doubly confirmed, an
+  earlier by-hand pilot AND this official source both surfaced it —
+  the official description explicitly calls it connective tissue across
+  the whole series), ScenarioThinking (has a real citable external
+  source, not yet independently verified enough to mint as a Work),
+  MoreThanHumanPredicament (explicit OPEN QUESTION flagged in its own
+  scopeNote — may be the same idea as the existing HumanPredicament
+  under different framing, deliberately not silently merged or
+  duplicated), NarrativeAsActiveInference, Rebuildables (Hagens' own
+  reframing of "renewable" energy infrastructure — first real
+  AlternateTerm pilot beyond Wetware, "Renewables" linked as
+  CloseMatch, not ExactMatch, since the whole point is a meaningful
+  distinction in connotation, not a neutral synonym), ComplexSystems
+  Thinking (deliberately a general cluster stub, not split into 4+
+  separate concepts for each named sub-idea — related to but NOT
+  formally linked to existing ComplexityCollapse/Metacrisis, flagged in
+  prose rather than prematurely formalized).
+- **2 new Works**: the Cilliers book, the Global Tipping Points Report
+  2025 — both cited directly by the official show notes, author/details
+  not independently re-verified this session (taken from an already-
+  authoritative source).
+- **TGS_138 fully rebuilt**: real dates (created 2026-04-11, issued
+  2026-04-17) and Subject tags pulled directly from the fetched page;
+  real definition; 9 `discusses` links; 7 `dct:references` (an
+  Organization, 2 new minimal episode stubs for cross-referenced
+  Franklys #129/#132, 2 existing McGilchrist episodes, the 2 new
+  Works). **Also fixed 2 real bugs that had been sitting in this stub
+  since an earlier session**: `hasCanonicalSource` had been used twice
+  (violates its own documented cardinality-one scopeNote — the essay
+  link now correctly uses the general `dct:source` instead) and was
+  typed as an `xsd:anyURI` string literal rather than a proper linked
+  resource (the property is declared `owl:ObjectProperty`, range should
+  be a bare IRI, matching every other use of it in the graph).
+- **Deliberately NOT modeled**, per an explicit triage before building
+  anything: real-world current events (Iran War 2026, the Hormuz
+  situation's sub-threats), generic term definitions (Recession vs.
+  Depression, portfolio management basics, nuclear taboo/game theory),
+  and the "Oil 101-301" series mention (too little information — no
+  episode numbers — to responsibly stub).
+- **Scope honestly limited**: this is ONE episode's show notes,
+  converted and validated end-to-end as a real proof of the method —
+  NOT a comprehensive pass. The same triage-and-build process needs to
+  repeat for the other 5 parts of this series, and eventually the rest
+  of the real corpus, before this is anything close to comprehensive.
+
+### Lessons learned: the tgs_store loading saga
+
+A real, multi-step infrastructure failure worth remembering as a
+pattern, not just a one-off annoyance — THREE separate, unrelated
+problems stacked on top of each other, each one masking the next until
+diagnosed individually:
+
+1. **"Address already in use"** — a previous `oxigraph serve` process
+   was still running and had never actually been stopped, holding port
+   7878. Diagnosed via `lsof -i :7878` to get the real PID before
+   killing anything, rather than guessing.
+2. **A load that appeared to complete but produced an empty store** —
+   traced to `load_oxigraph.sh` having LOST ITS EXECUTE PERMISSION at
+   some point (likely a side effect of how an updated copy was saved
+   onto disk in an earlier session, not an intentional change) — meaning
+   `./load_oxigraph.sh` had been silently failing with "Permission
+   denied" and no one had been reading the actual terminal output
+   closely enough to notice, for possibly multiple prior reload
+   attempts. Fixed with `chmod +x`.
+3. **Even after fixing both of the above, the triple count still came
+   back short** (2377 instead of an expected 2392) — traced to the
+   local `data/seed/` files simply being STALE relative to what had
+   actually been posted in chat a few messages earlier (a real fix's
+   files were never actually downloaded/replacing the old ones on
+   disk).
+
+**The actual lesson, worth carrying forward explicitly**: a "successful-
+looking" reload is not the same claim as a correct one. The right
+diagnostic sequence when something's off — confirm no server is running
+(`lsof`), confirm the load script actually has permission to run and
+actually completes without silent errors (read its real output, don't
+just check the exit code), confirm the files on disk are actually the
+current ones (grep for a specific expected string) — caught every one
+of these in turn, but only because each step was verified independently
+rather than assumed. A single "did the count match" check would have
+caught SOMETHING was wrong, but not which of three unrelated things.
+
+### Explicitly NOT done this session, next-session starting points
+
+**PILOT (2026-07-16): hierarchical IDs on this list, per MJSullivan's
+question about whether findings/todos should get unique identifiers.**
+Format: `[YYYY-MM-DD-N]`, matching the date-prefixed section-header
+convention already in use elsewhere in this doc, extended down to
+individual item level rather than only section level. Piloted here
+specifically (not retrofitted across the whole document's history) to
+see whether it's actually useful before deciding to apply it broadly —
+same "let's see what the data tells us before committing" instinct
+already used repeatedly for the graph's own schema decisions.
+
+1. `[2026-07-16-1]` Consolidate `scenariodimensions.ttl` and
+   `alternatetermtypes.ttl` into `enumerations.ttl` once that file is
+   safely accessible.
+2. `[2026-07-16-2]` Resolve `MoreThanHumanPredicament` vs.
+   `HumanPredicament` — same idea reframed, or a genuine deliberate
+   broadening?
+3. `[2026-07-16-3]` Resolve whether `AlternateTermType.Antonym` should
+   defer to the existing `thinkr:contrastsWith` instead of being a
+   separate relation.
+4. `[2026-07-16-4]` Independently verify the "Scenario Thinking" book
+   citation enough to mint it as a real Work.
+5. `[2026-07-16-5]` Continue the show-notes-to-graph conversion for the
+   other 5 parts of the "How to Think About the Future" series, then
+   beyond it.
+6. `[2026-07-16-6]` The still-open Becker/Pyszczynski verification from
+   the Solomon transcript investigation, now flagged a second time via
+   TerrorManagementTheory's own scopeNote.
+7. `[2026-07-16-7]` The 2 pre-existing, still-unfixed class-purity
+   violations (`episodes.ttl`/Series, `subjects.ttl`/ConceptScheme) —
+   untouched again this session, deliberately out of scope each time
+   so far.
+8. `[2026-07-16-8]` Physically reorder this document's existing ~25
+   sections into true chronological order, matching the new convention
+   established above this entry — deliberately NOT done in this same
+   pass, given the real risk of a manual reshuffle at this scale; needs
+   a scripted, verified transformation (this doc's own stated
+   discipline), not hand-editing.
+
