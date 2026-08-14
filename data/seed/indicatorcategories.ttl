@@ -1,0 +1,162 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-08-13 — the 21 Doughnut categories (12 Social Foundation,
+# 9 Ecological Ceiling), sourced from MJSullivan's own manual transcription
+# of tgs:Work.CaliforniaDoughnutReport2025's structure. Count independently
+# confirmed against that Work's own existing rdfs:comment ("42 social/
+# ecological indicators across 21 categories") before minting anything —
+# exact match, giving real confidence the transcription is complete and
+# accurate, not something taken on faith. rdfs:subClassOf thinkr:Concept
+# (NOT thinkr:HagensConcept) — see tgs-core.ttl's own comment block.
+#############################################
+
+thinkr:IndicatorCategory a owl:Class ;
+    rdfs:subClassOf thinkr:Concept ;
+    rdfs:comment "One of the 21 named categories within the Doughnut Economics model (e.g. Water & Sanitation, Climate Change), each belonging to one thinkr:DoughnutHalf and containing 2 thinkr:Indicator members."@en ;
+    skos:prefLabel "Doughnut Category"@en .
+
+#############################################
+# Social Foundation (12)
+#############################################
+
+tgs:IndicatorCategory.WaterAndSanitation a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Water & Sanitation"@en ;
+    skos:definition "Measures access to clean, affordable, and safe infrastructure for hydration and hygiene."@en .
+
+tgs:IndicatorCategory.Energy a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Energy"@en ;
+    skos:definition "Assesses the accessibility, cost, and reliability of the electrical grid and power resources."@en .
+
+tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Connectivity & Transportation"@en ;
+    skos:definition "Tracks the physical and digital mobility required to participate in modern society."@en .
+
+tgs:IndicatorCategory.Housing a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Housing"@en ;
+    skos:definition "Evaluates residential security, stability, and affordability."@en .
+
+tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Equity"@en ;
+    skos:definition "Measures systemic fairness and gaps in wealth or opportunity across demographics."@en .
+
+tgs:IndicatorCategory.SocialCohesion a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Social Cohesion"@en ;
+    skos:definition "Assesses community relationships, financial divides, and collective psychological wellbeing."@en .
+
+tgs:IndicatorCategory.Food a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Food"@en ;
+    skos:definition "Tracks nutritional health and physical access to sustaining diets."@en .
+
+tgs:IndicatorCategory.Health a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Health"@en ;
+    skos:definition "Monitors physical longevity and medical system entry barriers."@en .
+
+tgs:IndicatorCategory.Education a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Education"@en ;
+    skos:definition "Measures academic achievement and the financial consequences of seeking it."@en .
+
+tgs:IndicatorCategory.IncomeAndWork a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Income & Work"@en ;
+    skos:definition "Evaluates baseline financial security and formal employment opportunities."@en .
+
+tgs:IndicatorCategory.PeaceAndJustice a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Peace & Justice"@en ;
+    skos:definition "Assesses community safety, systemic violence, and institutional accountability."@en .
+
+tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
+    skos:prefLabel "Political Voice"@en ;
+    skos:definition "Tracks civic engagement and democratic representation."@en .
+
+#############################################
+# Ecological Ceiling (9)
+#############################################
+
+tgs:IndicatorCategory.NitrogenAndPhosphorus a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Nitrogen & Phosphorus"@en ;
+    skos:definition "Tracks the chemical overloading of biosphere networks due to industrial agricultural run-off."@en .
+
+tgs:IndicatorCategory.OzoneDepletion a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Ozone Depletion"@en ;
+    skos:definition "Monitors the degradation of the atmospheric layer that shields Earth from harmful solar radiation."@en .
+
+tgs:IndicatorCategory.BiodiversityLoss a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Biodiversity Loss"@en ;
+    skos:definition "Measures the degradation of wildlife ecosystems and the extinction rate of organisms."@en .
+
+tgs:IndicatorCategory.LandUseChange a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Land-Use Change"@en ;
+    skos:definition "Tracks the conversion of natural wilderness into urban or agricultural zones."@en ;
+    skos:scopeNote "Given a single top-level '#' heading (rather than '##') in MJSullivan's original markdown, alongside Ocean Acidification below — confirmed via cross-check against the 21-category count already established in tgs:Work.CaliforniaDoughnutReport2025's own rdfs:comment that this was a formatting slip, not an intentional 3rd-tier distinction; modeled here as a normal Ecological Ceiling category like its 8 siblings."@en .
+
+tgs:IndicatorCategory.FreshwaterUse a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Freshwater Use"@en ;
+    skos:definition "Monitors the consumption and depletion of finite freshwater sources."@en .
+
+tgs:IndicatorCategory.ClimateChange a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Climate Change"@en ;
+    skos:definition "Tracks the heating of Earth's atmosphere via greenhouse gas accumulation."@en .
+
+tgs:IndicatorCategory.OceanAcidification a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Ocean Acidification"@en ;
+    skos:definition "Measures chemical shifts in marine environments caused by absorbing human carbon output."@en ;
+    skos:scopeNote "Same markdown-heading-level note as Land-Use Change above — modeled as a normal Ecological Ceiling category, not a 3rd tier."@en .
+
+tgs:IndicatorCategory.ChemicalPollution a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Chemical Pollution"@en ;
+    skos:definition "Monitors the accumulation of synthetic, toxic, and non-biodegradable waste in the environment."@en .
+
+tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
+    skos:prefLabel "Air Pollution"@en ;
+    skos:definition "Tracks airborne concentrations of gases and microscopic solids dangerous to human lungs."@en .

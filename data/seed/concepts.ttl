@@ -10,7 +10,7 @@
     rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
 
 
-tgs:Concept.CarbonPulse a thinkr:Concept,
+tgs:Concept.CarbonPulse a thinkr:Concept, thinkr:HagensConcept,
         owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
@@ -22,8 +22,12 @@ tgs:Concept.CircleOfTrustLocalism a thinkr:Concept,
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.CommunityAndResponse ;
     skos:definition "Hagens' emphasis on rebuilding smaller-scale, face-to-face community and local resource resilience as an adaptive response to declining energy surplus and institutional fragility."@en ;
-    skos:prefLabel "Local Resilience / 'Circle of Trust'"@en ;
-    thinkr:echoesIdeaOf tgs:Persona.ElinorOstrom .
+    skos:prefLabel "Local Resilience"@en ;
+    thinkr:echoesIdeaOf tgs:Persona.ElinorOstrom ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Circle of Trust"@en ;
+        skos:scopeNote "THIRD pilot case for the alternate-term mechanism, 2026-08-13 — split out of this Concept's own former compound prefLabel (\"Local Resilience / 'Circle of Trust'\"). Kept as an anonymous blank node (Tier 2)." ] .
 
 tgs:Concept.ComplexityCollapse a thinkr:Concept,
         owl:NamedIndividual ;
@@ -38,15 +42,23 @@ tgs:Concept.DiscountRatesAndPresentBias a thinkr:Concept,
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.BehavioralEconomicsAndCognition ;
     skos:definition "The behavioral and financial tendency to heavily undervalue future costs and benefits relative to present ones, which Hagens treats as a key mechanism by which markets and individuals systematically under-price long-term ecological risk."@en ;
-    skos:prefLabel "Discount Rates / Present Bias"@en ;
-    thinkr:echoesIdeaOf tgs:Persona.MarcusAurelius .
+    skos:prefLabel "Discount Rates"@en ;
+    thinkr:echoesIdeaOf tgs:Persona.MarcusAurelius ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.Related ;
+        skos:prefLabel "Present Bias"@en ;
+        skos:scopeNote "FOURTH pilot case, 2026-08-13 — split out of this Concept's own former compound prefLabel (\"Discount Rates / Present Bias\"). Deliberately typed Related, NOT ExactMatch: 'discount rate' is the formal economic parameter, 'present bias' is the specific psychological tendency that produces excessive discounting — related, not strictly synonymous. Kept as an anonymous blank node (Tier 2)." ] .
 
-tgs:Concept.EROI a thinkr:Concept,
+tgs:Concept.EnergyReturnOnInvestment a thinkr:Concept,
         owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
     skos:definition "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en ;
-    skos:prefLabel "EROI (Energy Return on Investment)"@en .
+    skos:prefLabel "Energy Return on Investment"@en ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch, tgs:AlternateTermType.Abbreviation ;
+        skos:prefLabel "EROI"@en ;
+        skos:scopeNote "SECOND pilot case for the alternate-term mechanism, 2026-08-13 — split out of this Concept's own former compound prefLabel ('EROI (Energy Return on Investment)'), same anti-pattern as Wetware's original compound label. BOTH types asserted deliberately: ExactMatch because this is genuinely the same meaning, Abbreviation because it's specifically a lexical-form relationship, not just a loose synonym. REVISED same day, per MJSullivan's explicit standing convention: when a term IS an Abbreviation of another, the FULL EXPANDED FORM is canonical (prefLabel + IRI local name), the abbreviation itself goes into the AlternateTerm — reversed from this pilot's own first draft, which had it backwards (IRI/prefLabel = 'EROI', full form as the AlternateTerm). See thinkr:AlternateTermType.Abbreviation's own scopeNote for the general rule." ] .
 
 tgs:Concept.EnergyBlindness a thinkr:Concept,
         owl:NamedIndividual ;
@@ -64,7 +76,7 @@ tgs:Concept.EnergySlaves a thinkr:Concept,
     skos:definition "A framing device measuring the work output of fossil-fuel energy in equivalent human labor-hours, to make the scale of energy subsidy to modern life viscerally graspable."@en ;
     skos:prefLabel "Energy Slaves"@en .
 
-tgs:Concept.GreatSimplification a thinkr:Concept,
+tgs:Concept.GreatSimplification a thinkr:Concept, thinkr:HagensConcept,
         owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsFrameworks ;
@@ -78,7 +90,7 @@ tgs:Concept.GrowthImperative a thinkr:Concept,
     skos:definition "The structural requirement of debt-based monetary systems and compound interest for continual economic growth, which Hagens argues locks in ever-increasing energy/material throughput regardless of ecological limits."@en ;
     skos:prefLabel "The Growth Imperative"@en .
 
-tgs:Concept.HumanPredicament a thinkr:Concept,
+tgs:Concept.HumanPredicament a thinkr:Concept, thinkr:HagensConcept,
         owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsFrameworks ;
@@ -110,7 +122,7 @@ tgs:Concept.Metacrisis a thinkr:Concept,
     skos:prefLabel "Metacrisis"@en ;
     thinkr:influencedBy tgs:Persona.GregoryBateson .
 
-tgs:Concept.MoneyAsClaimOnEnergy a thinkr:Concept,
+tgs:Concept.MoneyAsClaimOnEnergy a thinkr:Concept, thinkr:HagensConcept,
         owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.MonetarySystemAndGrowth ;
@@ -149,7 +161,16 @@ tgs:Concept.TheoryOfChange a thinkr:Concept,
     dcterms:source <https://www.thegreatsimplification.com/wp-content/uploads/2025/12/TGS-205-Nate-Hagens-Transcript.pdf> ;
     dcterms:subject tgs:Subject.CommunityAndResponse ;
     skos:definition "Hagens' stated approach to influence: rather than trying to reach and convert millions directly, cultivate a smaller network of well-informed people ('scout team') who shift the initial conditions from which broader social emergence unfolds."@en ;
-    skos:prefLabel "Theory of Change (Emergence / Initial Conditions)"@en .
+    skos:prefLabel "Theory of Change"@en ;
+    thinkr:hasAlternateTerm
+        [ a thinkr:AlternateTerm ;
+            thinkr:hasAlternateTermType tgs:AlternateTermType.Related ;
+            skos:prefLabel "Emergence"@en ;
+            skos:scopeNote "FIFTH pilot case, 2026-08-13, and the first with 3 terms tangled in one label rather than 2 — split out of this Concept's own former compound prefLabel (\"Theory of Change (Emergence / Initial Conditions)\") into a base concept plus TWO separate AlternateTerms rather than one. Typed Related: 'emergence' is the broader systems-science phenomenon this Theory of Change relies on, not a direct synonym for it." ],
+        [ a thinkr:AlternateTerm ;
+            thinkr:hasAlternateTermType tgs:AlternateTermType.Related ;
+            skos:prefLabel "Initial Conditions"@en ;
+            skos:scopeNote "See the sibling 'Emergence' AlternateTerm's scopeNote on this same Concept for the full split rationale. Typed Related for the same reason: the specific mechanism this Theory of Change acts through ('shift the initial conditions'), not a synonym for the Theory of Change itself." ] .
 
 tgs:Concept.Wetware a thinkr:Concept,
         owl:NamedIndividual ;
@@ -161,17 +182,22 @@ tgs:Concept.Wetware a thinkr:Concept,
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
         skos:prefLabel "Evolutionary Mismatch"@en ;
-        skos:scopeNote "PILOT CASE for the alternate-term mechanism, 2026-07-16 — split out of this Concept's own former compound prefLabel (\"Human 'Wetware' / Evolutionary Mismatch\"), which had jammed two real terms into one string. Kept as an anonymous blank node (Tier 2, per MJSullivan's own hasAlternateTerm pattern) rather than promoted to a named thinkr:AlternateTerm individual — not yet reused across any other Concept, no independent citable history captured yet. Promote to a named individual if/when either changes." ] .
+        skos:scopeNote "PILOT CASE for the alternate-term mechanism, 2026-08-13 — split out of this Concept's own former compound prefLabel (\"Human 'Wetware' / Evolutionary Mismatch\"), which had jammed two real terms into one string. Kept as an anonymous blank node (Tier 2, per MJSullivan's own hasAlternateTerm pattern) rather than promoted to a named thinkr:AlternateTerm individual — not yet reused across any other Concept, no independent citable history captured yet. Promote to a named individual if/when either changes." ] .
 
 thinkr:Concept a owl:Class ;
-    rdfs:comment "A term or idea from Nate Hagens' Great Simplification framework (e.g. Energy Blindness, the Superorganism)."@en ;
+    rdfs:comment "A term or idea discussed within Nate Hagens' Great Simplification framework — the UMBRELLA level, deliberately broad: includes ideas he originated/reframed himself (see the narrower thinkr:HagensConcept subclass) AND real ideas/theories he adopts, synthesizes, or substantively engages with from elsewhere (e.g. Terror Management Theory, Peak Oil, the Superorganism) without having originated them. REVISED 2026-08-13, per MJSullivan's explicit direction, after auditing all 26 existing Concept individuals found the majority (19 of 26) already had documented external origination (15 via explicit thinkr:influencedBy/echoesIdeaOf/contrastsWith links to a real Persona, plus 4 more confirmed external by their own prose) — external adoption/synthesis is the NORM here, not the exception, which is why a narrower subclass for his own originated ideas specifically was worth adding rather than assumed."@en ;
     rdfs:subClassOf skos:Concept ;
-    skos:scopeNote "Narrower than skos:Concept: specifically an idea from Hagens' TGS framework, not a general classification term — do not confuse with thinkr:Subject, which is also a skos:Concept subclass but for topic classification, a different purpose entirely."@en ;
+    skos:scopeNote "Narrower than skos:Concept: specifically an idea discussed within Hagens' TGS framework, not a general classification term — do not confuse with thinkr:Subject, which is also a skos:Concept subclass but for topic classification, a different purpose entirely."@en ;
     skos:prefLabel "Concept"@en .
+
+thinkr:HagensConcept a owl:Class ;
+    rdfs:subClassOf thinkr:Concept ;
+    rdfs:comment "The narrower subclass of thinkr:Concept specifically for ideas Nate Hagens originated, coined, or gave a genuinely distinctive reframing to himself — as opposed to the broader umbrella, which also covers real ideas/theories he substantively engages with but adopted from elsewhere. ADDED 2026-08-13, raised by MJSullivan specifically to be able to isolate Nate's own unique contributions from the broader set of ideas his show discusses. Classification requires real per-Concept judgment, not a mechanical rule — 'has no documented external lineage yet' is NOT sufficient evidence on its own (several genuinely external ideas, like Terror Management Theory and EROI, had no formal thinkr:influencedBy triple asserted despite being clearly not his own) — each of the 7 initial members was individually checked against its own existing definition/scopeNote before being classified here."@en ;
+    skos:prefLabel "Hagens Concept"@en .
 
 
 #############################################
-# ADDED 2026-07-16 — stubbed out of TGS_138's official show-notes topic
+# ADDED 2026-08-13 — stubbed out of TGS_138's official show-notes topic
 # list (thegreatsimplification.com/frankly-original/138-...), not from
 # transcript-reading alone. See episodes.ttl's TGS_138 record for the
 # discusses links this batch supports, and docs/sidecar-cleanup-handoff.md
@@ -186,9 +212,9 @@ tgs:Concept.TerrorManagementTheory a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:prefLabel "Terror Management Theory"@en ;
     skos:definition "The theory (developed by Sheldon Solomon, Tom Pyszczynski, and Jeff Greenberg starting the early 1980s, building on Ernest Becker's work) that human awareness of mortality generates a background existential anxiety managed largely unconsciously through cultural worldviews, self-esteem, and close relationships — and that reminders of death ('mortality salience') measurably intensify attachment to one's own cultural in-group and hostility toward out-groups."@en ;
-    skos:scopeNote "THIRD independent confirmation as of 2026-07-16 that this deserves real modeling: (1) surfaced during an earlier session's investigation of the TGS_199 Sheldon Solomon transcript, which found the co-founder name 'Budzinski' in that transcript is almost certainly a mishearing of Tom Pyszczynski — NOT yet independently verified, flagged here again since this stub is the natural place to resolve it; (2) TGS_138's own show notes reference it directly with a link to 'more info' and a cross-reference to the TGS episode on it; (3) general public awareness that this is real, citable psychological theory, not a Hagens coinage. thinkr:influencedBy tgs:Persona.EmileDurkheim considered but NOT asserted — Solomon cites Durkheim's 'religion existed before gods' framing approvingly in the TGS_199 transcript, but that is Solomon's OWN citation of Durkheim within a discussion of religion's function, not a claim that Durkheim shaped Terror Management Theory's origin (which the same transcript traces to Becker, not yet modeled as a Persona in this graph)."@en .
+    skos:scopeNote "THIRD independent confirmation as of 2026-08-13 that this deserves real modeling: (1) surfaced during an earlier session's investigation of the TGS_199 Sheldon Solomon transcript, which found the co-founder name 'Budzinski' in that transcript is almost certainly a mishearing of Tom Pyszczynski — NOT yet independently verified, flagged here again since this stub is the natural place to resolve it; (2) TGS_138's own show notes reference it directly with a link to 'more info' and a cross-reference to the TGS episode on it; (3) general public awareness that this is real, citable psychological theory, not a Hagens coinage. thinkr:influencedBy tgs:Persona.EmileDurkheim considered but NOT asserted — Solomon cites Durkheim's 'religion existed before gods' framing approvingly in the TGS_199 transcript, but that is Solomon's OWN citation of Durkheim within a discussion of religion's function, not a claim that Durkheim shaped Terror Management Theory's origin (which the same transcript traces to Becker, not yet modeled as a Persona in this graph)."@en .
 
-tgs:Concept.ShortfallRisk a thinkr:Concept, owl:NamedIndividual ;
+tgs:Concept.ShortfallRisk a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Shortfall Risk"@en ;
@@ -200,13 +226,13 @@ tgs:Concept.ScenarioThinking a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Scenario Thinking"@en ;
     skos:definition "Deliberately holding multiple plausible futures at once rather than committing to a single predicted storyline — the organizing methodology behind the entire 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture and tgs:Scenario) and explicitly contrasted by Hagens with forecasting."@en ;
-    skos:scopeNote "Has a real, independently citable external source: TGS_138's show notes link a specific book/resource, 'Scenario Thinking: A Historical Evolution of Strategic Foresight' — worth minting as its own tgs:Work once the exact author/publication details are verified (not yet done as of 2026-07-16, title alone insufficient to mint safely)."@en .
+    skos:scopeNote "Has a real, independently citable external source: TGS_138's show notes link a specific book/resource, 'Scenario Thinking: A Historical Evolution of Strategic Foresight' — worth minting as its own tgs:Work once the exact author/publication details are verified (not yet done as of 2026-08-13, title alone insufficient to mint safely)."@en .
 
-tgs:Concept.MoreThanHumanPredicament a thinkr:Concept, owl:NamedIndividual ;
+tgs:Concept.MoreThanHumanPredicament a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.EcologyAndEnvironment ;
     skos:prefLabel "More-Than-Human Predicament"@en ;
-    skos:scopeNote "GENUINE OPEN QUESTION, not resolved as of 2026-07-16: may be the SAME underlying idea as the existing tgs:Concept.HumanPredicament, just reframed with explicitly non-anthropocentric ('more-than-human') language — or may be a real, deliberate broadening Hagens is making, extending the predicament framing to include non-human life rather than only humanity's own situation. Deliberately stubbed SEPARATELY rather than silently merged into HumanPredicament or silently treated as a duplicate — a later pass with more source material (this stub currently has only its show-notes timestamp label, no elaborated definition) should resolve which reading is correct, and either merge the two or keep them genuinely distinct with a real thinkr:relatesTo link explaining why."@en .
+    skos:scopeNote "GENUINE OPEN QUESTION, not resolved as of 2026-08-13: may be the SAME underlying idea as the existing tgs:Concept.HumanPredicament, just reframed with explicitly non-anthropocentric ('more-than-human') language — or may be a real, deliberate broadening Hagens is making, extending the predicament framing to include non-human life rather than only humanity's own situation. Deliberately stubbed SEPARATELY rather than silently merged into HumanPredicament or silently treated as a duplicate — a later pass with more source material (this stub currently has only its show-notes timestamp label, no elaborated definition) should resolve which reading is correct, and either merge the two or keep them genuinely distinct with a real thinkr:relatesTo link explaining why."@en .
 
 tgs:Concept.NarrativeAsActiveInference a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
@@ -215,7 +241,7 @@ tgs:Concept.NarrativeAsActiveInference a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "The idea (drawing on active inference/predictive-processing frameworks from cognitive science) that the stories people tell themselves about the world function partly as a cognitive-effort-reduction mechanism — a pre-built interpretive frame that reduces the real-time processing cost of making sense of new information, at the cost of resisting genuinely novel or disconfirming input."@en ;
     skos:scopeNote "TGS_138's show notes list this as two adjacent timestamped bullets ('Narrative as active inference' / 'Narrative as reducing cognitive effort') — read here as two facets of one idea, not two separate concepts, since they describe the same mechanism from two angles rather than two distinct claims."@en .
 
-tgs:Concept.Rebuildables a thinkr:Concept, owl:NamedIndividual ;
+tgs:Concept.Rebuildables a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.EnergySystems ;
     skos:prefLabel "Rebuildables"@en ;

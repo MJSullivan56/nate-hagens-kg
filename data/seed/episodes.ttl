@@ -248,7 +248,7 @@ tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividu
         tgs:Interview.TGS_165_WisdomOverPower,
         tgs:Work.ComplexityAndPostmodernism,
         tgs:Work.GlobalTippingPointsReport2025 ;
-    skos:scopeNote "REBUILT 2026-07-16 from TGS_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
+    skos:scopeNote "REBUILT 2026-08-13 from TGS_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
 
 tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
@@ -402,7 +402,7 @@ tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndivi
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/57-gaya-herrington> .
 
 #############################################
-# ADDED 2026-07-16 — minimal stubs for 2 Franklys cross-referenced by
+# ADDED 2026-08-13 — minimal stubs for 2 Franklys cross-referenced by
 # TGS_138's own show notes (dct:references above). Genuinely minimal —
 # title/number/host only, no dates/definition/canonical source — same
 # "stub now, flesh out later if it earns it" discipline as every other
@@ -414,13 +414,13 @@ tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndivi
 tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
-    rdfs:comment "STUB as of 2026-07-16 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     .
 
 tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "What to Do as the World Falls Apart: A Framework for Action"@en ;
-    rdfs:comment "STUB as of 2026-07-16 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     .

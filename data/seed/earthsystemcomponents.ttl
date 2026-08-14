@@ -1,0 +1,60 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-08-13 — a new class distinct from thinkr:Concept, raised
+# by MJSullivan while testing the Concept/Subject classification logic
+# against a real case: the AMOC (Atlantic Meridional Overturning
+# Circulation). thinkr:Concept's own definition is specifically "a term
+# or idea from Nate Hagens' Great Simplification framework" — his OWN
+# analytical frameworks/reframings (Rebuildables, Shortfall Risk,
+# Scenario Thinking) or substantive theories he treats as central to his
+# argument even when not his own (Terror Management Theory). AMOC is
+# neither — it's a real, independently-existing physical system Hagens
+# hosts EXPERT GUESTS to discuss as evidence, not an idea he originates
+# or reframes. thinkr:Subject was also considered and rejected: the
+# existing Subject taxonomy (EROIAndEnergyQuality, EcologyAndEnvironment,
+# etc.) sits at a consistently broader topic-area granularity — AMOC is
+# one clear notch more specific than any existing Subject, a
+# granularity mismatch, not a fit.
+#
+# Confirmed via real evidence, not a single passing mention, before
+# minting: THREE separate episodes touch this — TGS_124 ("Oceanic
+# Slowdown: Decoding the AMOC," a full episode with climate physicist
+# Levke Caesar, Potsdam Institute), TGS_105 (Leon Simons, a second
+# dedicated AMOC episode, found via TGS_207's own cross-reference), and
+# TGS_207 itself, which explicitly cross-references both. This is what
+# justified building a genuinely new class rather than folding it into
+# an existing Concept's prose (the treatment given to less-recurring
+# examples like ice sheets/soil systems in Concept.ComplexSystemsThinking
+# — worth revisiting those as EarthSystemComponent individuals too, once
+# a similar multi-episode case is confirmed for either, not assumed).
+#
+# DELIBERATELY DEFERRED, not done in this pass: bootstrapping Levke
+# Caesar and Leon Simons as real Personas, and TGS_124/TGS_105 as real
+# Episode individuals — MJSullivan's own explicit scoping choice,
+# treating this as "design the class, mint AMOC only" first.
+#############################################
+
+thinkr:EarthSystemComponent a owl:Class ;
+    rdfs:subClassOf thinkr:Concept ;
+    rdfs:comment "A real, macro-scale, physical component of Earth's climate/ecological system (e.g. the AMOC, an ice sheet, a major biome), discussed within Hagens' TGS framework — he cites it as evidence, typically via expert guests who study it directly, rather than originating or reframing the idea himself. FOLDED under thinkr:Concept 2026-08-13 (was initially built as a fully separate sibling class the same day) — per MJSullivan's explicit direction, once thinkr:Concept itself was revised into an explicit umbrella (see thinkr:Concept's own rdfs:comment and the new thinkr:HagensConcept subclass). Deliberately NOT a thinkr:HagensConcept — AMOC and its siblings are exactly the kind of externally-originated, adopted-not-authored content that subclass exists to exclude."@en ;
+    skos:prefLabel "Earth System Component"@en .
+
+tgs:EarthSystemComponent.AMOC a thinkr:EarthSystemComponent, thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Atlantic Meridional Overturning Circulation"@en ;
+    skos:definition "The major ocean current system that transports warm water northward and cold water southward through the Atlantic, regulating temperature between the Northern and Southern Hemispheres — estimated to have slowed by roughly 15% over recent decades, with real scientific concern (per the tgs:Work.GlobalTippingPointsReport2025 and multiple TGS episodes) about a potential collapse and its cascading effects on regional/global climate systems."@en ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch, tgs:AlternateTermType.Abbreviation ;
+        skos:prefLabel "AMOC"@en ;
+        skos:scopeNote "Following the same standing convention as tgs:Concept.EnergyReturnOnInvestment: full expanded form is canonical (prefLabel + IRI), the abbreviation goes into the AlternateTerm." ] ;
+    skos:scopeNote "Confirmed via real search 2026-08-13 (thegreatsimplification.com/episode/124-levke-caesar, and TGS_207's own cross-reference to both TGS_124 and TGS_105) — NOT yet linked via thinkr:discusses to any Episode individual, since TGS_124/TGS_105 don't exist as Episode individuals in this graph yet (see this file's own header note on what was deliberately deferred). Real next step once those episodes are bootstrapped: link both via thinkr:discusses, now that its range has been widened to include thinkr:EarthSystemComponent."@en .

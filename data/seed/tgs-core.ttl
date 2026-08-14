@@ -149,8 +149,8 @@ thinkr:hasCanonicalSource a owl:ObjectProperty ;
 
 thinkr:discusses a owl:ObjectProperty ;
     rdfs:domain thinkr:Episode ;
-    rdfs:range thinkr:Concept ;
-    skos:comment "Which Concept(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings. thinkr:discussedIn itself REMOVED 2026-07-16 — confirmed via grep across the full data/seed/ directory to have zero real usage (only ever appeared in this comment and its own now-deleted declaration), same for thinkr:hostedBy (confirmed dead in relationships.ttl's own scopeNote explaining its deprecation) — both were leftover schema that outlived the decisions that superseded them."@en ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( thinkr:Concept thinkr:EarthSystemComponent ) ] ;
+    skos:comment "Which Concept(s)/EarthSystemComponent(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings. thinkr:discussedIn itself REMOVED 2026-08-13 — confirmed via grep across the full data/seed/ directory to have zero real usage (only ever appeared in this comment and its own now-deleted declaration), same for thinkr:hostedBy (confirmed dead in relationships.ttl's own scopeNote explaining its deprecation) — both were leftover schema that outlived the decisions that superseded them. RANGE WIDENED 2026-08-13 to include thinkr:EarthSystemComponent (real macro-scale physical Earth-system phenomena, e.g. the AMOC, that Hagens hosts dedicated episodes about via expert guests, distinct from thinkr:Concept — his OWN analytical frameworks/reframings) — reusing this exact property rather than inventing a parallel one, matching this project's standing 'don't build new relationship machinery when an existing generic one already fits' discipline."@en ;
     skos:prefLabel "discusses"@en .
 
 thinkr:hasReplay a owl:ObjectProperty ;
@@ -205,7 +205,7 @@ thinkr:hasObject a owl:ObjectProperty ;
 thinkr:hasPersonalRelationship a owl:ObjectProperty ;
     rdfs:domain thinkr:NamedEntity ;
     rdfs:range thinkr:Relationship ;
-    skos:comment "Links a Persona to Relationship individuals that are genuinely PERSONAL in nature (thinkr:hasRelationshipType includes RelationshipType.Personal on the Relationship itself). RETROFITTED 2026-07-15: until this date every Relationship a Persona was party to was asserted here regardless of its actual hasRelationshipType, discovered as a real modeling bug when Gaya Herrington's host-guest Relationship (Professional-only, no Personal language found) and her two purely institutional Relationships were caught being mis-filed under this property. Now one of a 4-member sibling family mirroring thinkr:RelationshipType exactly (hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship/hasLegalRelationship) — matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family in spirit (index by relationship nature, not by the other party's class), though the actual discriminator ended up being thinkr:hasRelationshipType rather than the object's own class. A single Relationship with multiple hasRelationshipType values (e.g. Josh Farley's, which is Academic+Personal+Professional) is correctly asserted under ALL matching sibling properties — not a data-quality problem, an honest reflection that one Relationship individual can genuinely be more than one kind of relationship. NOT YET DERIVED via script the way calculatedConfidence is (see scripts/compute_confidence.py) even though this is 100% redundant with each Relationship's own hasRelationshipType — flagged as a natural next step, not built in this retrofit pass. DOMAIN WIDENED 2026-07-16 from thinkr:Persona to thinkr:NamedEntity (same for all 4 siblings) after a full audit found 12 real Organization/SchoolOfThought/AcademicInstitution entities that were party to a real Relationship but structurally unable to carry a reverse-index pointer back to it — the exact same class of gap the 2026-07-15 retrofit fixed for Personas, just not extended to non-Persona parties at the time. All 12 backfilled in the same pass (organizations.ttl/academicinstitutions.ttl/schoolsofthought.ttl). DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
+    skos:comment "Links a Persona to Relationship individuals that are genuinely PERSONAL in nature (thinkr:hasRelationshipType includes RelationshipType.Personal on the Relationship itself). RETROFITTED 2026-07-15: until this date every Relationship a Persona was party to was asserted here regardless of its actual hasRelationshipType, discovered as a real modeling bug when Gaya Herrington's host-guest Relationship (Professional-only, no Personal language found) and her two purely institutional Relationships were caught being mis-filed under this property. Now one of a 4-member sibling family mirroring thinkr:RelationshipType exactly (hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship/hasLegalRelationship) — matching the editorial sketch's original hasPersonalRelationship/hasOrganizationRelationship/hasSchoolRelationship family in spirit (index by relationship nature, not by the other party's class), though the actual discriminator ended up being thinkr:hasRelationshipType rather than the object's own class. A single Relationship with multiple hasRelationshipType values (e.g. Josh Farley's, which is Academic+Personal+Professional) is correctly asserted under ALL matching sibling properties — not a data-quality problem, an honest reflection that one Relationship individual can genuinely be more than one kind of relationship. NOT YET DERIVED via script the way calculatedConfidence is (see scripts/compute_confidence.py) even though this is 100% redundant with each Relationship's own hasRelationshipType — flagged as a natural next step, not built in this retrofit pass. DOMAIN WIDENED 2026-08-13 from thinkr:Persona to thinkr:NamedEntity (same for all 4 siblings) after a full audit found 12 real Organization/SchoolOfThought/AcademicInstitution entities that were party to a real Relationship but structurally unable to carry a reverse-index pointer back to it — the exact same class of gap the 2026-07-15 retrofit fixed for Personas, just not extended to non-Persona parties at the time. All 12 backfilled in the same pass (organizations.ttl/academicinstitutions.ttl/schoolsofthought.ttl). DOMAIN CHANGED 2026-07-14 (Batch 3 of the Persona-centered refactor, docs/sidecar-cleanup-handoff.md) from thinkr:Human to thinkr:Persona: every Relationship a Human party to it now runs through their Persona instead, per the final settled principle that Human is a pure leaf node reachable only via thinkr:actsThrough."@en ;
     skos:prefLabel "has personal relationship"@en .
 
 thinkr:hasProfessionalRelationship a owl:ObjectProperty ;
@@ -331,7 +331,7 @@ thinkr:hasFacet a owl:ObjectProperty ;
     skos:prefLabel "has facet"@en .
 
 #############################################
-# ADDED 2026-07-16 — the alternate-term thesaurus mechanism. Raised by
+# ADDED 2026-08-13 — the alternate-term thesaurus mechanism. Raised by
 # MJSullivan: skos:altLabel (a bare string) can't carry relationship
 # TYPE (exact/close/related/broad/narrow/antonym), provenance, or
 # independent identity — a real gap for serendipitous discovery, since
@@ -380,3 +380,53 @@ thinkr:hasAlternateTermType a owl:ObjectProperty ;
 # tgs: prefix, since it was never meant to hold tgs:-namespaced
 # individuals), not just a style nitpick. Fixed same session.
 
+
+#############################################
+# ADDED 2026-08-13 — the Doughnut Economics indicator taxonomy (CalDEC's
+# California-specific application of Kate Raworth's model). Mirrors the
+# hasScenarioDimension/hasFacet pattern: DoughnutHalf (the 2 rings —
+# Social Foundation, Ecological Ceiling) -> IndicatorCategory (21) ->
+# Indicator (42), sourced from tgs:Work.CaliforniaDoughnutReport2025,
+# already cited elsewhere in this graph (Concept.Overshoot's convergesWith
+# link to SchoolOfThought.DoughnutEconomics). IndicatorCategory and
+# Indicator are BOTH rdfs:subClassOf thinkr:Concept (per MJSullivan's
+# explicit direction, once thinkr:Concept became an explicit umbrella) —
+# real, externally-sourced content genuinely concept-shaped and worth
+# being discoverable as such, NOT thinkr:HagensConcept (none of this is
+# Hagens' own origination). DoughnutHalf stays a plain thinkr:Category
+# (like ScenarioDimension) — a 2-value organizing split, not itself
+# concept-shaped content.
+#
+# RENAMED same day from thinkr:DoughnutCategory/thinkr:DoughnutIndicator
+# to thinkr:IndicatorCategory/thinkr:Indicator, per MJSullivan's
+# explicit correction: "indicator" and "category" are generic
+# measurement-science terms that other publications (predating CalDEC,
+# or unrelated to it entirely) will also use — CalDEC-branding the
+# CLASS NAMES themselves was over-specific. The correct place for
+# source attribution is a PROPERTY (dcterms:source, already asserted on
+# every individual), not the class name — a class should stay reusable
+# by whatever future framework's indicators/categories get modeled next.
+# thinkr:Category itself was NOT reused for the category-tier class
+# despite matching MJSullivan's literal wording — that name is already
+# taken by the existing meta-class marking ConfidenceType/
+# ReliabilityType/ScenarioDimension/DoughnutHalf/etc. as small
+# enumerated types, a genuinely different meaning; thinkr:IndicatorCategory
+# avoids the collision while staying just as generic. DoughnutHalf
+# deliberately kept its Doughnut-specific name — "half" as in the 2
+# rings of a doughnut is a structural metaphor genuinely specific to
+# this model's own visual identity, unlike "indicator"/"category",
+# which are reused across many unrelated measurement frameworks (SDGs,
+# ESG, planetary boundaries reports, etc.).
+#############################################
+
+thinkr:hasDoughnutHalf a owl:ObjectProperty ;
+    rdfs:domain thinkr:IndicatorCategory ;
+    rdfs:range thinkr:DoughnutHalf ;
+    rdfs:comment "Which of the 2 Doughnut halves (Social Foundation / Ecological Ceiling) this Category belongs to."@en ;
+    skos:prefLabel "has doughnut half"@en .
+
+thinkr:hasIndicatorCategory a owl:ObjectProperty ;
+    rdfs:domain thinkr:Indicator ;
+    rdfs:range thinkr:IndicatorCategory ;
+    rdfs:comment "Which of the 21 Doughnut categories this specific Indicator belongs to."@en ;
+    skos:prefLabel "has doughnut category"@en .

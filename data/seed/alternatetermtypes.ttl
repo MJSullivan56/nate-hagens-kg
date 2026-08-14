@@ -10,7 +10,7 @@
     rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
 
 #############################################
-# ADDED 2026-07-16 — thinkr:AlternateTermType fits thinkr:Category
+# ADDED 2026-08-13 — thinkr:AlternateTermType fits thinkr:Category
 # exactly (enumerated, curated values categorizing thinkr:AlternateTerm
 # instances) and would normally live in enumerations.ttl alongside the
 # other 9 Category classes — given its own file here instead, same
@@ -29,7 +29,7 @@
 #############################################
 
 thinkr:AlternateTermType a owl:Class, thinkr:Category ;
-    rdfs:comment "The TYPE of relationship an AlternateTerm has to its parent Concept — genuinely interchangeable (ExactMatch), close but not identical (CloseMatch), broader/narrower in a hierarchical sense (BroadMatch/NarrowMatch), a loose non-hierarchical association (Related), or an opposing idea (Antonym). This typing is the whole point of this mechanism over a bare skos:altLabel string — it's what lets a future discovery UI distinguish 'search for this and get the exact same thing' from 'search for this and get pointed somewhere adjacent.'"@en ;
+    rdfs:comment "The TYPE of relationship an AlternateTerm has to its parent Concept — genuinely interchangeable (ExactMatch), close but not identical (CloseMatch), broader/narrower in a hierarchical sense (BroadMatch/NarrowMatch), a loose non-hierarchical association (Related), an opposing idea (Antonym), or a shortened lexical form of the same term (Abbreviation). This typing is the whole point of this mechanism over a bare skos:altLabel string — it's what lets a future discovery UI distinguish 'search for this and get the exact same thing' from 'search for this and get pointed somewhere adjacent.' NOTE (added 2026-08-13): Abbreviation is a genuinely DIFFERENT AXIS from the other 5 — it describes LEXICAL FORM (is this a shortened spelling), not semantic distance. An abbreviation is by definition ALSO an ExactMatch semantically (same meaning, different surface form) — thinkr:hasAlternateTermType has no cardinality restriction specifically so BOTH can be asserted on the same AlternateTerm when both are true, rather than forcing a choice between them."@en ;
     skos:prefLabel "Alternate Term Type"@en .
 
 tgs:AlternateTermType.ExactMatch a thinkr:AlternateTermType, owl:NamedIndividual ;
@@ -55,3 +55,7 @@ tgs:AlternateTermType.Related a thinkr:AlternateTermType, owl:NamedIndividual ;
 tgs:AlternateTermType.Antonym a thinkr:AlternateTermType, owl:NamedIndividual ;
     skos:prefLabel "Antonym"@en ;
     skos:scopeNote "The one type NOT reused from SKOS, which has no native opposition relation. Whether this should instead defer to the already-existing thinkr:contrastsWith is a real open question, not yet resolved — flagged here rather than decided, pending a real antonym case to test the distinction against."@en .
+
+tgs:AlternateTermType.Abbreviation a thinkr:AlternateTermType, owl:NamedIndividual ;
+    skos:prefLabel "Abbreviation"@en ;
+    skos:scopeNote "ADDED 2026-08-13, raised by MJSullivan. The second type NOT reused from SKOS (alongside Antonym) — SKOS's thesaurus relations describe semantic distance, not lexical form, and have no native concept of 'shortened spelling of the same term.' Answers a different question than the other 6 types (lexical form vs. semantic closeness) — see this class's own rdfs:comment for the full reasoning. Real pilot case: tgs:Concept.EnergyReturnOnInvestment's own former compound prefLabel ('EROI (Energy Return on Investment)') split using this exact pattern, same as tgs:Concept.Wetware was the original pilot for the whole mechanism. STANDING CONVENTION, added same day per MJSullivan's explicit direction: when a term IS an Abbreviation of another, the FULL EXPANDED FORM is canonical — it becomes the parent Concept's own skos:prefLabel AND IRI local name. The abbreviation itself goes into the AlternateTerm, never the reverse. This anticipates the NER-extraction pipeline surfacing many more abbreviations at volume — a consistent canonical-form rule now avoids re-litigating this per case later. Applies going forward to every new Abbreviation-typed AlternateTerm, and was applied retroactively to the EnergyReturnOnInvestment pilot itself (its first draft had this backwards)."@en .

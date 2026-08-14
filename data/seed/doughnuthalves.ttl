@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-08-13 — see tgs-core.ttl's own comment block on
+# thinkr:hasDoughnutHalf for full context. Fits thinkr:Category exactly
+# (2 enumerated, curated values) and would normally live in
+# enumerations.ttl — given its own file instead for the same reason as
+# scenariodimensions.ttl and alternatetermtypes.ttl before it: that file
+# wasn't safely editable this session. THIS IS THE THIRD such file now
+# waiting on that consolidation — worth doing all three together in one
+# pass, not three separate cleanups.
+#############################################
+
+thinkr:DoughnutHalf a owl:Class, thinkr:Category ;
+    rdfs:comment "One of the 2 halves of the Doughnut Economics model — the Social Foundation (inner ring, minimum standards of human wellbeing) and the Ecological Ceiling (outer ring, maximum sustainable pressure on Earth's life-support systems). Each has multiple thinkr:IndicatorCategory members."@en ;
+    skos:prefLabel "Doughnut Half"@en .
+
+tgs:DoughnutHalf.SocialFoundation a thinkr:DoughnutHalf, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    skos:prefLabel "Social Foundation"@en ;
+    skos:definition "The inner ring of the Doughnut model — tracks the minimum standards of human wellbeing; a shortfall occurs when a metric drops below the threshold necessary for human rights and dignity."@en .
+
+tgs:DoughnutHalf.EcologicalCeiling a thinkr:DoughnutHalf, owl:NamedIndividual ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    skos:prefLabel "Ecological Ceiling"@en ;
+    skos:definition "The outer ring of the Doughnut model — outlines the maximum sustainable pressure humanity can exert on Earth's life-support systems; exceeding these limits leads to ecosystem overshoot and environmental degradation."@en .
