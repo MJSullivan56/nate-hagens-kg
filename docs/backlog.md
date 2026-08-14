@@ -14,7 +14,7 @@ marker and a pointer to the relevant `sidecar-cleanup-handoff.md` entry,
 rather than removing it — the git history plus the inline marker
 together tell the full story of an idea's lifecycle.
 
-**Split out of `sidecar-cleanup-handoff.md` on 2026-07-16** — the 4
+**Split out of `sidecar-cleanup-handoff.md` on 2026-08-13** — the 4
 items below existed there first; moved here directly, content
 unchanged, so `git log` on this file starts clean from that point
 forward.
@@ -217,7 +217,7 @@ different problem:
   one of these platforms, not the exception).
 
 
-**`data/seed/relationships/` subfolder (raised 2026-07-16).**
+**`data/seed/relationships/` subfolder (raised 2026-08-13).**
 MJSullivan's observation: the "connective tissue" layer — currently 4
 separate files, each already obeying one-class-one-file
 (`relationships.ttl`, `linknotes.ttl`, `evidences.ttl`,

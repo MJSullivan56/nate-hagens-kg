@@ -2,7 +2,7 @@
 
 **Status: BACKLOG, NOT YET EXECUTED.** Reordered 2026-07-13 into
 chronological order, LATEST FIRST, per MJSullivan's request at the
-time. **PREFERENCE REVERSED 2026-07-16: MJSullivan now prefers TRUE
+time. **PREFERENCE REVERSED 2026-08-13: MJSullivan now prefers TRUE
 CHRONOLOGICAL order (oldest first)** — raised directly after a real
 instance of confusion this session, where an old (2026-07-11),
 since-abandoned design section was mistaken for a live open question
@@ -12,9 +12,9 @@ existing ~25 sections stay exactly where they are (latest-first,
 unchanged); a `## CONVENTION CHANGE` marker near the end of this
 document marks the exact point where the ordering flips; everything
 from that marker onward is true chronological order, appended at the
-BOTTOM as it happens, starting from the 2026-07-16 session entry.
-Physically reordering the pre-2026-07-16 material is tracked as
-`[2026-07-16-8]`, not done in this pass. Section dates are preserved in each header.
+BOTTOM as it happens, starting from the 2026-08-13 session entry.
+Physically reordering the pre-2026-08-13 material is tracked as
+`[2026-08-13-8]`, not done in this pass. Section dates are preserved in each header.
 Within a single date, sub-ordering is a best-effort reconstruction
 from internal cross-references — flag anything that reads out of
 order. **2026-07-14 update: session cut off before this doc was
@@ -28,7 +28,7 @@ recovered transcript begins.**
 ## keep this current rather than appending a new dated copy each time
 ## something changes)
 
-**Standing practice, established 2026-07-16, applies to every session
+**Standing practice, established 2026-08-13, applies to every session
 from here forward**: end every session with a dated write-up in this
 doc's chronological log — what got accomplished/changed, real bugs
 caught and fixed, and any lessons learned — the same way a batch isn't
@@ -215,7 +215,7 @@ a connection fails, rather than a single generic fix). This isn't a
 one-off caveat for this thread — it should shape how technical
 instructions are given in general on this project going forward.
 
-## BACKLOG moved out to its own git-versioned file, 2026-07-16
+## BACKLOG moved out to its own git-versioned file, 2026-08-13
 
 **See `docs/backlog.md`** — moved out of this document specifically so
 backlog items (real ideas not yet being worked on) have their own
@@ -2286,7 +2286,7 @@ same rework as the sidecar cleanup above or as its own separate pass —
 these touch genuinely different parts of the graph (classes/instances,
 not sidecar naming) so may not need to be bundled together at all.
 
-## ⚠️ SUPERSEDED (flagged 2026-07-16, original material 2026-07-11) —
+## ⚠️ SUPERSEDED (flagged 2026-08-13, original material 2026-07-11) —
 ## everything from here to the end of this document is an ABANDONED
 ## design path, not a live open question. Read for historical context
 ## only; do not execute against it.
@@ -2303,14 +2303,14 @@ dropping `owl:sameAs`. NONE of that happened.
 
 **What actually got built instead, weeks later** (Claude Code, commits
 `cea3de0`/`a36a8ce`, confirmed clean via `validate_class_purity.py` as
-recently as 2026-07-16): a much NARROWER fix — just correcting the
+recently as 2026-08-13): a much NARROWER fix — just correcting the
 LOCAL-NAME pattern (`{Subject}_{Object}`) on `Relationship`/`LinkNote`/
 `Evidence`/`CrosswalkNote` exactly as those classes already existed,
 using the properties exactly as they already existed. No class merging,
 no renaming, no property collapsing. `LinkNote` is still called
 `LinkNote`. `CrosswalkNote` is still called `CrosswalkNote`.
 `owl:sameAs` is still live and used 42 times across the graph (28 of
-them in `humans.ttl` alone) — confirmed via direct grep 2026-07-16, NOT
+them in `humans.ttl` alone) — confirmed via direct grep 2026-08-13, NOT
 the zero this block's own "RESOLVED" note (4b, below) claims.
 
 **Why this is being marked rather than deleted**: it's a real record of
@@ -2322,7 +2322,7 @@ in place, clearly marked, rather than silently removed.
 
 **If any of this ever becomes worth reconsidering for real** (the
 `LinkNote`/`Evidence` merge question in particular still has some
-underlying merit, per the 2026-07-16 architecture discussion that
+underlying merit, per the 2026-08-13 architecture discussion that
 independently arrived at a compatible but not identical conclusion —
 see that session's entry higher in this doc) — treat it as a fresh
 design question informed by how the graph has ACTUALLY evolved since,
@@ -2628,15 +2628,15 @@ in scripts/docs via `grep -rl` across the whole repo before declaring it
 done.
 
 
-## CONVENTION CHANGE (2026-07-16): everything ABOVE this point is in
+## CONVENTION CHANGE (2026-08-13): everything ABOVE this point is in
 ## latest-first order (per the 2026-07-13 convention); everything BELOW
 ## is in true chronological order, oldest-to-newest, per MJSullivan's
-## 2026-07-16 preference reversal (see this doc's own top-of-file
+## 2026-08-13 preference reversal (see this doc's own top-of-file
 ## note). New entries append at the BOTTOM from here forward. The
 ## existing sections above have NOT been physically reordered — see
-## `[2026-07-16-8]` below for that tracked, not-yet-done task.
+## `[2026-08-13-8]` below for that tracked, not-yet-done task.
 
-## SESSION WRAP-UP (2026-07-16): schema audit + fixes, alternate-term
+## SESSION WRAP-UP (2026-08-13): schema audit + fixes, alternate-term
 ## thesaurus mechanism, first real show-notes-to-graph conversion pass —
 ## and the tgs_store loading saga that ate a good chunk of the session
 
@@ -2864,7 +2864,7 @@ caught SOMETHING was wrong, but not which of three unrelated things.
 
 ### Explicitly NOT done this session, next-session starting points
 
-**PILOT (2026-07-16): hierarchical IDs on this list, per MJSullivan's
+**PILOT (2026-08-13): hierarchical IDs on this list, per MJSullivan's
 question about whether findings/todos should get unique identifiers.**
 Format: `[YYYY-MM-DD-N]`, matching the date-prefixed section-header
 convention already in use elsewhere in this doc, extended down to
@@ -2874,28 +2874,28 @@ see whether it's actually useful before deciding to apply it broadly —
 same "let's see what the data tells us before committing" instinct
 already used repeatedly for the graph's own schema decisions.
 
-1. `[2026-07-16-1]` Consolidate `scenariodimensions.ttl` and
+1. `[2026-08-13-1]` Consolidate `scenariodimensions.ttl` and
    `alternatetermtypes.ttl` into `enumerations.ttl` once that file is
    safely accessible.
-2. `[2026-07-16-2]` Resolve `MoreThanHumanPredicament` vs.
+2. `[2026-08-13-2]` Resolve `MoreThanHumanPredicament` vs.
    `HumanPredicament` — same idea reframed, or a genuine deliberate
    broadening?
-3. `[2026-07-16-3]` Resolve whether `AlternateTermType.Antonym` should
+3. `[2026-08-13-3]` Resolve whether `AlternateTermType.Antonym` should
    defer to the existing `thinkr:contrastsWith` instead of being a
    separate relation.
-4. `[2026-07-16-4]` Independently verify the "Scenario Thinking" book
+4. `[2026-08-13-4]` Independently verify the "Scenario Thinking" book
    citation enough to mint it as a real Work.
-5. `[2026-07-16-5]` Continue the show-notes-to-graph conversion for the
+5. `[2026-08-13-5]` Continue the show-notes-to-graph conversion for the
    other 5 parts of the "How to Think About the Future" series, then
    beyond it.
-6. `[2026-07-16-6]` The still-open Becker/Pyszczynski verification from
+6. `[2026-08-13-6]` The still-open Becker/Pyszczynski verification from
    the Solomon transcript investigation, now flagged a second time via
    TerrorManagementTheory's own scopeNote.
-7. `[2026-07-16-7]` The 2 pre-existing, still-unfixed class-purity
+7. `[2026-08-13-7]` The 2 pre-existing, still-unfixed class-purity
    violations (`episodes.ttl`/Series, `subjects.ttl`/ConceptScheme) —
    untouched again this session, deliberately out of scope each time
    so far.
-8. `[2026-07-16-8]` Physically reorder this document's existing ~25
+8. `[2026-08-13-8]` Physically reorder this document's existing ~25
    sections into true chronological order, matching the new convention
    established above this entry — deliberately NOT done in this same
    pass, given the real risk of a manual reshuffle at this scale; needs
