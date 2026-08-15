@@ -902,6 +902,37 @@ person/context) to test it against:
   `tgs:ConfidenceType.Curated` without a human having actually reviewed
   the specific claim.** See design decision #1 — this is the most
   important rule in the repo.
+- **Governing principle (2026-08-13): before minting any new relationship
+  or property, ask whether the underlying claim is CONTESTABLE — that's
+  what decides whether it needs the `LinkNote`/`Evidence` treatment or a
+  flat, directly-asserted typed property is honest enough on its own.**
+  Raised by MJSullivan while discussing a future externality-pricing
+  layer: "we need to connect wildly different types of things together
+  but with meaning AND confidence." Two dimensions, not always both
+  needed together:
+  - **Meaning** = a typed relationship (`thinkr:discusses`,
+    `thinkr:AlternateTerm`'s `hasAlternateTermType`, `thinkr:hasFacet`) —
+    without this, a connection is just "these two things are somehow
+    related," which is close to useless downstream.
+  - **Confidence** = not just what KIND of relationship, but how sure we
+    are, backed by real checkable sourcing (`LinkNote`/`Evidence`,
+    `Candidate`/`Curated`).
+  The test for whether a new mechanism needs BOTH or just the first:
+  does the source itself already settle the claim, or is the claim
+  genuinely contestable/methodology-dependent? `thinkr:discusses` and
+  `thinkr:AlternateTerm` are meaning-only, DELIBERATELY, not as a gap —
+  "does this episode's own show notes name this concept" and "is this
+  term an exact match" are usually just true or false, the source
+  itself is the evidence, there's nothing left to weigh. `LinkNote`/
+  `Evidence` exists specifically because "did X influence Y" or "what is
+  this externality actually worth" are real judgment calls where
+  reasonable people citing different sources could land on different
+  answers — that contestability is what the Candidate/Curated machinery
+  is FOR. Applying the full Evidence apparatus to something the source
+  already settles is over-modeling; asserting something contestable as a
+  flat unweighted triple is under-modeling. Worth running this test
+  explicitly before building the next new connective-tissue mechanism,
+  rather than defaulting to whichever pattern was used most recently.
 - **A property with 2+ values gets one value per line; a property with
   exactly 1 value stays on the same line as the predicate.** MJSullivan's
   explicit requirement (2026-07-15): as an editor, being able to tell

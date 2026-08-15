@@ -60,11 +60,11 @@ jobs:
 
           TGS = Namespace("http://example.org/tgs#")
           THINKR = Namespace("http://example.org/thinkr#")
-            VALID_LINKNOTE_CONFIDENCE = {
-                THINKR["ConfidenceType.Curated"], THINKR["ConfidenceType.Candidate"],
-                THINKR["ConfidenceType.Corroborated"], THINKR["ConfidenceType.Disputed"],
-            }
-            VALID_EVIDENCE_CONFIDENCE = {THINKR["ConfidenceType.Curated"], THINKR["ConfidenceType.Candidate"]}
+          VALID_LINKNOTE_CONFIDENCE = {
+              THINKR["ConfidenceType.Curated"], THINKR["ConfidenceType.Candidate"],
+              THINKR["ConfidenceType.Corroborated"], THINKR["ConfidenceType.Disputed"],
+          }
+          VALID_EVIDENCE_CONFIDENCE = {THINKR["ConfidenceType.Curated"], THINKR["ConfidenceType.Candidate"]}
           g = rdflib.Graph()
           for f in glob.glob('**/*.ttl', recursive=True):
               g.parse(f, format='turtle')
