@@ -28,16 +28,26 @@ thinkr:ScenarioDimension a owl:Class, thinkr:Category ;
 
 tgs:ScenarioDimension.Economic a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Economic"@en ;
+    thinkr:xAxisLowLabel "Contraction"@en ; thinkr:xAxisHighLabel "Growth"@en ;
+    thinkr:yAxisLowLabel "Overshoot"@en ; thinkr:yAxisHighLabel "Within Limits"@en ;
     skos:definition "Whether the economy is growing or contracting. Per Part 4 (Frankly #148), the same direction of economic change can play out very differently depending on the other 3 Dimensions — this axis alone doesn't determine what daily life actually feels like."@en .
 
 tgs:ScenarioDimension.PowerAndDistribution a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Power and Distribution"@en ;
+    thinkr:xAxisLowLabel "Distributed Structure"@en ; thinkr:xAxisHighLabel "Concentrated Structure"@en ;
+    thinkr:yAxisLowLabel "Narrow Gains"@en ; thinkr:yAxisHighLabel "Broad Gains"@en ;
+    skos:scopeNote "LEAST CONFIDENT of the 4 Dimensions' axis assignments — TGS_139's own page describes this Dimension only loosely ('how concentrated each is and where the gains flow'), never as cleanly as Economic/Geopolitical/EarthSystems. 3 of 4 Facets (CivicIdeal, ACapturedDemocracy, ForcedFeudalism) are used by an already-named Scenario and cross-checked against their own definitions; TheStewardshipDeal's position is assigned by elimination only, with zero real source material to verify against — flagged, not asserted with full confidence."@en ;
     skos:definition "Who holds power and how material gains/surplus get shared. Per Part 4, Hagens treats this as the single biggest determinant of lived experience — two Scenarios can have near-identical material/energy conditions and still be radically different places to live, based on this Dimension alone."@en .
 
 tgs:ScenarioDimension.Geopolitical a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Geopolitical"@en ;
+    thinkr:xAxisLowLabel "Self-Sufficient"@en ; thinkr:xAxisHighLabel "Interdependent"@en ;
+    thinkr:yAxisLowLabel "Adversarial"@en ; thinkr:yAxisHighLabel "Cooperative"@en ;
     skos:definition "The degree of cooperation vs. hostility/fragmentation between nations and regions."@en .
 
 tgs:ScenarioDimension.EarthSystems a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Earth Systems"@en ;
+    thinkr:xAxisLowLabel "Functional Biosphere"@en ; thinkr:xAxisHighLabel "Unraveling Biosphere"@en ;
+    thinkr:yAxisLowLabel "High Climate Stress"@en ; thinkr:yAxisHighLabel "Moderate Climate Stress"@en ;
+    skos:scopeNote "Axis labels confirmed directly from MJSullivan's own original screenshot of this framework's visual grid (Image 2, shared at the very start of this whole project) — the highest-confidence of the 4 Dimensions' axis assignments, sourced from the primary visual itself rather than inferred from prose."@en ;
     skos:definition "The state of the biosphere/climate. Per Part 4, Hagens treats this Dimension as structurally different from the other 3: humanity isn't starting from a neutral baseline (real ecological damage is already locked in), and severe Earth-system stress constrains what's achievable on every other Dimension rather than being just one more independent variable."@en .

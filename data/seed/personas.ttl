@@ -265,3 +265,19 @@ tgs:Persona.GayaHerrington a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasAcademicRelationship tgs:Relationship.GayaHerrington_HarvardUniversity ;
     skos:prefLabel "Gaya Herrington"@en ;
     skos:scopeNote "RETROFITTED 2026-07-15: no Relationship here carries RelationshipType.Personal (all are Professional or Academic), so no hasPersonalRelationship is asserted at all — a real, correct absence, not an oversight, and a genuine test of the new property family (the original filing of all 3 initial Relationships under hasPersonalRelationship was the bug that triggered this whole retrofit). ClubOfRome and PostCarbonInstitute Relationships added same day after a deeper WebFetch of her own bio site surfaced further real, independently-verifiable affiliations beyond the original podcast-intro-driven bootstrap — see humans.ttl for the fuller trail."@en .
+
+#############################################
+# ADDED 2026-08-13 — see humans.ttl's matching entry for context.
+#############################################
+
+tgs:Persona.ConradWaddington a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ConradWaddington ;
+    skos:prefLabel "Conrad Hal Waddington"@en .
+
+tgs:Persona.UgoBardi a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.UgoBardi ;
+    skos:prefLabel "Ugo Bardi"@en .
+
+tgs:Persona.JohanRockstrom a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohanRockstrom ;
+    skos:prefLabel "Johan Rockström"@en .

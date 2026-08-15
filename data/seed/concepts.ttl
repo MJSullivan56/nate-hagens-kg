@@ -257,3 +257,37 @@ tgs:Concept.ComplexSystemsThinking a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Complex Systems Thinking"@en ;
     skos:definition "The general toolkit of concepts Hagens draws on for reasoning about civilizational dynamics: systems move in fits and starts rather than smoothly; ecological phase shifts exhibit path dependency (once crossed, a threshold is not easily uncrossed); non-linear causality and feedback loops mean small inputs can produce disproportionate effects; and real tipping points (ice sheets, soil systems, per the Global Tipping Points Report 2025) can be crossed well before they become visible in conventional metrics."@en ;
     skos:scopeNote "A deliberately GENERAL cluster stub, not split into 4+ separate Concepts for each named sub-idea (fits-and-starts, phase shifts, feedback loops, tipping points) — matches this session's 'don't over-model before a shape reveals itself' approach. Clearly related to the existing tgs:Concept.ComplexityCollapse and tgs:Concept.Metacrisis, but that relation is deliberately NOT formally linked yet (no thinkr:relatesTo asserted) — flagged in prose rather than prematurely formalized, pending more real content to judge the actual relationship by."@en .
+
+#############################################
+# ADDED 2026-08-13 — surfaced from the "How to Think About the Future"
+# series highlights batch (Parts 2-6, MJSullivan's own manual show-notes
+# transcription), same triage/verification discipline as the TGS_138
+# pass. See docs/sidecar-cleanup-handoff.md for the full session entry.
+#############################################
+
+tgs:Concept.TheSenecaEffect a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "The Seneca Effect"@en ;
+    skos:definition "The observation that complex systems tend to grow slowly but collapse rapidly — named after the Roman philosopher Seneca's own observation that fortune grows slowly but ruin is swift. Developed by Ugo Bardi as a general model for why decline, once it starts, tends to be much faster than the growth that preceded it."@en ;
+    thinkr:influencedBy tgs:Persona.UgoBardi .
+
+tgs:Concept.LandscapeOfPossibleFutures a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "The Landscape of Possible Futures"@en ;
+    skos:definition "Hagens' own application of the landscape metaphor (valleys, ridges, switchbacks, erosion) to civilizational futures — see tgs:Monologue.TGS_145_Part3UphillFutures for the full framework. Adapts Conrad Waddington's epigenetic landscape (originally a model of cellular differentiation) to a different domain entirely — a genuine reframing, not a direct reuse, hence HagensConcept despite the explicit external inspiration."@en ;
+    thinkr:influencedBy tgs:Persona.ConradWaddington .
+
+tgs:Concept.PerpetualMulligans a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Perpetual Mulligans"@en ;
+    skos:definition "Hagens' own framing for how cheap, abundant fossil energy has functioned historically as an economic 'do-over' — letting mistakes, inefficiencies, and bad decisions get absorbed and corrected via sheer energy surplus rather than genuine adaptation, a buffer that thins as energy surplus declines."@en .
+
+tgs:Concept.UnicornStrategies a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Unicorn Strategies"@en ;
+    skos:definition "Hagens' own term for actions that are good moves regardless of which of the 4 composite future Scenarios (see tgs:Scenario) actually comes to pass — genuinely robust across radically different futures rather than a bet on one specific outcome. Named examples from the source episode: ocean conservation, nuclear disarmament, indigenous language preservation."@en ;
+    skos:scopeNote "Deliberately NOT formally linked to thinkr:Scenario via any property — the relationship (robust across all 4 named Scenarios) is real but this session's own 'don't over-link prematurely' discipline applies; noted here in prose instead."@en .

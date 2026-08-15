@@ -253,11 +253,20 @@ tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividu
 tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     skos:prefLabel "How to Think About the Future (Part 2): Four Variables Shaping the Coming Decades"@en ;
-    rdfs:comment "STUB as of 2026-07-11 — same caveat as Part 1: created to demonstrate the Series relationship, not yet fleshed out."@en ;
+    skos:definition "Fleshed out 2026-08-13 from the episode's own official show notes (previously a bare stub). Introduces Nate's original 4-scenario framing from an earlier summit presentation (Green Growth, Mordor, The Great Simplification, Mad Max — the direct precursor to the fuller 4-Dimension/16-Facet framework built out in Part 4), then surveys the real-world pressures shaping which of those futures is more likely: overshoot and planetary boundaries, wealth concentration, AI/energy buildout, geopolitical fragmentation and supply-chain interdependence, ecological degradation (soils, pollinators, fisheries, water tables), and demographic shifts (fertility decline, population pyramid inversion)."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 2 ;
-    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2"^^xsd:anyURI ;
+    dct:created "2026-04-20"^^xsd:date ;
+    dct:issued "2026-04-24"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-139-Transcript-How-to-Think-About-the-Future-Part-2.pdf> ;
+    thinkr:hasReplay <https://youtu.be/5R0oUGPf9C4> ;
+    dct:source <https://natehagens.substack.com/p/essay-how-to-think-about-the-future-92e> ;
+    thinkr:discusses tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.CarbonPulse, tgs:ScenarioFacet.GreenGrowth, tgs:ScenarioFacet.Mordor, tgs:Concept.GreatSimplification, tgs:ScenarioFacet.MadMax ;
+    dct:references tgs:Persona.DanielSchmachtenberger, tgs:Series.BendNotBreak, tgs:Interview.TGS_12_DennisMeadows ;
+    skos:scopeNote "hasCanonicalSource fixed 2026-08-13 — same xsd:anyURI-literal-instead-of-proper-resource bug originally found and fixed on TGS_138, never applied to the rest of this series until now."@en ;
     .
 
 tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
@@ -267,7 +276,16 @@ tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 3 ;
-    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/145-how-to-think-about-the-future-part-3"^^xsd:anyURI ;.
+    dct:created "2026-05-22"^^xsd:date ;
+    dct:issued "2026-06-05"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/145-how-to-think-about-the-future-part-3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/Frankly-145-Transcript-HTTATF-Pt-3.docx.pdf> ;
+    thinkr:hasReplay <https://youtu.be/vTBQ1AS-KVw> ;
+    dct:source <https://natehagens.substack.com/p/essay-uphill-futures-in-a-downhill> ;
+    thinkr:discusses tgs:Concept.TheSenecaEffect, tgs:Concept.LandscapeOfPossibleFutures, tgs:Concept.Metacrisis, tgs:Concept.ShortfallRisk ;
+    skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real URL uses a different month folder AND retains a .docx.pdf double-extension — the pattern-matched guess used across this whole series turned out inconsistent with the real site for parts 3/5/6, confirmed only via direct page fetches, not assumed)."@en ;
+    .
 
 tgs:Monologue.TGS_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
@@ -276,27 +294,52 @@ tgs:Monologue.TGS_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 4 ;
-    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/148-how-to-think-about-the-future-part-4"^^xsd:anyURI ;
+    dct:created "2026-06-09"^^xsd:date ;
+    dct:issued "2026-06-25"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/148-how-to-think-about-the-future-part-4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/Frankly-148-Transcript-How-to-Think-About-the-Future-Part-4.pdf> ;
+    thinkr:hasReplay <https://youtu.be/KlkAeQ5xdeQ> ;
+    dct:source <https://natehagens.substack.com/p/mordor-to-the-long-repair-how-might> ;
+    thinkr:discusses tgs:Concept.ShortfallRisk, tgs:Concept.ScenarioThinking, tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    dct:references tgs:Interview.TGS_27_JoeTainter, tgs:Monologue.Frankly_140_APerspectiveFromLebanon, tgs:Interview.TGS_222_BrettKencairn, tgs:Interview.TGS_178_AndrewMillison ;
+    skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real is 2026/06, not the 2026/04 pattern-matched guess), dct:references added (Tainter -> real guest episode #27, closing a gap flagged weeks ago in the original backlog; #222/#178 resolved to real guest names via the show notes own URL slugs, not left as bare numbers)."@en ;
     .
 
 tgs:Monologue.TGS_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
-    skos:prefLabel "How to Think About the Future (Part 5): Applying the Landscape to a Single Human Life"@en ;
+    skos:prefLabel "Foundations Before Outcomes: The Future Beneath Your Feet | How to Think About the Future Pt 5"@en ;
     skos:definition "Applies the same landscape/valleys/ridges framework from Part 3, at the scale of an individual person's life rather than civilizational futures - originally intended as the series finale (no-regret responses to the 4 composite worlds from Part 4) before Hagens split that material off into Part 6, once he realized a personal/individual-scale version of the same macro dynamics was worth its own episode."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 5 ;
-    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/150-how-to-think-about-the-future-part-5"^^xsd:anyURI ;
+    dct:created "2026-07-05"^^xsd:date ;
+    dct:issued "2026-07-10"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/150-foundations-before-outcomes> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-150-Transcript-How-to-Think-About-the-Future-Part-5.docx.pdf> ;
+    thinkr:hasReplay <https://youtu.be/YvJ4HkWIsL8> ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.PerpetualMulligans, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    skos:scopeNote "MAJOR CORRECTION 2026-08-13: this episode's skos:prefLabel and thinkr:hasCanonicalSource were both WRONG since first built — a plausible-looking, pattern-matched title/URL that was never actually verified against the real page (the guessed URL 404s). Corrected via direct fetch of the real page. Same lesson as several other corrections this session: a plausible guess is not the same claim as a verified fact, even when it fits an established naming convention."@en ;
     .
 
 tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
-    skos:prefLabel "How to Think About the Future (Part 6): Planning Under Uncertainty"@en ;
+    skos:prefLabel "Protect the Irreversible: What Matters Most in an Uncertain Future? | How to Think About the Future Pt 6"@en ;
     skos:definition "The series' closer - a methodology for individual/community planning and action given the 4-Dimension framework, rather than a specific list of recommended actions. Opens with a type-1/type-2-error framing (false positives vs. false negatives in how people respond to uncertain threats) as a lens for thinking about failure modes in planning, before laying out Hagens' own approach to prioritizing action under deep uncertainty."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
     thinkr:seriesPosition 6 ;
-    thinkr:hasCanonicalSource "https://www.thegreatsimplification.com/frankly-original/151-how-to-think-about-the-future-part-6"^^xsd:anyURI ;
+    dct:created "2026-07-05"^^xsd:date ;
+    dct:issued "2026-07-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/151-protect-the-irreversible> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-151-Transcript-How-to-Think-About-the-Future-Part-6.pdf> ;
+    thinkr:hasReplay <https://youtu.be/bMfzVhTWMDM> ;
+    thinkr:discusses tgs:Concept.ScenarioThinking, tgs:Concept.UnicornStrategies, tgs:Concept.Superorganism, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes ;
+    skos:scopeNote "MAJOR CORRECTION 2026-08-13: same class of error as TGS_150 — this episode's skos:prefLabel, thinkr:hasCanonicalSource, and hasTranscript month were all wrong since first built, never verified against the real page until now. Corrected via direct fetch."@en ;
     .
 
 #############################################
@@ -423,4 +466,76 @@ tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividu
     skos:prefLabel "What to Do as the World Falls Apart: A Framework for Action"@en ;
     rdfs:comment "STUB as of 2026-08-13 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/132-what-to-do-as-the-world-falls-apart> ;
+    .
+
+
+#############################################
+# ADDED 2026-08-13 — real, minimal stubs for episodes cross-referenced
+# by the "How to Think About the Future" series (Parts 4/6), confirmed
+# via direct page fetches, not inferred. Tainter and Meadows already
+# have Persona records (as historical-influence citations) — hasGuest
+# linked directly. Brett Kencairn and Andrew Millison are genuinely NEW
+# people, deliberately NOT bootstrapped as full Persona/Human records in
+# this pass (matching the same "stub the episode, defer the person" call
+# made for AMOC's Levke Caesar/Leon Simons earlier this session) — no
+# hasGuest asserted for either, since the Persona doesn't exist yet.
+#############################################
+
+tgs:Interview.TGS_12_DennisMeadows a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Dennis Meadows"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via TGS_139's own show notes cross-reference; title/date not yet independently verified."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DennisMeadows ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/12-dennis-meadows> ;
+    .
+
+tgs:Interview.TGS_27_JoeTainter a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Joe Tainter"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via TGS_148's own show notes cross-reference, closing a gap flagged weeks ago (Tainter was already in the graph as a historical-influence citation via Concept.ComplexityCollapse's influencedBy, but his real guest episode was never modeled). Title/date not yet independently verified."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JosephTainter ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/27-joe-tainter> ;
+    .
+
+tgs:Interview.TGS_222_BrettKencairn a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Brett Kencairn"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number and guest name confirmed via TGS_148's own show notes URL slug. Brett Kencairn is NOT yet bootstrapped as a Persona/Human — deliberately deferred, matching the same scope call made for AMOC's Levke Caesar/Leon Simons — so thinkr:hasGuest is NOT asserted here."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/222-brett-kencairn> ;
+    .
+
+tgs:Interview.TGS_178_AndrewMillison a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Andrew Millison"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — same caveat as TGS_222 (Brett Kencairn): real episode number/guest name confirmed via URL slug, Persona/Human NOT yet bootstrapped, deliberately deferred."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/178-andrew-millison> ;
+    .
+
+tgs:Monologue.Frankly_140_APerspectiveFromLebanon a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "A Perspective from Lebanon"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_148's own show notes cross-reference ('Frankly about Nate's Lebanese friend'), not independently fleshed out further."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/140-a-perspective-from-lebanon> ;
+    .
+
+tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "A Guide to Staying Human (Part 2): Navigating Dread and Carrying the Weight of Tomorrow"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_151's own show notes cross-reference ('Frankly on despair'). Confirms 'A Guide to Staying Human' is a real multi-part series in its own right (Frankly #129 = Part 1, this = Part 2) — matches the Series gap flagged when TGS_138 was first built, not yet formally modeled as a thinkr:Series individual."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/142-a-guide-to-staying-human-part-2> ;
+    .
+
+tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    skos:prefLabel "The Superorganism in 7 Minutes"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_151's own show notes cross-reference ('The metabolic economic superorganism')."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/97-the-superorganism-in-7-minutes> ;
     .

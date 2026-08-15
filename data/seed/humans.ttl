@@ -270,3 +270,29 @@ tgs:Human.GayaHerrington a thinkr:Human, owl:NamedIndividual ;
         tgs:Organization.ClubOfRome, 
         tgs:AcademicInstitution.HarvardUniversity ;
     .
+
+#############################################
+# ADDED 2026-08-13 — citation-only Humans (matching the lightweight
+# WilliamCatton/WilliamStanleyJevons pattern), surfaced via the "How to
+# Think About the Future" series highlights batch (Parts 2-6). All 3
+# independently verified via real web search before minting, same
+# discipline as every other bootstrap this project has done.
+#############################################
+
+tgs:Human.ConradWaddington a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Conrad Hal Waddington"@en ;
+    owl:sameAs <http://dbpedia.org/resource/C._H._Waddington> ;
+    .
+
+tgs:Human.UgoBardi a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Ugo Bardi"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Ugo_Bardi> ;
+    .
+
+tgs:Human.JohanRockstrom a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Johan Rockström"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Johan_Rockström> ;
+    .

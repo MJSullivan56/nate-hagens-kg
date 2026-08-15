@@ -81,3 +81,19 @@ tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought,
     thinkr:convergesWith tgs:Concept.Overshoot ;
     .
 
+
+#############################################
+# ADDED 2026-08-13 — surfaced from the "How to Think About the Future"
+# series highlights batch (Part 2). Modeled as SchoolOfThought, not
+# Concept, matching DoughnutEconomics' own precedent — an ongoing,
+# institutionally-backed, multi-scientist research program (periodic
+# updates: 2009, 2015, 2022, 2023, 2025), not a single fixed theory by
+# one person.
+#############################################
+
+tgs:SchoolOfThought.PlanetaryBoundaries a thinkr:SchoolOfThought,
+        owl:NamedIndividual ;
+    skos:prefLabel "Planetary Boundaries"@en ;
+    skos:definition "Scientific framework (first published 2009, periodically updated since) identifying 9 processes that regulate Earth's stability and resilience, each with a proposed boundary defining a 'safe operating space for humanity' — as of the most recent update, a majority of the 9 are considered transgressed. Led by Johan Rockström, originating at and maintained by the Stockholm Resilience Centre (Rockström's founding institution) in ongoing collaboration with the Potsdam Institute for Climate Impact Research (which he also directs). Directly cited as a foundational influence in this graph's own SchoolOfThought.DoughnutEconomics entry ('ecological ceiling... building on Rockstrom et al.'s planetary boundaries framework') — worth a formal property link once thinkr:influencedBy/convergesWith's current Concept-only domain restriction is reconsidered for SchoolOfThought-to-SchoolOfThought relationships; not forced through an ill-fitting property here."@en ;
+    owl:sameAs <http://dbpedia.org/resource/Planetary_boundaries> ;
+    .

@@ -149,8 +149,8 @@ thinkr:hasCanonicalSource a owl:ObjectProperty ;
 
 thinkr:discusses a owl:ObjectProperty ;
     rdfs:domain thinkr:Episode ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( thinkr:Concept thinkr:EarthSystemComponent ) ] ;
-    skos:comment "Which Concept(s)/EarthSystemComponent(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings. thinkr:discussedIn itself REMOVED 2026-08-13 — confirmed via grep across the full data/seed/ directory to have zero real usage (only ever appeared in this comment and its own now-deleted declaration), same for thinkr:hostedBy (confirmed dead in relationships.ttl's own scopeNote explaining its deprecation) — both were leftover schema that outlived the decisions that superseded them. RANGE WIDENED 2026-08-13 to include thinkr:EarthSystemComponent (real macro-scale physical Earth-system phenomena, e.g. the AMOC, that Hagens hosts dedicated episodes about via expert guests, distinct from thinkr:Concept — his OWN analytical frameworks/reframings) — reusing this exact property rather than inventing a parallel one, matching this project's standing 'don't build new relationship machinery when an existing generic one already fits' discipline."@en ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( thinkr:Concept thinkr:EarthSystemComponent thinkr:SchoolOfThought thinkr:Scenario thinkr:ScenarioFacet ) ] ;
+    skos:comment "Which Concept(s)/EarthSystemComponent(s)/SchoolOfThought(s)/Scenario(s)/ScenarioFacet(s) an Episode actually discusses — closes the gap identified 2026-07-13 (zero Episode->Concept links existed before this). Named 'discusses' with Episode as subject, matching every other Episode property's directionality (hasHost/hasGuest/hasCanonicalSource/dct:subject/dct:created all have Episode as subject) — deliberately NOT 'thinkr:discussedIn' as originally sketched in extraction/README.md, which would have had Concept as subject, facing the opposite direction from its siblings. thinkr:discussedIn itself REMOVED 2026-08-13 — confirmed via grep across the full data/seed/ directory to have zero real usage (only ever appeared in this comment and its own now-deleted declaration), same for thinkr:hostedBy (confirmed dead in relationships.ttl's own scopeNote explaining its deprecation) — both were leftover schema that outlived the decisions that superseded them. RANGE WIDENED 2026-08-13 to include thinkr:EarthSystemComponent, then WIDENED AGAIN same day to include thinkr:SchoolOfThought, then WIDENED A THIRD TIME same day to include thinkr:Scenario and thinkr:ScenarioFacet — closing the one genuinely missing edge between the Scenario-matrix work and the episode-linking work, per MJSullivan's explicit correction that Concept/Scenario/Series/Episode form a real graph with multiple direct edges, not a chain requiring traversal through intermediate nodes (Episode already links directly to Concept without routing through Scenario, and this closes the analogous Episode<->Scenario/ScenarioFacet gap the same direct way). Reusing this exact property each time rather than inventing a parallel one, matching this project's standing 'don't build new relationship machinery when an existing generic one already fits' discipline."@en ;
     skos:prefLabel "discusses"@en .
 
 thinkr:hasReplay a owl:ObjectProperty ;
@@ -430,3 +430,105 @@ thinkr:hasIndicatorCategory a owl:ObjectProperty ;
     rdfs:range thinkr:IndicatorCategory ;
     rdfs:comment "Which of the 21 Doughnut categories this specific Indicator belongs to."@en ;
     skos:prefLabel "has doughnut category"@en .
+
+#############################################
+# ADDED 2026-08-13 — internal positional/ordering structure for the
+# Scenario matrix, raised by MJSullivan: each of the 4 ScenarioDimensions
+# is itself a 2x2 grid along 2 more primitive sub-axes (e.g. Economic =
+# growth/contraction x within-limits/overshoot, confirmed from TGS_139's
+# own real page). Each ScenarioFacet occupies one of the 4 quadrant
+# positions. Real integer positions (not named-individual endpoints) so
+# ordering is genuinely SPARQL-queryable via FILTER(?x < ?y) directly,
+# per MJSullivan's explicit requirement. hasFacetCode gives each Facet
+# a single flat letter A-P (dimension-major order: Economic=A-D,
+# PowerAndDistribution=E-H, Geopolitical=I-L, EarthSystems=M-P; within
+# each dimension, 1=upper-left/2=upper-right/3=lower-left/4=lower-right
+# reading order) — explicitly asserted rather than derived, matching
+# this project's standing no-reasoner discipline (same reasoning as
+# hasPersonEntityType/hasNamedEntityType both needing direct assertion).
+# Composite Scenario IRIs are built directly from these 4 codes, e.g.
+# tgs:Scenario.A-E-I-M — confirmed 2026-08-13 by deriving it
+# independently from the real axis data and finding it EXACTLY matches
+# MJSullivan's own worked example for "The Long Repair," a strong
+# validation the derivation logic is right, not just self-consistent.
+#############################################
+
+thinkr:hasXPosition a owl:DatatypeProperty ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "1-5 — this Facet's position along its Dimension's X sub-axis, modeling a genuine continuum rather than a boolean, per MJSullivan's explicit correction (2026-08-13): real positions aren't extremes, and a true midpoint (3) is meaningfully different from either pole. 1 and 5 = the most extreme conceivable positions (not currently populated by any real Facet — reserved, not asserted). 3 = the genuine midpoint (also not currently populated). 2 and 4 = the 16 currently-modeled ScenarioFacets, each one step in from a true extreme, matching how they're actually described in the source material (realistic/discussed positions, not theoretical maximums). REVISED from an original 0/1 boolean design, remapped 0->2 and 1->4 — a pure value change, the A-P facet-code lettering and all 4 named Scenario IRIs are unaffected. See the owning ScenarioDimension's xAxisLowLabel/xAxisHighLabel for the GENERAL direction these values point in (not per-value labels — only 2 of 5 possible values are currently populated)."@en ;
+    skos:prefLabel "has X position"@en .
+
+thinkr:hasYPosition a owl:DatatypeProperty ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "1-5 — this Facet's position along its Dimension's Y sub-axis. Same continuum design as thinkr:hasXPosition — see its own rdfs:comment for the full reasoning."@en ;
+    skos:prefLabel "has Y position"@en .
+
+thinkr:hasFacetCode a owl:DatatypeProperty ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A single flat letter A-P identifying this Facet's position across all 16 (dimension-major order). Used to construct composite Scenario IRIs."@en ;
+    skos:prefLabel "has facet code"@en .
+
+thinkr:xAxisLowLabel a owl:DatatypeProperty ; rdfs:domain thinkr:ScenarioDimension ; rdfs:range xsd:string ;
+    rdfs:comment "What the LOW side of this Dimension's X sub-axis means semantically — the direction values 1-2 point in on the 1-5 continuum (see thinkr:hasXPosition). Currently only value 2 is populated by a real Facet; 1 is reserved for a more extreme case not yet in any real source material. CORRECTED 2026-08-13 — this comment previously said 'What X=0 means,' left over from the original boolean design and never updated when hasXPosition/hasYPosition were revised into a 1-5 continuum, catching this exact staleness is what MJSullivan flagged when asking how these 4 properties worked."@en ;
+    skos:prefLabel "X axis low label"@en .
+
+thinkr:xAxisHighLabel a owl:DatatypeProperty ; rdfs:domain thinkr:ScenarioDimension ; rdfs:range xsd:string ;
+    rdfs:comment "What the HIGH side of this Dimension's X sub-axis means semantically — the direction values 4-5 point in on the 1-5 continuum. Currently only value 4 is populated; 5 is reserved. Same correction as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    skos:prefLabel "X axis high label"@en .
+
+thinkr:yAxisLowLabel a owl:DatatypeProperty ; rdfs:domain thinkr:ScenarioDimension ; rdfs:range xsd:string ;
+    rdfs:comment "What the LOW side of this Dimension's Y sub-axis means semantically — the direction values 1-2 point in on the 1-5 continuum. Currently only value 2 is populated; 1 is reserved. Same correction as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    skos:prefLabel "Y axis low label"@en .
+
+thinkr:yAxisHighLabel a owl:DatatypeProperty ; rdfs:domain thinkr:ScenarioDimension ; rdfs:range xsd:string ;
+    rdfs:comment "What the HIGH side of this Dimension's Y sub-axis means semantically — the direction values 4-5 point in on the 1-5 continuum. Currently only value 4 is populated; 5 is reserved. Same correction as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    skos:prefLabel "Y axis high label"@en .
+
+#############################################
+# ADDED 2026-08-13 — Scenario-level positions, raised by MJSullivan so
+# Scenarios (not just their component Facets) support the same real
+# "2 < 4" queryable comparison. A Scenario spans all 4 Dimensions at
+# once, so it can't have a single hasXPosition/hasYPosition the way a
+# Facet does — 8 properties instead (X and Y per Dimension), one pair
+# per Dimension, matching thinkr:ScenarioDimension's own 4 names.
+# Each Scenario's value here is DENORMALIZED from its chosen Facet's own
+# hasXPosition/hasYPosition (the same number asserted in 2 places, a
+# real, explicit design tradeoff, not an oversight) — real query
+# convenience (compare Scenarios directly along one Dimension without
+# traversing hasFacet each time), at the cost of a genuine sync risk if
+# a Facet's own position ever changes without updating every Scenario
+# built from it. Worth a real consistency-check script eventually,
+# matching compute_confidence.py's role for LinkNote confidence — not
+# built yet, flagged as a real gap, not silently assumed away.
+#############################################
+
+thinkr:hasEconomicXPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Economic-dimension X position (1-5 continuum) — must match its chosen Economic ScenarioFacet's own thinkr:hasXPosition."@en ;
+    skos:prefLabel "has Economic X position"@en .
+thinkr:hasEconomicYPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Economic-dimension Y position — must match its chosen Economic ScenarioFacet's own thinkr:hasYPosition."@en ;
+    skos:prefLabel "has Economic Y position"@en .
+
+thinkr:hasPowerAndDistributionXPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Power & Distribution-dimension X position — must match its chosen Facet's own thinkr:hasXPosition."@en ;
+    skos:prefLabel "has Power and Distribution X position"@en .
+thinkr:hasPowerAndDistributionYPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Power & Distribution-dimension Y position — must match its chosen Facet's own thinkr:hasYPosition."@en ;
+    skos:prefLabel "has Power and Distribution Y position"@en .
+
+thinkr:hasGeopoliticalXPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Geopolitical-dimension X position — must match its chosen Facet's own thinkr:hasXPosition."@en ;
+    skos:prefLabel "has Geopolitical X position"@en .
+thinkr:hasGeopoliticalYPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Geopolitical-dimension Y position — must match its chosen Facet's own thinkr:hasYPosition."@en ;
+    skos:prefLabel "has Geopolitical Y position"@en .
+
+thinkr:hasEarthSystemsXPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Earth Systems-dimension X position — must match its chosen Facet's own thinkr:hasXPosition."@en ;
+    skos:prefLabel "has Earth Systems X position"@en .
+thinkr:hasEarthSystemsYPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
+    rdfs:comment "This Scenario's Earth Systems-dimension Y position — must match its chosen Facet's own thinkr:hasYPosition."@en ;
+    skos:prefLabel "has Earth Systems Y position"@en .

@@ -32,8 +32,16 @@ thinkr:Scenario a owl:Class ;
     skos:scopeNote "4 named individuals modeled here, out of 256 mathematically possible combinations (4 Dimensions ^ 4 Facets each) — these 4 are Hagens' own chosen representative examples, not claimed to be exhaustive or equally likely. See scenariofacets.ttl for the 16 individual Facet options this class combines."@en ;
     skos:prefLabel "Scenario"@en .
 
-tgs:Scenario.TheLongRepair a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "The Long Repair"@en ;
+tgs:Scenario.A-E-I-M a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "A-E-I-M"@en ;
+    thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 4 ;
+    thinkr:hasPowerAndDistributionXPosition 2 ; thinkr:hasPowerAndDistributionYPosition 4 ;
+    thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 4 ;
+    thinkr:hasEarthSystemsXPosition 2 ; thinkr:hasEarthSystemsYPosition 4 ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "The Long Repair"@en ;
+        skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.TheLongRepair to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
         tgs:Concept.GreatSimplification,
@@ -42,8 +50,16 @@ tgs:Scenario.TheLongRepair a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.StrainedButWorkable ;
     skos:definition "Managed contraction combined with broadly shared power, cooperative regionally-self-sufficient geopolitics, and a strained-but-still-functional biosphere. Explicitly named by Hagens as the aspirational path — hard to reach and, in his own framing, the hardest of the 4 to hold once reached (since it depends entirely on maintaining trust and legitimacy while material throughput is falling), but the one he considers most worth striving toward. He notes it will read as failure/decline by every conventional growth-based metric even while representing genuine improvement in lived experience — a healing-vs-dying confusion he considers one of the deepest challenges in the whole framework."@en .
 
-tgs:Scenario.MordorPersists a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "Mordor Persists"@en ;
+tgs:Scenario.D-G-L-N a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "D-G-L-N"@en ;
+    thinkr:hasEconomicXPosition 4 ; thinkr:hasEconomicYPosition 2 ;
+    thinkr:hasPowerAndDistributionXPosition 2 ; thinkr:hasPowerAndDistributionYPosition 2 ;
+    thinkr:hasGeopoliticalXPosition 4 ; thinkr:hasGeopoliticalYPosition 2 ;
+    thinkr:hasEarthSystemsXPosition 4 ; thinkr:hasEarthSystemsYPosition 4 ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Mordor Persists"@en ;
+        skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.MordorPersists to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
         tgs:ScenarioFacet.Mordor,
@@ -52,8 +68,16 @@ tgs:Scenario.MordorPersists a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.QuietUnraveling ;
     skos:definition "Growth that persists on paper while deepening real ecological and social overshoot underneath — roughly a continuation and intensification of the present. Hagens frames it as broadly comfortable for a global minority and genuinely precarious for most of the world, already the lived reality rather than a future scenario for large parts of the Global South. He compares its apparent stability to a cancer's stability within a body — self-perpetuating and outwardly 'healthy' by the metrics used to measure it, right up until the underlying foundation it depends on gives out, at which point collapse is fast rather than gradual."@en .
 
-tgs:Scenario.FortressWorld a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "Fortress World"@en ;
+tgs:Scenario.A-H-K-O a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "A-H-K-O"@en ;
+    thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 4 ;
+    thinkr:hasPowerAndDistributionXPosition 4 ; thinkr:hasPowerAndDistributionYPosition 2 ;
+    thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 2 ;
+    thinkr:hasEarthSystemsXPosition 2 ; thinkr:hasEarthSystemsYPosition 2 ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Fortress World"@en ;
+        skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.FortressWorld to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
         tgs:Concept.GreatSimplification,
@@ -62,8 +86,16 @@ tgs:Scenario.FortressWorld a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.HothouseTriage ;
     skos:definition "What happens when real economic contraction arrives and those in power choose to hoard rather than share it. Hagens describes daily life here as tightly controlled but not necessarily chaotic — a grim, known order (his own comparison: The Hunger Games) where some people and regions are actively written off to protect others. He argues it's fragile over the long run because active control/surveillance is itself energy- and complexity-intensive, which becomes progressively harder to sustain as the underlying resource base contracts."@en .
 
-tgs:Scenario.TheUnraveling a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "The Unraveling"@en ;
+tgs:Scenario.C-H-K-P a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "C-H-K-P"@en ;
+    thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 2 ;
+    thinkr:hasPowerAndDistributionXPosition 4 ; thinkr:hasPowerAndDistributionYPosition 2 ;
+    thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 2 ;
+    thinkr:hasEarthSystemsXPosition 4 ; thinkr:hasEarthSystemsYPosition 2 ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "The Unraveling"@en ;
+        skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.TheUnraveling to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
         tgs:ScenarioFacet.MadMax,
