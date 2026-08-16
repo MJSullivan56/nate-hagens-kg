@@ -1,3 +1,4 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -96,4 +97,15 @@ tgs:SchoolOfThought.PlanetaryBoundaries a thinkr:SchoolOfThought,
     skos:prefLabel "Planetary Boundaries"@en ;
     skos:definition "Scientific framework (first published 2009, periodically updated since) identifying 9 processes that regulate Earth's stability and resilience, each with a proposed boundary defining a 'safe operating space for humanity' — as of the most recent update, a majority of the 9 are considered transgressed. Led by Johan Rockström, originating at and maintained by the Stockholm Resilience Centre (Rockström's founding institution) in ongoing collaboration with the Potsdam Institute for Climate Impact Research (which he also directs). Directly cited as a foundational influence in this graph's own SchoolOfThought.DoughnutEconomics entry ('ecological ceiling... building on Rockstrom et al.'s planetary boundaries framework') — worth a formal property link once thinkr:influencedBy/convergesWith's current Concept-only domain restriction is reconsidered for SchoolOfThought-to-SchoolOfThought relationships; not forced through an ill-fitting property here."@en ;
     owl:sameAs <http://dbpedia.org/resource/Planetary_boundaries> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 bootstrap.
+#############################################
+
+tgs:SchoolOfThought.WarmData a thinkr:SchoolOfThought,
+        owl:NamedIndividual ;
+    skos:prefLabel "Warm Data"@en ;
+    skos:definition "A methodology developed by Nora Bateson (~2012 onward), defined as transcontextual information about the interrelationships that integrate a complex living system — contrasted with 'cold' data that isolates variables from their relational context. Operationalized through the 'Warm Data Lab' workshop format, which the International Bateson Institute has since certified over 600 hosts to run internationally."@en ;
+    dcterms:source <https://www.warmdata.life/international-bateson-institute> ;
     .

@@ -32,8 +32,9 @@ thinkr:Scenario a owl:Class ;
     skos:scopeNote "4 named individuals modeled here, out of 256 mathematically possible combinations (4 Dimensions ^ 4 Facets each) — these 4 are Hagens' own chosen representative examples, not claimed to be exhaustive or equally likely. See scenariofacets.ttl for the 16 individual Facet options this class combines."@en ;
     skos:prefLabel "Scenario"@en .
 
-tgs:Scenario.A-E-I-M a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "A-E-I-M"@en ;
+tgs:Scenario.GS-CI-FN-SW a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Great Simplification + Civic Ideal + Friendly Neighbors + Strained But Workable"@en ;
+    skos:scopeNote "RENAMED 2026-08-13 (second rename) from tgs:Scenario.A-E-I-M to a 2-letter mnemonic code, per MJSullivan's explicit request — more readable than an arbitrary single-letter position. prefLabel changed from the bare code to a spelled-out concatenation of its 4 real component Facet names. NOTE, same tradeoff class as this Scenario's own denormalized X/Y positions: this prefLabel is DERIVED FROM (and must stay in sync with) its component Facets' own prefLabels via hasFacet — if a Facet's own name ever changes, this label can silently go stale unless updated to match. Confirmed via grep this rename required updating references in episodes.ttl too (unlike the original TheLongRepair->A-E-I-M rename, which had zero external references at the time)."@en ;
     thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 4 ;
     thinkr:hasPowerAndDistributionXPosition 2 ; thinkr:hasPowerAndDistributionYPosition 4 ;
     thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 4 ;
@@ -50,8 +51,9 @@ tgs:Scenario.A-E-I-M a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.StrainedButWorkable ;
     skos:definition "Managed contraction combined with broadly shared power, cooperative regionally-self-sufficient geopolitics, and a strained-but-still-functional biosphere. Explicitly named by Hagens as the aspirational path — hard to reach and, in his own framing, the hardest of the 4 to hold once reached (since it depends entirely on maintaining trust and legitimacy while material throughput is falling), but the one he considers most worth striving toward. He notes it will read as failure/decline by every conventional growth-based metric even while representing genuine improvement in lived experience — a healing-vs-dying confusion he considers one of the deepest challenges in the whole framework."@en .
 
-tgs:Scenario.D-G-L-N a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "D-G-L-N"@en ;
+tgs:Scenario.MO-CD-GD-QU a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Mordor + Captured Democracy + Geopolitical Danger Zone + Quiet Unraveling"@en ;
+    skos:scopeNote "RENAMED 2026-08-13 (second rename) from tgs:Scenario.D-G-L-N to a 2-letter mnemonic code, per MJSullivan's explicit request — more readable than an arbitrary single-letter position. prefLabel changed from the bare code to a spelled-out concatenation of its 4 real component Facet names. NOTE, same tradeoff class as this Scenario's own denormalized X/Y positions: this prefLabel is DERIVED FROM (and must stay in sync with) its component Facets' own prefLabels via hasFacet — if a Facet's own name ever changes, this label can silently go stale unless updated to match. Confirmed via grep this rename required updating references in episodes.ttl too (unlike the original TheLongRepair->A-E-I-M rename, which had zero external references at the time)."@en ;
     thinkr:hasEconomicXPosition 4 ; thinkr:hasEconomicYPosition 2 ;
     thinkr:hasPowerAndDistributionXPosition 2 ; thinkr:hasPowerAndDistributionYPosition 2 ;
     thinkr:hasGeopoliticalXPosition 4 ; thinkr:hasGeopoliticalYPosition 2 ;
@@ -68,8 +70,9 @@ tgs:Scenario.D-G-L-N a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.QuietUnraveling ;
     skos:definition "Growth that persists on paper while deepening real ecological and social overshoot underneath — roughly a continuation and intensification of the present. Hagens frames it as broadly comfortable for a global minority and genuinely precarious for most of the world, already the lived reality rather than a future scenario for large parts of the Global South. He compares its apparent stability to a cancer's stability within a body — self-perpetuating and outwardly 'healthy' by the metrics used to measure it, right up until the underlying foundation it depends on gives out, at which point collapse is fast rather than gradual."@en .
 
-tgs:Scenario.A-H-K-O a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "A-H-K-O"@en ;
+tgs:Scenario.GS-FF-CW-HT a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Great Simplification + Forced Feudalism + Cold War Scenario + Hothouse Triage"@en ;
+    skos:scopeNote "RENAMED 2026-08-13 (second rename) from tgs:Scenario.A-H-K-O to a 2-letter mnemonic code, per MJSullivan's explicit request — more readable than an arbitrary single-letter position. prefLabel changed from the bare code to a spelled-out concatenation of its 4 real component Facet names. NOTE, same tradeoff class as this Scenario's own denormalized X/Y positions: this prefLabel is DERIVED FROM (and must stay in sync with) its component Facets' own prefLabels via hasFacet — if a Facet's own name ever changes, this label can silently go stale unless updated to match. Confirmed via grep this rename required updating references in episodes.ttl too (unlike the original TheLongRepair->A-E-I-M rename, which had zero external references at the time)."@en ;
     thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 4 ;
     thinkr:hasPowerAndDistributionXPosition 4 ; thinkr:hasPowerAndDistributionYPosition 2 ;
     thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 2 ;
@@ -86,8 +89,9 @@ tgs:Scenario.A-H-K-O a thinkr:Scenario, owl:NamedIndividual ;
         tgs:ScenarioFacet.HothouseTriage ;
     skos:definition "What happens when real economic contraction arrives and those in power choose to hoard rather than share it. Hagens describes daily life here as tightly controlled but not necessarily chaotic — a grim, known order (his own comparison: The Hunger Games) where some people and regions are actively written off to protect others. He argues it's fragile over the long run because active control/surveillance is itself energy- and complexity-intensive, which becomes progressively harder to sustain as the underlying resource base contracts."@en .
 
-tgs:Scenario.C-H-K-P a thinkr:Scenario, owl:NamedIndividual ;
-    skos:prefLabel "C-H-K-P"@en ;
+tgs:Scenario.MM-FF-CW-CB a thinkr:Scenario, owl:NamedIndividual ;
+    skos:prefLabel "Mad Max + Forced Feudalism + Cold War Scenario + Cascading Breakdown"@en ;
+    skos:scopeNote "RENAMED 2026-08-13 (second rename) from tgs:Scenario.C-H-K-P to a 2-letter mnemonic code, per MJSullivan's explicit request — more readable than an arbitrary single-letter position. prefLabel changed from the bare code to a spelled-out concatenation of its 4 real component Facet names. NOTE, same tradeoff class as this Scenario's own denormalized X/Y positions: this prefLabel is DERIVED FROM (and must stay in sync with) its component Facets' own prefLabels via hasFacet — if a Facet's own name ever changes, this label can silently go stale unless updated to match. Confirmed via grep this rename required updating references in episodes.ttl too (unlike the original TheLongRepair->A-E-I-M rename, which had zero external references at the time)."@en ;
     thinkr:hasEconomicXPosition 2 ; thinkr:hasEconomicYPosition 2 ;
     thinkr:hasPowerAndDistributionXPosition 4 ; thinkr:hasPowerAndDistributionYPosition 2 ;
     thinkr:hasGeopoliticalXPosition 2 ; thinkr:hasGeopoliticalYPosition 2 ;

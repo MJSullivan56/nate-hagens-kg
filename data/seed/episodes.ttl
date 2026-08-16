@@ -54,6 +54,7 @@ thinkr:Episode a owl:Class ;
 
 tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Can Money Serve Life? How to Fund Communities Doing the Real Work"@en ;
     rdfs:comment "Note: Nate also appeared as GUEST on Matthew Monahan's own show 'The Regeneration Will Be Funded' (Ma Earth), a reciprocal cross-appearance — confirmed 2026-07-11, not modeled as a thinkr:Episode since that's a different show, out of this class's scope."@en ;
     dct:created "2026-06-29"^^xsd:date ;
@@ -68,6 +69,7 @@ tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_85_WisdomNatureAndTheBrain a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Wisdom, Nature, and the Brain"@en ;
     dct:created "2023-07-13"^^xsd:date ;
     dct:issued "2023-08-23"^^xsd:date ;
@@ -80,6 +82,7 @@ tgs:Interview.TGS_85_WisdomNatureAndTheBrain a thinkr:Episode, owl:NamedIndividu
 
 tgs:Interview.TGS_165_WisdomOverPower a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Wisdom Over Power: Why Contemplation & Wonder Are Essential for the Future of Humanity"@en ;
     rdfs:comment "A THIRD McGilchrist appearance discovered 2026-07-11 during source verification for the other two — not previously known to this graph."@en ;
     dct:created "2025-01-02"^^xsd:date ;
@@ -93,6 +96,7 @@ tgs:Interview.TGS_165_WisdomOverPower a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_217_WisdomInAWorldInCrisis a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Wisdom in a World in Crisis"@en ;
     rdfs:comment "dct:subject deliberately omitted — confirmed via search snippet only, not a full page fetch, so the site's own subject tags for this specific episode were never directly confirmed (unlike 226/85/165, each confirmed via live fetch)."@en ;
     dct:created "2026-03-24"^^xsd:date ;
@@ -104,6 +108,7 @@ tgs:Interview.TGS_217_WisdomInAWorldInCrisis a thinkr:Episode, owl:NamedIndividu
 
 tgs:Interview.TGS_5_BendNotBreakPart1 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bend Not Break Part 1: Energy Blindness"@en ;
     rdfs:comment "Confirmed 2026-07-13 as Part 1 of a real 5-part series discovered while verifying this episode — not independently known before. Note the URL slug's confirmed typo: 'schmactenberger' not 'schmachtenberger', an inconsistency in TGS's own URLs, not an error introduced here."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -114,6 +119,7 @@ tgs:Interview.TGS_5_BendNotBreakPart1 a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_20_MaximumPowerHyperAgents a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bend Not Break Part 2: Maximum Power and Hyper Agents"@en ;
     dct:created "2022-05-25"^^xsd:date ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -125,6 +131,7 @@ tgs:Interview.TGS_20_MaximumPowerHyperAgents a thinkr:Episode, owl:NamedIndividu
 
 tgs:Interview.TGS_31_SensemakingUncertaintyPurpose a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bend Not Break Part 3: Sensemaking, Uncertainty, and Purpose"@en ;
     rdfs:comment "Nate's own Substack post about this episode explicitly says the conversation diverged from its planned topic, 'and this divergence means we've extended this Bend Not Break series to (at least) 5 installments' — this is the episode where the series grew from its original shorter plan."@en ;
     dct:created "2022-08-10"^^xsd:date ;
@@ -137,6 +144,7 @@ tgs:Interview.TGS_31_SensemakingUncertaintyPurpose a thinkr:Episode, owl:NamedIn
 
 tgs:Interview.TGS_42_ModelingDriversMetacrisis a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bend Not Break Part 4: Modeling the Drivers of the Metacrisis"@en ;
     dct:created "2022-10-26"^^xsd:date ;
     thinkr:discusses tgs:Concept.Metacrisis ;
@@ -148,6 +156,7 @@ tgs:Interview.TGS_42_ModelingDriversMetacrisis a thinkr:Episode, owl:NamedIndivi
 
 tgs:Interview.TGS_50_CriteriaCategoriesResponse a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bend Not Break Part 5: Criteria and Categories for Response"@en ;
     rdfs:comment "The final installment — confirmed via multiple sources as the series close, though 'How does it end' framing throughout the search results leaves open whether Daniel/Nate consider this genuinely final or just final-for-now."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -159,6 +168,7 @@ tgs:Interview.TGS_50_CriteriaCategoriesResponse a thinkr:Episode, owl:NamedIndiv
 
 tgs:Interview.TGS_126_AVisionForBetterment a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "A Vision for Betterment"@en ;
     rdfs:comment "URL and all other details not independently verified as of 2026-07-11."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -166,6 +176,7 @@ tgs:Interview.TGS_126_AVisionForBetterment a thinkr:Episode, owl:NamedIndividual
 
 tgs:Interview.TGS_132_WideBoundaryImpactsOfAI a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "The Wide Boundary Impacts of AI"@en ;
     rdfs:comment "URL and all other details not independently verified as of 2026-07-11 — though a strong unverified candidate replay link was found (https://youtu.be/_P8PLHvZygo, explicitly labeled 'Daniel Schmachtenberger episode on AI' in Ep 85's own show notes), not yet added pending direct confirmation it's actually this specific episode."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -190,12 +201,12 @@ tgs:Interview.TGS_165_WisdomOverPower dct:references tgs:Interview.TGS_85_Wisdom
 
 tgs:Series.HowToThinkAboutTheFuture a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
     dct:hasPart 
-        tgs:Monologue.TGS_138_Part1ChangingTheFuture, 
-        tgs:Monologue.TGS_139_Part2FourVariables, 
-        tgs:Monologue.TGS_145_Part3UphillFutures, 
-        tgs:Monologue.TGS_148_Part4CompositeWorlds, 
-        tgs:Monologue.TGS_150_Part5PersonalLandscapes, 
-        tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty ;
+        tgs:Monologue.Frankly_138_Part1ChangingTheFuture, 
+        tgs:Monologue.Frankly_139_Part2FourVariables, 
+        tgs:Monologue.Frankly_145_Part3UphillFutures, 
+        tgs:Monologue.Frankly_148_Part4CompositeWorlds, 
+        tgs:Monologue.Frankly_150_Part5PersonalLandscapes, 
+        tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty ;
     skos:prefLabel "How to Think About the Future"@en ;
     rdfs:comment "6-part Frankly series (Frankly #138/139/145/148/150/151), confirmed complete 2026-07-15/16 via all 6 real transcripts. Grew organically, same pattern as Bend Not Break below — Part 4's own opening notes the series kept getting longer than planned, and Part 5 was originally meant to be the finale before Hagens split it into a personal-application aside (Part 5) plus a separate planning-methodology closer (Part 6). Part 4 is the framework-defining episode (the 4-Dimension/16-Facet/256-combination scenario matrix, modeled in scenariodimensions.ttl/scenariofacets.ttl/scenarios.ttl) — Parts 1-3 build the conceptual groundwork (holding the future as a landscape of possibilities; the 4 grids themselves; a valleys/ridges/switchbacks/erosion landscape metaphor), Parts 5-6 apply it (to individual lives; to real-world planning/action under uncertainty)."@en ;
     .
@@ -216,8 +227,9 @@ tgs:Series.BendNotBreak a thinkr:Series, dcmitype:Collection, owl:NamedIndividua
     rdfs:comment "Discovered 2026-07-13 while verifying 3 previously-unrelated Schmachtenberger episode entries — turned out to be a real, distinct 5-part series never before modeled. Confirmed via Nate's own words (a Substack post about Part 3) that the series wasn't originally planned as 5 parts — it grew organically from conversation, first to 4 planned parts, then 5 once Part 3 diverged from its intended topic."@en ;
     .
 
-tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "How to Think About the Future (Part 1): Changing the Future Starts with How You Think"@en ;
     skos:definition "Opens the series by naming a pattern Hagens says he hears repeatedly from the audience: people who have already settled on one storyline about the future and filter everything else through it. Introduces Scenario Thinking as the alternative, names 3 reasons holding multiple futures at once is hard in practice (the nervous system wants resolution, careers/identities attach to particular futures, cultural incentives reward confident stories over honest uncertainty), and closes by introducing Shortfall Risk, which the episode's own description states will act as connective tissue across the rest of the series."@en ;
     dct:created "2026-04-11"^^xsd:date ;
@@ -248,10 +260,11 @@ tgs:Monologue.TGS_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividu
         tgs:Interview.TGS_165_WisdomOverPower,
         tgs:Work.ComplexityAndPostmodernism,
         tgs:Work.GlobalTippingPointsReport2025 ;
-    skos:scopeNote "REBUILT 2026-08-13 from TGS_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
+    skos:scopeNote "REBUILT 2026-08-13 from Frankly_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
 
-tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "How to Think About the Future (Part 2): Four Variables Shaping the Coming Decades"@en ;
     skos:definition "Fleshed out 2026-08-13 from the episode's own official show notes (previously a bare stub). Introduces Nate's original 4-scenario framing from an earlier summit presentation (Green Growth, Mordor, The Great Simplification, Mad Max — the direct precursor to the fuller 4-Dimension/16-Facet framework built out in Part 4), then surveys the real-world pressures shaping which of those futures is more likely: overshoot and planetary boundaries, wealth concentration, AI/energy buildout, geopolitical fragmentation and supply-chain interdependence, ecological degradation (soils, pollinators, fisheries, water tables), and demographic shifts (fertility decline, population pyramid inversion)."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -266,11 +279,12 @@ tgs:Monologue.TGS_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
     dct:source <https://natehagens.substack.com/p/essay-how-to-think-about-the-future-92e> ;
     thinkr:discusses tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.CarbonPulse, tgs:ScenarioFacet.GreenGrowth, tgs:ScenarioFacet.Mordor, tgs:Concept.GreatSimplification, tgs:ScenarioFacet.MadMax ;
     dct:references tgs:Persona.DanielSchmachtenberger, tgs:Series.BendNotBreak, tgs:Interview.TGS_12_DennisMeadows ;
-    skos:scopeNote "hasCanonicalSource fixed 2026-08-13 — same xsd:anyURI-literal-instead-of-proper-resource bug originally found and fixed on TGS_138, never applied to the rest of this series until now."@en ;
+    skos:scopeNote "hasCanonicalSource fixed 2026-08-13 — same xsd:anyURI-literal-instead-of-proper-resource bug originally found and fixed on Frankly_138, never applied to the rest of this series until now."@en ;
     .
 
-tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "How to Think About the Future (Part 3): Uphill Futures in a Downhill World"@en ;
     skos:definition "Introduces a landscape metaphor (borrowed from developmental biology's Waddington landscape and lake-ecology succession) for thinking about civilizational futures: valleys (stable states systems settle into), ridges (the barriers/cost of transitioning between them), switchbacks (deliberate human effort — trust-building, institution-building — that makes an otherwise-too-steep transition possible), and erosion (neglect or active harm that makes a transition permanently harder). Central claim: the easiest-to-reach futures are not the same as the most desirable ones — desirable futures generally require sustained uphill effort to both reach and remain in, while undesirable ones tend to be the default downhill path requiring no coordinated effort at all."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -287,8 +301,9 @@ tgs:Monologue.TGS_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
     skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real URL uses a different month folder AND retains a .docx.pdf double-extension — the pattern-matched guess used across this whole series turned out inconsistent with the real site for parts 3/5/6, confirmed only via direct page fetches, not assumed)."@en ;
     .
 
-tgs:Monologue.TGS_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "How to Think About the Future (Part 4): Mordor to the Long Repair - How Might Daily Life Feel in the Next Decades?"@en ;
     skos:definition "The framework-defining episode of this series: proposes 4 Dimensions (grids) - Economic, Power & Distribution, Geopolitical, Earth Systems - each with 4 Facet options, for 256 mathematically possible composite futures, and builds out 4 representative named examples in detail (The Long Repair, Mordor Persists, Fortress World, The Unraveling - modeled as thinkr:Scenario individuals in scenarios.ttl). Explicit that these 4 are chosen to stretch thinking, not presented as an exhaustive or equally-likely set, and that the real future will likely be some regional patchwork of all of them rather than any single one holding globally."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -301,13 +316,14 @@ tgs:Monologue.TGS_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/Frankly-148-Transcript-How-to-Think-About-the-Future-Part-4.pdf> ;
     thinkr:hasReplay <https://youtu.be/KlkAeQ5xdeQ> ;
     dct:source <https://natehagens.substack.com/p/mordor-to-the-long-repair-how-might> ;
-    thinkr:discusses tgs:Concept.ShortfallRisk, tgs:Concept.ScenarioThinking, tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    thinkr:discusses tgs:Concept.ShortfallRisk, tgs:Concept.ScenarioThinking, tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
     dct:references tgs:Interview.TGS_27_JoeTainter, tgs:Monologue.Frankly_140_APerspectiveFromLebanon, tgs:Interview.TGS_222_BrettKencairn, tgs:Interview.TGS_178_AndrewMillison ;
     skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real is 2026/06, not the 2026/04 pattern-matched guess), dct:references added (Tainter -> real guest episode #27, closing a gap flagged weeks ago in the original backlog; #222/#178 resolved to real guest names via the show notes own URL slugs, not left as bare numbers)."@en ;
     .
 
-tgs:Monologue.TGS_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "Foundations Before Outcomes: The Future Beneath Your Feet | How to Think About the Future Pt 5"@en ;
     skos:definition "Applies the same landscape/valleys/ridges framework from Part 3, at the scale of an individual person's life rather than civilizational futures - originally intended as the series finale (no-regret responses to the 4 composite worlds from Part 4) before Hagens split that material off into Part 6, once he realized a personal/individual-scale version of the same macro dynamics was worth its own episode."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -319,13 +335,14 @@ tgs:Monologue.TGS_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndivid
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/150-foundations-before-outcomes> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-150-Transcript-How-to-Think-About-the-Future-Part-5.docx.pdf> ;
     thinkr:hasReplay <https://youtu.be/YvJ4HkWIsL8> ;
-    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.PerpetualMulligans, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.PerpetualMulligans, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
     dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
     skos:scopeNote "MAJOR CORRECTION 2026-08-13: this episode's skos:prefLabel and thinkr:hasCanonicalSource were both WRONG since first built — a plausible-looking, pattern-matched title/URL that was never actually verified against the real page (the guessed URL 404s). Corrected via direct fetch of the real page. Same lesson as several other corrections this session: a plausible guess is not the same claim as a verified fact, even when it fits an established naming convention."@en ;
     .
 
-tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedIndividual ;
+tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "Protect the Irreversible: What Matters Most in an Uncertain Future? | How to Think About the Future Pt 6"@en ;
     skos:definition "The series' closer - a methodology for individual/community planning and action given the 4-Dimension framework, rather than a specific list of recommended actions. Opens with a type-1/type-2-error framing (false positives vs. false negatives in how people respond to uncertain threats) as a lens for thinking about failure modes in planning, before laying out Hagens' own approach to prioritizing action under deep uncertainty."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -337,9 +354,9 @@ tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedI
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/151-protect-the-irreversible> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-151-Transcript-How-to-Think-About-the-Future-Part-6.pdf> ;
     thinkr:hasReplay <https://youtu.be/bMfzVhTWMDM> ;
-    thinkr:discusses tgs:Concept.ScenarioThinking, tgs:Concept.UnicornStrategies, tgs:Concept.Superorganism, tgs:Scenario.A-E-I-M, tgs:Scenario.D-G-L-N, tgs:Scenario.A-H-K-O, tgs:Scenario.C-H-K-P ;
+    thinkr:discusses tgs:Concept.ScenarioThinking, tgs:Concept.UnicornStrategies, tgs:Concept.Superorganism, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
     dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes ;
-    skos:scopeNote "MAJOR CORRECTION 2026-08-13: same class of error as TGS_150 — this episode's skos:prefLabel, thinkr:hasCanonicalSource, and hasTranscript month were all wrong since first built, never verified against the real page until now. Corrected via direct fetch."@en ;
+    skos:scopeNote "MAJOR CORRECTION 2026-08-13: same class of error as Frankly_150 — this episode's skos:prefLabel, thinkr:hasCanonicalSource, and hasTranscript month were all wrong since first built, never verified against the real page until now. Corrected via direct fetch."@en ;
     .
 
 #############################################
@@ -359,34 +376,46 @@ tgs:Monologue.TGS_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedI
 
 tgs:Interview.TGS_3_OilBestAndWorstOfFuels a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Oil: It Was the Best of Fuels, It Was the Worst of Fuels"@en ;
-    rdfs:comment "Date not yet confirmed — very early in TGS's numbering (before Episode 5), consistent with being one of the show's first guest interviews, but no exact date independently verified as of 2026-07-14."@en ;
+    dct:created "2021-12-29"^^xsd:date ;
+    dct:issued "2022-01-07"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.ArtBerman ;
-    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/03-arthurberman> .
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/03-arthurberman> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness, tgs:Concept.CarbonPulse, tgs:Concept.PeakOil ;
+    skos:scopeNote "2026-08-13: real dates confirmed and discusses links added from a complete real transcript + show notes upload (Nate's own first-ever TGS interview, per MJSullivan) — previously a bare stub with no confirmed date. This is Nate and Berman's very first recorded conversation together, explicitly framed by Nate as a primer/introduction to oil basics rather than an advanced deep-dive."@en .
 
 tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "BRICS+, Strategic Petroleum Reserve & Metaphysics"@en ;
     dct:created "2023-10-05"^^xsd:date ;
     dct:issued "2023-10-11"^^xsd:date ;
     dct:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.ArtBerman ;
-    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/92-art-berman> .
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/92-art-berman> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.HumanPredicament ;
+    skos:scopeNote "2026-08-13: discusses links added from a complete real transcript. Superorganism: Berman directly references reading 'the paper on the superorganism' (Nate's own). HumanPredicament: Berman references his own recent talk titled 'Getting Honest about the Human Predicament' -- explicitly crediting Nate's framing as an influence on his own thinking, a real instance of the relationship's own intellectual reciprocity, not just one-directional citation."@en .
 
 tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Shale Oil and the Slurping Sound"@en ;
     dct:created "2023-11-29"^^xsd:date ;
     dct:issued "2023-12-13"^^xsd:date ;
     dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.ArtBerman ;
-    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/101-art-berman> .
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/101-art-berman> ;
+    thinkr:discusses tgs:Concept.PeakOil, tgs:Concept.MaximumPowerPrinciple ;
+    skos:scopeNote "2026-08-13: discusses links added from a complete real transcript. PeakOil: this episode's own central theme (shale well productivity decline, 'the slurping sound'). MaximumPowerPrinciple: explicitly named by Berman discussing AI and drilling decisions -- real citation prompting this Concept's own minting this same session."@en .
 
 tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "A World on the Precipice"@en ;
     rdfs:comment "Publication date not directly confirmed for this specific episode — inferred as on or near 2026-05-13 based on its position in a chronologically-ordered episode list directly adjacent to Episode 219 (explicitly dated 2026-05-06), not independently verified against the episode's own page."@en ;
     dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics ;
@@ -406,6 +435,7 @@ tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual
 
 tgs:Interview.TGS_7_JoshFarleyAppearance1 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS07JoshFarleyTranscript.docx.pdf existing in the transcript library. Placeholder skos:prefLabel below states this honestly rather than inventing a title."@en ;
     skos:prefLabel "Josh Farley (Episode 7, title unconfirmed)"@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -413,6 +443,7 @@ tgs:Interview.TGS_7_JoshFarleyAppearance1 a thinkr:Episode, owl:NamedIndividual 
 
 tgs:Interview.TGS_29_JoshFarleyAppearance2 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS29JoshFarley2Transcript.docx.pdf existing in the transcript library (the '2' in the filename strongly implies this is TGS's own internally-tracked second Farley appearance)."@en ;
     skos:prefLabel "Josh Farley (Episode 29, title unconfirmed)"@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -420,6 +451,7 @@ tgs:Interview.TGS_29_JoshFarleyAppearance2 a thinkr:Episode, owl:NamedIndividual
 
 tgs:Interview.TGS_185_MythsShapingOurEconomies a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "The Myths Shaping Our Economies: The Disconnect between Economic Theory and Reality"@en ;
     rdfs:comment "Exact air date not confirmed in the source checked as of 2026-07-14 — title and guest confirmed via thegreatsimplification.com's own episode page."@en ;
     dct:subject tgs:Subject.EconomicsAndMonetary ;
@@ -436,6 +468,7 @@ tgs:Interview.TGS_185_MythsShapingOurEconomies a thinkr:Episode, owl:NamedIndivi
 
 tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Gaya Herrington: \"Humanity's Soul: Life or Growth?\""@en ;
     dct:created "2022-12-29"^^xsd:date ;
     dct:issued "2023-02-08"^^xsd:date ;
@@ -446,25 +479,28 @@ tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndivi
 
 #############################################
 # ADDED 2026-08-13 — minimal stubs for 2 Franklys cross-referenced by
-# TGS_138's own show notes (dct:references above). Genuinely minimal —
+# Frankly_138's own show notes (dct:references above). Genuinely minimal —
 # title/number/host only, no dates/definition/canonical source — same
 # "stub now, flesh out later if it earns it" discipline as every other
 # thin stub in this graph. NOT modeled as part of any Series — no
 # evidence either belongs to a numbered multi-part series the way
-# TGS_138 itself does.
+# Frankly_138 itself does.
 #############################################
 
 tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — surfaced via Frankly_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/129-a-guide-to-staying-human-part-1> ;
     .
 
 tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "What to Do as the World Falls Apart: A Framework for Action"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — surfaced via TGS_138's own show notes cross-reference, not yet independently fleshed out."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — surfaced via Frankly_138's own show notes cross-reference, not yet independently fleshed out."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/132-what-to-do-as-the-world-falls-apart> ;
     .
@@ -484,8 +520,9 @@ tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividu
 
 tgs:Interview.TGS_12_DennisMeadows a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Dennis Meadows"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via TGS_139's own show notes cross-reference; title/date not yet independently verified."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via Frankly_139's own show notes cross-reference; title/date not yet independently verified."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.DennisMeadows ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/12-dennis-meadows> ;
@@ -493,8 +530,9 @@ tgs:Interview.TGS_12_DennisMeadows a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_27_JoeTainter a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Joe Tainter"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via TGS_148's own show notes cross-reference, closing a gap flagged weeks ago (Tainter was already in the graph as a historical-influence citation via Concept.ComplexityCollapse's influencedBy, but his real guest episode was never modeled). Title/date not yet independently verified."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number confirmed via Frankly_148's own show notes cross-reference, closing a gap flagged weeks ago (Tainter was already in the graph as a historical-influence citation via Concept.ComplexityCollapse's influencedBy, but his real guest episode was never modeled). Title/date not yet independently verified."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.JosephTainter ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/27-joe-tainter> ;
@@ -502,14 +540,16 @@ tgs:Interview.TGS_27_JoeTainter a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_222_BrettKencairn a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Brett Kencairn"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real episode number and guest name confirmed via TGS_148's own show notes URL slug. Brett Kencairn is NOT yet bootstrapped as a Persona/Human — deliberately deferred, matching the same scope call made for AMOC's Levke Caesar/Leon Simons — so thinkr:hasGuest is NOT asserted here."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real episode number and guest name confirmed via Frankly_148's own show notes URL slug. Brett Kencairn is NOT yet bootstrapped as a Persona/Human — deliberately deferred, matching the same scope call made for AMOC's Levke Caesar/Leon Simons — so thinkr:hasGuest is NOT asserted here."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/222-brett-kencairn> ;
     .
 
 tgs:Interview.TGS_178_AndrewMillison a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Andrew Millison"@en ;
     rdfs:comment "STUB as of 2026-08-13 — same caveat as TGS_222 (Brett Kencairn): real episode number/guest name confirmed via URL slug, Persona/Human NOT yet bootstrapped, deliberately deferred."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
@@ -518,24 +558,85 @@ tgs:Interview.TGS_178_AndrewMillison a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Monologue.Frankly_140_APerspectiveFromLebanon a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "A Perspective from Lebanon"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_148's own show notes cross-reference ('Frankly about Nate's Lebanese friend'), not independently fleshed out further."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via Frankly_148's own show notes cross-reference ('Frankly about Nate's Lebanese friend'), not independently fleshed out further."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/140-a-perspective-from-lebanon> ;
     .
 
 tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "A Guide to Staying Human (Part 2): Navigating Dread and Carrying the Weight of Tomorrow"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_151's own show notes cross-reference ('Frankly on despair'). Confirms 'A Guide to Staying Human' is a real multi-part series in its own right (Frankly #129 = Part 1, this = Part 2) — matches the Series gap flagged when TGS_138 was first built, not yet formally modeled as a thinkr:Series individual."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via Frankly_151's own show notes cross-reference ('Frankly on despair'). Confirms 'A Guide to Staying Human' is a real multi-part series in its own right (Frankly #129 = Part 1, this = Part 2) — matches the Series gap flagged when Frankly_138 was first built, not yet formally modeled as a thinkr:Series individual."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/142-a-guide-to-staying-human-part-2> ;
     .
 
 tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
     skos:prefLabel "The Superorganism in 7 Minutes"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via TGS_151's own show notes cross-reference ('The metabolic economic superorganism')."@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title confirmed via Frankly_151's own show notes cross-reference ('The metabolic economic superorganism')."@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/97-the-superorganism-in-7-minutes> ;
     .
+
+#############################################
+# ADDED 2026-08-13 — full RR-26 bootstrap, sourced from a complete real
+# transcript + official show notes (MJSullivan's own upload), not a
+# fetched summary. See docs/sidecar-cleanup-handoff.md for the full
+# session entry.
+#############################################
+
+tgs:PanelDiscussion.RR_26_WhyCommunityFails a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Why 'Community' Fails: Everyone Wants a Village, Nobody Wants to Be a Villager"@en ;
+    skos:definition "Nate is joined by Nora Bateson (creator of Warm Data Labs) and her International Bateson Institute colleagues Jonathan Goldsmith and Lucas Jackson for a conversation about why so many attempts at community fail. Drawing on Bateson's concept of 'communing' as the necessary precursor to community, the group argues genuine human connection is being undermined by algorithmic fragmentation, scripted discourse, and transactional/individualist culture — and that the way out isn't a formula but older practices: mutual learning, radical hospitality, and relating outside one's perceived social role."@en ;
+    dct:created "2026-04-22"^^xsd:date ;
+    dct:issued "2026-06-10"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.JonathanGoldsmith, tgs:Persona.LucasJackson ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-26> ;
+    dct:source <https://natehagens.substack.com/p/why-community-fails-everyone-wants> ;
+    thinkr:discusses tgs:Concept.Communing, tgs:Concept.Symmathesy, tgs:Concept.Schismogenesis, tgs:SchoolOfThought.WarmData, tgs:Concept.Superorganism, tgs:Concept.Metacrisis ;
+    skos:scopeNote "Real, extensive further cross-references confirmed in the show notes but NOT chased down in this pass, deliberately deferred to keep this build bounded: Daniel Schmachtenberger's own TGS appearances (already a real Persona in this graph), a dedicated prior episode on Dark Triad traits (Reality Roundtable #19, confirmed via web search but not built), and Nora Bateson's own extensive further TGS history (see her own Persona-level scopeNote). 'Radical hospitality' and 'amonging' (a further Bateson-adjacent neologism) both recur prominently in this episode but were NOT minted as their own Concepts this pass — real, judged borderline rather than high-confidence, matching this project's established triage discipline."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — Art Berman's 2nd and 3rd interviews, previously
+# entirely absent from this graph. Both sourced from complete real
+# transcripts + show notes (MJSullivan's own upload, processed as a
+# batch of 5 alongside TGS_3/92/101). See docs/sidecar-cleanup-handoff.md
+# for the full session entry.
+#############################################
+
+tgs:Interview.TGS_44_DieselAndTheBarrelOfOil a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Diesel Shortages and What's Really in a Barrel of Oil"@en ;
+    skos:definition "Berman's second appearance — a deep dive into oil refining, prompted by real 2022 diesel shortages: why a barrel of crude yields many products beyond gasoline, why diesel specifically matters to the global economy, whether the US is genuinely energy-independent as a 'net exporter,' and how the Russia/Ukraine war reshaped global energy geopolitics."@en ;
+    dct:created "2022-10-25"^^xsd:date ;
+    dct:issued "2022-11-08"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/44-art-berman> ;
+    skos:scopeNote "Canonical URL follows this graph's own confirmed real pattern for Berman's other episodes (03/92/101 all use /episode/N-art-berman or /N-arthurberman) — NOT independently re-verified via a live fetch for this specific episode, unlike 03/92/101/220's URLs which were. Flagged honestly rather than silently treated as equally certain. Comparatively little direct discusses-worthy overlap with this graph's already-modeled Concepts — this episode is a specific technical deep-dive (refining chemistry, diesel logistics) rather than the broader energy/civilization framing of Berman's other 4 appearances; no discusses links added rather than force a weak one. Real further citation surfaced but not modeled: Vaclav Smil's 'Four Pillars of Modern Civilization' (a real, citable external work on ammonia/steel/cement/plastics as civilization's material foundations) — a plausible future Work individual, deferred."@en .
+
+tgs:Interview.TGS_54_TheStealthAdjustmentOfOil a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Peak Oil, Revisited: The Stealth Redefinition of What Counts as 'Oil'"@en ;
+    skos:definition "Berman's third appearance — revisits peak oil not to argue over a specific peak date, but to show that a growing share of what agencies like the EIA/IEA now count as 'oil' (roughly 40% by 2023) is actually lower-quality natural gas liquids, not true crude — meaning official production figures overstate real oil availability even as headline numbers hit new highs."@en ;
+    dct:created "2023-01-02"^^xsd:date ;
+    dct:issued "2023-01-18"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/54-art-berman> ;
+    thinkr:discusses tgs:Concept.PeakOil, tgs:Concept.CarbonPulse ;
+    skos:scopeNote "Title constructed from this episode's real content (its own show-notes header never states an explicit distinct title beyond 'Episode 54') — not independently verified against a live fetch of the episode's own page, flagged honestly rather than presented with false confidence, matching the same caveat as TGS_44's canonical URL. Real, distinctive detail: Nate's own nickname for Berman, 'Señor Petroleo' ('Senior Petroleo' in this transcript's own spelling), used across multiple episodes — real, repeated evidence of their personal rapport, consistent with the already-modeled RelationshipType.Personal."@en .

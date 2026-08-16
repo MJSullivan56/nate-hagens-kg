@@ -51,7 +51,11 @@ tgs:Concept.DiscountRatesAndPresentBias a thinkr:Concept,
 
 tgs:Concept.EnergyReturnOnInvestment a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Energy_return_on_investment>,
+        <https://www.sciencedirect.com/topics/engineering/energy-return-on-investment>,
+        <https://world-nuclear.org/information-library/energy-and-the-environment/energy-return-on-investment>,
+        <https://pmc.ncbi.nlm.nih.gov/articles/PMC7320919/>,
+        <https://www.gov.uk/research-for-development-outputs/eroi-of-different-fuels-and-the-implications-for-society> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
     skos:definition "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en ;
     skos:prefLabel "Energy Return on Investment"@en ;
@@ -99,7 +103,9 @@ tgs:Concept.HumanPredicament a thinkr:Concept, thinkr:HagensConcept,
 
 tgs:Concept.JevonsParadox a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Jevons_paradox>,
+        <https://www.sciencedirect.com/science/article/abs/pii/S0921800905001084>,
+        <https://www.researchgate.net/publication/344271331_The_problem_of_energy_efficiency_known_as_the_Jevons_paradox> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
     skos:definition "The observation that increases in efficiency of resource use often lead to increased total consumption of that resource rather than decreased, because efficiency lowers effective cost and expands use — a recurring theme in Hagens' skepticism toward efficiency-alone as a solution to overshoot."@en ;
     skos:prefLabel "Jevons Paradox"@en ;
@@ -107,7 +113,7 @@ tgs:Concept.JevonsParadox a thinkr:Concept,
 
 tgs:Concept.LimitsToGrowth a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://www.clubofrome.org/publication/the-limits-to-growth/> ;
     dcterms:subject tgs:Subject.OvershootAndLimits ;
     skos:definition "Reference to the 1972 Club of Rome-commissioned study modeling interactions between population, industrialization, pollution, food production, and resource depletion, projecting overshoot-and-decline dynamics on multi-decade timescales — a direct intellectual predecessor to Hagens' framework."@en ;
     skos:prefLabel "Limits to Growth"@en ;
@@ -132,7 +138,7 @@ tgs:Concept.MoneyAsClaimOnEnergy a thinkr:Concept, thinkr:HagensConcept,
 
 tgs:Concept.Overshoot a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Overshoot_(book)> ;
     dcterms:subject tgs:Subject.OvershootAndLimits ;
     skos:definition "The condition of a population/economy consuming renewable and non-renewable resources faster than natural systems can regenerate or absorb waste from them, borrowed from systems ecology (Catton, Meadows) and applied to the global economy."@en ;
     skos:prefLabel "Ecological Overshoot"@en ;
@@ -141,11 +147,15 @@ tgs:Concept.Overshoot a thinkr:Concept,
 
 tgs:Concept.PeakOil a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Peak_oil> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
     skos:definition "The point at which the maximum rate of petroleum extraction is reached, after which production enters terminal decline — a formative concept in Hagens' background (he worked as a peak oil analyst before founding The Great Simplification) and foundational to his energy-decline framing."@en ;
     skos:prefLabel "Peak Oil"@en ;
-    thinkr:influencedBy tgs:Persona.MKingHubbert .
+    thinkr:influencedBy tgs:Persona.MKingHubbert ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Hubbert Peak Theory"@en ;
+        skos:scopeNote "The formal academic name for this same observation, per Hubbert's own 1956 paper 'Nuclear Energy and the Fossil Fuels' (presented to the American Petroleum Institute) — real citation confirmed via https://en.wikipedia.org/wiki/Hubbert_peak_theory. ExactMatch, not just Related: same core referent as Peak Oil, just formal/academic naming versus the popularized term this graph's source material actually uses." ] .
 
 tgs:Concept.Superorganism a thinkr:Concept,
         owl:NamedIndividual ;
@@ -174,7 +184,7 @@ tgs:Concept.TheoryOfChange a thinkr:Concept,
 
 tgs:Concept.Wetware a thinkr:Concept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Wetware_(brain)> ;
     dcterms:subject tgs:Subject.BehavioralEconomicsAndCognition ;
     skos:definition "The idea that human cognitive and emotional wiring evolved for small-group, resource-scarce Pleistocene environments and is poorly matched to modern abundance, abstraction, and global-scale decision-making — a recurring lens Hagens uses to explain collectively self-destructive behavior."@en ;
     skos:prefLabel "Human 'Wetware'"@en ;
@@ -197,9 +207,9 @@ thinkr:HagensConcept a owl:Class ;
 
 
 #############################################
-# ADDED 2026-08-13 — stubbed out of TGS_138's official show-notes topic
+# ADDED 2026-08-13 — stubbed out of Frankly_138's official show-notes topic
 # list (thegreatsimplification.com/frankly-original/138-...), not from
-# transcript-reading alone. See episodes.ttl's TGS_138 record for the
+# transcript-reading alone. See episodes.ttl's Frankly_138 record for the
 # discusses links this batch supports, and docs/sidecar-cleanup-handoff.md
 # for the full triage this session did before minting anything (several
 # show-notes items were deliberately NOT minted — real-world current
@@ -212,21 +222,21 @@ tgs:Concept.TerrorManagementTheory a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:prefLabel "Terror Management Theory"@en ;
     skos:definition "The theory (developed by Sheldon Solomon, Tom Pyszczynski, and Jeff Greenberg starting the early 1980s, building on Ernest Becker's work) that human awareness of mortality generates a background existential anxiety managed largely unconsciously through cultural worldviews, self-esteem, and close relationships — and that reminders of death ('mortality salience') measurably intensify attachment to one's own cultural in-group and hostility toward out-groups."@en ;
-    skos:scopeNote "THIRD independent confirmation as of 2026-08-13 that this deserves real modeling: (1) surfaced during an earlier session's investigation of the TGS_199 Sheldon Solomon transcript, which found the co-founder name 'Budzinski' in that transcript is almost certainly a mishearing of Tom Pyszczynski — NOT yet independently verified, flagged here again since this stub is the natural place to resolve it; (2) TGS_138's own show notes reference it directly with a link to 'more info' and a cross-reference to the TGS episode on it; (3) general public awareness that this is real, citable psychological theory, not a Hagens coinage. thinkr:influencedBy tgs:Persona.EmileDurkheim considered but NOT asserted — Solomon cites Durkheim's 'religion existed before gods' framing approvingly in the TGS_199 transcript, but that is Solomon's OWN citation of Durkheim within a discussion of religion's function, not a claim that Durkheim shaped Terror Management Theory's origin (which the same transcript traces to Becker, not yet modeled as a Persona in this graph)."@en .
+    skos:scopeNote "THIRD independent confirmation as of 2026-08-13 that this deserves real modeling: (1) surfaced during an earlier session's investigation of the TGS_199 Sheldon Solomon transcript, which found the co-founder name 'Budzinski' in that transcript is almost certainly a mishearing of Tom Pyszczynski — NOT yet independently verified, flagged here again since this stub is the natural place to resolve it; (2) Frankly_138's own show notes reference it directly with a link to 'more info' and a cross-reference to the TGS episode on it; (3) general public awareness that this is real, citable psychological theory, not a Hagens coinage. thinkr:influencedBy tgs:Persona.EmileDurkheim considered but NOT asserted — Solomon cites Durkheim's 'religion existed before gods' framing approvingly in the TGS_199 transcript, but that is Solomon's OWN citation of Durkheim within a discussion of religion's function, not a claim that Durkheim shaped Terror Management Theory's origin (which the same transcript traces to Becker, not yet modeled as a Persona in this graph)."@en .
 
 tgs:Concept.ShortfallRisk a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Shortfall Risk"@en ;
     skos:definition "A framing Hagens borrows from portfolio management/finance and repurposes for civilizational risk assessment: the danger that something essential (topsoil, social trust, grid stability, the nuclear-use taboo, an aquifer) drops below a threshold it cannot easily recover from — distinct from more commonly discussed AVERAGE-outcome risk, and argued to be the more important lens for genuinely existential threats specifically because average-case thinking systematically undercounts them."@en ;
-    skos:scopeNote "DOUBLY CONFIRMED: independently surfaced during an earlier session's by-hand pilot read of this same episode's transcript, and again via this session's official show-notes review — TGS_138's own team-written description states this concept explicitly functions as connective tissue across the rest of the 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture)."@en .
+    skos:scopeNote "DOUBLY CONFIRMED: independently surfaced during an earlier session's by-hand pilot read of this same episode's transcript, and again via this session's official show-notes review — Frankly_138's own team-written description states this concept explicitly functions as connective tissue across the rest of the 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture)."@en .
 
 tgs:Concept.ScenarioThinking a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Scenario Thinking"@en ;
     skos:definition "Deliberately holding multiple plausible futures at once rather than committing to a single predicted storyline — the organizing methodology behind the entire 'How to Think About the Future' series (see tgs:Series.HowToThinkAboutTheFuture and tgs:Scenario) and explicitly contrasted by Hagens with forecasting."@en ;
-    skos:scopeNote "Has a real, independently citable external source: TGS_138's show notes link a specific book/resource, 'Scenario Thinking: A Historical Evolution of Strategic Foresight' — worth minting as its own tgs:Work once the exact author/publication details are verified (not yet done as of 2026-08-13, title alone insufficient to mint safely)."@en .
+    skos:scopeNote "Has a real, independently citable external source: Frankly_138's show notes link a specific book/resource, 'Scenario Thinking: A Historical Evolution of Strategic Foresight' — worth minting as its own tgs:Work once the exact author/publication details are verified (not yet done as of 2026-08-13, title alone insufficient to mint safely)."@en .
 
 tgs:Concept.MoreThanHumanPredicament a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
@@ -239,7 +249,7 @@ tgs:Concept.NarrativeAsActiveInference a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:prefLabel "Narrative as Active Inference"@en ;
     skos:definition "The idea (drawing on active inference/predictive-processing frameworks from cognitive science) that the stories people tell themselves about the world function partly as a cognitive-effort-reduction mechanism — a pre-built interpretive frame that reduces the real-time processing cost of making sense of new information, at the cost of resisting genuinely novel or disconfirming input."@en ;
-    skos:scopeNote "TGS_138's show notes list this as two adjacent timestamped bullets ('Narrative as active inference' / 'Narrative as reducing cognitive effort') — read here as two facets of one idea, not two separate concepts, since they describe the same mechanism from two angles rather than two distinct claims."@en .
+    skos:scopeNote "Frankly_138's show notes list this as two adjacent timestamped bullets ('Narrative as active inference' / 'Narrative as reducing cognitive effort') — read here as two facets of one idea, not two separate concepts, since they describe the same mechanism from two angles rather than two distinct claims."@en .
 
 tgs:Concept.Rebuildables a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
@@ -261,12 +271,12 @@ tgs:Concept.ComplexSystemsThinking a thinkr:Concept, owl:NamedIndividual ;
 #############################################
 # ADDED 2026-08-13 — surfaced from the "How to Think About the Future"
 # series highlights batch (Parts 2-6, MJSullivan's own manual show-notes
-# transcription), same triage/verification discipline as the TGS_138
+# transcription), same triage/verification discipline as the Frankly_138
 # pass. See docs/sidecar-cleanup-handoff.md for the full session entry.
 #############################################
 
 tgs:Concept.TheSenecaEffect a thinkr:Concept, owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://www.clubofrome.org/publication/the-seneca-effect-2017/> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "The Seneca Effect"@en ;
     skos:definition "The observation that complex systems tend to grow slowly but collapse rapidly — named after the Roman philosopher Seneca's own observation that fortune grows slowly but ruin is swift. Developed by Ugo Bardi as a general model for why decline, once it starts, tends to be much faster than the growth that preceded it."@en ;
@@ -276,7 +286,7 @@ tgs:Concept.LandscapeOfPossibleFutures a thinkr:Concept, thinkr:HagensConcept, o
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "The Landscape of Possible Futures"@en ;
-    skos:definition "Hagens' own application of the landscape metaphor (valleys, ridges, switchbacks, erosion) to civilizational futures — see tgs:Monologue.TGS_145_Part3UphillFutures for the full framework. Adapts Conrad Waddington's epigenetic landscape (originally a model of cellular differentiation) to a different domain entirely — a genuine reframing, not a direct reuse, hence HagensConcept despite the explicit external inspiration."@en ;
+    skos:definition "Hagens' own application of the landscape metaphor (valleys, ridges, switchbacks, erosion) to civilizational futures — see tgs:Monologue.Frankly_145_Part3UphillFutures for the full framework. Adapts Conrad Waddington's epigenetic landscape (originally a model of cellular differentiation) to a different domain entirely — a genuine reframing, not a direct reuse, hence HagensConcept despite the explicit external inspiration."@en ;
     thinkr:influencedBy tgs:Persona.ConradWaddington .
 
 tgs:Concept.PerpetualMulligans a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
@@ -291,3 +301,39 @@ tgs:Concept.UnicornStrategies a thinkr:Concept, thinkr:HagensConcept, owl:NamedI
     skos:prefLabel "Unicorn Strategies"@en ;
     skos:definition "Hagens' own term for actions that are good moves regardless of which of the 4 composite future Scenarios (see tgs:Scenario) actually comes to pass — genuinely robust across radically different futures rather than a bet on one specific outcome. Named examples from the source episode: ocean conservation, nuclear disarmament, indigenous language preservation."@en ;
     skos:scopeNote "Deliberately NOT formally linked to thinkr:Scenario via any property — the relationship (robust across all 4 named Scenarios) is real but this session's own 'don't over-link prematurely' discipline applies; noted here in prose instead."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 "Why Community Fails" bootstrap.
+#############################################
+
+tgs:Concept.Communing a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Communing"@en ;
+    skos:definition "Nora Bateson's framing of 'communing' as the necessary precursor to 'community' — the practice of genuine mutual relating (giving before being owed, radical hospitality, tending to the whole as a way of tending to the self) that most attempts at community-building skip past by going straight to shared values, organizing, and logistics."@en ;
+    thinkr:influencedBy tgs:Persona.NoraBateson .
+
+tgs:Concept.Symmathesy a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Symmathesy"@en ;
+    skos:definition "Nora Bateson's 2015 coinage (Greek 'sym' + 'mathesis,' together + learning) for an entity composed through contextual mutual learning by interaction — a living system (a family, an ecosystem, a conversation) that is genuinely shaped by its own internal relationships and interdependencies, not just a collection of independently-acting parts."@en ;
+    thinkr:influencedBy tgs:Persona.NoraBateson .
+
+tgs:Concept.Schismogenesis a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Schismogenesis"@en ;
+    skos:definition "Gregory Bateson's term (from his 1930s anthropological fieldwork) for a process in which relationships escalate through cumulative interaction — either symmetrically (both parties responding to each other's same behavior with more of the same, e.g. an arms race) or complementarily (parties responding with opposite behaviors that reinforce each other, e.g. dominance and submission), each pattern intensifying over time unless deliberately interrupted."@en ;
+    thinkr:influencedBy tgs:Persona.GregoryBateson .
+
+#############################################
+# ADDED 2026-08-13 — Berman 5-interview batch (TGS_101).
+#############################################
+
+tgs:Concept.MaximumPowerPrinciple a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Maximum Power Principle"@en ;
+    skos:definition "Howard T. Odum's principle (building on Alfred Lotka's earlier work) that self-organizing systems tend to develop and prevail when they maximize their intake and useful transformation of energy, not merely their efficiency — a foundational idea in ecological energetics directly connected to EROI (Charles Hall, a notable Odum student, is a central figure in that literature too)."@en ;
+    thinkr:influencedBy tgs:Persona.HowardOdum .

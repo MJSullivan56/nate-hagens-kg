@@ -435,7 +435,7 @@ thinkr:hasIndicatorCategory a owl:ObjectProperty ;
 # ADDED 2026-08-13 — internal positional/ordering structure for the
 # Scenario matrix, raised by MJSullivan: each of the 4 ScenarioDimensions
 # is itself a 2x2 grid along 2 more primitive sub-axes (e.g. Economic =
-# growth/contraction x within-limits/overshoot, confirmed from TGS_139's
+# growth/contraction x within-limits/overshoot, confirmed from Frankly_139's
 # own real page). Each ScenarioFacet occupies one of the 4 quadrant
 # positions. Real integer positions (not named-individual endpoints) so
 # ordering is genuinely SPARQL-queryable via FILTER(?x < ?y) directly,
@@ -447,7 +447,7 @@ thinkr:hasIndicatorCategory a owl:ObjectProperty ;
 # this project's standing no-reasoner discipline (same reasoning as
 # hasPersonEntityType/hasNamedEntityType both needing direct assertion).
 # Composite Scenario IRIs are built directly from these 4 codes, e.g.
-# tgs:Scenario.A-E-I-M — confirmed 2026-08-13 by deriving it
+# tgs:Scenario.GS-CI-FN-SW (originally minted as tgs:Scenario.A-E-I-M, renamed same day to the 2-letter mnemonic scheme) — confirmed 2026-08-13 by deriving it
 # independently from the real axis data and finding it EXACTLY matches
 # MJSullivan's own worked example for "The Long Repair," a strong
 # validation the derivation logic is right, not just self-consistent.
@@ -468,7 +468,7 @@ thinkr:hasYPosition a owl:DatatypeProperty ;
 thinkr:hasFacetCode a owl:DatatypeProperty ;
     rdfs:domain thinkr:ScenarioFacet ;
     rdfs:range xsd:string ;
-    rdfs:comment "A single flat letter A-P identifying this Facet's position across all 16 (dimension-major order). Used to construct composite Scenario IRIs."@en ;
+    rdfs:comment "A 2-letter mnemonic code for this Facet, used to construct composite Scenario IRIs (e.g. tgs:Scenario.GS-CI-FN-SW). REVISED 2026-08-13 from single flat letters A-P (dimension-major order) — per MJSullivan's explicit request for something more mnemonic than an arbitrary letter position. Deterministic derivation rule, confirmed 2026-08-13: first letter of the first 2 significant words in the Facet's own local name, dropping articles (The/A/But) as insignificant; single-word Facet names (e.g. Mordor) fall back to their own first 2 letters. Checked by hand for collisions across all 16 current Facets before adopting — none found — but this is NOT guaranteed collision-free by construction for any future Facet added under this same rule; re-check before minting a 17th."@en ;
     skos:prefLabel "has facet code"@en .
 
 thinkr:xAxisLowLabel a owl:DatatypeProperty ; rdfs:domain thinkr:ScenarioDimension ; rdfs:range xsd:string ;
@@ -532,3 +532,29 @@ thinkr:hasEarthSystemsXPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scen
 thinkr:hasEarthSystemsYPosition a owl:DatatypeProperty ; rdfs:domain thinkr:Scenario ; rdfs:range xsd:integer ;
     rdfs:comment "This Scenario's Earth Systems-dimension Y position — must match its chosen Facet's own thinkr:hasYPosition."@en ;
     skos:prefLabel "has Earth Systems Y position"@en .
+
+#############################################
+# ADDED 2026-08-13 — the show-brand/segment dimension, raised by
+# MJSullivan: "are all Monologues Frankly's?" — no. thinkr:EpisodeType
+# (Monologue/Interview/PanelDiscussion) captures WHO'S TALKING; this is
+# a genuinely separate dimension for WHICH BRANDED FEED an episode
+# belongs to. Confirmed via a full audit of every existing Episode's
+# real hasCanonicalSource: the site itself already encodes this
+# structurally via 2 independently-numbered URL paths
+# (/frankly-original/N-... vs /episode/N-...), not something inferred —
+# 28 of 34 existing episodes resolved unambiguously this way, zero
+# unmatched. This audit also surfaced a real naming bug (see episodes.ttl's
+# own note) — 6 Frankly episodes had been minted with TGS_-prefixed IRIs
+# instead of Frankly_-prefixed ones, inconsistent with the other 5
+# already-correct Frankly episodes, fixed the same session this was found.
+#############################################
+
+thinkr:EpisodeSegment a owl:Class, thinkr:Category ;
+    rdfs:comment "Which branded show/feed an Episode belongs to — Frankly (short, Friday-delivered) or MainShow (the numbered interview/discussion feed). Genuinely independent of thinkr:EpisodeType: historically every confirmed Frankly has been a Monologue and every confirmed MainShow episode an Interview, but MJSullivan explicitly flagged this as contingent, not structural — e.g. a guest-hosted Frankly, or a short Frankly interview, are both real possibilities this schema needs to support without redesign."@en ;
+    skos:prefLabel "Episode Segment"@en .
+
+thinkr:hasEpisodeSegment a owl:ObjectProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range thinkr:EpisodeSegment ;
+    rdfs:comment "Which EpisodeSegment (Frankly/MainShow) this Episode belongs to."@en ;
+    skos:prefLabel "has episode segment"@en .

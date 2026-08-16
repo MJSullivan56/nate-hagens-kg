@@ -1,3 +1,4 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -105,4 +106,16 @@ tgs:Organization.StopStraatintimidatie a thinkr:Organization, owl:NamedIndividua
     skos:prefLabel "Stop Straatintimidatie"@en ;
     skos:definition "Dutch anti-street-harassment advocacy organization, founded 2014 by Gaya Herrington (then publicly known as Gaya Branderhorst) as a citizen's initiative targeting 40,000 signatures (reached approximately 19,000 by 2016); became a formal nonprofit foundation in May 2016. Deliberately kept roughly 50/50 gender-balanced team. Real, documented policy impact: street harassment began being formally fined in Amsterdam and Rotterdam starting 2018. Verified via WebSearch 2026-07-15 (not mentioned in the TGS_57 podcast intro itself — surfaced entirely through independent verification, not the transcript)."@en ;
     thinkr:hasProfessionalRelationship tgs:Relationship.GayaHerrington_StopStraatintimidatie ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 bootstrap.
+#############################################
+
+tgs:Organization.InternationalBatesonInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "International Bateson Institute"@en ;
+    skos:definition "A nonprofit foundation for transcontextual research in ecology, economy, social change, health, education, and art — founded and led by Nora Bateson (president), registered in Sweden (sources vary on whether also US-registered). Institutional home for Bateson's 'Warm Data' methodology and Warm Data Lab certification program; Jonathan Goldsmith and Lucas Jackson are both affiliated as core team member and certified host, respectively."@en ;
+    dcterms:source <https://www.warmdata.life/international-bateson-institute> ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NoraBateson_InternationalBatesonInstitute, tgs:Relationship.JonathanGoldsmith_InternationalBatesonInstitute, tgs:Relationship.LucasJackson_InternationalBatesonInstitute ;
+    skos:scopeNote "CORRECTED 2026-08-13, caught before this pass was finished: first draft mistakenly used owl:sameAs for this org's own homepage — this project's established convention reserves owl:sameAs specifically for DBpedia/Wikidata equivalence (confirmed via the Organization.MaEarth precedent: 'NO owl:sameAs... no genuine Wikipedia page found'), not general external links. No Wikipedia/DBpedia page found for this org — dcterms:source used instead for its own homepage."@en ;
     .

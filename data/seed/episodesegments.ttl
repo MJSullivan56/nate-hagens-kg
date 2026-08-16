@@ -1,0 +1,33 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-08-13 — see tgs-core.ttl's own comment block on
+# thinkr:EpisodeSegment for full context. Fits thinkr:Category exactly
+# and would normally live in enumerations.ttl — given its own file
+# instead for the same reason as scenariodimensions.ttl/
+# alternatetermtypes.ttl/doughnuthalves.ttl before it: enumerations.ttl
+# wasn't safely editable this session. THIS IS THE FOURTH such file now
+# waiting on that consolidation.
+#############################################
+
+tgs:EpisodeSegment.Frankly a thinkr:EpisodeSegment, owl:NamedIndividual ;
+    skos:prefLabel "Frankly"@en ;
+    skos:definition "The short, Friday-delivered segment — confirmed via the site's own /frankly-original/ URL path, a separate numbering sequence from the main show."@en .
+
+tgs:EpisodeSegment.MainShow a thinkr:EpisodeSegment, owl:NamedIndividual ;
+    skos:prefLabel "Main Show"@en ;
+    skos:definition "The numbered interview/discussion feed — confirmed via the site's own /episode/ URL path, a separate numbering sequence from Frankly."@en .
+
+tgs:EpisodeSegment.RealityRoundtable a thinkr:EpisodeSegment, owl:NamedIndividual ;
+    skos:prefLabel "Reality Roundtable"@en ;
+    skos:definition "The multi-guest panel-discussion segment — confirmed via the site's own /episode/reality-roundtable-N URL slug, an independently-numbered sequence from both the main show and Frankly."@en ;
+    skos:scopeNote "ADDED 2026-08-13. IMPORTANT CORRECTION to this class's own original design assumption: Frankly vs. MainShow were cleanly distinguishable by URL PATH ALONE (/frankly-original/ vs /episode/). Reality Roundtable does NOT extend that pattern cleanly — it shares the SAME /episode/ path as MainShow, distinguished only by the URL SLUG containing 'reality-roundtable-N' rather than a guest name. Confirmed real, independently-numbered sequence (RR-2, RR-10, RR-14, RR-19, RR-20, RR-25, RR-26 all confirmed to exist via web search). This means the original 18 MainShow-tagged episodes from the earlier hasEpisodeSegment audit were NOT re-checked against this refined rule — they were all confirmed single-guest interviews by their own titles, making a hidden Reality Roundtable among them unlikely, but this was not exhaustively re-verified. Worth a real spot-check later, not assumed clean."@en .

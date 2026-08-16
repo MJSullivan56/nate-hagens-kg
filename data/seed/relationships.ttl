@@ -357,3 +357,41 @@ tgs:Relationship.GayaHerrington_ClubOfRome a thinkr:Relationship, owl:NamedIndiv
     thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
     skos:prefLabel "Gaya Herrington's membership in the Club of Rome"@en ;
     skos:scopeNote "Member, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15). Thematically the most on-point affiliation surfaced in this bootstrap: the Club of Rome is the organization that originally commissioned the 1972 Limits to Growth study (tgs:Concept.LimitsToGrowth) she later empirically re-tested (tgs:Work.UpdateToLimitsToGrowth2021) — her membership closes a real loop between the original study's institutional origin and her own contribution to it."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 bootstrap.
+#############################################
+
+tgs:Relationship.NoraBateson_InternationalBatesonInstitute a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NoraBateson ;
+    thinkr:hasObject tgs:Organization.InternationalBatesonInstitute ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nora Bateson's professional relationship with International Bateson Institute"@en ;
+    skos:scopeNote "Founder and president — the organization is essentially the institutional home for her own research/methodology."@en .
+
+tgs:Relationship.JonathanGoldsmith_InternationalBatesonInstitute a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.JonathanGoldsmith ;
+    thinkr:hasObject tgs:Organization.InternationalBatesonInstitute ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Jonathan Goldsmith's professional relationship with International Bateson Institute"@en ;
+    skos:scopeNote "Core team member, per both the episode's own guest bio and independent confirmation via LinkedIn."@en .
+
+tgs:Relationship.LucasJackson_InternationalBatesonInstitute a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.LucasJackson ;
+    thinkr:hasObject tgs:Organization.InternationalBatesonInstitute ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Lucas Jackson's professional relationship with International Bateson Institute"@en ;
+    skos:scopeNote "Certified Warm Data host, trained through IBI's own program in 2020."@en .
+
+tgs:Relationship.NateHagens_NoraBateson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.NoraBateson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Nora Bateson"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_26_WhyCommunityFails ;
+          dcterms:date "2026-04-22"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in the RR-26 transcript: 'welcoming back... my friend, Nora Bateson.' Only ONE hasInteraction entry so far (RR-26 itself, the one real episode actually minted) despite a real, extensive further TGS history confirmed via web search (TGS Ep 10, a Frankly episode, RR #2, RR #10 — see Persona.NoraBateson's own scopeNote) — those episodes don't exist as real Episode individuals in this graph yet, so no PodcastAppearance can honestly point at them until they're actually built. Add more hasInteraction entries as those episodes get minted, don't backfill placeholder ones now."@en .

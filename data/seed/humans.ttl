@@ -296,3 +296,41 @@ tgs:Human.JohanRockstrom a thinkr:Human,
     skos:prefLabel "Johan Rockström"@en ;
     owl:sameAs <http://dbpedia.org/resource/Johan_Rockström> ;
     .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 "Why Community Fails" guest bootstrap.
+# All 3 independently verified via real web search before minting, same
+# discipline as every other bootstrap this project has done.
+#############################################
+
+tgs:Human.NoraBateson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Nora Bateson"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Nora_Bateson> ;
+    rdfs:comment "Filmmaker, writer, researcher, and educator; founder and president of the International Bateson Institute. Daughter of systems thinker Gregory Bateson (already tgs:Human.GregoryBateson in this graph). Author of 'Small Arcs of Larger Circles' (Triarchy Press, 2016) and 'Combining' (2024); director of the documentary 'An Ecology of Mind' (2010), a portrait of her father. Coined 'Warm Data' (~2012) and 'Symmathesy' (2015, presented at ISSS)."@en ;
+    .
+
+tgs:Human.JonathanGoldsmith a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Jonathan Goldsmith"@en ;
+    rdfs:comment "Psychotherapist, NLP Trainer, and coach based in London, running his own practice 'Be More You.' Core team member of the International Bateson Institute. No independent Wikipedia/DBpedia page found — confirmed real via his own LinkedIn presence and multiple independent professional listings (IAGC, generative-change.com), not a same-name collision risk given consistent, specific detail across sources."@en ;
+    .
+
+tgs:Human.LucasJackson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Lucas Jackson"@en ;
+    rdfs:comment "Educator, facilitator, and certified Warm Data host based in Vermont; trained through the International Bateson Institute's Warm Data host program in 2020. Limited independent verification beyond the show's own detailed bio and the International Bateson Institute's own certified-host program — real per multiple internally-consistent sources, but less independently documented than Nora Bateson or Jonathan Goldsmith, honestly flagged as such."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — citation-only Human (matching the lightweight
+# WilliamCatton/WilliamStanleyJevons pattern), surfaced via the Berman
+# 5-interview batch (TGS_101, explicitly named "maximum power
+# principle" on air). Verified via real web search.
+#############################################
+
+tgs:Human.HowardOdum a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Howard T. Odum"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Howard_T._Odum> ;
+    .

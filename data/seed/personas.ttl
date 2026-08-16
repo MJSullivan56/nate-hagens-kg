@@ -177,7 +177,8 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasPersonalRelationship
         tgs:Relationship.NateHagens_MatthewMonahan,
         tgs:Relationship.NateHagens_ArtBerman,
-        tgs:Relationship.NateHagens_JoshFarley ;
+        tgs:Relationship.NateHagens_JoshFarley,
+        tgs:Relationship.NateHagens_NoraBateson ;
     thinkr:hasProfessionalRelationship
         tgs:Relationship.NateHagens_MatthewMonahan,
         tgs:Relationship.NateHagens_IainMcGilchrist,
@@ -187,7 +188,8 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_UniversityOfMinnesota,
         tgs:Relationship.NateHagens_ArtBerman,
         tgs:Relationship.NateHagens_JoshFarley,
-        tgs:Relationship.NateHagens_GayaHerrington ;
+        tgs:Relationship.NateHagens_GayaHerrington,
+        tgs:Relationship.NateHagens_NoraBateson ;
     thinkr:hasAcademicRelationship 
         tgs:Relationship.NateHagens_UniversityOfMinnesota, 
         tgs:Relationship.NateHagens_JoshFarley ;
@@ -281,3 +283,29 @@ tgs:Persona.UgoBardi a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.JohanRockstrom a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.JohanRockstrom ;
     skos:prefLabel "Johan Rockström"@en .
+
+#############################################
+# ADDED 2026-08-13 — see humans.ttl's matching entries for context.
+#############################################
+
+tgs:Persona.NoraBateson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.NoraBateson ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NoraBateson_InternationalBatesonInstitute ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_NoraBateson ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_NoraBateson ;
+    skos:prefLabel "Nora Bateson"@en ;
+    skos:scopeNote "Real, extensive prior TGS history confirmed via web search but NOT built out in this pass, deliberately deferred to keep this bootstrap focused on RR-26 itself: TGS Ep 10 (interview), a Frankly episode, Reality Roundtable #2, and Reality Roundtable #10 ('The Ecology of Communication,' with Rex Weyler, Vanessa Andreotti, and Daniel Schmachtenberger — independently matches the RR10 transcript investigated much earlier in this project's history). Worth a real follow-up pass."@en .
+
+tgs:Persona.JonathanGoldsmith a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JonathanGoldsmith ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.JonathanGoldsmith_InternationalBatesonInstitute ;
+    skos:prefLabel "Jonathan Goldsmith"@en .
+
+tgs:Persona.LucasJackson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LucasJackson ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.LucasJackson_InternationalBatesonInstitute ;
+    skos:prefLabel "Lucas Jackson"@en .
+
+tgs:Persona.HowardOdum a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.HowardOdum ;
+    skos:prefLabel "Howard T. Odum"@en .
