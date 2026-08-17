@@ -307,7 +307,7 @@ tgs:Human.NoraBateson a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Nora Bateson"@en ;
     owl:sameAs <http://dbpedia.org/resource/Nora_Bateson> ;
-    rdfs:comment "Filmmaker, writer, researcher, and educator; founder and president of the International Bateson Institute. Daughter of systems thinker Gregory Bateson (already tgs:Human.GregoryBateson in this graph). Author of 'Small Arcs of Larger Circles' (Triarchy Press, 2016) and 'Combining' (2024); director of the documentary 'An Ecology of Mind' (2010), a portrait of her father. Coined 'Warm Data' (~2012) and 'Symmathesy' (2015, presented at ISSS)."@en ;
+    rdfs:comment "Filmmaker, writer, researcher, and educator; founder and president of the International Bateson Institute. Daughter of systems thinker Gregory Bateson (already tgs:Human.GregoryBateson in this graph). Author of 'Small Arcs of Larger Circles' (Triarchy Press, 2016), 'Combining' (Triarchy Press, 2023 — CORRECTED 2026-08-13 from an earlier, wrong 2024 date), and 'Belly' (Triarchy Press, 2026); director of the documentary 'An Ecology of Mind' (2010), a portrait of her father. Coined 'Warm Data' (~2012), 'Symmathesy' (2015, presented at ISSS), and (per her own LinkedIn bio) 'Aphanipoiesis' and 'Ready-ing' too."@en ;
     .
 
 tgs:Human.JonathanGoldsmith a thinkr:Human,
@@ -333,4 +333,327 @@ tgs:Human.HowardOdum a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Howard T. Odum"@en ;
     owl:sameAs <http://dbpedia.org/resource/Howard_T._Odum> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via Frankly_20's real linked show notes
+# (a citation into Reality Blind, Nate's own book).
+#############################################
+
+tgs:Human.DJWhite a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "DJ White"@en ;
+    rdfs:comment "Co-founder of Greenpeace International and founder of EarthTrust; drove an international dolphin-safe tuna certification and helped stop a national dolphin drive kill. Co-author with Nate Hagens of Reality Blind (2021). Has his own real TGS guest episode (#51) — real, confirmed via search, deliberately NOT built as an Episode individual in this pass to keep scope bounded, flagged for a future pass."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — citation-only Human (matching the lightweight
+# WilliamCatton/HowardOdum pattern), surfaced via TGS_10's own real
+# linked show notes. Verified via real web search.
+#############################################
+
+tgs:Human.MaxKleiber a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Max Kleiber"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Max_Kleiber> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — Tier 2 enrichment, surfaced via RR-26's real
+# linked show notes (Dunbar's number, 38:01). Verified via real search.
+#############################################
+
+tgs:Human.RobinDunbar a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Robin Dunbar"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Robin_Dunbar> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-20 bootstrap. Independently verified via real
+# web search before minting, same discipline as every other bootstrap.
+#############################################
+
+tgs:Human.ZakStein a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Zak Stein"@en ;
+    rdfs:comment "Philosopher of education (EdD, Harvard). Co-founder of Lectica, Inc. (research-based reform of large-scale standardized testing, co-founded as a Harvard student), Civilization Research Institute, the Consilience Project, and the Center for World Philosophy and Religion. Author of 'Education in a Time Between Worlds' and other works. Real, direct professional connection to tgs:Persona.DanielSchmachtenberger (both on the scientific advisory board of Neurohacker Collective, per independent verification) — not modeled as a formal Relationship in this pass, noted here only. No independent Wikipedia/DBpedia page found — confirmed real via his own site (zakstein.org) and multiple independent, mutually-consistent professional/podcast sources."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-19 bootstrap. Both independently verified via
+# real web search before minting.
+#############################################
+
+tgs:Human.NancyMcWilliams a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Nancy McWilliams"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Nancy_McWilliams> ;
+    rdfs:comment "Psychoanalyst and personality theorist. Professor Emerita, Graduate School of Applied and Professional Psychology, Rutgers University. Author of 'Psychoanalytic Diagnosis' (a standard training text) and Associate Editor of the Psychodynamic Diagnostic Manual (PDM). Past president, Division of Psychoanalysis (39), American Psychological Association."@en ;
+    .
+
+tgs:Human.ReidMeloy a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "J. Reid Meloy"@en ;
+    owl:sameAs <http://dbpedia.org/resource/J._Reid_Meloy> ;
+    rdfs:comment "Forensic psychologist. Former clinical professor of psychiatry, UC San Diego School of Medicine. FBI Behavioral Analysis Unit consultant since 2002. Author/editor of 11 books including 'The Psychopathic Mind' and 'International Handbook of Threat Assessment' (with Jens Hoffmann); over 220 peer-reviewed publications."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — citation-only Human, surfaced via Frankly_85.
+# Verified via real web search.
+#############################################
+
+tgs:Human.ScottBarryKaufman a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Scott Barry Kaufman"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Scott_Barry_Kaufman> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-24 bootstrap. Independently verified via real
+# web search before minting.
+#############################################
+
+tgs:Human.TomMurphy a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Tom Murphy"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Tom_Murphy_(physicist)> ;
+    rdfs:comment "Professor Emeritus of Physics and Astronomy & Astrophysics, UC San Diego. Led the APOLLO (Apache Point Observatory Lunar Laser-ranging Operation) project testing General Relativity via reflectors left on the Moon by Apollo astronauts. Author of 'Energy and Human Ambitions on a Finite Planet' (2021, UC open-access textbook) and a 2022 Nature Physics paper arguing physical resource exhaustion precedes waste-heat limits in constraining GDP growth. Writes the 'Do the Math' blog since 2011."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-1 bootstrap (the inaugural Reality Roundtable).
+# Both independently verified via real web search before minting.
+#############################################
+
+tgs:Human.SimonMichaux a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Simon Michaux"@en ;
+    rdfs:comment "Associate Professor of Geometallurgy, Geological Survey of Finland (GTK), Circular Economy Solutions Unit. PhD in Mining Engineering (JKMRC, University of Queensland). 18 years in the Australian mining industry before moving to Belgium (University of Liège) and then Finland to research industrial recycling and the circular economy. Author of the widely-cited 2021 GTK report 'Restructuring the Circular Economy into the Resource Balanced Economy,' arguing existing green-transition mineral-supply plans are logistically impractical at proposed scale. No independent Wikipedia/DBpedia page found — confirmed real via GTK's own staff page, Google Scholar (897+ citations), and his own site."@en ;
+    .
+
+tgs:Human.PedroPrieto a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Pedro Prieto"@en ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Pedro_Prieto> ;
+    rdfs:comment "Telecom engineer (30 years, ITT R&D Labs and Alcatel) turned solar-energy analyst. Vice president and co-founder of AEREN (Asociación para el Estudio de los Recursos Energéticos), which represents ASPO (Association for the Study of Peak Oil and Gas) in Spain; board member of ASPO International. Led several real solar PV installations in Spain since 2004. Co-author with Charles A. S. Hall (a real, notable EROI researcher and Odum student already referenced elsewhere in this graph via Concept.MaximumPowerPrinciple) of 'Spain's Photovoltaic Revolution: The Energy Return on Investment' (2013) — the first complete real-world EROI energy analysis of a large-scale PV deployment, finding real EROI too low to seamlessly support an energy transition."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-10 full enrichment. Both independently verified
+# via real web search before minting.
+#############################################
+
+tgs:Human.RexWeyler a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Rex Weyler"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Rex_Weyler> ;
+    rdfs:comment "American-Canadian writer, journalist, and ecologist (b. 1947). Director of the original Greenpeace Foundation (1973-1982), campaign photographer, editor of the Greenpeace Chronicles, and co-founder of Greenpeace International (1979). Author of 'Blood of the Land' (Pulitzer Prize-nominated Native American history) and 'Greenpeace: The Inside Story.' Writes the 'Deep Green' column at Greenpeace International's own site since 2008."@en ;
+    .
+
+tgs:Human.VanessaAndreotti a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Vanessa Andreotti"@en ;
+    rdfs:comment "Brazilian-born educator; Dean of the Faculty of Education, University of Victoria (at time of RR-10). Former Canada Research Chair in Race, Inequalities and Global Change; former David Lam Chair in Critical Multicultural Education. Co-founder of the Gesturing Towards Decolonial Futures Arts/Research Collective. Author of 'Hospicing Modernity: Facing Humanity's Wrongs and the Implications for Social Activism' and (2025) 'Outgrowing Modernity.' Real prior solo TGS appearance confirmed: episode #125, 'Hospicing Modernity and Rehabilitating Humanity' — real URL confirmed, not yet built as an Episode individual in this pass. No independent Wikipedia/DBpedia page found — confirmed real via her own UVic faculty profile, ResearchGate, and multiple independent podcast/publisher listings."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-2 full enrichment. Both independently verified
+# via real web search before minting.
+#############################################
+
+tgs:Human.WilliamRees a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "William E. Rees"@en ;
+    owl:sameAs <http://dbpedia.org/resource/William_E._Rees> ;
+    rdfs:comment "Canadian ecologist, ecological economist, Professor Emeritus, School of Community and Regional Planning, University of British Columbia (b. Dec 18, 1943). Originator and co-developer (with then-PhD-student Mathis Wackernagel) of Ecological Footprint Analysis, introduced in their 1996 book 'Our Ecological Footprint,' now translated into 8+ languages and among the world's best-known sustainability metrics. Fellow, Royal Society of Canada (2006); Trudeau Foundation Fellow (2007); 2012 Blue Planet Prize (jointly with Wackernagel)."@en ;
+    .
+
+tgs:Human.MathisWackernagel a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Mathis Wackernagel"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Mathis_Wackernagel> ;
+    rdfs:comment "Swiss-born regional planner; co-creator of Ecological Footprint Analysis with William Rees (his PhD supervisor at the time), developing the accounting methodology in his own doctoral dissertation under Rees. Executive Director, Global Footprint Network. Co-recipient, 2012 Blue Planet Prize."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-3 "Unlearning Economics" bootstrap. All 3
+# independently verified via real web search before minting.
+#############################################
+
+tgs:Human.JonErickson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Jon D. Erickson"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Jon_David_Erickson> ;
+    rdfs:comment "Ecological economist; Blittersdorf Professor of Sustainability Science & Policy, University of Vermont (Rubenstein School of Environment and Natural Resources); Fellow, Gund Institute for Environment. PhD, natural resource economics, Cornell (1997) — Nate Hagens' own real PhD advisor there, confirmed directly by Erickson's own public statements ('my PhD advisor' / 'Jon and I have been talking... for nearing 20 years'). Advised Bernie Sanders' presidential campaign on Green New Deal jobs analysis. Author of 'The Progress Illusion: Reclaiming Our Future from the Fairytale of Economics.'"@en ;
+    .
+
+tgs:Human.SteveKeen a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Steve Keen"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Steve_Keen> ;
+    rdfs:comment "Australian heterodox economist (b. Mar 28, 1953); Honorary/Distinguished Research Fellow, University College London; formerly Professor, Kingston University London and University of Western Sydney. Author of 'Debunking Economics' and 'The New Economics: A Manifesto.' One of a small number of economists who publicly anticipated the 2008 Global Financial Crisis in advance (Revere Award, Real World Economics Review). Creator of the open-source system dynamics modeling software Minsky."@en ;
+    .
+
+tgs:Human.KateRaworth a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Kate Raworth"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Kate_Raworth> ;
+    rdfs:comment "English economist (b. Dec 13, 1970); creator of Doughnut Economics (first developed in her 2012 paper 'A Safe and Just Space for Humanity,' elaborated in her 2017 book), co-founder of Doughnut Economics Action Lab. Senior Associate, Oxford University's Environmental Change Institute; Professor of Practice, Amsterdam University of Applied Sciences. Member, Club of Rome; serves on the WHO Council on the Economics of Health for All."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-21 bootstrap. Both independently verified via
+# real web search before minting.
+#############################################
+
+tgs:Human.MarkMedish a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Mark Medish"@en ;
+    rdfs:comment "American lawyer and policy consultant, 30+ years in policy, law, finance, and strategic communications. Special Assistant to President Clinton and Senior Director for Russian, Ukrainian and Eurasian Affairs, National Security Council (2000-2001); Deputy Assistant Secretary of the Treasury for International Affairs under Robert Rubin and Lawrence Summers (1997-2000). Vice Chair, Panterra (London strategic consultancy); co-founder, Keep Our Republic (democratic-governance nonprofit); life member, Council on Foreign Relations. Educated Harvard, Oxford (Merton College), Georgetown. No independent Wikipedia/DBpedia page found — confirmed real via Carnegie Endowment, Georgetown ISD, and multiple other independent professional listings."@en ;
+    .
+
+tgs:Human.ChuckWatson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Chuck Watson"@en ;
+    rdfs:comment "Geophysicist; founder and Director of R&D, Enki Holdings/Enki Research (natural and anthropogenic hazard modeling — hurricanes, earthquakes, tsunamis, industrial accidents, WMD). Former US Air Force; attache to US Ambassadors to the Middle East Robert McFarlane and Secretary of Defense Donald Rumsfeld as a Soviet-affairs expert; 40+ years advising governments on open-source intelligence, with a Russia/USSR specialty. Enki's models used by NASA, DoD, State Dept, EPA, multiple US states, and UN agencies. A frequent, extensive TGS guest — real, confirmed prior appearances include Episodes #4, #97, and #114, likely more via his own real 'Previous TGS Episodes' playlist — not individually built as Episode individuals in this pass. No independent Wikipedia/DBpedia page found — confirmed real via extensive independent professional coverage (13D Research, Connect Savannah, his own alma mater's alumni profile)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-22 bootstrap. Both independently verified via
+# real web search before minting.
+#############################################
+
+tgs:Human.CraigTindale a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Craig Tindale"@en ;
+    rdfs:comment "Private investor, ~4 decades in software development, business strategy, and infrastructure planning, including leadership roles at Telstra, Oracle, and IBM; former CEO/Asia Regional Director, DataDirect Technologies (East-to-West supply chains). Now invests in drone reforestation (Air Seed Technologies) and analyzes critical-metals market chokepoints using his own 'golden screw'/'Constraint Warfare' framework (real, confirmed via his own Substack). Author of the white paper 'Critical Materials: A Strategic Analysis.' Real prior TGS appearance confirmed: Episode #207. No independent Wikipedia/DBpedia page found — confirmed real via his own Substack and cross-references from RR-22's own real show notes."@en ;
+    .
+
+tgs:Human.MichaelEvery a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Michael Every"@en ;
+    rdfs:comment "Global Strategist, Rabobank Singapore, analyzing geopolitics/economics/markets intersections. 25+ years as economist/strategist across roles at Silk Road Associates (Bangkok), Royal Bank of Canada (London/Sydney), and Dun & Bradstreet (London); has lived and worked in 9-10 countries. Invited presenter, 2022 G-20. BA, Lancaster University; master's, University College London. Real, extensive prior TGS history confirmed: Reality Roundtable #16, Reality Roundtable #12, and Episode #118 ('The Many-Isms of the Metacrisis') — none built as Episode individuals in this pass. No independent Wikipedia/DBpedia page found — confirmed real via Rabobank's own staff page and extensive independent financial-media coverage."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-23 bootstrap. Both independently verified via
+# real web search before minting. Both are returning guests with one
+# real confirmed prior TGS solo appearance each.
+#############################################
+
+tgs:Human.ShannaSwan a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Shanna Swan"@en ;
+    rdfs:comment "Environmental and reproductive epidemiologist; Professor of Environmental Medicine and Public Health, Icahn School of Medicine at Mount Sinai (NYC); Director, Action Science Initiative. Published 200+ scientific papers on environmental chemical exposure and reproductive/neurodevelopmental effects. Co-author, 'Countdown: How Our Modern World Is Threatening Sperm Counts...' (2021). Central figure in the 2026 Netflix documentary 'The Plastic Detox,' running a real 3-month endocrine-disrupting-chemical-reduction intervention with 6 couples facing unexplained infertility. Real prior TGS solo appearance confirmed: Episode #2 ('Sperm and Our Future') — one of the first-ever guests on the podcast."@en ;
+    .
+
+tgs:Human.SianSutherland a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Sian Sutherland"@en ;
+    rdfs:comment "British entrepreneur; co-founder, A Plastic Planet (2017, with Frederikke Magnussen) — created the world's first plastic-free supermarket aisle (Amsterdam, 2018); co-founder, PlasticFree (materials/systems solutions platform) and the Plastic Free Babies campaign. Previously ran a Michelin-starred restaurant and a beauty/skincare brand-design agency. At the 2023 UN Plastics Treaty negotiations (INC2), launched the Plastic Health Council with Plastic Soup Foundation. Real prior TGS solo appearance confirmed: Episode #89 ('Innovating the Business of Plastics')."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-4 "Titanic Oceans" bootstrap. All 3
+# independently verified via real web search before minting.
+#############################################
+
+tgs:Human.DanielPauly a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Daniel Pauly"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Daniel_Pauly> ;
+    rdfs:comment "French-born marine biologist and fisheries scientist (b. May 2, 1946, Paris); Killam Professor, University of British Columbia Institute for the Oceans and Fisheries. Founder (1999) and Principal Investigator, Sea Around Us Project (named after Rachel Carson's 1951 book); co-founder, FishBase.org (30,000+ fish species). Most cited fisheries scientist in the world (2020). Co-recipient, 2023 Tyler Prize for Environmental Achievement ('the Nobel Prize for the Environment'). Author/co-author of 1,000+ scientific publications. Real prior TGS solo appearance confirmed: Episode #15."@en ;
+    .
+
+tgs:Human.AntonioTuriel a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Antonio Turiel"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Antonio_Turiel> ;
+    rdfs:comment "Spanish physicist and scientist (b. 1970, León); PhD in Theoretical Physics, Autonomous University of Madrid. Senior scientist, Institute of Marine Sciences, CSIC (Barcelona), specializing in satellite oceanography, turbulence, and sea surface salinity/temperature/currents. Better known publicly as editor of the real, influential Spanish-language blog 'The Oil Crash' (El Otro Cronista/Crash Oil), an early and prominent voice on peak oil and resource depletion; author of 'Petrocalipsis' (2020) and an advocate for degrowth. Real prior TGS solo appearance confirmed: Episode #65 ('Deep Challenges: Oceans, Scarcity and Culture')."@en ;
+    .
+
+tgs:Human.PeterWard a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Peter Ward"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Peter_Ward_(paleontologist)> ;
+    rdfs:comment "American paleontologist and astrobiologist; Professor of Biology and of Earth and Space Sciences, University of Washington; former Principal Investigator, UW node of the NASA Astrobiology Institute (2001-2006). Co-originator of the Rare Earth Hypothesis (with Donald Brownlee); originator of the Medea Hypothesis (2009 book) — the argument, opposing James Lovelock's Gaia Hypothesis, that life on Earth has repeatedly driven its own mass extinctions via self-destructive biochemical feedbacks (ocean anoxia, hydrogen sulfide release). Author of 17+ books including 'Under a Green Sky' and 'On Methuselah's Trail.' Real prior TGS solo appearance confirmed: Episode #8."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-5 "Food & Community in the Ruins" bootstrap.
+# All 3 independently verified via real web search before minting.
+# Explicitly all 3 guests' first-ever TGS appearance ('three new
+# friends of mine' — Nate's own words).
+#############################################
+
+tgs:Human.DougaldHine a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Dougald Hine"@en ;
+    rdfs:comment "British social thinker, writer, and speaker; former BBC journalist. Co-founder, Dark Mountain Project (2009, with Paul Kingsnorth — co-wrote the founding 'Uncivilisation' manifesto) and a school called HOME (2018, Sweden, with partner Anna Björkman). Author of 'At Work in the Ruins' (2023, Chelsea Green). Co-hosts 'The Great Humbling' podcast (with Ed Gillespie); publishes the Substack 'Writing Home.' Real, independently confirmed collaborator/dialogue partner of tgs:Persona.VanessaAndreotti ('Of Earth and Empire' dialogue series), corroborating this episode's own direct reference to her as 'the Brazilian scholar who I've worked with a lot.'"@en ;
+    .
+
+tgs:Human.ChrisSmaje a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Chris Smaje"@en ;
+    rdfs:comment "British writer, social scientist, and small-scale farmer; co-runs a mixed smallholding in Somerset, southwest England (since 2007). Formerly an academic sociologist (University of Surrey) and anthropologist (Goldsmiths College). Author of 'A Small Farm Future' (2020) and 'Saying NO to a Farm-Free Future' (2023), both Chelsea Green. Writes at chrissmaje.com."@en ;
+    .
+
+tgs:Human.PellaThiel a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Pella Thiel"@en ;
+    rdfs:comment "Swedish ecologist, part-time farmer, and educator in ecopsychology; MSc Ecology, Stockholm University (thesis on Ecuadorian rainforest restoration). Co-founder, Swedish Transition Network and End Ecocide Sweden (current chairperson); knowledge expert, UN Harmony with Nature programme. Recipient, Swedish Martin Luther King Award (2023) and Environmental Hero of the Year (2019). Real later solo TGS appearance confirmed: Episode #121 ('Criminalizing Ecocide: The Rights of Nature'), which itself directly cross-references this RR-5 appearance."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-27 "An Ecological Psychology" bootstrap. Both
+# independently verified via real web search before minting. This is
+# the most recent real episode built in this graph to date (recorded
+# 2026-08-05, issued 2026-08-12).
+#############################################
+
+tgs:Human.RichardSchwartz a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Richard C. Schwartz"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Richard_C._Schwartz> ;
+    rdfs:comment "American psychotherapist and creator of Internal Family Systems (IFS), developed in the early 1980s out of his own work as a family therapist. Founder, IFS Institute (originally Center for Self Leadership, 2000). Teaching Associate in Psychiatry, Cambridge Health Alliance (Harvard Medical School teaching affiliate). Author/co-author of 10+ books including 'No Bad Parts' (2021) and 'Internal Family Systems Therapy' (1997). Lives near Chicago with his wife Jeanne (Vice President, IFS Institute), three daughters, and six grandchildren."@en ;
+    .
+
+tgs:Human.SteffiBednarek a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Steffi Bednarek"@en ;
+    rdfs:comment "Gestalt psychotherapist, trauma therapist, and climate psychologist (25+ years, systemic change and trauma therapy); founder and director, Centre for Climate Psychology. Editor of 'Climate, Psychology, and Change' (contributors include Bayo Akomolafe, Nora Bateson, Thomas Hübl, and Francis Weller — both Bateson and Weller already real, built figures in this graph). Has worked with national governments, corporate/financial institutions, and NGOs on the psychological dimension of climate decision-making; creator of the 'Systems Wayfinding' initiative applying IFS to organizations and institutions. Associate member, American Psychological Association's climate change group."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-6 "Fossil Free Food Systems" bootstrap. All 4
+# independently verified via real web search before minting. All 4
+# are explicitly returning guests ("four prior guests back") with real
+# confirmed prior solo TGS appearances.
+#############################################
+
+tgs:Human.JasonBradford a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Jason Bradford"@en ;
+    rdfs:comment "American biologist and organic farmer; manager, Confluence Farms (near Corvallis, OR). Affiliated with Post Carbon Institute since 2004 (Fellow, then Board President); co-host, Crazy Town podcast. Author, 'The Future Is Rural: Food System Adaptations to the Great Simplification' (2019). Former research biologist (evolution/ecology/global change); co-founded the Andes Biodiversity and Ecosystem Research Group. Real prior TGS solo appearance confirmed: Episode #76. Real later solo TGS appearance also confirmed: 'The Future is Rural: Reclaiming Food Sovereignty through Farming Clubs?' (2026)."@en ;
+    .
+
+tgs:Human.AndrewMillison a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Andrew Millison"@en ;
+    rdfs:comment "American permaculture educator, designer, and documentary videographer; founded the Permaculture Design education program at Oregon State University (2009), where he is Education Director and Senior Instructor. His YouTube channel documenting global permaculture/land-restoration projects (India, Egypt, Mexico, Senegal, Cuba, etc.) has 100M+ views. Real prior TGS solo appearance confirmed: 'Restoring Global Ecology: The Great Green Wall and Large-Scale Permaculture in Action' (TGS #178, 2025)."@en ;
+    .
+
+tgs:Human.VandanaShiva a thinkr:Human,
+        owl:NamedIndividual ;
+    owl:sameAs <http://dbpedia.org/resource/Vandana_Shiva> ;
+    skos:prefLabel "Vandana Shiva"@en ;
+    rdfs:comment "Indian scientist, environmental activist, ecofeminist, and author; PhD in Theoretical Physics (quantum theory, hidden variables/non-locality), University of Western Ontario. Founder, Research Foundation for Science, Technology and Ecology (1982) and Navdanya ('nine seeds,' 1991) — biodiversity/seed-sovereignty movement now serving 500,000+ farmers across 16 Indian states. Early volunteer with the Chipko movement. Recipient, Right Livelihood Award (1993) and Sydney Peace Prize. Author of 20+ books including 'The Violence of the Green Revolution' and 'Monocultures of the Mind.'"@en ;
+    .
+
+tgs:Human.DanielZetah a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Daniel Zetah"@en ;
+    rdfs:comment "American regenerative farmer and educator; steward, with wife Stephanie, of New Story Farm (est. 1962, ~100-160 acres near Hutchinson, Minnesota), growing ~80-85% of their own calories and hosting the Resiliency School. Studied economics/business; lived abroad 15 years (including work as a snake relocator and chemical-spray auditor in Tasmania); former full-time environmental activist; studied permaculture and built straw-bale housing in an off-grid mountain community before returning to the family farm. Real prior TGS solo appearance confirmed: Episode #76 ('Regenerative Agriculture and Personal Sovereignty')."@en ;
     .

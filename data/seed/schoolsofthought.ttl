@@ -36,6 +36,7 @@ tgs:SchoolOfThought.BehavioralEconomics a thinkr:SchoolOfThought,
     skos:definition "The field studying how real (rather than idealized-rational) human psychology affects economic decisions. Relevant here as the disciplinary framing behind Discount Rates / Present Bias and Human 'Wetware' — Hagens draws on this field's empirical findings to argue markets systematically misprice long-term ecological risk."@en ;
     skos:prefLabel "Behavioral Economics"@en ;
     owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> ;
+    skos:scopeNote "NO favorsFacet asserted (2026-08-13) — same reasoning as SystemsEcology: a descriptive/analytical field, not a position arguing for a specific facet-shaped future. Left open rather than forced."@en ;
     .
 
 tgs:SchoolOfThought.CivilRightsMovement a thinkr:SchoolOfThought,
@@ -43,6 +44,7 @@ tgs:SchoolOfThought.CivilRightsMovement a thinkr:SchoolOfThought,
     skos:definition "The mid-20th-century U.S. movement for racial equality under law. Relevant here specifically as the context for MLK's later economic-justice organizing (Poor People's Campaign), used as a real-world contrast case for the Growth Imperative concept — not cited for its core civil-rights aims, which are a separate matter from TGS's scope."@en ;
     skos:prefLabel "U.S. Civil Rights Movement"@en ;
     owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> ;
+    skos:scopeNote "NO favorsFacet asserted (2026-08-13) — the most plausible candidate would be ScenarioFacet.CivicIdeal (PowerAndDistribution dimension: DistributedStructure + BroadGains), given the movement's core aim of broadening who real power and gains reach. But this graph currently only cites the movement narrowly (as MLK's economic-justice context, per its own existing definition above), not as a general theory of distributed power — asserting favorsFacet now would be extrapolating past what's actually been sourced. Revisit if real TGS material draws this connection explicitly."@en ;
     .
 
 tgs:SchoolOfThought.DegrowthMovement a thinkr:SchoolOfThought,
@@ -50,6 +52,8 @@ tgs:SchoolOfThought.DegrowthMovement a thinkr:SchoolOfThought,
     skos:definition "A political, economic, and social movement critiquing GDP growth as a policy goal and advocating planned reduction of material/energy throughput in wealthy economies. Relevant here as an adjacent (not identical) framework to Hagens' Growth Imperative critique — worth distinguishing rather than conflating, since Hagens' emphasis on biophysical limits and degrowth's emphasis on distributive justice/policy overlap but aren't the same argument."@en ;
     skos:prefLabel "Degrowth"@en ;
     owl:sameAs <http://dbpedia.org/resource/Degrowth> ;
+    thinkr:favorsFacet tgs:Concept.GreatSimplification ;
+    skos:scopeNote "favorsFacet added 2026-08-13. Structurally DIFFERENT in character from TechnoOptimism's link (which surfaces real tension) — this one surfaces CONVERGENCE: the ScenarioFacet degrowth's own core argument (deliberate contraction, X=2, combined with staying within limits, Y=4) structurally matches lands on is the SAME dual-typed individual as tgs:Concept.GreatSimplification, Hagens' own eponymous framework. Doesn't mean the two are identical — this entity's own existing definition already cautions they 'overlap but aren't the same argument' (distributive-justice emphasis vs. biophysical-limits emphasis) — only that their respective visions of the future land on the same structural point in the Economic dimension."@en ;
     .
 
 tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
@@ -57,6 +61,7 @@ tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
     skos:definition "The loosely-organized, decades-long community of analysts, forecasters, geologists, and commentators studying and publicizing oil depletion dynamics (ASPO, peakoil.com-era forums, etc.) — distinct from tgs:Concept.PeakOil, which is the underlying theory/phenomenon itself. Note on scope: this community is genuinely heterogeneous in rigor and ideology, ranging from serious petroleum-geology analysis to more speculative 'doomer' content, and has no single unifying institution. Included despite that heterogeneity because the core theoretical work (Hubbert Peak Theory) has had multi-decade real-world influence and is a direct formative input to Hagens' own analytical background — he worked professionally in this space before founding The Great Simplification."@en ;
     skos:prefLabel "Peak Oil (movement/community)"@en ;
     thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_PeakOilMovement ;
+    skos:scopeNote "NO favorsFacet asserted yet (2026-08-13) — the obvious candidate is the same tgs:Concept.GreatSimplification facet DegrowthMovement now points to (energy contraction forcing exactly this kind of economic trajectory), but asserting that here would be redundant without first finding something genuinely DISTINCT this community argues for — e.g. a specific EarthSystems or Geopolitical-dimension prediction unique to peak-oil analysis (energy-scarcity-driven conflict, resource nationalism) rather than just restating Degrowth's own economic claim from a different angle. Worth revisiting once real source material (an episode, a cited peak-oil-community text) makes that distinct claim explicit."@en ;
     .
 
 tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,
@@ -64,6 +69,7 @@ tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,
     skos:definition "Ancient Greco-Roman philosophical school. Relevant here specifically for its emphasis on distinguishing what is/isn't within one's control and valuing present right action — the philosophical antecedent cited for the Discount Rates / Present Bias concept."@en ;
     skos:prefLabel "Stoicism"@en ;
     owl:sameAs <http://dbpedia.org/resource/Stoicism> ;
+    skos:scopeNote "NO favorsFacet asserted (2026-08-13) — the least likely of any SchoolOfThought here to ever get one: this operates at the individual/personal scale (how one person relates to what they can't control), while every ScenarioFacet describes a civilizational-scale trajectory. A genuine category mismatch, not just missing evidence — kept open only because 'never say never,' not because a real path to a link is visible right now."@en ;
     .
 
 tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
@@ -71,15 +77,17 @@ tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
     skos:definition "The branch of ecology studying ecosystems as integrated systems, applying concepts like carrying capacity and feedback loops. Relevant here as the disciplinary origin of Overshoot, Ecological Overshoot, and related concepts Hagens draws on directly (Catton, Meadows)."@en ;
     skos:prefLabel "Systems Ecology"@en ;
     owl:sameAs <http://dbpedia.org/resource/Systems_ecology> ;
+    skos:scopeNote "NO favorsFacet asserted (2026-08-13) — this is a scientific field/methodology, not an advocacy position predicting or arguing for a specific societal trajectory, so it's a poor structural fit for favorsFacet as currently defined. Genuinely open whether this should ever get one, versus staying a pure disciplinary/lineage entity (already well-served by thinkr:influencedBy links to Catton/Meadows). Not ruling it out, but it would need a real source treating the field ITSELF as advocating for an outcome, not just informing one."@en ;
     .
 
 tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought, 
         owl:NamedIndividual ;
     skos:altLabel "Donut Economics"@en ;
     skos:prefLabel "Doughnut Economics"@en ;
-    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
+    skos:definition "Economic framework developed by Oxford economist Kate Raworth (now tgs:Persona.KateRaworth in this graph, real bootstrap 2026-08-13 — no formal property link asserted here, matching the same deferred treatment as SchoolOfThought.PlanetaryBoundaries's own note, since thinkr:influencedBy's domain is Concept-only and this would need that restriction reconsidered first, not forced) (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
     owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
     thinkr:convergesWith tgs:Concept.Overshoot ;
+    skos:scopeNote "NO favorsFacet asserted yet (2026-08-13) — genuinely harder than the others because its own core claim spans TWO axes at once (a social floor AND an ecological ceiling), not one dimension's single facet the way GreenGrowth/GreatSimplification are. Doesn't map cleanly onto the Economic dimension alone (which only tracks Contraction/Growth x Overshoot/WithinLimits) since Doughnut Economics is equally concerned with distributional/social-floor questions that this graph currently tracks on the separate PowerAndDistribution dimension (CivicIdeal, BroadGains). Might eventually need TWO favorsFacet assertions across different dimensions rather than one — worth thinking through properly rather than forcing a single-facet answer."@en ;
     .
 
 
@@ -97,6 +105,7 @@ tgs:SchoolOfThought.PlanetaryBoundaries a thinkr:SchoolOfThought,
     skos:prefLabel "Planetary Boundaries"@en ;
     skos:definition "Scientific framework (first published 2009, periodically updated since) identifying 9 processes that regulate Earth's stability and resilience, each with a proposed boundary defining a 'safe operating space for humanity' — as of the most recent update, a majority of the 9 are considered transgressed. Led by Johan Rockström, originating at and maintained by the Stockholm Resilience Centre (Rockström's founding institution) in ongoing collaboration with the Potsdam Institute for Climate Impact Research (which he also directs). Directly cited as a foundational influence in this graph's own SchoolOfThought.DoughnutEconomics entry ('ecological ceiling... building on Rockstrom et al.'s planetary boundaries framework') — worth a formal property link once thinkr:influencedBy/convergesWith's current Concept-only domain restriction is reconsidered for SchoolOfThought-to-SchoolOfThought relationships; not forced through an ill-fitting property here."@en ;
     owl:sameAs <http://dbpedia.org/resource/Planetary_boundaries> ;
+    skos:scopeNote "NO favorsFacet asserted yet (2026-08-13). Genuine fit question, not just missing evidence: favorsFacet's own semantics are about a worldview arguing a facet is ACHIEVABLE/desirable (like TechnoOptimism/GreenGrowth or Degrowth/GreatSimplification), but Planetary Boundaries is fundamentally DIAGNOSTIC/measurement science, not an advocacy position predicting a societal trajectory — it doesn't argue FOR an EarthSystems outcome so much as measure how far past one we already are. If this ever gets linked, ScenarioFacet.StrainedButWorkable (X=2/Functional, Y=4/ModerateStress) is the plausible target, but only if real source material shows this framework being used to argue that outcome is achievable, not just to measure distance from it."@en ;
     .
 
 #############################################
@@ -108,4 +117,20 @@ tgs:SchoolOfThought.WarmData a thinkr:SchoolOfThought,
     skos:prefLabel "Warm Data"@en ;
     skos:definition "A methodology developed by Nora Bateson (~2012 onward), defined as transcontextual information about the interrelationships that integrate a complex living system — contrasted with 'cold' data that isolates variables from their relational context. Operationalized through the 'Warm Data Lab' workshop format, which the International Bateson Institute has since certified over 600 hosts to run internationally."@en ;
     dcterms:source <https://www.warmdata.life/international-bateson-institute> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — real, direct engagement confirmed via RR-24's own
+# official episode description (not an incidental transcript mention),
+# surfaced after MJSullivan pushed back on an earlier over-cautious
+# read of this. RR-24's own real academic citation used as source.
+#############################################
+
+tgs:SchoolOfThought.TechnoOptimism a thinkr:SchoolOfThought,
+        owl:NamedIndividual ;
+    skos:prefLabel "Techno-optimism"@en ;
+    skos:definition "The belief that technological progress and human ingenuity can resolve ecological and resource constraints without requiring a fundamental reduction in material consumption — spanning positions from general faith in innovation to explicit projects like space mining and off-world colonization. A direct, named target of critique across multiple TGS episodes (RR-24's own official description centers the whole episode on it: 'Techno-optimists... dream of a future where we mine, travel to, and colonize other planets... all in the hopes of bypassing the problems we now face on Earth'), and thematically opposed by Concept.EnergyBlindness throughout this graph's own already-built material."@en ;
+    dcterms:source <https://link.springer.com/article/10.1007/s13347-022-00555-x> ;
+    thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    skos:scopeNote "favorsFacet added 2026-08-13, linking into the 256-Scenario matrix per MJSullivan's explicit request. GreenGrowth (Economic dimension, X=4/Growth Y=4/WithinLimits) is the precise structural match for techno-optimism's own core promise: continued growth, decoupled from resource constraints via technology. The tension this surfaces is real and worth keeping visible: GreenGrowth's own scopeNote already records that Hagens himself considers it 'the least realistic option on this Dimension,' calling continued material growth and biosphere healing 'two forces that pull against each other too hard to hold together at a global scale.' This property doesn't resolve that disagreement — it makes it queryable: the SchoolOfThought that argues FOR this facet, and the Concept's own author's independent assessment that it's the least likely one, now sit on the same graph, connected through the same facet, rather than as two disconnected prose observations."@en ;
     .

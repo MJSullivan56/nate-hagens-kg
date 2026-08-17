@@ -2902,3 +2902,289 @@ already used repeatedly for the graph's own schema decisions.
    a scripted, verified transformation (this doc's own stated
    discipline), not hand-editing.
 
+
+## SESSION WRAP-UP #2 (2026-08-13, unconfirmed — this may actually span
+## into 2026-08-14 or later; MJSullivan was asked directly and did not
+## confirm either way, so this date is carried forward from the rest of
+## this session rather than assumed fresh). Continues directly from the
+## SESSION WRAP-UP entry above — same conversation, no gap — covering
+## everything built after that entry was written. This was an
+## exceptionally long, dense continuation: full series verification,
+## the Scenario positional ontology, EpisodeSegment, a real RR-26
+## mega-bootstrap plus 4-tier enrichment, the Berman 5-interview batch,
+## multiple source-quality upgrades, three more Reality Roundtables,
+## one guest-hosted Frankly, and a real architectural resolution
+## (contrastsWith vs. the never-used AlternateTermType.Antonym) that
+## closes out `[2026-08-13-3]` from the previous entry's todo list.
+
+### What got built, by category
+
+**Series/episode content verification & correction:**
+- Completed the "How to Think About the Future" series (Parts 2–6,
+  closing `[2026-08-13-5]`) — found and fixed 2 materially wrong titles
+  and URLs (TGS_150/151 had never been independently verified), wrong
+  transcript-URL month folders on 3+ episodes, added 3 new Personas
+  (Waddington, Bardi, Rockström), 4 new Concepts, 1 SchoolOfThought
+  (PlanetaryBoundaries), 7 new stub episodes from real cross-references.
+- Found and fixed a real naming bug: 6 Frankly episodes had been minted
+  with `TGS_`-prefixed IRIs instead of `Frankly_`-prefixed ones,
+  inconsistent with 5 already-correct siblings. Full rename executed
+  across 5 files — first pass only caught the exact-suffix IRI pattern
+  and silently missed 25 prose-only mentions in comments/scopeNotes
+  across those same files; caught by re-checking after the fact rather
+  than trusting the replacement count, fixed with a digit-boundary-safe
+  regex pass.
+
+**New schema/architecture:**
+- `thinkr:EpisodeSegment` (Frankly / MainShow / RealityRoundtable) —
+  genuinely independent from `thinkr:EpisodeType`, confirmed real by a
+  full URL-pattern audit of every existing episode. Design assumption
+  had to be corrected mid-build: Frankly vs. MainShow are cleanly
+  separated by URL PATH alone, but RealityRoundtable shares MainShow's
+  `/episode/` path and is only distinguishable by URL SLUG content —
+  documented directly in the schema rather than glossed over.
+- The full Scenario positional ontology: `hasXPosition`/`hasYPosition`
+  (1–5 continuum), `hasFacetCode` (2-letter mnemonics, collision-checked
+  for all 16 current facets), 8 denormalized Scenario-level position
+  properties, axis-label properties on ScenarioDimension. Went through
+  real design churn before landing — MJSullivan had to correct the
+  axis-label wording (stale "X=0 means X" boolean-era phrasing) and
+  clarify the EarthSystems axis is asymmetric (Y-low = MORE stressed,
+  counter to the other 3 dimensions). 4 Scenarios renamed twice each,
+  full rename history preserved in AlternateTerm scopeNotes rather than
+  silently overwritten.
+- **RESOLVED `[2026-08-13-3]`**: `AlternateTermType.Antonym` vs.
+  `thinkr:contrastsWith`. Real test case: Light Triad / Dark Triad
+  (Frankly_85). Resolution: `contrastsWith` is correct for a genuine
+  antonym relationship between two DISTINCT concepts; `AlternateTerm`
+  is specifically for two NAMES for the SAME referent (EROI/"Energy
+  Return on Investment") and was never actually the right shape for
+  this. Confirmed independently by the source material itself — Kaufman
+  et al.'s 2019 paper establishing Light Triad is literally titled
+  "Contrasting Two Very Different Profiles of Human Nature." `Antonym`
+  had zero real usage across its entire lifetime in this graph — kept
+  as a documented dead end (both on the individual and the parent
+  class's own comment) rather than deleted, since the reasoning that
+  ruled it out has real value for anyone who considers this route again.
+
+**Content built, roughly in order:**
+- CalDEC Doughnut taxonomy work (IndicatorCategory/Indicator, generic
+  naming after MJSullivan flagged CalDEC-specific naming as premature),
+  EarthSystemComponent + AMOC bootstrap.
+- RR-26 "Why Community Fails" — full bootstrap: 3 Personas (Nora
+  Bateson, Jonathan Goldsmith, Lucas Jackson), International Bateson
+  Institute, SchoolOfThought.WarmData, 3 Concepts (Communing,
+  Symmathesy, Schismogenesis). Caught and fixed 2 real mistakes
+  mid-build: `owl:sameAs` misused for a plain homepage link (should
+  have been `dcterms:source`), and the episode itself first minted
+  under the wrong class-prefix (`Interview.RR_26...` for a
+  `PanelDiscussion`-type episode — this project's first-ever
+  PanelDiscussion, so no existing precedent to blindly follow).
+- RR-26 4-tier follow-up enrichment (user-requested after a suggested
+  plan): RadicalHospitality, Amonging, DunbarsNumber (+ Persona.
+  RobinDunbar), Work.Combining, Work.Belly, source upgrade for
+  Symmathesy (WordPress → real ISSS academic proceedings), and 6 new
+  episode stubs resolving real deferred cross-references (RR-19, RR-10,
+  3 Franklys, TGS_191). Real mistake caught here too: the Tier 4 source
+  upgrade was first written as a brand-new duplicate `Concept.Symmathesy`
+  declaration instead of editing the existing one — caught by checking
+  the file after the write rather than trusting the edit succeeded as
+  intended, fixed to one clean declaration.
+- Art Berman 5-interview batch (TGS_3/44/54/92/101) processed as a
+  single batch per MJSullivan's own real transcripts — fixed a bare
+  stub (TGS_3), built 2 previously-entirely-absent episodes (TGS_44,
+  TGS_54), added missing `discusses` links to 2 already-built episodes
+  (TGS_92, TGS_101) that had zero. New Concept.MaximumPowerPrinciple +
+  Persona.HowardOdum. TGS_44 deliberately got ZERO discusses links and
+  said so directly, rather than force a weak connection to match the
+  others. One escaping bug caught: literal `\'` sequences (invalid
+  Turtle) in 3 scopeNote strings, fixed and reverified.
+- TGS_220 (Berman's most recent appearance) — real transcript resolved
+  a genuine cross-source date discrepancy cleanly: the existing stub's
+  own inferred `dct:issued` guess was actually right, and the separate
+  Evidence individual's "aired" date turned out to be `dct:created`,
+  not `dct:issued`. Neither source was wrong; they were describing
+  different fields.
+- Source-quality upgrades on direct request: TheSenecaEffect (generic
+  homepage → real Club of Rome publication page), PeakOil (→ Wikipedia,
+  plus a new `AlternateTerm` for "Hubbert Peak Theory," `ExactMatch`
+  type, citing the real 1956 paper), Wetware/Overshoot/LimitsToGrowth/
+  JevonsParadox (3 sources)/EnergyReturnOnInvestment (5 sources) — 11
+  URLs total, every one independently fetched or searched before being
+  written, not taken on faith even when MJSullivan supplied them
+  directly. One real near-miss caught: the EROI gov.uk URL he gave
+  turned out to have an unrelated, near-identically-named sibling page
+  that surfaced first in search — fetched his EXACT URL directly rather
+  than assume they were interchangeable, confirmed it resolves
+  independently and correctly.
+- Frankly_20 "Staying Warm Data with Nora Bateson" — the first
+  confirmed guest-hosted Frankly in this graph (`EpisodeType.Interview`
+  + `EpisodeSegment.Frankly`), real proof the two dimensions are
+  genuinely independent, not just a hypothetical the schema allowed
+  for. Resolved TGS_10 (Nora's real first TGS appearance, previously
+  flagged deferred) using a real confirmed URL surfaced in Frankly_20's
+  own real linked show notes. Built DJ White + Work.RealityBlind (Nate's
+  own book) given a direct citation into it. Real naming bug caught
+  again: `Monologue.Frankly_20...` minted for something whose real
+  `hasEpisodeType` is `Interview` — same bug class as RR-26's, caught
+  because MJSullivan flagged it directly ("this is technically a
+  Frankly not an interview per se").
+- TGS_10 fully fleshed out on request, via a direct real fetch of the
+  episode's own page — confirmed every one of MJSullivan's manually
+  extracted timestamp labels against the page's real embedded links.
+  New Concept.KleibersLaw + Persona.MaxKleiber. Real escaping bug
+  caught: unescaped inner quotes in a `skos:prefLabel` broke the file's
+  parse entirely — caught by the mandatory parse-check step (never
+  skipped), fixed precisely, reverified.
+- RR-26's own real linked show notes fully extracted and converted to
+  table on request, revealing much more real, buildable material than
+  the original bootstrap used — executed as a genuine 4-tier plan
+  (above).
+- RR-20 "Hacking Human Attachment" — Zak Stein bootstrap, full episode
+  build, real table. One real mistake caught: the symmetric-indexing
+  edit for Zak's relationship only updated Nate's PROFESSIONAL
+  relationship list, silently missing the PERSONAL one (his
+  relationship is dual-typed) — caught by viewing the raw file directly
+  rather than trusting a single successful edit, fixed, and explicitly
+  double-checked upfront for the next 2 relationships built afterward.
+- RR-19 "Dark Triad Personality Traits" — Nancy McWilliams + Reid Meloy
+  bootstrap, full rebuild of an existing bare stub using real transcript
+  + real fetched show notes. Resolved a real ambiguity by checking
+  actual links rather than assuming: "TGS Episodes 1 + 2" for Zak Stein
+  turned out to be ORDINAL labels for his 1st/2nd appearance (#122,
+  #180 — already correctly built), not literal episode numbers.
+- Frankly_85 "The Light Triad" — the architectural-resolution episode
+  (see above). Also finally minted `Concept.DarkTriad` itself, which
+  had been discussed substantively across 3 prior episodes
+  (RR-19/RR-20/RR-26) without ever being formally built — all 3
+  retroactively updated to `discusses` it.
+
+### Lessons learned (the actual patterns, not just a bug list)
+
+1. **IRI class-prefixes must match the real `hasEpisodeType`, not an
+   assumed pattern — checked THREE separate times this session**
+   (RR-26's PanelDiscussion, Frankly_20's Interview, and a near-miss on
+   Frankly_85 avoided by being careful upfront). Whenever a genuinely
+   NEW EpisodeType/class combination gets minted for the first time,
+   there's no existing precedent to lean on, which is exactly when this
+   bug is most likely — worth treating "first individual of a new
+   combination" as an automatic trigger to double-check the class
+   prefix against the actual asserted type, not just follow the nearest
+   visually-similar example.
+
+2. **Symmetric-indexing on dual-typed Relationships needs an explicit
+   checklist, not trust in one successful edit.** The DJWhite/ZakStein
+   miss (updated Professional, silently skipped Personal) happened
+   because the edit "succeeded" — no error, no warning — while still
+   being incomplete. Explicitly checking BOTH `hasPersonalRelationship`
+   and `hasProfessionalRelationship` whenever a Relationship carries
+   both types, every time, closed this for the rest of the session (2
+   more relationships built afterward, no repeat).
+
+3. **Shell round-trips mangle Turtle string escaping in predictable,
+   repeat ways** — happened at least 3 times this session (Berman's
+   `\'` sequences, TGS_10's unescaped inner quotes breaking the parse
+   outright, and near-misses elsewhere). The mandatory post-write parse
+   check caught every single instance before it could ship broken data
+   — this is the check earning its keep, not busywork. Worth explicitly
+   re-viewing any written content containing embedded quotes or
+   apostrophes inside a string literal, not just trusting the tool call
+   succeeded.
+
+4. **A generic placeholder source (bare show homepage) is a real,
+   trackable signal, not just an acceptable default.** Five different
+   Concepts got real source upgrades this session, all found
+   opportunistically once better citations surfaced through unrelated
+   work (RR-20's transcript surfaced CarbonPulse's real source; TGS_10's
+   fetch surfaced Symmathesy's real source). Worth treating "still on
+   the generic homepage placeholder" as an open, trackable state for
+   any Concept, not a finished one.
+
+5. **Independently verifying a URL is worth doing even when the person
+   supplies it directly** — not because they're likely wrong, but
+   because "close but not identical" sources exist in the wild (the
+   EROI/gov.uk near-duplicate page) and only fetching the EXACT given
+   URL catches that distinction. Trusting a URL because a trusted
+   person supplied it, versus verifying that specific URL resolves to
+   what's claimed, are different levels of confidence — this session
+   showed the gap between them is real, not theoretical.
+
+6. **Real transcripts and real fetched pages consistently outperformed
+   every prior inference or guess this session made** — TGS_150/151's
+   wrong titles, the Frankly/TGS prefix bug, multiple date corrections,
+   the Zak Stein "Episodes 1+2" ambiguity. Every single time a primary
+   source got checked directly, something was found to be wrong or
+   incomplete in what had been inferred before. This isn't a call to
+   distrust every prior entry in this graph — most of it holds up fine
+   — but it's a strong argument for treating "verified against a real
+   primary source" and "built from inference/pattern-matching" as
+   genuinely different confidence tiers going forward, and for
+   revisiting inferred content opportunistically when a real source
+   becomes available, the same way the source-quality upgrades did for
+   Concepts this session.
+
+7. **Reality Roundtables are a real, validated high-yield strategy for
+   graph bootstrapping, not just a hunch** — MJSullivan's own
+   observation, confirmed concretely across 4 RRs processed this
+   session (RR-10, RR-19, RR-20, RR-26), each one surfacing real,
+   verifiable cross-references to at least one other RR or a shared
+   Concept. Worth prioritizing remaining RRs over remaining Franklys
+   for future bootstrapping sessions, on the actual evidence gathered
+   this session rather than the original guess.
+
+8. **A Concept can be substantively discussed across multiple real
+   episodes for a long time before anyone notices it was never actually
+   minted.** Concept.DarkTriad is the concrete example — referenced
+   and cross-linked from 3 separate episodes before Frankly_85 finally
+   forced the question. Worth an occasional deliberate check: when a
+   term keeps recurring in `skos:definition`/prose text across multiple
+   episodes without a matching `Concept.X` individual backing it, that
+   itself is a signal worth acting on, not just noting.
+
+### `[2026-08-13-N]` todo-list resolution from the previous entry
+
+- `[2026-08-13-3]` (Antonym vs. contrastsWith) — **RESOLVED**, see above.
+- `[2026-08-13-5]` (finish "How to Think About the Future" series) —
+  **DONE**, see above.
+- `[2026-08-13-1]`, `-2`, `-4`, `-6`, `-7`, `-8` — still open, untouched
+  this continuation, carried forward unchanged.
+
+### New backlog items surfaced this continuation, not yet actioned
+
+1. `[2026-08-13-9]` Real, further deferred RR/TGS threads, all flagged
+   with real confirmed episode numbers but not built: Nora Bateson's
+   RR #2; Zak Stein's RR #25 (with new Persona candidate Dr. Theo
+   Dawson); David Sloan Wilson's TGS #56; Rory Johnston's TGS #218;
+   Taylor Guthrie's TGS #191 (stub built, Persona deferred); Stacy
+   Mitchell's TGS #198; Frankly #112 ("The Quadruple Bifurcation");
+   Frankly #88, #23, #108 (stubs built, un-fleshed).
+2. `[2026-08-13-10]` The EpisodeSegment URL-classification rule was
+   refined mid-session (path-based for Frankly/MainShow, slug-based for
+   RealityRoundtable) — the original 18-episode MainShow audit from
+   before that refinement was never re-checked against the corrected
+   rule. Judged low-risk (all 18 are clearly single-guest by title) but
+   not exhaustively re-verified.
+3. `[2026-08-13-11]` Several real people surfaced as citation-worthy but
+   deliberately not bootstrapped, kept in prose only: William Bateson
+   (Nora's grandfather, real historical geneticist), Viktor Frankl,
+   Carl Sagan — all real, independently verifiable, low urgency.
+4. `[2026-08-13-12]` Real further Concept candidates surfaced but not
+   built, flagged in the episodes that surfaced them: Attachment Theory,
+   Supernormal Stimuli, Goodhart's Law (+ Persona.HarryHarlow) — all
+   from RR-20's own real show notes.
+5. `[2026-08-13-13]` `docs/backlog.md`'s own file may drift out of sync
+   between what MJSullivan has locally and what gets written during a
+   session (concretely happened this session — his upload was missing
+   the Externality Pricing entry). Worth him re-syncing his local copy
+   after every session's final write, or this will keep recurring.
+
+### Files touched this continuation (for anyone diffing against the
+### previous session's known-good state)
+`humans.ttl`, `personas.ttl`, `relationships.ttl`, `concepts.ttl`,
+`works.ttl`, `organizations.ttl`, `schoolsofthought.ttl`,
+`episodesegments.ttl` (new file), `episodes.ttl`, `tgs-core.ttl`,
+`alternatetermtypes.ttl`, `scenariodimensions.ttl`,
+`indicatorcategories.ttl`, `indicators.ttl`, `earthsystemcomponents.ttl`,
+`CLAUDE.md`, `docs/backlog.md`. All changes validated via full-graph
+parse + dangling-reference + class-purity checks before being shared —
+no exceptions taken this session.

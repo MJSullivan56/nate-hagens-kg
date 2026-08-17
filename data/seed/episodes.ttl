@@ -417,10 +417,17 @@ tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "A World on the Precipice"@en ;
-    rdfs:comment "Publication date not directly confirmed for this specific episode — inferred as on or near 2026-05-13 based on its position in a chronologically-ordered episode list directly adjacent to Episode 219 (explicitly dated 2026-05-06), not independently verified against the episode's own page."@en ;
+    skos:definition "Berman's return appearance amid the real-time Iran War/Strait of Hormuz oil crisis (roughly 11% of global oil supply offline at recording) — a systems-level breakdown of the crisis's already-locked-in effects (supply chain lags, refinery/tanker logistics, price cascades) regardless of how the war itself resolves, tying the acute shock back to the same longer-run themes (Peak Oil, the Carbon Pulse, the Superorganism, energy blindness) from his 4 prior TGS appearances."@en ;
+    dct:created "2026-05-06"^^xsd:date ;
+    dct:issued "2026-05-13"^^xsd:date ;
     dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics ;
     thinkr:hasHost tgs:Persona.NateHagens ;
-    thinkr:hasGuest tgs:Persona.ArtBerman .
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/220-art-berman> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness, tgs:Concept.CarbonPulse, tgs:Concept.GreatSimplification, tgs:Concept.PeakOil, tgs:Concept.Superorganism ;
+    dct:references tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound, tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics, tgs:Interview.TGS_54_TheStealthAdjustmentOfOil, tgs:Interview.TGS_3_OilBestAndWorstOfFuels ;
+    skos:scopeNote "2026-08-13: real dates confirmed from a complete real transcript + show notes upload, resolving a prior discrepancy — the stub's own inferred issued date (2026-05-13) turned out correct, and the created date (2026-05-06) now matches what the existing bio-intro-pilot Evidence had already found independently. discusses/dct:references added from the same source. Real, further cross-references confirmed but deliberately NOT chased down in this pass: 2 more Reality Roundtable appearances (RR-1 'Electric Vehicles', RR-16 'The Mad Scramble for Power'), and a real Rory Johnston episode (TGS #218) cited directly — none built as individuals here, flagged for a future pass."@en ;
+    .
 
 #############################################
 # BOOTSTRAPPED 2026-07-14 — Josh Farley's confirmed guest appearances.
@@ -436,18 +443,20 @@ tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual
 tgs:Interview.TGS_7_JoshFarleyAppearance1 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
-    rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS07JoshFarleyTranscript.docx.pdf existing in the transcript library. Placeholder skos:prefLabel below states this honestly rather than inventing a title."@en ;
+    rdfs:comment "Title still unconfirmed as of 2026-08-13 (real canonical URL now confirmed via RR-1's own real show notes, but the URL slug itself doesn't state a distinct title) — placeholder skos:prefLabel kept honest rather than inventing one."@en ;
     skos:prefLabel "Josh Farley (Episode 7, title unconfirmed)"@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
-    thinkr:hasGuest tgs:Persona.JoshFarley .
+    thinkr:hasGuest tgs:Persona.JoshFarley ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/07-josh-farley> .
 
 tgs:Interview.TGS_29_JoshFarleyAppearance2 a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
-    rdfs:comment "Title and date not yet independently confirmed as of 2026-07-14 — real appearance confirmed only via extraction/transcripts_raw/TGS29JoshFarley2Transcript.docx.pdf existing in the transcript library (the '2' in the filename strongly implies this is TGS's own internally-tracked second Farley appearance)."@en ;
+    rdfs:comment "Title still unconfirmed as of 2026-08-13 (real canonical URL now confirmed via RR-1's own real show notes) — placeholder skos:prefLabel kept honest rather than inventing one."@en ;
     skos:prefLabel "Josh Farley (Episode 29, title unconfirmed)"@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
-    thinkr:hasGuest tgs:Persona.JoshFarley .
+    thinkr:hasGuest tgs:Persona.JoshFarley ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/29-josh-farley> .
 
 tgs:Interview.TGS_185_MythsShapingOurEconomies a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
@@ -602,8 +611,10 @@ tgs:PanelDiscussion.RR_26_WhyCommunityFails a thinkr:Episode, owl:NamedIndividua
     thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.JonathanGoldsmith, tgs:Persona.LucasJackson ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-26> ;
     dct:source <https://natehagens.substack.com/p/why-community-fails-everyone-wants> ;
-    thinkr:discusses tgs:Concept.Communing, tgs:Concept.Symmathesy, tgs:Concept.Schismogenesis, tgs:SchoolOfThought.WarmData, tgs:Concept.Superorganism, tgs:Concept.Metacrisis ;
-    skos:scopeNote "Real, extensive further cross-references confirmed in the show notes but NOT chased down in this pass, deliberately deferred to keep this build bounded: Daniel Schmachtenberger's own TGS appearances (already a real Persona in this graph), a dedicated prior episode on Dark Triad traits (Reality Roundtable #19, confirmed via web search but not built), and Nora Bateson's own extensive further TGS history (see her own Persona-level scopeNote). 'Radical hospitality' and 'amonging' (a further Bateson-adjacent neologism) both recur prominently in this episode but were NOT minted as their own Concepts this pass — real, judged borderline rather than high-confidence, matching this project's established triage discipline."@en ;
+    thinkr:discusses tgs:Concept.Communing, tgs:Concept.Symmathesy, tgs:Concept.Schismogenesis, tgs:SchoolOfThought.WarmData, tgs:Concept.Superorganism, tgs:Concept.Metacrisis, tgs:Concept.RadicalHospitality, tgs:Concept.Amonging, tgs:Concept.DunbarsNumber, tgs:Concept.DarkTriad ;
+    thinkr:hasDiscussionSummary "Different in character from RR-1 and RR-24's convergence-through-complementary-expertise — here the three guests are colleagues at the same institute, with Nora as the clear intellectual center (founder, coiner of the terms being discussed) and Jonathan and Lucas mostly contributing illustrative, experiential texture (a son's skating community, tea-making, a shared meal ritual, a teenage trip to see the Dalai Lama) rather than distinct or competing positions. What makes this episode distinct is that the conversation doesn't just describe the practice it's about — unscripted, non-competitive, deeply attentive listening — it visibly performs it; Nate explicitly notices this happening in real time more than once, remarking that none of the guests give him an immediate reflexive answer and that the best parts of the conversation were when he 'forgot I was a podcast host.' The closest thing to genuine friction is Nate's own pointed challenge — if a community selects for openness, curiosity, integrity, and generosity, wouldn't it simply get exploited or outcompeted by people with Dark Triad traits? — which the three guests work through collaboratively rather than by disagreeing with each other, building out Jonathan's 'lattice work' image together (bad-faith actors can't get purchase because the group's structure keeps moving). Nate also brings real personal vulnerability into the conversation himself, using his own unresolved dishes-with-a-partner example, which Nora then uses live to illustrate 'systems holdback' (a form of schismogenesis) rather than treating it as a hypothetical. The episode closes with two real, direct corroborations of facts already in this graph: Nora naming her new book, Belly, and confirming that she's appeared on the show more than anyone except Daniel Schmachtenberger."@en ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad, tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication, tgs:Monologue.Frankly_88_SnowSingularityRocksInTheRiver, tgs:Monologue.Frankly_23_MordorEconomy, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:Interview.TGS_191_TaylorGuthrie, tgs:Work.RealityBlind, tgs:Work.Belly, tgs:Work.Combining ;
+    skos:scopeNote "RESOLVED 2026-08-13, via MJSullivan's own real extracted link list from this episode's real show notes: RadicalHospitality and Amonging both now built as real Concepts (were previously judged borderline in this same scopeNote), Dark Triad (RR-19) and the schismogenesis Reality Roundtable (RR-10) both now built as real Episode stubs (were previously flagged deferred). Daniel Schmachtenberger's own further TGS appearances and Nora Bateson's own extensive further TGS history remain real but still deferred beyond what's captured here."@en ;
     .
 
 #############################################
@@ -640,3 +651,446 @@ tgs:Interview.TGS_54_TheStealthAdjustmentOfOil a thinkr:Episode, owl:NamedIndivi
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/54-art-berman> ;
     thinkr:discusses tgs:Concept.PeakOil, tgs:Concept.CarbonPulse ;
     skos:scopeNote "Title constructed from this episode's real content (its own show-notes header never states an explicit distinct title beyond 'Episode 54') — not independently verified against a live fetch of the episode's own page, flagged honestly rather than presented with false confidence, matching the same caveat as TGS_44's canonical URL. Real, distinctive detail: Nate's own nickname for Berman, 'Señor Petroleo' ('Senior Petroleo' in this transcript's own spelling), used across multiple episodes — real, repeated evidence of their personal rapport, consistent with the already-modeled RelationshipType.Personal."@en .
+
+#############################################
+# ADDED 2026-08-13 — Nora Bateson's real TGS Episode 10, resolving a
+# gap flagged (but deliberately deferred) during her original RR-26
+# bootstrap. Real canonical URL confirmed via Frankly_20's own real
+# linked show notes, not inferred.
+#############################################
+
+tgs:Interview.TGS_10_NoraBateson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Nora Bateson: \"Complexity Between the Lines\""@en ;
+    skos:definition "Nora's first TGS appearance, bringing systems/complexity thinking to bear on the show's usual physical-science framing — how ecosystems (and human systems) develop through mutual learning (symmathesy), how relationships escalate through cumulative interaction (schismogenesis), and what her own concept of Warm Data offers as a way of perceiving the relational context conventional data strips away."@en ;
+    dct:created "2022-02-11"^^xsd:date ;
+    dct:issued "2022-03-16"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NoraBateson ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/10-nora-bateson> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/03/TGS10NoraBatesonTranscript.docx.pdf> ;
+    thinkr:discusses tgs:SchoolOfThought.WarmData, tgs:Concept.Symmathesy, tgs:Concept.Schismogenesis, tgs:Concept.Superorganism, tgs:Concept.KleibersLaw ;
+    dct:references tgs:Work.RealityBlind, tgs:Organization.InternationalBatesonInstitute ;
+    skos:scopeNote "2026-08-13: fully fleshed out from a direct real fetch of the episode's own page (MJSullivan's own request), confirming every one of his manually-transcribed timestamp labels against the page's real embedded links. Real, further citable material found but NOT built into this graph in this pass: William Bateson (Nora's grandfather, a real historical geneticist, distinct from her father Gregory already in this graph), Warm Data's own dedicated site (warmdatalab.net, distinct from International Bateson Institute's own site already used elsewhere), and 'People Need People' (peopleneedpeople.online) — real but unclear enough in nature (organization vs. informal initiative) from this one citation alone to model confidently. The Superorganism citation here is notably a DIFFERENT, real external ScienceDirect paper, not Nate's own writing — consistent with (and further corroborating) this graph's own earlier classification of Concept.Superorganism as external-origination, not thinkr:HagensConcept."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — Frankly_20, a genuinely guest-hosted Frankly (Nate
+# interviews Nora Bateson rather than his usual solo Monologue format) —
+# real, direct confirmation that thinkr:EpisodeType and
+# thinkr:EpisodeSegment are genuinely independent dimensions, exactly
+# as the schema was designed to allow (flagged as a hypothetical
+# possibility when EpisodeSegment was first built; this is the first
+# real instance). Sourced from a complete real transcript (YouTube
+# auto-generated, honestly flagged as lower quality) + MJSullivan's own
+# manually-rebuilt show notes preserving the original page's real
+# citation links.
+#############################################
+
+tgs:Interview.Frankly_20_KeepingWarmData a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Staying Warm Data with Nora Bateson"@en ;
+    skos:definition "Nate reconnects with Nora Bateson (in Sweden) to discuss the real, acute electricity-price spike there (roughly 35-40x normal) as a live 'dress rehearsal' for The Great Simplification — what people are actually doing in their own homes to adapt, whether there's a single villain or a broad systemic root cause, and how quickly lived behavior changes once a comfortable baseline (cheap, reliable heat) is suddenly removed."@en ;
+    dct:created "2022-12-16"^^xsd:date ;
+    dct:issued "2022-12-16"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NoraBateson ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/20-keeping-warm-data> ;
+    thinkr:discusses tgs:Concept.GreatSimplification ;
+    dct:references tgs:Interview.TGS_10_NoraBateson, tgs:SchoolOfThought.WarmData, tgs:Work.RealityBlind ;
+    skos:scopeNote "MJSullivan's own real finding this session: this episode's show notes (unlike others processed so far) preserve real, per-item citation links to primary sources (news articles, government data, Wikipedia, and — notably — a direct page-level citation into Work.RealityBlind for the 'Loss Aversion' discussion). Real further citable material NOT built into this graph, deliberately deferred (mostly narrow, single-episode-specific news citations rather than recurring entities): Swedish electricity-price/production-mix news coverage (thelocal.se, energimyndigheten.se), a nuclear-fusion Nature article, and passing mentions of Angela Merkel and Margaret Thatcher (real people, not bootstrapped here — too tangential to this episode's own core content to justify it)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 Tier 1 enrichment: real cross-referenced
+# episodes surfaced via its own real linked show notes, resolving 2
+# gaps already flagged as deferred (RR-19, RR-10) plus 4 genuinely new
+# real finds. All genuinely minimal stubs — real number/title/URL only,
+# nothing invented.
+#############################################
+
+tgs:PanelDiscussion.RR_19_DarkTriad a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Dark Triad Personality Traits: How Psychopathy, Narcissism, and Machiavellianism Impact Our Cultures & Social Systems"@en ;
+    skos:definition "Nate is joined by psychoanalyst Dr. Nancy McWilliams and forensic psychologist Dr. Reid Meloy to examine the Dark Triad (psychopathy, narcissism, Machiavellianism) and Dark Tetrad (adding sadism) from complementary clinical and evolutionary angles — why these traits persist in the population despite their costs, how they manifest differently in individual relationships versus positions of power, and what real, non-naive guardrails (strong local community, truth-telling, functioning democratic institutions) might do to contain their worst effects at a civilizational scale."@en ;
+    dct:created "2025-07-22"^^xsd:date ;
+    dct:issued "2025-09-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NancyMcWilliams, tgs:Persona.ReidMeloy ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-19> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/09/RR-19-Transcript-Dark-Triad-Personality-Traits.pdf> ;
+    thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
+    thinkr:hasDiscussionSummary "Complementary rather than adversarial, but distinct in texture from the other RRs — Nancy McWilliams and Reid Meloy defer to and build on each other throughout rather than debate, yet each brings a genuinely different disciplinary lens rather than illustrative texture around a shared thesis. McWilliams opens by explicitly distancing her own approach from trait-based diagnosis ('I don't tend to think in terms of traits, I tend to think in terms of themes'), then supplies detailed clinical material Meloy doesn't have — how she actually works with psychopathic patients in therapy, her critique of the DSM's own diagnostic history. Meloy supplies forensic and evolutionary material she doesn't have — population prevalence estimates, predator/prey framing, extreme case data from his own casework. The one moment of honest gap rather than synthesis: when Nate raises Scott Barry Kaufman's 'Light Triad,' Meloy admits he isn't familiar with the term at all, and McWilliams is the one who has looked it up and explains it. Where the two genuinely converge, they amplify rather than merely agree — when McWilliams calls the entire history of the United States 'somewhat psychopathic,' Meloy doesn't qualify it, he extends it ('the theme of psychopathy has been woven through the history of the United States'). Nate's own contribution goes beyond interviewing: he draws a real cross-disciplinary connection between his own energy/power background and the psychological concept of power ('power in an ecology sense is an ecosystem... accessing an energy gradient per unit time'), and at the close, builds Meloy's closing metaphor (Dark Triad individuals as 'passengers on the train' who must never be allowed to drive) directly into his own recurring Superorganism framing, explicitly flagging he needs to think further about how the two connect rather than presenting it as settled."@en ;
+    skos:scopeNote "2026-08-13: fully rebuilt from a complete real transcript + real fetched show notes (MJSullivan's own upload, cross-verified against a direct fetch of the episode's own page), replacing the earlier bare stub built from RR-26's own cross-reference alone. Real, further citable material found but NOT built into this graph in this pass: David Sloan Wilson (real, own TGS episode #56, confirmed via this episode's own real show notes) — a genuine further multi-level-selection/Superorganism connection, deliberately deferred rather than chased down unprompted. 'TGS Episodes 1 + 2' for Zak Stein in this episode's own show notes are ordinal labels for his 1st/2nd appearances (real URLs confirm #122/#180), not literal episode numbers — resolved via direct link inspection, not assumed."@en ;
+    .
+
+tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "The Ecology of Communication: Moving Beyond Polarization in Service of Life"@en ;
+    skos:definition "Nate is joined by four friends and repeat guests — Nora Bateson, Rex Weyler, Vanessa Andreotti, and Daniel Schmachtenberger — to examine communication itself as an ecology rather than a set of facts to transmit: how performative, monocultural, industrial-style language traps people in polarization, and what it might look like to instead seek understanding before being understood, start from commonality rather than the most contested point, and treat silence, context, and not-knowing as real parts of a genuine conversation."@en ;
+    dct:created "2024-06-14"^^xsd:date ;
+    dct:issued "2024-07-28"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.RexWeyler, tgs:Persona.VanessaAndreotti, tgs:Persona.DanielSchmachtenberger ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-10> ;
+    thinkr:discusses tgs:Concept.Schismogenesis, tgs:Concept.Metacrisis, tgs:SchoolOfThought.WarmData ;
+    skos:scopeNote "2026-08-13: fully enriched from a complete real transcript + real linked show notes (MJSullivan's own upload), resolving the RR-10 gap flagged since Nora's original RR-26 bootstrap and closing the last remaining built-RR summary gap. Real, further citable material found but NOT built in this pass: Vanessa Andreotti's own real prior solo TGS appearance (#125, 'Hospicing Modernity'); the Dunning-Kruger curve, discussed at length by Schmachtenberger, has no matching Concept individual in this graph yet; Chief Ninawa (a real Indigenous leader quoted via Andreotti) and David Bohm/Krishnamurti (cited directly by Schmachtenberger) are real, deferred citation candidates."@en ;
+    thinkr:hasDiscussionSummary "The most philosophically dense and least topic-driven of the built RRs — four guests who know each other's work well (Nate's own framing: 'you have been on my podcast, many of you more than once') build directly on each other rather than staying in their own lanes, so the discussion reads more like one extended, co-authored argument than four separate positions. Nora opens with the central frame (communication itself as ecology, not transmission); Rex immediately extends it with a direct ecological parallel (a monoculture forest versus a real one); Vanessa reframes it again through a decolonial lens (the difference between 'environment' as something external and 'ecology' as something we're inside of, and how English itself can fail to carry non-Western concepts of land); Daniel closes the opening round by grounding it further in physics and boundary theory (there are no truly separable things, only permeable exchange). None of the four ever pushes back on another's framing — disagreement essentially doesn't happen — but there is real, substantive addition happening in each turn, not just restatement. The one moment of process friction is instructive rather than adversarial: Daniel is candid that dialectical and empathetic communication tools can both be genuinely healing AND weaponized (a fact he treats as unresolved and requiring ongoing discernment, not a settled question), and he shares his own experience running couples counseling as the clearest illustration of how two people's honest accounts of the same relationship can diverge completely. Nate's own contribution is again unusually personal — he opens by admitting he was 'in a foul mood' before the conversation started and closes by directly stating his mood had genuinely lifted by the end, treating his own emotional shift as real evidence for the argument being made rather than an aside."@en ;
+    .
+
+tgs:Monologue.Frankly_88_SnowSingularityRocksInTheRiver a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Snow, the Singularity, and Rocks in the River"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title/URL confirmed via RR-26's own real linked show notes ('Rocks in the river' cross-reference)."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/88-snow-the-singularity-and-rocks-in-the-river> ;
+    .
+
+tgs:Monologue.Frankly_23_MordorEconomy a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Mordor Economy"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title/URL confirmed via RR-26's own real linked show notes ('the consumptive Superorganism economy' cross-reference). Worth noting: the title's own use of 'Mordor' predates and is structurally unrelated to this graph's own ScenarioFacet.Mordor naming (a coincidental echo of Hagens' own recurring vocabulary, not a citation relationship)."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/23-mordor-economy> ;
+    .
+
+tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Influence of Psychopaths"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/title/URL confirmed via RR-26's own real linked show notes (Dark Triad cross-reference)."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/108-the-influence-of-psychopaths> ;
+    .
+
+tgs:Interview.TGS_191_TaylorGuthrie a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Taylor Guthrie"@en ;
+    rdfs:comment "STUB as of 2026-08-13 — real number/URL confirmed via RR-26's own real linked show notes (algorithmic narrowing of interests cross-reference). Guest's Persona/Human NOT bootstrapped in this pass, matching the same deferred-guest treatment as TGS_148's Brett Kencairn/Andrew Millison — thinkr:hasGuest deliberately not asserted."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/191-taylor-guthrie> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — full RR-20 bootstrap, sourced from a complete real
+# transcript + real fetched show notes (MJSullivan's own upload plus a
+# direct fetch of the episode's own real page).
+#############################################
+
+tgs:PanelDiscussion.RR_20_HackingHumanAttachment a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Hacking Human Attachment: The Loneliness Crisis, Cognitive Atrophy, and Other Personal Dangers of AI"@en ;
+    skos:definition "Nate is joined by returning guests Nora Bateson and Zak Stein to examine AI's effects at the individual, relational level rather than the usual economic/large-scale framing — how chatbots are designed to exploit attachment vulnerabilities, the early evidence of cognitive atrophy and eroded person-to-person connection this produces, and what a more embodied, deliberately human-to-human counterweight might look like."@en ;
+    dct:created "2025-10-14"^^xsd:date ;
+    dct:issued "2025-11-05"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.ZakStein ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-20> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/11/RR-20-Transcript-Hacking-Human-Attachment-1.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
+    thinkr:hasDiscussionSummary "A real division of labor between two friends who never disagree but consistently work from different registers — Zak Stein supplies the mechanistic explanation (mirror neurons, the attachment system versus the attentional system, Harlow's monkeys and operant conditioning, the historical throughline from B.F. Skinner to AI tutors), while Nora Bateson consistently reframes the same point in relational/felt terms (warm data, the missing 'rhythm of breath' in digital communication, the edge of the self). Neither treats this as competing frameworks; each explicitly builds on the other's point rather than substituting for it. The one moment resembling internal friction is Zak checking his own argument's edges rather than disagreeing with Nora — catching himself mid-critique to note that dismissing all technology outright is its own kind of naivety ('how far will you push your techno-pessimism'), and that the same critical tools used against chatbots could equally be pointed at real technological benefits (Novocaine, reliable garbage collection) he doesn't actually want to lose. Nate's own participation is unusually personal for an interview host — he narrates his own emotional arc in real time (a 'pit in my stomach' partway through, open shame about once mocking the Amish for opting out of exactly this risk, then explicit relief and hope by the close), and at one point the conversation is genuinely interrupted by an unplanned real-world moment — a garbage truck's noise triggering his own threat-detection reflex — which he and the guests fold directly into the discussion rather than treat as a distraction, since it illustrates the very embodied, evolved cognition the conversation argues chatbots are bypassing. The clearest moment of real-time concept-building: Nate offers 'wide boundary self-awareness' as his own gloss on Nora's father's old definition of sanity ('the ability to perceive your own epistemology'), and Nora accepts and extends it rather than correcting it."@en ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad ;
+    skos:scopeNote "Real, further citable material found via this episode's own real show notes but NOT built into this graph in this pass, deliberately deferred: Frankly #112 ('The Quadruple Bifurcation') and TGS #198 (Stacy Mitchell, antitrust) — both real cross-references, neither yet stubbed as an Episode individual, so no dct:references asserted for either. Real, well-evidenced NEW Concept candidates surfaced but not minted this pass: Attachment Theory (John Bowlby), Supernormal Stimuli (Niko Tinbergen — directly cited via Work.RealityBlind, already in this graph), Goodhart's Law (Charles Goodhart), and a real Persona candidate, Harry Harlow (of Harlow's monkeys, foundational attachment research) — all real, all independently verifiable, held for a follow-up pass rather than built unprompted."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — Frankly_85, sourced from a complete real
+# transcript + real linked show notes (MJSullivan's own upload). The
+# episode that surfaced Concept.LightTriad and the real
+# contrastsWith/Antonym architectural resolution — see
+# Concept.LightTriad's own scopeNote for the full context.
+#############################################
+
+tgs:Monologue.Frankly_85_TheLightTriad a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Light Triad"@en ;
+    skos:definition "Nate's own solo exploration of Scott Barry Kaufman's 'Light Triad' (faith in humanity, humanism, Kantianism) as a real but structurally weaker counterweight to the Dark Triad — arguing traits generally outcompete values, so a lone Light Triad individual will be exploited by a Dark Triad one, and only real, mutually-supporting groups (not just individual goodness) stand a chance. Closes with open questions he doesn't resolve: how many people does a Light Triad individual need around them for real protection, whether Dark Triad prevalence rises or falls as the Carbon Pulse declines, and whether a Dark Triad personality can genuinely change."@en ;
+    dct:created "2025-02-12"^^xsd:date ;
+    dct:issued "2025-02-14"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/85-the-light-triad> ;
+    thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.LightTriad, tgs:Concept.Superorganism, tgs:Concept.CarbonPulse ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — full RR-24 bootstrap, sourced from a complete real
+# transcript + real fetched show notes, built specifically as a test
+# case for fleshing out the "antagonistic" side of GreatSimplification's
+# own contrastsWith network (per MJSullivan's own framing).
+#############################################
+
+tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "The Fantasy of Space Colonization: The Spaceship We're Already On"@en ;
+    skos:definition "Nate is rejoined by two ~20-year friends, astrophysicist Tom Murphy and eco-interventionist DJ White, to biophysically ground the resurgent techno-optimist enthusiasm for space mining and off-world colonization — the economic impossibility of asteroid mining, the physiological brutality of long-duration spaceflight, and the argument that space colonization functions as a convenient story letting humanity off the hook for damage being done at home. Closes by redirecting attention to Earth itself as the 'spaceship we're already on.'"@en ;
+    dct:created "2026-02-24"^^xsd:date ;
+    dct:issued "2026-04-15"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.TomMurphy, tgs:Persona.DJWhite ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-24> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/RR-24-Transcript-The-Fantasy-of-Space-Colonization.pdf> ;
+    thinkr:discusses tgs:SchoolOfThought.TechnoOptimism, tgs:Concept.CarbonPulse, tgs:Concept.EnergyReturnOnInvestment ;
+    dct:references tgs:Concept.GreatSimplification ;
+    thinkr:hasDiscussionSummary "Even more uniformly convergent than RR-1 — Tom Murphy and DJ White, ~20-year friends, never actually disagree with each other anywhere in the transcript; they build on and extend each other's points throughout, arriving from two complementary but distinct disciplinary angles rather than debating one. Murphy supplies the hard biophysical case (asteroid-mining economics that work out to roughly $130,000/ounce for plain dirt; radiation doses that make a lifetime in space a near-guaranteed early cancer death; the rocket equation implying an asteroid-return mission would need several asteroids' worth of fuel), while White supplies the ecological/consciousness case (his own dolphin-cognition and Greenpeace background, arguing the 'real profound stuff' — minds we can already talk to and are actively driving extinct — is here on Earth, not hypothetically out there). Both independently and repeatedly frame techno-optimism as displaced religion (AI as new gods, uploading as immortality, Dyson spheres as cathedrals), not as a rival scientific claim worth adjudicating on the merits. The one place real friction appears is not between the two guests but against the absent, unnamed techno-optimist position itself, which Nate keeps them pointed at with pointed, sometimes deliberately provocative questions (invoking Matt Damon's potatoes in The Martian, asking directly why two of 'the smartest people' he knows hold a minority view). The episode closes on a register shift from technical to personal — White's story of comforting a dying baby humpback whale, Murphy's closing 'talk to animals' — both converging one final time on the same point: the wonder people project onto space is already available here, and is being destroyed."@en ;
+    skos:scopeNote "Built specifically as a test case for the 'antagonistic' side of this graph's own network, per MJSullivan's own framing — the episode's real content directly and repeatedly names techno-optimism as its target (Nate's own words: 'the resurgence of ambitions for space mining and space colonization amongst the leading techno optimist technologists of our age'), not inferred from tone. Real, further citable material found but NOT built in this pass: a possible THIRD Nate/DJ White co-authored book (Nate's own words call DJ 'co-writer of three books,' but only 2 are currently in this graph — Work.RealityBlind and 'The Bottlenecks of the 21st Century,' the latter itself not yet built as a Work individual either); TGS_18 (Tom Murphy's own solo episode), Frankly_22, and RR-11 ('Tales from the Carbon Pulse,' Tom+DJ together) — all real, all deferred."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-1 "Electric Vehicles," the very first Reality
+# Roundtable episode ever produced, sourced from a complete real
+# transcript + real fetched show notes. Note the real, older URL
+# pattern (rr01-berman-michaux-prieto, not reality-roundtable-1) —
+# confirmed via direct fetch, from before the site standardized its
+# later "reality-roundtable-N" convention.
+#############################################
+
+tgs:PanelDiscussion.RR_1_ElectricVehicles a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "\"Electric Vehicles\": Arthur Berman, Simon Michaux & Pedro Prieto"@en ;
+    skos:definition "The inaugural Reality Roundtable — Nate brings together 3 returning guests (petroleum geologist Art Berman, geometallurgist Simon Michaux, and solar/EROI analyst Pedro Prieto) to biophysically stress-test whether dramatically scaling electric vehicles is materially, economically, and infrastructurally achievable, or whether current EV enthusiasm is itself a form of energy blindness — covering mineral/mining constraints, grid capacity, real EROI figures, and whether EVs address the actual root problem or just substitute one narrow-boundary technology story for another."@en ;
+    dct:created "2023-04-23"^^xsd:date ;
+    dct:issued "2023-06-11"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman, tgs:Persona.SimonMichaux, tgs:Persona.PedroPrieto ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr01-berman-michaux-prieto> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/06/RR01BermanMichauxPrietoTranscript.docx1_.pdf> ;
+    thinkr:discusses tgs:Concept.EnergyReturnOnInvestment, tgs:Concept.EnergyBlindness ;
+    dct:references tgs:Interview.TGS_3_OilBestAndWorstOfFuels, tgs:Interview.TGS_44_DieselAndTheBarrelOfOil, tgs:Interview.TGS_54_TheStealthAdjustmentOfOil, tgs:Interview.TGS_7_JoshFarleyAppearance1, tgs:Interview.TGS_29_JoshFarleyAppearance2 ;
+    thinkr:hasDiscussionSummary "Largely a consensus-building conversation rather than a debate — the three guests, longtime friends and repeat TGS guests with overlapping biophysical/systems worldviews, converge on a shared thesis rather than argue against each other. Michaux opens with a detailed materials analysis showing that scaling EVs and renewables to meet stated EU 2030 targets would require multiples of known global reserves and annual production of key metals, even before accounting for grid capacity, hydrogen production, or the fossil fuels still required to make steel, plastic, and concrete. Berman and Prieto largely corroborate and extend this from their own domains rather than push back — Berman explicitly says 'I agree with you, I provided you data to support your perspective,' and adds that oil companies' underinvestment is a financial-market choice, not a resource-scarcity problem; Prieto brings real Spanish/German grid-stress data and EV-affordability numbers. The closest thing to friction is clarifying, not adversarial — Berman and Prieto probe Michaux on his 28-day storage-buffer assumption and the electric/hydrogen vehicle split, and he candidly revises and defends specific figures under that questioning, at one point calling the underlying 'is this sensible?' question 'the best argument for degrowth.' The one moment of genuine, if mild, divergence comes in the closing 'how could you be wrong' round: Michaux allows an unforeseen technological breakthrough could upend his numbers; Prieto reframes his own uncertainty as being about timing rather than direction ('sooner than later the system will collapse'); and Berman draws a sharper line between his own specific technical claims (which he says could be wrong) and the biodiversity/ecosystem decline data underlying the whole discussion (which he considers not meaningfully disputable). All three land on the same practical conclusion Nate frames at the top: current EV scaling plans reflect 'energy blindness' — a narrow, supply-side technology story substituting for the harder question of reducing consumption."@en ;
+    skos:scopeNote "Olivia Lazard (environmental peacemaker/mediator) was originally scheduled but couldn't attend due to travel issues, per Nate's own real substack write-up — deliberately NOT modeled as thinkr:hasGuest despite appearing in the show notes' own cross-reference list, since she never actually appeared. Her own real prior TGS episode is a separate, deferred candidate. Also deferred: Simon Michaux's own 2 solo TGS episodes (#19, #49, real URLs confirmed); Charles A. S. Hall (Pedro Prieto's real co-author on 'Spain's Photovoltaic Revolution,' already indirectly relevant to this graph via Concept.MaximumPowerPrinciple) and that book itself as a real Work — both real, neither built in this pass."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-2 "Deep(er) Ecology," sourced from a complete
+# real transcript + real linked show notes (MJSullivan's own upload,
+# plus a direct fetch of the episode's own real page for the table).
+#############################################
+
+tgs:PanelDiscussion.RR_2_DeeperEcology a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "\"Deep(er) Ecology\": William Rees, Nora Bateson & Rex Weyler"@en ;
+    skos:definition "Nate is joined by three friends — ecological economist William Rees (originator of Ecological Footprint Analysis), Nora Bateson, and Rex Weyler — for a first-principles examination of what ecology actually means beneath its textbook definition (emergence, self-organization, dissipative structures, evolution), why humanity's own outsized ecological footprint makes contraction biophysically inevitable rather than optional, and what an ecologically literate civilization might look like on the other side of it."@en ;
+    dct:created "2023-06-27"^^xsd:date ;
+    dct:issued "2023-07-09"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.WilliamRees, tgs:Persona.NoraBateson, tgs:Persona.RexWeyler ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr02-bateson-rees-weyler> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/07/BatesonReesWeyler.pdf> ;
+    thinkr:discusses tgs:Concept.Overshoot, tgs:Concept.EcologicalFootprint, tgs:Concept.LimitsToGrowth ;
+    dct:references tgs:Interview.TGS_10_NoraBateson ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: William Rees's own real prior TGS solo episode (confirmed via a YouTube link in this episode's own real show notes, https://youtu.be/LQTuDttP2Yg, no canonical TGS-site URL given). The direct citation at 56:52 ('contraction of the human species is inevitable') links straight to Club of Rome's own real Limits to Growth publication page — the exact same URL already used as Concept.LimitsToGrowth's own dcterms:source, independently corroborating that source's quality."@en ;
+    thinkr:hasDiscussionSummary "The most substantively adversarial of the built RRs so far, though still warmly collegial — Nate's own opening explicitly names the contrast: 'people agree on deep ecology and the ecological predicament of human overshoot, yet take wildly different perspectives in how they view it.' Rees supplies the systems-scientific backbone (dissipative structures, thermodynamics, the mathematics of overshoot-and-crash), Weyler supplies historical/movement context and a harder moral edge (open frustration that environmental groups avoid words like 'overshoot'), and Bateson consistently redirects both toward relational process over prescription ('who can you be when you're with me' versus any engineered solution). The clearest real disagreement in any built RR happens here: when Rees says he'd prefer 1-2 billion people living well to 10 billion living in poverty, Nate directly pushes back ('I actually disagree... I think that's the default that we're headed towards'), and Rees concedes the practical point while holding his normative preference ('I agree it's easier, but I said IF you want to plan for something'). Bateson explicitly declines to fully endorse the contraction-is-inevitable framing Rees and Weyler share, prompting Nate to ask her directly whether she agrees — a rare moment where a built RR's host names a real, unresolved difference among guests rather than treating the conversation as settled consensus. Population and eugenics form the other real point of productive friction: Weyler raises population decline directly and names the taboo around it, Bateson immediately reframes the same territory through care and relational support rather than numbers, explicitly naming the eugenics risk in framing it any other way — not a rebuttal of Weyler's point, but a genuine redirection of its terms that he doesn't contest."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-3 "Unlearning Economics," sourced from a
+# complete real transcript + real linked show notes (MJSullivan's own
+# upload, plus a direct fetch of the episode's own real page for the
+# table).
+#############################################
+
+tgs:PanelDiscussion.RR_3_UnlearningEconomics a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "\"Unlearning Economics\": Jon Erickson, Josh Farley, Steve Keen, and Kate Raworth"@en ;
+    skos:definition "Nate brings together four heterodox economists — two of them his own real PhD advisors, Jon Erickson and Josh Farley — each given roughly 6 minutes to name one core assumption of mainstream Econ 101 they consider fundamentally broken: Erickson on Homo economicus and the rational-actor model, Keen on energy's near-total absence from macroeconomic theory, Farley on the assumption that markets efficiently allocate essential resources, and Raworth on GDP-centric growth as the discipline's implicit endpoint. The stated goal is blunt: roughly 235 million university students worldwide are being taught a model of the economy that doesn't track physical reality, and the episode is explicitly framed as something to show in classrooms."@en ;
+    dct:created "2023-07-18"^^xsd:date ;
+    dct:issued "2023-08-13"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JonErickson, tgs:Persona.JoshFarley, tgs:Persona.SteveKeen, tgs:Persona.KateRaworth ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr03-erickson-farley-raworth-keen> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/08/RR03EricksonFarleyRaworthKeenTranscript.docx.pdf> ;
+    thinkr:discusses tgs:SchoolOfThought.DoughnutEconomics, tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.EnergyReturnOnInvestment ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: all 4 guests' own real prior TGS solo episodes are now confirmed with real URLs (Erickson #45, Keen #30, both via RR-3's own real show notes; Raworth's via YouTube, no canonical TGS-site URL). Real, specific named academic references that could become their own citation-only Personas if this thread is revisited: Elinor Ostrom (Nobel laureate, commons governance), Thorstein Veblen, E.O. Wilson (Consilience) — none built here."@en ;
+    thinkr:hasDiscussionSummary "The most substantively adversarial-yet-collegial of the built RRs — the only one where two different guests explicitly announce they're playing 'devil's advocate' against a co-panelist's argument, not just adding texture. Raworth does it twice: first pressing Erickson on what actually replaces the rational-actor model once you've torn it down ('then what?'), and later challenging Farley's rationing proposal directly, arguing markets plus redistribution and a universal basic income would work better than rationing given rationing's own real historical failure modes (black markets, Soviet-style central planning). Farley doesn't concede — he counters with a specific alternative (guaranteed access to essential goods specifically, not a general UBI, because essential-good prices are too volatile for a fixed income to track), and the two continue trading specifics rather than one yielding. Keen plays devil's advocate 'in a different direction,' agreeing entirely with Erickson's critique of neoclassical economics but pushing further — arguing the theory fails on its own internal mathematical terms even before you get to its empirical failures. The clearest real disagreement, though, isn't among the guests but in how each answers Nate's own closing question — can any of this actually be taught at scale? Keen is bluntly pessimistic ('I don't think they can'), Farley says he 'sadly agrees a little bit' but still points to concrete, working programs, and Raworth explicitly frames herself as 'leaning into possibility,' citing a real curriculum win (the Doughnut now appearing in an International Baccalaureate economics textbook) as evidence change is already happening, however slowly. All four converge without disagreement on Raworth's own closing 'Embedded Economy' diagram — Erickson calls it 'not rocket science' as a genuine compliment, and Raworth explicitly welcomes that as the whole point."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-21 "Arms Race or the Human Race?", sourced from
+# a complete real transcript + real linked show notes (MJSullivan's own
+# upload, plus a direct fetch of the episode's own real page for the
+# table).
+#############################################
+
+tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Arms Race or the Human Race? Governance in the Age of AI, Nuclear Threats, and Geopolitical Brinkmanship"@en ;
+    skos:definition "Nate is joined by geopolitical risk experts Mark Medish (former Clinton NSC/Treasury official) and Chuck Watson (Cold War-era intelligence/military background, now disaster-and-conflict modeling) to examine the erosion of international governance — starting from first-principles definitions of governance, government, and rule of law, then moving through nuclear arms control history to the real, imminent expiration of New START and what its lapse would mean, and closing on whether AI's entry into military decision-making removes the last human hesitation that has, so far, kept nuclear war from happening."@en ;
+    dct:created "2026-01-08"^^xsd:date ;
+    dct:issued "2026-01-21"^^xsd:date ;
+    dct:subject tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MarkMedish, tgs:Persona.ChuckWatson ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-21> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/RR-21-Transcript-Why-Science-Communication-Fails.pdf> ;
+    thinkr:discusses tgs:Concept.DarkTriad ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Richard Gephardt has 2 real confirmed prior TGS episodes (#1 and #148) and is the direct source of the episode's own governance/violence framing ('politics is a substitute for violence') — not bootstrapped here. Anastassia Makarieva (biotic pump researcher, TGS #193) is directly referenced by Nate himself recalling a separate real episode. This episode's own real transcript-download filename is a genuine site artifact worth flagging honestly rather than silently correcting: it's titled 'RR-21-Transcript-Why-Science-Communication-Fails.pdf,' apparently a leftover/mismatched filename from an unrelated episode, even though the URL itself correctly resolves to this episode's real transcript content."@en ;
+    thinkr:hasDiscussionSummary "Unlike several of the more adversarial-leaning built RRs, Medish and Watson are remarkably aligned throughout — this reads as two experts building one converging analysis together rather than staying in separate lanes or challenging each other. The real complementary split is disciplinary, not oppositional: Watson supplies the technical/military texture (missile specifics, game theory, his own direct Reagan-era technical postings), while Medish supplies the diplomatic/legal frame (treaty architecture, his own direct experience organizing Clinton-Putin summits). Neither ever pushes back on the other's claims; each mostly extends or adds precision to what the other just said. The one genuinely personal, unscripted moment is Medish's own disclosure that he was physically present, as an infant, at JFK's 1963 American University 'Strategy for Peace' speech — his father received his PhD diploma from Kennedy that same day — offered as lived, not abstract, connection to the arms-control history being discussed. The clearest point of real divergence isn't between the two guests but within each of their own closing answers to Nate's direct question about whether current leadership can rise to this moment: Medish frames himself as 'an optimist... but worried,' holding both at once; Watson draws a sharper line, affirming humanity broadly can meet the challenge while flatly denying that current political leaders specifically can ('can our leaders meet these challenges? ...my answer is no, they can't'), attributing this to a real structural mismatch between the personality traits that win elections and the self-doubting, revision-willing traits good decision-making actually requires."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-22 "Could the West Lose the Resource Wars?",
+# sourced from a complete real transcript + real linked show notes
+# (MJSullivan's own upload, plus a direct fetch of the episode's own
+# real page for the table).
+#############################################
+
+tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Could the West Lose the Resource Wars? AI, Rare Earths, and Economic Statecraft"@en ;
+    skos:definition "Nate brings together two returning guests who had been independently telling parallel stories for years without knowing each other — investor/materials analyst Craig Tindale and Rabobank strategist Michael Every — to merge their respective frameworks on critical-materials scarcity, Chinese industrial dominance, and 'economic statecraft' into one account of why the West's China-versus-US rivalry is fundamentally a materials-and-manufacturing contest, not a purely financial or ideological one. Recorded live as the Iran conflict was actively breaking, and closing on whether AI itself is now the largest new driver of critical-materials demand."@en ;
+    dct:created "2026-02-26"^^xsd:date ;
+    dct:issued "2026-03-04"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.CraigTindale, tgs:Persona.MichaelEvery ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-22> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/RR-22-Transcript-Could-the-West-Lose-the-Resource-Wars_.pdf> ;
+    thinkr:discusses tgs:Concept.GrowthImperative ;
+    dct:references tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace ;
+    skos:scopeNote "Nate's own words frame this directly: 'probably one of the most intense conversations I've had on this platform in the four years of doing this podcast.' Real, further citable material found but NOT built in this pass: Craig's own prior TGS episode (#207); Michael's own extensive prior history (RR-16, RR-12, TGS #118) — see both Personas' own scopeNotes. Zak Stein is directly referenced again with his own real episodes (#180, #122, RR-20), all already built in this graph."@en ;
+    thinkr:hasDiscussionSummary "Framed by Nate himself at the outset as two people who had been independently 'telling parallel stories' finally merging them — and the conversation lives up to that framing, with Tindale and Every remarkably aligned throughout rather than debating. The real complementary split is textural, not oppositional: Tindale supplies ground-level industrial/supply-chain detail (his own 'golden screw' concept — a single missing input that halts an entire system — and a two-ledger financial-versus-material framework), while Every supplies the macro geopolitical-strategy vocabulary ('economic statecraft,' pointed comparisons of US and Chinese industrial policy). Each consistently extends the other's point rather than qualifying it; Every at one point simply says 'I concur' before adding his own layer. The one moment either explicitly flags real disagreement is telling precisely because it's so rare: Every says outright 'this is the first time I differ from Craig at all,' pushing back on Tindale's skepticism that AI job losses will be modest — arguing that even a much smaller disruption (8%, not the touted 80%) could be politically destabilizing given how radicalized and polarized the public already is. Nate's own role is unusually reflective for an interview host — he calls this 'probably one of the most intense conversations' of the podcast's four-year run, and twice interrupts the material density with genuinely human asides (a girlfriend's text about adopting a puppy, arriving mid-Tindale's point about elder care). The episode closes not on analysis but on personal practice: Tindale describes growing and canning his own food as a direct, literal response to the very systemic fragility he spent the previous ninety minutes diagnosing."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-23 "The Plastic Detox," sourced from a complete
+# real transcript + real linked show notes (MJSullivan's own upload,
+# plus a direct fetch of the episode's own real page for the table).
+#############################################
+
+tgs:PanelDiscussion.RR_23_ThePlasticDetox a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "The Plastic Detox: Reducing Endocrine Disruptors for Better Fertility and Human Health"@en ;
+    skos:definition "Nate reunites two returning guests and real-world colleagues — reproductive epidemiologist Shanna Swan and plastics-industry campaigner Sian Sutherland — around Swan's new Netflix documentary 'The Plastic Detox,' in which she runs a real 3-month endocrine-disrupting-chemical-reduction intervention with 6 couples facing unexplained infertility, tracking urinary chemical metabolites and sperm quality before and after simple household product swaps. The conversation moves from the documentary's specific findings to the broader case that plastics and endocrine disruption are the 'micro' version of the same fossil-fuel-driven story as climate change, and closes on Sutherland's Plastic Free Babies campaign targeting the first 1,000 days of life."@en ;
+    dct:created "2026-02-19"^^xsd:date ;
+    dct:issued "2026-03-18"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ShannaSwan, tgs:Persona.SianSutherland ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-23> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/RR-23-Transcript-The-Plastic-Detox.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.Superorganism ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Shanna Swan's own real first-ever TGS appearance (#2, one of the podcast's earliest episodes) and Sian Sutherland's (#89) — both confirmed real URLs, see both Personas' own scopeNotes. This episode's own real show notes list an extensive real network of related TGS content not yet built: Reality Roundtable #15 ('The Plastic Crisis'), and solo episodes with Jane Muncke (#154, #104), Wes Carter (#186), Jeremy Grantham (#155, #99 — Grantham already a real, built Persona in this graph from earlier work), and Martin Scheringer (#37, PFAS)."@en ;
+    thinkr:hasDiscussionSummary "Warm and deeply collegial throughout — Swan and Sutherland are established real-world colleagues (co-present at UN Plastics Treaty negotiations) as well as friends, and Nate's own opening explicitly names the shift from 'meeting you two as activists and scientists' to being actual friends after four-plus years. The complementary split is expertise-based, not oppositional: Swan supplies the clinical/epidemiological data (urinary metabolites, sperm counts, the documentary's own specific intervention protocol), while Sutherland supplies industry and policy strategy (the 'cattle prod and lightning rod' framing for A Plastic Planet's work, the Plastic Free Babies campaign). One moment stands out as genuinely different from every other RR built this session: asked directly for the documentary's central result — how many of the six couples became pregnant — Swan deliberately declines to answer, wanting viewers to watch the film rather than get a spoiler, and Sutherland backs her ('no spoilers from Shanna'). This isn't evasion in the sense of avoiding a hard question; it's a real, distinct interactional dynamic — a promotional and narrative consideration overriding an otherwise-answered pattern of direct scientific replies throughout the rest of the episode. The other genuinely honest moment comes when Nate raises a deliberately uncomfortable question — whether awareness of these interventions could become an 'evolutionary filter' where only the informed and wealthy can afford to reduce their exposure and successfully reproduce — and Swan responds with real epistemic humility rather than a rehearsed answer: 'I think it sounds brilliant and I don't have any response.' The closest thing to a substantive correction comes from Nate himself at the close, gently but directly qualifying Sutherland's framing that 'we' collectively care about the environment: 'We do care about the environment. The system doesn't care' — offered as an addition to her point rather than a rebuttal, but a real distinction he clearly wanted on the record."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-4 "Titanic Oceans," sourced from a complete
+# real transcript + real linked show notes (MJSullivan's own upload,
+# plus a direct fetch of the episode's own real page for the table).
+#############################################
+
+tgs:PanelDiscussion.RR_4_TitanicOceans a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "\"Titanic Oceans\": Daniel Pauly, Antonio Turiel, Peter Ward"@en ;
+    skos:definition "Nate brings together three real friends of his — fisheries scientist Daniel Pauly, physical oceanographer Antonio Turiel, and paleobiologist Peter Ward — who have never met each other before this recording, to examine the ocean's overlooked role in the unfolding predicament: industrial overfishing sustained by subsidies, the physical mechanics and real risk of AMOC slowdown or collapse, and deep-time paleontological analogs (Canfield oceans, the Permian and PETM mass extinctions) for what a fully anoxic, stratified ocean would mean. Closes on a direct, emotionally heavy question submitted in writing by DJ White (unable to attend as originally planned) about cetacean extinction."@en ;
+    dct:created "2023-07-31"^^xsd:date ;
+    dct:issued "2023-09-10"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielPauly, tgs:Persona.AntonioTuriel, tgs:Persona.PeterWard ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr04-pauly-turiel-ward> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/09/RR04PaulyTurielWard.docx.pdf> ;
+    thinkr:discusses tgs:EarthSystemComponent.AMOC ;
+    skos:scopeNote "DJ White was originally invited as a fourth panelist but could not attend; Nate reads his own written question aloud instead — DJ White is already a real, built Persona in this graph (from Frankly_20/RR-24 work). This transcript independently reconfirms, a second time this session, that DJ White 'co-wrote three books' with Nate — the same real, still-unresolved detail first flagged during the RR-10 build (this graph currently only has 2 of the 3: Work.RealityBlind and 'The Bottlenecks of the 21st Century,' the latter itself not yet built as a Work individual). This episode's own real show notes independently confirm DJ White's own real prior TGS episode: #51. Real, further citable material found but NOT built in this pass: all 3 guests' own real prior TGS solo episodes (Pauly #15, Turiel #65, Ward #8)."@en ;
+    thinkr:hasDiscussionSummary "Uniformly convergent and unusually warm — three genuine friends of Nate's, each bringing a different real disciplinary lens (Pauly's fisheries/subsidy economics, Turiel's physical oceanography, Ward's deep-time paleobiology) that consistently reinforce rather than compete with each other. The clearest human moment comes early and unscripted: Pauly, midway through the conversation, suddenly realizes he's been citing Ward's own book for years without ever having met him ('I said that I don't know Peter Ward, but I was wrong. I use your book all the time... I just didn't connect at all') — a small-world moment neither anticipated. Ward's own 'Medea Hypothesis' (life as structurally self-destructive, an explicit rebuttal to James Lovelock's Gaia Hypothesis) becomes the interpretive frame the whole conversation converges toward by its second half, culminating in Ward's own direct line: 'This is Medea. This is not Gaia... This is life doing it to itself.' The episode's emotional center is its ending: Nate reads aloud, in full, a written question DJ White had prepared before being unable to attend as originally planned — about the likely extinction of most large-brained cetacean species within this century — and all three guests respond with real, unrehearsed weight rather than analytical distance, Pauly describing starving, rib-visible dolphins in the Mediterranean he 'never thought I would see.' Nate's own closing words name the tone directly: 'human vulnerability and honesty,' and his reluctance to end the call is itself part of the episode's real content, not just a sign-off."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-5 "Food & Community in the Ruins," sourced
+# from a complete real transcript + real linked show notes
+# (MJSullivan's own upload, plus a direct fetch of the episode's own
+# real page for the table).
+#############################################
+
+tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Food & Community in the Ruins: Dougald Hine, Chris Smaje, Pella Thiel"@en ;
+    skos:definition "Nate brings together three first-time guests, already personal friends by the time of recording — social thinker Dougald Hine (Dark Mountain Project, 'At Work in the Ruins'), small-farm writer Chris Smaje ('A Small Farm Future'), and Swedish ecologist/activist Pella Thiel (Transition Network) — to explore what rebuilding local food systems and genuine community actually looks like on the way toward a lower-energy, more localized future, organized around Hine's own framing of finding worthwhile 'work in the ruins' of a world that is ending, without mistaking that ending for the end of the world entirely."@en ;
+    dct:created "2023-10-03"^^xsd:date ;
+    dct:issued "2023-10-15"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DougaldHine, tgs:Persona.ChrisSmaje, tgs:Persona.PellaThiel ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr05-hine-smaje-thiel> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/10/RR05Transcript.docx.pdf> ;
+    dct:references tgs:Persona.VanessaAndreotti ;
+    skos:scopeNote "This episode's own real reference to 'Vanessa Machado de Oliveira' and her book 'Hospicing Modernity' is the same real person already built in this graph as tgs:Persona.VanessaAndreotti (her full/maiden name) — not a new individual. Real, further citable material found but NOT built in this pass: Pella Thiel's own real later solo TGS episode (#121); Federico Campagna, Paul Richards, Ivan Illich, and Ed Gillespie are all real, directly cited thinkers/collaborators not bootstrapped here."@en ;
+    thinkr:hasDiscussionSummary "Uniformly warm and complementary, distinct in one real way from most other built RRs: the three guests were already personal friends before this recording (Nate had stayed at Pella Thiel's farm helping with lambing the night before, and had met both her and Hine in person in Sweden weeks earlier), so the conversation reads less like three experts meeting for the first time and more like a continuation of an existing relationship. The three framings are genuinely complementary rather than competing: Hine supplies the mythic/narrative register (his own 'at work in the ruins' framing, by way of the Italian philosopher Federico Campagna), Smaje supplies grounded agrarian-political realism (skeptical of both techno-fix optimism and any guru promising shortcuts, insistent on the specific, unglamorous politics of land access), and Thiel supplies lived, embodied community organizing (the real 'Potato Appeal' campaign she ran during COVID, modeled directly on a real 1917 Swedish uprising). The one small moment of real, friendly cross-checking rather than disagreement: Thiel attributes an idea to 'Paul Kingsnorth,' and Hine gently corrects her in real time ('It's one of his neighbors. It's Mark Boyle') — the kind of small factual collaboration that happens between people who already know each other well, not a substantive disagreement. Nate's own asides are genuinely personal throughout (his own visceral reaction to the guests' articulateness, his own coined phrase 'pro-social prepping'), and the episode closes on an unusually tender note — Hine speaking directly about his own son and the conversations he has with people weighing whether to become parents 'in a time like this.'"@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-27 "An Ecological Psychology," sourced from a
+# complete real transcript + real linked show notes (MJSullivan's own
+# upload, plus a direct fetch of the episode's own real page for the
+# table). Most recent real episode built in this graph to date.
+#############################################
+
+tgs:PanelDiscussion.RR_27_AnEcologicalPsychology a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "An Ecological Psychology: Internal Family Systems for a Turbulent World"@en ;
+    skos:definition "Nate is joined by Richard Schwartz, creator of Internal Family Systems (IFS) — the therapeutic model describing the mind as naturally composed of 'parts' (exiles, managers, firefighters) organized around an undamageable core 'Self' — and climate psychologist Steffi Bednarek, who extends the same model outward to organizations, governments, and whole cultures. The conversation moves from IFS fundamentals through Nate's own explicit application of the model to his 'economic Superorganism' framing, to Bednarek's real work running Systems Wayfinding sessions with governments and wealth holders, and closes on the spiritual/non-dual dimension of the 'Self' both guests have independently arrived at."@en ;
+    dct:created "2026-08-05"^^xsd:date ;
+    dct:issued "2026-08-12"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.RichardSchwartz, tgs:Persona.SteffiBednarek ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-27> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/08/RR-27-Transcript-An-Ecological-Psychology.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.DarkTriad, tgs:Concept.GrowthImperative ;
+    dct:references tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Persona.VanessaAndreotti ;
+    skos:scopeNote "Unusually rich in real, direct cross-references to already-built content in this graph: the episode's own real show notes cite Frankly_97 ('The Superorganism in 7 Minutes') by name for the Economic Superorganism concept, RR-19 by name for the Dark Triad discussion, and Vanessa Andreotti's own real prior TGS episode (#125, via the term 'Hospicing Modernity') — all three already real, built individuals in this graph before this episode was processed. Also real and directly confirmed: Francis Weller's own prior TGS episode (#167) and Xiye Bastida's (#208), both cited directly by Nate from personal experience but not built as Episode individuals in this pass. Frankly #123 ('The Consumption Pyramid') is directly confirmed as the completed version of the 'Frankly on public choice' Nate says he is 'working on' mid-conversation — real evidence this episode predates that Frankly's publication."@en ;
+    thinkr:hasDiscussionSummary "The longest and most extended conversation among all built RRs — Nate's own words near the close: 'coming up on two hours, this is one of the longer conversations I've had this year.' Schwartz and Bednarek are visibly not just co-guests but active collaborators already deep in an ongoing dialogue of their own ('this is a conversation that I am currently having with Dick and I really love it,' Bednarek says at one point) — the complementary split is genuinely structural rather than just topical: Schwartz supplies the clinical, individual-level IFS framework directly, while Bednarek supplies its real extension into organizations, governments, and whole cultures via her own Systems Wayfinding work. The one moment of real, pointed challenge in the episode comes from Nate himself, not between the guests — he directly names the skepticism his own audience is likely to feel toward psychological frameworks given the podcast's usual material/energy/systems focus, asking bluntly how IFS could actually affect a trajectory driven by biophysical limits rather than individual psychology. Both guests take the challenge seriously rather than deflecting: Bednarek is explicit that 'no psychological approach can stop the unfolding of biodiversity loss that is already underway,' reframing the value as being about how humans meet what's coming rather than preventing it; Schwartz answers instead with his own long-term, admittedly 'grandiose' goal of IFS replacing the dominant paradigm for relating to the mind entirely. The episode's most candid moment is Schwartz's own disclosed intellectual and spiritual evolution, told live rather than summarized: he began the work as a self-described 'scientific atheist' and has only this year become openly willing to describe the IFS 'Self' as a 'particle state' of something larger that different spiritual traditions have independently pointed to under different names. Nate's own participation is unusually reflexive throughout — he explicitly narrates applying the framework to himself in real time ('I feel like I've been in self-energy since this conversation started'), and Schwartz risks a genuinely vulnerable, self-deprecating aside about being triggered by his own wife, fully aware she would later watch the recording."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-6 "Fossil Free Food Systems," sourced from a
+# complete real transcript + real linked show notes (MJSullivan's own
+# upload, plus a direct fetch of the episode's own real page for the
+# table).
+#############################################
+
+tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.PanelDiscussion ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.RealityRoundtable ;
+    skos:prefLabel "Fossil Free Food Systems: Jason Bradford, Andrew Millison, Vandana Shiva, Daniel Zetah"@en ;
+    skos:definition "Nate reunites four returning guests — farmer/biologist Jason Bradford (Post Carbon Institute), permaculture educator Andrew Millison (Oregon State University), physicist-turned-agroecology-activist Vandana Shiva (Navdanya), and Minnesota regenerative farmer Daniel Zetah — around one central question: could 8+ billion people be fed with minimal fossil fuel inputs, and what would that actually require in labor, land, culture, and policy? The conversation moves from de-urbanization and village-scale redesign through Shiva's real longitudinal soil-nutrition data to closing visions of each guest's own bioregion in 2050."@en ;
+    dct:created "2023-10-10"^^xsd:date ;
+    dct:issued "2023-11-12"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JasonBradford, tgs:Persona.AndrewMillison, tgs:Persona.VandanaShiva, tgs:Persona.DanielZetah ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr06-bradford-millison-shiva-zetah> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/11/RR06BradfordMillisonShivaZetahTranscript.docx.pdf> ;
+    skos:scopeNote "William Rees is directly cross-referenced by Bradford ('a friend of yours, Nate, and mine') via the exact same real prior-episode YouTube URL already used for tgs:Persona.WilliamRees during this session's RR-2 build (https://youtu.be/LQTuDttP2Yg) — independent confirmation, not a new fact. Real, further citable material found but NOT built in this pass: real later solo TGS appearances for both Bradford (2026, Farming Clubs) and Millison (TGS #178, 2025); Bradford's real prior episode #76 is shared with Zetah's own prior appearance (a joint episode, not two separate ones — worth flagging as a real, unusual case of two guests sharing one numbered prior episode, though not verified further in this pass)."@en ;
+    thinkr:hasDiscussionSummary "Highly convergent — Jason Bradford's own mid-episode summary names it directly: 'I think we're all kind of singing the same song here.' The one moment of genuine, explicit reframing rather than agreement comes from Daniel Zetah, who opens his turn by directly challenging Nate's own question: 'I would actually like to just challenge the question itself' — arguing the premise that the current fossil-fueled system is even 'feeding the world' well is itself false, given documented malnutrition and obesity coexisting under it. A second, milder real disagreement is one of degree rather than direction: Bradford's opening statement calls for depopulating cities outright, while Millison pushes back gently that 'not all cities are created equal,' pointing to cities historically sited on rivers and trade routes as potentially viable in a lower-energy future rather than uniformly abandoned. Shiva grounds the whole conversation in real, specific longitudinal data from her own farm (20 years of soil nitrogen, zinc, and manganese measurements comparing organic and chemical-input plots), giving the discussion an empirical anchor the other three build on rather than dispute. The episode's most self-aware moment is Bradford's own 'Shire' analogy via Lord of the Rings, which he flags himself as 'corny' before continuing anyway — Nate affectionately teases him for it at the close ('I knew you were corny') while praising his 'agro-ecological wisdom.' All four converge fully, without qualification, on ending agricultural subsidies and patents on seed/life as the necessary first policy steps — the clearest full consensus point in the episode."@en ;
+    .

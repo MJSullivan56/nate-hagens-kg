@@ -261,3 +261,60 @@ this project's standing "don't reorganize ahead of real need" instinct),
 not preemptively. A natural trigger point: whenever the person-bootstrap
 queue resumes at real scale and these 4 files start actually feeling
 unwieldy in the flat directory, not before.
+
+**Externality pricing for Scenario/EarthSystems/Doughnut indicators
+(raised 2026-08-13).** MJSullivan's framing: eventually put a real
+monetary value on the externalities this graph currently represents
+biophysically (climate stress, biosphere health, the 42 Doughnut
+indicators, etc.), on the premise that money is the register most
+people actually respond to.
+
+Real economic frameworks this would draw from, not invent from scratch:
+"social cost of carbon" (used in actual policy), natural capital
+accounting, and ecosystem-services valuation (Costanza et al.'s 1997
+attempt to price the entire biosphere's services is the classic,
+still-debated reference point).
+
+Worth taking seriously as a genuinely CONTESTED methodological choice,
+not a settled one, if this ever gets built — the tension: pricing a
+functioning biosphere implicitly treats it as tradeable against other
+dollar amounts, which can undercut the argument that some things aren't
+actually substitutable at any price. This is a live disagreement within
+ecological economics itself, not a fringe objection — the graph should
+probably represent that tension rather than silently pick a side.
+
+Real, already-existing precedent worth reconciling with: the CalDEC
+Doughnut taxonomy already in this graph (indicatorcategories.ttl/
+indicators.ttl) deliberately does NOT monetize most of its 42
+indicators — Ecological Footprint, Ozone Layer, At-Risk Species are all
+biophysical, not dollar figures.
+
+DECIDED 2026-08-13, per MJSullivan: PARALLEL, not replacement — the
+monetary layer sits ALONGSIDE the biophysical framing, never instead of
+it, because the audiences are genuinely different (some people respond
+to "ecological footprint acres," others to "$47B in externalized
+costs") and neither framing is simply "more correct" than the other.
+Same underlying move already proven in this graph's own
+thinkr:AlternateTerm mechanism — EROI/"Energy Return on Investment"
+coexist as parallel, typed, audience-dependent framings of the same
+referent, rather than one being demoted in favor of the other. A
+monetary valuation next to a biophysical measure is structurally the
+same idea, just applied to values instead of names.
+
+Practical schema question for whenever this is picked up: a bare new
+property (e.g. thinkr:hasEstimatedExternalityCost) is NOT enough on its
+own, for two compounding reasons — (1) it needs to coexist with the
+biophysical measure, per the parallel-not-replacement decision above,
+and (2) "none of these have simple answers" cuts deeper than just
+biophysical-vs-monetary: different PRICING methodologies (social cost
+of carbon vs. ecosystem-services accounting vs. others) can produce
+genuinely different dollar figures for the SAME indicator, so even
+within the monetary layer a single bare number would be dishonest.
+Likely needs the same Evidence/LinkNote-style separation between "the
+claim" and "the sourced methodology behind the claim" already used
+elsewhere in this graph — possibly multiple coexisting valuations per
+indicator, not one.
+
+**Not urgent, not scoped** — captured here so the idea isn't lost,
+matching every other backlog item's "don't build ahead of real need"
+treatment.

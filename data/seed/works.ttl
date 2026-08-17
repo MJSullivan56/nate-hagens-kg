@@ -96,3 +96,34 @@ tgs:Work.GlobalTippingPointsReport2025 a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Global Tipping Points Report 2025"@en ;
     rdfs:comment "Cited in Frankly_138's show notes specifically for its treatment of ice-sheet and soil-system tipping points. Full authorship/publisher NOT independently verified this session — real, citable report per the official show notes' own link, worth a proper WebFetch verification pass before treating this stub as complete."@en ;
     .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via Frankly_20's real linked show notes.
+#############################################
+
+tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Reality Blind: Integrating the Systems Science Underpinning Our Collective Futures, Vol. 1"@en ;
+    rdfs:comment "Authors: Nate Hagens and DJ White. Self-published 2021 (independently published, freely available online after Hagens declined a traditional publisher deal specifically to keep it free). Was the main text for Hagens' own 'Reality 101' class — covers deep time, human brain/behavior, ecology, and energy/money/economy, including a real elaboration of Concept.CarbonPulse (already in this graph) as a central framing device."@en ;
+    dct:source <https://read.realityblind.world/> ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "Reality Blind"@en ;
+        skos:scopeNote "Short-form title, used in casual reference (e.g. this graph's own dct:references usage) versus the full formal title." ] ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 Tier 3 enrichment, surfaced via its own real
+# linked show notes.
+#############################################
+
+tgs:Work.Combining a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Combining"@en ;
+    rdfs:comment "Author: Nora Bateson. Published September 2023 by Triarchy Press, 386pp. A poetic, relational exploration of the ecology of communication and interdependency — introduces/elaborates 'Aphanipoiesis' (the unseen ways life comes together) and connects to her earlier-coined 'Warm Data.'"@en ;
+    dct:source <https://www.triarchypress.net/combining.html> ;
+    .
+
+tgs:Work.Belly a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Belly"@en ;
+    rdfs:comment "Author: Nora Bateson. Published September 1, 2026 by Triarchy Press. Described by its own publisher as 'a cookbook for life' — an exploration of nth-order effects and 'the among-ing of all life' through food, family, illness, migration, and ecology."@en ;
+    dct:source <https://www.triarchypress.net/belly.html> ;
+    .

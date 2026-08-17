@@ -558,3 +558,37 @@ thinkr:hasEpisodeSegment a owl:ObjectProperty ;
     rdfs:range thinkr:EpisodeSegment ;
     rdfs:comment "Which EpisodeSegment (Frankly/MainShow) this Episode belongs to."@en ;
     skos:prefLabel "has episode segment"@en .
+
+#############################################
+# ADDED 2026-08-13 — closes the gap between SchoolOfThought and the
+# Scenario matrix, per MJSullivan's explicit direction: link
+# thinkr:SchoolOfThought.TechnoOptimism directly to the ScenarioFacet
+# whose own definition it effectively argues FOR. Considered and
+# rejected: reusing thinkr:contrastsWith (wrong shape — that's for two
+# comparably-weighted ideas in tension, not a belief predicting/
+# advocating a specific outcome) and a LinkNote/Evidence treatment
+# (rejected per this doc's own contestability principle — whether
+# techno-optimism's core belief structurally matches GreenGrowth's own
+# definition is a meaning-level fact, not a contested empirical claim;
+# the graph does NOT assert GreenGrowth is realistic or likely, only
+# that this SchoolOfThought is the one arguing for it).
+#############################################
+
+thinkr:favorsFacet a owl:ObjectProperty ;
+    rdfs:domain thinkr:SchoolOfThought ;
+    rdfs:range thinkr:ScenarioFacet ;
+    rdfs:subPropertyOf thinkr:relatesTo ;
+    rdfs:comment "Which ScenarioFacet a SchoolOfThought's own core beliefs effectively argue for or predict as achievable — a meaning-level structural match (this belief system's vision of the future IS this facet's own definition), not an empirical claim that the facet is realistic or likely to occur. Does not imply this graph endorses the SchoolOfThought's belief; ScenarioFacet.GreenGrowth's own scopeNote already records Hagens' own contrary assessment (his 'least realistic option on this Dimension') independently of this property."@en ;
+    skos:scopeNote "Deliberately narrower than thinkr:discusses (which just says an Episode mentions something) — this is a structural claim about what a SchoolOfThought's OWN internal logic points toward, asserted once at the SchoolOfThought level rather than needing to be re-derived from every Episode that happens to discuss it."@en ;
+    skos:prefLabel "favors facet"@en .
+
+#############################################
+# ADDED 2026-08-13 — per MJSullivan's explicit request, prompted by
+# summarizing RR-1's real actual agreement/disagreement dynamics.
+#############################################
+
+thinkr:hasDiscussionSummary a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "A prose summary of how the episode's participants actually related to each other's positions — genuine agreement, productive clarification, or real disagreement — as distinct from what topics came up (thinkr:discusses) or what the episode is generally about (skos:definition). Most valuable for thinkr:EpisodeType.PanelDiscussion episodes with multiple guests, where a reader can't tell from the topic list alone whether the guests actually converged, talked past each other, or genuinely disagreed — but not restricted to PanelDiscussion only, since a solo Interview can also feature real host/guest tension worth the same treatment. Written from the actual transcript, not inferred from the show notes or description alone."@en ;
+    skos:prefLabel "has discussion summary"@en .

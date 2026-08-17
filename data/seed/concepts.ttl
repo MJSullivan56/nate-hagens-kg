@@ -12,7 +12,7 @@
 
 tgs:Concept.CarbonPulse a thinkr:Concept, thinkr:HagensConcept,
         owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://natehagens.substack.com/i/159009316/the-carbon-pulse> ;
     dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
     skos:definition "The one-time, temporary burst of high-density energy available to humanity via fossil fuels, framed as a short pulse on a geological timescale rather than a permanent baseline."@en ;
     skos:prefLabel "The Carbon Pulse"@en .
@@ -85,7 +85,9 @@ tgs:Concept.GreatSimplification a thinkr:Concept, thinkr:HagensConcept,
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:subject tgs:Subject.SystemsFrameworks ;
     skos:definition "Hagens' term for a coming, likely non-linear reduction in the complexity, energy throughput, and material consumption of global civilization, as fossil fuel surplus energy declines relative to what the economy has grown to expect."@en ;
-    skos:prefLabel "The Great Simplification"@en .
+    skos:prefLabel "The Great Simplification"@en ;
+    thinkr:contrastsWith tgs:SchoolOfThought.TechnoOptimism ;
+    skos:scopeNote "contrastsWith added 2026-08-13. Real, direct evidence, not inferred from tone alone: RR-24's own official episode description centers its entire premise on critiquing techno-optimists' space-colonization ambitions as a way of 'bypassing the problems we now face on Earth' — this graph's own already-built Concept.EnergyBlindness makes the same underlying critique in general form. MJSullivan's own framing, worth preserving: this graph's discipline is about verifying real sources, not about false neutrality — Hagens' own real material already takes a clear, evidenced side here."@en .
 
 tgs:Concept.GrowthImperative a thinkr:Concept,
         owl:NamedIndividual ;
@@ -314,11 +316,12 @@ tgs:Concept.Communing a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Persona.NoraBateson .
 
 tgs:Concept.Symmathesy a thinkr:Concept, owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://journals.isss.org/index.php/proceedings59th/article/view/2720> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Symmathesy"@en ;
     skos:definition "Nora Bateson's 2015 coinage (Greek 'sym' + 'mathesis,' together + learning) for an entity composed through contextual mutual learning by interaction — a living system (a family, an ecosystem, a conversation) that is genuinely shaped by its own internal relationships and interdependencies, not just a collection of independently-acting parts."@en ;
-    thinkr:influencedBy tgs:Persona.NoraBateson .
+    thinkr:influencedBy tgs:Persona.NoraBateson ;
+    skos:scopeNote "dcterms:source UPGRADED 2026-08-13 from a generic WordPress blog post to the real ISSS (International Society for the Systems Sciences) academic conference proceedings — a strictly more authoritative citation for this same 2015 coinage, surfaced via RR-26's own real linked show notes."@en .
 
 tgs:Concept.Schismogenesis a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
@@ -337,3 +340,92 @@ tgs:Concept.MaximumPowerPrinciple a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Maximum Power Principle"@en ;
     skos:definition "Howard T. Odum's principle (building on Alfred Lotka's earlier work) that self-organizing systems tend to develop and prevail when they maximize their intake and useful transformation of energy, not merely their efficiency — a foundational idea in ecological energetics directly connected to EROI (Charles Hall, a notable Odum student, is a central figure in that literature too)."@en ;
     thinkr:influencedBy tgs:Persona.HowardOdum .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via TGS_10's own real linked show notes.
+#############################################
+
+tgs:Concept.KleibersLaw a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://en.wikipedia.org/wiki/Kleiber%27s_law> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Kleiber's Law"@en ;
+    skos:definition "Max Kleiber's 1932 empirical finding that an organism's basal metabolic rate scales to roughly the 3/4 power of its body mass, not the 2/3 power a simple surface-area argument would predict — one of the few genuine quantitative laws in biology, still without a fully settled theoretical explanation, and used in this graph's own source material as a real biological analogy for economic/systemic energy-scaling arguments."@en ;
+    thinkr:influencedBy tgs:Persona.MaxKleiber .
+
+#############################################
+# ADDED 2026-08-13 — RR-26 Tier 2/4 enrichment, from its own real
+# linked show notes.
+#############################################
+
+tgs:Concept.RadicalHospitality a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Radical Hospitality"@en ;
+    skos:definition "A practice of genuine, unscripted welcome — extended both to others and to oneself — treated in this graph's source material as a necessary ingredient for real community, distinct from the transactional, role-bound interactions that ordinarily substitute for it. No single originator credited in the source material (etymological, not attributional, citations given for both words) — modeled as umbrella Concept, not thinkr:HagensConcept."@en .
+
+tgs:Concept.Amonging a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.combining.life/> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Amonging"@en ;
+    skos:definition "Nora Bateson's own neologism for the edge of the self as genuinely porous and relational rather than fixed — being fundamentally constituted 'among' one's relationships and context, not separately from them. Directly connects to both her book Combining and her newer book Belly (whose own publisher description uses the phrase 'the among-ing of all life') — not confidently attributable to one specific book over the other from the sources checked."@en ;
+    thinkr:influencedBy tgs:Persona.NoraBateson .
+
+tgs:Concept.DunbarsNumber a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://en.wikipedia.org/wiki/Dunbar%27s_number> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Dunbar's Number"@en ;
+    skos:definition "Robin Dunbar's proposed cognitive limit (roughly 150) on the number of people with whom one can maintain genuinely stable social relationships, derived from a correlation between primate brain/neocortex size and social group size — used in this graph's source material as evidence for prioritizing depth over breadth in relationships."@en ;
+    thinkr:influencedBy tgs:Persona.RobinDunbar .
+
+#############################################
+# ADDED 2026-08-13 — Concept.DarkTriad, previously discussed
+# substantively across RR-19, RR-20, and RR-26 but never itself
+# formally minted, closing a real gap surfaced while processing
+# Frankly_85. Concept.LightTriad, Nate's own explicit antonym framing
+# for it, surfaced via Frankly_85 directly.
+#
+# ARCHITECTURAL RESOLUTION, same day: this is the first real case
+# testing whether thinkr:AlternateTermType.Antonym (built 2026-08-13,
+# earlier this session, flagged then as unresolved and NEVER actually
+# used on any real individual since) or the already-existing
+# thinkr:contrastsWith is the right mechanism for a genuine antonym.
+# RESOLVED: contrastsWith wins, clearly — Light Triad and Dark Triad
+# are NOT two names for the same referent (which is what AlternateTerm
+# is for, e.g. EROI/"Energy Return on Investment"); they are two
+# DISTINCT, separately-defined constructs that stand in opposition.
+# Confirmed independently by the very paper that established this
+# contrast: Kaufman et al.'s own 2019 title is literally "Contrasting
+# Two Very Different Profiles of Human Nature." contrastsWith's own
+# existing definition ("useful tension... does not imply influence in
+# either direction") fits this case exactly. See
+# thinkr:AlternateTermType.Antonym's own scopeNote for the formal
+# resolution note.
+#############################################
+
+tgs:Concept.DarkTriad a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.sciencedirect.com/science/article/abs/pii/S0191886902001459> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Dark Triad"@en ;
+    skos:definition "A cluster of three socially aversive personality traits — narcissism, Machiavellianism, and psychopathy — originally proposed by Delroy Paulhus and Kevin Williams (2002). A recurring analytical lens across this graph's source material for understanding how individuals with these traits gain disproportionate influence over institutions and culture, distinct from mere individual pathology."@en ;
+    thinkr:contrastsWith tgs:Concept.LightTriad ;
+    .
+
+tgs:Concept.LightTriad a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://doaj.org/article/6a8567c65a0a46cbb579e2a93b07acd0> ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Light Triad"@en ;
+    skos:definition "Scott Barry Kaufman's proposed counterpart to the Dark Triad (2019, with David Bryce Yaden, Elizabeth Hyde, and Eli Tsukayama) — a cluster of three prosocial traits: Kantianism (treating people as ends in themselves, not means), humanism (belief in the inherent dignity of others), and faith in humanity (a basic trust that most people are good). Hagens' own explicit framing treats it as a real but structurally weaker force than the Dark Triad — a value-based orientation up against trait-based behavior, requiring deliberate group-level support (not just individual goodness) to hold its own."@en ;
+    thinkr:influencedBy tgs:Persona.ScottBarryKaufman ;
+    thinkr:contrastsWith tgs:Concept.DarkTriad ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-2 bootstrap.
+#############################################
+
+tgs:Concept.EcologicalFootprint a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://en.wikipedia.org/wiki/Ecological_footprint> ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Ecological Footprint"@en ;
+    skos:definition "A quantitative sustainability metric, originated and co-developed by William Rees and his then-PhD-student Mathis Wackernagel (introduced in their 1996 book 'Our Ecological Footprint'), expressing human demand on ecosystems as the amount of biologically productive land and water area required to produce what a population consumes and absorb its waste — the primary tool used to estimate the extent of humanity's ecological overshoot."@en ;
+    thinkr:influencedBy tgs:Persona.WilliamRees, tgs:Persona.MathisWackernagel .
