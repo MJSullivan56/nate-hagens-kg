@@ -49,13 +49,6 @@ tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     owl:sameAs <http://dbpedia.org/resource/The_Matter_with_Things> ;
     .
 
-tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
-    skos:prefLabel "Reality Blind: Integrating the Systems Science Underpinning Our Collective Futures, Vol. 1"@en ;
-    rdfs:comment "Co-authored with DJ White — DJ White NOT modeled as a Person individual as of 2026-07-11, would need the same verification pass as every other person tonight (Wikipedia/wrong-person checks), not fabricated as a side effect of fleshing out Nate. Self-published on Amazon (ISBN 9798701116281) specifically so full content could stay free online — was the primary text for Nate's Reality 101 course. Confirmed via multiple independent sources: Amazon, Goodreads, a LinkedIn post from Nate himself, MAHB, Stanford."@en ;
-    dct:issued "2021"^^xsd:gYear ;
-    dct:creator tgs:Human.NateHagens ;
-    .
-
 #############################################
 # BOOTSTRAPPED 2026-07-15 — Gaya Herrington's 2021 paper, direct
 # empirical basis for tgs:LinkNote.LimitsToGrowth_GayaHerrington. See
@@ -103,7 +96,9 @@ tgs:Work.GlobalTippingPointsReport2025 a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Reality Blind: Integrating the Systems Science Underpinning Our Collective Futures, Vol. 1"@en ;
-    rdfs:comment "Authors: Nate Hagens and DJ White. Self-published 2021 (independently published, freely available online after Hagens declined a traditional publisher deal specifically to keep it free). Was the main text for Hagens' own 'Reality 101' class — covers deep time, human brain/behavior, ecology, and energy/money/economy, including a real elaboration of Concept.CarbonPulse (already in this graph) as a central framing device."@en ;
+    rdfs:comment "Co-authored by Nate Hagens and DJ White (now a real, built Persona in this graph — resolves a note in an earlier, since-consolidated version of this entry flagging he wasn't yet modeled). Self-published on Amazon (ISBN 9798701116281) specifically so full content could stay free online — was the primary text for Hagens' own 'Reality 101' class. Covers deep time, human brain/behavior, ecology, and energy/money/economy, including a real elaboration of Concept.CarbonPulse (already in this graph) as a central framing device. Confirmed via multiple independent sources: Amazon, Goodreads, a LinkedIn post from Nate himself, MAHB, Stanford."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/> ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
@@ -126,4 +121,91 @@ tgs:Work.Belly a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Belly"@en ;
     rdfs:comment "Author: Nora Bateson. Published September 1, 2026 by Triarchy Press. Described by its own publisher as 'a cookbook for life' — an exploration of nth-order effects and 'the among-ing of all life' through food, family, illness, migration, and ecology."@en ;
     dct:source <https://www.triarchypress.net/belly.html> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via RR-11's own real linked show notes,
+# cited multiple times (Maximum Power Principle, Peak Oil, Energetic
+# Remoteness) via the same real reader-platform URL pattern already
+# used for Work.RealityBlind. Resolves the second of DJ White's real
+# "three books" with Nate — the third remains unidentified.
+#############################################
+
+tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Bottlenecks of the 21st Century"@en ;
+    rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
+    dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
+    dct:source <https://read.realityblind.world/view/388478403/i/> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via RR-14's own real linked show notes.
+#############################################
+
+tgs:Work.DesigningRegenerativeCultures a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Designing Regenerative Cultures"@en ;
+    rdfs:comment "2016 book by Daniel Christian Wahl (Triarchy Press, UK), translated into 7+ languages — a wide-ranging analysis of ecological design, whole-systems thinking, and regenerative culture, described by reviewers as 'a Whole Earth Catalog for the 21st century.'"@en ;
+    dct:creator tgs:Human.DanielChristianWahl ;
+    dct:issued "2016"^^xsd:gYear ;
+    owl:sameAs <https://www.amazon.com/Designing-Regenerative-Cultures-Daniel-Christian/dp/1909470775> ;
+    .
+
+tgs:Work.BioregionalFinancingFacilities a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bioregional Financing Facilities: Reimagining Finance to Regenerate Our Planet"@en ;
+    rdfs:comment "2024 book, co-authored by Samantha Power and Leon Seefeld — a collaboration between Finance for Gaia, Dark Matter Labs Capital Systems, and the Buckminster Fuller Institute Design Lab. Proposes a new layer in the global financial architecture (Bioregional Financing Facilities/BFFs) to decentralize financial decision-making toward place-based regenerators; includes 12 real case studies. Real advisors listed include tgs:Persona.MatthewMonahan, already a real, built Persona in this graph."@en ;
+    dct:creator tgs:Human.SamanthaPower ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:source <https://drive.google.com/file/d/1yznJ324biVX_RyVcTKNB96vNMqFbYUI3/view> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via RR-17's own real linked show notes
+# and directly discussed at length in the transcript itself.
+#############################################
+
+tgs:Work.ThinkingLikeAMountain a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Thinking Like a Mountain: Towards a Council of All Beings"@en ;
+    rdfs:comment "1988 book (New Society Publishers), co-authored by John Seed, Joanna Macy, Arne Naess, and Pat Fleming — describes the Council of All Beings ritual and the philosophical/experiential foundations of deep ecology. Translated into 12+ languages. Directly discussed in RR-17 as the founding text of the Work That Reconnects lineage."@en ;
+    dct:creator tgs:Human.JohnSeed ;
+    dct:issued "1988"^^xsd:gYear ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via RR-13's own real linked show notes.
+#############################################
+
+tgs:Work.FutureCouncilFilm a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Future Council"@en ;
+    rdfs:comment "2024 documentary film directed by Damon Gameau, following eight children (ages 11-14) across Europe by biodiesel-fueled bus, confronting corporate leaders (Nestlé, Decathlon, ING, among others) about climate accountability. Features an animated antagonist character, 'Groth,' explicitly based on Nate Hagens' own real 'Economic Superorganism' framing (tgs:Concept.Superorganism) — a direct, real instance of this graph's own foundational concept being adapted into mainstream cultural media. Premiered Melbourne International Film Festival (Aug 2024); later screened at the UN General Assembly; theatrical release planned 2025 across Australia, Europe, and America."@en ;
+    dct:creator tgs:Human.DamonGameau ;
+    dct:issued "2024"^^xsd:gYear ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via a real Hylo community post
+# (MJSullivan's own "Great Simplification" group thread), verified
+# independently before minting. Real sequel to Work.HospicingModernity
+# if that exists — check name below before assuming.
+#############################################
+
+tgs:Work.OutgrowingModernity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Outgrowing Modernity: Navigating Complexity, Complicity, and Collapse with Accountability and Compassion"@en ;
+    rdfs:comment "2025 book by Vanessa Machado de Oliveira (Andreotti), published August 12, 2025 — the real sequel to her 2021 'Hospicing Modernity,' with contributions from Keri Facer and Awo Fatokun Faniyii. Explores 'neurocolonization' — modernity's effects on how people think, act, imagine, and adapt — and includes real documented material on the author's own collaborative work with AI systems (a recurring character, 'Aiden'). Co-founder credit: Gesturing Towards Decolonial Futures (GTDF) Arts/Research Collective."@en ;
+    dct:creator tgs:Human.VanessaAndreotti ;
+    dct:issued "2025"^^xsd:gYear ;
+    owl:sameAs <https://www.amazon.com/Outgrowing-Modernity-Navigating-Complexity-Accountability/dp/B0DMVDJ4VG> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — resolves a real, long-standing PENDING item
+# flagged since the very start of this project ("Scenario Thinking"
+# book citation), surfaced via Frankly_139's own real show notes.
+#############################################
+
+tgs:Work.ScenarioThinkingHistoricalEvolution a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Scenario Thinking: A Historical Evolution of Strategic Foresight"@en ;
+    rdfs:comment "2018 academic work (Cambridge University Press, 'Elements in Business Strategy' series) by R. Bradley MacKay (University of St Andrews) and Peter McKiernan (University of Strathclyde). Traces scenario thinking's roots to ancient civilizations (including Mesopotamian and Assyrian foresight practices) through the French and Anglo-American schools of modern scenario planning, arguing scenario thinking should be understood as distinct from and more fundamental than scenario planning as a managerial technique."@en ;
+    dct:creator "R. Bradley MacKay"@en, "Peter McKiernan"@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    owl:sameAs <https://doi.org/10.1017/9781108571494> ;
     .

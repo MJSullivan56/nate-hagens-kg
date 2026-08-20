@@ -1,0 +1,250 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#############################################
+# ADDED 2026-08-13 — the 27-archetype system from Frankly_58 "The
+# Fellowship of the Ring: 'Bend Not Break' Version," organized in 3
+# real timelines Hagens himself distinguishes. Two real relationship
+# types surfaced, not invented: thinkr:morphsInto (Hagens' own direct,
+# specific decline-pairing for 8 of the 9 business-as-usual
+# archetypes — the 9th, Preacher, explicitly does NOT morph into
+# something new per his own words, and is left without a morphsInto
+# target rather than forcing a fit), and thinkr:activeInPhase, a real
+# structural parallel between the 3 archetype timelines and the
+# already-built tgs:ResponsePhase system — Hagens' own words for
+# timeline 3 ("the next decade or so... the bend or break moment")
+# match tgs:ResponsePhase.BendNotBreak by name, not just by inference.
+#############################################
+
+thinkr:Archetype a owl:Class ;
+    rdfs:comment "One of the 27 human archetypes from Frankly_58's real Lord-of-the-Rings allegory, organized into 3 real timelines (business-as-usual, the 'bend or break' Fellowship, and the distant future) — see thinkr:activeInPhase for how each timeline maps onto the already-built thinkr:ResponsePhase system."@en ;
+    skos:prefLabel "Archetype"@en .
+
+thinkr:morphsInto a owl:ObjectProperty ;
+    rdfs:domain thinkr:Archetype ; rdfs:range thinkr:Archetype ;
+    rdfs:comment "Hagens' own direct, specific real pairing — a business-as-usual Archetype's stated decline-counterpart under continued contraction, not an inferred or computed relationship. Deliberately NOT asserted for every Archetype: Preacher explicitly does not morph into something new per Hagens' own words ('the preacher will always exist... maybe with a lowercase p'), so no target is forced here."@en ;
+    skos:prefLabel "morphs into"@en .
+
+thinkr:activeInPhase a owl:ObjectProperty ;
+    rdfs:domain thinkr:Archetype ; rdfs:range thinkr:ResponsePhase ;
+    rdfs:comment "Connects an Archetype to the ResponsePhase its timeline most closely corresponds to. Real, direct textual basis, not a loose analogy: Hagens' own words for the business-as-usual archetypes ('what our culture has aspired to... in the past 50, 70 years') match Phase A's stability; his own words for the Fellowship archetypes ('the next decade or so... the bend or break moment') match Phase B by name; his own words for the future archetypes ('20, 30, 40 years from now after we've navigated the bringing the ring to Mordor situation') match Phase C's framing of a destination reached only after building through A and B. One real caveat preserved honestly: Hagens states the future archetypes are 'not only' needed later — 'we need those people today as well' — so this link marks where each Archetype is MOST associated, not an exclusive membership."@en ;
+    skos:prefLabel "active in phase"@en .
+
+
+# --- Timeline 1: Business-as-usual archetypes (Phase A) ---
+
+tgs:Archetype.Banker a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Banker / Investor"@en ;
+    skos:definition "A respected profession built on optimal-foraging dynamics as a biological organism coupled with a culture of large energy surplus — finance overlaid on top of energy, materials, technology, and ecology."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Hoarder ;
+    .
+
+tgs:Archetype.Worker a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Worker"@en ;
+    skos:definition "Billions of real 9-to-5 workers worldwide combining with machines and energy to create products, for real wages Hagens notes have flatlined for decades at the bottom half of the income distribution while correlating heavily with the top 1% at the top."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.IndenturedOrSlave ;
+    .
+
+tgs:Archetype.Technologist a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Technologist"@en ;
+    skos:definition "Better chips, innovation, and efficiency — continually widening the 'straw' and propelling growth forward in what Hagens calls a naive-progress framing."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Cyborg ;
+    .
+
+tgs:Archetype.Barker a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Barker"@en ;
+    skos:definition "The salesman, riding the carbon pulse near its last stage before surplus energy gets fully dissipated/consumed — adds a real 10-15% margin that keeps the role employed."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Grifter ;
+    .
+
+tgs:Archetype.Scholar a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Scholar"@en ;
+    skos:definition "Academics, scientists, and university professors worldwide."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Farmer ;
+    .
+
+tgs:Archetype.Warrior a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Warrior"@en ;
+    skos:definition "Military personnel — Air Force, Army, Reserves, Marines, and their foreign counterparts, especially prominent in the US."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Enforcer ;
+    .
+
+tgs:Archetype.Preacher a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Preacher"@en ;
+    skos:definition "Someone who evangelizes ideas, often but not necessarily connected to religion. Deliberately given NO thinkr:morphsInto target — Hagens' own real words directly state this archetype persists rather than transforming into something new, 'always exist[ing] as an archetype in human cultures, maybe with a lowercase p and a smaller megaphone.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    .
+
+tgs:Archetype.Consumer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Consumer"@en ;
+    skos:definition "Especially prevalent in the Global North — households full of 60-70 plugged-in devices, built on the back of energy surplus: short-term stimulation, technology, vacations, entertainment."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.Addict ;
+    .
+
+tgs:Archetype.Elite a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Elite"@en ;
+    skos:definition "The top ~1%, living high on the carbon surplus regardless of their specific role — an archetype Hagens notes many people still aspire to."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StabilityWindow ;
+    thinkr:morphsInto tgs:Archetype.WildCard ;
+    .
+
+
+# --- Decline counterparts (real morphsInto targets) ---
+
+tgs:Archetype.Hoarder a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Hoarder"@en ;
+    skos:definition "Where loss-aversion keeps a person from being pro-social and part of their community, clinging instead to accumulated excess claims on reality."@en .
+
+tgs:Archetype.IndenturedOrSlave a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Indentured / Slave"@en ;
+    skos:definition "As AI displaces labor, energy surplus declines, and wealth inequality increases — Hagens directly cites Patrick Knodel's own real claim (a prior TGS guest) that, by some real definitions, more people are enslaved today than at any prior point in human history."@en .
+
+tgs:Archetype.Cyborg a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Cyborg"@en ;
+    skos:definition "A transhumanist merging of technology and humanity via AI and big data — Hagens' own real, pointed framing: 'in an effort to save humanity from ecological and material limits, we may lose our actual humanity.'"@en .
+
+tgs:Archetype.Grifter a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Grifter"@en ;
+    skos:definition "Someone who no longer has the ease of a stable sales role and turns to whatever method is available to make ends meet."@en .
+
+tgs:Archetype.Farmer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Farmer"@en ;
+    skos:definition "Real, needed work on the land generating real material surplus — Hagens' own pointed contrast to, in his own words, 'some esoteric PhD that's not really contributing to what the future will need.'"@en .
+
+tgs:Archetype.Enforcer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Enforcer"@en ;
+    skos:definition "Military personnel redirected toward keeping domestic peace among civilians rather than fighting other countries — Hagens directly raises the real possibility of escalating George Floyd-style domestic conflict as the live test case."@en .
+
+tgs:Archetype.Addict a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Addict"@en ;
+    skos:definition "Continued access to goods, services, and stability, but with the short-term dopamine hits that defined consumer life no longer available — a real, expected mental withdrawal for the average person."@en .
+
+tgs:Archetype.WildCard a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Wild Card"@en ;
+    skos:definition "A real, explicit bifurcation, not a single fixed outcome — Hagens states the Elite could go either of two real directions: toward the Hoarder's path (building bunkers, living off historically-stored surplus), or toward playing a real, substantial role in a collective response to the Great Simplification."@en .
+
+
+# --- Timeline 3: The "Bend Not Break" Fellowship archetypes (Phase B) ---
+
+tgs:Archetype.Silvertongue a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue"@en ;
+    skos:definition "A translator and diplomat between society's siloed, single-issue factions, at every level from local community to the UN and national governments — named by Hagens as one of the most urgently needed archetypes, without which he sees 'no hope.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Alchemist a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist"@en ;
+    skos:definition "Fluent in the real biophysical balance sheet underlying money and technology as markers for energy, materials, and ecosystem impact — prepares benign pathways for the real shrinkage Hagens expects between the financial-claim economy and the biophysical economy it claims to represent."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Disarmer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer"@en ;
+    skos:definition "Real nuclear disarmament work, given the real backdrop of 12,000+ active nuclear warheads and live conflicts (Russia/Ukraine, Israel/Gaza) — Hagens frames the archetype as either a genuine peace activist or something more Machiavellian aimed at the same real reduction in catastrophic risk."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Muse a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Muse"@en ;
+    skos:definition "A source of inspiration without a specific goal — warmth, love, music, and kindness spreading through a community during a time of increasing chaos and despair."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Effectivist a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist"@en ;
+    skos:definition "Someone who cares about real end results rather than the social accolades of conventional activism, making and actually executing plans rather than only demonstrating and signaling."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Barber a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Barber"@en ;
+    skos:definition "Someone who prioritizes real resource triage at every level, understanding that not all financial claims on reality will ever actually be honored — Hagens' own direct metaphor: 'there's going to be haircuts.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Governess a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Governess"@en ;
+    skos:definition "A real, deeply needed archetype for better collective decision-making — Hagens explicitly admits he is not himself an expert on what this actually requires, offered candidly rather than papered over."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Wellspring a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring"@en ;
+    skos:definition "A central node of energy, enthusiasm, and support that others can draw on when discouraged — Hagens' own real example is Gandalf's role in the Fellowship, but explicitly notes it doesn't require a powerful or charismatic person, only 'a really strong, deep-running ethic.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    .
+
+tgs:Archetype.Catalyst a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst"@en ;
+    skos:definition "Hagens' own real, direct closing point: Frodo alone could not have carried the Ring to Mordor — it took Sam and Gollum, real Catalysts who shifted the story's outcome. Offered directly to listeners as a model for ordinary agency: 'you do your job, live with your family, enjoy your life, learn and pay attention... you never know when your actions could shift the larger story.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    dcterms:relation tgs:Concept.DistributedAgency ;
+    .
+
+
+# --- Timeline 2: Distant-future archetypes (Phase C) ---
+
+tgs:Archetype.Ecologist a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Ecologist"@en ;
+    skos:definition "Understands the inner relationship of things — humans to nature, to soil, to the biosphere — and how academic disciplines connect to explain reality at a fundamental level."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Engineer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Engineer"@en ;
+    skos:definition "Real scientific and technical knowledge of building, blueprints, and infrastructure — able to look at a system from a genuine engineering perspective when hard decisions have to be made."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Ancestor a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Ancestor"@en ;
+    skos:definition "A real reframe of the Preacher archetype for a future context — someone with sapience and wisdom, not just cleverness, who holds real concern for being a good ancestor to the humans and other species that follow. Hagens' own direct framing: 'we are ancestors to what comes after, not only our species but other species as well.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Craftsman a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Craftsman"@en ;
+    skos:definition "Someone able to build things by hand with a variety of materials, without relying on today's global supply chains and big-box retail access."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Healer a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Healer"@en ;
+    skos:definition "A real generalist medical role for a future needing to deliver most of today's health benefits with a fraction of today's plastics and material resources — requiring far more real physical/psychological resilience and preventative wellbeing than today's system, including new food systems."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Stalwart a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Stalwart"@en ;
+    skos:definition "A steady, even-keeled anchor for others — Hagens' own real example is Sam Gamgee's role in Lord of the Rings, and he directly connects this to one of Carl Jung's own real archetypes, the 'regular person.'"@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.EarthWarden a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Warden / Earth Warden"@en ;
+    skos:definition "Understands ecology and actively stands in defense of the natural world and other species — someone embedded in their own community who genuinely prioritizes the health of local ecosystems and watersheds over monetary profit."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Merrymaker a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Merrymaker"@en ;
+    skos:definition "The jester, artisan, or musician who lifts a community into real joy through poetry, art, music, and dance — Hagens directly distinguishes this from today's supernormal-stimuli substitutes, which he argues lack the same real human quality."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .
+
+tgs:Archetype.Matriarch a thinkr:Archetype, owl:NamedIndividual ;
+    skos:prefLabel "The Matriarch"@en ;
+    skos:definition "A real bastion of feminine wisdom — longer-looking and more right-brain-centered than the dominant orientation of current society."@en ;
+    thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
+    .

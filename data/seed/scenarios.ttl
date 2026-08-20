@@ -45,7 +45,7 @@ tgs:Scenario.GS-CI-FN-SW a thinkr:Scenario, owl:NamedIndividual ;
         skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.TheLongRepair to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
-        tgs:Concept.GreatSimplification,
+        tgs:ScenarioFacet.TheGreatSimplification,
         tgs:ScenarioFacet.CivicIdeal,
         tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences,
         tgs:ScenarioFacet.StrainedButWorkable ;
@@ -83,7 +83,7 @@ tgs:Scenario.GS-FF-CW-HT a thinkr:Scenario, owl:NamedIndividual ;
         skos:scopeNote "RENAMED 2026-08-13 from tgs:Scenario.FortressWorld to the systematic position-code IRI, per MJSullivan's explicit direction (matching the EnergyReturnOnInvestment precedent — canonical form is the systematic one, human name demoted to AlternateTerm). No dangling references existed before the rename (confirmed via grep across the whole data/seed/ directory)." ] ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     thinkr:hasFacet
-        tgs:Concept.GreatSimplification,
+        tgs:ScenarioFacet.TheGreatSimplification,
         tgs:ScenarioFacet.ForcedFeudalism,
         tgs:ScenarioFacet.TheColdWarScenario,
         tgs:ScenarioFacet.HothouseTriage ;

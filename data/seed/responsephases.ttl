@@ -1,0 +1,26 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#############################################
+# ADDED 2026-08-13 — the 3 ResponsePhases from Frankly_132 "What to
+# Do as the World Falls Apart." Hagens' own real words, directly:
+# "the perhaps most important orienting idea in this whole draft
+# framework... we are not in one moment, per se, we are in three
+# overlapping moments simultaneously." Not sequential in the sense of
+# complete-and-move-on — genuinely overlapping and path-dependent.
+#############################################
+
+tgs:ResponsePhase.StabilityWindow a thinkr:ResponsePhase, owl:NamedIndividual ;
+    skos:prefLabel "Phase A: The Stability Window"@en ;
+    skos:definition "The current, finite period in which systems are still connected, real surplus still exists, international coordination is still mostly possible, and institutions — however eroded — are still mostly functioning. Hagens' own real framing: this is the window in which everything that can ONLY be built during stability (institutional trust, physical infrastructure, knowledge transfer, relationships) has to be built, before conditions materially change. The work of this Phase is building and preparing, not yet triaging."@en .
+
+tgs:ResponsePhase.BendNotBreak a thinkr:ResponsePhase, owl:NamedIndividual ;
+    skos:prefLabel "Phase B: Bend Not Break"@en ;
+    skos:definition "Already beginning in many places per Hagens' own real framing, and set to arrive with increasing clarity everywhere: financial shocks, supply disruption, social fracture, geopolitical reorganization, and more people falling off the economic treadmill. The work here is fundamentally different from Phase A — largely triage, not building: maintaining critical functions, bridging communities through ruptures, preventing cascades from becoming full collapses, and holding deliberative space open against the real appeal of authoritarian shortcuts. Hagens names the real failure modes of this Phase directly: freezing entirely because the situation is too far outside prior experience, or capitulating to short-term shortcuts and abandoning the long view."@en ;
+    skos:scopeNote "Real, direct connection to this graph's own already-built content: the phrase 'Bend Not Break' is Hagens' own long-running term, real source is tgs:Monologue.Frankly_58_FellowshipBendNotBreak ('The Fellowship of the Ring, Bend Not Break Version') — now built as a real Episode individual, resolving what was previously a deferred, not-yet-built reference."@en .
+
+tgs:ResponsePhase.StableAttractor a thinkr:ResponsePhase, owl:NamedIndividual ;
+    skos:prefLabel "Phase C: The Stable Attractor"@en ;
+    skos:definition "NOT a place reached by skipping past Phases A and B — Hagens states this directly, that those periods 'cannot be skipped.' Phase C is instead the destination that gives real meaning and direction to the work of A and B: regenerative, resilient, human-scale, embedded in local ecology, equitable in a way that does not depend on infinite growth to fund redistribution, and rich in meaning and social connection. Hagens' own real framing of who this world is for: the same values that animate opposition to capitalism, ecological destruction, and patriarchy actually have a real home here — not because they were declared into existence, but because the structures that produced their opposite failed and were replaced by something built painstakingly from inside the disruption itself, not after it."@en .

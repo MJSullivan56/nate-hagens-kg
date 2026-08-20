@@ -87,7 +87,8 @@ tgs:Concept.GreatSimplification a thinkr:Concept, thinkr:HagensConcept,
     skos:definition "Hagens' term for a coming, likely non-linear reduction in the complexity, energy throughput, and material consumption of global civilization, as fossil fuel surplus energy declines relative to what the economy has grown to expect."@en ;
     skos:prefLabel "The Great Simplification"@en ;
     thinkr:contrastsWith tgs:SchoolOfThought.TechnoOptimism ;
-    skos:scopeNote "contrastsWith added 2026-08-13. Real, direct evidence, not inferred from tone alone: RR-24's own official episode description centers its entire premise on critiquing techno-optimists' space-colonization ambitions as a way of 'bypassing the problems we now face on Earth' — this graph's own already-built Concept.EnergyBlindness makes the same underlying critique in general form. MJSullivan's own framing, worth preserving: this graph's discipline is about verifying real sources, not about false neutrality — Hagens' own real material already takes a clear, evidenced side here."@en .
+    thinkr:relatesTo tgs:ScenarioFacet.TheGreatSimplification ;
+    skos:scopeNote "contrastsWith added 2026-08-13. Real, direct evidence, not inferred from tone alone: RR-24's own official episode description centers its entire premise on critiquing techno-optimists' space-colonization ambitions as a way of 'bypassing the problems we now face on Earth' — this graph's own already-built Concept.EnergyBlindness makes the same underlying critique in general form. MJSullivan's own framing, worth preserving: this graph's discipline is about verifying real sources, not about false neutrality — Hagens' own real material already takes a clear, evidenced side here. SPLIT 2026-08-13: this individual was dual-typed as both Concept and ScenarioFacet (added, then reverted from an even earlier split attempt, then re-split here) — now holds the Concept role only, with the grid-specific ScenarioFacet role split out to its own individual, tgs:ScenarioFacet.TheGreatSimplification, linked via thinkr:relatesTo. See that individual's own scopeNote for the full reasoning and migration record."@en .
 
 tgs:Concept.GrowthImperative a thinkr:Concept,
         owl:NamedIndividual ;
@@ -429,3 +430,36 @@ tgs:Concept.EcologicalFootprint a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Ecological Footprint"@en ;
     skos:definition "A quantitative sustainability metric, originated and co-developed by William Rees and his then-PhD-student Mathis Wackernagel (introduced in their 1996 book 'Our Ecological Footprint'), expressing human demand on ecosystems as the amount of biologically productive land and water area required to produce what a population consumes and absorb its waste — the primary tool used to estimate the extent of humanity's ecological overshoot."@en ;
     thinkr:influencedBy tgs:Persona.WilliamRees, tgs:Persona.MathisWackernagel .
+
+#############################################
+# ADDED 2026-08-13 — the overall action framework from Frankly_132
+# "What to Do as the World Falls Apart," which the episode's own
+# transcript explicitly labels "a first public draft."
+#############################################
+
+tgs:Concept.FrameworkForAction a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:prefLabel "Framework for Action"@en ;
+    skos:definition "Hagens' own real, explicitly-labeled 'first public draft' framework for what to actually do in response to the more-than-human predicament — introduced in Frankly_132, gestated over roughly a decade and organized under the pressure of real, live world events (the 2026 Iran war/Strait of Hormuz crisis). Structured as 4 levels: a personal foundation of inner work, 'Finding the Others' (trusted networks and shared vocabulary), 6 interdependent thinkr:InterventionFront individuals, and a thinkr:ResponsePhase timeline axis of 3 genuinely overlapping (not strictly sequential) phases that cuts across all 6 Fronts."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/132-what-to-do-as-the-world-falls-apart> ;
+    thinkr:hasFront tgs:InterventionFront.Infrastructure, tgs:InterventionFront.PovertyAndDisplacement, tgs:InterventionFront.EcologicalInterventions,
+        tgs:InterventionFront.CivicResilienceAndGovernance, tgs:InterventionFront.CultureAndMeaning, tgs:InterventionFront.EconomicTransition ;
+    thinkr:hasPhase tgs:ResponsePhase.StabilityWindow, tgs:ResponsePhase.BendNotBreak, tgs:ResponsePhase.StableAttractor ;
+    skos:scopeNote "Real, direct evidence for the sequencing/parallel-construction stance, worth preserving: Hagens explicitly engages with the anti-capitalist/decolonial critique that structural transformation must precede any other intervention, states real sympathy for it, but argues explicitly for building new structures while the old ones still stand rather than waiting for a precondition that would mean 'waiting forever.'"@en .
+
+#############################################
+# ADDED 2026-08-13 — a real, cross-episode pattern MJSullivan
+# identified and asked to be captured explicitly, synthesized from
+# independently-recorded episodes across different guests and years —
+# NOT one single named/branded framework Hagens has given one
+# consistent term to himself the way Carbon Pulse or the Great
+# Simplification are, so modeled as thinkr:Concept only, NOT
+# thinkr:HagensConcept (that subclass requires Hagens' own genuinely
+# distinctive coining, per its own class definition — this doesn't
+# meet that bar honestly, however real and recurring the pattern is).
+#############################################
+
+tgs:Concept.DistributedAgency a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Distributed Agency, Not Saviors"@en ;
+    skos:definition "A real, recurring pattern across independently-recorded episodes: meaningful change comes from ordinary, distributed action rather than a singular hero or savior figure. Direct textual evidence spans multiple episodes, not one coined term: Frankly_58's own real closing reframe (Sam and Gollum, not Frodo, as the actual Catalysts who changed Lord of the Rings' outcome — 'you never know when your actions could shift the larger story'); Frankly_132's direct claim that reluctance to lead 'might be a good indication that you could be a good leader tomorrow,' paired with its critique that modern systems select for Dark Triad traits in those who actively seek leadership; RR-17's two guests independently converging on 'find like-minded people close to home' as their practical closing advice, rather than pointing toward a movement or a leader; and the real, structural logic of Buckminster Fuller's trim-tab principle (small, precisely-placed, unglamorous leverage redirecting something enormous), which is also the real source of Priscilla Trịnh's own 'Trintab' nickname from RR-9."@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:scopeNote "Identified and named as a real pattern by MJSullivan during this session, not something Hagens has explicitly unified under one term himself — worth being honest about that distinction even though the pattern itself is real and evidence-grounded across genuinely independent sources."@en .

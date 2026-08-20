@@ -237,7 +237,12 @@ tgs:Relationship.NateHagens_ArtBerman a thinkr:Relationship, owl:NamedIndividual
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_1_ElectricVehicles ;
-          dcterms:date "2023-04-23"^^xsd:date ] .
+          dcterms:date "2023-04-23"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_16_TheMadScrambleForPower ;
+          dcterms:date "2025-03-10"^^xsd:date ] .
 
 tgs:Relationship.ArtBerman_TheOilDrum a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.ArtBerman ;
@@ -451,8 +456,13 @@ tgs:Relationship.NateHagens_DJWhite a thinkr:Relationship, owl:NamedIndividual ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
-          dcterms:date "2026-02-24"^^xsd:date ] ;
-    skos:scopeNote "UPGRADED 2026-08-13 from Professional-only to Personal+Professional — RR-24's own real transcript has Nate directly calling him 'old friend and co-writer of three books' (note: THREE, not two — this graph currently only has Reality Blind and The Bottlenecks of the 21st Century; a real third co-authored book is unconfirmed, flagged for a future pass, not guessed at). Co-authored Reality Blind (2021) together — a real, ongoing collaboration, not a passing citation. Real, further evidence not built out in this pass: Art Berman's own blog post calls them both 'my friends,' and White has his own TGS guest episode (#51), plus RR-11 with Tom Murphy together."@en .
+          dcterms:date "2026-02-24"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse ;
+          dcterms:date "2024-08-06"^^xsd:date ] ;
+    skos:scopeNote "UPGRADED 2026-08-13 from Professional-only to Personal+Professional — RR-24's own real transcript has Nate directly calling him 'old friend and co-writer of three books' (note: THREE, not two — this graph now has both Reality Blind and The Bottlenecks of the 21st Century as real, built Works; a real third co-authored book remains unconfirmed, still flagged for a future pass, not guessed at — RR-11's own transcript independently reconfirms 'DJ, you and I have written three books together,' the same unresolved count). Co-authored Reality Blind (2021) and The Bottlenecks of the 21st Century together — a real, ongoing collaboration, not a passing citation. RR-11 now built as a second real hasInteraction — this note previously anticipated it as deferred; that is done. White's own real TGS solo guest episode (#51) remains a real, still-deferred candidate."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-20 bootstrap.
@@ -468,8 +478,13 @@ tgs:Relationship.NateHagens_ZakStein a thinkr:Relationship, owl:NamedIndividual 
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_20_HackingHumanAttachment ;
-          dcterms:date "2025-10-14"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in the RR-20 transcript: 'these are my favorite conversations, cause it's, I know your work, I know you as people, as humans' and, closing, 'my good friends.' Real, further TGS history (TGS #122, #180, RR #25) real but deliberately not built out into further hasInteraction entries in this pass — see Persona.ZakStein's own scopeNote."@en .
+          dcterms:date "2025-10-14"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis ;
+          dcterms:date "2026-03-25"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in the RR-20 transcript: 'these are my favorite conversations, cause it's, I know your work, I know you as people, as humans' and, closing, 'my good friends.' RR-25 (2026-03-25) now built as a second real hasInteraction — this note previously anticipated it as deferred; that is done. TGS #122 and TGS #180 (both real, confirmed URLs) remain real, still-deferred solo-episode candidates — see Persona.ZakStein's own scopeNote."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-19 bootstrap. Both Professional only —
@@ -517,8 +532,13 @@ tgs:Relationship.NateHagens_TomMurphy a thinkr:Relationship, owl:NamedIndividual
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
-          dcterms:date "2026-02-24"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in the RR-24 transcript: 'two friends of mine,' 'I've known both of you for about 20 years,' 'my friends' in closing. Real, further TGS history (TGS_18, Frankly_22, RR-11) real but deferred — see Persona.TomMurphy's own scopeNote."@en .
+          dcterms:date "2026-02-24"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse ;
+          dcterms:date "2024-08-06"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in the RR-24 transcript: 'two friends of mine,' 'I've known both of you for about 20 years,' 'my friends' in closing; independently reconfirmed in RR-11's own transcript ('Tom, you and I met 15 years ago at an ecological economics conference'). RR-11 now built as a second real hasInteraction — this note previously anticipated it as deferred; that is done. TGS_18 and Frankly_22 remain real, still-deferred solo-appearance candidates — see Persona.TomMurphy's own scopeNote."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-1 bootstrap (the inaugural Reality Roundtable).
@@ -695,15 +715,25 @@ tgs:Relationship.NateHagens_CraigTindale a thinkr:Relationship, owl:NamedIndivid
 tgs:Relationship.NateHagens_MichaelEvery a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.MichaelEvery ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Michael Every"@en ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Michael Every"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars ;
-          dcterms:date "2026-02-26"^^xsd:date ] ;
-    skos:scopeNote "Professional/analytical — no explicit personal-friendship language found in this transcript, though a real, established multi-appearance working relationship (3 prior appearances real and confirmed, see Persona.MichaelEvery's own scopeNote)."@en .
+          dcterms:date "2026-02-26"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_12_TheGlobalStakesOfTheUSElection ;
+          dcterms:date "2024-10-16"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_16_TheMadScrambleForPower ;
+          dcterms:date "2025-03-10"^^xsd:date ] ;
+    skos:scopeNote "UPGRADED 2026-08-13 from Professional-only to Personal+Professional — RR-12's own real transcript has Nate's closing 'to be continued, my friends,' addressed to both guests, plus repeated references throughout to prior direct conversations ('last time we spoke, Nate'). RR-12 and RR-16 now both built as real hasInteractions — this note previously anticipated RR-16 as deferred; that is done. Episode #118 remains a real, still-deferred candidate — see Persona.MichaelEvery's own scopeNote. RR-16's own transcript independently reconfirms Every's real Marxist-household upbringing, first disclosed during the RR-12 build."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-23 bootstrap.
@@ -906,3 +936,429 @@ tgs:Relationship.NateHagens_DanielZetah a thinkr:Relationship, owl:NamedIndividu
           thinkr:episode tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems ;
           dcterms:date "2023-10-10"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence, and the most explicit of the four — Nate's own words introducing him: 'a local farmer, colleague, friend of mine.'"@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-25 bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_TheoDawson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.TheoDawson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Theo Dawson"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis ;
+          dcterms:date "2026-03-25"^^xsd:date ] ;
+    skos:scopeNote "Professional/collegial — no explicit personal-friendship language found for Nate specifically in this transcript; explicitly contrasted with Zak Stein, introduced as 'a returning guest and friend of mine,' where Dawson is not given that same framing."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-7 "Poverty Blind" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_StephanieHoopes a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.StephanieHoopes ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Stephanie Hoopes"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_7_PovertyBlind ;
+          dcterms:date "2023-11-27"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript."@en .
+
+tgs:Relationship.NateHagens_PeterKilde a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.PeterKilde ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Peter Kilde"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_7_PovertyBlind ;
+          dcterms:date "2023-11-27"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-7: 'of the four of you, Peter is actually one of my neighbors. He lives around 30 miles from here.' Kilde's own words independently confirm a real, extensive prior working relationship predating the podcast by well over a decade: 'Nate and I have been at this since 2010 when we all got together under a partnership initiative to spend a few days dealing with that stuff.'"@en .
+
+tgs:Relationship.NateHagens_MarcPerry a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MarcPerry ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Marc Perry"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_7_PovertyBlind ;
+          dcterms:date "2023-11-27"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript."@en .
+
+tgs:Relationship.NateHagens_DalitsoSulamoyo a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DalitsoSulamoyo ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Dalitso Sulamoyo"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_7_PovertyBlind ;
+          dcterms:date "2023-11-27"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-8 "The Indic Mind" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_MohitTrivedi a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MohitTrivedi ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Mohit Trivedi"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_8_TheIndicMind ;
+          dcterms:date "2024-04-25"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-8: he met all three guests in person at a metacrisis symposium in Auroville, India, less than 3 months before recording, and closes 'I am 98.7 percent confident that the four of us will be lifelong friends.'"@en .
+
+tgs:Relationship.NateHagens_AbhishekThakore a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.AbhishekThakore ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Abhishek Thakore"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_8_TheIndicMind ;
+          dcterms:date "2024-04-25"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-8, recalling their first meeting in Auroville: they 'spent like four hours talking about process, and your relationships,' plus his closing '98.7 percent confident that the four of us will be lifelong friends.'"@en .
+
+tgs:Relationship.NateHagens_KejalSavla a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.KejalSavla ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Kejal Savla"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_8_TheIndicMind ;
+          dcterms:date "2024-04-25"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-8: 'I am 98.7 percent confident that the four of us will be lifelong friends,' following their in-person meeting in Auroville less than 3 months before recording."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-9 "The Next Generation's Dilemma" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_PriscillaTrinh a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.PriscillaTrinh ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional, thinkr:RelationshipType.Academic ;
+    skos:prefLabel "Nate Hagens' personal, professional, and academic relationship with Priscilla Trịnh"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma ;
+          dcterms:date "2024-05-08"^^xsd:date ] ;
+    skos:scopeNote "By far the deepest and longest-standing of the three RR-9 relationships — direct textual evidence, Nate's own words: 'Priscilla was one of my students... I've known you since you were 17... you were my teaching assistant for my class, Reality 101... I was a professor and a mentor and a coach and a friend.'"@en .
+
+tgs:Relationship.NateHagens_JamesBranagan a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JamesBranagan ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with James Branagan"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma ;
+          dcterms:date "2024-05-08"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words: met 'online through the podcast' (unlike Priscilla, a former student), plus his closing 'thank you all, young humans, friends of mine.'"@en .
+
+tgs:Relationship.NateHagens_NatashaLinhart a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.NatashaLinhart ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Natasha Linhart"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma ;
+          dcterms:date "2024-05-08"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — a real, ongoing employer-employee relationship, independently confirmed: 'a volunteer for our organization for the past year, and she will be starting full time as a research associate this summer' at ISEOF, Nate's own organization. Also covered by his closing 'friends of mine.'"@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-12 bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_LukeGromen a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.LukeGromen ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Luke Gromen"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_12_TheGlobalStakesOfTheUSElection ;
+          dcterms:date "2024-10-16"^^xsd:date ] ;
+    skos:scopeNote "Professional — an established, real prior guest relationship ('emeritus guest,' Nate's own words), but no explicit personal-friendship language specific to Nate found in this transcript (the closing 'my friends' addresses both guests together, already captured on Michael Every's own relationship record)."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-14 "Bioregioning 101" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_DanielChristianWahl a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DanielChristianWahl ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Daniel Christian Wahl"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
+          dcterms:date "2024-12-11"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-14: 'since, uh, at least Samantha and Daniel are friends of mine, I, I feel entitled to ask dumb questions.'"@en .
+
+tgs:Relationship.NateHagens_IsabelCarlisle a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.IsabelCarlisle ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Isabel Carlisle"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
+          dcterms:date "2024-12-11"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Isabel's own words in RR-14, addressed to Nate: 'as you and I talked about last time we were hanging out.'"@en .
+
+tgs:Relationship.NateHagens_SamanthaPower a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SamanthaPower ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Samantha Power"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
+          dcterms:date "2024-12-11"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-14: 'since, uh, at least Samantha and Daniel are friends of mine.'"@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-15 "The Plastic Crisis" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_LeoTrasande a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.LeoTrasande ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Leo Trasande"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_15_ThePlasticCrisis ;
+          dcterms:date "2025-01-21"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript."@en .
+
+tgs:Relationship.NateHagens_LindaBirnbaum a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.LindaBirnbaum ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Linda Birnbaum"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_15_ThePlasticCrisis ;
+          dcterms:date "2025-01-21"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript, though Birnbaum shares a real mutual connection (Pete Myers) with Nate — see Persona.LindaBirnbaum's own scopeNote."@en .
+
+tgs:Relationship.NateHagens_ChristinaDixon a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ChristinaDixon ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Christina Dixon"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_15_ThePlasticCrisis ;
+          dcterms:date "2025-01-21"^^xsd:date ] ;
+    skos:scopeNote "Professional — direct textual evidence this was their first meeting: Nate's own words, 'Oh, we all just met.'"@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-16 bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_IzabellaKaminska a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.IzabellaKaminska ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Izabella Kaminska"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_16_TheMadScrambleForPower ;
+          dcterms:date "2025-03-10"^^xsd:date ] ;
+    skos:scopeNote "Professional — Nate's own words confirm this is her first TGS appearance ('a new guest on the show'); no explicit personal-friendship language found in this transcript."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-17 "Moving from Apathy to Action" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_JohnSeed a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnSeed ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with John Seed"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+          dcterms:date "2025-05-21"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript, though John directly says he is 'a listener of the show' and praises Nate's work warmly in closing."@en .
+
+tgs:Relationship.NateHagens_SkyeCielitaFlor a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SkyeCielitaFlor ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Skye Cielita Flor"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+          dcterms:date "2025-05-21"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-18 "How Water Shapes Our Planet" bootstrap.
+# Final Reality Roundtable built this session.
+#############################################
+
+tgs:Relationship.NateHagens_HeatherCooley a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.HeatherCooley ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Heather Cooley"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_18_HowWaterShapesOurPlanet ;
+          dcterms:date "2025-06-11"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript."@en .
+
+tgs:Relationship.NateHagens_MikeJoy a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MikeJoy ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Mike Joy"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_18_HowWaterShapesOurPlanet ;
+          dcterms:date "2025-06-11"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript."@en .
+
+tgs:Relationship.NateHagens_ZachWeiss a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ZachWeiss ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Zach Weiss"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_18_HowWaterShapesOurPlanet ;
+          dcterms:date "2025-06-11"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found for Nate specifically in this transcript."@en .
+
+#############################################
+# ADDED 2026-08-13 — RR-13 "Future Council" bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_DamonGameau a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DamonGameau ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Damon Gameau"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_13_FutureCouncil ;
+          dcterms:date "2024-09-12"^^xsd:date ] ;
+    skos:scopeNote "Professional — first-time meeting; no explicit personal-friendship language found, though Gameau's own words directly and warmly credit Nate's academic work as the creative source for his film's central character."@en .
+
+tgs:Relationship.NateHagens_SkyeNeville a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SkyeNeville ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Skye Neville"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_13_FutureCouncil ;
+          dcterms:date "2024-09-12"^^xsd:date ] ;
+    skos:scopeNote "Professional — first-time meeting; Nate's own closing words express hope to have all three back on the show in future years."@en .
+
+tgs:Relationship.NateHagens_ClemenceCurrie a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ClemenceCurrie ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Clemence \"CC\" Currie"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_13_FutureCouncil ;
+          dcterms:date "2024-09-12"^^xsd:date ] ;
+    skos:scopeNote "Professional — first-time meeting; Nate's own closing words express hope to have all three back on the show in future years."@en .
+
+tgs:Relationship.NateHagens_JoaquinMinana a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JoaquinMinana ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Joaquin Minana"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:PanelDiscussion.RR_13_FutureCouncil ;
+          dcterms:date "2024-09-12"^^xsd:date ] ;
+    skos:scopeNote "Professional — first-time meeting; Nate's own closing words express hope to have all three back on the show in future years."@en .
+
+#############################################
+# ADDED 2026-08-13 — TGS_99 bootstrap.
+#############################################
+
+tgs:Relationship.NateHagens_JeremyGrantham a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JeremyGrantham ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Jeremy Grantham"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_99_JeremyGrantham ;
+          dcterms:date "2023-10-24"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript, though genuinely warm: Nate's own opening frames having 'long ago followed' Grantham's research going back to his own Oil Drum days, and closes wanting him back 'maybe as a round table guest.' Grantham, in turn, offers direct, substantial praise for the podcast's long-term potential impact."@en .

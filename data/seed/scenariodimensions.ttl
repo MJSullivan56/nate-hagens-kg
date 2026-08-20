@@ -28,9 +28,10 @@ thinkr:ScenarioDimension a owl:Class, thinkr:Category ;
 
 tgs:ScenarioDimension.Economic a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Economic"@en ;
-    thinkr:xAxisLowLabel "Contraction"@en ; thinkr:xAxisHighLabel "Growth"@en ;
-    thinkr:yAxisLowLabel "Overshoot"@en ; thinkr:yAxisHighLabel "Within Limits"@en ;
-    skos:definition "Whether the economy is growing or contracting. Per Part 4 (Frankly #148), the same direction of economic change can play out very differently depending on the other 3 Dimensions — this axis alone doesn't determine what daily life actually feels like."@en .
+    thinkr:xAxisLowLabel "Toward Ecological Limits"@en ; thinkr:xAxisHighLabel "Overshooting Ecological Limits"@en ;
+    thinkr:yAxisLowLabel "Global Economy Contracting"@en ; thinkr:yAxisHighLabel "Global Economy Growing"@en ;
+    skos:definition "Whether the economy is growing or contracting, and whether that growth/contraction stays within ecological limits or continues in overshoot. Per Part 4 (Frankly #148), the same direction of economic change can play out very differently depending on the other 3 Dimensions — this axis alone doesn't determine what daily life actually feels like."@en ;
+    skos:scopeNote "CORRECTED 2026-08-13 — MJSullivan supplied a real, complete matrix PDF derived directly from the 'How to Think About the Future' series ('TGS: How to Think About the Future'), confirming this Dimension's axis assignment had been backwards since first built: Growth/Contraction is the real Y-axis and Ecological-Limits/Overshoot is the real X-axis, not the reverse as previously stored. The underlying facts were never wrong (each Facet's own real-world meaning was correct), only which axis-letter carried which real dimension — now corrected to match the primary source's own labeling exactly, including its exact wording ('Global Economy Growing/Contracting', 'Toward/Overshooting Ecological Limits')."@en .
 
 tgs:ScenarioDimension.PowerAndDistribution a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Power and Distribution"@en ;
@@ -41,9 +42,10 @@ tgs:ScenarioDimension.PowerAndDistribution a thinkr:ScenarioDimension, owl:Named
 
 tgs:ScenarioDimension.Geopolitical a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Geopolitical"@en ;
-    thinkr:xAxisLowLabel "Self-Sufficient"@en ; thinkr:xAxisHighLabel "Interdependent"@en ;
-    thinkr:yAxisLowLabel "Adversarial"@en ; thinkr:yAxisHighLabel "Cooperative"@en ;
-    skos:definition "The degree of cooperation vs. hostility/fragmentation between nations and regions."@en .
+    thinkr:xAxisLowLabel "Interdependence"@en ; thinkr:xAxisHighLabel "Self-Sufficiency"@en ;
+    thinkr:yAxisLowLabel "Adversarial Relations"@en ; thinkr:yAxisHighLabel "Cooperative Relations"@en ;
+    skos:definition "The degree of cooperation vs. hostility/fragmentation between nations and regions."@en ;
+    skos:scopeNote "CORRECTED 2026-08-13 — MJSullivan's real matrix PDF (see ScenarioDimension.Economic's own scopeNote for the source) revealed the X-axis low/high labels were inverted: real low=Interdependence, high=Self-Sufficiency, not the reverse as previously stored (Y-axis was already correct). The (Adversarial, Interdependence) quadrant's Facet individual, tgs:ScenarioFacet.TheGeopoliticalDangerZone, only needed a position fix — its name was briefly, incorrectly changed to 'A Captured Democracy' based on a cut-and-paste error in MJSullivan's first supplied PDF, then restored once a corrected PDF confirmed the original name was right all along. See that Facet's own scopeNote for the full, honest back-and-forth."@en .
 
 tgs:ScenarioDimension.EarthSystems a thinkr:ScenarioDimension, owl:NamedIndividual ;
     skos:prefLabel "Earth Systems"@en ;

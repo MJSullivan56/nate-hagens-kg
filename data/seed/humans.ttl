@@ -657,3 +657,263 @@ tgs:Human.DanielZetah a thinkr:Human,
     skos:prefLabel "Daniel Zetah"@en ;
     rdfs:comment "American regenerative farmer and educator; steward, with wife Stephanie, of New Story Farm (est. 1962, ~100-160 acres near Hutchinson, Minnesota), growing ~80-85% of their own calories and hosting the Resiliency School. Studied economics/business; lived abroad 15 years (including work as a snake relocator and chemical-spray auditor in Tasmania); former full-time environmental activist; studied permaculture and built straw-bale housing in an off-grid mountain community before returning to the family farm. Real prior TGS solo appearance confirmed: Episode #76 ('Regenerative Agriculture and Personal Sovereignty')."@en ;
     .
+
+#############################################
+# ADDED 2026-08-13 — RR-25 bootstrap. Theo Dawson independently
+# verified via real web search before minting. Zak Stein already
+# exists in this graph (from RR-20) — see relationships.ttl and
+# personas.ttl for the updated (not duplicated) records.
+#############################################
+
+tgs:Human.TheoDawson a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Theo Dawson"@en ;
+    rdfs:comment "American developmental psychologist; founder and Executive Director, Lectica, Inc. (nonprofit developing evidence-based developmental assessments); creator of the Computerized Lectical Assessment System (CLAS) and the MindLog educational tool. PhD, Graduate School of Education, UC Berkeley (1998, dissertation on measuring learning pathways). Former positions include Director, Developmental Assessment Project (UC Berkeley) and instructor, Harvard Graduate School of Education. Real, direct prior academic collaborator of tgs:Persona.ZakStein — co-published 'Epistemological development: It's all relative' (2004, Jean Piaget Society) before either appeared on this podcast; Stein was her doctoral-era research collaborator and is co-founder of Lectica."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-7 "Poverty Blind" bootstrap. All 4
+# independently verified via real web search before minting. None are
+# returning guests — this is each of their first TGS appearance.
+#############################################
+
+tgs:Human.StephanieHoopes a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Stephanie Hoopes"@en ;
+    rdfs:comment "American researcher; National Director, United For ALICE (United Way of Northern New Jersey). Developed the ALICE (Asset Limited, Income Constrained, Employed) measure as a 2009 pilot study of Morris County, NJ while an Assistant Professor at Rutgers University-Newark's School of Public Affairs and Administration (2011-2015); has since expanded ALICE to cover all ~3,000 US counties. PhD, London School of Economics; MA, UNC Chapel Hill; BA, Wellesley College. Formerly taught at Rutgers-Newark, Columbia, and the Universities of Sussex and Birmingham (UK)."@en ;
+    .
+
+tgs:Human.PeterKilde a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Peter Kilde"@en ;
+    rdfs:comment "American anti-poverty and affordable-housing administrator; Executive Director, West CAP (West Central Wisconsin Community Action Agency), 1995-2024. Chaired the National Community Action Partnership's 'New Reality Initiative' on how peak oil, resource depletion, and economic turmoil affect low-income communities; board member, Association for the Study of Peak Oil & Gas USA (ASPO-USA) — a real, direct professional grounding in Nate's own core subject matter predating this podcast. Recipient, 2013 Charles M. Hill Sr. Award for Housing Excellence. Lives on a small farm near Spring Valley, Wisconsin."@en ;
+    .
+
+tgs:Human.MarcPerry a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Marc Perry"@en ;
+    rdfs:comment "American youth-development practitioner and nonprofit executive, 25+ years' experience; Executive Director, Community Action Inc. of Rock and Walworth Counties (Wisconsin); Member-At-Large, WISCAP (Wisconsin Community Action Program Association) board. Provides cultural-equity training and technical assistance to school districts, NGOs, and law-enforcement agencies across the Midwest."@en ;
+    .
+
+tgs:Human.DalitsoSulamoyo a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Dalitso Sulamoyo"@en ;
+    rdfs:comment "Malawi-born American nonprofit/government executive; CEO, Champaign County Regional Planning Commission (Illinois) since June 2017; Chair, National Community Action Partnership. Previously President/CEO, Illinois Association of Community Action Agencies (16 years) — first African American to hold that role. PhD (Benedictine University, 2011); two master's degrees (Political Studies 1999, Public Administration 2002), University of Illinois Springfield; BA, Illinois College. Personally invited to speak with President Obama about Community Action in 2013; recipient, Martin Luther King Jr. Humanitarian Award (2009, 2010)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-8 "The Indic Mind" bootstrap. All 3
+# independently verified via real web search before minting. None are
+# returning guests — this is each of their first TGS appearance.
+#############################################
+
+tgs:Human.MohitTrivedi a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Mohit Trivedi"@en ;
+    rdfs:comment "Indian learning designer, facilitator, and movement weaver; co-founder and Steward, 2069 Ecosystem (a collective committed to a 50-year vision responding to the metacrisis, alongside Abhishek Thakore). Founder, Mukt-Dhara Open Learning Space. Background in psychology, nursing, alternative education, and social entrepreneurship. Lives in Udaipur, South Rajasthan, as part of an unschooling family."@en ;
+    .
+
+tgs:Human.AbhishekThakore a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Abhishek Thakore"@en ;
+    rdfs:comment "Indian social entrepreneur and systems-change practitioner, 20+ years; founder, The Blue Ribbon Movement (co-founded age 18 with school friend Akshat Singhal, formalized 2011) — youth leadership, civic engagement, and social-sector culture-building; co-founder, 2069 Ecosystem (with Mohit Trivedi). Gold medalist MBA, IIM Bangalore; Senior Fellow, Bhoomi College. Former Boston Consulting Group and Hay Group consultant; represented global youth at the UN Rio+20 process. Author of 3 books on personal development. Real, direct prior professional connection to tgs:Persona.KejalSavla — she served as Chief Functionary of his Blue Ribbon Movement for years before co-founding Wisdom Tree."@en ;
+    .
+
+tgs:Human.KejalSavla a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Kejal Savla"@en ;
+    rdfs:comment "Indian social entrepreneur and culture practitioner; co-founder and CEO, Wisdom Tree (since 2021) — helps nonprofits address organizational culture and leadership challenges. Chief Functionary, The Blue Ribbon Movement (since 2014), where she helped lead its transition to a youth-led, 100%-consent-based decision-making movement inspired by Gandhi-Vinoba principles. BA, Psychology and Philosophy, Jai Hind College, Mumbai (2015). Lives in Mumbai."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-9 "The Next Generation's Dilemma" bootstrap.
+# All 3 independently verified via real web search before minting.
+#############################################
+
+tgs:Human.PriscillaTrinh a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Priscilla Trịnh"@en ;
+    rdfs:comment "American communicator and food-systems activist; Director of Communications, Post Growth Institute; co-coordinator, Minnesota Youth Institute; creator, #postgrowth jobs board; founding member, The Overstory Alliance (co-founded Movement School and coordinated the Line 3 pipeline-resistance media collective). Editor, Blue Marble Review; contributor, Minnesota Women's Press. BS, Sustainable Systems Management, University of Minnesota-Twin Cities; 2019 Borlaug-Ruan intern, International Rice Research Institute (Philippines). Real, direct, multi-year prior relationship with Nate Hagens: was his student and teaching assistant for his University of Minnesota class 'Reality 101,' known to him since age 17."@en ;
+    .
+
+tgs:Human.JamesBranagan a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "James Branagan"@en ;
+    rdfs:comment "Irish content creator, writer, and video editor; publishes 'The New Naturalist' (Substack, 4+ years running) on evolution, biology, and rewilding — including his own real essay 'Recalibrate Your Baseline' directly using the Superorganism/profit-maximization framing. Studying regenerative agriculture in Granada, Spain, at the time of this episode."@en ;
+    .
+
+tgs:Human.NatashaLinhart a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Natasha Linhart"@en ;
+    rdfs:comment "BSc, Politics, Psychology, Law and Economics (focus: Economics and Business; electives in Degrowth and Critical Theory), University of Amsterdam, 2023. Founder, IBCompanions (high-school tutoring company). Real, direct, ongoing professional relationship: Research Associate / Program Associate, the Institute for the Study of Energy and Our Future (ISEOF) — Nate Hagens' own organization — confirmed independently via ISEOF's own management team listing."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-12 bootstrap. Luke Gromen independently
+# verified via real web search before minting. Michael Every already
+# exists in this graph (from RR-22) — see relationships.ttl and
+# personas.ttl for the updated (not duplicated) records.
+#############################################
+
+tgs:Human.LukeGromen a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Luke Gromen"@en ;
+    rdfs:comment "American macroeconomic analyst; founder and President, Forest for the Trees, LLC (FFTT, est. 2014) — thematic macro research on sovereign debt, central bank policy, global liquidity, and the US dollar's long-term outlook. 25+ years in equity research; former Founding Partner, Cleveland Research Company (2006-2014), editor of its 'Straight from the Source' weekly report; earlier, Partner at Midwest Research. Author of 'The Mr. X Interviews, Vol. I & II' (a fictional US sovereign creditor's outsider perspective on US-dollar macroeconomics). BBA Finance/Accounting, University of Cincinnati; MBA, Case Western Reserve University; CFA (2003). Frequent guest across major financial media (Fox Business, Financial Times, Real Vision, MacroVoices)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-14 "Bioregioning 101" bootstrap. All 3
+# independently verified via real web search before minting. Daniel
+# Christian Wahl is a returning guest per this episode's own framing,
+# though not yet built in this graph before now.
+#############################################
+
+tgs:Human.DanielChristianWahl a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Daniel Christian Wahl"@en ;
+    rdfs:comment "German-born sustainability consultant, educator, and whole-systems designer; catalyst of the 'rising regeneration' movement. BSc Biology (University of Edinburgh, 1996; also studied UC Santa Cruz, 1995), MSc Holistic Science (Schumacher College, 2001), PhD Design for Human and Planetary Health (University of Dundee, 2006). Former Director, Findhorn College (2007-2010). Author of 'Designing Regenerative Cultures' (2016, Triarchy Press; translated into 7+ languages). Winner, 2021 RSA Bicentenary Medal; 2022 Volans Fellow. Lives on Mallorca, Spain."@en ;
+    .
+
+tgs:Human.IsabelCarlisle a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Isabel Carlisle"@en ;
+    rdfs:comment "British communicator, educator, and project organizer; founder/director, Bioregional Learning Centre (BLC), South Devon, UK (co-founded 2017). Earlier career as an archaeologist working abroad (including excavation at La Cotte de St Brelade, Jersey — a 250,000-year-old Neanderthal site), then 20 years in the London art world as an art critic (The Times) and exhibitions curator (Royal Academy of Arts); founded/directed the Festival of Muslim Cultures (2006, 120+ events across Britain). Moved to South Devon in 2010; led youth education programmes with Transition Network; trained in Regenerative Development and Design with Regenesis since 2012."@en ;
+    .
+
+tgs:Human.SamanthaPower a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Samantha Power"@en ;
+    rdfs:comment "American regenerative economist, futurist, and bioregionalist, based in Oakland, CA; co-founder/director, the BioFi Project; founder, Finance for Gaia. Former World Bank nature finance specialist, advising finance ministries, central banks, and investors. Co-author (with Leon Seefeld), 'Bioregional Financing Facilities: Reimagining Finance to Regenerate Our Planet' (2024) — a collaboration between Finance for Gaia, Dark Matter Labs Capital Systems, and the Buckminster Fuller Institute Design Lab, with advisors including tgs:Persona.MatthewMonahan (already a real, built Persona in this graph, though not mentioned directly in this episode's own transcript)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-15 "The Plastic Crisis" bootstrap. All 3
+# independently verified via real web search before minting. None are
+# returning guests — this is each of their first TGS appearance.
+#############################################
+
+tgs:Human.LeoTrasande a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Leo Trasande"@en ;
+    rdfs:comment "American pediatrician and epidemiologist; Jim G. Hendrick MD Professor of Pediatrics, Director of the Division of Environmental Pediatrics, and Vice Chair for Research, Department of Pediatrics, NYU Grossman School of Medicine; also faculty at NYU Wagner School of Public Service and NYU College of Global Public Health. Represents the Endocrine Society as an observer to the Global Plastics Treaty negotiations. Documented US disease costs from endocrine-disrupting chemicals at $340 billion/year (Lancet Diabetes & Endocrinology). Author, 'Sicker, Fatter, Poorer' (2019). MD/MPP, Harvard; completed a legislative fellowship in the office of then-Senator Hillary Rodham Clinton."@en ;
+    .
+
+tgs:Human.LindaBirnbaum a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Linda Birnbaum"@en ;
+    rdfs:comment "American toxicologist and microbiologist; Director, National Institute of Environmental Health Sciences (NIEHS) and National Toxicology Program (NTP), 2009-2019 — first woman and first toxicologist to hold the NIEHS directorship. Federal scientist for 40 years, including 19 years directing the EPA's largest environmental-health-research division. Now Scholar in Residence, Nicholas School of the Environment, Duke University, and Special Volunteer, NIEHS Mechanistic Toxicology Branch. Elected, Institute of Medicine of the National Academies (2010). Author of 700+ peer-reviewed publications."@en ;
+    .
+
+tgs:Human.ChristinaDixon a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Christina Dixon"@en ;
+    rdfs:comment "British campaign leader; Ocean Campaign Leader, Environmental Investigation Agency (EIA, UK), overseeing legal/policy/campaigning work on the UN Global Plastics Treaty negotiations, plastic (over)production, waste trade, commercial whaling, illegal marine species trade, and bycatch. 10+ years in environmental-issue campaigning; active across multiple INC (Intergovernmental Negotiating Committee) plastics-treaty sessions since the process began. Based in Brighton, UK."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-16 bootstrap. Izabella Kaminska independently
+# verified via real web search before minting. Art Berman and Michael
+# Every already exist in this graph — see relationships.ttl and
+# personas.ttl for the updated (not duplicated) records.
+#############################################
+
+tgs:Human.IzabellaKaminska a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Izabella Kaminska"@en ;
+    rdfs:comment "Polish-British financial journalist; founder/editor, The Blind Spot (independent financial-media venture, since 2022); Senior Finance Editor, Politico Europe (Feb 2023-end 2025, part-time). 13 years at the Financial Times, most recently as Editor of FT Alphaville (its markets/finance blog) and as an FT columnist. Earlier career: Reuters graduate trainee; European natural-gas reporter, Platts; Associate Producer, CNBC's Squawk Box (3 years); started as a junior reporter, Warsaw Business Journal (2001), then Caspian Business News (Azerbaijan) and freelance reporting from Kabul, Afghanistan (2003). BA, University College London; MA, London College of Printing. Real, independently confirmed prior personal/professional connection to tgs:Persona.MichaelEvery — both attended the same real macro-investor retreat (hosted by Gold Republic, South Africa) alongside Brent Johnson, Whitney Baker, and John Butler, predating this podcast appearance."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-17 "Moving from Apathy to Action" bootstrap.
+# Both independently verified via real web search before minting.
+# None are returning guests — this is each of their first TGS
+# appearance.
+#############################################
+
+tgs:Human.JohnSeed a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "John Seed"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/John_Seed> ;
+    rdfs:comment "Australian environmental activist, musician, and deep ecology facilitator; founder/director, Rainforest Information Centre (1979-present), campaigning to save New South Wales's sub-tropical rainforests — direct actions in 1979 (200 arrests) led to protection of what became Nightcap National Park, later a UNESCO World Heritage site. Co-creator, with Joanna Macy, of the Council of All Beings ritual (1985) and, more broadly, the experiential deep-ecology processes underlying the Work That Reconnects. Co-author, 'Thinking Like a Mountain: Towards a Council of All Beings' (1988, with Joanna Macy, Arne Naess, and Pat Fleming; translated into 12+ languages). Order of Australia Medal recipient (1995) for services to conservation and the environment."@en ;
+    .
+
+tgs:Human.SkyeCielitaFlor a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Skye Cielita Flor"@en ;
+    rdfs:comment "South African-born folk herbalist, grief ritualist, and plant-medicine practitioner, based in Australia; early years in wildlife rehabilitation and as a wilderness guide in the South African bush. Completed a 3-year traditional Taoist healing apprenticeship, then a full-time 5-year traditional curanderismo apprenticeship (2011-2016) with Shipibo teachers of the Mahua-Lopez lineage in the Peruvian Amazon. Facilitator of Experiential Deep Ecology and the Work That Reconnects; co-facilitator, 'The Mythic Body' (year-long course by Josh Schrei); incorporates Francis Weller's Five Gates of Grief framework into her own grief-ritual facilitation."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-18 "How Water Shapes Our Planet" bootstrap.
+# All 3 independently verified via real web search before minting.
+# None are returning guests — this is each of their first TGS
+# appearance. This is the final Reality Roundtable built this session
+# (RR-1 through RR-27 now complete).
+#############################################
+
+tgs:Human.HeatherCooley a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Heather Cooley"@en ;
+    rdfs:comment "American water researcher; Chief Research and Program Officer, Pacific Institute (Oakland, CA), where she has worked since 2004 (Director of the Water Program 2016-2024, prior to her current role); focuses on the water-energy nexus, sustainable water use/management, and hydrologic climate-change impacts. Co-author of 5 books including 'The World's Water' and 'The Water-Energy Nexus in the American West.' Has testified before the US Congress on climate impacts to agriculture and Sacramento-San Joaquin Delta water issues. BS Molecular Environmental Biology, MS Energy and Resources, UC Berkeley."@en ;
+    .
+
+tgs:Human.MikeJoy a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Mike Joy"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mike_Joy_(freshwater_ecologist)> ;
+    rdfs:comment "New Zealand freshwater ecologist and science communicator (b. 1959); Senior Researcher, Institute for Governance and Policy Studies, Victoria University of Wellington (formerly Massey University). 20+ years publicly advocating for New Zealand freshwater-quality reform, especially against nutrient pollution from intensive dairying — drew criticism from the dairy industry and a former Prime Minister. Left school at 17, worked as a truck driver, farmhand, and NZ Security Intelligence Service agent before enrolling at Massey University at 33. Author of the memoir 'The Fight for Freshwater.' Recipient, Universities NZ inaugural Critic and Conscience of Society Award; Charles Fleming Award for Environmental Achievement (2013); Forest & Bird's Old Blue Award (2011)."@en ;
+    .
+
+tgs:Human.ZachWeiss a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Zach Weiss"@en ;
+    rdfs:comment "American watershed-restoration practitioner; founder, Elemental Ecosystems (ecological development/water-retention landscape design, 25+ countries across 6 continents) and Water Stories (educational platform/community, founded ~2021 after a formative 2019 meeting with Indian water activist Rajendra Singh). First person to earn the Holzer Practitioner certification directly from Austrian farmer Sepp Holzer, via a 2-year apprenticeship. Focuses on decentralized water retention and the 'biotic pump' mechanism — living ecosystems drawing atmospheric moisture inland from oceans — as central to climate regulation."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — RR-13 "Future Council" bootstrap. Damon Gameau
+# independently verified via real web search before minting; the
+# three young activists' bios are sourced directly from this
+# episode's own real official show notes (TGS's own primary-source
+# bios), kept to their public environmental-activism work only, with
+# ages described in general terms matching the show's own framing
+# rather than pinned precisely per individual.
+#############################################
+
+tgs:Human.DamonGameau a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Damon Gameau"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Damon_Gameau> ;
+    rdfs:comment "Australian actor, director, and producer (b. 1982, Adelaide); trained at NIDA. Directed 'That Sugar Film' (2015, highest-grossing Australian cinema documentary at the time) and '2040' (2019, Berlin Film Festival premiere; framed as a letter to his young daughter about achievable climate solutions; also authored the companion book '2040: A Handbook for the Regeneration'). Co-founder, Regen Studios (with Anna Kaplan), building impact campaigns for his films across classrooms, boardrooms, and parliaments. Named Australian of the Year finalist (2020) for his Regeneration-related advocacy work. Director of 'Future Council' (2024), which follows eight children ages 11-14 confronting corporate leaders (including Nestlé, Decathlon, and ING) about climate accountability; premiered at Melbourne International Film Festival (Aug 2024) and later screened at the UN General Assembly."@en ;
+    .
+
+tgs:Human.SkyeNeville a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Skye Neville"@en ;
+    rdfs:comment "Young environmental activist from near Fairbourne, North Wales — a village publicly described as at risk of being among the first climate-driven relocations in the Western world. Campaigns against single-use plastic wrap on children's comics and magazines (multi-year campaign, described in this episode as having recently achieved industry-wide roundtable engagement across UK distributors, manufacturers, supermarkets, and retailers). Featured in Damon Gameau's documentary 'Future Council' (2024). Enthusiastic sailor."@en ;
+    .
+
+tgs:Human.ClemenceCurrie a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Clemence \"CC\" Currie"@en ;
+    rdfs:comment "Young environmental activist from Scotland; founder and CEO of CC's Plastic Pick-up Crew, organizing local beach clean-up efforts. Featured in Damon Gameau's documentary 'Future Council' (2024). Enjoys hiking."@en ;
+    .
+
+tgs:Human.JoaquinMinana a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Joaquin Minana"@en ;
+    rdfs:comment "Young environmental activist from the Netherlands; multilingual, has worn hearing aids since infancy. Featured in Damon Gameau's documentary 'Future Council' (2024). Aspires to use his language skills to advocate against global injustice, potentially as a writer or lawyer."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — TGS_99 bootstrap. Independently verified via real
+# web search before minting. One of the longest interviews in Nate's
+# whole repertoire (~2h20m), per MJSullivan's own framing.
+#############################################
+
+tgs:Human.JeremyGrantham a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Jeremy Grantham"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jeremy_Grantham> ;
+    rdfs:comment "British investor (b. Robert Jeremy Goltho Grantham, October 6, 1938, Ware, Hertfordshire, England); co-founder and long-term investment strategist, GMO LLC (est. 1977, Boston) — a major asset management firm known for calling the 2000 and 2008 bubbles via a mean-reversion/'super bubble' framework. Earlier, economist at Royal Dutch Shell; co-founder, Batterymarch Financial Management (1969, early commercial indexing). BA, University of Sheffield; MBA, Harvard Business School. With wife Hannelore, co-founded the Grantham Foundation for the Protection of the Environment (1997), to which the couple has committed ~98% of their net worth. Member, American Academy of Arts and Sciences; CBE (2016); Carnegie Medal for Philanthropy (2017). Real, direct funder of tgs:Persona.ShannaSwan's sperm-decline research (already a real, built Persona in this graph)."@en ;
+    .

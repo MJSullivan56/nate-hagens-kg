@@ -201,7 +201,17 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_JasonBradford,
         tgs:Relationship.NateHagens_AndrewMillison,
         tgs:Relationship.NateHagens_VandanaShiva,
-        tgs:Relationship.NateHagens_DanielZetah ;
+        tgs:Relationship.NateHagens_DanielZetah,
+        tgs:Relationship.NateHagens_PeterKilde,
+        tgs:Relationship.NateHagens_MohitTrivedi,
+        tgs:Relationship.NateHagens_AbhishekThakore,
+        tgs:Relationship.NateHagens_KejalSavla,
+        tgs:Relationship.NateHagens_PriscillaTrinh,
+        tgs:Relationship.NateHagens_JamesBranagan,
+        tgs:Relationship.NateHagens_NatashaLinhart,
+        tgs:Relationship.NateHagens_DanielChristianWahl,
+        tgs:Relationship.NateHagens_IsabelCarlisle,
+        tgs:Relationship.NateHagens_SamanthaPower ;
     thinkr:hasProfessionalRelationship
         tgs:Relationship.NateHagens_MatthewMonahan,
         tgs:Relationship.NateHagens_IainMcGilchrist,
@@ -243,11 +253,41 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_JasonBradford,
         tgs:Relationship.NateHagens_AndrewMillison,
         tgs:Relationship.NateHagens_VandanaShiva,
-        tgs:Relationship.NateHagens_DanielZetah ;
+        tgs:Relationship.NateHagens_DanielZetah,
+        tgs:Relationship.NateHagens_TheoDawson,
+        tgs:Relationship.NateHagens_StephanieHoopes,
+        tgs:Relationship.NateHagens_PeterKilde,
+        tgs:Relationship.NateHagens_MarcPerry,
+        tgs:Relationship.NateHagens_DalitsoSulamoyo,
+        tgs:Relationship.NateHagens_MohitTrivedi,
+        tgs:Relationship.NateHagens_AbhishekThakore,
+        tgs:Relationship.NateHagens_KejalSavla,
+        tgs:Relationship.NateHagens_PriscillaTrinh,
+        tgs:Relationship.NateHagens_JamesBranagan,
+        tgs:Relationship.NateHagens_NatashaLinhart,
+        tgs:Relationship.NateHagens_LukeGromen,
+        tgs:Relationship.NateHagens_DanielChristianWahl,
+        tgs:Relationship.NateHagens_IsabelCarlisle,
+        tgs:Relationship.NateHagens_SamanthaPower,
+        tgs:Relationship.NateHagens_LeoTrasande,
+        tgs:Relationship.NateHagens_LindaBirnbaum,
+        tgs:Relationship.NateHagens_ChristinaDixon,
+        tgs:Relationship.NateHagens_IzabellaKaminska,
+        tgs:Relationship.NateHagens_JohnSeed,
+        tgs:Relationship.NateHagens_SkyeCielitaFlor,
+        tgs:Relationship.NateHagens_HeatherCooley,
+        tgs:Relationship.NateHagens_MikeJoy,
+        tgs:Relationship.NateHagens_ZachWeiss,
+        tgs:Relationship.NateHagens_DamonGameau,
+        tgs:Relationship.NateHagens_SkyeNeville,
+        tgs:Relationship.NateHagens_ClemenceCurrie,
+        tgs:Relationship.NateHagens_JoaquinMinana,
+        tgs:Relationship.NateHagens_JeremyGrantham ;
     thinkr:hasAcademicRelationship 
         tgs:Relationship.NateHagens_UniversityOfMinnesota, 
         tgs:Relationship.NateHagens_JoshFarley,
-        tgs:Relationship.NateHagens_JonErickson ;
+        tgs:Relationship.NateHagens_JonErickson,
+        tgs:Relationship.NateHagens_PriscillaTrinh ;
     thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_PeakOilMovement ;
     skos:scopeNote "Rebuilt 2026-07-14, Batch 3 of the Persona-centered refactor: hasTGSRole and hasPersonalRelationship moved here from tgs:Human.NateHagens (both public-facing facts, not biography) — Human.NateHagens no longer asserts either. EXTENDED Batch 4 (same day): hasPersonalRelationship now includes the 3 organization/school Relationship individuals folded in from persona_human_prototype-8.ttl (Oil Drum, Post Carbon Institute, Peak Oil movement), plus Relationship.NateHagens_UniversityOfMinnesota — which already existed in relationships.ttl before this session but was never actually linked back here, a real pre-existing gap closed in passing. foaf:homepage (natehagens.com/Substack/LinkedIn) MOVED here from tgs:Human.NateHagens 2026-07-15, resolving the open question from the 2026-07-12 escalation entry: ALL homepage links belong on Persona, no split — a homepage is a public-facing fact like every other property already migrated under design decision 0f, not biography (see tgs:Human.NateHagens's own updated comment). RETROFITTED 2026-07-15: hasPersonalRelationship had incorrectly held all 7 Relationships regardless of actual thinkr:hasRelationshipType — split across the new hasPersonalRelationship/hasProfessionalRelationship/hasAcademicRelationship family per each Relationship's own asserted type(s) (see tgs-core.ttl's hasPersonalRelationship comment for the full retrofit story). Only Relationship.NateHagens_MatthewMonahan carries RelationshipType.Personal, so it's the only one still under hasPersonalRelationship; UniversityOfMinnesota alone also carries Academic. SECOND CORRECTION same day: Relationship.NateHagens_PeakOilMovement was itself mistagged RelationshipType.Professional (not just filed under the wrong property) — MJSullivan caught that a Persona->SchoolOfThought 'subscribes to this movement's ideas' connection isn't Professional at all, prompting the new RelationshipType.Intellectual/hasIntellectualRelationship pair. Moved here accordingly, no longer under hasProfessionalRelationship. THIRD CORRECTION same day: has*Relationship had only ever been asserted on ONE side of each Relationship (whichever Persona happened to get bootstrapped/enriched), never symmetrically — Nate is thinkr:hasSubject on Relationship.NateHagens_ArtBerman/_JoshFarley/_GayaHerrington but none were listed here despite being listed on the guest's own Persona. MJSullivan confirmed both parties should list a Relationship (when both are Personas) — added here accordingly, matching each Relationship's real hasRelationshipType exactly (Berman: Personal+Professional; Farley: Personal+Professional+Academic; Herrington: Professional only, unchanged from her own original bootstrap)."@en .
 
@@ -385,7 +425,7 @@ tgs:Persona.ZakStein a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ZakStein ;
     thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ZakStein ;
     skos:prefLabel "Zak Stein"@en ;
-    skos:scopeNote "Real, further TGS history confirmed but deliberately deferred to keep RR-20's own bootstrap bounded: TGS Ep 122 and Ep 180 (both real, confirmed URLs), plus Reality Roundtable #25 (returning alongside developmental psychologist Dr. Theo Dawson, confirmed via RR-20's own page navigation)."@en .
+    skos:scopeNote "Real, further TGS history confirmed but deliberately deferred: TGS Ep 122 and Ep 180 (both real, confirmed URLs) remain real, still-deferred solo-episode candidates. Reality Roundtable #25 (returning alongside developmental psychologist Dr. Theo Dawson) is no longer deferred — now built as a real second hasInteraction on this Persona's own Relationship."@en .
 
 tgs:Persona.NancyMcWilliams a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.NancyMcWilliams ;
@@ -406,7 +446,7 @@ tgs:Persona.TomMurphy a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_TomMurphy ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TomMurphy ;
     skos:prefLabel "Tom Murphy"@en ;
-    skos:scopeNote "Real, further TGS history confirmed but deferred: his own prior solo episode (TGS_18, 'Physics and Planetary Ambitions'), Frankly_22 ('The Simple Story of Civilization'), and RR-11 ('Tales from the Carbon Pulse,' with DJ White together) — none built as Episode individuals in this pass."@en .
+    skos:scopeNote "Real, further TGS history confirmed but deferred: his own prior solo episode (TGS_18, 'Physics and Planetary Ambitions') and Frankly_22 ('The Simple Story of Civilization') — neither built as Episode individuals in this pass. RR-11 ('Tales from the Carbon Pulse,' with DJ White together) is no longer deferred — now built as a real second hasInteraction on this Persona's own Relationship."@en .
 
 tgs:Persona.SimonMichaux a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.SimonMichaux ;
@@ -487,9 +527,10 @@ tgs:Persona.CraigTindale a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.MichaelEvery a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MichaelEvery ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MichaelEvery ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MichaelEvery ;
     skos:prefLabel "Michael Every"@en ;
-    skos:scopeNote "Real, extensive further TGS history confirmed but deliberately deferred: Reality Roundtable #16, Reality Roundtable #12, and Episode #118 — all real, confirmed URLs, none built as Episode individuals in this pass."@en .
+    skos:scopeNote "Real, further TGS history confirmed but deferred: Episode #118 (real, confirmed URL) remains a real, still-deferred candidate. Reality Roundtable #16 is no longer deferred — now built as a real third hasInteraction on this Persona's own Relationship."@en .
 
 tgs:Persona.ShannaSwan a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ShannaSwan ;
@@ -582,3 +623,167 @@ tgs:Persona.DanielZetah a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DanielZetah ;
     skos:prefLabel "Daniel Zetah"@en ;
     skos:scopeNote "Real prior TGS solo appearance confirmed: Episode #76 ('Regenerative Agriculture and Personal Sovereignty') — not yet built as an Episode individual in this pass."@en .
+
+tgs:Persona.TheoDawson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TheoDawson ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TheoDawson ;
+    skos:prefLabel "Theo Dawson"@en .
+
+tgs:Persona.StephanieHoopes a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.StephanieHoopes ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_StephanieHoopes ;
+    skos:prefLabel "Stephanie Hoopes"@en .
+
+tgs:Persona.PeterKilde a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterKilde ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_PeterKilde ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PeterKilde ;
+    skos:prefLabel "Peter Kilde"@en .
+
+tgs:Persona.MarcPerry a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MarcPerry ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MarcPerry ;
+    skos:prefLabel "Marc Perry"@en .
+
+tgs:Persona.DalitsoSulamoyo a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DalitsoSulamoyo ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DalitsoSulamoyo ;
+    skos:prefLabel "Dalitso Sulamoyo"@en .
+
+tgs:Persona.MohitTrivedi a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MohitTrivedi ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MohitTrivedi ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MohitTrivedi ;
+    skos:prefLabel "Mohit Trivedi"@en .
+
+tgs:Persona.AbhishekThakore a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AbhishekThakore ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_AbhishekThakore ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AbhishekThakore ;
+    skos:prefLabel "Abhishek Thakore"@en .
+
+tgs:Persona.KejalSavla a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KejalSavla ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_KejalSavla ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KejalSavla ;
+    skos:prefLabel "Kejal Savla"@en .
+
+tgs:Persona.PriscillaTrinh a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PriscillaTrinh ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_PriscillaTrinh ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PriscillaTrinh ;
+    skos:prefLabel "Priscilla Trịnh"@en ;
+    skos:scopeNote "Nate's nickname for her derives from Buckminster Fuller's trim-tab concept as referenced in the documentary 'Living in the Future's Past' — Nate sent her senior project to actor Jeff Bridges (a producer of that film), who loved it. The transcript itself is internally inconsistent on the nickname's spelling, rendering it both 'Trintab' and, two sentences later, 'Trintap' — not resolved to one authoritative spelling here. MJSullivan noted a plausible, unconfirmed theory worth recording as such: given her surname is Trịnh, the nickname may be a deliberate pun combining her name with 'trim tab' rather than a plain derivation — the transcript does not explicitly confirm this, so it is flagged as an inference, not fact."@en .
+
+tgs:Persona.JamesBranagan a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JamesBranagan ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JamesBranagan ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JamesBranagan ;
+    skos:prefLabel "James Branagan"@en .
+
+tgs:Persona.NatashaLinhart a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.NatashaLinhart ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_NatashaLinhart ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_NatashaLinhart ;
+    skos:prefLabel "Natasha Linhart"@en .
+
+tgs:Persona.LukeGromen a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LukeGromen ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LukeGromen ;
+    skos:prefLabel "Luke Gromen"@en ;
+    skos:scopeNote "Explicitly an established, returning ('emeritus') TGS guest per this episode's own framing, with a real confirmed prior solo TGS episode (linked directly from RR-12's own real show notes) — not yet built as an Episode individual in this pass."@en .
+
+tgs:Persona.DanielChristianWahl a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanielChristianWahl ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_DanielChristianWahl ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DanielChristianWahl ;
+    skos:prefLabel "Daniel Christian Wahl"@en ;
+    skos:scopeNote "Explicitly a returning guest per this episode's own framing ('a former guest on this program'), with a real confirmed prior solo TGS episode (linked directly from RR-14's own real show notes) — not yet built as an Episode individual in this pass."@en .
+
+tgs:Persona.IsabelCarlisle a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IsabelCarlisle ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_IsabelCarlisle ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IsabelCarlisle ;
+    skos:prefLabel "Isabel Carlisle"@en .
+
+tgs:Persona.SamanthaPower a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SamanthaPower ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_SamanthaPower ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SamanthaPower ;
+    skos:prefLabel "Samantha Power"@en .
+
+tgs:Persona.LeoTrasande a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LeoTrasande ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LeoTrasande ;
+    skos:prefLabel "Leo Trasande"@en .
+
+tgs:Persona.LindaBirnbaum a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LindaBirnbaum ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LindaBirnbaum ;
+    skos:prefLabel "Linda Birnbaum"@en ;
+    skos:scopeNote "Real, direct personal connection surfaced in this episode's own transcript: Birnbaum directly asks Nate whether he knows 'my friend Pete Meyers' — real, confirmed independently (Pete Myers, EHN), and Nate confirms knowing him — not built as a Persona in this pass."@en .
+
+tgs:Persona.ChristinaDixon a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ChristinaDixon ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ChristinaDixon ;
+    skos:prefLabel "Christina Dixon"@en .
+
+tgs:Persona.IzabellaKaminska a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IzabellaKaminska ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IzabellaKaminska ;
+    skos:prefLabel "Izabella Kaminska"@en ;
+    skos:scopeNote "Real, independently confirmed prior connection to tgs:Persona.MichaelEvery via a real macro-investor retreat predating this episode — not directly stated in this episode's own transcript, which frames this as their first joint appearance together."@en .
+
+tgs:Persona.JohnSeed a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnSeed ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnSeed ;
+    skos:prefLabel "John Seed"@en ;
+    skos:scopeNote "Real, direct connection to tgs:Persona.RandyHayes (Rainforest Action Network) confirmed via this episode's own transcript ('I know you know my friend Randy Hayes') — Hayes not yet built as a Persona in this graph."@en .
+
+tgs:Persona.SkyeCielitaFlor a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SkyeCielitaFlor ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SkyeCielitaFlor ;
+    skos:prefLabel "Skye Cielita Flor"@en ;
+    skos:scopeNote "Real, independently confirmed prior connection to tgs:Persona.DanielChristianWahl (already a real, built Persona in this graph, from RR-14) — her own real bio page lists him among her direct influences, alongside Bill Plotkin, both real and not stated in this episode's own transcript."@en .
+
+tgs:Persona.HeatherCooley a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.HeatherCooley ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_HeatherCooley ;
+    skos:prefLabel "Heather Cooley"@en .
+
+tgs:Persona.MikeJoy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MikeJoy ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MikeJoy ;
+    skos:prefLabel "Mike Joy"@en .
+
+tgs:Persona.ZachWeiss a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ZachWeiss ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ZachWeiss ;
+    skos:prefLabel "Zach Weiss"@en .
+
+tgs:Persona.DamonGameau a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DamonGameau ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DamonGameau ;
+    skos:prefLabel "Damon Gameau"@en ;
+    skos:scopeNote "Direct textual evidence — Damon's own words in RR-13 credit Nate's own Superorganism paper as the direct inspiration for the 'Groth' character at the center of his film 'Future Council.'"@en .
+
+tgs:Persona.SkyeNeville a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SkyeNeville ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SkyeNeville ;
+    skos:prefLabel "Skye Neville"@en .
+
+tgs:Persona.ClemenceCurrie a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ClemenceCurrie ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ClemenceCurrie ;
+    skos:prefLabel "Clemence \"CC\" Currie"@en .
+
+tgs:Persona.JoaquinMinana a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JoaquinMinana ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JoaquinMinana ;
+    skos:prefLabel "Joaquin Minana"@en .
+
+tgs:Persona.JeremyGrantham a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JeremyGrantham ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JeremyGrantham ;
+    skos:prefLabel "Jeremy Grantham"@en ;
+    skos:scopeNote "A prior version of this graph incorrectly claimed Grantham was already built here (during the RR-15 build), before actually being verified — corrected at the time, now genuinely built. Real, further citable material found but NOT built in this pass: E.O. Wilson (directly described being 'badgered' for three hours by Grantham and colleagues about insect collapse) and Hagai Levine (Shanna Swan's real co-researcher, directly named)."@en .

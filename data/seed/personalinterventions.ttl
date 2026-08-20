@@ -1,0 +1,97 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#############################################
+# ADDED 2026-08-13 — the 15 PersonalInterventions from Frankly_154
+# "Unordinary Interventions," a real, direct companion to the
+# Frankly_132 six-fronts framework and the Frankly_58 archetype
+# system, both already built this session. Genuinely distinct in kind
+# from both: these operate at individual/daily-practice scale, not
+# societal-front scale (thinkr:InterventionSubdomain) or identity/role
+# scale (thinkr:Archetype). Cross-links via dcterms:relation (matching
+# established practice) asserted ONLY where the transcript gives real,
+# direct textual grounds — several interventions are left standalone
+# rather than forcing a connection the source doesn't actually support.
+#############################################
+
+thinkr:PersonalIntervention a owl:Class ;
+    rdfs:comment "One of the 15 individual-scale interventions from Frankly_154 — small, specific, real practices Hagens frames as 'seeding' the metacrisis's future starting conditions rather than merely helping a person cope with it. Distinct from thinkr:InterventionSubdomain (societal-scale) and thinkr:Archetype (identity-scale)."@en ;
+    skos:prefLabel "Personal Intervention"@en .
+
+tgs:PersonalIntervention.MeasureReturnsBeyondMoney a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Measure Your Returns in Something Other Than Money"@en ;
+    skos:definition "When investing time, energy, or money in something, ask what it actually returns without denominating the answer only in currency — health, friendship, a recovered local ecosystem, something beautiful that now exists. Hagens' own real framing: money creates a recursive feedback loop pulling everything into a 'monetary vortex' until it's the only thing left on the scoreboard; this intervention reclaims one part of life to measure in real, wide-boundary capital instead."@en .
+
+tgs:PersonalIntervention.RehearseLoss a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Rehearse Loss Before It Shows Up"@en ;
+    skos:definition "A real, practiced dress rehearsal for material loss, not just contemplating it — Hagens' own concrete suggestion: pick a stretch of weeks and live on 30% less, then find out empirically what's actually missed. Grounded in real loss-aversion research (losses feel roughly twice as intense as equivalent gains) and the Stoic practice of premeditatio malorum."@en .
+
+tgs:PersonalIntervention.WriteDownYourEnough a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Write Down Your Enough"@en ;
+    skos:definition "Explicitly defining, in writing, what 'enough' actually looks like — income, housing, status, possessions — then bringing fixed costs down toward that real number, letting the freed gap become real biophysical spaciousness rather than something to fill with more. Hagens' own direct claim: once a person knows their own enough at a gut level, 'Moloch and the superorganism growth machine lose some of their power' over them."@en ;
+    dcterms:relation tgs:Concept.Superorganism ;
+    .
+
+tgs:PersonalIntervention.ApprenticeSomeoneYounger a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Apprentice Someone Younger"@en ;
+    skos:definition "Deliberately handing down a real skill, way of seeing, or hard-won wisdom to one specific younger person. Hagens' own real, direct stake: 'none of the other seeds that I'm outlining here will outlive us unless people do this one,' since culture changes through direct human transmission, not policy or decree."@en .
+
+tgs:PersonalIntervention.LowerDopaminePeaks a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Lower Your Dopamine Peaks"@en ;
+    skos:definition "Deliberately adding friction to one compulsive reach (phone, alcohol, sugar, etc.) rather than quitting it outright, to lower a chronically elevated reward-prediction baseline. Hagens' own real example, learned from Audrey Tang: switching a phone to grayscale removes the color-based reward hit on every unlock."@en .
+
+tgs:PersonalIntervention.CurateStatusEnvironment a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Curate Your Status Environment"@en ;
+    skos:definition "Deliberately reclaiming who a person's brain calibrates social status against, given human status-calibration evolved for groups of roughly 150 (Dunbar's number), not the effectively unlimited comparison pool phones now provide. Hagens' own real personal account: moving from Wall Street cubicles to living near farmers directly reshaped what he noticed and admired."@en .
+
+tgs:PersonalIntervention.CoordinateSmallGroup a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Coordinate With a Small Group of Close Friends"@en ;
+    skos:definition "Finding 3-8 real people and doing an actual recurring thing together — a food-buying club, a makerspace, a tool library, a regular work party — with real, physically hard shared effort (not just conversation) as the way genuine trust actually gets built. Hagens' own direct framing: the metacrisis is fundamentally a coordination failure, and manipulative/Dark-Triad actors proliferate exactly when everyone else is scattered and isolated."@en ;
+    dcterms:relation tgs:Concept.FrameworkForAction ;
+    skos:scopeNote "Real, direct structural echo of Frankly_132's own Level 1 ('Finding the Others') — not the same wording, but the same real emphasis on trusted, coordinated small groups as foundational, not incidental."@en .
+
+tgs:PersonalIntervention.BreakChainOfNegativity a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Break the Chain of Negativity"@en ;
+    skos:definition "Deliberately functioning as a real circuit-breaker for emotional contagion — being the one who brings lightness into a heavy room, smiles at a stranger, or does a small kind thing first without waiting for it to be reciprocated."@en ;
+    dcterms:relation tgs:Concept.DistributedAgency ;
+    .
+
+tgs:PersonalIntervention.BeWrongInPublic a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Be Wrong in Public"@en ;
+    skos:definition "Noticing when a person is wrong about something (everyone is, most weeks) and saying so out loud in front of others, rather than letting it pass silently. Hagens' own real, direct example: publicly revising his own peak-oil call to November 2018. His own candid disclosure: he braces to be thought less of each time, and 'almost every time, it goes the other way' — modeling updated priors lowers the social cost for everyone else listening to do the same."@en .
+
+tgs:PersonalIntervention.TreatTodayLikeTomorrow a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Treat Today Like the Tomorrow You Keep Promising"@en ;
+    skos:definition "Picking one thing repeatedly deferred to 'starting tomorrow' and doing a small piece of it today instead. Hagens frames the underlying tendency as a real, evolved feature (discounting distant costs for near rewards), not a personal character flaw — but argues real metacrisis response requires overriding it regardless."@en .
+
+tgs:PersonalIntervention.StandOnTheGround a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Take Your Shoes Off and Stand on the Ground"@en ;
+    skos:definition "Direct physical contact with bare earth, grass, or water — not framed by Hagens as a wellness ritual, but as closing a real, literal gap between human bodies and the living planet most people go entire days without physically touching. His own real framing: 'we don't embody or protect what we don't feel connected to.'"@en .
+
+tgs:PersonalIntervention.LearnPreIndustrialSkillBadly a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Learn One Pre-Industrial Skill Badly"@en ;
+    skos:definition "Growing one food crop, learning an instrument, or learning to fix one kind of broken object — deliberately not aiming for competence. Hagens' own real, direct point: 'learning it badly' is the actual goal, since being the one person in a community who knows how at all is what matters, not mastery — every such skill 'comes back into ordinary people's hands' is real productive capacity rebuilt outside the superorganism."@en ;
+    dcterms:relation tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:Archetype.Craftsman ;
+    .
+
+tgs:PersonalIntervention.ShiftOddsForOneSpecies a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Shift the Odds for One Species"@en ;
+    skos:definition "Moving beyond rescuing a single distressed animal (real, but a one-time act) toward real, sustained changes that shift survival odds across a whole lineage's future generations. Hagens' own real, specific examples, mostly about subtraction rather than addition: keeping cats indoors (outdoor cats kill more US birds than windows and cars combined), window decals, and turning off outdoor lights during migration season."@en ;
+    dcterms:relation tgs:InterventionSubdomain.BiodiversityDefense ;
+    .
+
+tgs:PersonalIntervention.RegenerateSomethingLiving a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Regenerate Something Living"@en ;
+    skos:definition "Putting real hands-on effort into local ecological restoration — converting a strip of lawn to native plants, joining or starting a restoration day. Hagens directly credits a real recent conversation with Boulder Sustainability Director Brett KenCairn (real prior TGS guest, episode #222, not built as a Persona in this pass) for reframing climate as fundamentally a living-systems problem, not only a carbon problem — citing the real, documented recovery of the US Southern Plains after the Dust Bowl as direct historical precedent that land-use damage is genuinely reversible at regional scale."@en ;
+    dcterms:relation tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    .
+
+tgs:PersonalIntervention.TrainLikeYoullBeNeeded a thinkr:PersonalIntervention, owl:NamedIndividual ;
+    skos:prefLabel "Train Like You'll Be Needed"@en ;
+    skos:definition "Deliberately pushing oneself physically, intellectually, and spiritually in whatever way a person alone knows they specifically need — not generic self-help, per Hagens' own direct framing, but real preparation for a real future moment. His own words: 'the cultural mycelium underneath us will only be as strong as the humans that comprise it' — directly connected to his own real, still-unfolding 'Guide to Staying Human' series."@en ;
+    dcterms:relation tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Concept.DistributedAgency, tgs:ResponsePhase.BendNotBreak ;
+    .

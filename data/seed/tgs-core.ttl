@@ -72,11 +72,11 @@ thinkr:hasEvidence a owl:ObjectProperty ;
     skos:prefLabel "has evidence"@en .
 
 thinkr:influencedBy a owl:ObjectProperty ;
-    rdfs:comment "Direct, citable influence — Hagens has referenced this person/school explicitly in developing the concept."@en ;
-    rdfs:domain thinkr:Concept ;
+    rdfs:comment "Direct, citable influence — either Hagens has referenced this person/school explicitly in developing a Concept, or a SchoolOfThought's own real creator/originator (e.g. Kate Raworth for Doughnut Economics)."@en ;
+    rdfs:domain [ owl:unionOf ( thinkr:Concept thinkr:SchoolOfThought ) ] ;
     rdfs:range [ owl:unionOf ( thinkr:Persona thinkr:SchoolOfThought thinkr:Organization thinkr:AcademicInstitution ) ] ;
     rdfs:subPropertyOf thinkr:relatesTo ;
-    skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case. RANGE CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor): Human replaced with Persona in the union — same reasoning as echoesIdeaOf. All existing influencedBy triples (linknotes.ttl) migrated Human->Persona in the same pass."@en ;
+    skos:scopeNote "Narrower than thinkr:relatesTo: specifically direct, citable influence (Hagens referenced this source explicitly, for the Concept case) — see thinkr:echoesIdeaOf for the weaker, independent-convergence case. RANGE CHANGED 2026-07-14 (Batch 5 of the Persona-centered refactor): Human replaced with Persona in the union — same reasoning as echoesIdeaOf. All existing influencedBy triples (linknotes.ttl) migrated Human->Persona in the same pass. DOMAIN WIDENED 2026-08-13 from Concept-only to Concept-or-SchoolOfThought — surfaced twice independently (SchoolOfThought.PlanetaryBoundaries's own scopeNote flagged the gap months earlier; SchoolOfThought.DoughnutEconomics hit the identical wall the same session). Deliberately NOT widened to Persona-as-subject (Persona->influencedBy->Persona) in the same pass — that's a real, much bigger door (most guests have their own documented biographical influences, a genuine scope-creep risk for a graph whose subject is Hagens' show, not a general biographical encyclopedia) and a different evidentiary standard (sourced from the person's own biography, not from Hagens citing them on the show) — held as a separate, deliberate decision for later, not bundled in here."@en ;
     skos:prefLabel "influenced by"@en .
 
 thinkr:memberOf a owl:ObjectProperty ;
@@ -581,6 +581,80 @@ thinkr:favorsFacet a owl:ObjectProperty ;
     rdfs:comment "Which ScenarioFacet a SchoolOfThought's own core beliefs effectively argue for or predict as achievable — a meaning-level structural match (this belief system's vision of the future IS this facet's own definition), not an empirical claim that the facet is realistic or likely to occur. Does not imply this graph endorses the SchoolOfThought's belief; ScenarioFacet.GreenGrowth's own scopeNote already records Hagens' own contrary assessment (his 'least realistic option on this Dimension') independently of this property."@en ;
     skos:scopeNote "Deliberately narrower than thinkr:discusses (which just says an Episode mentions something) — this is a structural claim about what a SchoolOfThought's OWN internal logic points toward, asserted once at the SchoolOfThought level rather than needing to be re-derived from every Episode that happens to discuss it."@en ;
     skos:prefLabel "favors facet"@en .
+
+#############################################
+# ADDED 2026-08-13 — disjointness properties, raised by MJSullivan:
+# logical incompatibility is a genuinely stronger claim than
+# thinkr:contrastsWith ("a useful tension or disagreement worth
+# surfacing"), which does not imply the two things cannot coexist.
+# Modeled as properties between individuals, not owl:disjointWith
+# (which operates on classes, not individuals — irrelevant here since
+# e.g. TechnoOptimism and GreatSimplification are both instances of
+# the SAME class, SchoolOfThought). Same tooling constraint already
+# documented for thinkr:convergesWith applies here: no reasoner runs
+# against this store, so BOTH directions of every asserted pair MUST
+# be real triples, not left to symmetric-property inference.
+#############################################
+
+thinkr:logicallyDisjointWith a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:comment "Two individuals that cannot both be true/held/achieved at once — a genuinely stronger claim than thinkr:contrastsWith, which only flags a useful tension or disagreement without implying incompatibility. Each asserted pair should carry its own real justification in a scopeNote: definitional necessity (the two are opposite poles of the same axis by definition), causal/empirical reasoning (holding both is incoherent once the real causal chain between them is traced, even though people empirically do hold both), or both — not asserted as a bare, unexplained fact. General-purpose parent property; thinkr:diagonallyDisjointWith is its only sub-property for the ScenarioFacet grid case — see that property's own comment for why thinkr:xAxisDivergentFrom/thinkr:yAxisDivergentFrom, despite superficially similar names, are deliberately NOT sub-properties here."@en ;
+    skos:scopeNote "Same tooling constraint as thinkr:convergesWith, verified there empirically 2026-07-11: this project's query tooling doesn't run a reasoner, so both directions must be explicitly asserted as real triples or querying from the 'other' side returns nothing, despite the property being formally symmetric."@en ;
+    skos:prefLabel "logically disjoint with"@en .
+
+thinkr:xAxisDivergentFrom a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain thinkr:ScenarioFacet ; rdfs:range thinkr:ScenarioFacet ;
+    rdfs:subPropertyOf thinkr:relatesTo ;
+    rdfs:comment "Two ScenarioFacets within the same ScenarioDimension sharing the same Y position but differing on X. CORRECTED 2026-08-13, raised by MJSullivan: an earlier version of this property was named thinkr:xAxisDisjointWith and asserted as a sub-property of thinkr:logicallyDisjointWith — wrong, because sharing a whole axis of real agreement is the opposite of disjointness, not a weaker version of it. Concrete real case that surfaced the error: tgs:ScenarioFacet.TheGreatSimplification and tgs:ScenarioFacet.GreenGrowth share Y=4 (both 'Within Limits') and differ only on X (Contraction vs. Growth) — and tgs:SchoolOfThought.TechnoOptimism's own real thinkr:favorsFacet link points at GreenGrowth, meaning TechnoOptimism and GreatSimplification share real common ground on ecological limits despite disagreeing on growth direction. Calling that pair 'disjoint' would have erased the very agreement that makes the disagreement interesting. Reserve thinkr:logicallyDisjointWith/thinkr:diagonallyDisjointWith for genuine, no-shared-ground incompatibility only. Computed directly from each Facet's own thinkr:hasXPosition/thinkr:hasYPosition/thinkr:hasScenarioDimension, not hand-asserted independently of that data."@en ;
+    skos:prefLabel "x-axis divergent from"@en .
+
+thinkr:yAxisDivergentFrom a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain thinkr:ScenarioFacet ; rdfs:range thinkr:ScenarioFacet ;
+    rdfs:subPropertyOf thinkr:relatesTo ;
+    rdfs:comment "Two ScenarioFacets within the same ScenarioDimension sharing the same X position but differing on Y. Same correction and same reasoning as thinkr:xAxisDivergentFrom (see its own comment for the full worked example) — deliberately NOT a sub-property of thinkr:logicallyDisjointWith, since sharing a whole axis of agreement is not disjointness. Computed directly from each Facet's own thinkr:hasXPosition/thinkr:hasYPosition/thinkr:hasScenarioDimension, not hand-asserted independently of that data."@en ;
+    skos:prefLabel "y-axis divergent from"@en .
+
+thinkr:diagonallyDisjointWith a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain thinkr:ScenarioFacet ; rdfs:range thinkr:ScenarioFacet ;
+    rdfs:subPropertyOf thinkr:logicallyDisjointWith ;
+    rdfs:comment "Two ScenarioFacets within the same ScenarioDimension differing on BOTH X and Y — the diagonal-opposite pair in a 2x2 grid (e.g. Mad Max vs. Green Growth on the Economic Dimension), sharing nothing on either axis. This is the ONLY grid relationship that represents genuine disjointness, per MJSullivan's own correction 2026-08-13 — a pair sharing one whole axis of agreement (see thinkr:xAxisDivergentFrom/thinkr:yAxisDivergentFrom) is not truly disjoint, no matter how much they differ on the other axis; only full, no-shared-ground opposition earns that word. Computed directly from each Facet's own thinkr:hasXPosition/thinkr:hasYPosition/thinkr:hasScenarioDimension, not hand-asserted independently of that data."@en ;
+    skos:prefLabel "diagonally disjoint with"@en .
+
+#############################################
+# ADDED 2026-08-13 — six-fronts action-taxonomy schema, from
+# Frankly_132 "What to Do as the World Falls Apart." Both new classes
+# deliberately NOT marked thinkr:Category (unlike thinkr:ScenarioDimension)
+# — their instances are rich domain entities in their own right (each
+# with a real, substantive definition), not thin categorizing labels
+# applied to something else, matching how thinkr:ScenarioFacet itself
+# is also not marked Category despite having a fixed instance set.
+#############################################
+
+thinkr:InterventionFront a owl:Class ;
+    rdfs:comment "One of Hagens' 6 broad fronts of intervention from Frankly_132's 'first public draft' action framework — Infrastructure & Physical Stock/Flow, Poverty & Displacement, Ecological Interventions, Civic Resilience & Governance, Culture & Meaning, and Economic Transition. Explicitly framed by Hagens as interdependent, not a menu to pick from, and each operating at multiple real scales (community/local, regional, national, global)."@en ;
+    skos:prefLabel "Intervention Front"@en .
+
+thinkr:InterventionSubdomain a owl:Class ;
+    rdfs:comment "A named sub-area within one of the 6 thinkr:InterventionFront individuals — e.g. 'Energy systems' within Infrastructure, or 'Dignity infrastructure and mutual aid' within Poverty & Displacement. Linked to its parent Front via thinkr:hasSubdomain."@en ;
+    skos:prefLabel "Intervention Subdomain"@en .
+
+thinkr:hasSubdomain a owl:ObjectProperty ;
+    rdfs:domain thinkr:InterventionFront ; rdfs:range thinkr:InterventionSubdomain ;
+    rdfs:comment "Connects an InterventionFront to one of its named Subdomains."@en ;
+    skos:prefLabel "has subdomain"@en .
+
+thinkr:hasFront a owl:ObjectProperty ;
+    rdfs:range thinkr:InterventionFront ;
+    rdfs:comment "Connects the overall action-framework Concept to one of its 6 InterventionFronts."@en ;
+    skos:prefLabel "has front"@en .
+
+thinkr:ResponsePhase a owl:Class ;
+    rdfs:comment "One of the 3 overlapping timeline phases from Frankly_132's action framework — Phase A (the Stability Window), Phase B (Bend Not Break), Phase C (the Stable Attractor). Explicitly NOT sequential in the sense of complete-and-move-on: Hagens frames all 3 as genuinely overlapping and path-dependent, with Phase C reachable only by building through A and B, not by skipping them. Each of the 6 InterventionFronts has real, distinct work appropriate to each Phase, per Hagens' own framing, though the episode itself doesn't enumerate that cross-product in detail for all 30 Subdomains — not fabricated here where the primary source doesn't specify it."@en ;
+    skos:prefLabel "Response Phase"@en .
+
+thinkr:hasPhase a owl:ObjectProperty ;
+    rdfs:range thinkr:ResponsePhase ;
+    rdfs:comment "Connects the overall action-framework Concept to one of its 3 ResponsePhases."@en ;
+    skos:prefLabel "has phase"@en .
 
 #############################################
 # ADDED 2026-08-13 — per MJSullivan's explicit request, prompted by

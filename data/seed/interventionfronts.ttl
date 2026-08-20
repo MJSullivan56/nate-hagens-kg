@@ -1,0 +1,199 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#############################################
+# ADDED 2026-08-13 — the 6 InterventionFronts and their 30 named
+# InterventionSubdomains, from Frankly_132 "What to Do as the World
+# Falls Apart" (Hagens' own real, explicitly-labeled "first public
+# draft" action framework). Subdomain definitions use real transcript
+# content where Hagens gave a direct elaboration; where the episode
+# only names a subdomain via its own real show notes without further
+# spoken elaboration, the definition stays at that same real,
+# minimal level rather than inventing detail beyond the source.
+#############################################
+
+tgs:InterventionFront.Infrastructure a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Infrastructure and Physical Stock/Flow Planning"@en ;
+    skos:definition "The first of the 6 Fronts — mapping and planning the actual physical systems a community or region depends on: energy, food and water, housing, medical supply chains, transportation, and digital/communication infrastructure."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.FoodAndWaterSystems,
+        tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.MedicalSupplyChains,
+        tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.DigitalCommons ;
+    .
+
+tgs:InterventionSubdomain.EnergySystems a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Energy Systems"@en ;
+    skos:definition "Generation, storage, distribution, and demand reduction — mapping a community's real energy stocks and flows, including decentralized infrastructure and what to use when the grid fails."@en .
+
+tgs:InterventionSubdomain.FoodAndWaterSystems a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Food and Water Systems"@en ;
+    skos:definition "Local inputs and production, regional distribution, soil health, watershed management, and clean water/sanitation protection."@en .
+
+tgs:InterventionSubdomain.HousingAndBuiltEnvironment a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Housing and Built Environment"@en ;
+    skos:definition "Retrofitting, weatherization, density patterns, and the real question of what to do about existing suburban/urban sprawl."@en .
+
+tgs:InterventionSubdomain.MedicalSupplyChains a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Medical and Pharmaceutical Supply Chains"@en ;
+    skos:definition "Global medical/pharmaceutical supply-chain dependency, and decentralizing healthcare delivery for crisis conditions."@en .
+
+tgs:InterventionSubdomain.TransportationAndLogistics a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Transportation and Logistics"@en ;
+    skos:definition "How goods get transported as fuel costs rise."@en .
+
+tgs:InterventionSubdomain.DigitalCommons a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Digital Commons and Communication Infrastructure"@en ;
+    skos:definition "Decentralized communication platforms and digital-commons infrastructure not dependent on centralized control."@en .
+
+
+tgs:InterventionFront.PovertyAndDisplacement a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Poverty and Displacement"@en ;
+    skos:definition "The second Front, deliberately placed early — centering those most at risk rather than treating them as an afterthought: dignity infrastructure, care work, livelihoods in a contracting economy, and social cohesion."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.CareEconomy,
+        tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    .
+
+tgs:InterventionSubdomain.DignityInfrastructure a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Dignity Infrastructure and Mutual Aid"@en ;
+    skos:definition "Decentralized, community-led support for basic needs — real mutual-aid hubs and networks, not top-down charity."@en .
+
+tgs:InterventionSubdomain.CareEconomy a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "The Care Economy"@en ;
+    skos:definition "Elder care, childcare, and disability support as real economic and social infrastructure."@en .
+
+tgs:InterventionSubdomain.SkillsForContractingEconomy a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Skills and Livelihoods for a Contracting Economy"@en ;
+    skos:definition "Which industries and skills tend to prosper during economic contraction, and building real livelihood pathways around them."@en .
+
+tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Violence Prevention and Social Cohesion"@en ;
+    skos:definition "Maintaining social cohesion and preventing violence under real crisis/scarcity conditions, including guarding against maladaptive collective behavior during disasters."@en .
+
+
+tgs:InterventionFront.EcologicalInterventions a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Ecological Interventions"@en ;
+    skos:definition "The third Front — Hagens' own stated personal 'North Star': biodiversity, soil/water regeneration, chemical hazards, non-climate planetary boundaries, and protecting real ecological gains from economic contraction."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.SoilAndWaterRegeneration,
+        tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries,
+        tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    .
+
+tgs:InterventionSubdomain.BiodiversityDefense a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Biodiversity Defense and Corridor Creation"@en ;
+    skos:definition "Documenting and protecting biodiversity on land-trust projects, and real corridor-creation design principles connecting habitat fragments."@en .
+
+tgs:InterventionSubdomain.SoilAndWaterRegeneration a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Soil, Land, and Water Regeneration"@en ;
+    skos:definition "Protecting soil and watersheds directly, including real regenerative-agriculture practice."@en .
+
+tgs:InterventionSubdomain.PlasticAndChemicalHazards a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Plastic and Chemical Hazards"@en ;
+    skos:definition "Novel entities and endocrine-disrupting chemicals — Hagens directly cross-references this graph's own real RR-23 ('Plastics and Fertility,' with Shanna Swan and Sian Sutherland) here as the fuller treatment."@en ;
+    dcterms:relation tgs:PanelDiscussion.RR_23_ThePlasticDetox ;
+    skos:scopeNote "Real, concrete enrichment opportunity flagged 2026-08-19, not yet acted on: EPA's Substance Registry Services (SRS) — a real, live, queryable government API (see project backlog) — could enrich this Subdomain with real chemical-synonym data (CAS numbers, IUPAC names, regulatory-context synonym variants) for the specific EDCs/plastics chemicals already discussed in this graph's own RR-15 and RR-23 builds (BPA, phthalates, PFAS), once real API access exists."@en ;
+    .
+
+tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Non-Climate Planetary Boundaries"@en ;
+    skos:definition "Nitrogen/phosphorus cycles, ocean acidification, freshwater depletion, biodiversity loss, and ecosystem degradation — the other real planetary boundaries beyond climate that Hagens argues get overshadowed by the climate conversation despite comparable severity."@en .
+
+tgs:InterventionSubdomain.ProtectingEcologicalGains a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Protecting Ecological Gains from Economic Contraction"@en ;
+    skos:definition "The real economic case for preserving 30% of nature, and guarding real ecological progress against being sacrificed during economic contraction."@en .
+
+
+tgs:InterventionFront.CivicResilienceAndGovernance a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Civic Resilience and Governance"@en ;
+    skos:definition "The fourth Front — deliberative democracy, local governance capacity, anti-corruption infrastructure, long-term-mandate institutions, and rebuilding trust and the information commons."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance,
+        tgs:InterventionSubdomain.AntiCorruptionInfrastructure, tgs:InterventionSubdomain.LongTermMandateInstitutions,
+        tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    .
+
+tgs:InterventionSubdomain.DeliberativeDemocracy a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Deliberative and Participatory Democracy"@en ;
+    skos:definition "Citizens' assemblies and sortition-based decision processes — Hagens directly cites Audrey Tang and Taiwan's digital-democracy work as a real example (real prior TGS episode, #169, not yet built in this graph)."@en .
+
+tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Subsidiarity and Local Governance Capacity"@en ;
+    skos:definition "Decentralization and mapping local governance capacity, pushing decision-making authority back toward local government where it can be exercised effectively."@en .
+
+tgs:InterventionSubdomain.AntiCorruptionInfrastructure a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Anti-Corruption and Accountability Infrastructure"@en ;
+    skos:definition "Building real anti-corruption and accountability systems into governance structures."@en .
+
+tgs:InterventionSubdomain.LongTermMandateInstitutions a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Long-Term Mandate Institutions"@en ;
+    skos:definition "Institutions with an explicit mandate to represent long time horizons and future generations — Hagens' own real examples: ombudsman roles, intergenerational governance bodies, and the Netherlands' real child-mayor practice."@en .
+
+tgs:InterventionSubdomain.TrustAndInformationCommons a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Trust Rebuilding and the Information Commons"@en ;
+    skos:definition "Rebuilding real interpersonal and institutional trust, and building a shared information commons — grounded, per Hagens, in real cross-national survey evidence that people are broadly inclined to see others as fundamentally good."@en .
+
+
+tgs:InterventionFront.CultureAndMeaning a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Culture, Meaning, and the Stories We Live Inside"@en ;
+    skos:definition "The fifth Front — education, grief and collective sensemaking, reconnection to place, ritual, and narrative/cultural sovereignty."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.ArtsGriefAndSensemaking,
+        tgs:InterventionSubdomain.ReconnectionToPlace, tgs:InterventionSubdomain.RitualAndBelonging,
+        tgs:InterventionSubdomain.NarrativeSovereignty ;
+    .
+
+tgs:InterventionSubdomain.EducationRedesign a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Education Redesign"@en ;
+    skos:definition "Alternative education models — Hagens directly cites Zak Stein's real prior TGS appearance (already built in this graph) on reimagining education, and Stein's own real book 'Education in a Time Between Worlds.'"@en ;
+    dcterms:relation tgs:Persona.ZakStein ;
+    .
+
+tgs:InterventionSubdomain.ArtsGriefAndSensemaking a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Arts, Grief Work, and Collective Sensemaking"@en ;
+    skos:definition "Grief work as a real collective practice — Hagens directly cites Francis Weller's real prior TGS episode on grief as ritual (#167, not yet built in this graph) — and other real methods for collective sensemaking."@en .
+
+tgs:InterventionSubdomain.ReconnectionToPlace a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Reconnection to Place and Ecology"@en ;
+    skos:definition "Rebuilding a felt connection to physical place — Hagens directly names Wes Jackson and Wendell Berry here as real touchstones (neither yet built in this graph)."@en .
+
+tgs:InterventionSubdomain.RitualAndBelonging a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Ritual, Ceremony, and Belonging"@en ;
+    skos:definition "The real function of ritual in human life, and practical approaches to creating new ritual."@en .
+
+tgs:InterventionSubdomain.NarrativeSovereignty a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Narrative Sovereignty"@en ;
+    skos:definition "Cultural agency and sovereignty over the stories a community tells about itself and its own future."@en .
+
+
+tgs:InterventionFront.EconomicTransition a thinkr:InterventionFront, owl:NamedIndividual ;
+    skos:prefLabel "Economic Transition, Ownership, Commons, and Post-Growth Models"@en ;
+    skos:definition "The sixth Front — commons-based ownership, local exchange systems, post-growth institutional design, land/housing reform, and finance/credit redesign."@en ;
+    thinkr:hasSubdomain
+        tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.LocalExchangeSystems,
+        tgs:InterventionSubdomain.PostGrowthInstitutions, tgs:InterventionSubdomain.LandAndHousingReform,
+        tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    .
+
+tgs:InterventionSubdomain.CommonsBasedOwnership a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Cooperative and Commons-Based Ownership"@en ;
+    skos:definition "Real cooperative ownership models and how to implement them, including real 'smart commons' work (Dark Matter Labs)."@en .
+
+tgs:InterventionSubdomain.LocalExchangeSystems a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Local and Regional Exchange Systems"@en ;
+    skos:definition "Local currencies, barter networks, and time banks — real local exchange trading systems, which Hagens argues foster real community cohesion beyond their narrow economic function."@en .
+
+tgs:InterventionSubdomain.PostGrowthInstitutions a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Post-Growth Institutional Design"@en ;
+    skos:definition "Institutions genuinely designed for a post-growth economy, not merely growth-era institutions adapted after the fact."@en .
+
+tgs:InterventionSubdomain.LandAndHousingReform a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Land and Housing Reform"@en ;
+    skos:definition "Who owns land, who has access to shelter, and on what terms — Hagens argues these become some of the most politically charged questions in every society, including and especially the US, as financial systems contract."@en .
+
+tgs:InterventionSubdomain.FinanceAndCreditRedesign a thinkr:InterventionSubdomain, owl:NamedIndividual ;
+    skos:prefLabel "Finance and Credit Redesign"@en ;
+    skos:definition "How communities manage debt, savings, and investment in a system Hagens describes as currently producing more financial claims than can be honored — debt as, in his own real framing, a claim on future energy."@en .
