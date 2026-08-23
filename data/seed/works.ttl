@@ -209,3 +209,41 @@ tgs:Work.ScenarioThinkingHistoricalEvolution a thinkr:Work, owl:NamedIndividual 
     dct:issued "2018"^^xsd:gYear ;
     owl:sameAs <https://doi.org/10.1017/9781108571494> ;
     .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via TGS_167's own real linked show
+# notes and directly discussed at length in the transcript itself.
+#############################################
+
+tgs:Work.WildEdgeOfSorrow a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Wild Edge of Sorrow: Rituals of Renewal and the Sacred Work of Grief"@en ;
+    rdfs:comment "Bestselling book by Francis Weller (North Atlantic Books), the real, direct source of the 'Five Gates of Grief' framework discussed at length in TGS_167. Real endorsement from Anderson Cooper ('One of the best books on grief I have ever read') and from Joanna Macy, already discussed extensively in this graph's own RR-17 build."@en ;
+    dct:creator tgs:Human.FrancisWeller ;
+    owl:sameAs <https://www.francisweller.net/books.html> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via TGS_213's own real linked show
+# notes and directly discussed at length in the transcript itself.
+#############################################
+
+tgs:Work.TheArrogantApe a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Arrogant Ape: The Myth of Human Exceptionalism and Why It Matters"@en ;
+    rdfs:comment "2025 book by Christine Webb (Penguin Random House) — a real New York Times Notable Book of 2025, longlisted for the Nayef Al-Rodhan Book Prize. Argues human exceptionalism is an ideology relying more on human culture than biology, more on delusion and faith than evidence, drawing on Webb's own primatology research."@en ;
+    dct:creator tgs:Human.ChristineWebb ;
+    dct:issued "2025"^^xsd:gYear ;
+    owl:sameAs <https://www.penguinrandomhouse.com/books/717436/the-arrogant-ape-by-christine-webb/> ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via TGS_138's own real linked show
+# notes and directly discussed at length in the transcript itself.
+#############################################
+
+tgs:Work.TaoOfPhysics a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Tao of Physics: An Exploration of the Parallels Between Modern Physics and Eastern Mysticism"@en ;
+    rdfs:comment "1975 book by Fritjof Capra, his real first and best-known work — still in print in 40+ editions, referenced alongside a statue of Shiva in the courtyard of CERN. Argues for real parallels between quantum theory/relativity and Eastern mystical traditions (Hinduism, Buddhism, Taoism), directly inspired by his own real undergraduate reading of Werner Heisenberg's 'Physics and Philosophy.'"@en ;
+    dct:creator tgs:Human.FritjofCapra ;
+    dct:issued "1975"^^xsd:gYear ;
+    owl:sameAs <https://www.fritjofcapra.net/about/> ;
+    .

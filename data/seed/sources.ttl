@@ -20,6 +20,7 @@ thinkr:Source a owl:Class ;
 
 tgs:Source.CalDECCaliforniaDoughnutReport a thinkr:Source, owl:NamedIndividual ;
     skos:prefLabel "CalDEC — The California Doughnut Snapshot and Report (2025)"@en ;
-    thinkr:reliabilityTier thinkr:ReliabilityTier.Authoritative ;
+    thinkr:reliabilityTier thinkr:ReliabilityType.Authoritative ;
     rdfs:comment "Authoritative tier: DOI-registered (10.5281/zenodo.17540639), multi-author collaborative report with academic/government/NGO input, CC-BY 4.0 licensed. See tgs:Work.CaliforniaDoughnutReport2025 for full citation details."@en ;
-    dct:source <https://zenodo.org/records/17540639> .
+    dct:source <https://zenodo.org/records/17540639> ;
+    .

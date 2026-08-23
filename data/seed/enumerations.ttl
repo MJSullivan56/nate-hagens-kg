@@ -174,13 +174,18 @@ thinkr:EpisodeType.Monologue a thinkr:EpisodeType, owl:NamedIndividual ;
     skos:prefLabel "Monologue"@en ;
     skos:altLabel "frankly"@en, "Frankly"@en, "Solo Reflection"@en, "Solo Episode"@en .
 
+thinkr:EpisodeType.AnimatedVideo a thinkr:EpisodeType, owl:NamedIndividual ;
+    skos:prefLabel "Animated Video"@en ;
+    skos:altLabel "animated series"@en, "Explanatory Video"@en, "Animated Short"@en ;
+    rdfs:comment "ADDED 2026-08-13 — genuinely distinct production style from the other 3 EpisodeTypes: a professionally scripted, narrated, and animated production (real production team, credited separately from a podcast host/guest structure), not a live conversation or solo reflection recorded in one take. First real use: the 4-part 'Great Simplification Animated Series.'"@en .
+
 
 #############################################
 # ProfessionalRole
 #############################################
 
 thinkr:ProfessionalRole a owl:Class, thinkr:Category ;
-    rdfs:comment "A person's intrinsic professional identity (Educator, Author, etc.) — deliberately generic and reusable across any future thinker's graph, same reasoning as thinkr:EpisodeType. Distinct from thinkr:PersonEntityType, which describes a person's RELATIONSHIP TO THIS SPECIFIC PROJECT (Guest, Contributor), not something intrinsic to them independent of it."@en ;
+    rdfs:comment "A person's intrinsic professional identity (Educator, Author, etc.) — deliberately generic and reusable across any future thinker's graph, same reasoning as thinkr:EpisodeType. Distinct from thinkr:PersonEntityType, which describes a person's RELATIONSHIP TO THIS SPECIFIC PROJECT (Guest, Contributor), not something intrinsic to them independent of it. GAP FOUND AND FLAGGED 2026-08-13, raised by MJSullivan: this class and its property (thinkr:hasProfessionalRole) existed since early in the project but had only ever actually been populated via the narrower thinkr:hasTGSRole sub-property, applied only to tgs:Persona.NateHagens himself — zero of the 70+ other real Personas built this session had ever received a thinkr:hasProfessionalRole assertion, despite the general mechanism being ready to use. Politician, Environmentalist, and Physicist added this same day as real, immediately-needed values (Richard Gephardt, tgs:Persona.RichardGephardt, is the first non-Nate Persona to receive a thinkr:hasProfessionalRole assertion). Retroactively auditing and tagging the other 70+ existing Personas is a separate, much larger task — NOT done in this pass, worth treating as its own deliberate effort rather than folding in silently."@en ;
     skos:prefLabel "Professional Role"@en .
 
 thinkr:ProfessionalRole.Educator a thinkr:ProfessionalRole, owl:NamedIndividual ;
@@ -195,6 +200,14 @@ thinkr:ProfessionalRole.Blogger a thinkr:ProfessionalRole, owl:NamedIndividual ;
 thinkr:ProfessionalRole.Author a thinkr:ProfessionalRole, owl:NamedIndividual ;
     skos:prefLabel "Author"@en .
 
+thinkr:ProfessionalRole.Politician a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Politician"@en .
+
+thinkr:ProfessionalRole.Environmentalist a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Environmentalist"@en .
+
+thinkr:ProfessionalRole.Physicist a thinkr:ProfessionalRole, owl:NamedIndividual ;
+    skos:prefLabel "Physicist"@en .
 
 #############################################
 # RelationshipType
@@ -234,4 +247,54 @@ thinkr:InteractionRole.Host a thinkr:InteractionRole, owl:NamedIndividual ;
 
 thinkr:InteractionRole.Guest a thinkr:InteractionRole, owl:NamedIndividual ;
     skos:prefLabel "Guest"@en .
+
+
+#############################################
+# added to validate inferencing
+#############################################
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:EpisodeType.Interview 
+        thinkr:EpisodeType.PanelDiscussion
+        thinkr:EpisodeType.Monologue 
+        thinkr:EpisodeType.AnimatedVideo ) .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:RelationshipType.Professional 
+        thinkr:RelationshipType.Personal
+        thinkr:RelationshipType.Academic 
+        thinkr:RelationshipType.Legal
+        thinkr:RelationshipType.Intellectual ) .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:ProfessionalRole.Educator 
+        thinkr:ProfessionalRole.InstituteExecutive
+        thinkr:ProfessionalRole.Blogger 
+        thinkr:ProfessionalRole.Author
+        thinkr:ProfessionalRole.Politician 
+        thinkr:ProfessionalRole.Environmentalist
+        thinkr:ProfessionalRole.Physicist ) .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:ConfidenceType.Curated 
+        thinkr:ConfidenceType.Candidate
+        thinkr:ConfidenceType.Corroborated 
+        thinkr:ConfidenceType.Disputed ) .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:PolarityType.Supports 
+        thinkr:PolarityType.Contests
+        thinkr:PolarityType.Mentions ) .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers ( 
+        thinkr:ReliabilityType.Authoritative 
+        thinkr:ReliabilityType.Reputable
+        thinkr:ReliabilityType.Unverified 
+        thinkr:ReliabilityType.Unreliable ) .
 

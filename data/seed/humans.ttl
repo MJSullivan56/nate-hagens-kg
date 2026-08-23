@@ -917,3 +917,101 @@ tgs:Human.JeremyGrantham a thinkr:Human,
     owl:sameAs <https://en.wikipedia.org/wiki/Jeremy_Grantham> ;
     rdfs:comment "British investor (b. Robert Jeremy Goltho Grantham, October 6, 1938, Ware, Hertfordshire, England); co-founder and long-term investment strategist, GMO LLC (est. 1977, Boston) — a major asset management firm known for calling the 2000 and 2008 bubbles via a mean-reversion/'super bubble' framework. Earlier, economist at Royal Dutch Shell; co-founder, Batterymarch Financial Management (1969, early commercial indexing). BA, University of Sheffield; MBA, Harvard Business School. With wife Hannelore, co-founded the Grantham Foundation for the Protection of the Environment (1997), to which the couple has committed ~98% of their net worth. Member, American Academy of Arts and Sciences; CBE (2016); Carnegie Medal for Philanthropy (2017). Real, direct funder of tgs:Persona.ShannaSwan's sperm-decline research (already a real, built Persona in this graph)."@en ;
     .
+
+#############################################
+# ADDED 2026-08-13 — surfaced via the Great Simplification Animated
+# Series credits (built earlier this session, where she was left
+# unbuilt as an acknowledgment-level "thanks to" contributor) and
+# independently, directly confirmed as a real prior TGS guest via
+# Frankly_80's own transcript. Independently verified via real web
+# search before minting.
+#############################################
+
+tgs:Human.JoanDiamond a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Joan Diamond"@en ;
+    rdfs:comment "American executive with a real, extensive background across private and nonprofit sectors: Executive Director, Stanford University's Millennium Alliance for Humanity and the Biosphere (MAHB) and of the Crans Foresight Analysis Nexus (FAN); former Executive VP, Hawaiian Electric Company; former VP/Corporate Secretary, a Silicon Valley telecommunications company; former COO, Nautilus Institute for Security and Sustainability. Real, direct, close relationship to Nate Hagens independently confirmed via his own words introducing her real prior TGS episode: 'my longtime friend, colleague, board member, and muse' — she sits on the board of Energy and Our Future (ISEOF), Nate's own organization, a real, ongoing institutional relationship beyond a single guest appearance."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — TGS_167 bootstrap. Resolves a real, repeatedly
+# flagged deferred reference (RR-17, RR-27, Frankly_132 all cited
+# Francis Weller's real prior TGS episode #167 without building it).
+# Independently verified via real web search before minting.
+#############################################
+
+tgs:Human.FrancisWeller a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Francis Weller"@en ;
+    owl:sameAs <https://www.francisweller.net/> ;
+    rdfs:comment "American psychotherapist (MFT, retired), writer, and self-described soul activist; 40+ years developing what he calls soul-centered psychotherapy, synthesizing psychology, anthropology, mythology, alchemy, indigenous cultures, and poetic traditions. Founder and director, WisdomBridge (educational programs integrating indigenous and Western wisdom traditions). Author of the bestselling 'The Wild Edge of Sorrow: Rituals of Renewal and the Sacred Work of Grief' (real, direct originator of the 'Five Gates of Grief' framework), 'The Threshold Between Loss and Revelation' (with Rashani Réa), 'In the Absence of the Ordinary: Soul Work for Times of Uncertainty,' and 'Entering the Healing Ground' (the official Wild Edge of Sorrow workbook). Real endorsement from Joanna Macy (already discussed extensively in this graph's own RR-17 build) appears on his own book jacket. BA, University of Wisconsin-Green Bay; two Master's degrees, John F. Kennedy University."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — resolves 3 independent real citations across
+# separate builds this session (RR-17, Frankly_132, TGS_167), all of
+# which deferred him. Independently verified via real web search
+# before minting.
+#############################################
+
+tgs:Human.BillPlotkin a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Bill Plotkin"@en ;
+    owl:sameAs <https://www.animas.org/about-us/our-founder/> ;
+    rdfs:comment "American eco-depth psychologist, wilderness guide, and self-described agent of cultural evolution; founder, Animas Valley Institute (southwest Colorado, 1980/1981), guiding thousands of people through nature-based initiatory passages, including a contemporary Western adaptation of the pan-cultural vision fast. PhD, psychology, University of Colorado Boulder; earlier career as a research psychologist (studying nonordinary states of consciousness), university psychology professor, psychotherapist, rock musician, and whitewater river guide. Real, direct origin story for his current work: in 1979, during a solo winter ascent of an Adirondack peak, he experienced what he calls a 'call to spiritual adventure' that led him to leave academia. Author of 'Soulcraft: Crossing into the Mysteries of Nature and Psyche,' 'Nature and the Human Soul: Cultivating Wholeness and Community in a Fragmented World,' 'Wild Mind: A Field Guide to the Human Psyche,' and 'The Journey of Soul Initiation: A Field Guide for Visionaries, Evolutionaries, and Revolutionaries.'"@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — TGS_213 bootstrap. Independently verified via
+# real web search before minting.
+#############################################
+
+tgs:Human.ChristineWebb a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Christine Webb"@en ;
+    owl:sameAs <https://www.cewebb.com/about> ;
+    rdfs:comment "American primatologist; Assistant Professor, Department of Environmental Studies (Animal Studies program), New York University. Previously Researcher and Lecturer, Department of Human Evolutionary Biology, Harvard University. Research spans two intersecting lines: social dynamics in non-human primates, and how the dominant narrative of human exceptionalism has shaped scientific knowledge of the more-than-human world. Author of 'The Arrogant Ape: The Myth of Human Exceptionalism and Why It Matters' (2025, Penguin Random House) — a real New York Times Notable Book of 2025, longlisted for the Nayef Al-Rodhan Book Prize."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — TGS_1 bootstrap, the show's real first-ever
+# episode. Independently verified via real web search before minting.
+#############################################
+
+tgs:Human.RichardGephardt a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Richard Gephardt"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Dick_Gephardt> ;
+    rdfs:comment "American attorney, lobbyist, and politician (b. January 31, 1941, St. Louis, Missouri); Democratic member, US House of Representatives, Missouri's 3rd district (1977-2005) — 28 years in Congress. House Majority Leader (1989-1995); House Minority Leader (1995-2003). Twice sought the Democratic presidential nomination (1988, 2004). President and CEO, Gephardt Group (later Gephardt Government Affairs), founded 2005. Real early career: precinct captain (1968), Alderman for St. Louis's 14th Ward (1971-1976). BS, Northwestern University (1962); JD, University of Michigan Law School (1965). Author of 'An Even Better Place' and 'The American Immigrant: The Outsiders,' among others. Board service includes Ford Motor Company, US Steel Corporation, Spirit AeroSystems, Centene Corporation, and Chair, Board of Trustees, Scripps Research Institute; founder, Gephardt Institute for Civic and Community Engagement at Washington University in St. Louis."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-13 — TGS_138 bootstrap. Resolves a real, directly-
+# flagged deferred reference from the RR-14 build earlier this
+# session. Independently verified via real web search before minting.
+#############################################
+
+tgs:Human.FritjofCapra a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Fritjof Capra"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Fritjof_Capra> ;
+    rdfs:comment "Austrian-born American physicist, systems theorist, and deep ecologist (b. February 1, 1939, Vienna). PhD, theoretical physics, University of Vienna (1966; doctoral advisor Walter Thirring); 20 years in particle-physics research at institutions including University of Paris, Lawrence Berkeley Laboratory, UC Santa Cruz, UC Berkeley, and San Francisco State University. Founding director (1995-2020), Center for Ecoliteracy, Berkeley; faculty, Amana-Key executive education program (São Paulo, Brazil); Fellow, Schumacher College (UK). Author of several real international bestsellers, including 'The Tao of Physics' (1975, still in print in 40+ editions), 'The Turning Point' (1982), 'The Web of Life' (1996), and 'The Hidden Connections' (2002); co-author with Pier Luigi Luisi of 'The Systems View of Life: A Unifying Vision' (Cambridge University Press, 2014)."@en ;
+    .
+
+#############################################
+# ADDED 2026-08-21 — TGS_34 bootstrap. Surfaced via a real, complete
+# YAML scrape record showing this episode has no YouTube video, only
+# a podcast MP3 — the case that prompted deciding NOT to add a 5th
+# thinkr:EpisodeType value, using the existing thinkr:hasReplay
+# instead (already scoped to cover "YouTube, Spotify, etc."), which
+# also surfaced that this graph has under-used hasReplay's own real,
+# documented scope all session, only ever populating it with YouTube
+# links. Independently verified via real web search before minting.
+#############################################
+
+tgs:Human.KirilSokoloff a thinkr:Human,
+        owl:NamedIndividual ;
+    skos:prefLabel "Kiril Sokoloff"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/13D_Research> ;
+    rdfs:comment "American investor and investment strategist; Chairman and Founder, 13D Research & Strategy (founded 1983 in St. Thomas, US Virgin Islands), an independent institutional global research firm publishing 'What I Learned This Week' and 'What Are The Markets Telling Us.' One of the first foreign professional investors in Hong Kong (1992); co-founded one of the first pure technology funds (1994). Real, direct praise from Howard Marks (Oaktree Capital) and the late Barton Biggs, both citing his real, long track record identifying major secular investment trends. Active in philanthropy across healthcare, education, and what his own real bio calls 'the scaling of human consciousness.'"@en ;
+    .

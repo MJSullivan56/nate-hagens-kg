@@ -154,7 +154,9 @@ tgs:InterventionSubdomain.EducationRedesign a thinkr:InterventionSubdomain, owl:
 
 tgs:InterventionSubdomain.ArtsGriefAndSensemaking a thinkr:InterventionSubdomain, owl:NamedIndividual ;
     skos:prefLabel "Arts, Grief Work, and Collective Sensemaking"@en ;
-    skos:definition "Grief work as a real collective practice — Hagens directly cites Francis Weller's real prior TGS episode on grief as ritual (#167, not yet built in this graph) — and other real methods for collective sensemaking."@en .
+    skos:definition "Grief work as a real collective practice — Hagens directly cites Francis Weller's real prior TGS episode on grief as ritual (#167, now built in this graph) — and other real methods for collective sensemaking."@en ;
+    dcterms:relation tgs:Interview.TGS_167_FrancisWeller ;
+    .
 
 tgs:InterventionSubdomain.ReconnectionToPlace a thinkr:InterventionSubdomain, owl:NamedIndividual ;
     skos:prefLabel "Reconnection to Place and Ecology"@en ;

@@ -211,7 +211,10 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_NatashaLinhart,
         tgs:Relationship.NateHagens_DanielChristianWahl,
         tgs:Relationship.NateHagens_IsabelCarlisle,
-        tgs:Relationship.NateHagens_SamanthaPower ;
+        tgs:Relationship.NateHagens_SamanthaPower,
+        tgs:Relationship.NateHagens_JoanDiamond,
+        tgs:Relationship.NateHagens_FrancisWeller,
+        tgs:Relationship.NateHagens_RichardGephardt ;
     thinkr:hasProfessionalRelationship
         tgs:Relationship.NateHagens_MatthewMonahan,
         tgs:Relationship.NateHagens_IainMcGilchrist,
@@ -282,7 +285,14 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_SkyeNeville,
         tgs:Relationship.NateHagens_ClemenceCurrie,
         tgs:Relationship.NateHagens_JoaquinMinana,
-        tgs:Relationship.NateHagens_JeremyGrantham ;
+        tgs:Relationship.NateHagens_JeremyGrantham,
+        tgs:Relationship.NateHagens_JoanDiamond,
+        tgs:Relationship.NateHagens_FrancisWeller,
+        tgs:Relationship.NateHagens_BillPlotkin,
+        tgs:Relationship.NateHagens_ChristineWebb,
+        tgs:Relationship.NateHagens_RichardGephardt,
+        tgs:Relationship.NateHagens_FritjofCapra,
+        tgs:Relationship.NateHagens_KirilSokoloff ;
     thinkr:hasAcademicRelationship 
         tgs:Relationship.NateHagens_UniversityOfMinnesota, 
         tgs:Relationship.NateHagens_JoshFarley,
@@ -787,3 +797,49 @@ tgs:Persona.JeremyGrantham a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JeremyGrantham ;
     skos:prefLabel "Jeremy Grantham"@en ;
     skos:scopeNote "A prior version of this graph incorrectly claimed Grantham was already built here (during the RR-15 build), before actually being verified — corrected at the time, now genuinely built. Real, further citable material found but NOT built in this pass: E.O. Wilson (directly described being 'badgered' for three hours by Grantham and colleagues about insect collapse) and Hagai Levine (Shanna Swan's real co-researcher, directly named)."@en .
+
+tgs:Persona.JoanDiamond a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JoanDiamond ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JoanDiamond ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JoanDiamond ;
+    skos:prefLabel "Joan Diamond"@en ;
+    skos:scopeNote "Real, confirmed prior TGS solo episode (#28, 'From Kool-Aid to Lemonade,' July 2022) — not built as an Episode individual in this pass."@en .
+
+tgs:Persona.FrancisWeller a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.FrancisWeller ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_FrancisWeller ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_FrancisWeller ;
+    skos:prefLabel "Francis Weller"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Bill Plotkin's own real prior TGS episode, directly cross-referenced here — the THIRD independent citation of Plotkin flagged this session (RR-17, Frankly_132, now TGS_167), still not built."@en .
+
+tgs:Persona.BillPlotkin a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BillPlotkin ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BillPlotkin ;
+    skos:prefLabel "Bill Plotkin"@en ;
+    skos:scopeNote "Built 2026-08-13 after 3 independent real citations across separate builds this session (RR-17, Frankly_132, TGS_167) all deferred him — MJSullivan's own direct instruction: 'at this point I don't see why not mint Bill Plotkin as a persona.' Real prior TGS episode (#146, 'Ecological Awakening: A Path Toward Holistic Adulthood') built as a stub — see tgs:Interview.TGS_146_BillPlotkin — not yet fleshed out from its own real transcript."@en .
+
+tgs:Persona.ChristineWebb a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ChristineWebb ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ChristineWebb ;
+    skos:prefLabel "Christine Webb"@en .
+
+tgs:Persona.RichardGephardt a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RichardGephardt ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RichardGephardt ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_RichardGephardt ;
+    thinkr:hasProfessionalRole thinkr:ProfessionalRole.Politician ;
+    skos:prefLabel "Richard Gephardt"@en ;
+    skos:scopeNote "First non-Nate Persona in this graph to carry a real thinkr:hasProfessionalRole assertion — see enumerations.ttl's own updated ProfessionalRole class comment for the real gap this surfaced, raised by MJSullivan."@en .
+
+tgs:Persona.FritjofCapra a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.FritjofCapra ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_FritjofCapra ;
+    thinkr:hasProfessionalRole thinkr:ProfessionalRole.Physicist, thinkr:ProfessionalRole.Author ;
+    skos:prefLabel "Fritjof Capra"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Pier Luigi Luisi (his own real co-author on The Systems View of Life), Gregory Bateson, Lynn Margulis, Hazel Henderson, David Steindl-Rast, and David Korten, all real, directly cited, none built."@en .
+
+tgs:Persona.KirilSokoloff a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KirilSokoloff ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KirilSokoloff ;
+    thinkr:hasProfessionalRole thinkr:ProfessionalRole.Author ;
+    skos:prefLabel "Kiril Sokoloff"@en .
