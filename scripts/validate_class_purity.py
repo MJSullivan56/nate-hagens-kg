@@ -21,6 +21,21 @@ ignored — they're nested/anonymous and belong wherever their
 containing statement puts them (e.g. PodcastAppearance interactions
 inside a Relationship), not top-level file-organization subjects.
 
+KNOWN, DELIBERATE EXCEPTIONS (added 2026-08-22, after a real clean-room
+pipeline run surfaced these 3 files as violations that turned out to be
+intentional, not accidental — see docs/backlog.md for the full
+discussion): episodes.ttl, interventionfronts.ttl, and subjects.ttl each
+hold a genuinely tight parent-child class pairing (or, for episodes.ttl,
+a real family of closely-related episode-content classes) where keeping
+them in one file is more useful than splitting for the sake of a
+one-class-per-file rule with no semantic reason behind it in these
+specific cases. KNOWN_MULTI_CLASS_FILES below allowlists these — but
+DELIBERATELY as an EXACT expected class set per file, not a blanket
+"this file is exempt" flag. If a file in the allowlist ever shows a
+class NOT in its expected set (or is missing one that IS expected),
+that's still flagged as a real violation — the allowlist marks known,
+reviewed structure, not an excuse to stop checking a file entirely.
+
 WHAT THIS DOES NOT CHECK (yet — real gaps, not silently claimed to be
 covered): SHACL shape conformance, cross-file dangling-reference
 checks, confidence-value enumeration validity, or anything
@@ -44,6 +59,12 @@ from pathlib import Path
 import rdflib
 
 TGS_NS = "http://example.org/tgs#"
+
+KNOWN_MULTI_CLASS_FILES = {
+    "episodes.ttl": {"AnimatedVideo", "Interview", "Monologue", "PanelDiscussion", "Series"},
+    "interventionfronts.ttl": {"InterventionFront", "InterventionSubdomain"},
+    "subjects.ttl": {"ConceptScheme", "Subject"},
+}
 
 
 def class_prefixes_in_file(path):
@@ -94,6 +115,26 @@ def main():
         except Exception as e:
             print(f"PARSE ERROR: {f} — {e}")
             violations.append((f.name, "PARSE ERROR", str(e)))
+            continue
+
+        expected = KNOWN_MULTI_CLASS_FILES.get(f.name)
+        actual = set(by_prefix.keys())
+
+        if expected is not None:
+            if actual == expected:
+                print(f"OK   {f.name}: {sorted(actual)} (known, allowlisted multi-class file)")
+                continue
+            # Allowlisted file, but the ACTUAL classes don't match the
+            # EXACT expected set — still a real violation. The allowlist
+            # marks known, reviewed structure, not a blanket bypass.
+            missing = expected - actual
+            unexpected = actual - expected
+            violations.append((f.name, by_prefix, f"allowlist mismatch: missing={missing}, unexpected={unexpected}"))
+            print(f"*** {f.name}: allowlisted for {sorted(expected)}, but found {sorted(actual)} "
+                  f"(missing={sorted(missing)}, unexpected={sorted(unexpected)}) ***")
+            for prefix, names in sorted(by_prefix.items()):
+                sample = names[:3]
+                print(f"    {prefix}: {len(names)} subject(s) — e.g. {sample}")
             continue
 
         if len(by_prefix) > 1:

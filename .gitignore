@@ -34,6 +34,24 @@ extraction/intro_segments/
 extraction/intro_candidates.csv
 extraction/*.pdf
 
+# Episode-shape pipeline (extraction/shape/): the scripts and the shape
+# template itself ARE committed; everything derived from the copyrighted
+# episode text is not. site_cache/ holds fetched episode HTML, out/ holds the
+# shaped YAML/JSON records — both regenerate from the two scripts.
+extraction/shape/site_cache/
+extraction/shape/out/
+extraction/shape/out_json/
+extraction/shape/out_txt/
+extraction/shape/out_txt_pilot/
+extraction/shape/gaps.csv
+extraction/shape/txt_resolution.csv
+extraction/shape/youtube_worklist.csv
+
+# Pre-patch snapshots of the hand-enriched .md files, taken by hand before
+# running patch_md.py --apply. Same copyright reasoning as
+# transcripts_text_cache/ above: these ARE the episode text.
+extraction/md_backups/
+
 # OS/editor cruft
 .DS_Store
 *.swp

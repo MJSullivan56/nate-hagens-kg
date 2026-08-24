@@ -1,0 +1,28 @@
+# known_absent.yaml — fields confirmed absent at the source, not merely unfilled.
+#
+# This repo's standing principle (CLAUDE.md, the bootstrap-a-person procedure):
+# "checked, confirmed absent" and "nobody got around to checking yet" are
+# different states and are worth distinguishing. The gap report cannot tell them
+# apart on its own, so record the checked-and-absent ones here. They then appear
+# in the report as CONFIRMED ABSENT rather than as an open gap.
+#
+# Format:
+#   <record_id>:
+#     <field_name>:
+#       checked_on: YYYY-MM-DD
+#       method: how it was checked
+#       note: what was found
+
+TGS-024-JasonBradford:
+  youtube_url:
+    checked_on: 2026-08-21
+    method: >
+      Episode page carries no a#ep_lnk_yt anchor (true of all pre-~TGS-30
+      pages, which embed a Libsyn audio player instead). Followed up with four
+      YouTube search formulations, including the episode's exact site title
+      "Jason Bradford: A Hybrid Path to the Future of Farming".
+    note: >
+      No video found. Neighbouring episodes (#6, #7, #18, #23, #25, #27, #28,
+      #30) all surface readily in the same searches, so this is a gap in the
+      channel rather than a weakness of the search. Most likely audio-only or
+      unlisted. Recheck if the channel is ever re-indexed.

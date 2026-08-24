@@ -873,3 +873,156 @@ this is the actual math for the "classify article's position, then
 find nearest facet" step of that whole pipeline. Not scoped for active
 implementation yet, captured so the analysis isn't lost before the
 app's real build phase.
+
+**MAJOR UPDATE (2026-08-19, same day) — this conclusion is now
+superseded, not just refined.** MJSullivan proposed recentering the
+whole grid coordinate system around a true origin (0,0), with the 4
+quadrant centroids at (-2,-2)/(2,-2)/(2,2)/(-2,2) instead of the old
+all-positive (2,2)/(2,4)/(4,2)/(4,4) — motivated by making cosine
+distance "trivial" on a symmetric -3-to-3 grid. Verified by direct
+computation before adopting (see thinkr:hasXPosition's own updated
+comment in tgs-core.ttl for the full reasoning): under the new
+coordinates, cosine similarity between tgs:ScenarioFacet.TheGreatSimplification
+and tgs:ScenarioFacet.Mordor (the real diagonal-opposite pair) computes
+to exactly -1.0 — perfect negative correlation, correctly identifying
+maximal disjointness — while single-axis-divergent pairs compute to
+exactly 0.0 (orthogonal). This is the EXACT problem flagged in the
+original entry above, resolved by recentering rather than by choosing
+a different distance metric: the earlier "Euclidean, not cosine"
+conclusion was correct for the OLD all-positive coordinate system, but
+doesn't hold once the origin is a true, symmetric center — cosine
+becomes the elegant, mathematically well-behaved choice, not a flawed
+one. All 16 real ScenarioFacet positions were migrated to the new
+system same day (simple value substitution, 2->-2 and 4->2, since only
+those 2 values were ever populated); the disjointness/divergence
+relationship triples themselves were verified unchanged, since that
+computation is purely relational (same/different), not dependent on
+the specific numeric values. Worth reading this whole entry as
+historical record of how the conclusion evolved, not as two competing
+recommendations — the recentered-cosine approach is the current, live
+answer.
+
+**UPDATE (2026-08-22, later the same night) — the above is itself now
+superseded.** The "recentered-cosine approach is the current, live
+answer" conclusion this entry ended on no longer holds: MJSullivan
+designed a lightweight, precomputed Euclidean-distance lookup system
+(thinkr:QuadrantNode, 49 individuals covering the full 0-6 grid — note
+the grid itself was ALSO redefined this same session, from a
+centered -3..3 scheme to a lower-left-origin 0-6 scheme, specifically
+to make this lookup design clean) that replaces live cosine computation
+entirely for grid-position comparison. The reasoning: classifying an
+arbitrary point (e.g. a news article) onto each of the 4 real
+ScenarioDimensions is the genuinely hard part of this whole pipeline,
+and it's required either way — once that's done, comparing the
+resulting (x,y) position to any real ScenarioFacet is now a table
+lookup (via thinkr:hasQuadrantNode, linking each Facet to its matching
+QuadrantNode) rather than a live trigonometric calculation. See
+quadrantnodes.ttl for the implementation. Read this whole multi-entry
+thread (cosine chosen -> recentering made cosine elegant -> Euclidean-
+via-lookup supersedes cosine entirely) as the real, honest history of
+how this design evolved across three separate sessions, not as
+competing unresolved options — the QuadrantNode lookup is the current,
+live answer as of 2026-08-22.
+
+---
+
+**Which reasoner-inferred triples to materialize — decided
+2026-08-22, after tonight's real reasoner-consistency investigation
+got the graph to a genuinely clean, HermiT-verified state for the
+first time.** Protege's own "export inferred axioms" dialog offers 5
+categories (inferred class assertions, inferred property assertions,
+inferred class hierarchy, inferred disjoint classes, inferred
+equivalent classes/same-individual facts). Decision: materialize only
+the first two.
+
+Reasoning, category by category, against what this graph actually is
+— not a generic default:
+- **Inferred class assertions** — real, demonstrated value (e.g.
+  thinkr:ScenarioFacet individuals correctly picking up thinkr:Concept
+  automatically once ScenarioFacet was made a subclass of Concept).
+  Without this, a query for "every Concept" silently misses every
+  ScenarioFacet, Indicator, HagensConcept, etc. unless the query
+  writer remembers every subclass relationship by hand. KEEP.
+- **Inferred property assertions** — the other real, demonstrated win:
+  thinkr:diagonallyDisjointWith/xAxisDivergentFrom/yAxisDivergentFrom
+  correctly generalizing up to their real parent properties
+  (thinkr:logicallyDisjointWith, thinkr:relatesTo) automatically. This
+  is the actual payoff of the project's own subPropertyOf hierarchy —
+  assert the narrow, specific fact once, get the general one free.
+  KEEP.
+- **Inferred class hierarchy** — this schema doesn't have deep
+  multi-level class nesting; most individuals are typed directly.
+  Little to nothing for a reasoner to newly derive here currently.
+  SKIP (not harmful, just empty).
+- **Inferred disjoint classes** — real owl:disjointWith between
+  classes was explicitly deferred back when the TBOX axiom list was
+  first drafted, as its own separate decision needing more thought
+  (e.g. should Concept and ScenarioFacet be formally disjoint, given
+  they were deliberately split apart earlier this project specifically
+  because they're conceptually different things?). Nothing to infer
+  yet. SKIP (currently empty, revisit once/if that axiom work happens).
+- **Inferred equivalent classes / same-individual (sameAs) facts** —
+  actively the OPPOSITE of what this graph wants. The owl:AllDifferent
+  blocks added earlier this same session exist specifically to PREVENT
+  false same-individual inferences (the exact mechanism behind the
+  real ReliabilityTier/ReliabilityType bug found and fixed tonight —
+  before AllDifferent existed, a reasoner had a silent "escape hatch"
+  to treat a stale, wrong URI as secretly identical to the real one
+  instead of flagging a contradiction). SKIP, deliberately and
+  permanently, not just for now.
+
+Materialized inferences are written to a SEPARATE file
+(data/inferred/materialized.ttl), deliberately kept OUTSIDE
+data/seed/ so none of the three existing scripts that glob that
+directory (load_oxigraph.sh, validate_class_purity.py,
+merge_for_protege.py) pick it up implicitly — the same reasoning that
+led to using an is_inferred column for the DuckDB side of this
+project, translated to the RDF side as file/graph separation instead
+of a row-level flag. See scripts/materialize_inferences.py.
+
+Two real, non-obvious bugs worth recording so they aren't rediscovered
+the hard way twice: (1) owlready2's world export must be used directly
+via as_rdflib_graph() — round-tripping it through RDF/XML
+serialize-then-reparse crashes on blank-node IDs that don't satisfy
+XML's NCName syntax rules, which HermiT's own output doesn't always
+respect; (2) a plain string literal ('CD') and an explicit
+xsd:string-typed literal ('CD'^^xsd:string) are the SAME value under
+RDF semantics but are NOT equal under rdflib's own == / hash — HermiT's
+re-serialization adds the explicit type marker even where the source
+Turtle never wrote one, which silently produced false-positive "new"
+triples for every already-asserted string-valued property until both
+sides of the comparison were normalized before diffing.
+
+---
+
+**Class-purity "violations" on episodes.ttl, interventionfronts.ttl,
+subjects.ttl — resolved 2026-08-22, same night as the clean-room
+pipeline run that surfaced them.** All 3 turned out to be genuine,
+deliberate class pairings (Series/Episode-family classes; Front/
+Subdomain parent-child; ConceptScheme/Subject scheme-and-member), not
+accidents — but validate_class_purity.py's original binary rule
+("exactly one class prefix per file") couldn't distinguish "known,
+reviewed structure" from "the exact kind of accidental drift the rule
+was built to catch" (the real 2026-07-14 incident: Concept-lineage
+facts landing in linknotes.ttl twice, by mistake).
+
+Considered 3 options: (1) keep the data as-is, accept the tool flagging
+these 3 files permanently; (2) split all 3 files to satisfy the rule
+strictly (episodes.ttl alone would become 5 separate files); (3) fix
+the tool, not the data — add a precise, exact-match allowlist.
+
+Decided: option 3. KNOWN_MULTI_CLASS_FILES in
+scripts/validate_class_purity.py now maps each of these 3 filenames to
+its OWN real, exact expected class set — deliberately NOT a blanket
+"this file is exempt" flag. If an allowlisted file's actual classes
+ever stop matching its expected set exactly (a new, unexpected class
+appears, or an expected one goes missing), that's still a real,
+reported violation. Verified directly, not assumed: injected a fake
+foreign class into subjects.ttl and confirmed the script still caught
+it and returned exit code 1, before restoring the real file and
+confirming a clean 0-violation, exit-code-0 run. This preserves the
+script's real value as a pre-Phase-5-export gate (per the migration
+prompt's own Phase 5 sequencing) while eliminating 3 permanent,
+known-false alarms that would otherwise train whoever runs it to
+tune out its output — the actual risk of leaving option 1 in place
+indefinitely.

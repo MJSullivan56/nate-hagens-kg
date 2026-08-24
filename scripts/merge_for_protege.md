@@ -1,0 +1,1 @@
+python merge_for_protege.py data/seed merged_for_protege.ttl

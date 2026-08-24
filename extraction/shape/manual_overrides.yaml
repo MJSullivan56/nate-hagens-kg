@@ -1,0 +1,229 @@
+# manual_overrides.yaml — human adjudications for transcript-to-episode mapping.
+#
+# `resolve.py` checks this FIRST, before any automatic matching, so anything
+# recorded here wins outright and is reported with method "manual-override".
+#
+# Use it for two situations:
+#   1. A file the resolver could not place (confidence "none"). It deliberately
+#      refuses to guess below its name-similarity floor, because a
+#      confident-looking wrong answer is worse than an admitted gap.
+#   2. A file the resolver placed WRONGLY. Check the flagged ones first — run
+#      `build_txt_records.py --resolve-report` and look at anything marked
+#      weak, name-override, or number.
+#
+# Format — key is the transcript filename exactly as it appears on disk:
+#
+#   overrides:
+#     Some-File.txt:
+#       url: https://www.thegreatsimplification.com/frankly-original/<slug>
+#       note: how you confirmed it (e.g. "watched the video intro")
+#
+#     Some-Other-File.txt:
+#       skip: true
+#       note: why this file should not be mapped at all
+#
+# To disable an override, comment it out or delete it; nothing else depends on it.
+
+overrides:
+
+  # ---------------------------------------------------------------------------
+  # Confirmed by MJSullivan, 2026-08-21.
+  #
+  # Both episodes have a slug carrying NO episode number, which is why automatic
+  # resolution declined them: with no number to corroborate, each had only a
+  # partial title match to go on (0.74 and 0.38 similarity, against a 0.85
+  # floor). Both were confirmed against the site's own titles, quoted below —
+  # each matches its slug's title verbatim.
+  # ---------------------------------------------------------------------------
+
+  # Site title: "The 10 Core Myths Still Taught in Business Schools"
+  # The filename's shorter "10 Core Myths of Business Schools" is a paraphrase,
+  # which is what held the similarity to 0.74.
+  Frankly-099-10-Core-Myths-of-Business-Schools.txt:
+    url: https://www.thegreatsimplification.com/frankly-original/the-10-core-myths-still-taught-in-business-schools
+    note: >
+      Frankly 99. Confirmed by MJSullivan 2026-08-21; site title matches
+      verbatim. Slug carries no episode number, so nothing corroborated the
+      filename's "099" automatically.
+
+  # Two Jean-Marc Jancovici transcripts exist and both initially resolved to
+  # 84-jean-marc-jancovici, because this episode's slug carries NO number and
+  # its long trailing subtitle held name similarity to 0.80 — just under the
+  # 0.85 floor. Collision detection correctly rejected the duplicate claim but
+  # then had no candidate left to fall back to.
+  #
+  # Settled by fetching the page: its own label reads "Ep 175 | Jean-Marc
+  # Jancovici", which matches the filename's 175 exactly.
+  TGS175Jean-MarcJancoviciTranscript.txt:
+    url: https://www.thegreatsimplification.com/episode/jean-marc-jancovici-sobriete-vs-poverty-preparing-for-a-new-cultural-paradigm
+    note: >
+      Episode 175, "Sobriete vs Poverty: Preparing for a New Cultural Paradigm"
+      (published 2025-04-30). Confirmed 2026-08-21 from the page's own epi_label
+      "Ep 175 | Jean-Marc Jancovici". The other Jancovici transcript
+      (TGS-084-...) correctly keeps 84-jean-marc-jancovici.
+
+  # Site title: "Wide Boundary News: The Iranian War, Rising Gas Prices, and the
+  # Single Point Failure"
+  # "WBN" is Wide Boundary News, and the filename's date decodes onto the slug
+  # exactly: 10 March 2026 -> 3-10-26. That date was the real signal here; the
+  # raw string similarity was only 0.38 because the filename carries a date
+  # where the title carries subject matter.
+  Frankly-130-WBN-10-March-2026.docx.txt:
+    url: https://www.thegreatsimplification.com/frankly-original/wide-boundary-news-3-10-26
+    note: >
+      Frankly 130. Confirmed by MJSullivan 2026-08-21. Note the numbered Wide
+      Boundary News entries nearby are 121/124/127/141 — this one is unnumbered
+      on the site, so "130" comes from the filename alone.
+
+  # ---------------------------------------------------------------------------
+  # AUDIO-ONLY EPISODES (28) — collected by MJSullivan, 2026-08-21.
+  #
+  # These interviews were never published to YouTube. Their pages embed a Libsyn
+  # player, and a YouTube search returns only short CLIPS uploaded months later,
+  # which the date check correctly refuses. So youtube_url is genuinely absent
+  # here, not merely unfound, and podcast_mp3_url is the real media link.
+  #
+  # Recorded here rather than in the emitted records because out_txt/ is
+  # gitignored and wiped on every rebuild; this file is tracked, so the values
+  # survive. series is set to podcast_interview to distinguish them.
+  # ---------------------------------------------------------------------------
+
+  TGS-005-DanielSchmachtenbergerTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS05_DanielSchmachtenberger.mp3
+    note: audio-only episode 5; no YouTube video exists
+
+  TGS-011-RexWeylerTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS11_RexWeyler.mp3
+    note: audio-only episode 11; no YouTube video exists
+
+  TGS-016-TristanHarrisTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS16_TristanHarris.mp3
+    note: audio-only episode 16; no YouTube video exists
+
+  TGS-020-DanielSchmactenbergerPart2Transcript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS20_DanielSchmactenberger-Part02.mp3
+    note: audio-only episode 20; no YouTube video exists
+
+  TGS-022-AzaRaskin.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS22_AzaRaskin.mp3
+    note: audio-only episode 22; no YouTube video exists
+
+  TGS-026-PeterWhybrowTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS26_PeterWhybrow.mp3
+    note: audio-only episode 26; no YouTube video exists
+
+  TGS-029-JoshFarley2Transcript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/Farley.mp3
+    note: audio-only episode 29; no YouTube video exists
+
+  TGS-031-DanielSchmactenbergerPART03Transcript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS31_DanielSchmactenberger-PART03.mp3
+    note: audio-only episode 31; no YouTube video exists
+
+  TGS-032-TimotheeParriqueTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS32_TimotheeParrique.mp3
+    note: audio-only episode 32; no YouTube video exists
+
+  TGS-033-KrisDeDeckerTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS33_KrisDeDecker.mp3
+    note: audio-only episode 33; no YouTube video exists
+
+  TGS-034-KirilSokoloffTranscript.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS34_KirillSokoloff.mp3
+    note: audio-only episode 34; no YouTube video exists
+
+  TGS-035-SteveVavrusTranscript.docx1_.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS35_SteveVavrus.mp3
+    note: audio-only episode 35; no YouTube video exists
+
+  TGS-036-DouglasRushkoffTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS36_DouglasRushkoff.mp3
+    note: audio-only episode 36; no YouTube video exists
+
+  TGS-037-MartinScheringerTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS37_MartinScheringer.mp3
+    note: audio-only episode 37; no YouTube video exists
+
+  TGS-038-SebastianHeitmannTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS38_SebastianHeitmann.mp3
+    note: audio-only episode 38; no YouTube video exists
+
+  TGS-039-AyanMahamoudtranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS39_AyanMahamoud.mp3
+    note: audio-only episode 39; no YouTube video exists
+
+  TGS-040-MaryEvelynTuckerTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS40_MaryEvelynTucker.mp3
+    note: audio-only episode 40; no YouTube video exists
+
+  TGS-041-MartyKearnsTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS41_MartyKearns.mp3
+    note: audio-only episode 41; no YouTube video exists
+
+  TGS-043-BetsyTaylorTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS43_BetsyTaylor.mp3
+    note: audio-only episode 43; no YouTube video exists
+
+  TGS-044-ArtBerman (second interview).txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS44_ArtBerman.mp3
+    note: audio-only episode 44; no YouTube video exists
+
+  TGS-045-JonEricksonTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS45_JonErickson.mp3
+    note: audio-only episode 45; no YouTube video exists
+
+  TGS-046-VandanaShivaTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS46_VandanaShiva.mp3
+    note: audio-only episode 46; no YouTube video exists
+
+  TGS-046-PatrickOphulsTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS46_PatrickOphuls.mp3
+    note: audio-only episode 47; no YouTube video exists
+
+  TGS-048-TomasBjorkmanTranscript.docx1_.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS48_TomasBjorkman.mp3
+    note: audio-only episode 48; no YouTube video exists
+
+  TGS-049-SimonMichaux.docx2_.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS49_SimonMichaux.mp3
+    note: audio-only episode 49; no YouTube video exists
+
+  TGS-051-DJWhiteTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS51_DJWhite_1.mp3
+    note: audio-only episode 51; no YouTube video exists
+
+  TGS-055-EricaThompsonTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS55_EricaThompson.mp3
+    note: audio-only episode 55; no YouTube video exists
+
+  TGS-056-DavidSloanWilsonTranscript.docx.txt:
+    series: podcast_interview
+    podcast_mp3_url: http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS56_DavidSloanWilson.mp3
+    note: audio-only episode 56; no YouTube video exists

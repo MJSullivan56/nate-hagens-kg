@@ -1,0 +1,522 @@
+# episode_shape.yaml — the generic shape template for a TGS episode record.
+#
+# This file is the SINGLE SOURCE OF TRUTH for what an episode record contains.
+# It is data, not code: `shape_lib.py` reads it and drives both extraction and
+# serialization from it, so adding a field here is the only edit needed to make
+# that field appear in every emitted YAML/JSON record.
+#
+# Each field declares:
+#   type       - scalar | date | url | list | table | text  (see shape_lib.COERCERS)
+#   required   - if true, a missing value is reported as a GAP, not silently null
+#   sources    - ordered list of extraction strategies; FIRST HIT WINS.
+#                Provenance for whichever source won is recorded per-field in
+#                the emitted record's `_provenance` block.
+#   normalize  - ordered list of named transforms from shape_lib.NORMALIZERS
+#
+# Source kinds:
+#   md_label     - a "LABEL: value" line in the .md header. `labels` lists every
+#                  spelling variant seen in the hand-curated corpus (the corpus
+#                  is inconsistent: WEBPAGE/Webpage/WEBSITE/Website, YOUTUBE/Video,
+#                  KEYWORDS/Keywords/KEYWOREDS[sic]/unlabeled).
+#   md_block     - a structural region of the .md (meta block, description, table)
+#   md_filename  - parsed out of the filename via `pattern`
+#   site         - scraped from the episode page HTML via `selector`
+#   manifest     - looked up in extraction/download_manifest.csv
+#
+# CONFLICT POLICY (set 2026-08-21): the hand-curated .md is authoritative.
+# `site` sources exist to FILL GAPS ONLY and are always listed last. Where the
+# site and the .md disagree on a value the .md already has, the .md wins and the
+# divergence is recorded in the record's `_site_divergence` block rather than
+# overwriting anything.
+
+shape:
+  name: tgs_episode
+  version: 1
+
+  # Controlled vocabulary for the site's keyword pills — its complete tag set,
+  # spelled exactly as the site spells it.
+  #
+  # Needed because the webpage renders tags as adjacent <span class="pill">
+  # elements with no separator, so copy-pasting them into the .md produced
+  # run-together strings like "Economics And MonetarySystems ScienceGeopolitics".
+  # Splitting those back apart is only possible against a known vocabulary.
+  #
+  # Note the lowercase "and": the hand-typed .md files mostly wrote "Economics
+  # And Monetary", but the site renders "Economics and Monetary". Matching is
+  # case-insensitive and always emits the form below, so both spellings converge
+  # here and a keyword query need not know which one a given file used.
+  keyword_vocabulary:
+    - Energy Systems
+    - Human Behavior
+    - Economics and Monetary
+    - Systems Science
+    - Geopolitics
+    - Ecology and Environment
+
+  # Speaker labels that are not people.
+  #
+  # These are EXCLUDED from `transcript_speakers`, which is a person index and
+  # feeds person-level queries, but the turns themselves are KEPT in
+  # `transcript_turns` — the spoken text is real content and dropping it would
+  # lose transcript coverage. Only the attribution is suppressed.
+  #
+  # Observed across the whole corpus: just "Voiceover" and "Outro" (one turn
+  # each). The rest of the list is defensive, so a new variant is caught rather
+  # than silently becoming a "person". Matched case-insensitively, and a
+  # trailing number is ignored so "Speaker 2" matches "Speaker".
+  #
+  # Deliberately NOT listed: "Doomberg" (108 turns) is a real pseudonymous
+  # guest and "Lizzy" (20 turns) is a real person. A single-word label is not
+  # on its own evidence of a non-person.
+  non_person_speakers:
+    - Voiceover
+    - Voice Over
+    - Narrator
+    - Announcer
+    - Intro
+    - Outro
+    - Music
+    - Applause
+    - Audience
+    - Advertisement
+    - Sponsor
+    - Speaker
+    - Unknown
+    - Multiple Speakers
+
+  # Maps the filename prefix to a series. `label_pattern` is the regex used to
+  # recognize that series' episode-number line inside the .md meta block.
+  series:
+    Frankly:
+      kind: frankly
+      label_pattern: '(?i)^(?:FRANKLY\s*)?#?\s*(\d+)\b'
+      url_pattern: 'https://www.thegreatsimplification.com/frankly-original/{n}-{slug}'
+    RR:
+      kind: roundtable
+      label_pattern: '(?i)^Reality\s+Roundtable\s*#?\s*(\d+)\b'
+      url_pattern: 'https://www.thegreatsimplification.com/episode/reality-roundtable-{n}'
+    TGS:
+      kind: interview
+      label_pattern: '(?i)^Episode\s*#?\s*(\d+)\b'
+      url_pattern: 'https://www.thegreatsimplification.com/episode/{n}-{slug}'
+    Video:
+      kind: video
+      label_pattern: null
+      url_pattern: null
+
+  fields:
+
+    # ---------- identity ----------
+    - name: record_id
+      type: scalar
+      required: true
+      doc: Stable key for this record; the .md filename stem.
+      sources:
+        - kind: md_filename
+          pattern: '^(?P<record_id>.+)$'
+
+    - name: series
+      type: scalar
+      required: true
+      doc: One of frankly | roundtable | interview | video.
+      sources:
+        - kind: md_filename
+          pattern: '^(?P<prefix>Frankly|RR|TGS|Video)'
+
+    - name: episode_number
+      type: scalar
+      required: false
+      doc: >
+        Integer episode number within the series. Absent for the 4-part
+        animated Video series, which is numbered "Part 01 of 04" instead.
+      sources:
+        - kind: md_block
+          block: meta
+          extract: episode_number
+        - kind: md_filename
+          pattern: '^(?:Frankly|RR|TGS)-(?P<episode_number>\d+)'
+
+    - name: part_number
+      type: scalar
+      required: false
+      doc: Part index for the animated Video series only.
+      sources:
+        - kind: md_filename
+          pattern: 'Part\s*(?P<part_number>\d+)\s*of\s*\d+'
+
+    - name: part_total
+      type: scalar
+      required: false
+      sources:
+        - kind: md_filename
+          pattern: 'Part\s*\d+\s*of\s*(?P<part_total>\d+)'
+
+    - name: episode_label
+      type: scalar
+      required: false
+      doc: >
+        The site's own display label, verbatim — "Reality Roundtable 19",
+        "Episode 220", "Frankly 151 | Protect the Irreversible...". For Franklys
+        the label and title are fused on one line with a "|"; for RR/TGS the
+        label is bare and the real title lives only on the webpage.
+      sources:
+        - kind: md_block
+          block: meta
+          extract: episode_label
+        - kind: site
+          selector: '#epi_label'
+
+    - name: title
+      type: scalar
+      required: true
+      doc: >
+        Full episode title. For Franklys this is the text after the first "|" of
+        the fused label line. RR/TGS .md files do not carry the title at all, so
+        the site <h1> is the only source and this field is expected to be a gap
+        until the page is fetched.
+      sources:
+        - kind: md_block
+          block: meta
+          extract: title
+        - kind: md_label
+          labels: [TITLE]
+        - kind: site
+          selector: 'h1'
+        - kind: manifest
+          column: title
+      normalize: [collapse_ws, unescape_html]
+
+    # ---------- links ----------
+    - name: webpage_url
+      type: url
+      required: true
+      doc: Canonical episode page on thegreatsimplification.com.
+      sources:
+        - kind: md_label
+          labels: [WEBPAGE, Webpage, WEBSITE, Website, PAGE, Page]
+        - kind: manifest
+          column: episode_url
+        - kind: site
+          selector: 'link[rel=canonical]'
+      normalize: [strip_trailing_slash]
+
+    - name: youtube_url
+      type: url
+      required: true
+      doc: >
+        Canonical YouTube URL. Only 5 of 57 .md files carried this; the rest are
+        filled from the episode page's stable `a#ep_lnk_yt` anchor. NOTE: pages
+        contain many other youtube.com links inside the show notes, so a bare
+        regex over the page is WRONG — the id-anchored selector is what makes
+        this unambiguous.
+      sources:
+        - kind: md_label
+          labels: [YOUTUBE, Youtube, YouTube, Video, VIDEO]
+        - kind: site
+          selector: 'a#ep_lnk_yt'
+      normalize: [youtube_canonical]
+
+    - name: youtube_video_id
+      type: scalar
+      required: false
+      doc: Derived from youtube_url; the 11-char video ID.
+      sources:
+        - kind: derived
+          from: youtube_url
+          extract: youtube_id
+
+    - name: spotify_url
+      type: url
+      required: false
+      sources:
+        - kind: site
+          selector: 'a#ep_lnk_sp'
+
+    - name: apple_podcasts_url
+      type: url
+      required: false
+      sources:
+        - kind: site
+          selector: 'a#ep_lnk_am'
+
+    - name: podlink_url
+      type: url
+      required: false
+      sources:
+        - kind: site
+          selector: 'a#ep_lnk_pl'
+
+    - name: podcast_mp3_url
+      type: url
+      required: false
+      doc: >
+        Direct audio URL for episodes that are AUDIO-ONLY — never published to
+        YouTube. Roughly 28 interviews from Jan 2022 - Feb 2023 (episodes 5-56)
+        are like this: their pages embed a Libsyn player instead of a video, and
+        searching YouTube for them returns only short CLIPS uploaded months
+        later, which is why `youtube_url` is legitimately absent rather than
+        merely unfound.
+
+        Supplied by hand via manual_overrides.yaml (MJSullivan collected these
+        2026-08-21) rather than scraped. Kept in the override file, which is
+        git-tracked, because the emitted records under out_txt/ are gitignored
+        and rebuilt from scratch on every run — a value living only there would
+        be destroyed by the next build.
+      sources:
+        - kind: manual_override
+          key: podcast_mp3_url
+
+    - name: transcript_pdf_url
+      type: url
+      required: false
+      doc: The site's downloadable transcript PDF (mirrored under transcripts_raw/).
+      sources:
+        - kind: site
+          selector: 'a#dl_transcript'
+        - kind: manifest
+          column: transcript_url
+
+    # ---------- dates ----------
+    - name: published_date
+      type: date
+      required: true
+      doc: Publication date, normalized to ISO 8601 from the site's "Mon D, YYYY".
+      sources:
+        - kind: md_block
+          block: meta
+          extract: published_date
+        - kind: md_label
+          labels: [PUBLISHED, PUBLISHED ON]
+        - kind: site
+          selector: '.post_meta'
+          extract: published_date
+      normalize: [to_iso_date]
+
+    - name: recorded_date
+      type: date
+      required: false
+      doc: >
+        "Recorded on:" date. Present for 53/57 .md files; absent for the 4
+        animated Videos (which have no recording date) and Frankly-154.
+      sources:
+        - kind: md_block
+          block: meta
+          extract: recorded_date
+        - kind: site
+          selector: '.post_meta'
+          extract: recorded_date
+      normalize: [to_iso_date]
+
+    - name: duration_seconds
+      type: scalar
+      required: false
+      doc: >
+        Runtime in seconds, read off the YouTube watch page. Not present in any
+        .md file; picked up because it comes free with the YouTube fetch and is
+        useful for querying (e.g. "Franklys under 15 minutes").
+      sources:
+        - kind: site
+          selector: youtube:lengthSeconds
+
+    # ---------- classification ----------
+    - name: keywords
+      type: list
+      required: false
+      doc: >
+        Site topic tags. Split against `keyword_vocabulary` to undo the
+        run-together copy-paste artifact described above.
+      sources:
+        - kind: md_block
+          block: meta
+          extract: keywords
+        - kind: site
+          selector: '.post_tags .pill'
+      normalize: [split_keyword_vocabulary, dedupe]
+
+    # ---------- people ----------
+    - name: host
+      type: scalar
+      required: false
+      default: Nate Hagens
+
+    - name: guests
+      type: list
+      required: false
+      doc: >
+        Guest names, merged from every available signal rather than taken from
+        one, because no single signal covers the corpus:
+          - "About <Name>" bio headings in the .md — present on most interviews
+            and roundtables, but never on a Frankly.
+          - the page's `.post_meta h3` byline — carries guests on interviews and
+            roundtables, but reads just "Nate Hagens" on Franklys.
+          - a "with <Name>" suffix in the title — the channel's convention for a
+            featured guest, and the ONLY signal for a guest-featuring Frankly
+            (e.g. Frankly 20, "Staying Warm Data with Nora Bateson").
+        Do NOT assume Franklys are solo: most are, but some feature a guest, and
+        for those the title is the only place the guest is named.
+        Any name equal to `host` is dropped — Nate is not his own guest.
+      sources:
+        - kind: md_block
+          block: about
+          extract: guest_names
+        - kind: site
+          selector: '.post_meta h3'
+        - kind: derived
+          from: title
+          extract: guests_from_title
+      normalize: [split_names, dedupe]
+
+    - name: guest_bios
+      type: list
+      required: false
+      doc: One {name, bio} entry per "About <Name>" section found in the .md.
+      sources:
+        - kind: md_block
+          block: about
+          extract: guest_bios
+
+    - name: credits
+      type: list
+      required: false
+      doc: >
+        {role, name} pairs from the "## Credits" block. Only the 4 animated
+        Videos have these (Executive Producer, Creative Director, etc.).
+      sources:
+        - kind: md_block
+          block: credits
+
+    # ---------- prose ----------
+    - name: description
+      type: text
+      required: true
+      doc: >
+        The show-notes description/summary prose. Heading spelling varies across
+        the corpus: "## Description", "Description", "Show Summary", or no
+        heading at all (bare paragraphs after the SHOW NOTES marker).
+      sources:
+        - kind: md_block
+          block: description
+        - kind: site
+          selector: '.wp-block-paragraph'
+      normalize: [collapse_blank_lines]
+
+    - name: disclaimer
+      type: text
+      required: false
+      doc: The boilerplate "The TGS team puts together these brief references..." note.
+      sources:
+        - kind: md_block
+          block: disclaimer
+
+    # ---------- show notes ----------
+    - name: show_notes
+      type: table
+      required: false
+      doc: >
+        The timestamped show-notes index. Emitted as a list of
+        {timestamp, seconds, topic, links[]} rows. Three distinct layouts exist
+        in the corpus and all three are parsed:
+          A. markdown table  -> | 00:30 | Topic | [Label](url), [Label](url) |
+          B. plain lines     -> "00:09 - Topic" followed by indented bare URLs
+          C. bare lines      -> "00:00 - Topic" with NO links at all
+        Layout C is the real gap: the topics were transcribed but the site's
+        hyperlinks were lost. Those rows are filled from the page's `#epi_notes`
+        block, matched to the existing rows BY TIMESTAMP so hand-typed topic
+        wording is preserved.
+      sources:
+        - kind: md_block
+          block: show_notes
+        - kind: site
+          selector: '#epi_notes'
+
+    - name: show_notes_layout
+      type: scalar
+      required: false
+      doc: Which of layouts A/B/C this file used — diagnostic for the gap report.
+      sources:
+        - kind: derived
+          from: show_notes
+          extract: layout
+
+    # ---------- transcript ----------
+    - name: transcript
+      type: text
+      required: false
+      doc: >
+        Full transcript text after the "# TRANSCRIPT" marker. Excluded from
+        emitted records unless --with-transcript is passed, to keep the shaped
+        output small and to keep copyrighted full text out of committed files
+        (consistent with this repo's standing copyright discipline).
+      emit: opt_in
+      sources:
+        - kind: md_block
+          block: transcript
+
+    - name: transcript_turns
+      type: table
+      required: false
+      doc: >
+        Parsed speaker turns, as {speaker, timestamp, seconds, text}. Only files
+        whose transcript uses the "Speaker [MM:SS]: text" convention yield these.
+      emit: opt_in
+      sources:
+        - kind: derived
+          from: transcript
+          extract: speaker_turns
+
+    - name: transcript_chapters
+      type: table
+      required: false
+      doc: >
+        "## Chapter N: Title" headings found in the transcript, as
+        {index, title, heading}. For the handful of transcripts that carry no
+        speaker labels at all (Frankly 80/151, RR-13, Frankly-047 - continuous
+        prose broken only by chapter headings) these are the only navigational
+        structure available, so they are captured even though most files rely on
+        transcript_turns instead.
+      sources:
+        - kind: derived
+          from: transcript
+          extract: chapters
+
+    - name: transcript_speakers
+      type: list
+      required: false
+      doc: >
+        Distinct PEOPLE heard in transcript_turns — a person index, so labels
+        from `non_person_speakers` ("Voiceover", "Outro", ...) are filtered out.
+        Those turns remain in transcript_turns; only the attribution is dropped,
+        so no spoken text is lost. Also excludes turns with no speaker label at
+        all (the solo Franklys timestamped without one).
+      sources:
+        - kind: derived
+          from: transcript_turns
+          extract: speakers
+
+    # ---------- integrity ----------
+    - name: source_file
+      type: scalar
+      required: true
+      sources:
+        - kind: md_filename
+          pattern: '^(?P<source_file>.+)$'
+
+    - name: source_sha256
+      type: scalar
+      required: false
+      doc: Hash of the .md bytes, so downstream loads can detect source drift.
+      sources:
+        - kind: derived
+          extract: source_sha256
+
+    - name: had_nul_bytes
+      type: scalar
+      required: false
+      doc: >
+        True if the .md contained stray NUL (0x00) bytes — an artifact of
+        copy-pasting out of the source PDFs. Harmless to Python but it makes
+        grep treat the file as binary and silently skip it, which is how this
+        corpus hid 25 files from the first survey pass. Worth knowing about.
+      sources:
+        - kind: derived
+          extract: had_nul_bytes
