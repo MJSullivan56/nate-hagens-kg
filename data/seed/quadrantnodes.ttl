@@ -1,0 +1,498 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# ADDED 2026-08-22 — QuadrantNode lookup system. Replaces live cosine-
+# similarity computation with precomputed Euclidean-distance lookup, per
+# MJSullivan's own design (see backlog.md). 49 nodes = every integer
+# (x,y) pair on a 0-6 grid with (0,0) at the LOWER-LEFT corner —
+# deliberately NOT centered on origin the way ScenarioFacet's own
+# positions once were; MJSullivan's explicit correction 2026-08-22,
+# after an earlier draft of this file mistakenly used the old -3..3
+# values. thinkr:hasXPosition/hasYPosition reused directly from
+# ScenarioFacet (domain restriction removed from both in tgs-core.ttl
+# for exactly this reason) — ScenarioFacet's own real positions were
+# MIGRATED to this same 0-6 scheme in the same pass (simple +3 shift;
+# the 24 disjointness/divergence relationships were verified programmatically
+# unchanged by the shift before applying it, since it's a pure relabeling,
+# not a structural change).
+#############################################
+
+thinkr:QuadrantNode a owl:Class ;
+    rdfs:comment "One of the 49 precomputed lookup points on the real 0-6 grid (7x7), origin (0,0) at the lower-left corner. Each carries its own real hasXPosition/hasYPosition plus precomputed Euclidean distance to each of the 4 real corner positions (QuadrantNode.11/.51/.15/.55), which the 16 real ScenarioFacets are linked to via thinkr:hasQuadrantNode. An arbitrary point (e.g. a classified news article) can be compared to any ScenarioFacet via a direct table lookup rather than live computation."@en ;
+    skos:prefLabel "Quadrant Node"@en .
+
+thinkr:hasQuadrantNode a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range thinkr:QuadrantNode ;
+    rdfs:comment "Links a real ScenarioFacet to its corresponding precomputed QuadrantNode (matching hasXPosition/hasYPosition), enabling Euclidean-distance lookup instead of live computation."@en ;
+    skos:prefLabel "has quadrant node"@en .
+
+thinkr:hasDistanceToQN11 a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (1,1) (0-6 grid, lower-left origin)."@en ;
+    skos:prefLabel "hasDistanceToQN11"@en .
+
+thinkr:hasDistanceToQN15 a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (1,5) (0-6 grid, lower-left origin)."@en ;
+    skos:prefLabel "hasDistanceToQN15"@en .
+
+thinkr:hasDistanceToQN51 a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (5,1) (0-6 grid, lower-left origin)."@en ;
+    skos:prefLabel "hasDistanceToQN51"@en .
+
+thinkr:hasDistanceToQN55 a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (5,5) (0-6 grid, lower-left origin)."@en ;
+    skos:prefLabel "hasDistanceToQN55"@en .
+
+tgs:QuadrantNode.00 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "7.07"^^xsd:decimal ;
+    skos:prefLabel "(0,0)"@en .
+
+tgs:QuadrantNode.10 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "6.40"^^xsd:decimal ;
+    skos:prefLabel "(1,0)"@en .
+
+tgs:QuadrantNode.20 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.83"^^xsd:decimal ;
+    skos:prefLabel "(2,0)"@en .
+
+tgs:QuadrantNode.30 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.39"^^xsd:decimal ;
+    skos:prefLabel "(3,0)"@en .
+
+tgs:QuadrantNode.40 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.10"^^xsd:decimal ;
+    skos:prefLabel "(4,0)"@en .
+
+tgs:QuadrantNode.50 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.00"^^xsd:decimal ;
+    skos:prefLabel "(5,0)"@en .
+
+tgs:QuadrantNode.60 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 0 ;
+    thinkr:hasDistanceToQN11 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "7.07"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.10"^^xsd:decimal ;
+    skos:prefLabel "(6,0)"@en .
+
+tgs:QuadrantNode.01 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "6.40"^^xsd:decimal ;
+    skos:prefLabel "(0,1)"@en .
+
+tgs:QuadrantNode.11 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "0.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.66"^^xsd:decimal ;
+    skos:prefLabel "(1,1)"@en .
+
+tgs:QuadrantNode.21 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.00"^^xsd:decimal ;
+    skos:prefLabel "(2,1)"@en .
+
+tgs:QuadrantNode.31 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.47"^^xsd:decimal ;
+    skos:prefLabel "(3,1)"@en .
+
+tgs:QuadrantNode.41 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.12"^^xsd:decimal ;
+    skos:prefLabel "(4,1)"@en .
+
+tgs:QuadrantNode.51 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.66"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "0.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.00"^^xsd:decimal ;
+    skos:prefLabel "(5,1)"@en .
+
+tgs:QuadrantNode.61 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 1 ;
+    thinkr:hasDistanceToQN11 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.12"^^xsd:decimal ;
+    skos:prefLabel "(6,1)"@en .
+
+tgs:QuadrantNode.02 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.83"^^xsd:decimal ;
+    skos:prefLabel "(0,2)"@en .
+
+tgs:QuadrantNode.12 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.00"^^xsd:decimal ;
+    skos:prefLabel "(1,2)"@en .
+
+tgs:QuadrantNode.22 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.24"^^xsd:decimal ;
+    skos:prefLabel "(2,2)"@en .
+
+tgs:QuadrantNode.32 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.61"^^xsd:decimal ;
+    skos:prefLabel "(3,2)"@en .
+
+tgs:QuadrantNode.42 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.16"^^xsd:decimal ;
+    skos:prefLabel "(4,2)"@en .
+
+tgs:QuadrantNode.52 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.00"^^xsd:decimal ;
+    skos:prefLabel "(5,2)"@en .
+
+tgs:QuadrantNode.62 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 2 ;
+    thinkr:hasDistanceToQN11 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.16"^^xsd:decimal ;
+    skos:prefLabel "(6,2)"@en .
+
+tgs:QuadrantNode.03 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.39"^^xsd:decimal ;
+    skos:prefLabel "(0,3)"@en .
+
+tgs:QuadrantNode.13 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.47"^^xsd:decimal ;
+    skos:prefLabel "(1,3)"@en .
+
+tgs:QuadrantNode.23 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.61"^^xsd:decimal ;
+    skos:prefLabel "(2,3)"@en .
+
+tgs:QuadrantNode.33 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "2.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.83"^^xsd:decimal ;
+    skos:prefLabel "(3,3)"@en .
+
+tgs:QuadrantNode.43 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.24"^^xsd:decimal ;
+    skos:prefLabel "(4,3)"@en .
+
+tgs:QuadrantNode.53 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.00"^^xsd:decimal ;
+    skos:prefLabel "(5,3)"@en .
+
+tgs:QuadrantNode.63 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 3 ;
+    thinkr:hasDistanceToQN11 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.24"^^xsd:decimal ;
+    skos:prefLabel "(6,3)"@en .
+
+tgs:QuadrantNode.04 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.10"^^xsd:decimal ;
+    skos:prefLabel "(0,4)"@en .
+
+tgs:QuadrantNode.14 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.12"^^xsd:decimal ;
+    skos:prefLabel "(1,4)"@en .
+
+tgs:QuadrantNode.24 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.16"^^xsd:decimal ;
+    skos:prefLabel "(2,4)"@en .
+
+tgs:QuadrantNode.34 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.61"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.24"^^xsd:decimal ;
+    skos:prefLabel "(3,4)"@en .
+
+tgs:QuadrantNode.44 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "4.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.41"^^xsd:decimal ;
+    skos:prefLabel "(4,4)"@en .
+
+tgs:QuadrantNode.54 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.00"^^xsd:decimal ;
+    skos:prefLabel "(5,4)"@en .
+
+tgs:QuadrantNode.64 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 4 ;
+    thinkr:hasDistanceToQN11 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.41"^^xsd:decimal ;
+    skos:prefLabel "(6,4)"@en .
+
+tgs:QuadrantNode.05 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.00"^^xsd:decimal ;
+    skos:prefLabel "(0,5)"@en .
+
+tgs:QuadrantNode.15 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "0.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.66"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.00"^^xsd:decimal ;
+    skos:prefLabel "(1,5)"@en .
+
+tgs:QuadrantNode.25 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.00"^^xsd:decimal ;
+    skos:prefLabel "(2,5)"@en .
+
+tgs:QuadrantNode.35 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.47"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.00"^^xsd:decimal ;
+    skos:prefLabel "(3,5)"@en .
+
+tgs:QuadrantNode.45 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.00"^^xsd:decimal ;
+    skos:prefLabel "(4,5)"@en .
+
+tgs:QuadrantNode.55 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "5.66"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "0.00"^^xsd:decimal ;
+    skos:prefLabel "(5,5)"@en .
+
+tgs:QuadrantNode.65 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 5 ;
+    thinkr:hasDistanceToQN11 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.00"^^xsd:decimal ;
+    skos:prefLabel "(6,5)"@en .
+
+tgs:QuadrantNode.06 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "7.07"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "5.10"^^xsd:decimal ;
+    skos:prefLabel "(0,6)"@en .
+
+tgs:QuadrantNode.16 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "4.12"^^xsd:decimal ;
+    skos:prefLabel "(1,6)"@en .
+
+tgs:QuadrantNode.26 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "1.41"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "3.16"^^xsd:decimal ;
+    skos:prefLabel "(2,6)"@en .
+
+tgs:QuadrantNode.36 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "2.24"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.39"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "2.24"^^xsd:decimal ;
+    skos:prefLabel "(3,6)"@en .
+
+tgs:QuadrantNode.46 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "5.83"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "3.16"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.41"^^xsd:decimal ;
+    skos:prefLabel "(4,6)"@en .
+
+tgs:QuadrantNode.56 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "6.40"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "4.12"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.00"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.00"^^xsd:decimal ;
+    skos:prefLabel "(5,6)"@en .
+
+tgs:QuadrantNode.66 a thinkr:QuadrantNode, owl:NamedIndividual ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 6 ;
+    thinkr:hasDistanceToQN11 "7.07"^^xsd:decimal ;
+    thinkr:hasDistanceToQN15 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN51 "5.10"^^xsd:decimal ;
+    thinkr:hasDistanceToQN55 "1.41"^^xsd:decimal ;
+    skos:prefLabel "(6,6)"@en .

@@ -459,15 +459,13 @@ thinkr:hasIndicatorCategory a owl:ObjectProperty ;
 #############################################
 
 thinkr:hasXPosition a owl:DatatypeProperty, owl:FunctionalProperty ; # added to test inferencing
-    rdfs:domain thinkr:ScenarioFacet ;
     rdfs:range xsd:integer ;
-    rdfs:comment "-3 to 3 — this Facet's position along its Dimension's X sub-axis, a genuine continuum centered on a true origin (0,0), per MJSullivan's explicit revision (2026-08-13): recentering (from an earlier all-positive 1-5 continuum) makes cosine similarity from the origin mathematically well-behaved for grid queries — diagonal-opposite Facets now compute to exactly -1.0 (perfect negative correlation, correctly matching thinkr:diagonallyDisjointWith), single-axis-divergent pairs to exactly 0.0 (orthogonal), verified by direct computation before adopting. -3 and 3 = the most extreme conceivable positions (not currently populated by any real Facet — reserved, not asserted). 0 = the genuine midpoint/neutral point (also not currently populated). -2 and 2 = the 16 currently-modeled ScenarioFacets, each one step in from a true extreme, matching how they're actually described in the source material. REVISED from the prior 1-5 continuum via simple value substitution (2->-2, 4->2) — only those 2 values were ever populated by real data, so no complex transform was needed; the facet-code lettering and all 4 named Scenario IRIs are unaffected. See the owning ScenarioDimension's xAxisLowLabel/xAxisHighLabel for the GENERAL direction these values point in (not per-value labels — only 2 of 7 possible values are currently populated)."@en ;
+    rdfs:comment "0 to 6 — a position along an X sub-axis, with (0,0) at the LOWER-LEFT corner (NOT centered on origin). REVISED 2026-08-22 (second revision this same day): MJSullivan's explicit correction — the earlier same-day recentering to a -3..3 continuum, made specifically to support live cosine-similarity computation from a true center, is now itself superseded: grid comparison moved from cosine to precomputed Euclidean-distance lookup via the new thinkr:QuadrantNode (49 individuals, one per integer grid position), for which a lower-left, all-positive 0-6 scheme is simpler and was the original design intent. thinkr:ScenarioFacet's own 16 real positions were migrated to this same 0-6 scheme via a simple +3 shift (old -2/2 -> new 1/5); the 24 disjointness/divergence relationships were verified programmatically unchanged by the shift before applying it, since a pure shift preserves every relative same/different relationship. rdfs:domain deliberately left absent — this property is shared between thinkr:ScenarioFacet and thinkr:QuadrantNode, and a domain restriction would incorrectly force every QuadrantNode to also be inferred as a ScenarioFacet. See quadrantnodes.ttl and backlog.md for the full design and decision history."@en ;
     skos:prefLabel "has X position"@en .
 
 thinkr:hasYPosition a owl:DatatypeProperty, owl:FunctionalProperty ;  # added to test inferencing
-    rdfs:domain thinkr:ScenarioFacet ;
     rdfs:range xsd:integer ;
-    rdfs:comment "-3 to 3 — this Facet's position along its Dimension's Y sub-axis. Same recentered continuum design as thinkr:hasXPosition — see its own rdfs:comment for the full reasoning."@en ;
+    rdfs:comment "0 to 6 — a position along a Y sub-axis, with (0,0) at the LOWER-LEFT corner. Same 0-6, domain-shared design as thinkr:hasXPosition — see its own rdfs:comment for the full reasoning and decision history."@en ;
     skos:prefLabel "has Y position"@en .
 
 thinkr:hasFacetCode a owl:DatatypeProperty ;
@@ -478,26 +476,26 @@ thinkr:hasFacetCode a owl:DatatypeProperty ;
 
 thinkr:xAxisLowLabel a owl:DatatypeProperty ; 
     rdfs:domain thinkr:ScenarioDimension ; 
-    rdfs:range xsd:langString ;
-    rdfs:comment "What the LOW side of this Dimension's X sub-axis means semantically — the direction values -3 to -2 point in on the -3 to 3 continuum (see thinkr:hasXPosition). Currently only value -2 is populated by a real Facet; -3 is reserved for a more extreme case not yet in any real source material."@en ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "What the LOW side of this Dimension's X sub-axis means semantically — the direction values 0-1 point in on the 0-6, lower-left-origin continuum (see thinkr:hasXPosition, migrated 2026-08-22 from the earlier -3..3 centered scheme). Currently only value 1 is populated by a real Facet; 0 is reserved for a more extreme case not yet in any real source material."@en ;
     skos:prefLabel "X axis low label"@en .
 
 thinkr:xAxisHighLabel a owl:DatatypeProperty ; 
     rdfs:domain thinkr:ScenarioDimension ; 
-    rdfs:range xsd:langString ;
-    rdfs:comment "What the HIGH side of this Dimension's X sub-axis means semantically — the direction values 2-3 point in on the -3 to 3 continuum. Currently only value 2 is populated; 3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "What the HIGH side of this Dimension's X sub-axis means semantically — the direction values 5-6 point in on the 0-6, lower-left-origin continuum. Currently only value 5 is populated; 6 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     skos:prefLabel "X axis high label"@en .
 
 thinkr:yAxisLowLabel a owl:DatatypeProperty ; 
     rdfs:domain thinkr:ScenarioDimension ; 
-    rdfs:range xsd:langString ;
-    rdfs:comment "What the LOW side of this Dimension's Y sub-axis means semantically — the direction values -3 to -2 point in on the -3 to 3 continuum. Currently only value -2 is populated; -3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "What the LOW side of this Dimension's Y sub-axis means semantically — the direction values 0-1 point in on the 0-6, lower-left-origin continuum. Currently only value 1 is populated; 0 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     skos:prefLabel "Y axis low label"@en .
 
 thinkr:yAxisHighLabel a owl:DatatypeProperty ; 
     rdfs:domain thinkr:ScenarioDimension ; 
-    rdfs:range xsd:langString ;
-    rdfs:comment "What the HIGH side of this Dimension's Y sub-axis means semantically — the direction values 2-3 point in on the -3 to 3 continuum. Currently only value 2 is populated; 3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "What the HIGH side of this Dimension's Y sub-axis means semantically — the direction values 5-6 point in on the 0-6, lower-left-origin continuum. Currently only value 5 is populated; 6 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     skos:prefLabel "Y axis high label"@en .
 
 #############################################

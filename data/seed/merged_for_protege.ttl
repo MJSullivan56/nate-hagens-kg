@@ -1199,6 +1199,456 @@ tgs:PersonalIntervention.WriteDownYourEnough a thinkr:PersonalIntervention,
     skos:definition "Explicitly defining, in writing, what 'enough' actually looks like — income, housing, status, possessions — then bringing fixed costs down toward that real number, letting the freed gap become real biophysical spaciousness rather than something to fill with more. Hagens' own direct claim: once a person knows their own enough at a gut level, 'Moloch and the superorganism growth machine lose some of their power' over them."@en ;
     skos:prefLabel "Write Down Your Enough"@en .
 
+tgs:QuadrantNode.00 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.41 ;
+    thinkr:hasDistanceToQN15 5.10 ;
+    thinkr:hasDistanceToQN51 5.10 ;
+    thinkr:hasDistanceToQN55 7.07 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(0,0)"@en .
+
+tgs:QuadrantNode.01 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.00 ;
+    thinkr:hasDistanceToQN15 4.12 ;
+    thinkr:hasDistanceToQN51 5.00 ;
+    thinkr:hasDistanceToQN55 6.40 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(0,1)"@en .
+
+tgs:QuadrantNode.02 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.41 ;
+    thinkr:hasDistanceToQN15 3.16 ;
+    thinkr:hasDistanceToQN51 5.10 ;
+    thinkr:hasDistanceToQN55 5.83 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(0,2)"@en .
+
+tgs:QuadrantNode.03 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.24 ;
+    thinkr:hasDistanceToQN15 2.24 ;
+    thinkr:hasDistanceToQN51 5.39 ;
+    thinkr:hasDistanceToQN55 5.39 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(0,3)"@en .
+
+tgs:QuadrantNode.04 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.16 ;
+    thinkr:hasDistanceToQN15 1.41 ;
+    thinkr:hasDistanceToQN51 5.83 ;
+    thinkr:hasDistanceToQN55 5.10 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(0,4)"@en .
+
+tgs:QuadrantNode.05 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.12 ;
+    thinkr:hasDistanceToQN15 1.00 ;
+    thinkr:hasDistanceToQN51 6.40 ;
+    thinkr:hasDistanceToQN55 5.00 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(0,5)"@en .
+
+tgs:QuadrantNode.06 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.10 ;
+    thinkr:hasDistanceToQN15 1.41 ;
+    thinkr:hasDistanceToQN51 7.07 ;
+    thinkr:hasDistanceToQN55 5.10 ;
+    thinkr:hasXPosition 0 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(0,6)"@en .
+
+tgs:QuadrantNode.10 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.00 ;
+    thinkr:hasDistanceToQN15 5.00 ;
+    thinkr:hasDistanceToQN51 4.12 ;
+    thinkr:hasDistanceToQN55 6.40 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(1,0)"@en .
+
+tgs:QuadrantNode.12 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.00 ;
+    thinkr:hasDistanceToQN15 3.00 ;
+    thinkr:hasDistanceToQN51 4.12 ;
+    thinkr:hasDistanceToQN55 5.00 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(1,2)"@en .
+
+tgs:QuadrantNode.13 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.00 ;
+    thinkr:hasDistanceToQN15 2.00 ;
+    thinkr:hasDistanceToQN51 4.47 ;
+    thinkr:hasDistanceToQN55 4.47 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(1,3)"@en .
+
+tgs:QuadrantNode.14 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.00 ;
+    thinkr:hasDistanceToQN15 1.00 ;
+    thinkr:hasDistanceToQN51 5.00 ;
+    thinkr:hasDistanceToQN55 4.12 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(1,4)"@en .
+
+tgs:QuadrantNode.16 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.00 ;
+    thinkr:hasDistanceToQN15 1.00 ;
+    thinkr:hasDistanceToQN51 6.40 ;
+    thinkr:hasDistanceToQN55 4.12 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(1,6)"@en .
+
+tgs:QuadrantNode.20 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.41 ;
+    thinkr:hasDistanceToQN15 5.10 ;
+    thinkr:hasDistanceToQN51 3.16 ;
+    thinkr:hasDistanceToQN55 5.83 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(2,0)"@en .
+
+tgs:QuadrantNode.21 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.00 ;
+    thinkr:hasDistanceToQN15 4.12 ;
+    thinkr:hasDistanceToQN51 3.00 ;
+    thinkr:hasDistanceToQN55 5.00 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(2,1)"@en .
+
+tgs:QuadrantNode.22 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 1.41 ;
+    thinkr:hasDistanceToQN15 3.16 ;
+    thinkr:hasDistanceToQN51 3.16 ;
+    thinkr:hasDistanceToQN55 4.24 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(2,2)"@en .
+
+tgs:QuadrantNode.23 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.24 ;
+    thinkr:hasDistanceToQN15 2.24 ;
+    thinkr:hasDistanceToQN51 3.61 ;
+    thinkr:hasDistanceToQN55 3.61 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(2,3)"@en .
+
+tgs:QuadrantNode.24 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.16 ;
+    thinkr:hasDistanceToQN15 1.41 ;
+    thinkr:hasDistanceToQN51 4.24 ;
+    thinkr:hasDistanceToQN55 3.16 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(2,4)"@en .
+
+tgs:QuadrantNode.25 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.12 ;
+    thinkr:hasDistanceToQN15 1.00 ;
+    thinkr:hasDistanceToQN51 5.00 ;
+    thinkr:hasDistanceToQN55 3.00 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(2,5)"@en .
+
+tgs:QuadrantNode.26 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.10 ;
+    thinkr:hasDistanceToQN15 1.41 ;
+    thinkr:hasDistanceToQN51 5.83 ;
+    thinkr:hasDistanceToQN55 3.16 ;
+    thinkr:hasXPosition 2 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(2,6)"@en .
+
+tgs:QuadrantNode.30 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.24 ;
+    thinkr:hasDistanceToQN15 5.39 ;
+    thinkr:hasDistanceToQN51 2.24 ;
+    thinkr:hasDistanceToQN55 5.39 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(3,0)"@en .
+
+tgs:QuadrantNode.31 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.00 ;
+    thinkr:hasDistanceToQN15 4.47 ;
+    thinkr:hasDistanceToQN51 2.00 ;
+    thinkr:hasDistanceToQN55 4.47 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(3,1)"@en .
+
+tgs:QuadrantNode.32 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.24 ;
+    thinkr:hasDistanceToQN15 3.61 ;
+    thinkr:hasDistanceToQN51 2.24 ;
+    thinkr:hasDistanceToQN55 3.61 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(3,2)"@en .
+
+tgs:QuadrantNode.33 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 2.83 ;
+    thinkr:hasDistanceToQN15 2.83 ;
+    thinkr:hasDistanceToQN51 2.83 ;
+    thinkr:hasDistanceToQN55 2.83 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(3,3)"@en .
+
+tgs:QuadrantNode.34 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.61 ;
+    thinkr:hasDistanceToQN15 2.24 ;
+    thinkr:hasDistanceToQN51 3.61 ;
+    thinkr:hasDistanceToQN55 2.24 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(3,4)"@en .
+
+tgs:QuadrantNode.35 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.47 ;
+    thinkr:hasDistanceToQN15 2.00 ;
+    thinkr:hasDistanceToQN51 4.47 ;
+    thinkr:hasDistanceToQN55 2.00 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(3,5)"@en .
+
+tgs:QuadrantNode.36 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.39 ;
+    thinkr:hasDistanceToQN15 2.24 ;
+    thinkr:hasDistanceToQN51 5.39 ;
+    thinkr:hasDistanceToQN55 2.24 ;
+    thinkr:hasXPosition 3 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(3,6)"@en .
+
+tgs:QuadrantNode.40 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.16 ;
+    thinkr:hasDistanceToQN15 5.83 ;
+    thinkr:hasDistanceToQN51 1.41 ;
+    thinkr:hasDistanceToQN55 5.10 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(4,0)"@en .
+
+tgs:QuadrantNode.41 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.00 ;
+    thinkr:hasDistanceToQN15 5.00 ;
+    thinkr:hasDistanceToQN51 1.00 ;
+    thinkr:hasDistanceToQN55 4.12 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(4,1)"@en .
+
+tgs:QuadrantNode.42 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.16 ;
+    thinkr:hasDistanceToQN15 4.24 ;
+    thinkr:hasDistanceToQN51 1.41 ;
+    thinkr:hasDistanceToQN55 3.16 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(4,2)"@en .
+
+tgs:QuadrantNode.43 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 3.61 ;
+    thinkr:hasDistanceToQN15 3.61 ;
+    thinkr:hasDistanceToQN51 2.24 ;
+    thinkr:hasDistanceToQN55 2.24 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(4,3)"@en .
+
+tgs:QuadrantNode.44 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.24 ;
+    thinkr:hasDistanceToQN15 3.16 ;
+    thinkr:hasDistanceToQN51 3.16 ;
+    thinkr:hasDistanceToQN55 1.41 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(4,4)"@en .
+
+tgs:QuadrantNode.45 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.00 ;
+    thinkr:hasDistanceToQN15 3.00 ;
+    thinkr:hasDistanceToQN51 4.12 ;
+    thinkr:hasDistanceToQN55 1.00 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(4,5)"@en .
+
+tgs:QuadrantNode.46 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.83 ;
+    thinkr:hasDistanceToQN15 3.16 ;
+    thinkr:hasDistanceToQN51 5.10 ;
+    thinkr:hasDistanceToQN55 1.41 ;
+    thinkr:hasXPosition 4 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(4,6)"@en .
+
+tgs:QuadrantNode.50 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.12 ;
+    thinkr:hasDistanceToQN15 6.40 ;
+    thinkr:hasDistanceToQN51 1.00 ;
+    thinkr:hasDistanceToQN55 5.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(5,0)"@en .
+
+tgs:QuadrantNode.52 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.12 ;
+    thinkr:hasDistanceToQN15 5.00 ;
+    thinkr:hasDistanceToQN51 1.00 ;
+    thinkr:hasDistanceToQN55 3.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(5,2)"@en .
+
+tgs:QuadrantNode.53 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.47 ;
+    thinkr:hasDistanceToQN15 4.47 ;
+    thinkr:hasDistanceToQN51 2.00 ;
+    thinkr:hasDistanceToQN55 2.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(5,3)"@en .
+
+tgs:QuadrantNode.54 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.00 ;
+    thinkr:hasDistanceToQN15 4.12 ;
+    thinkr:hasDistanceToQN51 3.00 ;
+    thinkr:hasDistanceToQN55 1.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(5,4)"@en .
+
+tgs:QuadrantNode.56 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 6.40 ;
+    thinkr:hasDistanceToQN15 4.12 ;
+    thinkr:hasDistanceToQN51 5.00 ;
+    thinkr:hasDistanceToQN55 1.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(5,6)"@en .
+
+tgs:QuadrantNode.60 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.10 ;
+    thinkr:hasDistanceToQN15 7.07 ;
+    thinkr:hasDistanceToQN51 1.41 ;
+    thinkr:hasDistanceToQN55 5.10 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 0 ;
+    skos:prefLabel "(6,0)"@en .
+
+tgs:QuadrantNode.61 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.00 ;
+    thinkr:hasDistanceToQN15 6.40 ;
+    thinkr:hasDistanceToQN51 1.00 ;
+    thinkr:hasDistanceToQN55 4.12 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(6,1)"@en .
+
+tgs:QuadrantNode.62 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.10 ;
+    thinkr:hasDistanceToQN15 5.83 ;
+    thinkr:hasDistanceToQN51 1.41 ;
+    thinkr:hasDistanceToQN55 3.16 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 2 ;
+    skos:prefLabel "(6,2)"@en .
+
+tgs:QuadrantNode.63 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.39 ;
+    thinkr:hasDistanceToQN15 5.39 ;
+    thinkr:hasDistanceToQN51 2.24 ;
+    thinkr:hasDistanceToQN55 2.24 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 3 ;
+    skos:prefLabel "(6,3)"@en .
+
+tgs:QuadrantNode.64 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.83 ;
+    thinkr:hasDistanceToQN15 5.10 ;
+    thinkr:hasDistanceToQN51 3.16 ;
+    thinkr:hasDistanceToQN55 1.41 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 4 ;
+    skos:prefLabel "(6,4)"@en .
+
+tgs:QuadrantNode.65 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 6.40 ;
+    thinkr:hasDistanceToQN15 5.00 ;
+    thinkr:hasDistanceToQN51 4.12 ;
+    thinkr:hasDistanceToQN55 1.00 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(6,5)"@en .
+
+tgs:QuadrantNode.66 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 7.07 ;
+    thinkr:hasDistanceToQN15 5.10 ;
+    thinkr:hasDistanceToQN51 5.10 ;
+    thinkr:hasDistanceToQN55 1.41 ;
+    thinkr:hasXPosition 6 ;
+    thinkr:hasYPosition 6 ;
+    skos:prefLabel "(6,6)"@en .
+
 tgs:Work.BioregionalFinancingFacilities a thinkr:Work,
         owl:NamedIndividual ;
     dct:creator tgs:Human.SamanthaPower ;
@@ -1404,6 +1854,34 @@ thinkr:hasDiscussionSummary a owl:DatatypeProperty ;
     rdfs:range rdf:langString ;
     skos:prefLabel "has discussion summary"@en .
 
+thinkr:hasDistanceToQN11 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (1,1) (0-6 grid, lower-left origin)."@en ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "hasDistanceToQN11"@en .
+
+thinkr:hasDistanceToQN15 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (1,5) (0-6 grid, lower-left origin)."@en ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "hasDistanceToQN15"@en .
+
+thinkr:hasDistanceToQN51 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (5,1) (0-6 grid, lower-left origin)."@en ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "hasDistanceToQN51"@en .
+
+thinkr:hasDistanceToQN55 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:comment "Precomputed Euclidean distance from this QuadrantNode to the real corner at (5,5) (0-6 grid, lower-left origin)."@en ;
+    rdfs:domain thinkr:QuadrantNode ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "hasDistanceToQN55"@en .
+
 thinkr:hasDoughnutHalf a owl:ObjectProperty ;
     rdfs:comment "Which of the 2 Doughnut halves (Social Foundation / Ecological Ceiling) this Category belongs to."@en ;
     rdfs:domain thinkr:IndicatorCategory ;
@@ -1565,6 +2043,13 @@ thinkr:hasProfessionalRelationship a owl:ObjectProperty ;
     skos:comment "Sibling of thinkr:hasPersonalRelationship, minted 2026-07-15 in the same retrofit — links a Persona to Relationship individuals whose thinkr:hasRelationshipType includes RelationshipType.Professional. See hasPersonalRelationship's own comment for the full family design and the Herrington case that surfaced the need for this split."@en ;
     skos:prefLabel "has professional relationship"@en .
 
+thinkr:hasQuadrantNode a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:comment "Links a real ScenarioFacet to its corresponding precomputed QuadrantNode (matching hasXPosition/hasYPosition), enabling Euclidean-distance lookup instead of live computation."@en ;
+    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:range thinkr:QuadrantNode ;
+    skos:prefLabel "has quadrant node"@en .
+
 thinkr:hasRelationshipType a owl:ObjectProperty ;
     rdfs:domain thinkr:Relationship ;
     rdfs:range thinkr:RelationshipType ;
@@ -1604,15 +2089,13 @@ thinkr:hasTranscript a owl:ObjectProperty ;
 
 thinkr:hasXPosition a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:comment "-3 to 3 — this Facet's position along its Dimension's X sub-axis, a genuine continuum centered on a true origin (0,0), per MJSullivan's explicit revision (2026-08-13): recentering (from an earlier all-positive 1-5 continuum) makes cosine similarity from the origin mathematically well-behaved for grid queries — diagonal-opposite Facets now compute to exactly -1.0 (perfect negative correlation, correctly matching thinkr:diagonallyDisjointWith), single-axis-divergent pairs to exactly 0.0 (orthogonal), verified by direct computation before adopting. -3 and 3 = the most extreme conceivable positions (not currently populated by any real Facet — reserved, not asserted). 0 = the genuine midpoint/neutral point (also not currently populated). -2 and 2 = the 16 currently-modeled ScenarioFacets, each one step in from a true extreme, matching how they're actually described in the source material. REVISED from the prior 1-5 continuum via simple value substitution (2->-2, 4->2) — only those 2 values were ever populated by real data, so no complex transform was needed; the facet-code lettering and all 4 named Scenario IRIs are unaffected. See the owning ScenarioDimension's xAxisLowLabel/xAxisHighLabel for the GENERAL direction these values point in (not per-value labels — only 2 of 7 possible values are currently populated)."@en ;
-    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:comment "0 to 6 — a position along an X sub-axis, with (0,0) at the LOWER-LEFT corner (NOT centered on origin). REVISED 2026-08-22 (second revision this same day): MJSullivan's explicit correction — the earlier same-day recentering to a -3..3 continuum, made specifically to support live cosine-similarity computation from a true center, is now itself superseded: grid comparison moved from cosine to precomputed Euclidean-distance lookup via the new thinkr:QuadrantNode (49 individuals, one per integer grid position), for which a lower-left, all-positive 0-6 scheme is simpler and was the original design intent. thinkr:ScenarioFacet's own 16 real positions were migrated to this same 0-6 scheme via a simple +3 shift (old -2/2 -> new 1/5); the 24 disjointness/divergence relationships were verified programmatically unchanged by the shift before applying it, since a pure shift preserves every relative same/different relationship. rdfs:domain deliberately left absent — this property is shared between thinkr:ScenarioFacet and thinkr:QuadrantNode, and a domain restriction would incorrectly force every QuadrantNode to also be inferred as a ScenarioFacet. See quadrantnodes.ttl and backlog.md for the full design and decision history."@en ;
     rdfs:range xsd:integer ;
     skos:prefLabel "has X position"@en .
 
 thinkr:hasYPosition a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:comment "-3 to 3 — this Facet's position along its Dimension's Y sub-axis. Same recentered continuum design as thinkr:hasXPosition — see its own rdfs:comment for the full reasoning."@en ;
-    rdfs:domain thinkr:ScenarioFacet ;
+    rdfs:comment "0 to 6 — a position along a Y sub-axis, with (0,0) at the LOWER-LEFT corner. Same 0-6, domain-shared design as thinkr:hasXPosition — see its own rdfs:comment for the full reasoning and decision history."@en ;
     rdfs:range xsd:integer ;
     skos:prefLabel "has Y position"@en .
 
@@ -1678,15 +2161,15 @@ thinkr:xAxisDivergentFrom a owl:ObjectProperty,
     skos:prefLabel "x-axis divergent from"@en .
 
 thinkr:xAxisHighLabel a owl:DatatypeProperty ;
-    rdfs:comment "What the HIGH side of this Dimension's X sub-axis means semantically — the direction values 2-3 point in on the -3 to 3 continuum. Currently only value 2 is populated; 3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:comment "What the HIGH side of this Dimension's X sub-axis means semantically — the direction values 5-6 point in on the 0-6, lower-left-origin continuum. Currently only value 5 is populated; 6 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     rdfs:domain thinkr:ScenarioDimension ;
-    rdfs:range xsd:langString ;
+    rdfs:range rdf:langString ;
     skos:prefLabel "X axis high label"@en .
 
 thinkr:xAxisLowLabel a owl:DatatypeProperty ;
-    rdfs:comment "What the LOW side of this Dimension's X sub-axis means semantically — the direction values -3 to -2 point in on the -3 to 3 continuum (see thinkr:hasXPosition). Currently only value -2 is populated by a real Facet; -3 is reserved for a more extreme case not yet in any real source material."@en ;
+    rdfs:comment "What the LOW side of this Dimension's X sub-axis means semantically — the direction values 0-1 point in on the 0-6, lower-left-origin continuum (see thinkr:hasXPosition, migrated 2026-08-22 from the earlier -3..3 centered scheme). Currently only value 1 is populated by a real Facet; 0 is reserved for a more extreme case not yet in any real source material."@en ;
     rdfs:domain thinkr:ScenarioDimension ;
-    rdfs:range xsd:langString ;
+    rdfs:range rdf:langString ;
     skos:prefLabel "X axis low label"@en .
 
 thinkr:yAxisDivergentFrom a owl:ObjectProperty,
@@ -1698,18 +2181,20 @@ thinkr:yAxisDivergentFrom a owl:ObjectProperty,
     skos:prefLabel "y-axis divergent from"@en .
 
 thinkr:yAxisHighLabel a owl:DatatypeProperty ;
-    rdfs:comment "What the HIGH side of this Dimension's Y sub-axis means semantically — the direction values 2-3 point in on the -3 to 3 continuum. Currently only value 2 is populated; 3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:comment "What the HIGH side of this Dimension's Y sub-axis means semantically — the direction values 5-6 point in on the 0-6, lower-left-origin continuum. Currently only value 5 is populated; 6 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     rdfs:domain thinkr:ScenarioDimension ;
-    rdfs:range xsd:langString ;
+    rdfs:range rdf:langString ;
     skos:prefLabel "Y axis high label"@en .
 
 thinkr:yAxisLowLabel a owl:DatatypeProperty ;
-    rdfs:comment "What the LOW side of this Dimension's Y sub-axis means semantically — the direction values -3 to -2 point in on the -3 to 3 continuum. Currently only value -2 is populated; -3 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
+    rdfs:comment "What the LOW side of this Dimension's Y sub-axis means semantically — the direction values 0-1 point in on the 0-6, lower-left-origin continuum. Currently only value 1 is populated; 0 is reserved. Same reasoning as thinkr:xAxisLowLabel — see its own comment for the full context."@en ;
     rdfs:domain thinkr:ScenarioDimension ;
-    rdfs:range xsd:langString ;
+    rdfs:range rdf:langString ;
     skos:prefLabel "Y axis low label"@en .
 
 xsd:gYear a rdfs:Datatype .
+
+xsd:langString a rdfs:Datatype .
 
 tgs:AcademicInstitution.UniversityOfChicago a thinkr:AcademicInstitution,
         owl:NamedIndividual ;
@@ -6340,6 +6825,46 @@ tgs:Persona.WilliamRees a thinkr:Persona,
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_WilliamRees ;
     skos:prefLabel "William Rees"@en .
 
+tgs:QuadrantNode.11 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 0.00 ;
+    thinkr:hasDistanceToQN15 4.00 ;
+    thinkr:hasDistanceToQN51 4.00 ;
+    thinkr:hasDistanceToQN55 5.66 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(1,1)"@en .
+
+tgs:QuadrantNode.15 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.00 ;
+    thinkr:hasDistanceToQN15 0.00 ;
+    thinkr:hasDistanceToQN51 5.66 ;
+    thinkr:hasDistanceToQN55 4.00 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(1,5)"@en .
+
+tgs:QuadrantNode.51 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 4.00 ;
+    thinkr:hasDistanceToQN15 5.66 ;
+    thinkr:hasDistanceToQN51 0.00 ;
+    thinkr:hasDistanceToQN55 4.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
+    skos:prefLabel "(5,1)"@en .
+
+tgs:QuadrantNode.55 a thinkr:QuadrantNode,
+        owl:NamedIndividual ;
+    thinkr:hasDistanceToQN11 5.66 ;
+    thinkr:hasDistanceToQN15 4.00 ;
+    thinkr:hasDistanceToQN51 4.00 ;
+    thinkr:hasDistanceToQN55 0.00 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
+    skos:prefLabel "(5,5)"@en .
+
 tgs:Relationship.NateHagens_AbhishekThakore a thinkr:Relationship,
         owl:NamedIndividual ;
     thinkr:hasInteraction [ a thinkr:PodcastAppearance ;
@@ -6992,9 +7517,10 @@ tgs:ScenarioFacet.TheGlobalizationIdeal a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.TheColdWarScenario ;
     thinkr:hasFacetCode "GI" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheGeopoliticalDangerZone ;
     skos:definition "Cooperative and interdependent geopolitics — trade flows freely, shared institutions manage disputes. Hagens' own real characterization: broadly what the world aimed at from 1990 to roughly 2015, extremely efficient, but 'everything is wired to everything else,' so a disruption anywhere eventually shows up everywhere else."@en ;
@@ -7005,9 +7531,10 @@ tgs:ScenarioFacet.TheStewardshipDeal a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.ACapturedDemocracy ;
     thinkr:hasFacetCode "SD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.CivicIdeal ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.ForcedFeudalism ;
     skos:definition "Concentrated political/economic power combined with broadly shared material gains — a small group holds real authority, but outcomes reach most of the population because those in power choose to, or need to, keep the population functioning. Hagens' own real examples: Singapore and East Asian post-war development states. Explicitly flagged by Hagens as stable but fragile over time, since it depends entirely on the continued competence and goodwill of whoever holds power."@en ;
@@ -7062,8 +7589,6 @@ thinkr:PolarityType a thinkr:Category,
     owl:equivalentClass [ a owl:Class ;
             owl:oneOf ( thinkr:PolarityType.Supports thinkr:PolarityType.Contests thinkr:PolarityType.Mentions ) ] ;
     skos:prefLabel "Polarity Type"@en .
-
-xsd:langString a rdfs:Datatype .
 
 tgs:Concept.PeakOil a thinkr:Concept,
         owl:NamedIndividual ;
@@ -7131,9 +7656,10 @@ tgs:ScenarioFacet.ACapturedDemocracy a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.TheStewardshipDeal ;
     thinkr:hasFacetCode "CD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.ForcedFeudalism ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.CivicIdeal ;
     skos:definition "Democratic in form/appearance, but where the real material gains flow overwhelmingly to a small slice of the population — democracy as surface legitimacy over a hollowed-out reality."@en ;
@@ -7143,9 +7669,10 @@ tgs:ScenarioFacet.CascadingBreakdown a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.StrainedButWorkable ;
     thinkr:hasFacetCode "CB" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.HothouseTriage ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.QuietUnraveling ;
     skos:definition "Earth systems failure that feeds on itself — used as the Earth Systems facet of 'The Unraveling,' the most severe of the 4 named Scenarios on this Dimension."@en ;
@@ -7155,9 +7682,10 @@ tgs:ScenarioFacet.CivicIdeal a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.ForcedFeudalism ;
     thinkr:hasFacetCode "CI" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheStewardshipDeal ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.ACapturedDemocracy ;
     skos:definition "Broadly shared power and broadly shared material gains — the Power & Distribution facet selected for 'The Long Repair,' inferred from that Scenario's own description in Part 4 rather than stated as a standalone quadrant definition."@en ;
@@ -7167,9 +7695,10 @@ tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.TheGeopoliticalDangerZone ;
     thinkr:hasFacetCode "FN" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheGlobalizationIdeal ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheColdWarScenario ;
     skos:definition "Cooperative geopolitics combined with meaningful regional self-sufficiency — trading partners who genuinely get along, but who have also deliberately shortened their own critical supply chains so that a shock in one region doesn't cascade everywhere."@en ;
@@ -7180,9 +7709,10 @@ tgs:ScenarioFacet.GreenGrowth a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.MadMax ;
     thinkr:hasFacetCode "GG" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.Mordor ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheGreatSimplification ;
     skos:definition "Physical economic expansion that bends toward regeneration rather than continued extraction — Hagens' own real, direct phrasing from Frankly_139."@en ;
@@ -7193,9 +7723,10 @@ tgs:ScenarioFacet.HothouseTriage a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.QuietUnraveling ;
     thinkr:hasFacetCode "HT" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.CascadingBreakdown ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.StrainedButWorkable ;
     skos:definition "Severe climate stress combined with a partially resilient biosphere. Hagens' own real characterization: constant emergency management, a society always responding and always having to rebuild, with important economic resources perpetually diverted from development toward stasis and recovery."@en ;
@@ -7206,9 +7737,10 @@ tgs:ScenarioFacet.MadMax a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.GreenGrowth ;
     thinkr:hasFacetCode "MM" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheGreatSimplification ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.Mordor ;
     skos:definition "Economic contraction with no ecological stewardship at all — decline without any deliberate management or care for what's left of the biosphere."@en ;
@@ -7219,9 +7751,10 @@ tgs:ScenarioFacet.Mordor a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.TheGreatSimplification ;
     thinkr:hasFacetCode "MO" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.GreenGrowth ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.MadMax ;
     skos:definition "Continued economic growth on paper while materially and ecologically digging deeper into biophysical overshoot — spending down ecological principal rather than living off any sustainable interest. Growth that benefits the biosphere's books while liquidating the biosphere itself."@en ;
@@ -7232,9 +7765,10 @@ tgs:ScenarioFacet.QuietUnraveling a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.HothouseTriage ;
     thinkr:hasFacetCode "QU" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.StrainedButWorkable ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.CascadingBreakdown ;
     skos:definition "Ecological degradation (soils, pollinators, fisheries) proceeding slowly enough that mainstream economic indicators like GDP and stock markets don't register it — decline that is real but invisible to the metrics societies actually watch."@en ;
@@ -7244,9 +7778,10 @@ tgs:ScenarioFacet.StrainedButWorkable a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.CascadingBreakdown ;
     thinkr:hasFacetCode "SW" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition 2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 5 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.QuietUnraveling ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.HothouseTriage ;
     skos:definition "The best realistic case on the Earth Systems dimension, given that humanity is not starting from ecological neutral — a biosphere under real, acknowledged strain that is nonetheless still functional."@en ;
@@ -7256,9 +7791,10 @@ tgs:ScenarioFacet.TheGeopoliticalDangerZone a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences ;
     thinkr:hasFacetCode "GD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheColdWarScenario ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheGlobalizationIdeal ;
     skos:definition "Nations that are geopolitical rivals yet remain economically interdependent on each other — a genuinely unstable combination Hagens draws a direct real-world parallel to (the Strait of Hormuz situation, as of this framework's release)."@en ;
@@ -7453,9 +7989,10 @@ tgs:ScenarioFacet.ForcedFeudalism a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.CivicIdeal ;
     thinkr:hasFacetCode "FF" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.ACapturedDemocracy ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheStewardshipDeal ;
     skos:definition "Those at the top manage decline primarily for their own benefit, distributing just enough to the rest of the population to forestall open revolt."@en ;
@@ -7465,9 +8002,10 @@ tgs:ScenarioFacet.TheColdWarScenario a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.TheGlobalizationIdeal ;
     thinkr:hasFacetCode "CW" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition 2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 5 ;
+    thinkr:hasYPosition 1 ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheGeopoliticalDangerZone ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences ;
     skos:definition "Hostile, largely self-sufficient geopolitical blocs — used by Hagens for two of the four named Scenarios (Fortress World and The Unraveling), with the latter explicitly described as fracturing into active conflict, hopefully without nuclear exchange."@en ;
@@ -7599,9 +8137,10 @@ tgs:ScenarioFacet.TheGreatSimplification a thinkr:ScenarioFacet,
         owl:NamedIndividual ;
     thinkr:diagonallyDisjointWith tgs:ScenarioFacet.Mordor ;
     thinkr:hasFacetCode "GS" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition -2 ;
-    thinkr:hasYPosition -2 ;
+    thinkr:hasXPosition 1 ;
+    thinkr:hasYPosition 1 ;
     thinkr:relatesTo tgs:Concept.GreatSimplification ;
     thinkr:xAxisDivergentFrom tgs:ScenarioFacet.MadMax ;
     thinkr:yAxisDivergentFrom tgs:ScenarioFacet.GreenGrowth ;
@@ -7863,6 +8402,10 @@ thinkr:EpisodeType.PanelDiscussion a thinkr:EpisodeType,
         "roundtable"@en ;
     skos:prefLabel "Panel Discussion"@en .
 
+thinkr:ScenarioFacet a owl:Class ;
+    rdfs:comment "One of the 4 quadrant options for a given thinkr:ScenarioDimension in Nate Hagens' 2026 scenario-matrix framework — e.g. 'Mordor' is one of the 4 Economic-dimension options. A thinkr:Scenario picks exactly one Facet per Dimension (4 total) to form a named composite future."@en ;
+    skos:prefLabel "Scenario Facet"@en .
+
 thinkr:Work a owl:Class ;
     rdfs:comment "A book, essay, or other work in which a concept or idea is developed."@en ;
     rdfs:subClassOf dct:BibliographicResource ;
@@ -7873,10 +8416,6 @@ thinkr:ConfidenceType.Curated a thinkr:ConfidenceType,
         owl:NamedIndividual ;
     skos:definition "On thinkr:Evidence: human-reviewed and confirmed, not merely LLM-proposed. On thinkr:LinkNote's calculatedConfidence: exactly one independent Curated+Supports evidence from a Reputable-or-better source (see scripts/compute_confidence.py for the full rule)."@en ;
     skos:prefLabel "Curated"@en .
-
-thinkr:ScenarioFacet a owl:Class ;
-    rdfs:comment "One of the 4 quadrant options for a given thinkr:ScenarioDimension in Nate Hagens' 2026 scenario-matrix framework — e.g. 'Mordor' is one of the 4 Economic-dimension options. A thinkr:Scenario picks exactly one Facet per Dimension (4 total) to form a named composite future."@en ;
-    skos:prefLabel "Scenario Facet"@en .
 
 thinkr:InterventionSubdomain a owl:Class ;
     rdfs:comment "A named sub-area within one of the 6 thinkr:InterventionFront individuals — e.g. 'Energy systems' within Infrastructure, or 'Dignity infrastructure and mutual aid' within Poverty & Displacement. Linked to its parent Front via thinkr:hasSubdomain."@en ;
@@ -7921,6 +8460,10 @@ tgs:Subject.HumanBehavior a thinkr:Subject,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Human Behavior"@en .
+
+thinkr:QuadrantNode a owl:Class ;
+    rdfs:comment "One of the 49 precomputed lookup points on the real 0-6 grid (7x7), origin (0,0) at the lower-left corner. Each carries its own real hasXPosition/hasYPosition plus precomputed Euclidean distance to each of the 4 real corner positions (QuadrantNode.11/.51/.15/.55), which the 16 real ScenarioFacets are linked to via thinkr:hasQuadrantNode. An arbitrary point (e.g. a classified news article) can be compared to any ScenarioFacet via a direct table lookup rather than live computation."@en ;
+    skos:prefLabel "Quadrant Node"@en .
 
 tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work,
         owl:NamedIndividual ;

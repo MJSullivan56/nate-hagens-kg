@@ -100,7 +100,7 @@ tgs:LinkNote.Overshoot_DoughnutEconomics a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:SchoolOfThought.DoughnutEconomics ;
     thinkr:aboutSubject tgs:Concept.Overshoot ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.Overshoot_DoughnutEconomics .
 
 tgs:LinkNote.Overshoot_WilliamCatton a thinkr:LinkNote,

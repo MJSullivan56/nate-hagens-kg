@@ -34,21 +34,24 @@ thinkr:ScenarioFacet a owl:Class ;
 
 tgs:ScenarioFacet.GreenGrowth a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "GG" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "GG" ;
     skos:prefLabel "Green Growth"@en ;
     skos:definition "Physical economic expansion that bends toward regeneration rather than continued extraction — Hagens' own real, direct phrasing from Frankly_139."@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=4,Y=4) to (X=2,Y=4) — see tgs:ScenarioDimension.Economic's own scopeNote for the full correction (real chart PDF supplied by MJSullivan). Real-world meaning unchanged (Growing + within ecological limits); only the axis-letter assignment was wrong. Definition ADDED 2026-08-13 from Frankly_139's own full real transcript (previously missing — 'not defined in any of the 6 transcripts reviewed' referred to an earlier, smaller transcript set). Not defined in any of the 6 transcripts reviewed this session — visible in the grid screenshots, never selected in any of the 4 named Scenarios Hagens describes in detail. Hagens explicitly states (Part 4) that he does NOT build a 'green growth' composite world at all, calling continued material growth alongside biosphere healing two forces that pull against each other too hard to hold together at a global scale — so this Facet exists in the grid but is treated by Hagens himself as the least realistic option on this Dimension."@en .
 
 tgs:ScenarioFacet.Mordor a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "MO" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "MO" ;
     skos:prefLabel "Mordor"@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=4,Y=2) to (X=4,Y=4) — see tgs:ScenarioDimension.Economic's own scopeNote for the full correction (real chart PDF supplied by MJSullivan). Real-world meaning unchanged (Growing + overshooting ecological limits); only the axis-letter assignment was wrong."@en ;
     skos:definition "Continued economic growth on paper while materially and ecologically digging deeper into biophysical overshoot — spending down ecological principal rather than living off any sustainable interest. Growth that benefits the biosphere's books while liquidating the biosphere itself."@en .
 
 tgs:ScenarioFacet.TheGreatSimplification a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "GS" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "GS" ;
     skos:prefLabel "The Great Simplification"@en ;
     skos:definition "Economic contraction combined with coordination and real ecological stewardship — Hagens' own real, direct phrasing from Frankly_139."@en ;
     thinkr:relatesTo tgs:Concept.GreatSimplification ;
@@ -56,7 +59,8 @@ tgs:ScenarioFacet.TheGreatSimplification a thinkr:ScenarioFacet, owl:NamedIndivi
 
 tgs:ScenarioFacet.MadMax a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Economic ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "MM" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "MM" ;
     skos:prefLabel "Mad Max"@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=2,Y=2) to (X=4,Y=2) — see tgs:ScenarioDimension.Economic's own scopeNote for the full correction (real chart PDF supplied by MJSullivan). Real-world meaning unchanged (Contracting + overshooting ecological limits); only the axis-letter assignment was wrong."@en ;
     skos:definition "Economic contraction with no ecological stewardship at all — decline without any deliberate management or care for what's left of the biosphere."@en .
@@ -67,26 +71,30 @@ tgs:ScenarioFacet.MadMax a thinkr:ScenarioFacet, owl:NamedIndividual ;
 
 tgs:ScenarioFacet.CivicIdeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "CI" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "CI" ;
     skos:prefLabel "Civic Ideal"@en ;
     skos:definition "Broadly shared power and broadly shared material gains — the Power & Distribution facet selected for 'The Long Repair,' inferred from that Scenario's own description in Part 4 rather than stated as a standalone quadrant definition."@en .
 
 tgs:ScenarioFacet.TheStewardshipDeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "SD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "SD" ;
     skos:prefLabel "The Stewardship Deal"@en ;
     skos:definition "Concentrated political/economic power combined with broadly shared material gains — a small group holds real authority, but outcomes reach most of the population because those in power choose to, or need to, keep the population functioning. Hagens' own real examples: Singapore and East Asian post-war development states. Explicitly flagged by Hagens as stable but fragile over time, since it depends entirely on the continued competence and goodwill of whoever holds power."@en ;
     skos:scopeNote "Definition ADDED 2026-08-13 from Frankly_139's own full real transcript, resolving a gap flagged since this Facet was first built ('not defined in any of the 6 transcripts reviewed' referred to an earlier, smaller transcript set)."@en .
 
 tgs:ScenarioFacet.ACapturedDemocracy a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "CD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "CD" ;
     skos:prefLabel "A Captured Democracy"@en ;
     skos:definition "Democratic in form/appearance, but where the real material gains flow overwhelmingly to a small slice of the population — democracy as surface legitimacy over a hollowed-out reality."@en .
 
 tgs:ScenarioFacet.ForcedFeudalism a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.PowerAndDistribution ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "FF" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "FF" ;
     skos:prefLabel "Forced Feudalism"@en ;
     skos:definition "Those at the top manage decline primarily for their own benefit, distributing just enough to the rest of the population to forestall open revolt."@en .
 
@@ -96,28 +104,32 @@ tgs:ScenarioFacet.ForcedFeudalism a thinkr:ScenarioFacet, owl:NamedIndividual ;
 
 tgs:ScenarioFacet.TheGlobalizationIdeal a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "GI" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "GI" ;
     skos:prefLabel "The Globalization Ideal"@en ;
     skos:definition "Cooperative and interdependent geopolitics — trade flows freely, shared institutions manage disputes. Hagens' own real characterization: broadly what the world aimed at from 1990 to roughly 2015, extremely efficient, but 'everything is wired to everything else,' so a disruption anywhere eventually shows up everywhere else."@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=4,Y=4) to (X=2,Y=4) — see tgs:ScenarioDimension.Geopolitical's own scopeNote for the full correction (real chart PDF supplied by MJSullivan; the X-axis low/high labels were inverted). Real-world meaning unchanged (Cooperative + Interdependence); only the axis scale was wrong. Definition ADDED 2026-08-13, same day, from Frankly_139's own full real transcript, resolving the gap noted when this Facet was first built."@en .
 
 tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "FN" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "FN" ;
     skos:prefLabel "Friendly Neighbors With Good Fences"@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=2,Y=4) to (X=4,Y=4) — see tgs:ScenarioDimension.Geopolitical's own scopeNote for the full correction (real chart PDF supplied by MJSullivan; the X-axis low/high labels were inverted). Real-world meaning unchanged (Cooperative + Self-Sufficiency); only the axis scale was wrong."@en ;
     skos:definition "Cooperative geopolitics combined with meaningful regional self-sufficiency — trading partners who genuinely get along, but who have also deliberately shortened their own critical supply chains so that a shock in one region doesn't cascade everywhere."@en .
 
 tgs:ScenarioFacet.TheGeopoliticalDangerZone a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "GD" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "GD" ;
     skos:prefLabel "The Geopolitical Danger Zone"@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=4,Y=2) to (X=2,Y=2) — the axis scale was inverted (see tgs:ScenarioDimension.Geopolitical's own scopeNote for the full correction, real chart PDF supplied by MJSullivan). This individual's real-world meaning (Adversarial + Interdependence) was already correctly captured by its own definition text below, unchanged throughout. NAME HISTORY, worth recording honestly rather than erasing: MJSullivan's first supplied PDF showed 'A Captured Democracy' at this position (a real cut-and-paste error in that PDF, by MJSullivan's own account) — this individual was briefly renamed to tgs:ScenarioFacet.ACapturedDemocracy_Geopolitical on that basis, disambiguated from the real, separate 'A Captured Democracy' Facet on the Power and Distribution Dimension. MJSullivan then supplied a corrected PDF showing the real label is 'The Geopolitical Danger Zone' after all — confirmed directly against the corrected primary source, not just asserted — and this individual's original name and IRI were restored. The name was never actually wrong in this graph before this whole correction pass started; the error was introduced and then fixed within the same session."@en ;
     skos:definition "Nations that are geopolitical rivals yet remain economically interdependent on each other — a genuinely unstable combination Hagens draws a direct real-world parallel to (the Strait of Hormuz situation, as of this framework's release)."@en .
 
 tgs:ScenarioFacet.TheColdWarScenario a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.Geopolitical ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "CW" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "CW" ;
     skos:prefLabel "The Cold War Scenario"@en ;
     skos:scopeNote "Position CORRECTED 2026-08-13 from (X=2,Y=2) to (X=4,Y=2) — see tgs:ScenarioDimension.Geopolitical's own scopeNote for the full correction (real chart PDF supplied by MJSullivan; the X-axis low/high labels were inverted). Real-world meaning unchanged (Adversarial + Self-Sufficiency); only the axis scale was wrong."@en ;
     skos:definition "Hostile, largely self-sufficient geopolitical blocs — used by Hagens for two of the four named Scenarios (Fortress World and The Unraveling), with the latter explicitly described as fracturing into active conflict, hopefully without nuclear exchange."@en .
@@ -128,26 +140,30 @@ tgs:ScenarioFacet.TheColdWarScenario a thinkr:ScenarioFacet, owl:NamedIndividual
 
 tgs:ScenarioFacet.StrainedButWorkable a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "SW" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.15 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "SW" ;
     skos:prefLabel "Strained But Workable"@en ;
     skos:definition "The best realistic case on the Earth Systems dimension, given that humanity is not starting from ecological neutral — a biosphere under real, acknowledged strain that is nonetheless still functional."@en .
 
 tgs:ScenarioFacet.QuietUnraveling a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition 2 ; thinkr:hasFacetCode "QU" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.55 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 5 ; thinkr:hasFacetCode "QU" ;
     skos:prefLabel "Quiet Unraveling"@en ;
     skos:definition "Ecological degradation (soils, pollinators, fisheries) proceeding slowly enough that mainstream economic indicators like GDP and stock markets don't register it — decline that is real but invisible to the metrics societies actually watch."@en .
 
 tgs:ScenarioFacet.HothouseTriage a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition -2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "HT" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.11 ;
+    thinkr:hasXPosition 1 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "HT" ;
     skos:prefLabel "Hothouse Triage"@en ;
     skos:definition "Severe climate stress combined with a partially resilient biosphere. Hagens' own real characterization: constant emergency management, a society always responding and always having to rebuild, with important economic resources perpetually diverted from development toward stasis and recovery."@en ;
     skos:scopeNote "Definition ADDED 2026-08-13 from Frankly_139's own full real transcript — previously only inferable from context, now independently confirmed and no longer needing to be guessed at."@en .
 
 tgs:ScenarioFacet.CascadingBreakdown a thinkr:ScenarioFacet, owl:NamedIndividual ;
     thinkr:hasScenarioDimension tgs:ScenarioDimension.EarthSystems ;
-    thinkr:hasXPosition 2 ; thinkr:hasYPosition -2 ; thinkr:hasFacetCode "CB" ;
+    thinkr:hasQuadrantNode tgs:QuadrantNode.51 ;
+    thinkr:hasXPosition 5 ; thinkr:hasYPosition 1 ; thinkr:hasFacetCode "CB" ;
     skos:prefLabel "Cascading Breakdown"@en ;
     skos:definition "Earth systems failure that feeds on itself — used as the Earth Systems facet of 'The Unraveling,' the most severe of the 4 named Scenarios on this Dimension."@en .
 #############################################
