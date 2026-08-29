@@ -1,0 +1,143 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix tgs:     <http://example.org/tgs#> .
+@prefix thinkr:  <http://example.org/thinkr#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs/shacl/concept-shape/> a owl:Ontology ;
+    skos:prefLabel "Concept shape graph (PILOT)"@en ;
+    rdfs:comment "PILOT, 2026-08-24 — not yet run against the real repo, not yet wired into any script. SHACL shapes for tgs:Concept, oriented at COMPLETENESS SIGNALING rather than hard validation: this graph is hand-authored and already carefully reviewed, so the goal is a queryable answer to 'does this individual look like it's missing something important?', not gatekeeping. Every property check below is sh:Warning or sh:Info except skos:prefLabel, which really is a true structural minimum (100% coverage across all 43 existing Concept instances, and identity-bearing). Built from the REAL property distribution across all 43 tgs:Concept instances in concepts.ttl as of 2026-08-24, not an idealized schema imagined from scratch — see per-property coverage notes below. skos:scopeNote is DELIBERATELY excluded from any check — it is overloaded in this graph (build notes, open questions, deferred-citation lists, historical narration) and completeness of ITS presence says nothing about completeness of the concept's own modeling."@en .
+
+tgs:ConceptShape a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                ?this a thinkr:Concept .
+                FILTER NOT EXISTS { ?this a thinkr:Indicator . }
+                FILTER NOT EXISTS { ?this a thinkr:IndicatorCategory . }
+                FILTER NOT EXISTS { ?this a thinkr:EarthSystemComponent . }
+            }
+        """ ;
+    ] ;
+    skos:prefLabel "Concept completeness shape (pilot)"@en ;
+    rdfs:comment "Completeness contract for tgs:Concept individuals — flags likely-missing properties, does not reject data. Run as a reporting pass, not a load-time gate. Uses a SPARQLTarget rather than plain sh:targetClass — a REAL, first-run discovery, 2026-08-24: thinkr:Indicator, thinkr:IndicatorCategory, and thinkr:EarthSystemComponent individuals (indicators.ttl, indicatorcategories.ttl, earthsystemcomponents.ttl) are ALL also directly multi-typed thinkr:Concept, consistently across all three files — a real, existing pattern in this graph, not something this shape introduced. Structurally those individuals look nothing like the 43 narrative Concepts this shape was designed around (dcterms:source + thinkr:hasIndicatorCategory + skos:prefLabel, no skos:definition, no expectation of influencedBy-to-a-person) — plain sh:targetClass thinkr:Concept against the real repo flagged 77 of 107 matched individuals, and the overwhelming majority of that were Indicator-family false positives, not real gaps. Excluded here rather than force-fit into this bar. A dedicated Indicator-family completeness shape, if wanted, is real future work with its OWN bar (dcterms:source + hasIndicatorCategory present, no provenance/definition expectation) — not attempted this pass."@en ;
+
+    # skos:prefLabel — 43/43 (100%) in the real data. The one property
+    # genuinely worth a hard Violation: every Concept in this graph has
+    # exactly one, and an individual without one isn't really usable yet.
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:datatype rdf:langString ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Concept must have exactly one skos:prefLabel."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    # skos:definition — 42/43 (98%). The one real gap in the current
+    # data (tgs:Concept.MoreThanHumanPredicament) is a KNOWN, already-
+    # flagged stub, not an oversight — so Warning, not Violation: this
+    # shape should surface that gap, not fight the graph's own
+    # deliberate "stub now, flesh out later" discipline.
+    sh:property [
+        sh:path skos:definition ;
+        sh:datatype rdf:langString ;
+        sh:minCount 1 ;
+        sh:message "Concept has no skos:definition — likely a bare stub (check for a known, deliberate one before treating this as a gap)."@en ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # dcterms:source — 42/43 (98%). Real gap in current data: same
+    # MoreThanHumanPredicament stub as above.
+    sh:property [
+        sh:path dcterms:source ;
+        sh:minCount 1 ;
+        sh:message "Concept has no dcterms:source."@en ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # dcterms:subject — 42/43 (98%). Same stub gap again — three real
+    # gaps in this data all point to the same one individual, which is
+    # itself a useful signal this shape would have surfaced immediately.
+    sh:property [
+        sh:path dcterms:subject ;
+        sh:class thinkr:Subject ;
+        sh:minCount 1 ;
+        sh:message "Concept has no dcterms:subject."@en ;
+        sh:severity sh:Warning ;
+    ] ;
+
+    # Provenance — NOT a single property in the real data (influencedBy
+    # 19/43, echoesIdeaOf 5/43, some overlap, some concepts instead
+    # self-identify as thinkr:HagensConcept). Modeled as "at least one
+    # of three real escape hatches", matching the rule just adopted in
+    # SKILL.md 2026-08-24: attribute the real originator, or mark the
+    # concept as Nate's own, or this shape flags it. sh:message
+    # deliberately spells out all three so a human reading the report
+    # doesn't have to go look up the rule. See tgs:ConceptProvenanceShape
+    # below — pulled out as its own NodeShape for a real pyshacl reason,
+    # not stylistic preference (see its own rdfs:comment).
+
+    # rdfs:comment — INTENTIONALLY NOT CHECKED. Concept individuals in
+    # this graph carry their narrative in skos:definition, not
+    # rdfs:comment (that pattern belongs to Human/Episode stubs
+    # instead) — a "missing rdfs:comment" flag on every Concept would
+    # be 43/43 false positives, not a real signal.
+
+    # skos:scopeNote — INTENTIONALLY NOT CHECKED, per MJSullivan's own
+    # instruction 2026-08-24. Real coverage is 18/43 (42%) and that's
+    # expected, not a gap: this property carries build notes, open
+    # questions, and deferred-citation lists in this graph — its
+    # presence or absence doesn't track modeling completeness the way
+    # every other property here does. A Concept can be fully complete
+    # with zero scopeNotes, and a thin stub can carry a long one
+    # explaining exactly why it's thin (see MoreThanHumanPredicament).
+    .
+
+tgs:ConceptProvenanceShape a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                ?this a thinkr:Concept .
+                FILTER NOT EXISTS { ?this a thinkr:Indicator . }
+                FILTER NOT EXISTS { ?this a thinkr:IndicatorCategory . }
+                FILTER NOT EXISTS { ?this a thinkr:EarthSystemComponent . }
+            }
+        """ ;
+    ] ;
+    skos:prefLabel "Concept provenance shape (pilot)"@en ;
+    rdfs:comment "Split into its OWN NodeShape, not a property entry on tgs:ConceptShape above — a real pyshacl behavior worth remembering: sh:severity for a SPARQL-based constraint must be declared on the enclosing NodeShape itself, not inside the sh:sparql/SPARQLConstraint blank node. An earlier draft nested it inside the constraint node and every hit silently reported as sh:Violation regardless of the declared severity, confirmed via a minimal isolated repro before trusting the fix. Keep this pattern (dedicated NodeShape per SPARQL-based check) for any future sh:sparql constraint in this repo's shapes."@en ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Concept has no provenance: no thinkr:influencedBy, no thinkr:echoesIdeaOf, and not typed thinkr:HagensConcept. Per the 2026-08-24 provenance rule, attribute the real originator (minting a minimal Persona if needed — see Persona.EOWilson/Persona.JoannaMacy pattern) or confirm this is Nate's own and add the thinkr:HagensConcept type."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this a thinkr:Concept .
+                FILTER NOT EXISTS { $this thinkr:influencedBy ?p1 . }
+                FILTER NOT EXISTS { $this thinkr:echoesIdeaOf ?p2 . }
+                FILTER NOT EXISTS { $this a thinkr:HagensConcept . }
+            }
+        """ ;
+    ] ;
+    .
+
+# NOT included in this pilot, deliberately — real but low-coverage
+# properties (thinkr:hasAlternateTerm 7/43, thinkr:contrastsWith 4/43,
+# thinkr:relatesTo 2/43) are genuine optional enrichment, not
+# completeness signals; flagging their absence on every Concept that
+# lacks them would be noise, not signal. thinkr:convergesWith,
+# thinkr:hasPhase, and thinkr:hasFront each appear on exactly 1/43 —
+# these look like they belong to a more specific shape (concepts
+# functioning as frameworks, e.g. tgs:Concept.FrameworkForAction)
+# rather than the general Concept shape; worth a subclass-specific
+# shape later if that pattern recurs, not forced in here.

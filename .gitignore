@@ -30,6 +30,7 @@ extraction/substack_summaries_raw/
 extraction/cited_sources_raw/
 extraction/substack_text_cache/
 extraction/transcripts_text_cache/
+extraction/transcripts_text_cache_pre_cleaned
 extraction/intro_segments/
 extraction/intro_candidates.csv
 extraction/*.pdf
@@ -56,5 +57,8 @@ extraction/md_backups/
 .DS_Store
 *.swp
 
-# Protégé
+# other
 .protege.log
+ontology_2025-08-24.zip
+tgs_store/
+reports/

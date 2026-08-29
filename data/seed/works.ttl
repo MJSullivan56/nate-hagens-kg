@@ -247,3 +247,36 @@ tgs:Work.TaoOfPhysics a thinkr:Work, owl:NamedIndividual ;
     dct:issued "1975"^^xsd:gYear ;
     owl:sameAs <https://www.fritjofcapra.net/about/> ;
     .
+
+# added 2026-08-25
+
+tgs:Work.MaterialWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Material World: The Six Raw Materials That Shape Modern Civilization"@en ;
+    rdfs:comment "2023 book by Ed Conway (Penguin Random House / WH Allen). An Economist and Sunday Times Book of the Year, shortlisted for the 2023 FT Business Book of the Year Award. Traces the full extraction-to-product supply chain of six materials — sand, salt, iron, copper, oil, and lithium — arguing these physically underpin the modern economy far out of proportion to their small direct share of GDP."@en ;
+    dct:creator tgs:Human.EdConway ;
+    dct:issued "2023"^^xsd:gYear ;
+    owl:sameAs <http://dbpedia.org/resource/Material_World_(book)> ;
+    .
+
+# added 2026-08-29
+
+tgs:Work.DeseretFarmerBailout2026 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "There's no bailout for the American Farmer"@en ;
+    rdfs:comment "Deseret Magazine, March 2026. Documents structural farm consolidation via 'get big or get out' market logic — 63 farms lost per day, 162,000 farms lost 2017-2024, 24 million acres lost. Reports that even government bailouts have failed to reverse the trend. Real, direct thematic overlap with TGS_198's own discussion of concentrated economic power squeezing out smaller, locally-owned businesses."@en ;
+    dct:source <https://www.deseret.com/magazine/2026/03/07/america-family-farms-in-decline/> ;
+    dct:issued "2026-03"^^xsd:gYearMonth ;
+    .
+
+tgs:Work.WorldBankFoodSecurityUpdate2026 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Food Security Update"@en ;
+    rdfs:comment "World Bank, June 2026. Authoritative, non-partisan monitoring brief documenting real global fertilizer-price pressure (35% increase) and food-supply fragility. Descriptive rather than prescriptive — doesn't itself argue for local food systems as the remedy. Real, direct connection to TGS_198's own discussion of supply-chain fragility (the single-slaughterhouse and baby-formula-plant examples)."@en ;
+    dct:source <https://www.worldbank.org/en/topic/foodsecurity> ;
+    dct:issued "2026-06"^^xsd:gYearMonth ;
+    .
+
+tgs:Work.PewDecliningTrust2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Americans' Declining Trust in Each Other and Reasons Behind It"@en ;
+    rdfs:comment "Pew Research Center, May 2025. Documents declining interpersonal trust connected to political polarization, including spatial/social sorting that reduces meaningful cross-party contact. Descriptive survey data, not prescriptive. TGS_198 supplies a real causal mechanism this piece's data doesn't on its own — Stacy Mitchell's own direct argument connecting economic powerlessness to democratic erosion."@en ;
+    dct:source <https://www.pewresearch.org/short-reads/2025/05/08/americans-declining-trust-in-each-other-and-reasons-behind-it/> ;
+    dct:issued "2025-05"^^xsd:gYearMonth ;
+    .

@@ -516,14 +516,6 @@ tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndivi
 # Frankly_138 itself does.
 #############################################
 
-tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
-    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
-    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
-    skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
-    rdfs:comment "STUB as of 2026-08-13 — surfaced via Frankly_138's own show notes cross-reference, not yet independently fleshed out. 'Part 1' in the title suggests this may itself belong to a multi-part series not yet modeled — worth checking before assuming this is a standalone episode."@en ;
-    thinkr:hasHost tgs:Persona.NateHagens ;
-    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/129-a-guide-to-staying-human-part-1> ;
-    .
 
 tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
@@ -757,6 +749,7 @@ tgs:PanelDiscussion.RR_19_DarkTriad a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.NancyMcWilliams, tgs:Persona.ReidMeloy ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-19> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=XnHSRCN1iAY>, <https://open.spotify.com/episode/6Rg4noyHxfFpgy8ub6jvZH> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/09/RR-19-Transcript-Dark-Triad-Personality-Traits.pdf> ;
     thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
     thinkr:hasDiscussionSummary "Complementary rather than adversarial, but distinct in texture from the other RRs — Nancy McWilliams and Reid Meloy defer to and build on each other throughout rather than debate, yet each brings a genuinely different disciplinary lens rather than illustrative texture around a shared thesis. McWilliams opens by explicitly distancing her own approach from trait-based diagnosis ('I don't tend to think in terms of traits, I tend to think in terms of themes'), then supplies detailed clinical material Meloy doesn't have — how she actually works with psychopathic patients in therapy, her critique of the DSM's own diagnostic history. Meloy supplies forensic and evolutionary material she doesn't have — population prevalence estimates, predator/prey framing, extreme case data from his own casework. The one moment of honest gap rather than synthesis: when Nate raises Scott Barry Kaufman's 'Light Triad,' Meloy admits he isn't familiar with the term at all, and McWilliams is the one who has looked it up and explains it. Where the two genuinely converge, they amplify rather than merely agree — when McWilliams calls the entire history of the United States 'somewhat psychopathic,' Meloy doesn't qualify it, he extends it ('the theme of psychopathy has been woven through the history of the United States'). Nate's own contribution goes beyond interviewing: he draws a real cross-disciplinary connection between his own energy/power background and the psychological concept of power ('power in an ecology sense is an ecosystem... accessing an energy gradient per unit time'), and at the close, builds Meloy's closing metaphor (Dark Triad individuals as 'passengers on the train' who must never be allowed to drive) directly into his own recurring Superorganism framing, explicitly flagging he needs to think further about how the two connect rather than presenting it as settled."@en ;
@@ -1698,17 +1691,25 @@ tgs:Interview.TGS_167_FrancisWeller a thinkr:Episode, owl:NamedIndividual ;
 # earlier this session for Frankly_132 before its transcript arrived.
 # Surfaced via 3 independent real citations (RR-17, Frankly_132,
 # TGS_167) requesting Bill Plotkin be built.
+# updated 2026-08-24
 #############################################
 
 tgs:Interview.TGS_146_BillPlotkin a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
     skos:prefLabel "Bill Plotkin: \"Ecological Awakening: A Path Toward Holistic Adulthood\""@en ;
-    rdfs:comment "STUB as of 2026-08-13 — surfaced via 3 independent real citations this session (RR-17, Frankly_132, TGS_167), not yet independently fleshed out from its own real transcript. Real, confirmed metadata via web search: issued Oct 16 2024, recorded Sep 16 2024."@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript. Opens with Plotkin reading David Whyte's poem 'All the True Vows' as a deliberate frame-shift before any conceptual content. Central thesis, stated directly: 'the root cause is arrested human development' — Plotkin's own term for what he elsewhere calls 'systemic human development oppression,' offered as the underlying generator behind the metacrisis rather than one crisis among many. Lays out his ecocentric/soulcentric eight-stage developmental wheel (paired earth/human archetypes per stage: Innocent in the Nest, Explorer in the Garden, Thespian at the Oasis, Wanderer in the Cocoon, Apprentice at the Wellspring, Artisan in the Wild Orchard, Master in the Grove of Elders, Sage in the Mountain Cave) — most contemporary people, he argues, never progress past an unhealthy version of the third stage. Describes ecological awakening directly and experientially, not just conceptually: a felt shift from experiencing an 'invisible wall' between oneself and the rest of the living world to experiencing kinship with it, often accompanied by real grief. Closes on Joanna Macy's 'Great Turning' framework (three dimensions: saving what's left, building new structures, shifting consciousness) as Plotkin's own answer to living with the metacrisis, and a direct, unhedged closing claim: the problem is 'worse than you think, and the solution is closer at hand and easier than you might have feared.'"@en ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.BillPlotkin ;
     dct:created "2024-09-16"^^xsd:date ;
     dct:issued "2024-10-16"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/146-bill-plotkin> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/10/TGS146BillPlotkinTranscript.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=S25UKlLq5m8>, <https://open.spotify.com/episode/4u4rGuURrInJOOFPHv5rLu> ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.CarbonPulse, tgs:Concept.EcologicalAwakening, tgs:Concept.EcocentricDevelopmentalWheel, tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.GreatTurning ;
+    dct:references tgs:Persona.RichardSchwartz, tgs:Persona.VanessaAndreotti ;
+    skos:scopeNote "2026-08-24: built from the full real transcript (previously a bare stub — number/title/dates only, sourced from 3 independent citations across RR-17, Frankly_132, and TGS_167). Real, well-evidenced Persona candidates cited directly in the transcript body (not just show notes) but deliberately NOT bootstrapped this pass, matching this graph's established deferred-citation discipline: Thomas Berry ('The Dream of the Earth' — direct source for the Sage in the Mountain Cave archetype, per Plotkin's own account of meeting him), Riane Eisler (Dominator vs. Partnership societies — real, no TGS episode of hers built yet despite a real cross-reference in this episode's own show notes), Malidoma Somé (Dagara people), Martín Prechtel (Tzutujil Maya), Joanna Macy (already cited, not yet a Persona), and James Hillman ('we've had a hundred years of psychotherapy and the world's getting worse'). Richard Schwartz and Vanessa Andreotti already existed as Personas in this graph — linked via dct:references, not rebuilt. Gregory Cajete and David Whyte are real but cited more lightly (a poem reading; one book title) — noted here rather than flagged as strong candidates."@en ;
     .
 
 #############################################
@@ -1859,4 +1860,116 @@ tgs:Interview.TGS_34_KirilSokoloff a thinkr:Episode, owl:NamedIndividual ;
     dct:references tgs:Work.RealityBlind ;
     skos:scopeNote "No YouTube video exists for this episode — confirmed via the real scrape record's own explicit _gaps: [youtube_url] marker, not merely unfilled. Real, direct show-notes citations to this graph's own already-built Work.RealityBlind, at two separate specific page references (peak oil, and the real global oil-production decline rate absent new drilling) — a genuine, deliberate authorial choice to cite his own book mid-conversation, not incidental."@en ;
     thinkr:hasDiscussionSummary "A genuinely wide-ranging, historically-grounded conversation, anchored throughout in Sokoloff's own real, direct expertise tracking multi-decade economic cycles. He offers a real, pointed distinction between deflationary and inflationary forces — technological productivity gains as inherently deflationary, set directly against energy depletion as inherently inflationary — and argues all US inflation since 1973 traces to oil. A real, substantive discussion of electric vehicles is notably unromantic: Sokoloff raises copper supply as a genuine bottleneck for battery production, not a solved problem. The conversation's geopolitical section is real and specific rather than abstract — BRICS expansion, the Shanghai Cooperation Organisation, dollar-based monetary hegemony, and Sokoloff's own direct, unhedged characterization of Western sanctions on Russia as economic self-harm for Europe. A genuinely personal turn closes the episode: Sokoloff moves from markets into Buddhism, the Dalai Lama, and Gandhi, framing 'empathic understanding' as a real precondition for navigating the systemic challenges discussed earlier — a real, direct bridge between his professional expertise and his own stated spiritual practice, not a tacked-on closing platitude."@en ;
+    .
+
+#############################################
+# added 2026-08-24 
+#############################################
+
+tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript and official show notes. Opens against the backdrop of the real 2026 Iran war / Strait of Hormuz crisis (Operation Epic Fury), but Nate explicitly declines geopolitical analysis to launch a new, tentatively-titled 'Staying Human' series instead, opening Part 1 with the real question: why does growing awareness of the more-than-human predicament so often produce paralysis rather than action? He traces the gap through learned-helplessness and self-efficacy research (nervous systems learning whether effort produces outcomes), frames a digital environment designed to fragment attention as actively degrading follow-through, and reframes the Superorganism (already modeled in this graph) as a system that advertises choice while eroding the conditions for it. Closes with a concrete practice, not a program: protect one real hour in the next three days as a kept promise to rebuild self-trust — the precondition Nate argues is required before community-level and institutional work can follow."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 1 ;
+    dct:created "2026-03-04"^^xsd:date ;
+    dct:issued "2026-03-06"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/129-a-guide-to-staying-human-part-1> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/Frankly-129-Transcript-A-Guide-to-Staying-Human-Part-1.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=Ao2MJeiPiL4>, <https://open.spotify.com/episode/0WdRQsyD7koPMV6i4tFNvS> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Concept.TheoryOfChange, tgs:Concept.PersonalAgency ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: three real cross-referenced episodes in this episode's own show notes — Frankly #61 ('The Strait of Hormuz and the Spice'), Frankly #127 ('Wide Boundary News 2/23/26'), and Frankly #98 ('10 Qualities That Could Change the Future: The Seeds of New Cultural Mitochondria', also cited by Frankly_132) — none built as Episode individuals yet. Real, well-evidenced NEW Concept candidates surfaced but not minted this pass: Learned Helplessness and Self-Efficacy (Bandura) — cited only in this episode so far, held pending recurrence elsewhere, unlike Concept.PersonalAgency which this series' own Part 2 directly builds on and cross-references."@en ;
+    .
+
+tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 2): Navigating Dread and Carrying the Weight of Tomorrow"@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript and official show notes. Opens on Art Berman's own framing of Operation Epic Fury as 'the biggest blunder in human history' (TGS_220), then turns inward: Nate names what he's actually feeling as dread, and draws on climate psychiatrist Lise Van Susteren's term 'pre-traumatic stress' (the body responding to a trauma that hasn't happened yet). Walks through the neuroscience in real depth — amygdala/HPA-axis/cortisol machinery evolved for immediate physical threats, chronically activated but never discharged by slow-moving abstract risk, producing allostatic load that measurably impairs the hippocampus and prefrontal cortex. Cites a real study finding ~28% of subjects are 'extreme dreaders' who'd rather take a stronger shock immediately than wait for a milder one — direct evidence dread itself can cost more than the feared event. Explicitly connects back to Part 1: 'agency is the opposite stance' to dread, since a meaningful action gives the threat system 'a different signal.' Closes with five practical pathways (mental reframing, somatic/breath practice, agency, community/co-regulation, and what Nate calls 'befriending the darkness') and five concrete steps for when dread arises, ending on a direct forward-pointer to Part 3's topic: the movement from dread into presence, and the default mode network."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 2 ;
+    dct:created "2026-05-14"^^xsd:date ;
+    dct:issued "2026-05-15"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/142-a-guide-to-staying-human-part-2> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-142-Transcript-A-Guide-to-Staying-Human-Part-2.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=4gJ9E233hfw>, <https://open.spotify.com/episode/4lvZfG1sdQW7vnGZs8zc01> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part-9e6> ;
+    thinkr:discusses tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Metacrisis, tgs:Concept.PersonalAgency, tgs:Concept.Dread ;
+    dct:references tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_191_TaylorGuthrie, tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: TGS #202 (Samantha Sweetwater), cited alongside RR-17 as a Joanna Macy/Work That Reconnects cross-reference, not yet an Episode individual. Real Persona candidates cited by name but deliberately NOT bootstrapped this pass, matching this graph's established deferred-citation pattern (Audrey Tang, Helena Norberg-Hodge, etc. in Frankly_132's own scopeNote): Lise Van Susteren (climate psychiatrist, 'pre-traumatic stress' coinage, real personal detail — a childhood neighbor of Nate's), Viktor Frankl, Peter Levine (somatic experiencing), Daniel Siegel ('name it to tame it'), Joanna Macy (noted in the transcript as recently deceased), and Stephen Levine — none built as Persona individuals here. Francis Weller, cited alongside Macy, already exists in this graph as tgs:Persona.FrancisWeller — not re-flagged."@en ;
+    .
+
+tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 3): The Default Mode Network and the Metacrisis"@en ;
+    skos:definition "BUILT 2026-08-24 from a complete real transcript and official show notes — no prior stub existed. Opens on a real personal anecdote (missing a dawn birdsong and a full cup of coffee while mentally simulating 2026 diesel-rationing scenarios) to introduce the default mode network (DMN) — the brain system active during self-referential processing, theory of mind, mind-wandering, and mental time travel, anti-correlated with the task-positive network (TPN). Cites a real Harvard study ('A Wandering Mind is an Unhappy Mind') and the real canonical DMN discovery paper, and explicitly points back to this graph's own tgs:Interview.TGS_191_TaylorGuthrie as the only prior TGS coverage of the DMN. Names 5 specific real reasons metacrisis-aware people are especially vulnerable to chronic DMN dominance (emotional loading, no resolution signal, social isolation, vocational necessity of simulation, and a moral license that frames presence as a kind of abandonment), and explicitly links this episode back to Part 2: 'the same phenomenon I called full dread in last week's Frankly, but viewed from a slightly different angle' — coining a new term, 'future capture,' for the DMN-dominance experience when the content is civilizational. Closes with five pathways back to presence (the senses, the pause, single-tasking, beauty, and the finitude of things) and three concrete daily practices."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 3 ;
+    dct:created "2026-05-18"^^xsd:date ;
+    dct:issued "2026-05-22"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/143-a-guide-to-staying-human-part-3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-143-Transcript-A-Guide-to-Staying-Human-Part-3.docx-1.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=fZB6Ep8qSos>, <https://open.spotify.com/episode/3DzB8zatmpgek0Lfzkz67M> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part-e54> ;
+    thinkr:discusses tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Metacrisis, tgs:Concept.Dread, tgs:Concept.Presence, tgs:Concept.DefaultModeNetwork, tgs:Concept.FutureCapture ;
+    dct:references tgs:Interview.TGS_191_TaylorGuthrie, tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Interview.TGS_165_WisdomOverPower, tgs:Persona.IainMcGilchrist ;
+    skos:scopeNote """'Supernormal' appears once in this episode's own transcript ('our supernormal, unbelievable modern era') but as a casual adjective, not an invocation of tgs:Concept.SupernormalStimuli as a term of art — that Concept isn't yet built in this graph, and this single non-technical usage is deliberately not minting it; the show notes' own link to it is show-notes editorializing, not something Nate himself cites here.
+        Task Positive Network (TPN) is real and load-bearing to this episode's own DMN/TPN anti-correlation framing but kept out as a separate Concept this pass — folded into Concept.DefaultModeNetwork's own definition instead, matching this graph's 'don't over-split a paired mechanism' discipline. Real Persona candidates cited but not bootstrapped: Thich Nhat Hanh.
+        Iain McGilchrist and his 2 prior TGS appearances (#85, #165) already existed in this graph — linked, not rebuilt."""@en ;
+    .
+tgs:Series.AGuideToStayingHuman a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    dct:hasPart 
+        tgs:Monologue.Frankly_129_DesperatelySeekingAgency, 
+        tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, 
+        tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    skos:prefLabel "A Guide to Staying Human"@en ;
+    rdfs:comment "MINTED 2026-08-24, resolving the gap flagged in Frankly_142's own scopeNote since 2026-08-13. Tentatively titled by Nate himself ('staying Human tentatively the title' — Frankly_129's own opening). 3 parts confirmed via direct transcript evidence of forward/backward referencing across all three: Part 1 (Agency) → Part 2 explicitly builds on Part 1 ('I spent the first installment of this series on reclaiming agency') and forward-points to Part 3 ('part three... will pick up soon on presence and the default mode network') → Part 3 explicitly builds on Part 2 ('the same phenomenon I called full dread in last week's Frankly'). No confirmed Part 4 as of this pass — Nate's own words in Part 1 ('more soon in this series') leave it open-ended; revisit dct:hasPart if a Part 4 surfaces."@en ;
+    .
+
+# added 2026-08-25
+
+tgs:Interview.TGS_127_EdConway a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Ed Conway: \"Material World: The Key Resources Underpinning Modern Economies\""@en ;
+    skos:definition "BUILT 2026-08-24 from the full real transcript and official show notes — no prior stub existed. Sky News economics journalist Ed Conway walks through his book's six foundational materials (sand, salt, iron, copper, oil, lithium), opening from the same well ('I, Pencil' — no single person understands a whole supply chain) that inspired the book after he stood at the lip of a Nevada gold mine and realized he'd never grasped the physical reality behind 'a hangover from empire' UK gold-trading statistics. Central, recurring thesis, stated in his own words at the open and close: 'how can we begin to fathom the future if we don't understand the present... we need to understand the basics before we even get to the complex stuff.' Builds this through concrete, real case studies of supply-chain fragility: the 1915 UK 'Glass Famine' (Britain let its glass industry wither, then discovered wartime binoculars were existentially dependent on optical glass, and had to trade rubber to Germany — its own wartime enemy — for Zeiss binoculars); and a single small Birmingham metal-pressing factory that manufactures roughly half the world's automotive rearview-mirror auto-dimming electrodes, an invisible real 'pinch point' Conway explicitly generalizes: 'multiply that by a thousand, a million... it is so complex you can barely get your head around it.' Also covers declining ore grades (US copper ore fell from ~40% concentration in 19th-century Montana to ~0.4% today, meaning exponentially more energy/water/trucks per ton of usable metal), a direct, real critique of net-zero transition models (the IEA's own models implicitly assume Sub-Saharan Africa's per-capita energy consumption stays flat through 2050 — 'in other words, zero development' — to make the arithmetic work), and an extended discussion of Jevons Paradox (already modeled in this graph) via LED lighting and AI/data-center energy demand as live examples. Closes on real, direct consumption/growth reflection: Conway states plainly 'the amount of waste and overconsumption in our lives is crazy,' and that writing the book changed his own consumption behavior."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.EdConway ;
+    dct:created "2024-05-07"^^xsd:date ;
+    dct:issued "2024-06-12"^^xsd:date ;
+    dct:subject tgs:Subject.EROIAndEnergyQuality, tgs:Subject.MonetarySystemAndGrowth ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/127-ed-conway> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/06/TGS127EdConwayTranscript.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=4C2-tWcFKfQ> ;
+    dct:source tgs:Work.MaterialWorld ;
+    thinkr:discusses tgs:Concept.JevonsParadox, tgs:Concept.EnergyReturnOnInvestment, tgs:Concept.GrowthImperative, tgs:Concept.SupplyChainFragility ;
+    dct:references tgs:Interview.TGS_167_OliviaLazard, tgs:Interview.TGS_SimonMichaux ;
+    thinkr:hasDiscussionSummary "Warm and substantively convergent throughout, with Conway repeatedly building on and validating Nate's framing rather than contesting it — but not without two real, specific moments of honest divergence worth naming rather than smoothing over. The clearest point of genuine, if gentle, difference in register: near the close, Conway explicitly and self-consciously pivots away from the show's usual diagnostic mode, naming it directly — 'so much of the way that this discourse has happened in recent years has been about fear and about threat, but there's wonder too' — offered not as a rebuttal of anything Nate said, but as a real, distinct emphasis Conway clearly wanted on the record, illustrated with his own genuine enthusiasm for extreme ultraviolet lithography and the rediscovery of Roman concrete's recipe. The second real moment of honest non-convergence: when Nate directly asks whether excessive consumption stems from human nature or the economic system, Conway doesn't confidently pick a side — 'I don't know. I hope it's the economic system' — a real, disclosed uncertainty, distinct from Nate's own more assured 'I happen to agree' framing of the same question earlier in the conversation. Where the two do converge, it's substantive rather than superficial: Conway's own direct, unprompted validation of Nate's skeptical framing of net-zero modeling ('The answer is no, they don't [account for those constraints]') is offered as agreement from Conway's own separate reporting and interviews with policymakers, not deference to his host. The episode's real emotional through-line, stated by both speakers independently rather than scripted: understanding the physical reality behind consumption changes behavior — Conway discloses his own reduced gadget-buying since researching the book, and Nate's closing formulation ('understanding leads to appreciation, appreciation leads to gratitude and conversations and behavior change') is offered as a direct synthesis of what Conway had just described about himself, not an unrelated closing platitude."@en ;
+    skos:scopeNote "This episode was specifically selected — MJSullivan's own words — as a 'general purpose response/caveat to pretty much any news article that talks about unlimited growth or consumption,' since Conway's real material-complexity argument applies far beyond energy/climate topics specifically. Directly relevant to the tng-app design work this same session: this episode is close to a canonical source for that app's 'systemic reframing' step (an article with no explicit energy/growth content that nonetheless connects to consumption/complexity patterns). Real, deferred cross-references found but not built: Olivia Lazard and Simon Michaux, both cited directly by Nate in his own intro as prior TGS guests on materials-for-renewables — their real episode IRIs are guessed above (`TGS_167_OliviaLazard`, `TGS_SimonMichaux`) and MUST be verified against the real repo before use; not confirmed to exist in this pass. No Persona bootstrapped for either here. 'I, Pencil' (Leonard Read essay) and Richard Baldwin (economist studying supply-chain 'nodal relationships,' a real, thin academic field per Conway's own account) are real, well-evidenced citations not built as individuals this pass."@en ;
+    .
+
+tgs:Interview.TGS_198_StacyMitchell a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Challenging Monopoly Power: Why Local Business is Better for People, the Planet, and Your Wallet"@en ;
+    dct:created "2025-09-18"^^xsd:date ;
+    dct:issued "2025-10-22"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.StacyMitchell ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/198-stacy-mitchell> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=Ohwaf1N94sM>, <https://open.spotify.com/episode/1SLnqgoUGC84mZabc2BtgI> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/10/TGS-198-Stacy-Mitchell-Transcript.pdf> ;
+    dct:references tgs:Work.DeseretFarmerBailout2026, tgs:Work.WorldBankFoodSecurityUpdate2026, tgs:Work.PewDecliningTrust2025 ;
+    thinkr:hasDiscussionSummary "Stacy Mitchell (Institute for Local Self-Reliance) argues that concentrated corporate power operates as a de facto governing force — deciding which communities thrive and which don't — not through superior performance but through structural market power ('strong arming the system'). She grounds this in real, concrete supply-chain fragility examples: a single slaughterhouse failure emptying meat shelves nationwide during COVID, one baby-formula plant failure causing a national shortage. Nate connects this directly to his own economic-Superorganism framing, comparing the system to 'the Borg.' The conversation's most consequential turn links economic powerlessness directly to democratic erosion: Mitchell argues that as communities lose local control over decisions affecting their own wellbeing, the resulting powerlessness becomes 'poison in the veins of democracy,' driving people toward strongman politics and, in the most severe cases, political violence — a real, direct causal mechanism, not just correlation. The episode closes on food deserts specifically (nearly 40 million Americans lack nearby grocery access) as a concrete, human-scale entry point into the otherwise abstract monopoly-power conversation." ;
+    skos:scopeNote "Previously identified as a real, valuable cross-reference during an earlier episode-minting pass (see this graph's own note on the episode that first surfaced it) but deliberately deferred rather than stubbed prematurely. Built now at MJSullivan's explicit request, alongside three new Work individuals (WorldBankFoodSecurityUpdate2026, DeseretFarmerBailout2026, PewDecliningTrust2025) representing real WWNS candidate-article connections discovered via this episode's own show notes and content — the first application of the standing methodology decision that WWNS-candidate-to-episode alignments get folded into the graph as episodes are minted, not tracked in a separate system."@en ;
     .

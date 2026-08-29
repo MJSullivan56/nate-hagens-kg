@@ -1121,3 +1121,27 @@ tgs:Human.KirilSokoloff a thinkr:Human,
     owl:sameAs <https://en.wikipedia.org/wiki/13D_Research> ;
     rdfs:comment "American investor and investment strategist; Chairman and Founder, 13D Research & Strategy (founded 1983 in St. Thomas, US Virgin Islands), an independent institutional global research firm publishing 'What I Learned This Week' and 'What Are The Markets Telling Us.' One of the first foreign professional investors in Hong Kong (1992); co-founded one of the first pure technology funds (1994). Real, direct praise from Howard Marks (Oaktree Capital) and the late Barton Biggs, both citing his real, long track record identifying major secular investment trends. Active in philanthropy across healthcare, education, and what his own real bio calls 'the scaling of human consciousness.'"@en ;
     .
+
+# added 2026-08-24
+
+tgs:Human.JoannaMacy a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Joanna Macy"@en ;
+    rdfs:label "Joanna Macy (human)"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Joanna_Macy> ;
+    .
+
+# added 2026-08-25
+
+tgs:Human.EdConway a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Ed Conway"@en ;
+    rdfs:label "Ed Conway (human)"@en ;
+    rdfs:comment "Economics and Data Editor at Sky News (UK), author of Material World and two other books, educated at Oxford and Harvard. Governor of the National Institute for Economic and Social Research (UK). Lectures on the international monetary system at LSE and the US Treasury."@en ;
+    owl:sameAs <http://dbpedia.org/resource/Ed_Conway> ;
+    .
+
+tgs:Human.StacyMitchell a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Stacy Mitchell"@en ;
+    rdfs:label "Stacy Mitchell (human)"@en ;
+    rdfs:comment "American activist, writer, and author. Grew up in Portland, Maine; B.A. in history, Macalester College. Joined the Institute for Local Self-Reliance as a research assistant in 1997, now Co-Executive Director, leading its Independent Business Initiative. Chair of the American Independent Business Alliance. Author of 'Big-Box Swindle: The True Cost of Mega-Retailers and the Fight for America's Independent Businesses' (Beacon Press, 2007); co-author of the 2016 report 'Amazon's Stranglehold.' Her research was cited in Congress's 2021 investigation of Big Tech dominance and informed the FTC's 2023 antitrust lawsuit against Amazon. Named one of the top ten 'antitrust super influencers' by political strategy firm Baron, 2022. Co-founded the Athena coalition and Small Business Rising. Also serves on the board of the Maine Center for Economic Policy."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Stacy_Mitchell> ;
+    thinkr:memberOf tgs:Organization.ILSR .

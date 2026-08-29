@@ -1,0 +1,738 @@
+{
+  "episode_iri": "tgs:Monologue.TGS_145_HowtoThinkAbouttheFuturePart3",
+  "source_transcript_file": "Frankly-145-How-to-Think-About-the-Future-Part-3-TRANSCRIPT.md",
+  "source_yaml_file": "Frankly-145-How-to-Think-About-the-Future-Part-3.json",
+  "source_sha256": "6874a80a521f7e4b19833fcfc69a4222b47c3a78706a99a00f854768e03a78b8",
+  "transcript_source_type": "official",
+  "chunking_anchor_available": "show_notes",
+  "has_embedded_metadata_corruption": false,
+  "title": "How to Think About the Future (Part 3): Uphill Futures in a Downhill World",
+  "webpage_url": "https://www.thegreatsimplification.com/frankly-original/145-how-to-think-about-the-future-part-3",
+  "youtube_url": "https://www.youtube.com/watch?v=vTBQ1AS-KVw",
+  "duration_seconds": 1457,
+  "published_date": "2026-06-05",
+  "recorded_date": "2026-05-22",
+  "keywords": [
+    "Human Behavior"
+  ],
+  "host": "Nate Hagens",
+  "guests": [],
+  "guest_bios": [],
+  "description": "This week’s Frankly is part three of the series How to Think About the Future. Today, Nate builds a framework for understanding the pathways that connect today’s choices to tomorrow’s realities. Drawing from biology, ecology, history, and systems thinking, he introduces a civilizational terrain of ridges and valleys that is constantly shifting as we are moving through it. Nate also uses the concepts of switchbacks and erosion to explain why some futures emerge by default from existing incentives and momentum, while others require deliberate effort, coordination, and sustained commitment.\nThrough examples that range from cell development to lake ecosystems to political systems, Nate examines how complex systems settle into stable states, and why some transitions are far easier to make than to reverse. As economic, geopolitical, and ecological pressures reshape the landscape we traverse, knowing which futures are downhill and which require climbing becomes increasingly important. The episode offers a conceptual tool for interpreting the composite worlds Nate will outline in the next part of the series, and invites listeners to consider both where they stand in the terrain and whether their daily actions are building pathways toward a more desirable future, or letting those paths erode.\nHow do societies become trapped in self-reinforcing systems, and what does that look like in our current reality? Which futures seem most likely if present incentives and momentum hold? And which social, cultural, or ecological switchbacks are being built today that could open new possibilities tomorrow",
+  "transcript_speakers": [
+    "Nate Hagens"
+  ],
+  "chunking_method": "show_notes_anchored",
+  "_provenance": {
+    "alignment_confidence": "high",
+    "chunking_method": "site:show_notes",
+    "metadata_source_format": "json",
+    "show_notes_entries": 23,
+    "filler_gap_threshold_seconds": 90,
+    "turns_parsed": 1,
+    "bare_continuation_timestamps": 44,
+    "speakers_observed_in_transcript": [
+      "Nate Hagens"
+    ],
+    "teaser_stripped": null,
+    "outro_stripped": null,
+    "had_nul_bytes": false
+  },
+  "_gaps": [
+    "IRI MINTING RISK: series=frankly #145 mints 'tgs:Monologue.TGS_145_HowtoThinkAbouttheFuturePart3' — the SourceAcronym+Number key 'TGS_145' is NOT unique across series (interview #145 exists independently). CLAUDE.md 0d says that key alone should be unique. Needs a convention decision (e.g. RR_/FR_ acronyms); not resolved here.",
+    "CHUNKING DEGENERATE: 1 turn spans the whole episode, so 1 of 23 chunks hold content and chunk-level NER becomes one whole-transcript call. The 44 bare continuation timestamps carry real sub-turn time offsets that are currently merged into turn text and discarded — they are the only available signal for segmenting a monologue against its show-notes anchors."
+  ],
+  "chunks": [
+    {
+      "chunk_id": "Frankly145_chunk_01",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "topic_label": "How to Think About the Future Series: Part 1, Part 2 | Essay version of this Frankly",
+      "curated_links": [
+        {
+          "label": "How to Think About the Future Series",
+          "url": "https://youtube.com/playlist?list=PLdc087VsWiC44EVBfmfJdXRYTmE9TNAKs&si=tk4JWcA1aHIp6MLw"
+        },
+        {
+          "label": "Part 1",
+          "url": "https://www.thegreatsimplification.com/frankly-original/138-how-to-think-about-the-future-part-1"
+        },
+        {
+          "label": "Part 2",
+          "url": "https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2"
+        },
+        {
+          "label": "Essay version of this Frankly",
+          "url": "https://natehagens.substack.com/p/essay-uphill-futures-in-a-downhill"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Nate Hagens",
+          "start_seconds": 0,
+          "text": "Good morning. This is part three of how to think aboutthe future, where I'm gonna talk about how to build a systems terrain map of thevarious pathways to various futures. I keep making the series longer, because asmost of you tuning in here feel, we are approaching a really serious juncture, inour global, economic situation and, our culture. And I really want more people to be able to visualize, discuss, andengage with all the unknowns steering towards life and continuity and away fromdystopia, though some dystopian things are, probably now baked in, indeedhappening now. So a quick recap so far. In part one, we talked about how to holdthe future as a landscape of possibilities, coupled systems and phase shifts andshortfall risks. in part two, we built four grids of variables that will be core componentsin shaping the future, economic direction, up or down, power and distribution,geopolitics, and Earth systems. And we highlighted why technology is neithergood nor bad, but an amplifier of whatever system it sits inside. In part four, thenext video, I'm gonna combine sections of those four grids into compositeworlds, specific futures descriptive enough that you can feel the differencebetween what it might be for us to live inside one versus another. But before I do that, I decided to add one more conceptual tool,because those composites I'm gonna build are not only just a list of possiblefutures sitting side by side with equal likelihood. They all will reside in alandscape, and the shape of that landscape, which valleys are deep and whichridges are steep and hard to cross, and which directions flow downhill or uphillfrom where we stand right now, I think matters enormously to understand which futures we're most likely to arrive at if we do nothing, and what it will take to climbtowards the futures we want So all these concepts come from biology andecology and are, in my opinion, pretty useful for thinking about where humancivilization might be headed. Okay, so here's the biology. In the 1950s, a developmental biologistnamed Conrad Waddington was trying to understand how a single cell, a fertilizedegg, eventually becomes an entire organism. Every cell in your body carries thesame DNA. They start from the same place on the map, if you will. But a heart celland a liver cell and a brain neuron end up as completely different things. How does a cell that starts with all the possibilities open to it end upcommitted to one specific pathway? Waddington imagined all this as alandscape. Picture a ball sitting at the top of a series of rolling hills and valleys.That ball is a stem cell, and it has the potential to become many different things. As it develops, it rolls, and it rolls downhill and enters a valley. And inthat valley, there's a fork, and the cell enters one branch after that fork, and thenthat branch forks again. At each fork, some of what was previously possible tothat cell closes off, and by the time it reaches the bottom of a particular valley, itis now committed to being, for instance, a heart cell. It will never again be a stem cell, nor will it become any other type ofcell, at least not without extraordinary intervention. The valleys there are not allthe same depth or size. Some are deep and have very steep walls, and once a cellenters, it stays because the constraints to leave are quite strong. Some valleys are quite shallow. A small perturbation or some chemicalsignal or a mutation might push the cell out and into a neighboring valley, and theridges between those valleys also vary in height. Some transitions between cell states are relatively easy. Others would require enormous energy or very specificconditions that rarely occur naturally. I think this way of looking at a situation with valleys and ridges andmountains is useful because, you guessed it, I think it maps directly onto humancivilizational futures. When we imagine and discuss and work towards variousfutures, we're not choosing from a list of possible futures the way you wouldchoose from a Chinese restaurant, menu where everything is equally availableand the only question is your preference. We're also not sitting at the top of a series of rolling hills and valleyslike our imagined cell. We're already rolling through a moving landscape with ashifting topography. And some futures, I would argue most futures, are downhillfrom where we currently are. Some are uphill, and by downhill I mean the path ofleast resistance, the future that current momentum and present incentivesalready favor the one that takes the least new energy or coordination to reach. Those are downhill. Uphill futures are the ones that require sustainedeffort to climb towards and sustained effort to stay in once we arrive there. Andonce we find ourselves deep in a particular valley, the high walls constrain thepossible next moves. A farmer in Malawi or a software engineer in San Franciscoare all standing in very different parts of the landscape. So the futures that count as uphill for one community may be thedefault valley for another. So we here are more about the systems we share incommon and not a location that everyone occupies. I want to make that clearOkay, so let me make this concrete with other examples that don't involve cellbiology. Think about a lake. Ecologists have studied the aging process of lakesextensively. A young, clear lake with abundant plant and animal life will gradually accumulate sediment and nutrient buildup over its lifespan. As it ages, it willbecome shallower and murkier, eventually reaching a point where it becomes awetland. There are ecological forces that regulate the speed of all thishappening. The plants filter the water, the clear water lets sunlight reach theplants. Fish populations eat the plants and the algae, and bottom feeders filter outthe excess nutrients, creating a gradual succession Humans benefit greatly fromyoung and middle-aged lakes as sources of fresh water and food and as beautifulplaces to live near, in Minnesota, the Land of 10,000 Lakes. By the way, there are also 10,000 caves, which are also pretty cool. Butimportantly, we can impact the how and when a lake ages depending on how weinteract with it. There are regenerative techniques that can expand a lake'slifespan by increasing water-filtering wildlife and reducing sediment and nutrientsthat would naturally run off into the water. These techniques require intention and planning and energy, but arequite effective. Conversely, we can also accelerate and distort this systemicdegradation by adding even more nutrient runoff, like fertilizer from farms orsewage or phosphorus, causing the lake to become murkier more quickly, and thelake might even flip, via algal blooms. The water then becomes thick and cloudy with the suspendedsediment, and light can now no longer reach the bottom. Most of the plants die,the oxygen then drops, then the fish die, and the unnatural aging of this systemhas also tipped the lake into a new stable state, a new valley, a murkyalgae-dominated lake. So this is now a deep, self-reinforcing, stable valley because theconditions that maintain cloudy, lifeless murkiness are now in a self-perpetuating loop. So here's the interesting and relevant, and in my opinion, important thing.These are both examples of systemic processes, but the transition between thedynamic life-perpetuating system and the dead zone is profoundly asymmetric. Flipping a clear lake to a murky one might take a few years of excessnutrient loading. Flipping it back Even after you completely stop that nutrientrunoff might take decades or much longer because you don't just need toremove, the offending pollutant or stressor, you would need to rebuild the entireecosystem that was lost, the plants, the oxygen, the fish populations, and thenutrient cycles and the ecological webs. So the system settled into a new valley, and getting it back out requiresclimbing a ridge that didn't exist before. This pattern that I just described for lakesshows up everywhere in complex systems, and it shows up in human societies tooin lots of ways. Think about a society that transitions from democratic governanceto authoritarian control during a crisis. Maybe there's a war or an economic collapse. Maybe there's gasoline anddiesel shortages and empty sor- store shelves, due to military action overseas.Fear and uncertainty spike, people accept restrictions that they wouldn't normallyaccept, and a leader consolidates power and then surveillance expands andopposition is algorithmized, is that a word, and suppressed so- sometimesprobably violently, sometimes just through social pressure and institutionalcapture. And that transition from open society to authoritarianism during a crisiscan happen in years or decades, such as the slow erosion of the Roman Empire.We've also seen it happen in months or even faster. Modern examples were Peruin, in the 1990s and Tunisia, a few years back. It's what I would label a behavioraldownhill roll because once started, it gathers its own momentum, and it followsthe gravitational logic that we talked about in part two of this series. Contraction plus fear pulls power towards consolidation. But now try toreverse all that. Try to rebuild democratic governance after authoritarian rule. Youwould need, among other things, independent courts and a free press in alandscape where civic habits of debate and disagreement have atrophied. Youwould need institutional knowledge that was purged and a population that knowswhat self-governance feels like and believes that it's possible. You would need to rebuild trust itself, arguably, in my opinion, our mostvaluable resource from neighbor to neighbor and citizen to government. Such atransition probably takes a generation at minimum, often longer, and sometimesit doesn't happen at all. So the transition from democracy to authoritarianismdownhill took months, but the transition back takes decades. This asymmetry, something my friend in Italy, Ugo Bardi, calls theSeneca effect, where things grow slowly and collapse suddenly, is not an accidentor bad luck. It's a feature of the landscape topography itself. Organized,high-trust, coordinated systems like, democracy and civil discipline requireenergy and effort and social engagement to maintain, just like slowing down theaging of a young lake system. Degraded, low-trust, coercive systems are, in a thermodynamic sense,the lower energy state. They're what systems roll towards when you stop puttingenergy and collective effort towards them. The default societal valley, the placethat gravity pulls us when we stop climbing. This brings me to the practical pointof this episode ahead of when we start building composite worlds. The futures that are easiest to reach from the valley we currentlyinhabit are not necessarily the futures most worth living in. In contrast, the futuresmost desirable and worth living in will require some hard climbing. Let me stressthat again, though to many of the viewers of this channel it will appear obvious. The easiest futures ahead of us are not the most desirable, and themost desirable futures for humanity and the biosphere will require sustainedeffort to reach and sustained effort to remain in. And if we stop climbing, gravity,the social and ecological, will pull us back down into a valley we don't want. an important caveat too is the landscape we are navigating is notstatic. It's pretty dynamic and always changing, whether through human ornon-human forces. And as we move through the peaks and valleys of the terrain,the ground beneath us continues to shift, under our feet. Energy descent, climatechange, biodiversity loss, and much more are all actively reshaping the valley aswe proceed through it. In other words, a future that was uphill in the 1990s may now bedownhill, or will be in, in a decade from now or vice versa. So I like to think aboutthis in terms of what we covered in part two. Contraction, economic contractioncombined with adversarial geopolitics and increased concentration of power isnow the path of least resistance, or at least economic contraction for mostpeople. This is now a downhill roll. It does not require any conspiracies orvillains. It merely requires people being afraid and leaders responding to fear theway leaders have responded to fear for thousands of years: consolidation, control,surveillance, walls. Economic contraction combined with cooperative geopoliticsand broadly shared power, that's possible. That's uphill from where we are. It requires people to trust each otherduring precisely the period when trust is hardest sus- to sustain. It requiresleaders to share power when the incentives to consolidate are strong, it also willrequire communities to coordinate when coordination is the most expensive andtiring and difficult. But-- and at the core of the work of The Great Simplification, and ouroutreach and the information and the community, uphill does not meanimpossible. Plenty of things in nature are uphill, and they happen all the time.Every living cell in your body has succeeded in an uphill project. Salmon spendtheir adult life swimming against the current to spawn. A redwood tree in California spends centuries pulling water hundredsof feet up against gravity. So this landscape metaphor doesn't tell us that theclimb cannot be done. It just informs us w- that the climb has costs. And also,what happens if we stop before we've reached a more stable resting place on theother side?[00:18:27] We slide back. And this is true at every scale, your personal health, yourrelationships, your community, national and international governance, thebiosphere. These are all states that are maintained with effort. They exist becausesomeone or something is doing ongoing work, putting in energy, attention, andcare to maintain it. And the moment that work stops or shifts, the contours of the system'slandscape reassert themselves, and these systems devolve in years or evenmonths because the landscape is always gently but persistently pulling themtoward lower energy configurations. So when we get to part four, probably nextweek or soon, and I walk through four composite worlds I've come up with, I inviteyou to hold this landscape idea in your mind. Before I share those, next time, maybe sit with a few questions. Lookingat the near and longer-term future, where do you see the steep valleys, andwhere do you see the open ground? Which civilizational pathways feel uphill fromhere, and which feel downhill? Where are you actually standing in this landscaperight now? Because what counts, as I said earlier, as an uphill from a farmhouse inMalawi looks very different from what counts as uphill from an office in SanFrancisco. Your sense of the terrain is shaped by where you start. And here's aharder one. When you imagine the futures ahead, notice which ones you findyourself wanting and which ones the physics and the data suggest are likely. Are those the same? And if they're not, what does that tell you? Thecomposites I'm building and will share are not equally accessible or equally stable,and the transitions between them are also not equally reversible. The landscape ofthe future of humanity and the biosphere is tilted, and knowing which directionit's tilted is arguably as important as knowing what the valleys look like once we'reinside them. Okay, before we conclude, I want to highlight four terms to carrythrough the rest of this series, and I may use them repeatedly in this channel'swork because they are this channel's work. The landscape itself has two features:valleys, which are the stable states where systems settle and reinforcethemselves, and hills, or more technically ridges, which are the barriers betweenthese valleys, the cost of transitioning from one stable state to another. The valleys and the ridges are the terrain of the future. We don't choosethem. They're given to us by physics, ecology, and history But there are thingshumans can do to that terrain, two general categories. We can createswitchbacks, use physical or social technology to carve paths up ridges thatwould otherwise be too steep to cross. So, building more social trust, that's switchbacking. Restoring depletedsoil, creating cooperative institutions, those are switchbacks. They makecrossings of the ridges possible that weren't possible before. On the other hand,we can erode the trail through actions or just through plain neglect, we let thepaths disappear, and then the ridges do become impassable. depleting fossil aquifers or soil, losing civic norms, buildingsurveillance infrastructure that can't be dismantled, these are all examples oferosion. And if erosion happens fast, it leads to washouts of all the switchbacksthat have been built, and these washouts do not have to be intentional. Sometimes it's just what happens when active switchbacking stops.Gravity and weather do the rest. So when you hear me describe the compositeworlds, in part four, ask yourself which passages are we switchbacking right now,and which ones are we allowing, purposefully or out of neglect, to erode?[00:23:29] Valleys, ridges, switchbacks, and erosion. Hold onto those ideas. Andlast point, though it's not the focus of this episode, these four things don't onlyapply to societies. Each of us has valleys and ridges in our own lives. We're eachswitchbacking or eroding our own future paths every day, whether we realize it ornot. I will finish part four soon. See you then"
+        }
+      ],
+      "ner_candidates": [
+        {
+          "text": "Nate Hagens",
+          "type_guess": "Person",
+          "confidence": 0.98,
+          "context": "Host/speaker label: 'Nate Hagens [00:00]: Good morning. This is part three of how to think about the future'"
+        },
+        {
+          "text": "Conrad Waddington",
+          "type_guess": "Person",
+          "confidence": 0.96,
+          "context": "'In the 1950s, a developmental biologist named Conrad Waddington was trying to understand how a single cell...becomes an entire organism.'"
+        },
+        {
+          "text": "Waddington landscape",
+          "type_guess": "Concept",
+          "confidence": 0.7,
+          "context": "'Waddington imagined all this as a landscape. Picture a ball sitting at the top of a series of rolling hills and valleys.' — concept named descriptively rather than by formal label"
+        },
+        {
+          "text": "Ugo Bardi",
+          "type_guess": "Person",
+          "confidence": 0.95,
+          "context": "'something my friend in Italy, Ugo Bardi, calls the Seneca effect'"
+        },
+        {
+          "text": "Seneca effect",
+          "type_guess": "Concept",
+          "confidence": 0.93,
+          "context": "'the Seneca effect, where things grow slowly and collapse suddenly' — attributed to Ugo Bardi"
+        },
+        {
+          "text": "The Great Simplification",
+          "type_guess": "Organization",
+          "confidence": 0.9,
+          "context": "'at the core of the work of The Great Simplification, and our outreach and the information and the community' — the podcast/channel/project name"
+        },
+        {
+          "text": "Italy",
+          "type_guess": "Location",
+          "confidence": 0.9,
+          "context": "'my friend in Italy, Ugo Bardi'"
+        },
+        {
+          "text": "Malawi",
+          "type_guess": "Location",
+          "confidence": 0.95,
+          "context": "'A farmer in Malawi or a software engineer in San Francisco are all standing in very different parts of the landscape.'"
+        },
+        {
+          "text": "San Francisco",
+          "type_guess": "Location",
+          "confidence": 0.95,
+          "context": "'what counts as uphill from a farmhouse in Malawi looks very different from what counts as uphill from an office in San Francisco'"
+        },
+        {
+          "text": "Minnesota",
+          "type_guess": "Location",
+          "confidence": 0.95,
+          "context": "'in Minnesota, the Land of 10,000 Lakes'"
+        },
+        {
+          "text": "Land of 10,000 Lakes",
+          "type_guess": "Nickname_Place",
+          "confidence": 0.85,
+          "context": "'in Minnesota, the Land of 10,000 Lakes' — epithet for Minnesota"
+        },
+        {
+          "text": "California",
+          "type_guess": "Location",
+          "confidence": 0.92,
+          "context": "'A redwood tree in California spends centuries pulling water hundreds of feet up against gravity'"
+        },
+        {
+          "text": "Roman Empire",
+          "type_guess": "Historical_Entity",
+          "confidence": 0.93,
+          "context": "'such as the slow erosion of the Roman Empire'"
+        },
+        {
+          "text": "Peru",
+          "type_guess": "Location",
+          "confidence": 0.85,
+          "context": "'Modern examples were Peru in, in the 1990s and Tunisia, a few years back' — cited as a case of democratic-to-authoritarian transition"
+        },
+        {
+          "text": "Tunisia",
+          "type_guess": "Location",
+          "confidence": 0.88,
+          "context": "'Modern examples were Peru in, in the 1990s and Tunisia, a few years back'"
+        },
+        {
+          "text": "How to Think About the Future (Part 1)",
+          "type_guess": "Work_Publication",
+          "confidence": 0.8,
+          "context": "'In part one, we talked about how to hold the future as a landscape of possibilities' — prior episode in the series"
+        },
+        {
+          "text": "How to Think About the Future (Part 2)",
+          "type_guess": "Work_Publication",
+          "confidence": 0.8,
+          "context": "'in part two, we built four grids of variables that will be core components in shaping the future'"
+        },
+        {
+          "text": "How to Think About the Future (Part 4)",
+          "type_guess": "Work_Publication",
+          "confidence": 0.75,
+          "context": "'In part four, the next video, I'm gonna combine sections of those four grids into composite worlds' — forthcoming episode"
+        },
+        {
+          "text": "Energy descent",
+          "type_guess": "Concept",
+          "confidence": 0.75,
+          "context": "'Energy descent, climate change, biodiversity loss, and much more are all actively reshaping the valley'"
+        },
+        {
+          "text": "Climate change",
+          "type_guess": "Concept",
+          "confidence": 0.8,
+          "context": "'Energy descent, climate change, biodiversity loss...are all actively reshaping the valley as we proceed through it'"
+        },
+        {
+          "text": "Biodiversity loss",
+          "type_guess": "Concept",
+          "confidence": 0.75,
+          "context": "'Energy descent, climate change, biodiversity loss, and much more'"
+        },
+        {
+          "text": "Switchbacks",
+          "type_guess": "Concept",
+          "confidence": 0.85,
+          "context": "'We can create switchbacks, use physical or social technology to carve paths up ridges' — one of four named terms to carry through the series"
+        },
+        {
+          "text": "Erosion",
+          "type_guess": "Concept",
+          "confidence": 0.8,
+          "context": "'we can erode the trail through actions or just through plain neglect' / 'Valleys, ridges, switchbacks, and erosion. Hold onto those ideas.'"
+        },
+        {
+          "text": "Valleys",
+          "type_guess": "Concept",
+          "confidence": 0.8,
+          "context": "'valleys, which are the stable states where systems settle and reinforce themselves' — named framework term"
+        },
+        {
+          "text": "Ridges",
+          "type_guess": "Concept",
+          "confidence": 0.8,
+          "context": "'hills, or more technically ridges, which are the barriers between these valleys'"
+        },
+        {
+          "text": "Uphill futures",
+          "type_guess": "Concept",
+          "confidence": 0.8,
+          "context": "'Uphill futures are the ones that require sustained effort to climb towards and sustained effort to stay in once we arrive there'"
+        },
+        {
+          "text": "Downhill futures",
+          "type_guess": "Concept",
+          "confidence": 0.75,
+          "context": "'by downhill I mean the path of least resistance, the future that current momentum and present incentives already favor'"
+        },
+        {
+          "text": "Algal blooms",
+          "type_guess": "Phenomenon",
+          "confidence": 0.8,
+          "context": "'the lake might even flip, via algal blooms' — lake regime shift example"
+        },
+        {
+          "text": "Shortfall risks",
+          "type_guess": "Concept",
+          "confidence": 0.7,
+          "context": "'In part one, we talked about how to hold the future as a landscape of possibilities, coupled systems and phase shifts and shortfall risks.'"
+        },
+        {
+          "text": "Phase shifts",
+          "type_guess": "Concept",
+          "confidence": 0.7,
+          "context": "'coupled systems and phase shifts and shortfall risks' — recap of part one concepts"
+        },
+        {
+          "text": "Composite worlds",
+          "type_guess": "Concept",
+          "confidence": 0.75,
+          "context": "'I walk through four composite worlds I've come up with' — framework device for part four"
+        }
+      ]
+    },
+    {
+      "chunk_id": "Frankly145_chunk_02",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 20,
+      "end_seconds": 30,
+      "topic_label": "Scenario planning (more info)",
+      "curated_links": [
+        {
+          "label": "Scenario planning",
+          "url": "https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2"
+        },
+        {
+          "label": "more info",
+          "url": "https://en.wikipedia.org/wiki/Scenario_planning"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_03",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 30,
+      "end_seconds": 69,
+      "topic_label": "Metacrisis",
+      "curated_links": [
+        {
+          "label": "Metacrisis",
+          "url": "https://www.sloww.co/meta-crisis-101/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_04",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 69,
+      "end_seconds": 178,
+      "topic_label": "Coupled systems, Phase shifts, Shortfall risk",
+      "curated_links": [
+        {
+          "label": "Coupled systems",
+          "url": "https://en.wikipedia.org/wiki/Coupling_(physics"
+        },
+        {
+          "label": "Phase shifts",
+          "url": "https://www.sciencedirect.com/science/article/pii/S007966110400031X"
+        },
+        {
+          "label": "Shortfall risk",
+          "url": "https://www.investopedia.com/terms/s/shortfall.asp"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_05",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 178,
+      "end_seconds": 360,
+      "topic_label": "Conrad Waddington: The Strategy of the Genes, More on the landscape topography",
+      "curated_links": [
+        {
+          "label": "Conrad Waddington",
+          "url": "https://www.britannica.com/biography/C-H-Waddington"
+        },
+        {
+          "label": "The Strategy of the Genes",
+          "url": "https://www.taylorfrancis.com/books/mono/10.4324/9781315765471/strategy-genes-waddington"
+        },
+        {
+          "label": "More on the landscape topography",
+          "url": "https://journals.biologists.com/dev/article/152/14/dev204617/368764/From-genes-to-patterns-five-key-dynamical-systems"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_06",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 360,
+      "end_seconds": 440,
+      "topic_label": "Path of least resistance, Path dependence (more info)",
+      "curated_links": [
+        {
+          "label": "Path of least resistance",
+          "url": "https://en.wikipedia.org/wiki/Path_of_least_resistance"
+        },
+        {
+          "label": "Path dependence",
+          "url": "https://en.wikipedia.org/wiki/Path_dependence"
+        },
+        {
+          "label": "more info",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0959378021002041"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_07",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 440,
+      "end_seconds": 485,
+      "topic_label": "Lake aging process",
+      "curated_links": [
+        {
+          "label": "Lake aging process",
+          "url": "https://lakes.grace.edu/wp-content/uploads/2021/10/Lake-Aging_FINAL.pdf"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_08",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 485,
+      "end_seconds": 495,
+      "topic_label": "Surface water use in the U.S.",
+      "curated_links": [
+        {
+          "label": "Surface water use in the U.S.",
+          "url": "https://www.usgs.gov/water-science-school/science/surface-water-use-united-states"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_09",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 495,
+      "end_seconds": 510,
+      "topic_label": "Minnesota: Land of 10,000 Lakes and Caves",
+      "curated_links": [
+        {
+          "label": "Lakes",
+          "url": "https://thievesriver.com/blogs/articles/land-of-10000-lakes?srsltid=AfmBOopqGjRBuLXFdZ9yEe2kruqA2hYKy3-Co-Pu2do28RDDa9BtGrly"
+        },
+        {
+          "label": "Caves",
+          "url": "https://conservancy.umn.edu/server/api/core/bitstreams/3123889f-f288-4298-b757-42cee6f99383/content"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_10",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 510,
+      "end_seconds": 534,
+      "topic_label": "Regenerative techniques that expand a lake’s lifespan",
+      "curated_links": [
+        {
+          "label": "Regenerative techniques that expand a lake’s lifespan",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0048969725010873"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_11",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 534,
+      "end_seconds": 545,
+      "topic_label": "Activities that degrade lakes",
+      "curated_links": [
+        {
+          "label": "Activities that degrade lakes",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7121614/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_12",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 545,
+      "end_seconds": 570,
+      "topic_label": "Lake tipping points, Algal bloom in lakes",
+      "curated_links": [
+        {
+          "label": "Lake tipping points",
+          "url": "https://esd.copernicus.org/articles/15/653/2024/"
+        },
+        {
+          "label": "Algal bloom in lakes",
+          "url": "https://www.nrdc.org/stories/freshwater-harmful-algal-blooms-101"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_13",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 570,
+      "end_seconds": 600,
+      "topic_label": "Tipping points, Stable states, Self-perpetuating loop",
+      "curated_links": [
+        {
+          "label": "Tipping points",
+          "url": "https://global-tipping-points.org/"
+        },
+        {
+          "label": "Stable states",
+          "url": "https://www.sciencedirect.com/topics/mathematics/stable-state"
+        },
+        {
+          "label": "Self-perpetuating loop",
+          "url": "https://en.wikipedia.org/wiki/Self-perpetuation"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_14",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 600,
+      "end_seconds": 715,
+      "topic_label": "Complex system",
+      "curated_links": [
+        {
+          "label": "Complex system",
+          "url": "https://en.wikipedia.org/wiki/Complex_system"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_15",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 715,
+      "end_seconds": 825,
+      "topic_label": "Move toward authoritarianism in crisis: Downfall of the Roman Empire, Peru, Tunisia",
+      "curated_links": [
+        {
+          "label": "Move toward authoritarianism in crisis",
+          "url": "https://freedomhouse.org/report/freedom-world/2022/global-expansion-authoritarian-rule"
+        },
+        {
+          "label": "Downfall of the Roman Empire",
+          "url": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire"
+        },
+        {
+          "label": "Peru",
+          "url": "https://www.wola.org/sites/default/files/downloadable/Andes/Peru/past/peru_deconstructing_democracy_fujimori_eng.pdf"
+        },
+        {
+          "label": "Tunisia",
+          "url": "https://www.brookings.edu/articles/tunisia-is-sliding-back-into-authoritarianism-heres-what-the-us-should-do/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_16",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 825,
+      "end_seconds": 965,
+      "topic_label": "Seneca Effect (Ugo Bardi), The Seneca Effect, ”The Seneca Effect” Substack",
+      "curated_links": [
+        {
+          "label": "Seneca Effect",
+          "url": "https://en.wikipedia.org/wiki/Seneca_effect#:~:text=The%20Seneca%20effect%2C%20or%20Seneca,its%20earlier%20rate%20of%20growth."
+        },
+        {
+          "label": "Ugo Bardi",
+          "url": "https://scholar.google.com/citations?user=lQAAynEAAAAJ&hl=en"
+        },
+        {
+          "label": "The Seneca Effect",
+          "url": "https://www.clubofrome.org/publication/the-seneca-effect-2017/"
+        },
+        {
+          "label": "”The Seneca Effect” Substack",
+          "url": "https://senecaeffect.substack.com/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_17",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 965,
+      "end_seconds": 1000,
+      "topic_label": "Energy descent, Climate change, Biodiversity loss",
+      "curated_links": [
+        {
+          "label": "Energy descent",
+          "url": "https://read.realityblind.world/view/975731937/260/"
+        },
+        {
+          "label": "Climate change",
+          "url": "https://science.nasa.gov/climate-change/"
+        },
+        {
+          "label": "Biodiversity loss",
+          "url": "https://www.science.org/doi/10.1126/sciadv.abm9982"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_18",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1000,
+      "end_seconds": 1035,
+      "topic_label": "Current path of least resistance: Economic contraction, Adversarial geopolitics, and Increased concentration of power",
+      "curated_links": [
+        {
+          "label": "Economic contraction",
+          "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+        },
+        {
+          "label": "Adversarial geopolitics",
+          "url": "https://academic.oup.com/oxrep/article/40/2/220/7691461"
+        },
+        {
+          "label": "Increased concentration of power",
+          "url": "https://bti-project.org/en/reports/global-report"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_19",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1035,
+      "end_seconds": 1087,
+      "topic_label": "How and why to develop trust, Power sharing, Tips for community coordination",
+      "curated_links": [
+        {
+          "label": "How",
+          "url": "https://pressbooks.nebraska.edu/developinghumanpotential/chapter/developing-trust-being-trustworthy/"
+        },
+        {
+          "label": "why",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10083508/"
+        },
+        {
+          "label": "Power sharing",
+          "url": "https://en.wikipedia.org/wiki/Power_sharing#:~:text=Horizontal%20power%20sharing%20refers%20to,as%20legislature%2C%20executive%20and%20judiciary."
+        },
+        {
+          "label": "Tips for community coordination",
+          "url": "https://www.lifewithalacrity.com/article/a-revised-ostroms-design-principles-for-collective-governance-of-the-commons/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_20",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1087,
+      "end_seconds": 1280,
+      "topic_label": "Salmon swim upstream to spawn, Trees pulling up water against gravity",
+      "curated_links": [
+        {
+          "label": "Salmon swim upstream to spawn",
+          "url": "https://americanindian.si.edu/nk360/pnw-history-culture/pnw1-salmon/#:~:text=To%20reproduce%20(spawn"
+        },
+        {
+          "label": "Trees pulling up water against gravity",
+          "url": "https://www.lifewithalacrity.com/article/a-revised-ostroms-design-principles-for-collective-governance-of-the-commons/"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_21",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1280,
+      "end_seconds": 1322,
+      "topic_label": "Valleys, Ridges, Switchbacks, Erosion",
+      "curated_links": [
+        {
+          "label": "Valleys",
+          "url": "https://en.wikipedia.org/wiki/Valley"
+        },
+        {
+          "label": "Ridges",
+          "url": "https://en.wikipedia.org/wiki/Ridge#:~:text=A%20ridge%20is%20a%20long,dropping%20down%20on%20either%20side."
+        },
+        {
+          "label": "Switchbacks",
+          "url": "https://myoutdoorbasecamp.com/what-is-a-switchback/"
+        },
+        {
+          "label": "Erosion",
+          "url": "https://en.wikipedia.org/wiki/Erosion"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_22",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1322,
+      "end_seconds": 1330,
+      "topic_label": "Social innovation, Restoring soil, Creating cooperative institutions",
+      "curated_links": [
+        {
+          "label": "Social innovation",
+          "url": "https://www.ebsco.com/research-starters/social-sciences-and-humanities/social-innovation"
+        },
+        {
+          "label": "Restoring soil",
+          "url": "https://botanicgardens.uw.edu/wp-content/uploads/sites/7/2019/08/Healthy-Soils-part2-DavidMcDonald-8-28-19.pdf"
+        },
+        {
+          "label": "Creating cooperative institutions",
+          "url": "https://geo.coop/story/40-ways-build-cooperative-movement"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "Frankly145_chunk_23",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 1330,
+      "end_seconds": 1457,
+      "topic_label": "Switchback and erosion relationship, Washouts",
+      "curated_links": [
+        {
+          "label": "Switchback and erosion relationship",
+          "url": "https://outforia.com/what-is-a-switchback#:~:text=Cutting%20switchbacks%20destroys%20vegetation%20and%20causes%20soil%20erosion%3B%20always%20stay%20on%20the%20marked%20trail%20no%20matter%20what."
+        },
+        {
+          "label": "Washouts",
+          "url": "https://en.wikipedia.org/wiki/Washout_(erosion"
+        }
+      ],
+      "turns": [],
+      "ner_candidates": []
+    }
+  ],
+  "transcript_level_ner": null,
+  "cost_tracking": {
+    "chunk_level_input_tokens": 6395,
+    "chunk_level_output_tokens": 2219,
+    "transcript_level_input_tokens": null,
+    "transcript_level_output_tokens": null,
+    "estimated_cost_usd": 0.0874,
+    "model_used": "claude-opus-5",
+    "extracted_at": "2026-08-26T23:50:55+00:00",
+    "chunks_processed": 1,
+    "chunks_skipped_no_turns": 22
+  },
+  "_decisions": [
+    "Chunks are a NON-OVERLAPPING partition. Where a >threshold gap contains a genuinely late turn, the topic_anchored chunk is cut at that turn and the remainder becomes a filler chunk. The hand-built reference instead nests the filler inside the enclosing topic chunk's span; that makes turn assignment ambiguous, so it was not reproduced. See _diff_vs_reference in the run report.",
+    "A turn is assigned to the chunk containing its own start_seconds, half-open [start, end). Long turns run past end_seconds by design.",
+    "Teaser detection = everything before the HOST's first turn. This rule is vacuous for solo monologues (the host is the only speaker) and is therefore unvalidated for that case."
+  ]
+}

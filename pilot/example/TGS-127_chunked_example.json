@@ -1,0 +1,404 @@
+{
+  "episode_iri": "tgs:Interview.TGS_127_EdConway",
+  "source_transcript_file": "TGS-127-EdConway.md",
+  "source_yaml_file": "TGS127EdConwayTranscript.yaml",
+  "source_sha256": "397aa3ba3571c5e35757bbc9d9145c7ccaa95650016d48bd35e170ad25d0829e",
+  "transcript_source_type": "official",
+  "title": "Ed Conway: “Material World: The Key Resources Underpinning Modern Economies”",
+  "webpage_url": "https://www.thegreatsimplification.com/episode/127-ed-conway",
+  "youtube_url": "https://www.youtube.com/watch?v=4C2-tWcFKfQ",
+  "duration_seconds": 6282,
+  "published_date": "2024-06-12",
+  "recorded_date": "2024-05-07",
+  "keywords": [
+    "Human Behavior",
+    "Economics and Monetary"
+  ],
+  "host": "Nate Hagens",
+  "guests": [
+    "Ed Conway"
+  ],
+  "guest_bios": [
+    {
+      "name": "Ed Conway",
+      "bio": "Ed Conway is a writer and broadcaster. He is the Economics and Data Editor of Sky News and has written for many newspapers and publications, including the New York Times, the Times of London and the New Statesman. His latest book, Material World, was an Economist and Sunday Times Book of the Year and was shortlisted for the 2023 FT Business Book of the Year Award. He has also written two other critically acclaimed and bestselling books and has won numerous awards for his journalism. He was educated at Oxford and Harvard. He lives in London."
+    }
+  ],
+  "description": "In contrast to 'The Great Simplification', some might call the events of the last few hundred years a 'Great Complexification' in terms of relationships, governance, supply chains, and many other human activities. Today's conversation with economics journalist Ed Conway focuses on the six essential resources that underpin our modern economies – sand, salt, iron, copper, oil, and lithium – and dives into the (often unseen) environmental and human costs of extracting them, as well as the surprisingly fragile global supply chains they fuel.",
+  "transcript_speakers": [
+    "Ed Conway",
+    "Nate Hagens"
+  ],
+  "chunking_method": "show_notes_anchored",
+  "_provenance": {
+    "alignment_confidence": "high",
+    "chunking_method": "site:show_notes",
+    "note": "60 real show_notes entries in source YAML. All 60 chunk boundaries below are structurally real (topic_label, links, start/end seconds all verified against the source YAML). Turns[] are fully, verbatim populated for chunks 1-8 (transcript content directly reviewed through ~00:33:00 this session) plus one real filler chunk. Remaining chunks (9-60) are structurally complete but turns are marked PENDING rather than fabricated -- see each chunk's own _pending note."
+  },
+  "_gaps": [
+    "REAL FINDING, not anticipated in the original spec: show-notes timestamps mark a moment of interest WITHIN an ongoing turn, not a turn boundary. Chunk 2's own timestamp (01:23, 'Olivia Lazard + Michael Michaux') falls inside Nate's single long intro turn, which actually starts at 00:00:20 (assigned to chunk 1) and runs past 01:23 without a turn break. Resolved by assigning each turn to the chunk containing its OWN start time, letting long turns run past their chunk's nominal end_seconds -- chunks are anchor points, not hard content boundaries.",
+    "Turns for chunks 9-60 are pending full transcription in this demonstration -- structural fields (topic_label, links, timestamps) are 100% real from the source YAML, but populating verbatim turn text for all 60 chunks is real bulk-processing work appropriately left to Code's actual pilot run, not fabricated here."
+  ],
+  "chunks": [
+    {
+      "chunk_id": "TGS127_chunk_01",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 0,
+      "end_seconds": 83,
+      "topic_label": "Edmund Conway Works + Info, Material World: The Six Raw Materials That Shape Modern Civilization",
+      "curated_links": [
+        {
+          "label": "Works",
+          "url": "https://edconway.substack.com/"
+        },
+        {
+          "label": "Info",
+          "url": "https://www.edmundconway.com/about/"
+        },
+        {
+          "label": "Material World: The Six Raw Materials That Shape Modern Civilization",
+          "url": "https://www.penguinrandomhouse.com/books/703268/material-world-by-ed-conway/"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Nate Hagens",
+          "start_seconds": 20,
+          "text": "Today's guest is Edmund Conway, who is an economics journalist for Sky News in England. Ed is also written for many other publications like The Times, The New Statesman, The Daily Telegraph. he's lectured on international monetary system at the London School of Economics, the U. S. Treasury, and many other places. He's the governor of the National Institute for Economic and Social Research in England, and he's the author of three books, including most recently, Teal World, which was an economist best book of the year, in this conversation, which is phenomenal and I actually think it is one of the premier must listen to, must watch episodes on this channel. We discuss six. Substances, six materials that underpin the modern world, sand, salt, lithium, copper, oil, and iron. And in the past, we've had Olivia Lazard and Simon Michaud on to talk about not the energy, but the material requirements for a renewable future. We did more of the same at a deeper level here with Ed Conway. Underpinning this conversation, I kept thinking to myself, complexity, man, the complexity of our system is so Byzantine and undiscovered and underappreciated. I hope to have Ed back. This was an amazing discussion. Please welcome Ed Conway. Greetings, Ed Conway. Hello, really good to talk to you, Nate. Thank you for being here. You are an economics journalist based in the UK, and you also recently wrote a book called Material World that covers six materials that are critical foundations, to the world around us today. Salt, sand, copper, iron. oil and lithium. and we're going to, we're going to unpack that, but could you first start by telling us what inspired you as a journalist to write this particular book? And why did you choose these materials?"
+        }
+      ],
+      "ner_candidates": [
+        {
+          "text": "Edmund Conway",
+          "type_guess": "Person",
+          "confidence": 0.95,
+          "context": "Today's guest is Edmund Conway -- formal/full first-name variant; elsewhere in this same corpus rendered as 'Ed Conway' (YAML guests/title fields)."
+        },
+        {
+          "text": "Sky News",
+          "type_guess": "Organization",
+          "confidence": 0.95,
+          "context": "economics journalist for Sky News in England"
+        },
+        {
+          "text": "The Times",
+          "type_guess": "Work_Publication",
+          "confidence": 0.85,
+          "context": "written for many other publications like The Times"
+        },
+        {
+          "text": "The New Statesman",
+          "type_guess": "Work_Publication",
+          "confidence": 0.9,
+          "context": "The New Statesman, The Daily Telegraph"
+        },
+        {
+          "text": "The Daily Telegraph",
+          "type_guess": "Work_Publication",
+          "confidence": 0.9,
+          "context": "The New Statesman, The Daily Telegraph"
+        },
+        {
+          "text": "London School of Economics",
+          "type_guess": "Organization",
+          "confidence": 0.95,
+          "context": "lectured on international monetary system at the London School of Economics"
+        },
+        {
+          "text": "U.S. Treasury",
+          "type_guess": "Organization",
+          "confidence": 0.85,
+          "context": "the London School of Economics, the U. S. Treasury, and many other places"
+        },
+        {
+          "text": "National Institute for Economic and Social Research",
+          "type_guess": "Organization",
+          "confidence": 0.9,
+          "context": "he's the governor of the National Institute for Economic and Social Research in England"
+        },
+        {
+          "text": "Teal World",
+          "type_guess": "Work_Publication_LIKELY_ASR_ERROR",
+          "confidence": 0.3,
+          "context": "the author of three books, including most recently, Teal World -- almost certainly a mis-transcription of 'Material World' (the book's real, confirmed title elsewhere in this same chunk and in the source YAML); this transcript's own disclaimer notes it is auto-generated and not fully proofed. Flagged as a likely transcription artifact, not asserted as a real title."
+        },
+        {
+          "text": "sand",
+          "type_guess": "Material",
+          "confidence": 0.9,
+          "context": "six materials that underpin the modern world, sand, salt, lithium, copper, oil, and iron"
+        },
+        {
+          "text": "salt",
+          "type_guess": "Material",
+          "confidence": 0.9,
+          "context": "sand, salt, lithium, copper, oil, and iron"
+        },
+        {
+          "text": "lithium",
+          "type_guess": "Material",
+          "confidence": 0.9,
+          "context": "sand, salt, lithium, copper, oil, and iron"
+        },
+        {
+          "text": "copper",
+          "type_guess": "Material",
+          "confidence": 0.9,
+          "context": "sand, salt, lithium, copper, oil, and iron"
+        },
+        {
+          "text": "oil",
+          "type_guess": "Material",
+          "confidence": 0.85,
+          "context": "sand, salt, lithium, copper, oil, and iron -- lower confidence than the others as a standalone NER hit, since 'oil' is also a common noun requiring disambiguation from non-material senses"
+        },
+        {
+          "text": "iron",
+          "type_guess": "Material",
+          "confidence": 0.9,
+          "context": "sand, salt, lithium, copper, oil, and iron"
+        },
+        {
+          "text": "Olivia Lazard",
+          "type_guess": "Person",
+          "confidence": 0.95,
+          "context": "we've had Olivia Lazard and Simon Michaud on to talk about... material requirements for a renewable future"
+        },
+        {
+          "text": "Simon Michaud",
+          "type_guess": "Person_NAME_VARIANT_CONFLICT",
+          "confidence": 0.5,
+          "context": "we've had Olivia Lazard and Simon Michaud on -- this transcript's own rendering conflicts with the source YAML's show_notes topic label ('Michael Michaux') and its own linked URL slug (simonmichaux), for what is almost certainly the same real person. Three different name renderings for one entity, across two source artifacts for the same episode -- flagged as a real corpus inconsistency, not resolved here."
+        },
+        {
+          "text": "Ed Conway",
+          "type_guess": "Person",
+          "confidence": 0.98,
+          "context": "We did more of the same at a deeper level here with Ed Conway... Please welcome Ed Conway"
+        },
+        {
+          "text": "Nate",
+          "type_guess": "Person",
+          "confidence": 0.9,
+          "context": "Hello, really good to talk to you, Nate -- Ed addressing the host directly by first name"
+        },
+        {
+          "text": "Material World",
+          "type_guess": "Work_Publication",
+          "confidence": 0.98,
+          "context": "you also recently wrote a book called Material World -- the real, correctly-rendered title, contrasting with the 'Teal World' ASR error earlier in this same chunk"
+        },
+        {
+          "text": "UK",
+          "type_guess": "Location",
+          "confidence": 0.9,
+          "context": "You are an economics journalist based in the UK"
+        }
+      ],
+      "_note": "CORRECTED per MJSullivan: the original Ed Conway line at [00:00:00] is a cold-open teaser -- a soundbite spliced in from later in the real conversation, standard podcast editing, not actual chronological content. The real interview begins at the HOST's (Nate's) first turn. General rule for the actual pilot: strip everything before Nate's first turn, regardless of its own timestamp -- see top-level _preprocessing_rules."
+    },
+    {
+      "chunk_id": "TGS127_chunk_02",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 83,
+      "end_seconds": 233,
+      "topic_label": "Olivia Lazard + TGS Episode, Michael Michaux + TGS Episodes",
+      "curated_links": [
+        {
+          "label": "Olivia Lazard",
+          "url": "https://carnegieeurope.eu/experts/1858"
+        },
+        {
+          "label": "TGS Episode",
+          "url": "https://youtu.be/UNkzGKTjBWM"
+        },
+        {
+          "label": "Michael Michaux",
+          "url": "https://au.linkedin.com/in/simonmichaux"
+        },
+        {
+          "label": "TGS Episodes",
+          "url": "https://www.youtube.com/playlist?list=PLdc087VsWiC75EPl8JjXKGtYbshj0HACF"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Ed Conway",
+          "start_seconds": 148,
+          "text": "Okay, so like I should say, right at the start, like a minor amount of humility here. I, you know, I'm a journalist. I'm not an expert. You know, I'm nowhere near as expert as you on, on, on energy. I, my, my background is in economics journalism. And I like storytelling. And I think that when something is complicated and often interesting, and hasn't really been kind of covered and got the audience that it demands, I often think that there's a place for trying to tell that story and bring it to a wider group of people. And so a few years ago, I guess I, started to, well, I suppose if I really chart it back when I was starting to teach myself economics. Cause I didn't, I guess I'm a bit of an autodidact. I did eventually go and study economics. I did a course at Harvard, but initially I studied like English literature at university. So I don't have in any way, either an engineering or, an economics background. And then I kind of, you know, Found myself realizing that this was fascinating and that there are many stories here that haven't really been told about, about the world. But one of the most fascinating essays I read early on in studying economics, was this essay called I, Pencil. And it's by a guy called Leonard Reed in the 1950s, I think, and the idea behind it, I'm sure that you and many of your listeners will have read it."
+        }
+      ],
+      "_note": "Real finding, see top-level _gaps: this chunk's own topic label (Olivia Lazard/Michaux) refers to a moment inside Nate's PRECEDING long turn (assigned to chunk 1), not to content actually spoken within this chunk's own span. This chunk's real turn content is about Conway's own background/humility, not Lazard/Michaux.",
+      "ner_candidates": [
+        {
+          "text": "Leonard Reed",
+          "type_guess": "DUMMY_PLACEHOLDER_Person",
+          "confidence": 0.0,
+          "context": "DUMMY -- not real extraction"
+        }
+      ]
+    },
+    {
+      "chunk_id": "TGS127_chunk_03",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 233,
+      "end_seconds": 292,
+      "topic_label": "I, Pencil",
+      "curated_links": [
+        {
+          "label": "I, Pencil",
+          "url": "https://fee.org/ebooks/i-pencil/"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Nate Hagens",
+          "start_seconds": 239,
+          "text": "I assigned it to my students when I taught at university."
+        },
+        {
+          "speaker": "Ed Conway",
+          "start_seconds": 242,
+          "text": "Okay, it's amazing, isn't it? And it's, just telling the story of how a pencil is made from the first person. So the wood comes from one part of the world, the lead comes from another, you've got the, you know, the metal that holds the eraser in place, the rubber and so on and so forth. But what you kind of learn as you're, listening to this pencil explaining where it comes from is, first of all, it's an incredibly complex supply chain, you know, and no, there is no single person in that supply chain who knows Exactly every stage in how a pencil is made, and when it was written, it was written in the height of the Cold War, and I think for a lot of people, including Milton Friedman, who championed this essay, this, was a really good example of why central planning was not the answer, and why free markets were the answer, because with free markets, they could, with the invisible hand, architects, this incredibly complex piece of machinery, but I guess the second lesson that always kind of stayed with me, I remember reading years ago was like, wow, that's how a pencil is made. It's like a truly interesting, deep, gritty story. And I kind of just wish I had been there. I knew the same thing for everything. I knew the same thing for every product I encounter on a daily basis. And I bet, I thought at the time, those stories are just as fascinating. And so to some extent, this book kind of came out of the same kind of inspirational point. I wanted to do the same thing for lots of different products we touch every day, but also kind of underlying it. In my day job as a journalist, I kind of go and visit a lot of places, and I happened to visit a gold mine a few years ago, it was for a totally unrelated story, something about Brexit, we were, we had, I think, just voted to, to leave the European Union at the time in the UK, it was a big story, and one kind of little sub story there was a lot of our trade figures, the export figures for the UK, they were being distorted, because we are one of the biggest entrepots for gold trading, physical gold trading in the world in the UK, it's like a hangover from empire, I guess, and the gold standard. And partly as a result of that, a lot of gold flows in and outta the uk. And just to illustrate this point about data, you know, about gold flows and how it looks like we're trading a lot with Switzerland, when actually a lot of that is gold. I went to a gold mine in Nevada and just. Trace that supply chain. And I did the story and that was all fine and great. But actually the thing that stayed with me was standing on the lip of the gold mine, looking into this enormous hole and just thinking, gosh, that's, so that's how we get gold. I just hadn't realized it. I hadn't realized, you know, they were tearing down an entire mountain to get gold. And I thought to myself, well, if that's what we do for gold, then what do we do for the other stuff? Because, you know, this, genuinely blew me away. I kind of thought I was a relatively kind of seasoned economics writer, and I'd never kind of really understood the realities of resource exploitation, both, in the vastness of the scale and how impressive it is, but also the, environmental and social consequences thereof. And I thought, well, that's, kind of wild. What do we do to get the other stuff? And in fact, come to think of it, okay, gold's pretty important, but although a lot of people would argue not half as important as certain, you know, some investors thing, but in that case, what, are the things that we really do need? You know, and the funny thing was, like, for civilization to function, I kind of assumed as someone who's quite data centric that Somewhere there might be some spreadsheet which says, okay, here are the key materials that we need for modern economies to actually function. You need fiber optics because without the fiber optics your entire, you know, you don't have the internet. You need steel because you need structures within which people are going to live. You need fertilizers, you need concrete, you need all of these things, because Although that stuff, when you look at GDP, like measure like gross domestic product, that stuff doesn't really play an enormous part in GDP, a lot, well, you know, not as big as, for instance, you know, social networks, but without fiber optic manufacturers, you don't have social networks. You know, without the servers, you don't have the, services sector. And so that kind of led me down a strange route, which turned out to be, like I say, there was no spreadsheet which said, okay, here are the six materials you really need. So it was a bit of a journalistic journey just to understand what are the things that we really, need without which everything else kind of grinds to a halt. And then I went down the road of, you know, going, to all of the mines and going to all of the places where the. You know, the oil and gas comes from, and it was a fascinating journey. Welcome to my world."
+        }
+      ],
+      "_note": "This single Ed Conway turn (233s-292s+) is very long and content-wise actually covers I,Pencil AND runs into the Invisible Hand / Brexit / gold-export-stats / gold-supply-chain topics that follow -- a real example of one turn spanning several show-notes topic markers. Per the assignment rule (turn belongs to the chunk containing its OWN start time), this whole turn is assigned here at chunk 3, even though its content continues past this chunk's nominal 292s boundary.",
+      "ner_candidates": [
+        {
+          "text": "Milton Friedman",
+          "type_guess": "DUMMY_PLACEHOLDER_Person",
+          "confidence": 0.0,
+          "context": "DUMMY -- not real extraction"
+        },
+        {
+          "text": "gold mine, Nevada",
+          "type_guess": "DUMMY_PLACEHOLDER_Location",
+          "confidence": 0.0,
+          "context": "DUMMY -- not real extraction"
+        }
+      ]
+    },
+    {
+      "chunk_id": "TGS127_chunk_04",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 292,
+      "end_seconds": 340,
+      "topic_label": "Invisible Hand",
+      "curated_links": [
+        {
+          "label": "Invisible Hand",
+          "url": "https://www.adamsmith.org/the-wealth-of-nations"
+        }
+      ],
+      "turns": [],
+      "_note": "No new turn STARTS within this chunk's span -- chunk 3's long Ed Conway turn (started 242s) continues through this entire span. Real, expected outcome of the anchor-point model, not an error."
+    },
+    {
+      "chunk_id": "TGS127_chunk_05",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 340,
+      "end_seconds": 355,
+      "topic_label": "Brexit",
+      "curated_links": [
+        {
+          "label": "Brexit",
+          "url": "https://www.bbc.com/news/uk-politics-32810887"
+        }
+      ],
+      "turns": [],
+      "_note": "Same as chunk 4 -- still inside chunk 3's long turn."
+    },
+    {
+      "chunk_id": "TGS127_chunk_06",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 355,
+      "end_seconds": 422,
+      "topic_label": "Distorted gold export stats for the UK",
+      "curated_links": [
+        {
+          "label": "Distorted gold export stats for the UK",
+          "url": "https://theconversation.com/gold-distortions-the-artificial-driver-of-uk-economic-statistics-132390"
+        }
+      ],
+      "turns": [],
+      "_note": "Same as chunk 4 -- still inside chunk 3's long turn."
+    },
+    {
+      "chunk_id": "TGS127_chunk_07",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 422,
+      "end_seconds": 608,
+      "topic_label": "The supply chain of gold",
+      "curated_links": [
+        {
+          "label": "The supply chain of gold",
+          "url": "https://vaulted.com/nuggets/the-gold-supply-chain/"
+        }
+      ],
+      "turns": [],
+      "_note": "Same as chunk 4 -- still inside chunk 3's long turn (which runs the gold-mine story through to 'Welcome to my world', covering exactly this chunk's own topic)."
+    },
+    {
+      "chunk_id": "TGS127_chunk_07b_filler",
+      "chunk_type": "filler",
+      "start_seconds": 528,
+      "end_seconds": 569,
+      "topic_label": null,
+      "curated_links": [],
+      "turns": [
+        {
+          "speaker": "Nate Hagens",
+          "start_seconds": 528,
+          "text": "I've been unpacking the story for 20 years. You know, just as an aside, it would be wonderful if economic students and other students in college could have a mandatory field trip to a gold mine or something like that, just to, to, See it beyond supply and demand curves, to see the actual mechanics of, such a thing. so getting to your book, let's start, and we're going to briefly go through most of these, if not all of them, let's start with sand. how has sand acted as sort of a jumping off point for the rest of these materials and what about sand makes it so versatile and important?"
+        }
+      ],
+      "_note": "REAL FILLER EXAMPLE: this genuine turn (528s) has no show-notes entry anywhere near it -- the nearest entries are 'supply chain of gold' at 422s and 'History of glass' at 608s. Nate's real transition here (gold mine aside -> pivoting the conversation to sand) is exactly the kind of content Nate's team didn't specifically flag but that carries real structure -- this is what chunk_type: filler is for.",
+      "ner_candidates": []
+    },
+    {
+      "chunk_id": "TGS127_chunk_08",
+      "chunk_type": "topic_anchored",
+      "start_seconds": 608,
+      "end_seconds": 620,
+      "topic_label": "History of glass",
+      "curated_links": [
+        {
+          "label": "History of glass",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-319-93728-1_1"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Ed Conway",
+          "start_seconds": 569,
+          "text": "Well, with sand, I mean, with sand, it is the biggest of all of the sections of my book. So there's, six things. There's sand, there's salt, there's, iron and copper, oil and lithium. And obviously it's not an exhaustive list and, you know, the, there are many other materials are available. However, sand is great because within sand, there are there are, I chose three different products that are pretty, significant for the modern world. I chose glass, is obviously melted sand. It is, you know, arguably the first advanced technology that humankind ever made. Yet, although it is Ancient. We still need glass in its incredibly advanced forms to make silicon chips because you need glass lenses to bounce lasers off to, to kind of make the transistors that are incredibly small on, on silicon chips. You need glass in the form of fiber optics to, for us to communicate even these days, we're, communicating. Most of the data here is traveling on glass in fiber optics. And so it kind of bookends civilization to some extent, glass does as a material. And yet, you know, it is ultimately made from sand, very particular types of sand. So silica sand, that's pretty high in, in silica content. [continues into the 1915 Glass Famine story -- see chunk 11]"
+        }
+      ],
+      "_note": "This Ed Conway turn (started 569s, before this chunk's own 608s boundary -- so per the assignment rule it actually belongs to the filler chunk above) is a real example of the reverse case: shown here in full for narrative continuity, but its correct chunk assignment per the stated rule is chunk_07b_filler, not this one. Flagging this explicitly rather than silently placing it wherever reads best -- a real inconsistency worth Code resolving with an explicit, code-level rule (not ad hoc judgment) when this runs for real.",
+      "ner_candidates": [
+        {
+          "text": "silica sand",
+          "type_guess": "DUMMY_PLACEHOLDER_Material",
+          "confidence": 0.0,
+          "context": "DUMMY -- not real extraction"
+        }
+      ]
+    }
+  ],
+  "_remaining_chunks_summary": "Chunks 9 through 60 (topics from '1915 Glass Famine' at 11:40 through 'Global imbalances of debt and surplus' at 1:42:16) are structurally complete in the real source YAML -- topic_label, curated_links, and start/end seconds for all 52 remaining entries are real and verified, simply omitted from this hand-built example to keep it reviewable. Their turns[] are PENDING, not fabricated. Full population of all 60 chunks' verbatim turn text is the actual pilot's job once run against the complete transcript with Code.",
+  "transcript_level_ner": null,
+  "cost_tracking": {
+    "chunk_level_input_tokens": null,
+    "chunk_level_output_tokens": null,
+    "transcript_level_input_tokens": null,
+    "transcript_level_output_tokens": null,
+    "estimated_cost_usd": null,
+    "model_used": "N/A -- hand-built demonstration, no LLM extraction call made",
+    "extracted_at": "2026-08-24"
+  },
+  "_preprocessing_rules": [
+    "Strip fixed site/disclaimer boilerplate before the '# TRANSCRIPT' marker (identical or near-identical across the whole corpus).",
+    "Strip any teaser/preview material appearing between '# TRANSCRIPT' and the HOST's (Nate Hagens') first real turn -- the real interview begins there, regardless of what timestamp the teaser itself carries. Confirmed real example this session: TGS_127's opening Ed Conway line at [00:00:00] is a cold-open soundbite from later in the conversation, not real position-0 content.",
+    "OPEN QUESTION, not yet resolved: does this same teaser pattern apply to Frankly monologues (Nate solo, no guest)? The 'strip everything before the host's first turn' rule doesn't distinguish a teaser from real content when Nate is the only possible speaker either way -- may need a different detection signal (e.g. a repeated line appearing both near the top and later in the transcript) for that episode type, or monologues may simply not use this cold-open pattern at all. Needs checking against a real Frankly transcript before the pilot runs."
+  ]
+}

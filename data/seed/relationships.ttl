@@ -1493,3 +1493,32 @@ tgs:Relationship.NateHagens_KirilSokoloff a thinkr:Relationship, owl:NamedIndivi
           thinkr:episode tgs:Interview.TGS_34_KirilSokoloff ;
           dcterms:date "2022-08-17"^^xsd:date ] ;
     .
+
+# added 2026-08-26
+
+tgs:Relationship.NateHagens_EdConway a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.EdConway ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Ed Conway"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_127_EdConway ;
+          dcterms:date "2024-05-07"^^xsd:date ] ;
+    skos:scopeNote "Nate explicitly says in his own intro he hopes to have Ed back — a real, stated interest in a recurring relationship, not evidenced by a second appearance yet."@en ;
+    .
+
+tgs:Relationship.NateHagens_StacyMitchell a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.StacyMitchell ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Stacy Mitchell"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_198_StacyMitchell ;
+          dcterms:date "2025-09-18"^^xsd:date ] ;
+    .

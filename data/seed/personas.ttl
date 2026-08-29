@@ -946,9 +946,33 @@ tgs:Persona.FritjofCapra a thinkr:Persona, owl:NamedIndividual ;
     rdfs:label "Fritjof Capra (persona)"@en ;
     skos:scopeNote "Real, further citable material found but NOT built in this pass: Pier Luigi Luisi (his own real co-author on The Systems View of Life), Gregory Bateson, Lynn Margulis, Hazel Henderson, David Steindl-Rast, and David Korten, all real, directly cited, none built."@en .
 
+# added 2026-08-24
+
+tgs:Persona.JoannaMacy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JoannaMacy ;
+    skos:prefLabel "Joanna Macy"@en ;
+    rdfs:label "Joanna Macy (persona)"@en ;
+    skos:scopeNote "Minimal provenance-only mint, 2026-08-24, matching the tgs:Persona.EOWilson pattern — no episode appearance, no thinkr:Relationship to Nate Hagens. Minted specifically to anchor tgs:Concept.GreatTurning's real originator (cited directly by Bill Plotkin in TGS_146: 'I borrowed this advice from my friend and teacher, Joanna Macy'), not to be confused with a full guest bootstrap. Already flagged as a deferred citation candidate twice elsewhere in this graph (Frankly_142's own scopeNote; TGS_146's guest list) — those citations describe her as recently deceased, in her mid-nineties at the time of the TGS_146 conversation; not asserted here pending a dedicated pass, matching this graph's minimal-mint discipline."@en ;
+    .
+
+# added 2026-08-25
+tgs:Persona.EdConway a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.EdConway ;
+    skos:prefLabel "Ed Conway"@en ;
+    rdfs:label "Ed Conway (persona)"@en ;
+    .
+
 tgs:Persona.KirilSokoloff a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.KirilSokoloff ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KirilSokoloff ;
     thinkr:hasProfessionalRole thinkr:ProfessionalRole.Author ;
     skos:prefLabel "Kiril Sokoloff"@en ;
     rdfs:label "Kiril Sokoloff (persona)"@en .
+
+tgs:Persona.StacyMitchell a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.StacyMitchell ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_StacyMitchell ;
+    skos:prefLabel "Stacy Mitchell"@en ;
+    rdfs:label "Stacy Mitchell (persona)"@en ;
+    skos:scopeNote "Professional relationship only — no evidence in the TGS_198 transcript of a personal/pre-existing friendship, unlike e.g. Persona.MatthewMonahan where Nate explicitly says 'my friend.'"@en .

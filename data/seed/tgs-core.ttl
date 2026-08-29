@@ -6,6 +6,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+
 
 <http://example.org/thinkr#> a owl:Ontology ;
     rdfs:comment "TGS-core: reusable ontology (classes, properties, supporting-class instances) shared across any thinker's knowledge graph built on this pattern."@en .

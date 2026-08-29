@@ -111,3 +111,10 @@ tgs:Organization.InternationalBatesonInstitute a thinkr:Organization, owl:NamedI
     dcterms:source <https://www.warmdata.life/international-bateson-institute> ;
     skos:scopeNote "CORRECTED 2026-08-13, caught before this pass was finished: first draft mistakenly used owl:sameAs for this org's own homepage — this project's established convention reserves owl:sameAs specifically for DBpedia/Wikidata equivalence (confirmed via the Organization.MaEarth precedent: 'NO owl:sameAs... no genuine Wikipedia page found'), not general external links. No Wikipedia/DBpedia page found for this org — dcterms:source used instead for its own homepage."@en ;
     .
+
+# added 2026-08-29
+tgs:Organization.ILSR a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Institute for Local Self-Reliance"@en ;
+    skos:definition "Nonprofit organization and advocacy group founded 1974, providing research, advocacy, and technical assistance for local solutions to community development — banking, broadband, energy, independent business, waste. Three offices: Washington D.C., Portland Maine, Minneapolis MN. Co-directed by tgs:Human.StacyMitchell and John Farrell as of 2025."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Local_Self-Reliance> ;
+    .

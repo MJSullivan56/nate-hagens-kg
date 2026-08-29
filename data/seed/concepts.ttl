@@ -441,8 +441,13 @@ tgs:Concept.FrameworkForAction a thinkr:Concept, thinkr:HagensConcept, owl:Named
     skos:prefLabel "Framework for Action"@en ;
     skos:definition "Hagens' own real, explicitly-labeled 'first public draft' framework for what to actually do in response to the more-than-human predicament — introduced in Frankly_132, gestated over roughly a decade and organized under the pressure of real, live world events (the 2026 Iran war/Strait of Hormuz crisis). Structured as 4 levels: a personal foundation of inner work, 'Finding the Others' (trusted networks and shared vocabulary), 6 interdependent thinkr:InterventionFront individuals, and a thinkr:ResponsePhase timeline axis of 3 genuinely overlapping (not strictly sequential) phases that cuts across all 6 Fronts."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/132-what-to-do-as-the-world-falls-apart> ;
-    thinkr:hasFront tgs:InterventionFront.Infrastructure, tgs:InterventionFront.PovertyAndDisplacement, tgs:InterventionFront.EcologicalInterventions,
-        tgs:InterventionFront.CivicResilienceAndGovernance, tgs:InterventionFront.CultureAndMeaning, tgs:InterventionFront.EconomicTransition ;
+    thinkr:hasFront 
+        tgs:InterventionFront.Infrastructure, 
+        tgs:InterventionFront.PovertyAndDisplacement, 
+        tgs:InterventionFront.EcologicalInterventions,
+        tgs:InterventionFront.CivicResilienceAndGovernance, 
+        tgs:InterventionFront.CultureAndMeaning, 
+        tgs:InterventionFront.EconomicTransition ;
     thinkr:hasPhase tgs:ResponsePhase.StabilityWindow, tgs:ResponsePhase.BendNotBreak, tgs:ResponsePhase.StableAttractor ;
     skos:scopeNote "Real, direct evidence for the sequencing/parallel-construction stance, worth preserving: Hagens explicitly engages with the anti-capitalist/decolonial critique that structural transformation must precede any other intervention, states real sympathy for it, but argues explicitly for building new structures while the old ones still stand rather than waiting for a precondition that would mean 'waiting forever.'"@en .
 
@@ -462,4 +467,87 @@ tgs:Concept.DistributedAgency a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Distributed Agency, Not Saviors"@en ;
     skos:definition "A real, recurring pattern across independently-recorded episodes: meaningful change comes from ordinary, distributed action rather than a singular hero or savior figure. Direct textual evidence spans multiple episodes, not one coined term: Frankly_58's own real closing reframe (Sam and Gollum, not Frodo, as the actual Catalysts who changed Lord of the Rings' outcome — 'you never know when your actions could shift the larger story'); Frankly_132's direct claim that reluctance to lead 'might be a good indication that you could be a good leader tomorrow,' paired with its critique that modern systems select for Dark Triad traits in those who actively seek leadership; RR-17's two guests independently converging on 'find like-minded people close to home' as their practical closing advice, rather than pointing toward a movement or a leader; and the real, structural logic of Buckminster Fuller's trim-tab principle (small, precisely-placed, unglamorous leverage redirecting something enormous), which is also the real source of Priscilla Trịnh's own 'Trintab' nickname from RR-9."@en ;
     dcterms:subject tgs:Subject.HumanBehavior ;
-    skos:scopeNote "Identified and named as a real pattern by MJSullivan during this session, not something Hagens has explicitly unified under one term himself — worth being honest about that distinction even though the pattern itself is real and evidence-grounded across genuinely independent sources."@en .
+    skos:scopeNote "Identified and named as a real pattern by MJSullivan during this session, not something Hagens has explicitly unified under one term himself — worth being honest about that distinction even though the pattern itself is real and evidence-grounded across genuinely independent sources."@en ;
+    .
+
+#############################################
+# added 2026-08-24 
+#############################################
+
+tgs:Concept.PersonalAgency a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Personal Agency"@en ;
+    skos:definition "The lived experience that some part of one's life, attention, and time is genuinely one's own to choose — distinct from tgs:Concept.DistributedAgency (a collective/systemic pattern about who drives change). Frankly_129's own organizing term, scientifically grounded via learned-helplessness/self-efficacy research (the nervous system learning whether effort produces outcomes). Frankly_142 directly ties it to dread: 'dread is the experience of being acted upon by a future you cannot influence, and agency is the opposite stance.'"@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:scopeNote "NOT to be confused with the existing tgs:Concept.DistributedAgency ('Distributed Agency, Not Saviors') — that concept is about collective action replacing savior-figures; this one is the individual psychological/nervous-system capacity the Staying Human series' own Part 1 is entirely about."@en ;
+    .
+
+tgs:Concept.Dread a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Dread"@en ;
+    skos:definition "A physiological body state, not merely a feeling — chronic anticipatory threat-response activation (amygdala/HPA-axis/cortisol) triggered by slow-moving, abstract, unresolvable risk the nervous system cannot discharge through fight-or-flight. Frankly_142's own central subject; grounded in real research on 'extreme dreaders' (~28% of subjects who preferred immediate stronger pain over waiting for milder pain) and climate psychiatrist Lise Van Susteren's 'pre-traumatic stress.'"@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:scopeNote "Directly cross-referenced in Frankly_143 as 'full dread... viewed from a slightly different angle' from tgs:Concept.FutureCapture — the two are presented as the same underlying phenomenon (DMN dominance with civilizational content) described from two angles, not two separate claims, matching this graph's existing 'two facets, not two concepts' pattern (see Concept.NarrativeAsActiveInference)."@en ;
+    .
+
+tgs:Concept.Presence a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Presence"@en ;
+    skos:definition "Frankly_143's own central subject: full attentional engagement with the present moment, framed as the destination dread transforms into 'when fully metabolized' (per Frankly_142's own closing) and as the ground from which any real response to the metacrisis must be taken."@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:scopeNote "Real prior art cited directly in the transcript across contemplative traditions (Thich Nhat Hanh, the Christian contemplative 'sacrament of the present moment') and neuroscience (default mode network research) — treated here as one Concept with converging support, not split by tradition."@en ;
+    .
+
+tgs:Concept.DefaultModeNetwork a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Default Mode Network"@en ;
+    skos:definition "The brain-region network active during self-referential processing, theory of mind, mind-wandering, and mental time travel — anti-correlated with the task-positive network (TPN), which handles direct engaged attention. Chronic DMN dominance is measurably linked to reduced hippocampal grey matter, higher anxiety/depression, and diminished sensory processing."@en ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:scopeNote "Only the graph's second real citation of DMN research — tgs:Interview.TGS_191_TaylorGuthrie is the first, explicitly named in Frankly_143's own transcript as 'the only prior TGS coverage.' The Task Positive Network (TPN), DMN's real anti-correlated partner, is deliberately folded into this definition rather than minted separately this pass."@en ;
+    .
+
+tgs:Concept.FutureCapture a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:prefLabel "Future Capture"@en ;
+    skos:definition "Nate's own coined term (Frankly_143): the state where 'the future is so loud and so vivid and so saturated with implications... that the present just can't compete with it' — the future becomes 'a place we live' rather than visit, and the present becomes 'a kind of waiting room.' Explicitly framed as the same underlying phenomenon as tgs:Concept.Dread, viewed from the angle of what it does to attention rather than what it feels like."@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    .
+
+tgs:Concept.EcologicalAwakening a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Ecological Awakening"@en ;
+    skos:definition "Plotkin's own central term, and this episode's own title concept: a felt, experiential (not merely intellectual) shift from experiencing an 'invisible wall' between oneself and the rest of the living world to experiencing kinship with all of it — 'the earth community' — often accompanied by real grief for the years lived without that awareness. Plotkin estimates roughly 20-25% of people have had this experience. Distinct from taking a class in ecology: cognitive understanding without the felt shift doesn't count."@en ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:scopeNote "Direct evidence this recurs beyond one episode: Plotkin himself ties it explicitly to Joanna Macy's Great Turning (third dimension — a shift in values and consciousness) within the same conversation."@en ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    .
+
+tgs:Concept.EcocentricDevelopmentalWheel a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Ecocentric (Soulcentric) Developmental Wheel"@en ;
+    skos:definition "Plotkin's eight-stage model of healthy human development, each stage paired with a human archetype and an earth archetype: (1) Innocent in the Nest — early childhood; (2) Explorer in the Garden — middle childhood; (3) Thespian at the Oasis — early adolescence; (4) Wanderer in the Cocoon — late adolescence, the stage of soul initiation, which 'most contemporary people never reach'; (5) Apprentice at the Wellspring — early adulthood; (6) Artisan in the Wild Orchard — late adulthood; (7) Master in the Grove of Elders — early elderhood; (8) Sage in the Mountain Cave — late elderhood. Explicitly contrasted with an 'egocentric wheel' modeling the stages most contemporary people actually go through instead, most of them stalled in an unhealthy version of stage 3."@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:scopeNote "Plotkin's own real prior art cited as convergent, non-Western evidence for this model: Malidoma Somé's account of Dagara initiation rites, Martín Prechtel's account of Tzutujil Maya culture, and Gregory Cajete's writing on Native American educational traditions — none of the three built as Personas this pass."@en ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    .
+
+tgs:Concept.ArrestedHumanDevelopment a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Arrested Human Development"@en ;
+    skos:definition "Plotkin's own direct causal claim, stated as this episode's central thesis: 'the root cause [of the metacrisis] is arrested human development' — also termed 'systemic human development oppression.' Distinct from tgs:Concept.Metacrisis itself (the pattern of interconnected crises) by proposing a specific generative mechanism behind it, located in human developmental psychology rather than economic or ecological systems directly."@en ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    thinkr:relatesTo tgs:Concept.Metacrisis ;
+    skos:scopeNote "A real, single-episode claim — not yet independently corroborated elsewhere in this graph. Flagged for revisiting if it recurs, matching this graph's own recurrence-based minting discipline."@en ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    .
+
+tgs:Concept.GreatTurning a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "The Great Turning"@en ;
+    skos:definition "Joanna Macy's framework, explained by Plotkin in real depth (not a passing citation): the shift from an 'Industrial Growth Society' toward a 'life-sustaining civilization,' unfolding across three simultaneous dimensions — (1) holding actions to save as much life as possible now, (2) building the structural and technical foundations for healthier systems (food, energy, governance), and (3) a shift in consciousness and values, which Plotkin explicitly connects back to tgs:Concept.EcologicalAwakening and his own developmental wheel. Macy pairs this with 'the Great Unraveling' — the ongoing collapse of existing systems — as two faces of the same real historical moment, not opposed processes."@en ;
+    dcterms:subject tgs:Subject.SystemsFrameworks ;
+    skos:scopeNote "Real external source, not a Hagens or Plotkin coinage — Joanna Macy is cited directly by name throughout as its originator. Macy herself not yet built as a Persona in this graph (cited here and, separately, in Frankly_142's own scopeNote as a deferred candidate)."@en ;
+    thinkr:influencedBy tgs:Persona.JoannaMacy ;
+    .
+
+# added 2026-08-25
+
+tgs:Concept.SupplyChainFragility a thinkr:Concept, owl:NamedIndividual ;
+    skos:prefLabel "Supply Chain Fragility / Pinch Points"@en ;
+    skos:definition "Modern global supply chains are far more concentrated, specialized, and fragile than they appear — a small number of hyper-specialized, often invisible 'pinch points' (a single factory, a single region, a single material) can be genuinely load-bearing for enormous downstream systems, disproportionate to their own small economic footprint. Real evidenced cases: the 1915 UK 'Glass Famine' (an entire domestic industry allowed to wither, then found existentially necessary within a few years, per tgs:Interview.TGS_127_EdConway); a single Birmingham factory supplying roughly half the world's automotive rearview-mirror electrodes; the 2011 Fukushima earthquake halting Ford's US truck production over a single specialized paint pigment. The mechanism Ed Conway identifies: modern comparative-advantage-driven specialization increases aggregate efficiency while increasing structural fragility — 'you have these factories which are uber-specialised... and they're pinch points. Until those pinch points explode, you don't really know about it.'"@en ;
+    dcterms:subject tgs:Subject.SystemsFrameworks ;
+    thinkr:influencedBy tgs:Persona.EdConway ;
+    thinkr:relatesTo tgs:Concept.JevonsParadox ;
+    skos:scopeNote "Real, deliberate general-purpose applicability, per MJSullivan's own stated reason for selecting this episode 2026-08-24: this concept is a candidate response/caveat to a wide range of articles about growth, consumption, or globalized production, not narrowly scoped to energy/climate topics — directly relevant to the tng-app design work's 'systemic reframing' step from this same session."@en ;
+    .
