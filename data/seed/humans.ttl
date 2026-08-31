@@ -186,6 +186,7 @@ tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Kate Raworth (human)"@en ;
     thinkr:memberOf tgs:SchoolOfThought.DoughnutEconomics ;
     owl:sameAs <http://dbpedia.org/resource/Kate_Raworth> ;
+    rdfs:comment "English economist (b. Dec 13, 1970); creator of Doughnut Economics (first developed in her 2012 paper 'A Safe and Just Space for Humanity,' elaborated in her 2017 book), co-founder of Doughnut Economics Action Lab. Senior Associate, Oxford University's Environmental Change Institute; Professor of Practice, Amsterdam University of Applied Sciences. Member, Club of Rome; serves on the WHO Council on the Economics of Health for All."@en ;
     .
 
 tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
@@ -545,14 +546,6 @@ tgs:Human.SteveKeen a thinkr:Human,
     rdfs:label "Steve Keen (human)"@en ;
     owl:sameAs <http://dbpedia.org/resource/Steve_Keen> ;
     rdfs:comment "Australian heterodox economist (b. Mar 28, 1953); Honorary/Distinguished Research Fellow, University College London; formerly Professor, Kingston University London and University of Western Sydney. Author of 'Debunking Economics' and 'The New Economics: A Manifesto.' One of a small number of economists who publicly anticipated the 2008 Global Financial Crisis in advance (Revere Award, Real World Economics Review). Creator of the open-source system dynamics modeling software Minsky."@en ;
-    .
-
-tgs:Human.KateRaworth a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Kate Raworth"@en ;
-    rdfs:label "Kate Raworth (human)"@en ;
-    owl:sameAs <http://dbpedia.org/resource/Kate_Raworth> ;
-    rdfs:comment "English economist (b. Dec 13, 1970); creator of Doughnut Economics (first developed in her 2012 paper 'A Safe and Just Space for Humanity,' elaborated in her 2017 book), co-founder of Doughnut Economics Action Lab. Senior Associate, Oxford University's Environmental Change Institute; Professor of Practice, Amsterdam University of Applied Sciences. Member, Club of Rome; serves on the WHO Council on the Economics of Health for All."@en ;
     .
 
 #############################################
@@ -1145,3 +1138,16 @@ tgs:Human.StacyMitchell a thinkr:Human, owl:NamedIndividual ;
     rdfs:comment "American activist, writer, and author. Grew up in Portland, Maine; B.A. in history, Macalester College. Joined the Institute for Local Self-Reliance as a research assistant in 1997, now Co-Executive Director, leading its Independent Business Initiative. Chair of the American Independent Business Alliance. Author of 'Big-Box Swindle: The True Cost of Mega-Retailers and the Fight for America's Independent Businesses' (Beacon Press, 2007); co-author of the 2016 report 'Amazon's Stranglehold.' Her research was cited in Congress's 2021 investigation of Big Tech dominance and informed the FTC's 2023 antitrust lawsuit against Amazon. Named one of the top ten 'antitrust super influencers' by political strategy firm Baron, 2022. Co-founded the Athena coalition and Small Business Rising. Also serves on the board of the Maine Center for Economic Policy."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Stacy_Mitchell> ;
     thinkr:memberOf tgs:Organization.ILSR .
+
+tgs:Human.GregElliott a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Greg Elliott"@en ;
+    rdfs:label "Greg Elliott (human)"@en ;
+    rdfs:comment "Systems theorist and independent researcher at the intersection of game theory, evolutionary biology, and institutional analysis. Siemens solutions consultant specializing in data science and AI; co-founder of Orbyfy. Author of tgs:Work.PsychopathicSelectionHypothesisBook — argues cooperation is evolutionarily stable in small tribal systems, but modern systems (anonymity, abstraction, scale) make exploitative/instrumental strategies more profitable, producing 'entrapment games' where pro-social people become behaviorally locked into relationships, jobs, and systems where leaving costs more than staying. Founder, tgs:Organization.InstituteForSymbolicSelection. Prior career in financial markets — real, direct personal account of observing behavioral profiles well-adapted to that competitive environment, which he says helped seed the theory. TGS guest, Episode 231, 'The Psychopathic Selection Hypothesis: The Rules of the Game Keep Us Trapped.' No owl:sameAs found — not independently verified as notable enough for a dedicated Wikipedia/DBpedia page."@en ;
+    thinkr:memberOf tgs:Organization.InstituteForSymbolicSelection ;
+    .
+
+tgs:Human.JohnGowdy a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "John Gowdy"@en ;
+    rdfs:label "John Gowdy (human)"@en ;
+    rdfs:comment "John M. Gowdy, Professor of Economics and Professor of Science and Technology Studies, Rensselaer Polytechnic Institute (Troy, NY). Ecological economist; recipient of the Herman Daly Award for contributions to ecological economics. Author of tgs:Work.Ultrasocial2021 ('Ultrasocial: The Evolution of Human Nature and the Quest for a Sustainable Future,' Cambridge University Press, Oct 2021) and 'Limited Wants, Unlimited Means: A Reader on Hunter-Gatherer Economics and the Environment.' Co-authored research on ants and social insects with Lisi Krall (SUNY Cortland, not yet built in this graph). Real, direct UN conservation work on South Sudan's Sudd wetland (second-largest wetland in the world after the Pantanal), threatened by planned drainage for downstream agriculture. Nate's own real, direct words describe him as 'my friend and one of my intellectual mentors' with a prior relationship spanning roughly 20 years — the deepest pre-existing relationship of any guest built in this graph to date. TGS guest, Episode 14, 'Superorganisms, Crazy Ants, and Fire Apes, Oh My!' — explores capitalism, economic surplus, and evolutionary mechanisms in relation to the economic Superorganism, and how much real agency individuals retain against it."@en ;
+    .

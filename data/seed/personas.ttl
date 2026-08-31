@@ -180,8 +180,12 @@ tgs:Persona.WilliamStanleyJevons a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.KateRaworth a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.KateRaworth ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_KateRaworth ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KateRaworth ;
     skos:prefLabel "Kate Raworth"@en ;
-    rdfs:label "Kate Raworth (persona)"@en .
+    rdfs:label "Kate Raworth (persona)"@en ;
+    skos:scopeNote "Real prior solo TGS appearance as guest (episode #77, 'The Superorganism V. The Doughnut') confirmed via RR-3's own real linked show notes (YouTube link, no canonical TGS-site URL given at the time): https://youtu.be/7h6X7WBANKY — not yet built as an Episode individual. Already indirectly present in this graph via SchoolOfThought.DoughnutEconomics's own definition, which named her as creator before she was built as a real Persona. Also the real HOST (role-reversed) of tgs:Interview.TGS_100_NateHagens — see that episode's own scopeNote."@en ;
+    .
 
 tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.NateHagens ;
@@ -561,14 +565,6 @@ tgs:Persona.SteveKeen a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Steve Keen"@en ;
     rdfs:label "Steve Keen (persona)"@en ;
     skos:scopeNote "Real prior solo TGS appearance confirmed via RR-3's own real linked show notes ('Mythonomics'): https://www.thegreatsimplification.com/episode/30-steve-keen — not yet built as an Episode individual in this pass."@en .
-
-tgs:Persona.KateRaworth a thinkr:Persona, owl:NamedIndividual ;
-    thinkr:actsThrough tgs:Human.KateRaworth ;
-    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_KateRaworth ;
-    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KateRaworth ;
-    skos:prefLabel "Kate Raworth"@en ;
-    rdfs:label "Kate Raworth (persona)"@en ;
-    skos:scopeNote "Real prior solo TGS appearance confirmed via RR-3's own real linked show notes (YouTube link, no canonical TGS-site URL given): https://youtu.be/7h6X7WBANKY — not yet built as an Episode individual in this pass. Already indirectly present in this graph via SchoolOfThought.DoughnutEconomics's own definition, which named her as creator before she was built as a real Persona."@en .
 
 tgs:Persona.MarkMedish a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MarkMedish ;
@@ -976,3 +972,23 @@ tgs:Persona.StacyMitchell a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Stacy Mitchell"@en ;
     rdfs:label "Stacy Mitchell (persona)"@en ;
     skos:scopeNote "Professional relationship only — no evidence in the TGS_198 transcript of a personal/pre-existing friendship, unlike e.g. Persona.MatthewMonahan where Nate explicitly says 'my friend.'"@en .
+
+tgs:Persona.GregElliott a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GregElliott ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_GregElliott ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_GregElliott ;
+    skos:prefLabel "Greg Elliott"@en ;
+    rdfs:label "Greg Elliott (persona)"@en ;
+    skos:scopeNote "Also, per the transcript's own real content, personally close with tgs:Persona.WilliamRees ('pretty close friends,' Elliott's own words) and connected with tgs:Persona.ZakStein — both already real Personas in this graph (RR-2; RR-20/RR-25). Not modeled as formal Relationship individuals here since neither involves Nate directly — kept as a scopeNote per this graph's Nate-centric relationship-modeling convention."@en ;
+    .
+
+tgs:Persona.JohnGowdy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnGowdy ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnGowdy ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JohnGowdy ;
+    thinkr:hasIntellectualRelationship tgs:Relationship.NateHagens_JohnGowdy ;
+    skos:prefLabel "John Gowdy"@en ;
+    rdfs:label "John Gowdy (persona)"@en ;
+    skos:scopeNote "UPDATED after real transcript upload: Nate's own words describe having 'learned a great deal from John Gowdy over the years,' calling him 'my friend and one of my intellectual mentors' — real, direct, unusually explicit evidence across all three relationship types, not just a one-off interview."@en .

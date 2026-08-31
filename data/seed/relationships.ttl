@@ -657,12 +657,18 @@ tgs:Relationship.NateHagens_KateRaworth a thinkr:Relationship, owl:NamedIndividu
     thinkr:hasObject tgs:Persona.KateRaworth ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' personal and professional relationship with Kate Raworth"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own words introducing TGS_100, 'I have asked for episode 100, a friend of mine who works in a related space to interview me' — Kate independently echoes it, 'my friend' (spoken to Nate, not about him)."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_3_UnlearningEconomics ;
-          dcterms:date "2023-07-18"^^xsd:date ] ;
+          dcterms:date "2023-07-18"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Guest ;
+          thinkr:objectRole thinkr:InteractionRole.Host ;
+          thinkr:episode tgs:Interview.TGS_100_NateHagens ;
+          dcterms:date "2023-11-21"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence — Nate's own words in RR-3: 'four of my colleagues and friends,' 'we're all friends' framing throughout."@en .
 
 #############################################
@@ -1521,4 +1527,31 @@ tgs:Relationship.NateHagens_StacyMitchell a thinkr:Relationship, owl:NamedIndivi
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_198_StacyMitchell ;
           dcterms:date "2025-09-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_GregElliott a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.GregElliott ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Greg Elliott"@en ;
+    skos:scopeNote "RelationshipType.Personal — direct, mutual evidence from the TGS_231 transcript: Nate closes with 'to be continued, my friend,' and Elliott responds 'it's great to meet a new friend.' Same evidentiary bar as Persona.MatthewMonahan's own Personal tag (Nate's own direct words in the primary source), though here the friendship is explicitly new/first-episode rather than pre-existing."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_231_GregElliott ] ;
+    .
+
+tgs:Relationship.NateHagens_JohnGowdy a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnGowdy ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional, thinkr:RelationshipType.Intellectual ;
+    skos:prefLabel "Nate Hagens' personal, professional, and intellectual relationship with John Gowdy"@en ;
+    skos:scopeNote "RelationshipType.Personal and Intellectual both directly evidenced, unusually explicitly: Nate's own words call Gowdy 'my friend and one of my intellectual mentors,' with a real, stated ~20-year prior relationship — 'I've come to know John over the past 20 years in my research.' Nate also states directly that Gowdy's framing of human origins and market self-organization is 'most aligned with my own' of all his guests. The deepest pre-existing relationship of any guest built in this graph to date."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_14_JohnGowdy ;
+          dcterms:date "2022-02-22"^^xsd:date ] ;
     .

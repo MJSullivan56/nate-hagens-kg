@@ -1,0 +1,43 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# thinkr:WWNSArticle — new class, 2026-08-29, promoted straight to its
+# own file at first real instance, same governance precedent as
+# thinkr:Episode's own promotion out of tgs-core.ttl ("classes get
+# their own file once they have real content, not before").
+#
+# WHY THIS CLASS EXISTS: prior to this, an Episode's own dct:references
+# to a thinkr:Work individual was overloaded to mean two different
+# things — "this episode's real show notes cite this source" AND,
+# informally, "this pairing is a candidate WWNS connection" — with no
+# way to distinguish a candidate identified during minting from a
+# citation that actually appears in a published WWNS piece. Modeling
+# each real WWNS article as its own thinkr:Work subclass individual,
+# with its own dct:references to exactly what IT cites (source
+# paper(s) and episode(s)), resolves that: "what does WWNS #1
+# reference" becomes a direct query against one subject instead of an
+# ambiguous read of episode-level references.
+#############################################
+
+thinkr:WWNSArticle a owl:Class ;
+    rdfs:comment "A published or drafted article in MJSullivan's 'What Would Nate Say?' (WWNS) Medium series, pairing an external news article or paper with TGS episode concepts."@en ;
+    rdfs:subClassOf thinkr:Work ;
+    skos:scopeNote "Narrower than thinkr:Work: specifically a WWNS series article, not the external sources or episodes it cites — those remain modeled as thinkr:Work/thinkr:Episode individuals in their own right and are linked from here via dct:references."@en ;
+    skos:prefLabel "WWNS Article"@en ;
+    .
+
+tgs:WWNSArticle.WWNS_1 a thinkr:WWNSArticle, owl:NamedIndividual ;
+    skos:prefLabel "WWNS #1: The 122 Companies Behind the Western Water Crisis"@en ;
+    rdfs:comment "First article in the WWNS series. Drafted on Medium, not yet published as of this build. Cites tgs:Work.CarbonMajorsWaterCrisis2026 as its external source, examined through three episodes: tgs:PanelDiscussion.RR_19_DarkTriad (institutional psychopathy), tgs:Interview.TGS_231_GregElliott (the psychopathic selection hypothesis, itself framed by Nate as a direct follow-up to RR-19), and tgs:Interview.TGS_14_JohnGowdy (the economic Superorganism). CORRECTED 2026-08-29: an earlier draft of this individual referenced tgs:Interview.TGS_198_StacyMitchell instead — a real, structurally plausible candidate identified before the actual finalized article text was available, but not what the piece actually cites. TGS_198 keeps its own separate, valid dct:references link to the Carbon Majors paper as a general structural connection; it just isn't part of this specific article. dct:issued deliberately left unasserted — not yet published, no real date to assert."@en ;
+    dct:references tgs:Work.CarbonMajorsWaterCrisis2026, tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Interview.TGS_231_GregElliott, tgs:Interview.TGS_14_JohnGowdy ;
+    .

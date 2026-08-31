@@ -118,3 +118,8 @@ tgs:Organization.ILSR a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Nonprofit organization and advocacy group founded 1974, providing research, advocacy, and technical assistance for local solutions to community development — banking, broadband, energy, independent business, waste. Three offices: Washington D.C., Portland Maine, Minneapolis MN. Co-directed by tgs:Human.StacyMitchell and John Farrell as of 2025."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Local_Self-Reliance> ;
     .
+
+tgs:Organization.InstituteForSymbolicSelection a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Institute for Symbolic Selection"@en ;
+    skos:definition "Interdisciplinary research program founded by Greg Elliott, investigating how human-created symbolic systems (institutions, game-theoretic incentive structures) shape behavior and the long-term evolution of civilization. Grew directly out of his own Psychopathic Selection Hypothesis research. No owl:sameAs found — not independently verified as having a dedicated Wikipedia/DBpedia page."@en ;
+    .
