@@ -93,8 +93,12 @@ tgs:Persona.DanielKahneman a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.DennisMeadows a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.DennisMeadows ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DennisMeadows ;
     skos:prefLabel "Dennis Meadows"@en ;
-    rdfs:label "Dennis Meadows (persona)"@en .
+    rdfs:label "Dennis Meadows (persona)"@en ;
+    skos:scopeNote "Real, pre-existing acquaintance confirmed directly in TGS_12's own transcript — Nate opens by noting 'it's been 12 years since I saw you at some energy conference in Europe,' which Meadows confirms as the Association for Peak Oil's own real Vienna meeting. Professional relationship only — real mutual respect exchanged at close, but no explicit 'friend' language, so kept distinct from this graph's Personal-tag evidentiary bar."@en ;
+    .
 
 tgs:Persona.DonellaMeadows a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.DonellaMeadows ;
@@ -133,8 +137,12 @@ tgs:Persona.IvanIllich a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.JosephTainter a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.JosephTainter ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JosephTainter ;
     skos:prefLabel "Joseph Tainter"@en ;
-    rdfs:label "Joseph Tainter (persona)"@en .
+    rdfs:label "Joseph Tainter (persona)"@en ;
+    skos:scopeNote "Real, substantial prior connection confirmed directly in TGS_27's own transcript, richer than a typical first-meeting: Nate organized a real 2006 energy/environmental conference in Washington D.C. (with Max Christian) where Tainter was an evening speaker alongside Governor Schweitzer, and the two also both appeared in the real documentary 'Living in the Future's Past' (dir. Susan Kucera, featuring Jeff Bridges). Kept Professional-only on the Relationship despite this real history, since no explicit 'friend' language is exchanged in this transcript, consistent with this graph's evidentiary bar."@en ;
+    .
 
 tgs:Persona.MKingHubbert a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.MKingHubbert ;
@@ -992,3 +1000,166 @@ tgs:Persona.JohnGowdy a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "John Gowdy"@en ;
     rdfs:label "John Gowdy (persona)"@en ;
     skos:scopeNote "UPDATED after real transcript upload: Nate's own words describe having 'learned a great deal from John Gowdy over the years,' calling him 'my friend and one of my intellectual mentors' — real, direct, unusually explicit evidence across all three relationship types, not just a one-off interview."@en .
+
+tgs:Persona.LynAlden a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LynAlden ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LynAlden ;
+    skos:prefLabel "Lyn Alden"@en ;
+    rdfs:label "Lyn Alden (persona)"@en ;
+    skos:scopeNote "Professional relationship only — Nate's own words describe 'multiple mutual friends' (third parties), not a direct claim of personal friendship between the two of them; no 'friend' language exchanged directly, unlike the evidentiary bar met for e.g. Persona.MatthewMonahan or Persona.GregElliott."@en ;
+    .
+
+tgs:Persona.TristanHarris a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TristanHarris ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_TristanHarris ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TristanHarris ;
+    skos:prefLabel "Tristan Harris"@en ;
+    rdfs:label "Tristan Harris (persona)"@en ;
+    skos:scopeNote "Personal tag unusually strongly evidenced, repeated and mutual across the transcript: Nate opens with 'Tristan Harris, my friend,' Tristan replies 'it's really good to be with you again, my friend,' and closes with 'it is a deep honor and privilege to be your friend' — directly crediting Nate's own oil-to-intelligence-economy framing as something he now uses in his own work. This is TGS_214, Harris's real second TGS appearance — his first (TGS_16, on social media specifically) is confirmed real via this episode's own show notes but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.JohnVervaeke a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnVervaeke ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnVervaeke ;
+    skos:prefLabel "John Vervaeke"@en ;
+    rdfs:label "John Vervaeke (persona)"@en ;
+    skos:scopeNote "Professional relationship only — real, direct confirmation this is their first-ever conversation despite Nate having followed Vervaeke's work for years ('This conversation is the very first time we ever spoke'; Nate's own closing aside, 'How is it that we haven't talked before John?'). Real warmth throughout but no direct 'friend' language exchanged, unlike e.g. Persona.TristanHarris."@en ;
+    .
+
+tgs:Persona.SteveVavrus a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SteveVavrus ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_SteveVavrus ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SteveVavrus ;
+    skos:prefLabel "Steve Vavrus"@en ;
+    rdfs:label "Steve Vavrus (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced despite this being their first-ever conversation ('going way back... we've never talked about it'): Nate's own real closing words, 'I'll give you a holler next time I'm in Madison, my friend' — both live in Wisconsin, a real, concrete basis for the friendship beyond the recording itself. RE-REVIEWED 2026-08-30 under MJSullivan's refined evidentiary rule (wwns-methodology.md §8) and kept: unlike a bare closing 'my friend,' this pairs the phrase with a real, specific, concrete detail (a stated future-meetup intention tied to shared geography) — the rule's own exception for 'my friend' plus real concrete content beyond generic warmth."@en ;
+    .
+
+tgs:Persona.TaylorGuthrie a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TaylorGuthrie ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TaylorGuthrie ;
+    skos:prefLabel "Taylor Guthrie"@en ;
+    rdfs:label "Taylor Guthrie (persona)"@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: the only 'friend' language here is a bare closing 'to be continued, my friend' — Nate's own near-formulaic sign-off, not a substantive claim of relationship. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8 for the full rule."@en ;
+    .
+
+tgs:Persona.BrettKencairn a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BrettKencairn ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BrettKencairn ;
+    skos:prefLabel "Brett KenCairn"@en ;
+    rdfs:label "Brett KenCairn (persona)"@en ;
+    skos:scopeNote "Real first-ever meeting confirmed directly ('Welcome, at long last'), though with a real, indirect prior connection: a mutual friend recommended the show to KenCairn while he was returning from a UN Convention on Biodiversity. Kept Professional-only — the episode's closing 'onwards, my friends' reads as addressed to the general audience, not KenCairn specifically, so not treated as meeting this graph's Personal-tag evidentiary bar."@en ;
+    .
+
+tgs:Persona.BayoAkomolafe a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BayoAkomolafe ;
+    skos:prefLabel "Bayo Akomolafe"@en ;
+    rdfs:label "Bayo Akomolafe (persona)"@en .
+
+tgs:Persona.JeanMarcJancovici a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JeanMarcJancovici ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JeanMarcJancovici ;
+    skos:prefLabel "Jean-Marc Jancovici"@en ;
+    rdfs:label "Jean-Marc Jancovici (persona)"@en ;
+    skos:scopeNote "RE-CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule (wwns-methodology.md §8): an earlier pass here added Personal based on TGS_175's 'please welcome my friend Jean-Marc Jancovici' — but that's a bare vocative use, not a substantive claim, and doesn't meet the tightened bar. Reverted to Professional-only. Real, notable context preserved: TGS_84's own opening framed the two as having arrived at nearly identical conclusions independently, before ever encountering each other's work — real intellectual kinship, whatever the exact status of their personal relationship."@en ;
+    .
+
+tgs:Persona.KrisDeDecker a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KrisDeDecker ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KrisDeDecker ;
+    skos:prefLabel "Kris De Decker"@en ;
+    rdfs:label "Kris De Decker (persona)"@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: the 'friend' language here is a bare closing 'to be continued, my friend,' plus a playful hypothetical aside (a joke about a communal apartment building) — neither is a substantive claim of relationship. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8. This is his real second TGS appearance; his first (TGS_33, 'Low Tech: What, Why and How') is confirmed directly in this episode's own show notes but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.LukeKemp a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LukeKemp ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LukeKemp ;
+    skos:prefLabel "Luke Kemp"@en ;
+    rdfs:label "Luke Kemp (persona)"@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: both real uses of 'my friend' here ('I have so many questions for you, my friend'; 'to be continued, my friend') are vocative address, not a substantive claim of relationship. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8. Nate directly proposes a future Reality Roundtable appearance at the close — a real, stated intention, not yet realized as a built episode. Real first appearance (TGS_153, 'Existential Risks') confirmed directly in this episode's own transcript and show notes but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.HelenThompson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.HelenThompson ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_HelenThompson ;
+    skos:prefLabel "Helen Thompson"@en ;
+    rdfs:label "Helen Thompson (persona)"@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: the only 'friend' language here is a bare closing 'to be continued, my friend,' Nate's own near-formulaic sign-off — not a substantive claim, and especially not one given an explicit first-meeting confirmation earlier in the same conversation ('we've never met in person'). Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8."@en ;
+    .
+
+tgs:Persona.ChrisKeefer a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ChrisKeefer ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ChrisKeefer ;
+    skos:prefLabel "Chris Keefer"@en ;
+    rdfs:label "Chris Keefer (persona)"@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: 'please welcome my friend Dr. Chris Keefer' is vocative; 'you're a good dude, Chris' is real warmth but not a substantive claim of relationship either. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8. This is his real second TGS appearance; his first (TGS_123, 'Empowering the Future: from Nuclear to Podcasting,' ~April 2024) is confirmed directly in this episode's own transcript but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.JaneMuncke a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JaneMuncke ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JaneMuncke ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JaneMuncke ;
+    skos:prefLabel "Jane Muncke"@en ;
+    rdfs:label "Jane Muncke (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced, both directions: Nate's own real words introducing the episode, 'since she's a friend and a scientist,' and his real closing words, 'thank you, my friend.' Real, notable origin for this specific episode: recorded live, late at night, prompted directly by real text messages Nate received from Muncke while she was in Busan, South Korea for UN plastics-treaty negotiations. Her real first TGS appearance (TGS_104, 'Perils of Plastic Packaging') is confirmed directly in this episode's own show notes but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.PeterBrannen a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterBrannen ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PeterBrannen ;
+    skos:prefLabel "Peter Brannen"@en ;
+    rdfs:label "Peter Brannen (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — real, warm second-conversation rapport, but no explicit 'friend' language exchanged in this episode. His real first TGS appearance (TGS_103, 'Deep Time, Mass Extinctions, and Today') is confirmed directly in this episode's own show notes but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.SamanthaSweetwater a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SamanthaSweetwater ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_SamanthaSweetwater ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SamanthaSweetwater ;
+    skos:prefLabel "Samantha Sweetwater"@en ;
+    rdfs:label "Samantha Sweetwater (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced, both directions: Nate's own words, 'I've been following your progress... as one of your friends,' and his real closing words, 'to be continued, my friend.' This is her real second TGS appearance, roughly 18 months after her first (TGS_112, 'Life at the Center,' already tracked in this graph's repeat-guest coverage) — TGS_112 itself remains unbuilt."@en ;
+    .
+
+tgs:Persona.TadPatzek a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TadPatzek ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_TadPatzek ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TadPatzek ;
+    skos:prefLabel "Tad Patzek"@en ;
+    rdfs:label "Tad Patzek (persona)"@en ;
+    skos:scopeNote "Personal tag exceptionally well-evidenced — the strongest documented case in this graph: Nate's own opening words call him 'my friend,' followed directly by 'I've known you for going on 20 years'; mid-conversation Nate states outright, 'so we're friends, I will have you back again'; and the close repeats 'my friend' twice more. This is his real second TGS appearance; his first (TGS_219, 'Why Each American Lives Like a 40-Ton Whale') is confirmed directly in this episode's own transcript but not yet built in this graph."@en ;
+    .
+
+tgs:Persona.DavidSloanWilson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DavidSloanWilson ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DavidSloanWilson ;
+    skos:prefLabel "David Sloan Wilson"@en ;
+    rdfs:label "David Sloan Wilson (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a clean case under this graph's evidentiary rule (wwns-methodology.md §8): no 'friend' language anywhere in the transcript; Nate's own real disclosure is admiration rather than friendship ('you were long an intellectual hero of mine well before we ever met'), and the close is the more formal 'to be continued, sir,' not 'my friend.'"@en ;
+    .
+
+tgs:Persona.CharlesGoodnight a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.CharlesGoodnight ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_CharlesGoodnight ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_CharlesGoodnight ;
+    skos:prefLabel "Charles Goodnight"@en ;
+    rdfs:label "Charles Goodnight (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced by real substance, not vocabulary — a genuine PhD advisor relationship documented in Nate's own words as personal, not merely academic: 'long conversations with him in his beetle lab about animal behavior.' Never a TGS guest himself (he died in 2020, before the show existed) — this Persona models a real, direct personal/intellectual influence on Nate rather than a podcast relationship, the only individual in this graph built on that basis alongside tgs:Persona.HowardOdum."@en ;
+    .

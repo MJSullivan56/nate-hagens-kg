@@ -71,7 +71,9 @@ tgs:Concept.EnergyBlindness a thinkr:Concept,
     skos:definition "The tendency of economics, policy, and everyday thinking to treat energy as a substitutable input abstracted into monetary terms, obscuring how dependent modern life is on cheap, concentrated, finite energy."@en ;
     skos:prefLabel "Energy Blindness"@en ;
     thinkr:contrastsWith tgs:Persona.Buddha ;
-    thinkr:influencedBy tgs:Persona.ArtBerman .
+    thinkr:influencedBy tgs:Persona.ArtBerman ;
+    skos:scopeNote "MJSullivan's own observation, added 2026-08-30: Energy Blindness has a fairly direct relationship to the standard economics concept of externalities — not equivalent, but externalities (costs or benefits of an economic activity borne by parties outside the transaction, left out of market prices) are a key component of how energy blindness actually operates in practice. Real, direct textual confirmation found the same day in TGS_154 (Jane Muncke): Nate's own words, asking whether short-term convenience-seeking happens 'despite the externalities,' using the term directly and unprompted in exactly this context. No dedicated Concept.Externalities individual exists in this graph — a generic economics term, not itself something any specific episode discusses as its own topic — so this relationship is captured here as prose rather than a formal link to an individual that doesn't yet exist."@en ;
+    .
 
 tgs:Concept.EnergySlaves a thinkr:Concept,
         owl:NamedIndividual ;

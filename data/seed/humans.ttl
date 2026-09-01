@@ -58,6 +58,7 @@ tgs:Human.DennisMeadows a thinkr:Human,
     skos:prefLabel "Dennis Meadows"@en ;
     rdfs:label "Dennis Meadows (human)"@en ;
     owl:sameAs <http://dbpedia.org/resource/Dennis_Meadows> ;
+    rdfs:comment "Emeritus Professor of Systems Management, MIT; former director, Institute for Policy and Social Science Research, University of New Hampshire. Led the 17-person research team that produced the real 1972 Limits to Growth study for the Club of Rome, using the World3 systems-dynamics model to simulate 13 real distinct scenarios (not a single prediction) for the interaction of population, industrial output, and finite planetary resources through 2100. Co-author of Beyond the Limits. Recipient of four honorary doctorates for contributions to environmental education."@en ;
     .
 
 tgs:Human.DonellaMeadows a thinkr:Human,
@@ -117,6 +118,7 @@ tgs:Human.JosephTainter a thinkr:Human,
     skos:prefLabel "Joseph Tainter"@en ;
     rdfs:label "Joseph Tainter (human)"@en ;
     owl:sameAs <http://dbpedia.org/resource/Joseph_Tainter> ;
+    rdfs:comment "Archaeologist and anthropologist; Professor, Environment and Society Department, Utah State University since 2007 (Department Head, 2007-2009). Author of the real 1988 book The Collapse of Complex Societies, developing a real, technical distinction between complexity (structure plus organization) and mere complication (structure without organization) as the basis for a cost-benefit theory of societal collapse. Co-author, with Tadeusz Patzek, of Drilling Down: The Gulf Oil Debacle and Our Energy Dilemma. Real, direct personal significance to Nate Hagens: Nate's own words describe reading Tainter's work, alongside Herman Daly's, as directly causing him to leave his Wall Street career."@en ;
     .
 
 tgs:Human.MKingHubbert a thinkr:Human,
@@ -192,7 +194,7 @@ tgs:Human.KateRaworth a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.NateHagens a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Nate Hagens"@en ;
     rdfs:label "Nate Hagens (human)"@en ;
-    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
+    rdfs:comment "The graph's primary subject — this individual was notably absent until 2026-07-11 despite the entire graph being organized around his framework. NO owl:sameAs: verified 2026-07-11 he has no genuine Wikipedia page (the only hits are EverybodyWiki, not real Wikipedia, and an unrelated Wikidata entry Q51905132 for a different person entirely, 'Nathan A Hagen,' an ORCID-linked researcher with no connection to energy/TGS — confirmed via search, not assumed). Credentials (per the publications/credentials CV scope, not full employment history): PhD in Natural Resources, University of Vermont; Master's in Finance with Honors, University of Chicago Booth School of Business. Pre-TGS career: VP at Salomon Brothers and Lehman Brothers, President of Sanctuary Asset Management, before leaving Wall Street circa 2002-2004. Real, direct cause confirmed in his own words during TGS_27 (Joseph Tainter): reading Tainter's 'The Collapse of Complex Societies,' alongside Herman Daly's work, directly caused him to leave Wall Street — 'a life changing recognition.' Not modeled as a formal thinkr:influencedBy triple (that property is deliberately scoped to Concept/SchoolOfThought-as-subject only, not Persona-as-subject — see its own declaration in tgs-core.ttl for the reasoning); kept here as biographical prose instead. TEACHING, genuine tense conflict between sources as of 2026-07-11 — his own site (natehagens.com/about2) says PAST tense, 'For eight years, Nate taught Reality 101, an honors course at the University of Minnesota'; other sources (RateMyProfessors, Resilience.org) use PRESENT tense. Not resolved either way, flagged honestly rather than guessed. 'Professor' title itself is informal/student usage (RateMyProfessors) — his own bio consistently says 'taught'/'teaches,' never asserts the formal rank. tgs:Work.RealityBlind was the course's primary text (confirmed via a LinkedIn post from Nate himself)."@en ;
     foaf:givenName "Nathan"@en ;
     foaf:familyName "Hagens"@en ;
     skos:scopeNote "Commonly known as 'Nate' (see skos:prefLabel) — 'Nathan' confirmed as his fuller given name via his own X handle, @NJHagens = Nathan John Hagens. Deliberately not resolving which form foaf:givenName 'should' hold here — flagging the real ambiguity rather than silently picking one, same as the deferred firstName/lastName backlog item. foaf:homepage MOVED to tgs:Persona.NateHagens 2026-07-15 (see that individual's own scopeNote) — a homepage is a public-facing fact like every other Relationship/Episode/Concept-influence fact already migrated under design decision 0f, not biography. It deliberately does NOT include thegreatsimplification.com or its YouTube channel — those arguably belong to TGS THE SHOW as its own entity (not currently modeled at all, same real gap as ISEOF/his employer, also unmodeled despite being confirmed real) rather than to Nate personally. Flagged, not resolved."@en ;
@@ -1150,4 +1152,113 @@ tgs:Human.JohnGowdy a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "John Gowdy"@en ;
     rdfs:label "John Gowdy (human)"@en ;
     rdfs:comment "John M. Gowdy, Professor of Economics and Professor of Science and Technology Studies, Rensselaer Polytechnic Institute (Troy, NY). Ecological economist; recipient of the Herman Daly Award for contributions to ecological economics. Author of tgs:Work.Ultrasocial2021 ('Ultrasocial: The Evolution of Human Nature and the Quest for a Sustainable Future,' Cambridge University Press, Oct 2021) and 'Limited Wants, Unlimited Means: A Reader on Hunter-Gatherer Economics and the Environment.' Co-authored research on ants and social insects with Lisi Krall (SUNY Cortland, not yet built in this graph). Real, direct UN conservation work on South Sudan's Sudd wetland (second-largest wetland in the world after the Pantanal), threatened by planned drainage for downstream agriculture. Nate's own real, direct words describe him as 'my friend and one of my intellectual mentors' with a prior relationship spanning roughly 20 years — the deepest pre-existing relationship of any guest built in this graph to date. TGS guest, Episode 14, 'Superorganisms, Crazy Ants, and Fire Apes, Oh My!' — explores capitalism, economic surplus, and evolutionary mechanisms in relation to the economic Superorganism, and how much real agency individuals retain against it."@en ;
+    .
+
+tgs:Human.LynAlden a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Lyn Alden"@en ;
+    rdfs:label "Lyn Alden (human)"@en ;
+    rdfs:comment "Independent investment analyst, founder of Lyn Alden Investment Strategy. Background in electrical engineering (BS) and engineering management (MS, focus on engineering economics, systems engineering, financial modeling); worked over a decade as an electrical engineer at the FAA's William J. Hughes Technical Center before moving into finance. Independent director, Swan.com; general partner, Ego Death Capital. Author of tgs:Work.BrokenMoney2023 (2023 bestseller)."@en ;
+    .
+
+tgs:Human.TristanHarris a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Tristan Harris"@en ;
+    rdfs:label "Tristan Harris (human)"@en ;
+    rdfs:comment "Co-Founder and President, Center for Humane Technology (CHT), a nonprofit aligning technology with humanity's best interests. Co-hosts the podcast 'Your Undivided Attention' with Aza Raskin and Daniel Barclay. Formerly Design Ethicist at Google. Primary subject of the Netflix documentary 'The Social Dilemma' (2020, Emmy-winning, reaching over 100 million people in 190 countries), which exposed social media's psychological engineering of user behavior. Named to Time 100 Next and Rolling Stone's '25 People Shaping the World.' Featured in the 2026 documentary 'The AI Doc: Or How I Became an Apocaloptimist.' Regularly briefs heads of state, tech CEOs, and US Congress members on AI safety and social media harms."@en ;
+    thinkr:memberOf tgs:Organization.CenterForHumaneTechnology ;
+    .
+
+tgs:Human.JohnVervaeke a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "John Vervaeke"@en ;
+    rdfs:label "John Vervaeke (human)"@en ;
+    rdfs:comment "Associate professor of psychology and cognitive science, University of Toronto; director of the Cognitive Science program and the Consciousness and Wisdom Studies Laboratory. Researches intelligence, rationality, wisdom, and meaning in life, emphasizing relevance realization and non-propositional knowing. Co-author of tgs:Work.ZombiesInWesternCulture with Christopher Mastropietro (not yet built in this graph). Creator of the widely-viewed YouTube series 'Awakening from the Meaning Crisis.' Left a fundamentalist Christian upbringing he describes as personally traumatizing, later returning to Socratic/Neoplatonic philosophy alongside Tai Chi Chuan and Vipassana meditation practice — a real, direct personal origin for his own academic focus on the meaning crisis."@en ;
+    .
+
+tgs:Human.SteveVavrus a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Steve Vavrus"@en ;
+    rdfs:label "Steve Vavrus (human)"@en ;
+    rdfs:comment "Senior Scientist, Nelson Institute Center for Climatic Research, University of Wisconsin-Madison. Uses computer climate models and observational data to study Arctic climate dynamics and extreme weather. Co-director, Wisconsin Initiative on Climate Change Impacts (WICCI); long-time member of its Climate Working Group. IPCC scientist, contributed to the organization's most recent climate report. PhD and MS in meteorology, University of Wisconsin; BS in meteorology, Purdue University."@en ;
+    .
+
+tgs:Human.TaylorGuthrie a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Taylor Guthrie"@en ;
+    rdfs:label "Taylor Guthrie (human)"@en ;
+    rdfs:comment "PhD, social cognitive neuroscientist. Doctorate from the University of Oregon, where his research focused on the default mode network and neural mechanisms underlying identity, motivation, and social cognition; received the university's Distinguished Teaching Award. Creates public-facing content including 'The Cellular Republic,' a lecture series demystifying cognitive and social neuroscience. At the time of his TGS appearance, preparing to move to the Netherlands for a postdoctoral fellowship."@en ;
+    .
+
+tgs:Human.BrettKencairn a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Brett KenCairn"@en ;
+    rdfs:label "Brett KenCairn (human)"@en ;
+    rdfs:comment "Founding Director, Center for Regenerative Solutions; Senior Policy Advisor for Climate and Resilience, City of Boulder's Climate Initiatives Team, where he coordinates the city's nature-based solutions work (roughly 15 years with the city). Co-founder of the Rogue River Institute for Ecology and Economy, Veterans Green Jobs, and Community Energy Systems. Real, direct professional shift documented in his own TGS appearance: began in conventional carbon-accounting climate work before real, unexplained discrepancies in the numbers led him toward the view that climate is fundamentally a biologically-mediated dynamic, not simply a carbon-in/carbon-out machine."@en ;
+    .
+
+tgs:Human.BayoAkomolafe a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Bayo Akomolafe"@en ;
+    rdfs:label "Bayo Akomolafe (human)"@en ;
+    rdfs:comment "Philosopher, writer, activist, professor of psychology; Visionary Founder and Executive Director, The Emergence Network. Born 1983 in western Nigeria to Yoruba parents; his family emigrated to Bonn, Germany following his father's diplomatic posting. Lost his father to a sudden heart complication in Kinshasa, Zaire during his childhood — a formative loss that shaped his later work on trauma, healing, and decolonized ways of knowing. PhD; former Special Envoy, International Alliance for Localization (2014); has taught at Middlebury College, Sonoma State University, Simon Fraser University, Schumacher College, Pacifica Graduate Institute, and University of Vermont. Originated the concepts of 'postactivism,' 'transraciality,' and 'ontofugitivity.' Author of tgs:Work.TheseWildsBeyondOurFences and 'We Will Tell Our Own Story: The Lions of Africa Speak.' Recipient, 2021 New Thought Walden Award. As of August 2025, Hubert Humphrey Distinguished Professor of American Studies, Macalester College (Saint Paul, Minnesota) — a more current position than his own official bio page (dated 2022) reflects. Real, direct connection to this graph: cited in Frankly_140 (his own real essay, 'A Slower Urgency') for the phrase 'the world is urgent, we have to move slow.'"@en ;
+    .
+
+tgs:Human.JeanMarcJancovici a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jean-Marc Jancovici"@en ;
+    rdfs:label "Jean-Marc Jancovici (human)"@en ;
+    rdfs:comment "French engineering consultant, professor, author, and independent columnist; one of France's most prominent public voices on energy, climate, and economics. Co-founder, Carbone 4 consultancy (low-carbon transition, biodiversity impacts, climate risk). Founding president, The Shift Project, a Paris-based think tank. Associate professor, Mines ParisTech; member, French High Council for the Climate. Graduate, École polytechnique and Télécom ParisTech. Author or co-author of 8 books, including tgs:Work.LePlanDeTransformation (100,000+ copies) and tgs:Work.LeMondeSansFin (a graphic novel with Christophe Blain, over 500,000 copies, France's best-selling book of 2022). Real, distinctive contribution to this graph's own vocabulary: the concept of 'sobriété' — deliberately choosing to forgo a good or service to conserve resources, versus poverty (the identical physical outcome, but unchosen)."@en ;
+    .
+
+tgs:Human.KrisDeDecker a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Kris De Decker"@en ;
+    rdfs:label "Kris De Decker (human)"@en ;
+    rdfs:comment "Shifted from a journalism career covering high technology to researching and writing about low technology. Creator and author of Low-Tech Magazine (solar.lowtechmagazine.com, itself solar-powered and intermittently offline as a demonstration of its own thesis) and No Tech Magazine. Creator of the Human Power Plant, a real Netherlands-based art/research project envisioning a neighborhood run substantially on human-generated power. Contributed articles to Mother Earth News, Techniques et Culture, The Oil Drum, Resilience, and several Dutch/Belgian publications. Author of 'Energie in 2030' (advised the Dutch government on science and technology challenges) and 'Stralingswarmte: gezonde warmte met minder energie' (a guide to radiant heating). Based in Barcelona, Spain, where he runs a real, personal hybrid solar/human-power system in his own apartment."@en ;
+    .
+
+tgs:Human.LukeKemp a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Luke Kemp"@en ;
+    rdfs:label "Luke Kemp (human)"@en ;
+    rdfs:comment "Research Affiliate, Centre for the Study of Existential Risk (CSER) and Darwin College, University of Cambridge. Research focuses on the history and future of extreme global risk. Has advised the WHO and other international institutions; work covered by the BBC, New York Times, and The New Yorker. PhD in International Relations and BA (Interdisciplinary Studies, first class honours), Australian National University. Author of tgs:Work.GoliathsCurse (Penguin, 2025), the product of roughly seven years of research."@en ;
+    .
+
+tgs:Human.HelenThompson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Helen Thompson"@en ;
+    rdfs:label "Helen Thompson (human)"@en ;
+    rdfs:comment "Professor of Political Economy, Cambridge University. Research focuses on the political economy of energy and the long history behind the democratic, economic, and geopolitical disruptions of the 21st century. Regular panelist, Talking Politics; columnist, New Statesman; co-presenter, UnHerd's podcast 'These Times.' Author of tgs:Work.Disorder2022 and tgs:Work.OilAndTheWesternEconomicCrisis. Real, direct personal origin for her energy focus: born 1967 in Britain; her first memory of national life is the winter of 1974, age seven, her mother cooking by candlelight during the UK's real, widespread power cuts — a formative, visceral early sense of energy's direct impact on daily life, though she didn't connect it to her scholarship until around 2013."@en ;
+    .
+
+tgs:Human.ChrisKeefer a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Chris Keefer"@en ;
+    rdfs:label "Chris Keefer (human)"@en ;
+    rdfs:comment "MD, CCFP-EM; practicing emergency physician and medical instructor in Toronto. Host of the Decouple podcast (energy, climate, environment, politics, philosophy). Founder and president, Canadians for Nuclear Energy (grassroots non-profit); Director, Doctors for Nuclear Energy. Self-described as having gone 'from being an idealist to a realist' over the two years between his two real TGS appearances, and jokingly calls himself a 'nuclear Mormon' for his advocacy work. Real, direct personal detail: half Ukrainian, describes himself as having a clinically-diagnosed tendency toward 'defensive pessimism,' which he ties directly to Ukrainian national history and identity."@en ;
+    .
+
+tgs:Human.JaneMuncke a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jane Muncke"@en ;
+    rdfs:label "Jane Muncke (human)"@en ;
+    rdfs:comment "PhD, environmental toxicology, and MSc, environmental science, ETH Zurich. Since 2012, Managing Director and Chief Scientific Officer, Food Packaging Forum Foundation (FPF), Zurich — a charitable research and science-communication organization focused on chemicals in food contact materials. Full scientific member, Society of Toxicology, Society for Environmental Chemistry and Toxicology, American Chemical Society, and the Endocrine Society. Since 2019, elected expert member, Bio Suisse's committee on trade and processing (organic food packaging standards). Director, the FAN initiative (resource overshoot, polycrisis, societal collapse). Participated as an independent scientist in the UN's plastics-treaty negotiating process (INC2 through INC5)."@en ;
+    .
+
+tgs:Human.PeterBrannen a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Peter Brannen"@en ;
+    rdfs:label "Peter Brannen (human)"@en ;
+    rdfs:comment "Award-winning science journalist and contributing writer, The Atlantic; also published in The New York Times, The Washington Post, Wired, Aeon, The Boston Globe, Slate, and The Guardian. Author of tgs:Work.TheEndsOfTheWorld and tgs:Work.TheStoryOfCO2. 2023 visiting scholar, Kluge Center, Library of Congress; affiliate, Institute of Arctic and Alpine Research, University of Colorado-Boulder; formerly a 2018 Scripps Fellow (CU-Boulder), 2015 journalist-in-residence at the National Evolutionary Synthesis Center (Duke), and 2011 Ocean Science Journalism Fellow, Woods Hole Oceanographic Institution."@en ;
+    .
+
+tgs:Human.SamanthaSweetwater a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Samantha Sweetwater"@en ;
+    rdfs:label "Samantha Sweetwater (human)"@en ;
+    rdfs:comment "Wisdom guide, author, and founder of One Life Circle ('a ministry of remembering'). Over three decades facilitating individuals and organizations across five continents through personal, cultural, ecological, and spiritual emergence; mentors leaders in business, technology, and finance on navigating awakening and aligning impact with regenerative futures. Founder, Dancing Freedom and Peacebody Japan (embodied-awakening movements; has trained hundreds of facilitators). Former seed farmer. MA, Wisdom Studies; BA, Social Theory and Dance. Initiated into indigenous lineages of Africa (the Bwiti tradition, Gabon), Latin America, and Turtle Island. Author of tgs:Work.TrueHuman."@en ;
+    .
+
+tgs:Human.TadPatzek a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Tad Patzek"@en ;
+    rdfs:label "Tad Patzek (human)"@en ;
+    rdfs:comment "Professor Emeritus of Petroleum and Chemical Engineering, Earth Sciences Division, and Director of the Ali I. Al-Naimi Petroleum Engineering Research Center, KAUST (Saudi Arabia). Formerly the Lois K. and Richard D. Folger Leadership Professor and Chairman, Petroleum and Geosystems Engineering Department, University of Texas at Austin; formerly Professor of Geoengineering, UC Berkeley; formerly a researcher at Shell Development, a company managed for 20 years by M. King Hubbert. Full Presidential Professor in Poland (the country's highest academic honor). Served on the DOI Macondo Well Advisory Committee. Research focuses on thermodynamics and ecology of human survival, and food/energy supply for humanity. Co-author of over 400 papers and reports; author of tgs:Work.ThermalPowerAndClimateChange. Real, exceptionally long personal history with Nate — Nate's own words: 'I've known you for going on 20 years,' the longest documented pre-existing relationship of any guest in this graph."@en ;
+    .
+
+tgs:Human.DavidSloanWilson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "David Sloan Wilson"@en ;
+    rdfs:label "David Sloan Wilson (human)"@en ;
+    rdfs:comment "SUNY Distinguished Professor of Biology and Anthropology Emeritus, Binghamton University. President, ProSocial World. Co-authored (with E.O. Wilson) the real, foundational 2007 paper 'Rethinking the Theoretical Foundation of Sociobiology,' resurrecting group selection as multi-level selection theory after decades of it being considered scientifically taboo; his own first paper on the topic dates to 1975. Author of Evolution for Everyone (2007), Darwin's Cathedral, This View of Life: Completing the Darwinian Revolution, Prosocial: Using Evolutionary Science to Build Productive, Equitable, and Collaborative Groups (with Paul Atkins and Steven C. Hayes), and a novel, Atlas Hugged: The Autobiography of John Galt III. Real, direct personal connection to Nate: Charles Goodnight — Wilson's own real, close collaborator and friend, since deceased — served on Nate's PhD committee in ecological economics, an actual academic-lineage link between the two independent of this episode itself. Son of novelist Sloan Wilson (The Man in the Gray Flannel Suit)."@en ;
+    .
+
+tgs:Human.CharlesGoodnight a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Charles Goodnight"@en ;
+    rdfs:label "Charles Goodnight (human)"@en ;
+    rdfs:comment "Professor of Biology, University of Vermont (1955-2020); joined UVM in 1988 as Assistant Professor, promoted to Associate Professor 1994, Full Professor 1999; recognized as a University Scholar 2002-2003 for sustained research excellence. PhD, University of Chicago, during a real, formative period of quantitative evolutionary biology's development. Dedicated his career to group selection theory (multi-level selection), an idea long dismissed as scientifically unimportant before contributing to its rigorous revival, with research funding from the National Science Foundation; studied multi-level selection in beetles. Taught organismal biology, evolution, biostatistics, philosophy of science, and conservation biology at UVM for decades. Real, direct personal significance: one of Nate Hagens's own real PhD committee members/advisors; Nate's own words describe 'long conversations with him in his beetle lab about animal behavior.' Real, close professional and personal collaborator of David Sloan Wilson, who called him directly 'a great friend and colleague' upon learning of his death. Per his own real UVM obituary: remembered for 'kind nature and optimism, good humor, infectious laugh, and strong sense of community and fellowship.'"@en ;
     .

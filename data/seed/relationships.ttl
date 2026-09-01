@@ -919,12 +919,18 @@ tgs:Relationship.NateHagens_AndrewMillison a thinkr:Relationship, owl:NamedIndiv
     thinkr:hasObject tgs:Persona.AndrewMillison ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' personal and professional relationship with Andrew Millison"@en ;
+    skos:scopeNote "VERIFIED 2026-08-30, resolving a gap flagged when this graph's evidentiary rule for the Personal tag was tightened (wwns-methodology.md §8): RR-6's own real closing line, Nate's words to the full panel — 'I'm proud to call all of you friends and colleagues' — is an explicit, substantive claim, not a vocative 'my friend,' and meets the tightened bar. Confirmed correct as originally tagged; same real evidence applies equally to Jason Bradford, Vandana Shiva, and Daniel Zetah, all four addressed together in the same line."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems ;
-          dcterms:date "2023-10-10"^^xsd:date ] ;
+          dcterms:date "2023-10-10"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_178_AndrewMillison ;
+          dcterms:date "2025-04-16"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence — Nate's own closing words in RR-6: 'I'm proud to call all of you friends and colleagues,' addressed to all four guests."@en .
 
 tgs:Relationship.NateHagens_VandanaShiva a thinkr:Relationship, owl:NamedIndividual ;
@@ -1554,4 +1560,253 @@ tgs:Relationship.NateHagens_JohnGowdy a thinkr:Relationship, owl:NamedIndividual
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_14_JohnGowdy ;
           dcterms:date "2022-02-22"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_LynAlden a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.LynAlden ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Lyn Alden"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_113_LynAlden ;
+          dcterms:date "2024-02-21"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_TristanHarris a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.TristanHarris ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Tristan Harris"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_214_TristanHarris ;
+          dcterms:date "2026-02-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_JohnVervaeke a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnVervaeke ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with John Vervaeke"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_158_JohnVervaeke ;
+          dcterms:date "2024-11-25"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_SteveVavrus a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SteveVavrus ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Steve Vavrus"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_35_SteveVavrus ;
+          dcterms:date "2022-08-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_TaylorGuthrie a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.TaylorGuthrie ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Taylor Guthrie"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_191_TaylorGuthrie ;
+          dcterms:date "2025-06-12"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_DennisMeadows a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DennisMeadows ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Dennis Meadows"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_12_DennisMeadows ;
+          dcterms:date "2022-02-16"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_JosephTainter a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JosephTainter ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Joseph Tainter"@en ;
+    skos:scopeNote "Real, direct personal significance: Nate's own words describe Tainter's book, alongside Herman Daly's work, as a direct cause of him leaving his Wall Street career to pursue this work full-time — one of the most personally significant guest relationships documented anywhere in this graph."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_27_JoeTainter ;
+          dcterms:date "2022-06-15"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_BrettKencairn a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.BrettKencairn ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Brett KenCairn"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_222_BrettKencairn ;
+          dcterms:date "2026-05-13"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_JeanMarcJancovici a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JeanMarcJancovici ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Jean-Marc Jancovici"@en ;
+    skos:scopeNote "RE-CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule (wwns-methodology.md §8): Personal was added, then removed again, based on a vocative 'my friend' that doesn't meet the tightened bar. Real, notable context preserved: TGS_84's own real independent-convergence framing ('we're saying almost the same things... a robust finding') suggests real intellectual kinship, whatever the exact status of their personal relationship."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_84_JeanMarcJancovici ;
+          dcterms:date "2023-07-11"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_175_JeanMarcJancovici ;
+          dcterms:date "2025-04-02"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_KrisDeDecker a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.KrisDeDecker ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Kris De Decker"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_75_KrisDeDecker ;
+          dcterms:date "2023-05-10"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_LukeKemp a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.LukeKemp ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Luke Kemp"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_194_LukeKemp ;
+          dcterms:date "2025-08-06"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_HelenThompson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.HelenThompson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Helen Thompson"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_98_HelenThompson ;
+          dcterms:date "2023-10-30"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_ChrisKeefer a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ChrisKeefer ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Chris Keefer"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_215_ChrisKeefer ;
+          dcterms:date "2026-03-22"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_JaneMuncke a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JaneMuncke ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Jane Muncke"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_154_JaneMuncke ;
+          dcterms:date "2024-12-02"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_PeterBrannen a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.PeterBrannen ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Peter Brannen"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_210_PeterBrannen ;
+          dcterms:date "2025-09-23"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_SamanthaSweetwater a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SamanthaSweetwater ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Samantha Sweetwater"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_202_SamanthaSweetwater ;
+          dcterms:date "2025-10-01"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_TadPatzek a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.TadPatzek ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Tad Patzek"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_225_TadPatzek ;
+          dcterms:date "2026-06-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_DavidSloanWilson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DavidSloanWilson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with David Sloan Wilson"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_56_DavidSloanWilson ;
+          dcterms:date "2022-12-08"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_CharlesGoodnight a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.CharlesGoodnight ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Charles Goodnight"@en ;
+    skos:scopeNote "Real, direct PhD advisor relationship, not a podcast interaction — no thinkr:PodcastAppearance interaction exists for this Relationship, since Goodnight died in 2020, before TGS began. Documented directly in Nate's own words across two real, independent citations: TGS_56 (David Sloan Wilson) — 'one of my PhD committee members was Charles Goodnight... he was a big disciple of yours' — and Frankly_113 — 'one of my PhD advisors, Charles Goodnight, who unfortunately has passed away... I remember long conversations with him in his beetle lab about animal behavior.'"@en ;
     .

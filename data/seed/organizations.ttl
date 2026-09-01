@@ -123,3 +123,9 @@ tgs:Organization.InstituteForSymbolicSelection a thinkr:Organization, owl:NamedI
     skos:prefLabel "Institute for Symbolic Selection"@en ;
     skos:definition "Interdisciplinary research program founded by Greg Elliott, investigating how human-created symbolic systems (institutions, game-theoretic incentive structures) shape behavior and the long-term evolution of civilization. Grew directly out of his own Psychopathic Selection Hypothesis research. No owl:sameAs found — not independently verified as having a dedicated Wikipedia/DBpedia page."@en ;
     .
+
+tgs:Organization.CenterForHumaneTechnology a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Center for Humane Technology"@en ;
+    skos:definition "Nonprofit co-founded by Tristan Harris and Aza Raskin, originally focused on social media's psychological engineering of user behavior, pivoted toward AI safety and governance beginning January 2023 after receiving direct warnings from AI-lab insiders about an imminent capability step-change (pre-GPT-4). Co-produces the podcast 'Your Undivided Attention.'"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Center_for_Humane_Technology> ;
+    .

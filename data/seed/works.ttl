@@ -287,7 +287,6 @@ tgs:Work.CarbonMajorsWaterCrisis2026 a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.nature.com/articles/s43247-026-03900-6> ;
     dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
     dct:issued "2026-08-25"^^xsd:date ;
-    dct:isReferencedBy tgs:WWNSArticle.WWNS_1 ;
     .
 
 tgs:Work.Ultrasocial2021 a thinkr:Work, owl:NamedIndividual ;
@@ -302,4 +301,97 @@ tgs:Work.PsychopathicSelectionHypothesisBook a thinkr:Work, owl:NamedIndividual 
     skos:prefLabel "The Psychopathic Selection Hypothesis"@en ;
     rdfs:comment "Greg Elliott's own book, self-described in the TGS_231 transcript as published 'back in May' (year not independently confirmed — the episode's own real, wider context suggests 2026, consistent with dct:issued below, but not verified via direct fetch). Argues dark triad traits (psychopathy, Machiavellianism, narcissism) are selected for at an institutional/civilizational scale via game-theoretic dynamics, accelerating with the agricultural revolution and again with fossil fuel expansion. Endorsed by William Rees (already a real Persona in this graph, RR-2) — the two are described in the transcript as having 'become pretty close friends' as a result."@en ;
     dct:creator tgs:Human.GregElliott ;
+    .
+
+tgs:Work.BrokenMoney2023 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Broken Money: Why Our Financial System is Failing Us and How We Can Make it Better"@en ;
+    rdfs:comment "Lyn Alden, 2023 best-selling book on the past, present, and future of money through the lens of technology and energy. Directly cited in her own TGS_113 appearance as her most recent major work."@en ;
+    dct:creator tgs:Human.LynAlden ;
+    dct:source <https://www.lynalden.com/broken-money/> ;
+    dct:issued "2023"^^xsd:gYear ;
+    .
+
+tgs:Work.ZombiesInWesternCulture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Zombies in Western Culture: A 21st Century Crisis"@en ;
+    rdfs:comment "John Vervaeke and Christopher Mastropietro (co-author, not yet built in this graph). Integrates cognitive science and psychology to address the meaning crisis in Western society, using the cultural zombie-figure as a real, structured metaphor for the modal confusion Vervaeke describes in his own TGS_158 appearance — 'we're not starving calorically, but we're starving nutritionally.'"@en ;
+    dct:creator tgs:Human.JohnVervaeke ;
+    dct:source <https://johnvervaeke.com/books/zombies-in-western-culture-a-twenty-first-century-crisis/> ;
+    .
+
+tgs:Work.TheseWildsBeyondOurFences a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "These Wilds Beyond Our Fences: Letters to My Daughter on Humanity's Search for Home"@en ;
+    rdfs:comment "Bayo Akomolafe, North Atlantic Books, 2017."@en ;
+    dct:creator tgs:Human.BayoAkomolafe ;
+    dct:issued "2017"^^xsd:gYear ;
+    .
+
+tgs:Work.PewAmericansMorallyBad2026 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "In 25-Country Survey, Americans Especially Likely To View Fellow Citizens as Morally Bad"@en ;
+    rdfs:comment "Jonathan Evans, Kirsten Lesage, Manolo Corichi, William Miner, Andrew Prozorovsky, Julia Armeli, Alan Cooperman. Pew Research Center, March 5, 2026. Real, striking finding: the US is the only one of 25 countries surveyed where more adults rate their fellow citizens' morality as bad (53%) than good (47%). Notably, this isn't explained by Americans being more morally strict in general — on most of nine specific moral-judgment questions, the US sits mid-pack internationally. A real, direct partisan mechanism is identified instead: Democrats/leaners are far more likely than Republicans/leaners to rate fellow Americans as immoral (60% vs. 46%). Real methodology: 25-country Global Attitudes Survey, Jan-May 2025 (US n=3,605, Mar 24-30, 2025, plus a separate ATP survey of 8,937 US adults, May 5-11, 2025)."@en ;
+    dct:source <https://www.pewresearch.org/religion/2026/03/05/in-25-country-survey-americans-especially-likely-to-view-fellow-citizens-as-morally-bad/> ;
+    dct:issued "2026-03-05"^^xsd:date ;
+    .
+
+tgs:Work.LePlanDeTransformation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Plan de transformation de l'économie française (The Plan to Transform the French Economy)"@en ;
+    rdfs:comment "The Shift Project, led by Jean-Marc Jancovici, begun during COVID. A real, distinctive methodology: reorganizes the economy around physical flows (materials, energy, employment by sector) rather than monetary figures, modeling what a 5%-per-year greenhouse gas reduction actually requires sector by sector. Published as a book; sold over 100,000 copies in France, a real, exceptional figure for a policy essay there."@en ;
+    dct:creator tgs:Human.JeanMarcJancovici ;
+    dct:source <https://theshiftproject.org/en/> ;
+    .
+
+tgs:Work.LeMondeSansFin a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Le Monde sans fin (The World Without End)"@en ;
+    rdfs:comment "Graphic novel by Jean-Marc Jancovici and illustrator Christophe Blain (not yet built in this graph), 2022. Real, exceptional commercial success: the best-selling book in France in 2022, over 500,000 copies — a striking figure for a book about energy and climate."@en ;
+    dct:creator tgs:Human.JeanMarcJancovici ;
+    dct:issued "2022"^^xsd:gYear ;
+    .
+
+tgs:Work.GoliathsCurse a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Goliath's Curse: The History and Future of Societal Collapse"@en ;
+    rdfs:comment "Luke Kemp, Penguin, 2025 (US release Sep 23, 2025). Argues 'civilization' is a poorly-defined, historically loaded term better replaced with 'Goliath' — a society organized around dominance hierarchies enforced by violence, distinct from earlier, more egalitarian large-scale human settlements (real examples cited directly: the Indus Valley/Harappan civilization, early Teotihuacán) that lacked centralized rule. Traces a real, recurring pattern: societies beginning egalitarian, becoming progressively more unequal and hierarchical, then destabilizing and collapsing once inequality reaches a high level."@en ;
+    dct:creator tgs:Human.LukeKemp ;
+    dct:source <https://www.penguin.co.uk/books/321192/goliaths-curse-by-kemp-luke/9780241741238> ;
+    dct:issued "2025"^^xsd:gYear ;
+    .
+
+tgs:Work.Disorder2022 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Disorder: Hard Times in the 21st Century"@en ;
+    rdfs:comment "Helen Thompson, Oxford University Press, 2022. Real, striking coincidence: the UK edition released the same day Russia invaded Ukraine. Argues the political shocks of the 2010s (Brexit, Trump's election) have structural, long-history explanations rooted in energy — the difficulties of the fossil fuel economy and the energy transition — rather than being standalone episodes of national political drama."@en ;
+    dct:creator tgs:Human.HelenThompson ;
+    dct:source <https://global.oup.com/academic/product/disorder-9780198864981?cc=us&lang=en&> ;
+    dct:issued "2022"^^xsd:gYear ;
+    .
+
+tgs:Work.OilAndTheWesternEconomicCrisis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Oil and the Western Economic Crisis"@en ;
+    rdfs:comment "Helen Thompson, Springer, 2017. Her own real, direct account: at the time of publication, 'most people thought, well, why is she writing about that' — energy-aware political economy was not yet a widely legible frame; that changed substantially after Disorder's 2022 release."@en ;
+    dct:creator tgs:Human.HelenThompson ;
+    dct:issued "2017"^^xsd:gYear ;
+    .
+
+tgs:Work.TheStoryOfCO2 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Story of CO2 Is the Story of Everything: A Four-Billion-Year Chronicle of Planet Earth and Our Tumultuous Relationship with Carbon Dioxide"@en ;
+    rdfs:comment "Peter Brannen, Ecco, August 2025. Reframes CO2 from industrial pollutant to the substance fundamental to Earth's habitability itself — the 'control knob' for planetary temperature and ocean chemistry, and the ultimate source of all carbon-based life. Grew directly out of research for his earlier book, tgs:Work.TheEndsOfTheWorld: while auditing geochemistry courses, Brannen found most mass extinctions are linked to runaway CO2 injections or declines, not the asteroid-impact narrative most people assume."@en ;
+    dct:creator tgs:Human.PeterBrannen ;
+    dct:issued "2025"^^xsd:gYear ;
+    .
+
+tgs:Work.TheEndsOfTheWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Ends of the World: Volcanic Apocalypses, Lethal Oceans, and Our Quest to Understand Earth's Past Mass Extinctions"@en ;
+    rdfs:comment "Peter Brannen, Ecco. Covers Earth's five major mass extinctions. Featured in Greta Thunberg's The Climate Book and the Best American Science and Nature Writing series. Subject of Brannen's real first TGS appearance, TGS_103."@en ;
+    dct:creator tgs:Human.PeterBrannen ;
+    .
+
+tgs:Work.TrueHuman a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "True Human: Reimagining Ourselves at the End of Our World"@en ;
+    rdfs:comment "Samantha Sweetwater, Q4 2025. Offers a path for sense-making through the metacrisis, framing it as a spiritual opportunity calling for cultivated relational intelligence and moral imagination, centered on a shift from the 'hero's journey' to what she calls the 'kinship journey' — recognizing one's own life as meaningful only in service to something larger than oneself."@en ;
+    dct:creator tgs:Human.SamanthaSweetwater ;
+    dct:issued "2025"^^xsd:gYear ;
+    .
+
+tgs:Work.ThermalPowerAndClimateChange a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Thermal Power and Climate Change: A Data-Driven Analysis of Cause and Effect, 1800-2100"@en ;
+    rdfs:comment "Tad Patzek, preprint available (published book forthcoming at time of TGS_225 recording). Also references a real, distinct research contribution discussed directly in that episode: a preprint under peer review at Geophysical Research Letters identifying a declining Earth albedo as an additional accelerant of global warming over the past 26 years, layered on top of accelerating ocean heat absorption and ice-sheet melt."@en ;
+    dct:creator tgs:Human.TadPatzek ;
+    dct:source <https://eartharxiv.org/repository/view/10865/> ;
     .
