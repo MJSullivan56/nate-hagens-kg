@@ -585,7 +585,7 @@ tgs:Human.MichaelEvery a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Michael Every"@en ;
     rdfs:label "Michael Every (human)"@en ;
-    rdfs:comment "Global Strategist, Rabobank Singapore, analyzing geopolitics/economics/markets intersections. 25+ years as economist/strategist across roles at Silk Road Associates (Bangkok), Royal Bank of Canada (London/Sydney), and Dun & Bradstreet (London); has lived and worked in 9-10 countries. Invited presenter, 2022 G-20. BA, Lancaster University; master's, University College London. Real, extensive prior TGS history confirmed: Reality Roundtable #16, Reality Roundtable #12, and Episode #118 ('The Many-Isms of the Metacrisis') — none built as Episode individuals in this pass. No independent Wikipedia/DBpedia page found — confirmed real via Rabobank's own staff page and extensive independent financial-media coverage."@en ;
+    rdfs:comment "Global Strategist, Rabobank Singapore, analyzing geopolitics/economics/markets intersections. 25+ years as economist/strategist across roles at Silk Road Associates (Bangkok), Royal Bank of Canada (London/Sydney), and Dun & Bradstreet (London); has lived and worked in 9-10 countries. Invited presenter, 2022 G-20. BA, Lancaster University; master's, University College London. Real, extensive prior TGS history: Reality Roundtable #16, Reality Roundtable #12, and Episode #118 ('The Many-Isms of the Metacrisis'), all now built. No independent Wikipedia/DBpedia page found — confirmed real via Rabobank's own staff page and extensive independent financial-media coverage. Real, published intellectual position worth noting directly: wrote an extensive rebuttal of tgs:Work.BrettonWoodsIII (Zoltan Pozsar's real, popularized theory of a coming commodity-backed multipolar monetary order), arguing the theory reads more as a compelling narrative than a real structural shift — his own real, core points (per a real secondary source summarizing his rebuttal, since the original is paywalled): governments won't readily give up unbacked fiat's convenience for a commodity standard; rival currencies lack the US dollar's trust and scale, and the yuan itself remains soft-pegged to the dollar; most mineral, food, and energy exporters aren't clearly aligned with either geopolitical bloc; and commodities trade represents only roughly a quarter of global trade, smaller a share than the theory's framing suggests."@en ;
     .
 
 #############################################
@@ -698,7 +698,7 @@ tgs:Human.JasonBradford a thinkr:Human,
         owl:NamedIndividual ;
     skos:prefLabel "Jason Bradford"@en ;
     rdfs:label "Jason Bradford (human)"@en ;
-    rdfs:comment "American biologist and organic farmer; manager, Confluence Farms (near Corvallis, OR). Affiliated with Post Carbon Institute since 2004 (Fellow, then Board President); co-host, Crazy Town podcast. Author, 'The Future Is Rural: Food System Adaptations to the Great Simplification' (2019). Former research biologist (evolution/ecology/global change); co-founded the Andes Biodiversity and Ecosystem Research Group. Real prior TGS solo appearance confirmed: Episode #76. Real later solo TGS appearance also confirmed: 'The Future is Rural: Reclaiming Food Sovereignty through Farming Clubs?' (2026)."@en ;
+    rdfs:comment "American biologist and organic farmer; co-manages a Community Supported Agriculture program with the Organic Growers Club, Oregon State University, and runs the real 'Corvallis Farming Club' near Corvallis, OR. Board President, Post Carbon Institute (affiliated since 2004, first as Fellow); co-host, Crazy Town podcast; writer, Resilience.org. Author, 'The Future Is Rural: Food System Adaptations to the Great Simplification' (2019). Former research biologist (evolution/ecology/global change). CORRECTED 2026-08-31: an earlier pass here guessed his real prior solo TGS appearance as episode #76 — his own real, official show notes for TGS_211 directly confirm the actual number is #24 (https://www.thegreatsimplification.com/episode/24-jason-bradford), not yet built."@en ;
     .
 
 tgs:Human.AndrewMillison a thinkr:Human,
@@ -1261,4 +1261,166 @@ tgs:Human.CharlesGoodnight a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Charles Goodnight"@en ;
     rdfs:label "Charles Goodnight (human)"@en ;
     rdfs:comment "Professor of Biology, University of Vermont (1955-2020); joined UVM in 1988 as Assistant Professor, promoted to Associate Professor 1994, Full Professor 1999; recognized as a University Scholar 2002-2003 for sustained research excellence. PhD, University of Chicago, during a real, formative period of quantitative evolutionary biology's development. Dedicated his career to group selection theory (multi-level selection), an idea long dismissed as scientifically unimportant before contributing to its rigorous revival, with research funding from the National Science Foundation; studied multi-level selection in beetles. Taught organismal biology, evolution, biostatistics, philosophy of science, and conservation biology at UVM for decades. Real, direct personal significance: one of Nate Hagens's own real PhD committee members/advisors; Nate's own words describe 'long conversations with him in his beetle lab about animal behavior.' Real, close professional and personal collaborator of David Sloan Wilson, who called him directly 'a great friend and colleague' upon learning of his death. Per his own real UVM obituary: remembered for 'kind nature and optimism, good humor, infectious laugh, and strong sense of community and fellowship.'"@en ;
+    .
+
+tgs:Human.LisiKrall a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Lisi Krall"@en ;
+    rdfs:label "Lisi Krall (human)"@en ;
+    rdfs:comment "Professor of Economics, SUNY Cortland. Fulbright Scholar; SUNY Senior Scholar; recipient of the Chancellor's Award for Research. Real, long-standing academic collaborator of John Gowdy (already a real, built Persona in this graph via TGS_14) — their real, sustained co-authorship on ultrasociality and the economic Superorganism, including tgs:Work.Ultrasocial, predates this episode by years. Author of tgs:Work.BitterHarvest."@en ;
+    .
+
+tgs:Human.HermanDaly a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Herman Daly"@en ;
+    rdfs:label "Herman Daly (human)"@en ;
+    rdfs:comment "Professor Emeritus of Economics, University of Maryland School of Public Policy; former Senior Economist, World Bank; a founder of the field of ecological economics. Studied under Nicholas Georgescu-Roegen at Vanderbilt University, where exposure to Georgescu-Roegen's entropy-law economics (then in progress toward his own magnum opus) directly reshaped Daly's thinking. Author of tgs:Work.ForTheCommonGood (with John B. Cobb Jr.) and tgs:Work.ValuingTheEarth, and the textbook Ecological Economics (co-authored with Joshua Farley, already a real, built Persona in this graph). Real, extraordinary direct personal significance to Nate Hagens: Nate's own words describe reading Valuing the Earth as the main cause of his leaving his Wall Street career roughly a year later; when Nate personally asked to become Daly's PhD student, Daly — unable to take students at the time due to his own departmental standing at LSU — personally connected him instead to his colleague Josh Farley, which is how Nate ended up earning his PhD at the University of Vermont."@en ;
+    .
+
+tgs:Human.TomChi a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Tom Chi"@en ;
+    rdfs:label "Tom Chi (human)"@en ;
+    rdfs:comment "Founding partner, At One Ventures (backs early-stage deep-tech companies aiming to upend established industries' unit economics while dramatically reducing their planetary footprint). Previously a founding member of Google X, where he led teams that created self-driving cars, deep learning AI, wearable augmented reality (Google Glass), and internet-connectivity expansion projects. Earlier career spanned astrophysics research, Fortune 500 consulting, and corporate executive roles including Microsoft Outlook and Yahoo Search. Trained as a physicist. Real, distinctive contribution to this graph's own vocabulary: a real, structured three-epoch framework (material productivity, then a fuller 'net positive to nature' economy) for what it would take for the economy to become net positive to the biosphere rather than merely less negative."@en ;
+    .
+
+tgs:Human.NicholasGeorgescuRoegen a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Nicholas Georgescu-Roegen"@en ;
+    rdfs:label "Nicholas Georgescu-Roegen (human)"@en ;
+    rdfs:comment "Romanian-American mathematician, statistician, and economist (1906-1994). Best known for his 1971 magnum opus, The Entropy Law and the Economic Process, arguing that all natural resources are irreversibly degraded when used in economic activity — a foundational work establishing ecological economics as its own academic sub-discipline. Studied under Joseph Schumpeter at Harvard. Real, direct personal significance to this graph: Herman Daly's own real PhD advisor at Vanderbilt University, credited by Daly as the direct origin of his entire intellectual shift toward ecological economics. Real, notable relationship dynamic: Georgescu-Roegen later became a real, direct critic of Daly's own steady-state economy concept, arguing it could only postpone, not prevent, eventual mineral resource exhaustion. Widely regarded by the degrowth movement as its main real theoretical source."@en ;
+    .
+
+tgs:Human.ReinerKummel a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Reiner Kümmel"@en ;
+    rdfs:label "Reiner Kümmel (human)"@en ;
+    rdfs:comment "German physicist (b. 1939), specializing in solid-state physics, thermodynamics, and econophysics. Professor of theoretical physics, University of Würzburg (1974-2004). Real, direct professional connection to Robert Ayres, whose later real work applying Kümmel's own methods (the LINEX production function) to US economic data over the 20th century is directly cross-cited elsewhere in this graph. His real, central contribution: demonstrating that when 'useful work' from energy is properly counted as its own factor of production alongside capital and labor, the unexplained 'Solow Residual' in standard growth models — usually attributed to unexplained technological progress — largely disappears, showing energy's real economic weight is far larger than its cost share alone suggests. Author of The Second Law of Economics: Energy, Entropy, and the Origins of Wealth (Springer, 2011)."@en ;
+    .
+
+tgs:Human.KennethBoulding a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Kenneth E. Boulding"@en ;
+    rdfs:label "Kenneth E. Boulding (human)"@en ;
+    rdfs:comment "English-born American economist, educator, peace activist, and interdisciplinary philosopher (1910-1993). Co-founder of general systems theory. President, American Economic Association (1968-69). A devout Quaker and pacifist; helped organize the first Vietnam War teach-in at the University of Michigan in 1965. Real, direct significance to this graph: his influential 1966 essay, 'The Economics of the Coming Spaceship Earth,' argued the economic system must fit itself to the ecological system's real, limited resource pools — a real, direct precursor to the biophysical-economics framing this graph's own core concepts build on. Author of some 30 books and over 800 articles, including The Image: Knowledge in Life and Society (1956) and Conflict and Defense: A General Theory (1962), both real citation classics in their fields."@en ;
+    .
+
+tgs:Human.PaulShepard a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Paul Shepard"@en ;
+    rdfs:label "Paul Shepard (human)"@en ;
+    rdfs:comment "American environmentalist and author (1925-1996). Best known for introducing the real 'Pleistocene paradigm' to deep ecology — the argument that human nature is a consciousness shaped by evolutionary and environmental conditions that predate agriculture, and that humans remain, in a real biological sense, 'beings of the Paleolithic.' Taught at Pitzer College and Claremont Graduate University (1973-1994). Real, direct significance to this graph: a foundational influence on Lisi Krall's own thinking about the agricultural revolution's role in shaping the human-nature duality her own real TGS appearance (TGS_86) explores directly. Notable books include The Tender Carnivore and the Sacred Game and Nature and Madness."@en ;
+    .
+
+tgs:Human.WesJackson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Wes Jackson"@en ;
+    rdfs:label "Wes Jackson (human)"@en ;
+    rdfs:comment "American geneticist (b. 1936). Co-founder, The Land Institute (1976), developing perennial grain, pulse, and oilseed polycultures as a real, direct alternative to conventional annual-grain agriculture's soil erosion and ecological costs. 1992 MacArthur Fellow; 2000 Right Livelihood Award laureate. Real, long-documented friendship and correspondence with Wendell Berry (already a real, built Persona in this graph), with whom he co-authored 'Meeting the Expectations of the Land.' Real, direct significance to this graph: a foundational influence, alongside Paul Shepard, on Lisi Krall's own thinking about the agricultural revolution (TGS_86). Author of Becoming Native to This Place and, more recently, An Inconvenient Apocalypse: Environmental Collapse, Climate Crisis, and the Fate of Humanity (2022, with Robert Jensen)."@en ;
+    .
+
+tgs:Human.WilliamRuddiman a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "William Ruddiman"@en ;
+    rdfs:label "William Ruddiman (human)"@en ;
+    rdfs:comment "American paleoclimatologist; Professor Emeritus, University of Virginia. PhD, marine geology, Columbia University (1969); worked at Columbia's Lamont-Doherty Earth Observatory (1976-1991). Best known for the real 'early anthropocene hypothesis' (the 'Ruddiman hypothesis'): that human-caused greenhouse gas increases began roughly 8,000 years ago with the intensive farming of early agrarian societies, not with 18th-century industrialization — and that this early human activity likely forestalled an incipient ice age that would otherwise have already begun. Also known for the real, earlier hypothesis (with then-student Maureen Raymo) that Himalayan/Tibetan Plateau tectonic uplift drove Cenozoic cooling through increased chemical weathering. Awarded the Lyell Medal, Geological Society of London (2010). Author of Plows, Plagues, and Petroleum and Earth Transformed."@en ;
+    .
+
+tgs:Human.LewisMumford a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Lewis Mumford"@en ;
+    rdfs:label "Lewis Mumford (human)"@en ;
+    rdfs:comment "American historian, sociologist, philosopher of technology, and literary critic (1895-1990). Architectural critic for The New Yorker for over 30 years. Author of tgs:Work.TheMythOfTheMachine (two volumes, 1967 and 1970), which develops his real concept of the 'megamachine' — large hierarchical organizations using humans as their components, exemplified across history from pyramid-building to modern nuclear-armed states — and distinguishes 'polytechnic' (technology serving diverse human needs) from 'monotechnic' (technology pursued for its own sake, at humanity's expense). His earlier book, The City in History, won the 1962 National Book Award. Real, direct influence on a wide later intellectual lineage including E.F. Schumacher, Murray Bookchin, and Amory Lovins."@en ;
+    .
+
+tgs:Human.LutherKrueger a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Luther Krueger"@en ;
+    rdfs:label "Luther Krueger (human)"@en ;
+    rdfs:comment "Since 2004, has collected classic and contemporary solar cookers, promoting solar cooking as a means to halt deforestation, provide safe drinking water in remote areas of developing countries, and reduce fossil fuel dependence. Founder, the unincorporated, volunteer-run Big Blue Sun Museum of Solar Cooking; contributing moderator, Solar Cookers World Network. Senior Community Faculty member, Metropolitan State University, teaching the Capstone course for the Master of Public and Nonprofit Administration degree program. Retired from the Minneapolis Police Department in 2023 after 28 years as a civilian community liaison and crime analyst, where he developed and launched several community policing initiatives."@en ;
+    .
+
+tgs:Human.GarrettHardin a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Garrett Hardin"@en ;
+    rdfs:label "Garrett Hardin (human)"@en ;
+    rdfs:comment "American ecologist and philosopher (1915-2003). Best known for his real, influential 1968 Science essay, 'The Tragedy of the Commons,' arguing shared, unregulated resources tend toward overexploitation absent some form of restraint or governance. Coined 'ecolate' (tgs:Concept.Ecolate) — ecological literacy as a third literacy alongside being numerate and literate — centered on habitually asking 'and then what?' of any proposed action or policy to trace its wider consequences."@en ;
+    .
+
+tgs:Human.IlyaPrigogine a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Ilya Prigogine"@en ;
+    rdfs:label "Ilya Prigogine (human)"@en ;
+    rdfs:comment "Belgian physical chemist (1917-2003), born in Russia. Won the 1977 Nobel Prize in Chemistry for his real work on dissipative structures, complexity, and irreversibility — showing that systems far from thermodynamic equilibrium can spontaneously self-organize into new, higher-order structures. Real, direct significance to this graph: his own real concept, often paraphrased directly by Nate — that small 'islands of coherence' within a system far from equilibrium have the capacity to shift the entire system to a higher order — is cited independently across multiple already-built episodes in this graph (Frankly_65, Frankly_98, Lisi Krall's TGS_86) as a recurring intellectual anchor."@en ;
+    .
+
+tgs:Human.MarvinHarris a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Marvin Harris"@en ;
+    rdfs:label "Marvin Harris (human)"@en ;
+    rdfs:comment "American anthropologist (1927-2001). Developed 'cultural materialism,' a real, structured framework for analyzing societies as a three-level hierarchy: infrastructure (energy, environment, economy — the material foundation), structure (economic and political institutions, laws, regulations), and superstructure (ideas, beliefs, and values), with infrastructure treated as the primary driver of cultural change. Real, direct significance to this graph: cited independently across multiple already-built episodes (Simon Michaux's TGS_49, Frankly_98) as a recurring analytical framework."@en ;
+    .
+
+tgs:Human.OveHoeghGuldberg a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Ove Hoegh-Guldberg"@en ;
+    rdfs:label "Ove Hoegh-Guldberg (human)"@en ;
+    rdfs:comment "Professor of Marine Studies, University of Queensland, Brisbane; Deputy Director, Centre for Excellence in Coral Reef Studies; for the prior 10 years, Founding Director, Global Change Institute. Conceived and led the XL-Catlin Seaview Survey, which surveyed over 1,000 km of coral reefs across 25 countries and captured and analyzed over 1 million survey images. One of the most-cited climate scientists. One of the first scientists to identify climate change as a serious threat to coral reefs, in a real, landmark 1999 paper predicting coral reef loss by 2050."@en ;
+    .
+
+tgs:Human.RomanKrznaric a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Roman Krznaric"@en ;
+    rdfs:label "Roman Krznaric (human)"@en ;
+    rdfs:comment "Social philosopher. Senior Research Fellow, Oxford University's Centre for Eudaimonia and Human Flourishing; founder, the world's first Empathy Museum; member, Club of Rome; Research Fellow, Long Now Foundation. PhD, political science, University of Essex; also studied at Oxford and London. Grew up in Sydney and Hong Kong. Previously worked as a gardener, a conservation activist, and on human rights issues in Guatemala. A top-ranked player of the medieval sport of real tennis. Author of internationally bestselling books including The Good Ancestor, Empathy, Carpe Diem Regained, and tgs:Work.HistoryForTomorrow. Real, direct personal connection to this graph: husband of Kate Raworth, already a real, built Persona and repeat TGS guest."@en ;
+    .
+
+tgs:Human.PaulEhrlich a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Paul Ehrlich"@en ;
+    rdfs:label "Paul Ehrlich (human)"@en ;
+    rdfs:comment "Bing Professor Emeritus of Population Studies, Stanford University; retired conservation biologist. Author of tgs:Work.ThePopulationBomb (1968) and many other books, including The Race Bomb (with Shirley Feldman). Real, famous for over 20 real appearances on The Tonight Show Starring Johnny Carson discussing population — more than any other scientist. Born 1932; was approaching 90 at the time of this graph's real interview with him."@en ;
+    .
+
+tgs:Human.MartinScheringer a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Martin Scheringer"@en ;
+    rdfs:label "Martin Scheringer (human)"@en ;
+    rdfs:comment "Professor of Environmental Chemistry, Masaryk University, Brno, Czech Republic; Senior Scientist, ETH Zürich, in the research program on Environmental Chemistry and Modeling at RECETOX. Diploma in chemistry, Johannes-Gutenberg University, Mainz; doctoral degree and habilitation, ETH Zürich. Specializes in environmental and human exposure assessment, with real, direct involvement in science-policy debate on PFAS ('forever chemicals') and broader chemical pollution."@en ;
+    .
+
+tgs:Human.AudreyTang a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Audrey Tang"@en ;
+    rdfs:label "Audrey Tang (human)"@en ;
+    rdfs:comment "Taiwan's Cyber Ambassador-at-Large; Taiwan's first Digital Minister (2016-2024), where they led radical government-transparency initiatives making government data and resources publicly accessible. Named one of TIME's '100 Most Influential People in AI' (2023). Instrumental in shaping Taiwan's internationally-acclaimed COVID-19 response and in safeguarding the 2024 presidential and legislative elections from foreign cyber interference. Now focused on 'Plurality' — technology for collaborative diversity. Uses they/them pronouns."@en ;
+    .
+
+tgs:Human.JonathanHaidt a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jonathan Haidt"@en ;
+    rdfs:label "Jonathan Haidt (human)"@en ;
+    rdfs:comment "Social psychologist, NYU Stern School of Business. PhD, University of Pennsylvania, 1992. Research examines the intuitive foundations of morality and how morality varies across cultural and political divisions. Author of The Happiness Hypothesis (2006), tgs:Work.TheRighteousMind (2012), and The Coddling of the American Mind (2018, with Greg Lukianoff). Inducted into the American Academy of Arts and Sciences, 2019. Since 2018, studies social media's contribution to declining teen mental health and rising political dysfunction; author of The Anxious Generation and, at the time of this episode, was writing 'Kids in Space' and 'Life After Babel.'"@en ;
+    .
+
+tgs:Human.PeterStrack a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Peter Strack"@en ;
+    rdfs:label "Peter Strack (human)"@en ;
+    rdfs:comment "Worked for 40 years in industrial research and engineering at MAHR France. After retiring, became aware of environmental crises and energy constraints, and went on to research, study, and advocate for 2000-watt neighborhoods. Author of tgs:Work.PratiquementDurable."@en ;
+    .
+
+tgs:Human.AlexisZeigler a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Alexis Zeigler"@en ;
+    rdfs:label "Alexis Zeigler (human)"@en ;
+    rdfs:comment "Self-taught activist, builder, mechanic, writer, and orchardist. Organized numerous political, environmental, and economic localization campaigns. Since 2010, has worked to build and grow Living Energy Farm, a zero-fossil-fuel, mostly self-sufficient farm prioritizing collective living principles, aiming to make sustainable technologies accessible regardless of income. Author of 'Empowering Communities.'"@en ;
+    .
+
+tgs:Human.AnnaLembke a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Anna Lembke"@en ;
+    rdfs:label "Anna Lembke (human)"@en ;
+    rdfs:comment "Professor of Psychiatry, Stanford University School of Medicine; Chief, Stanford Addiction Medicine Dual Diagnosis Clinic. Published over 100 peer-reviewed papers, book chapters, and commentaries. Sits on the board of several state and national addiction-focused organizations; has testified before US House and Senate committees. Author of 'Drug Dealer, MD' (2016, highlighted by the New York Times as a top book on the opioid epidemic) and tgs:Work.DopamineNation. Appeared in the Netflix documentary The Social Dilemma."@en ;
+    .
+
+tgs:Human.VictorGorshkov a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Victor Gorshkov"@en ;
+    rdfs:label "Victor Gorshkov (human)"@en ;
+    rdfs:comment "Russian theoretical physicist (deceased). Co-developed the real biotic pump theory (tgs:Concept.BioticPump) and the broader 'biotic regulation of the environment' framework alongside Anastassia Makarieva, arguing intact natural ecosystems actively regulate climate stability rather than passively responding to it. Real, direct significance credited by Makarieva herself: established a real, formal size-dependent limit on individual organisms' resource consumption share within stable ecosystems — larger organisms, having a lower surface-to-volume ratio, are structurally suppressed from disproportionate environmental impact in genuinely stable systems."@en ;
+    .
+
+tgs:Human.AnastassiaMakarieva a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Anastassia Makarieva"@en ;
+    rdfs:label "Anastassia Makarieva (human)"@en ;
+    rdfs:comment "Russian atmospheric physicist; Senior Researcher, Petersburg Nuclear Physics Institute. PhD, atmospheric physics, St. Petersburg State University, 2000. Co-developed the biotic pump theory (tgs:Concept.BioticPump) with the late Victor Gorshkov (already a real, built Human in this graph). Challenges conventional climate models to incorporate vegetation's own dynamic role in atmospheric processes rather than treating it as a passive background feature."@en ;
+    .
+
+tgs:Human.JohanRockstrom a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Johan Rockström"@en ;
+    rdfs:label "Johan Rockström (human)"@en ;
+    rdfs:comment "Internationally recognized scientist on global sustainability; led development of the Planetary Boundaries framework (tgs:Concept.PlanetaryBoundaries). Leading scientist on global water resources, with over 25 years of applied water research in tropical regions and more than 150 research publications. Advisor for sustainable development at the World Economic Forum, UN SDSN, and UNFCCC conferences. Chair, advisory board, EAT Foundation; member, Earth League; chair, Earth Commission. Affiliated with the Potsdam Institute."@en ;
+    .
+
+tgs:Human.CarlosNobre a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Carlos Nobre"@en ;
+    rdfs:label "Carlos Nobre (human)"@en ;
+    rdfs:comment "Brazilian Earth scientist; Senior Researcher, University of São Paulo. PhD, Meteorology, MIT. Co-chair, Science Panel for the Amazon (SPA). Formerly chaired the Large-Scale Biosphere-Atmosphere Experiment in Amazonia (LBA). Foreign member, US National Academy of Sciences and the Royal Society; member, Brazilian Academy of Sciences and the World Academy of Sciences. Awarded the Volvo Environmental Prize and the AAAS Science Diplomacy Award, among others. Developer of tgs:Work.Amazonia4."@en ;
     .

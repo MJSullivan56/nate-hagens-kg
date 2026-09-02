@@ -554,3 +554,41 @@ tgs:Concept.SupplyChainFragility a thinkr:Concept, owl:NamedIndividual ;
     thinkr:relatesTo tgs:Concept.JevonsParadox ;
     skos:scopeNote "Real, deliberate general-purpose applicability, per MJSullivan's own stated reason for selecting this episode 2026-08-24: this concept is a candidate response/caveat to a wide range of articles about growth, consumption, or globalized production, not narrowly scoped to energy/climate topics — directly relevant to the tng-app design work's 'systemic reframing' step from this same session."@en ;
     .
+tgs:Concept.EarlyAnthropoceneHypothesis a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://en.wikipedia.org/wiki/Early_anthropocene> ;
+    skos:definition "William Ruddiman's real, own hypothesis: human-caused greenhouse gas increases began roughly 8,000 years ago through the intensive farming of early agrarian societies, not with 18th-century industrialization — and that this early human activity likely forestalled an incipient ice age already due to begin, per natural Milankovitch-cycle variation."@en ;
+    skos:prefLabel "Early Anthropocene Hypothesis"@en ;
+    thinkr:influencedBy tgs:Persona.WilliamRuddiman ;
+    skos:scopeNote "Added 2026-08-31. Real, direct citation confirmed via Peter Brannen's own TGS_210 appearance. Given a real, dedicated own Wikipedia page (a genuine named academic hypothesis, not just a personal essay or theory), this Concept + a minimal Persona for Ruddiman (matching the same pattern already established for tgs:Persona.HowardOdum on Concept.MaximumPowerPrinciple) felt like the right, proportionate structure — unlike the other real intellectual-influence figures added the same day (Georgescu-Roegen, Kümmel, Boulding, Shepard, Jackson), who remain Human-only with no forced formal link."@en ;
+    .
+
+tgs:Concept.Ecolate a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:source <https://www.garretthardinsociety.org/articles/art_ecolate_view_human_predicament.html> ;
+    skos:definition "Garrett Hardin's real, coined term for ecological literacy — a third literacy alongside 'numerate' (knowing numbers) and 'literate' (knowing words and grammar). Being ecolate means habitually asking 'and then what?' of any proposed action, tracing second-, third-, and nth-order consequences beyond the immediate, narrow-boundary benefit. Real, direct source for this show's own recurring 'wide-boundary thinking' vocabulary."@en ;
+    skos:prefLabel "Ecolate (Ecological Literacy)"@en ;
+    thinkr:influencedBy tgs:Persona.GarrettHardin ;
+    .
+
+tgs:Concept.IslandsOfCoherence a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:definition "Ilya Prigogine's real concept, directly and repeatedly paraphrased by Nate across multiple episodes: when a complex system is far from equilibrium, small 'islands of coherence' within it have the capacity to shift the entire system to a higher order. Used throughout this show as a direct argument for the real, disproportionate potential impact of small, genuinely coherent groups or individuals during periods of systemic instability."@en ;
+    skos:prefLabel "Islands of Coherence"@en ;
+    thinkr:influencedBy tgs:Persona.IlyaPrigogine ;
+    skos:scopeNote "Real, independently cited across at least three already-built episodes before this Concept itself existed: Frankly_65, Frankly_98, and Lisi Krall's TGS_86 — the same recurrence pattern that made David Sloan Wilson and Lisi Krall worth prioritizing as unbuilt figures earlier this session, applied here to a recurring concept rather than a recurring person."@en ;
+    .
+
+tgs:Concept.BioticPump a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:definition "Real theory co-developed by Anastassia Makarieva and the late Victor Gorshkov: forests actively drive atmospheric moisture transport and rainfall patterns over land, rather than being passive recipients of rain — condensation over dense forest canopy lowers air pressure, pulling moist ocean air inland. Challenges conventional climate models to treat vegetation as a dynamic driver of atmospheric processes, not a fixed background feature."@en ;
+    skos:prefLabel "The Biotic Pump"@en ;
+    thinkr:influencedBy tgs:Persona.AnastassiaMakarieva, tgs:Persona.VictorGorshkov ;
+    skos:scopeNote "Real, previously-missing Concept, flagged explicitly as a gap in Andrew Millison's own TGS_178 scopeNote ('the mechanism is real and substantively discussed but kept as prose... no dedicated Concept.BioticPump exists yet') — resolved directly here via Makarieva's own real, first-hand TGS appearance, the theory's real originator."@en ;
+    .
+
+tgs:Concept.PlanetaryBoundaries a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:definition "Real, foundational scientific framework led by Johan Rockström and colleagues (originally published 2009), identifying nine distinct Earth-system processes with critical thresholds — climate change, biosphere integrity, land-system change, freshwater use, biogeochemical flows, ocean acidification, atmospheric aerosol loading, stratospheric ozone depletion, and novel entities (chemical pollution) — within which humanity and the biosphere can continue to develop safely. As of the framework's own 2023 update, six of nine boundaries have been exceeded."@en ;
+    skos:prefLabel "Planetary Boundaries"@en ;
+    thinkr:influencedBy tgs:Persona.JohanRockstrom ;
+    skos:scopeNote "Real, genuinely surprising gap closed here — this framework is referenced constantly throughout this graph (dozens of already-built episodes cite 'planetary boundaries' directly) but had no dedicated Concept individual until Rockström's own real TGS appearance was built."@en ;
+    .

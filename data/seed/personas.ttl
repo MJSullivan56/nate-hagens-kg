@@ -488,7 +488,7 @@ tgs:Persona.ZakStein a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ZakStein ;
     skos:prefLabel "Zak Stein"@en ;
     rdfs:label "Zak Stein (persona)"@en ;
-    skos:scopeNote "Real, further TGS history confirmed but deliberately deferred: TGS Ep 122 and Ep 180 (both real, confirmed URLs) remain real, still-deferred solo-episode candidates. Reality Roundtable #25 (returning alongside developmental psychologist Dr. Theo Dawson) is no longer deferred — now built as a real second hasInteraction on this Persona's own Relationship."@en .
+    skos:scopeNote "Real, further TGS history now fully resolved (2026-08-31): TGS Ep 122 and Ep 180, his real first and second solo appearances, are both now built as real hasInteractions — see the Relationship's own scopeNote."@en .
 
 tgs:Persona.NancyMcWilliams a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.NancyMcWilliams ;
@@ -517,10 +517,11 @@ tgs:Persona.TomMurphy a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.SimonMichaux a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.SimonMichaux ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_SimonMichaux ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SimonMichaux ;
     skos:prefLabel "Simon Michaux"@en ;
     rdfs:label "Simon Michaux (persona)"@en ;
-    skos:scopeNote "Real, further TGS history confirmed but deferred: his own 2 prior solo episodes (TGS #19, #49) — real URLs confirmed via RR-1's own real show notes, neither built as an Episode individual in this pass."@en .
+    skos:scopeNote "Real, further TGS history now fully resolved (2026-08-31): his own 2 prior solo episodes (TGS #19, #49) are now both built as Episode individuals, and their real content upgraded the Relationship to Personal+Professional — see tgs:Relationship.NateHagens_SimonMichaux's own scopeNote."@en .
 
 tgs:Persona.PedroPrieto a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.PedroPrieto ;
@@ -1162,4 +1163,179 @@ tgs:Persona.CharlesGoodnight a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Charles Goodnight"@en ;
     rdfs:label "Charles Goodnight (persona)"@en ;
     skos:scopeNote "Personal tag directly evidenced by real substance, not vocabulary — a genuine PhD advisor relationship documented in Nate's own words as personal, not merely academic: 'long conversations with him in his beetle lab about animal behavior.' Never a TGS guest himself (he died in 2020, before the show existed) — this Persona models a real, direct personal/intellectual influence on Nate rather than a podcast relationship, the only individual in this graph built on that basis alongside tgs:Persona.HowardOdum."@en ;
+    .
+
+tgs:Persona.LisiKrall a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LisiKrall ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_LisiKrall ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LisiKrall ;
+    skos:prefLabel "Lisi Krall"@en ;
+    rdfs:label "Lisi Krall (persona)"@en ;
+    skos:scopeNote "Personal tag evidenced by real substance under this graph's tightened rule (wwns-methodology.md §8): Nate's own direct words, 'we've been in contact over the last 10 or 15 years' — a specific, substantive claim of sustained real relationship, not just the episode's own bracketing vocative 'my friend.'"@en ;
+    .
+
+tgs:Persona.HermanDaly a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.HermanDaly ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_HermanDaly ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_HermanDaly ;
+    skos:prefLabel "Herman Daly"@en ;
+    rdfs:label "Herman Daly (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced in Nate's own real opening words: 'my friend and educational mentor, Herman Daly' — an explicit substantive claim, not a bare vocative. One of the most personally significant relationships documented anywhere in this graph: Daly's own real, direct action — personally connecting Nate to Josh Farley when he couldn't take him as a student himself — is the actual, real reason Nate earned his PhD at the University of Vermont."@en ;
+    .
+
+tgs:Persona.TomChi a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TomChi ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_TomChi ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TomChi ;
+    skos:prefLabel "Tom Chi"@en ;
+    rdfs:label "Tom Chi (persona)"@en ;
+    skos:scopeNote "Personal tag judged on real substance rather than vocabulary, per this graph's tightened rule (wwns-methodology.md §8) — no 'friend' language appears anywhere in this transcript, but Nate's own real, specific account of a genuine pre-existing social relationship (two documented in-person dinners over several years, with a direct personal impression disclosed: 'I immediately was impressed by you and liked you') is real, concrete evidence of an actual relationship, arguably stronger than a verbal label would be on its own. Flagged explicitly as a judgment call, not a mechanical application of the rule."@en ;
+    .
+
+tgs:Persona.WilliamRuddiman a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WilliamRuddiman ;
+    skos:prefLabel "William Ruddiman"@en ;
+    rdfs:label "William Ruddiman (persona)"@en .
+
+tgs:Persona.LutherKrueger a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LutherKrueger ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LutherKrueger ;
+    skos:prefLabel "Luther Krueger"@en ;
+    rdfs:label "Luther Krueger (persona)"@en ;
+    skos:scopeNote "Kept Professional-only, honestly for lack of evidence rather than a considered finding: only real, official show notes were available for this build (TGS118LutherKruegerTranscript-1.yaml), not the actual transcript dialogue — no relationship language of any kind could be assessed. Real, notable data-quality detail preserved directly from the source's own resolution record: the file's own filename historically labeled this episode #118, but it resolved to the real, correct #119 by name-matching against the live site — a genuine site artifact, not an error introduced here."@en ;
+    .
+
+tgs:Persona.GarrettHardin a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GarrettHardin ;
+    skos:prefLabel "Garrett Hardin"@en ;
+    rdfs:label "Garrett Hardin (persona)"@en .
+
+tgs:Persona.IlyaPrigogine a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IlyaPrigogine ;
+    skos:prefLabel "Ilya Prigogine"@en ;
+    rdfs:label "Ilya Prigogine (persona)"@en .
+
+tgs:Persona.MarvinHarris a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MarvinHarris ;
+    skos:prefLabel "Marvin Harris"@en ;
+    rdfs:label "Marvin Harris (persona)"@en .
+
+tgs:Persona.OveHoeghGuldberg a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.OveHoeghGuldberg ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_OveHoeghGuldberg ;
+    skos:prefLabel "Ove Hoegh-Guldberg"@en ;
+    rdfs:label "Ove Hoegh-Guldberg (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — real, warm first conversation, but only a bare closing 'my friend,' not a substantive claim, under this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
+    .
+
+tgs:Persona.RomanKrznaric a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RomanKrznaric ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RomanKrznaric ;
+    skos:prefLabel "Roman Krznaric"@en ;
+    rdfs:label "Roman Krznaric (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — real, warm first conversation ('I expect this will be the first of several'), but only a bare closing 'my friend,' not a substantive claim, under this graph's tightened evidentiary bar (wwns-methodology.md §8). Real, notable indirect personal connection: Nate's own words introduce him as 'the husband of frequent TGS guest, my friend, the renegade economist, Kate Raworth' — Raworth's own real, established Personal relationship with Nate doesn't automatically transfer to her husband without direct evidence of his own."@en ;
+    .
+
+tgs:Persona.PaulEhrlich a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PaulEhrlich ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PaulEhrlich ;
+    skos:prefLabel "Paul Ehrlich"@en ;
+    rdfs:label "Paul Ehrlich (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript. Real, notable personal detail instead: Nate directly discloses his own father read The Population Bomb, a real family connection to Ehrlich's work distinct from any personal relationship with Ehrlich himself."@en ;
+    .
+
+tgs:Persona.MartinScheringer a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MartinScheringer ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_MartinScheringer ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MartinScheringer ;
+    skos:prefLabel "Martin Scheringer"@en ;
+    rdfs:label "Martin Scheringer (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own real opening words, 'please welcome my friend and colleague, Dr. Martin Scheringer' — an explicit substantive claim, not a vocative alone."@en ;
+    .
+
+tgs:Persona.AudreyTang a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AudreyTang ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AudreyTang ;
+    skos:prefLabel "Audrey Tang"@en ;
+    rdfs:label "Audrey Tang (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — only a bare closing 'my friend' in this real first conversation, not a substantive claim, under this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
+    .
+
+tgs:Persona.JonathanHaidt a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JonathanHaidt ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JonathanHaidt ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JonathanHaidt ;
+    skos:prefLabel "Jonathan Haidt"@en ;
+    rdfs:label "Jonathan Haidt (persona)"@en ;
+    skos:scopeNote "Personal tag as a judgment call, per this graph's tightened evidentiary bar (wwns-methodology.md §8): no explicit 'friend' language is used for this specific relationship (Haidt does call himself 'a friend of Steve Pinker,' a different relationship, not conflated here), but Nate's own real, direct claim — 'we've spoken a few times' — is a concrete statement of repeated prior contact, in the same category as Lisi Krall's '10-15 years of contact,' not merely admiring language. Real, mutual professional admiration also present: Nate calls Haidt 'somewhat of an idol of mine,' and uses his books/videos in his own university teaching."@en ;
+    .
+
+tgs:Persona.PeterStrack a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterStrack ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PeterStrack ;
+    skos:prefLabel "Peter Strack"@en ;
+    rdfs:label "Peter Strack (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript."@en ;
+    .
+
+tgs:Persona.AlexisZeigler a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AlexisZeigler ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AlexisZeigler ;
+    skos:prefLabel "Alexis Zeigler"@en ;
+    rdfs:label "Alexis Zeigler (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript."@en ;
+    .
+
+tgs:Persona.AnnaLembke a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AnnaLembke ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_AnnaLembke ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AnnaLembke ;
+    skos:prefLabel "Anna Lembke"@en ;
+    rdfs:label "Anna Lembke (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced by Nate's own distinctive real closing words — 'to be continued, my new friend' — an active claim that friendship formed through this very conversation, not a bare vocative alone, meeting this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
+    .
+
+tgs:Persona.VictorGorshkov a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.VictorGorshkov ;
+    skos:prefLabel "Victor Gorshkov"@en ;
+    rdfs:label "Victor Gorshkov (persona)"@en .
+
+tgs:Persona.AnastassiaMakarieva a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AnastassiaMakarieva ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AnastassiaMakarieva ;
+    skos:prefLabel "Anastassia Makarieva"@en ;
+    rdfs:label "Anastassia Makarieva (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — only a bare closing 'my friend' in this real conversation, not a substantive claim, under this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
+    .
+
+tgs:Persona.JohanRockstrom a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohanRockstrom ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohanRockstrom ;
+    skos:prefLabel "Johan Rockström"@en ;
+    rdfs:label "Johan Rockström (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript."@en ;
+    .
+
+tgs:Persona.CarlosNobre a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.CarlosNobre ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_CarlosNobre ;
+    skos:prefLabel "Carlos Nobre"@en ;
+    rdfs:label "Carlos Nobre (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — only a bare closing 'my friend' in this real conversation, not a substantive claim, under this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
     .

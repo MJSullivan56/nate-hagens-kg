@@ -395,3 +395,85 @@ tgs:Work.ThermalPowerAndClimateChange a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.TadPatzek ;
     dct:source <https://eartharxiv.org/repository/view/10865/> ;
     .
+
+tgs:Work.BitterHarvest a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bitter Harvest: An Inquiry into the War Between Economy and Earth"@en ;
+    rdfs:comment "Lisi Krall, SUNY Press. Traces the formation and evolution of the economic Superorganism from the cultivation of annual grains through to global capitalism, arguing capitalism is the direct legacy of the agricultural revolution rather than a distinct later rupture."@en ;
+    dct:creator tgs:Human.LisiKrall ;
+    dct:source <https://sunypress.edu/Books/B/Bitter-Harvest> ;
+    .
+
+tgs:Work.ForTheCommonGood a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "For the Common Good: Redirecting the Economy toward Community, the Environment, and a Sustainable Future"@en ;
+    rdfs:comment "Herman Daly (with theologian John B. Cobb Jr.), Beacon Press, 1989. Real, direct personal significance: alongside tgs:Work.ValuingTheEarth, one of the two Daly books Nate read that directly caused him to leave his Wall Street career."@en ;
+    dct:creator tgs:Human.HermanDaly ;
+    dct:issued "1989"^^xsd:gYear ;
+    .
+
+tgs:Work.ValuingTheEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Valuing the Earth: Economics, Ecology, Ethics"@en ;
+    rdfs:comment "Herman Daly and Kenneth Townsend (eds.), MIT Press. Real, direct personal significance: the book Nate's own words credit as the main thing that propelled him to leave his Wall Street career roughly a year after reading it."@en ;
+    dct:creator tgs:Human.HermanDaly ;
+    .
+
+tgs:Work.TheMythOfTheMachine a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Myth of the Machine"@en ;
+    rdfs:comment "Lewis Mumford, two volumes (Technics and Human Development, 1967; The Pentagon of Power, 1970). Develops the real concept of the 'megamachine' — large hierarchical organizations using humans as component parts, exemplified across history from pyramid-building to modern nuclear-armed states — and distinguishes 'polytechnic' technology (serving diverse human needs) from 'monotechnic' technology (pursued for its own sake, at humanity's expense)."@en ;
+    dct:creator tgs:Human.LewisMumford ;
+    dct:issued "1970"^^xsd:gYear ;
+    .
+
+tgs:Work.TheFutureIsRural a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Future Is Rural: Food System Adaptations to the Great Simplification"@en ;
+    rdfs:comment "Jason Bradford, Post Carbon Institute, 2019. Real, direct source for the show's own established phrase 'the future is rural' — already cited directly in Frankly_138."@en ;
+    dct:creator tgs:Human.JasonBradford ;
+    dct:source <https://www.postcarbon.org/publications/the-future-is-rural/> ;
+    dct:issued "2019"^^xsd:gYear ;
+    .
+
+tgs:Work.BrettonWoodsIII a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bretton Woods III"@en ;
+    rdfs:comment "Real theory popularized by Zoltan Pozsar (then an economist at Credit Suisse), proposing a new world monetary order centered on commodity-backed currencies in the East, weakening the existing Eurodollar system — following Bretton Woods I (dollar pegged to gold) and Bretton Woods II (the free-floating dollar after that peg's abandonment). Pozsar himself, not built as a Persona in this graph, has no direct connection to Nate or this show; this Work exists here specifically because Michael Every (already built) wrote a real, extensive published rebuttal of it."@en ;
+    dct:source <https://coinmarketcap.com/academy/article/bretton-woods-iii-and-crypto> ;
+    .
+
+tgs:Work.HistoryForTomorrow a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "History for Tomorrow: Inspiration from the Past for the Future of Humanity"@en ;
+    rdfs:comment "Roman Krznaric. Draws on historical precedent for societies that navigated existential crises, arguing history offers real, concrete inspiration for governance, community organization, and economic redesign rather than serving only as cautionary tales."@en ;
+    dct:creator tgs:Human.RomanKrznaric ;
+    .
+
+tgs:Work.ThePopulationBomb a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Population Bomb"@en ;
+    rdfs:comment "Paul Ehrlich, 1968. Real, foundational and widely-debated book on the risks of unchecked human population growth. Real, direct personal significance to this graph: Nate's own father read it."@en ;
+    dct:creator tgs:Human.PaulEhrlich ;
+    dct:issued "1968"^^xsd:gYear ;
+    .
+
+tgs:Work.TheRighteousMind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Righteous Mind: Why Good People Are Divided by Politics and Religion"@en ;
+    rdfs:comment "Jonathan Haidt, 2012. New York Times bestseller examining the intuitive foundations of morality and how moral reasoning varies across cultural and political divisions."@en ;
+    dct:creator tgs:Human.JonathanHaidt ;
+    dct:issued "2012"^^xsd:gYear ;
+    .
+
+tgs:Work.PratiquementDurable a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Pratiquement Durable: 2000 Watt Eco-Neighborhoods – A Model for a Sustainable Lifestyle Towards a Post-Oil Democratic Society"@en ;
+    rdfs:comment "Peter Strack. Currently only available in French. Advocates for 2000-watt-per-capita neighborhoods as a lower-energy, higher-connection alternative to typical Western consumption levels."@en ;
+    dct:creator tgs:Human.PeterStrack ;
+    dct:source <https://pratiquement-durable.com/en/> ;
+    .
+
+tgs:Work.DopamineNation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Dopamine Nation: Finding Balance in the Age of Indulgence"@en ;
+    rdfs:comment "Anna Lembke, New York Times bestseller. Explores how to moderate compulsive overconsumption in a dopamine-overloaded modern environment."@en ;
+    dct:creator tgs:Human.AnnaLembke ;
+    dct:source <https://www.annalembke.com/> ;
+    .
+
+tgs:Work.Amazonia4 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Amazonia 4.0"@en ;
+    rdfs:comment "Initiative developed by Carlos Nobre, demonstrating the feasibility of a new socio-bioeconomy built on standing forests and flowing rivers in the Amazon, as a real, direct economic alternative to deforestation-driven extraction."@en ;
+    dct:creator tgs:Human.CarlosNobre ;
+    dct:source <https://amazonia4.org/> ;
+    .
