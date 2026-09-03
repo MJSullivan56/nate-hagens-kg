@@ -477,3 +477,125 @@ tgs:Work.Amazonia4 a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.CarlosNobre ;
     dct:source <https://amazonia4.org/> ;
     .
+
+tgs:Work.AncientFutures a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Ancient Futures: Learning from Ladakh"@en ;
+    rdfs:comment "Helena Norberg-Hodge. Real, direct account of tradition and change in Ladakh ('Little Tibet'), examining the ecological, social, and psychological effects of rapid economic globalization on a traditional culture. Translated into over 40 languages; over half a million copies sold. Also produced as a real, companion documentary film of the same title."@en ;
+    dct:creator tgs:Human.HelenaNorbergHodge ;
+    dct:source <https://www.helenanorberghodge.com/writing-films> ;
+    .
+
+tgs:Work.AgainstTheMachine a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Against the Machine: On the Unmaking of Humanity"@en ;
+    rdfs:comment "Paul Kingsnorth. Real, direct historical overview of philosophers and thinkers who observed Superorganism-like qualities emerging at scale from human activity, framing 'the Machine' as a civilizational force that turns creatures into components. Structured largely around a real, central Wendell Berry quote on whether humans will choose to be creatures or machines."@en ;
+    dct:creator tgs:Human.PaulKingsnorth ;
+    .
+
+tgs:Work.Ishmael a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Ishmael"@en ;
+    rdfs:comment "Daniel Quinn, 1992. A telepathic gorilla teaches a human student the real, distinctive 'Takers and Leavers' framework — civilizations that believe the world was made for humans to master and exploit ('Takers') versus cultures that see humans as one part of a larger living community ('Leavers'). Real, direct personal significance to this graph: Nate first dismissed the book after five pages, then read it cover to cover on September 11, 2001, when the markets were closed."@en ;
+    dct:creator tgs:Human.DanielQuinn ;
+    dct:issued "1992"^^xsd:gYear ;
+    .
+
+tgs:Work.TheAscentOfHumanity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Ascent of Humanity"@en ;
+    rdfs:comment "Charles Eisenstein, 2007. His first major book, written in part as a direct response to Daniel Quinn, Derrick Jensen, and John Zerzan's anti-civilization discourse, which narrates human civilization as a fall from a prior state of harmony and connection."@en ;
+    dct:creator tgs:Human.CharlesEisenstein ;
+    dct:issued "2007"^^xsd:gYear ;
+    .
+
+tgs:Work.SacredEconomics a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Sacred Economics"@en ;
+    rdfs:comment "Charles Eisenstein, 2011."@en ;
+    dct:creator tgs:Human.CharlesEisenstein ;
+    dct:issued "2011"^^xsd:gYear ;
+    .
+
+tgs:Work.TheMoreBeautifulWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The More Beautiful World Our Hearts Know Is Possible"@en ;
+    rdfs:comment "Charles Eisenstein, 2013."@en ;
+    dct:creator tgs:Human.CharlesEisenstein ;
+    dct:issued "2013"^^xsd:gYear ;
+    .
+
+tgs:Work.ClimateANewStory a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Climate: A New Story"@en ;
+    rdfs:comment "Charles Eisenstein, 2018."@en ;
+    dct:creator tgs:Human.CharlesEisenstein ;
+    dct:issued "2018"^^xsd:gYear ;
+    .
+
+tgs:Work.BraidingSweetgrass a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants"@en ;
+    rdfs:comment "Robin Wall Kimmerer, 2013. On the interdependence of people and the plant world, drawing on both Indigenous knowledge and Western botanical science. Won the 2014 Sigurd F. Olson Nature Writing Award; sold over 2 million copies worldwide within a decade of publication."@en ;
+    dct:creator tgs:Human.RobinWallKimmerer ;
+    dct:issued "2013"^^xsd:gYear ;
+    .
+
+tgs:Work.IfAnyoneBuildsItEveryoneDies a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "If Anyone Builds It, Everyone Dies: Why Superhuman AI Would Kill Us All"@en ;
+    rdfs:comment "Nate Soares and Eliezer Yudkowsky, 2025. Real, direct argument that current AI development methods — 'growing' systems through large-scale training rather than 'crafting' them through direct, understood specification — make catastrophic, unintended outcomes from superintelligent AI a likely rather than remote risk."@en ;
+    dct:creator tgs:Human.NateSoares, tgs:Human.EliezerYudkowsky ;
+    dct:source <https://ifanyonebuildsit.com/> ;
+    dct:issued "2025"^^xsd:gYear ;
+    .
+
+tgs:Work.TheMarketMyth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Market Myth"@en ;
+    rdfs:comment "Tomas Björkman, 2016. Real, direct critique noting that roughly 85% of exchange in today's markets involves immaterial property rights rather than physical goods."@en ;
+    dct:creator tgs:Human.TomasBjorkman ;
+    dct:issued "2016"^^xsd:gYear ;
+    .
+
+tgs:Work.TheNordicSecret a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Nordic Secret"@en ;
+    rdfs:comment "Tomas Björkman and Lene Rachel Andersen, 2017. Explores the real, historical Nordic Bildung educational tradition — folk high schools and adult-development retreat centers — as a possible model for cultivating civic maturity at scale."@en ;
+    dct:creator tgs:Human.TomasBjorkman ;
+    dct:issued "2017"^^xsd:gYear ;
+    .
+
+tgs:Work.TheWorldWeCreate a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The World We Create: From God to Market"@en ;
+    rdfs:comment "Tomas Björkman, 2019."@en ;
+    dct:creator tgs:Human.TomasBjorkman ;
+    dct:issued "2019"^^xsd:gYear ;
+    .
+
+tgs:Work.DieWise a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Die Wise: A Manifesto for Sanity and Soul"@en ;
+    rdfs:comment "Stephen Jenkinson. Award-winning book drawing on his years as a palliative-care counselor, arguing modern Anglo-North American culture is death-phobic and grief-illiterate, and that genuine skillfulness in dying and grieving must be actively learned rather than assumed."@en ;
+    dct:creator tgs:Human.StephenJenkinson ;
+    dct:issued "2015"^^xsd:gYear ;
+    .
+
+tgs:Work.Matrimony a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Matrimony: Ritual, Culture, and the Heart's Work"@en ;
+    rdfs:comment "Stephen Jenkinson, 2025. Discussed on his TGS appearance as a forthcoming release, then still weeks from publication. Examines marriage not primarily as a legal or romantic institution but as a real, alchemical cultural ritual — distinguishing a 'vow' (a present-moment commitment requiring no future) from a 'promise' (inherently future-reliant)."@en ;
+    dct:creator tgs:Human.StephenJenkinson ;
+    dct:issued "2025"^^xsd:gYear ;
+    .
+
+tgs:Work.TheWormAtTheCore a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Worm at the Core: On the Role of Death in Life"@en ;
+    rdfs:comment "Sheldon Solomon, Jeff Greenberg, and Tom Pyszczynski. Synthesizes roughly three decades of real, empirical Terror Management Theory research, examining how the uniquely human awareness of mortality shapes behavior, culture, politics, and religion."@en ;
+    dct:creator tgs:Human.SheldonSolomon ;
+    .
+
+tgs:Work.InTheWakeOf911 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "In the Wake of 9/11: The Psychology of Terror"@en ;
+    rdfs:comment "Sheldon Solomon, Jeff Greenberg, and Tom Pyszczynski. Applies Terror Management Theory directly to the September 11 attacks and their real, documented psychological aftermath."@en ;
+    dct:creator tgs:Human.SheldonSolomon ;
+    .
+
+tgs:Work.DenialOfDeath a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Denial of Death"@en ;
+    rdfs:comment "Ernest Becker. Won the 1974 Pulitzer Prize. Real, foundational text for Terror Management Theory, arguing much of human culture and behavior functions as a defense against the awareness of mortality."@en ;
+    dct:creator tgs:Human.ErnestBecker ;
+    .
+
+tgs:Work.NewEconomyForTheBrazilianAmazon a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "New Economy for the Brazilian Amazon"@en ;
+    rdfs:comment "Real research initiative on economic incentives and payment structures for standing-forest conservation in the Brazilian Amazon, directly discussed by André Guimarães."@en ;
+    dct:source <https://www.wri.org/research/new-economy-brazil-amazon> ;
+    .

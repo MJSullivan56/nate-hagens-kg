@@ -592,3 +592,24 @@ tgs:Concept.PlanetaryBoundaries a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Persona.JohanRockstrom ;
     skos:scopeNote "Real, genuinely surprising gap closed here — this framework is referenced constantly throughout this graph (dozens of already-built episodes cite 'planetary boundaries' directly) but had no dedicated Concept individual until Rockström's own real TGS appearance was built."@en ;
     .
+
+tgs:Concept.RelativeFitnessSpiteFramework a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:definition "Nate's own real, structured four-quadrant behavioral framework, grounded in the evolutionary distinction between relative fitness (reproductive success measured against competitors, the real evolutionary currency) and absolute fitness (raw offspring count or physical condition alone). The four quadrants: selfishness (cost to a competitor, benefit to self), cooperation (mutual benefit), altruism (cost to self, benefit to a genetically unrelated other — rare in nature, though reciprocal altruism is common in humans), and spite (a real, direct cost to oneself, provided it imposes a greater cost on a competitor)."@en ;
+    skos:prefLabel "Relative Fitness / Spite Framework"@en ;
+    skos:scopeNote "Real, central framework of Frankly_11, directly extended there from individual/animal behavior to nation-state behavior (spite as a real, direct driver of nuclear war risk)."@en ;
+    .
+
+tgs:Concept.BiophysicalPyramid a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary ;
+    skos:definition "Nate's own real, three-layer framework for reading news and economic events: a top financial layer (prices, salaries, debt, markets — what most people interact with daily and often mistake for the entire economy), a middle biophysical layer (energy, materials, minerals, supply chains — the connective tissue turning abstract prices into real goods), and a bottom biosphere layer (soil, water, forests, climate — the largely invisible, unbilled services underpinning everything above it). A 'biophysical phase shift' occurs as financial claims increasingly outpace what the lower two layers can actually support, forcing the deeper layers into visibility."@en ;
+    skos:prefLabel "The Biophysical Pyramid"@en ;
+    skos:scopeNote "Real, foundational framework first laid out at length in Frankly_121, the inaugural episode of Nate's own Wide Boundary News series — later Wide Boundary News installments (e.g. Frankly_124, already built) apply this same lens without necessarily re-explaining it."@en ;
+    .
+
+tgs:Concept.BiophysicalGauntlet a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EROIAndEnergyQuality ;
+    skos:definition "Nate's own real, coined term for a structural bind facing fossil fuel extraction as resource quality declines: consumers and policymakers want low prices, but producers need increasingly higher prices to profitably extract lower-quality, more remote, or more difficult resource tranches — a real, direct tension between affordability and viable extraction that intensifies as easier reserves deplete."@en ;
+    skos:prefLabel "The Biophysical Gauntlet"@en ;
+    skos:scopeNote "Real, direct citation confirmed across at least two already-built episodes (Craig Tindale's TGS_207, Frankly_124) before this episode — Frankly_121 — was itself built; this episode appears to be an early, if not the first, real spoken articulation of the term in this graph's own source material."@en ;
+    .

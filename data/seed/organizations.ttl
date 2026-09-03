@@ -129,3 +129,48 @@ tgs:Organization.CenterForHumaneTechnology a thinkr:Organization, owl:NamedIndiv
     skos:definition "Nonprofit co-founded by Tristan Harris and Aza Raskin, originally focused on social media's psychological engineering of user behavior, pivoted toward AI safety and governance beginning January 2023 after receiving direct warnings from AI-lab insiders about an imminent capability step-change (pre-GPT-4). Co-produces the podcast 'Your Undivided Attention.'"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Center_for_Humane_Technology> ;
     .
+
+tgs:Organization.BioticPumpGreeningGroup a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Biotic Pump Greening Group"@en ;
+    skos:definition "Real, direct research and advocacy organization focused on the biotic pump theory (tgs:Concept.BioticPump) and its practical application to reforestation and water-cycle restoration. Antonio Nobre (already built, tgs:Human.AntonioNobre) serves as its real Scientific Director."@en ;
+    .
+
+tgs:Organization.EarthSpeciesProject a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Earth Species Project"@en ;
+    skos:definition "Real, open-source collaborative nonprofit dedicated to decoding non-human animal communication, using AI as a tool to translate the languages of other species. Co-founded by Aza Raskin (already built)."@en ;
+    .
+
+tgs:Organization.KnodelFoundation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Knodel Foundation"@en ;
+    skos:definition "Real, Germany-based impact investing firm focused on projects that increase sustainability and autonomy for the Global South. Founded and led by Patrick Knodel (already built)."@en ;
+    owl:sameAs <https://knodelfoundation.org/en/> ;
+    .
+
+tgs:Organization.EkskaretFoundation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Ekskäret Foundation"@en ;
+    skos:definition "Real, Stockholm-based foundation running youth camps, adult retreats, and conferences focused on inner development. Founded by Tomas Björkman (already built)."@en ;
+    owl:sameAs <http://ekskaret.se/> ;
+    .
+
+tgs:Organization.OrphanWisdomSchool a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Orphan Wisdom School"@en ;
+    skos:definition "Real school co-founded by Stephen Jenkinson and his wife, Natalie Roy, teaching the skills of deep living, culture-making, and how to grieve and die well."@en ;
+    .
+
+tgs:Organization.RecycleLebanon a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Recycle Lebanon"@en ;
+    skos:definition "Real, Lebanon-based organization founded 2015, working toward circular-economy system change — reducing plastic usage and pollution while building nature-based consumption and production alternatives. Founded and directed by Joslin Faith Kehdy (already built)."@en ;
+    owl:sameAs <https://www.sustainlebanon.com/> ;
+    .
+
+tgs:Organization.AmazonEnvironmentalResearchInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Amazon Environmental Research Institute (IPAM)"@en ;
+    skos:definition "Real, Brazilian think tank focused on Amazonian challenges for reaching zero deforestation and sustainable development. André Guimarães (already built) serves as Executive Director."@en ;
+    owl:sameAs <https://ipam.org.br/en/> ;
+    .
+
+tgs:Organization.Restor a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Restor"@en ;
+    skos:definition "Real, open-data online platform for the global ecological restoration movement, connecting restoration projects, funders, and scientific data. Founded by Thomas Crowther (already built)."@en ;
+    owl:sameAs <https://restor.eco/> ;
+    .

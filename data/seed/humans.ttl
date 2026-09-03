@@ -1410,7 +1410,7 @@ tgs:Human.VictorGorshkov a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.AnastassiaMakarieva a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Anastassia Makarieva"@en ;
     rdfs:label "Anastassia Makarieva (human)"@en ;
-    rdfs:comment "Russian atmospheric physicist; Senior Researcher, Petersburg Nuclear Physics Institute. PhD, atmospheric physics, St. Petersburg State University, 2000. Co-developed the biotic pump theory (tgs:Concept.BioticPump) with the late Victor Gorshkov (already a real, built Human in this graph). Challenges conventional climate models to incorporate vegetation's own dynamic role in atmospheric processes rather than treating it as a passive background feature."@en ;
+    rdfs:comment "Russian atmospheric physicist; Senior Researcher, Petersburg Nuclear Physics Institute. PhD, atmospheric physics, St. Petersburg State University, 2000. Co-developed the biotic pump theory (tgs:Concept.BioticPump) with the late Victor Gorshkov (already a real, built Human in this graph). Challenges conventional climate models to incorporate vegetation's own dynamic role in atmospheric processes rather than treating it as a passive background feature. Real, close personal friend and collaborator, since 2004, of Antonio Nobre (already built) — per her own real, direct account, Antonio was the one who wrote to her and Gorshkov that same year urging them to apply their biotic-regulation theory specifically to the Amazon's water cycle, directly prompting their subsequent 'flying rivers' research into the region."@en ;
     .
 
 tgs:Human.JohanRockstrom a thinkr:Human, owl:NamedIndividual ;
@@ -1423,4 +1423,119 @@ tgs:Human.CarlosNobre a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Carlos Nobre"@en ;
     rdfs:label "Carlos Nobre (human)"@en ;
     rdfs:comment "Brazilian Earth scientist; Senior Researcher, University of São Paulo. PhD, Meteorology, MIT. Co-chair, Science Panel for the Amazon (SPA). Formerly chaired the Large-Scale Biosphere-Atmosphere Experiment in Amazonia (LBA). Foreign member, US National Academy of Sciences and the Royal Society; member, Brazilian Academy of Sciences and the World Academy of Sciences. Awarded the Volvo Environmental Prize and the AAAS Science Diplomacy Award, among others. Developer of tgs:Work.Amazonia4."@en ;
+    .
+
+tgs:Human.HelenaNorbergHodge a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Helena Norberg-Hodge"@en ;
+    rdfs:label "Helena Norberg-Hodge (human)"@en ;
+    rdfs:comment "Linguist, author, and filmmaker. Founder and Director, Local Futures (international non-profit); pioneer of the new economy movement; convener, World Localization Day. Studied linguistics at the University of London and with Noam Chomsky at MIT. Author of tgs:Work.AncientFutures and producer of the real, award-winning documentary 'The Economics of Happiness.' Co-founded the International Forum on Globalization and the Global Ecovillage Network; has helped initiate localization movements across every continent, including South Korea and Japan. Her real, nearly 50-year body of work has received support from figures including Jane Goodall, the Dalai Lama, Prince Charles, and Indira Gandhi."@en ;
+    .
+
+tgs:Human.PaulKingsnorth a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Paul Kingsnorth"@en ;
+    rdfs:label "Paul Kingsnorth (human)"@en ;
+    rdfs:comment "English writer and poet. Co-founder, the Dark Mountain Project. Author of tgs:Work.AgainstTheMachine."@en ;
+    .
+
+tgs:Human.DanielQuinn a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Daniel Quinn"@en ;
+    rdfs:label "Daniel Quinn (human)"@en ;
+    rdfs:comment "American author (1935-2018). Best known for tgs:Work.Ishmael (1992), which introduced the real, distinctive 'Takers and Leavers' framework distinguishing civilizations that believe the world was made for humans to master from cultures that understand humans as one part of a larger living community. Real, direct significance to this graph: Charles Eisenstein's own first major book, The Ascent of Humanity, was written in part as a direct response to Quinn's anti-civilization discourse."@en ;
+    .
+
+tgs:Human.CharlesEisenstein a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Charles Eisenstein"@en ;
+    rdfs:label "Charles Eisenstein (human)"@en ;
+    rdfs:comment "American author, public speaker, and teacher. Work focuses on civilization, consciousness, money, and human cultural evolution, centered on his own real, coined concept of the 'story of separation' — the largely unspoken belief that each person is an isolated self, competing against other selves and against a nature made of indifferent, exploitable resources. BA, Mathematics and Philosophy, Yale University, 1989; spent the following decade as a Chinese-English translator before turning to writing and speaking full-time. Former speechwriter for Robert F. Kennedy Jr. Author of tgs:Work.TheAscentOfHumanity, tgs:Work.SacredEconomics, tgs:Work.TheMoreBeautifulWorld, and tgs:Work.ClimateANewStory. His most recent book at the time of this graph's own build, The Coronation, examined the COVID-19 pandemic as a mirror of civilization's relationship to control, fear, and uncertainty."@en ;
+    .
+
+tgs:Human.RobinWallKimmerer a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Robin Wall Kimmerer"@en ;
+    rdfs:label "Robin Wall Kimmerer (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Robin_Wall_Kimmerer> ;
+    rdfs:comment "Potawatomi botanist, author, and Director, Center for Native Peoples and the Environment, SUNY College of Environmental Science and Forestry (SUNY-ESF). Enrolled citizen, Citizen Potawatomi Nation. BS, botany, SUNY-ESF; MS and PhD, plant ecology, University of Wisconsin-Madison. Proponent of Traditional Ecological Knowledge (TEK) as a real, distinct 'way of knowing,' and of 'two-eyed seeing' — deliberately combining Western scientific and Indigenous ways of understanding nature, drawn in part from her own family history (her paternal grandfather was sent to the Carlisle Indian Industrial School, a real assimilationist boarding school). Author of Gathering Moss (2003, John Burroughs Medal), tgs:Work.BraidingSweetgrass, and The Serviceberry (2024). 2022 MacArthur Fellow; named to the 2025 TIME 100. Real, direct significance to this graph: cited independently across at least three already-built episodes (Frankly_113, Jason Bradford's TGS_211, Pella Thiel's TGS_121) though she has never been a guest on the show."@en ;
+    .
+
+tgs:Human.AntonioNobre a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Antonio Donato Nobre"@en ;
+    rdfs:label "Antonio Donato Nobre (human)"@en ;
+    rdfs:comment "Brazilian Earth scientist, trained originally as an agronomist. Scientific Director, the Biotic Pump Greening Group. Born and raised in São Paulo; rebelled against Green Revolution industrial-agriculture orthodoxy during his own agricultural university studies before turning to Amazon ecology. His own real master's research found that much of the Amazon forest's structural wealth lies above ground rather than in its soil, including the real, striking discovery of ancient sand dunes buried beneath the rainforest in its northwestern reaches. Real, direct significance to this graph: the real, direct originator of applying Makarieva and Gorshkov's biotic regulation theory specifically to the Amazon and its water cycle — per Makarieva's own real, direct account, he wrote to them in 2004 urging them to show how the Amazon actively regulates its own water cycle, prompting their real, subsequent 'flying rivers' and biotic pump research into the region. Real, close friend and collaborator of Anastassia Makarieva (already built) since that same year, 2004. Real, notable family detail, per Makarieva's own account: younger brother of Carlos Nobre (already built in this graph), with the two brothers holding directly opposing views on the biotic pump — Carlos a skeptic from the theory's earliest days, Antonio one of its earliest and most direct proponents."@en ;
+    .
+
+tgs:Human.EliezerYudkowsky a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Eliezer Yudkowsky"@en ;
+    rdfs:label "Eliezer Yudkowsky (human)"@en ;
+    rdfs:comment "American AI safety researcher and writer. Co-founder, Machine Intelligence Research Institute (MIRI). Real, early and influential voice on AI alignment risk, writing on the subject since before it entered mainstream discourse. Co-author, with Nate Soares (already built), of tgs:Work.IfAnyoneBuildsItEveryoneDies. Real, direct significance to this graph: credited alongside Soares with the 'grown, not crafted' framing for modern AI systems, directly discussed in Frankly_122 (already built) before this book itself was built here."@en ;
+    .
+
+tgs:Human.NateSoares a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Nate Soares"@en ;
+    rdfs:label "Nate Soares (human)"@en ;
+    rdfs:comment "President, Machine Intelligence Research Institute (MIRI), where he sets the organization's vision and strategy. Working in AI alignment for over a decade; author of a large body of technical and semi-technical writing on value learning, decision theory, and power-seeking incentives in smarter-than-human AI. Prior to MIRI, worked as an engineer at Google and Microsoft, as a research associate at the National Institute of Standards and Technology, and as a contractor for the US Department of Defense. Co-author, with Eliezer Yudkowsky (already built), of tgs:Work.IfAnyoneBuildsItEveryoneDies."@en ;
+    .
+
+tgs:Human.AzaRaskin a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Aza Raskin"@en ;
+    rdfs:label "Aza Raskin (human)"@en ;
+    rdfs:comment "Co-founder, Earth Species Project (already built) and Center for Humane Technology (already built); co-host, Your Undivided Attention podcast. Trained as a mathematician and dark-matter physicist. Son of Jeff Raskin, the real, direct developer of the original Macintosh computer. Has taken three companies from founding to acquisition. Co-chairing member, World Economic Forum's Global AI Council; helped found Mozilla Labs. Named FastCompany's Master of Design; listed on Forbes' and Inc.'s 30-under-30."@en ;
+    .
+
+tgs:Human.PatrickKnodel a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Patrick Knodel"@en ;
+    rdfs:label "Patrick Knodel (human)"@en ;
+    rdfs:comment "CEO, Knodel Foundation (already built), a German impact investing firm focused on sustainability and autonomy for the Global South. Also directs investments for purpose-driven startups through Pandion Innovation for Impact GmbH. Background in economics and entrepreneurship; his worldview shaped substantially through real, direct international travel."@en ;
+    .
+
+tgs:Human.JeffCurrie a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jeff Currie"@en ;
+    rdfs:label "Jeff Currie (human)"@en ;
+    rdfs:comment "Chief Strategy Officer, Altis Partners. Previously Chief Strategy Officer of Energy Pathways at The Carlyle Group, where he currently serves as Senior Advisor. Former Global Head of Commodities Research, Goldman Sachs, where he spent nearly three decades and became one of Wall Street's leading commodity market strategists — known for advising clients through the real commodity 'supercycle' of the 2000s, the shale supply shock of the 2010s, and the twin shocks of the pandemic and the Russia-Ukraine war."@en ;
+    .
+
+tgs:Human.TomasBjorkman a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Tomas Björkman"@en ;
+    rdfs:label "Tomas Björkman (human)"@en ;
+    rdfs:comment "Swedish social entrepreneur and philosopher; trained originally in physics and mathematics before a career in investment banking. Founder, Ekskäret Foundation (already built); co-founder, the research institute Perspectiva (London), the Emerge media platform (Berlin), the 29k personal-development platform, and the Inner Development Goals (IDGs) framework. Member, Club of Rome; Fellow, Royal Swedish Academy of Engineering Science. Author of tgs:Work.TheMarketMyth, tgs:Work.TheNordicSecret (with Lene Rachel Andersen), and tgs:Work.TheWorldWeCreate. Divides his time between London, Stockholm, and Berlin."@en ;
+    .
+
+tgs:Human.StephenJenkinson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Stephen Jenkinson"@en ;
+    rdfs:label "Stephen Jenkinson (human)"@en ;
+    rdfs:comment "Cultural activist and author. Co-founder, with his wife Nathalie Roy, of the Orphan Wisdom School (already built). Master's degree in theological studies, Harvard University; master's degree in social work, University of Toronto. Served for years as program director of a palliative care center in a major Toronto teaching hospital, providing counseling at hundreds of deathbeds. Author of tgs:Work.DieWise and tgs:Work.Matrimony."@en ;
+    .
+
+tgs:Human.ErnestBecker a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Ernest Becker"@en ;
+    rdfs:label "Ernest Becker (human)"@en ;
+    rdfs:comment "American cultural anthropologist (1924-1974). Author of tgs:Work.DenialOfDeath (1973 Pulitzer Prize, awarded posthumously), The Birth and Death of Meaning, and Escape from Evil. Real, direct foundational influence on Terror Management Theory — Sheldon Solomon, Jeff Greenberg, and Tom Pyszczynski (already built or built alongside him) directly credit encountering Becker's work as young professors in the early 1980s as the real, direct origin of their own research program."@en ;
+    .
+
+tgs:Human.SheldonSolomon a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sheldon Solomon"@en ;
+    rdfs:label "Sheldon Solomon (human)"@en ;
+    rdfs:comment "Professor of Psychology, Skidmore College. Co-developer of Terror Management Theory, alongside Jeff Greenberg and Tom Pyszczynski. Research supported by the National Science Foundation and the Ernest Becker Foundation; featured in the award-winning documentary Flight from Death: The Quest for Immortality. Author of tgs:Work.TheWormAtTheCore and tgs:Work.InTheWakeOf911. American Psychological Society Fellow; recipient of an American Psychological Association Presidential Citation (2007) and a Lifetime Career Award from the International Society for Self and Identity (2009)."@en ;
+    .
+
+tgs:Human.JoslinFaithKehdy a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Joslin Faith Kehdy"@en ;
+    rdfs:label "Joslin Faith Kehdy (human)"@en ;
+    rdfs:comment "Founder and Director, Recycle Lebanon (already built), working toward circular-economy system change since 2015. Lives off-grid, homesteading in the rural village of Baskinta, Lebanon."@en ;
+    .
+
+tgs:Human.JohnKitzhaber a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "John Kitzhaber"@en ;
+    rdfs:label "John Kitzhaber (human)"@en ;
+    rdfs:comment "Over 40 years of experience in health care and health policy in both public and private sectors. Practiced as an emergency room physician for 15 years; served 14 years in the Oregon Legislature; served three terms as Governor of Oregon. Author of the Oregon Health Plan, through which hundreds of thousands of low- and moderate-income Oregon families gained access to health care. During his third term as Governor, chief architect of Oregon's Coordinated Care Organizations, the first statewide US effort built around the Triple Aim (better health, better quality, lower cost) with a focus on community and population health."@en ;
+    .
+
+tgs:Human.AndreGuimaraes a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "André Guimarães"@en ;
+    rdfs:label "André Guimarães (human)"@en ;
+    rdfs:comment "Agronomist and economist. Executive Director, Amazon Environmental Research Institute (IPAM, already built). Facilitator, the Coalition on Climate, Forests and Agriculture, a real network of 200+ entities from the rural sector, academia, and civil society developing a long-term land-use vision for Brazil. Chairman of the Board, Amazon Institute for Mankind and the Environment. Founded and served as CEO of Brazil Forests, a company focused on forest management, conservation, and restoration."@en ;
+    .
+
+tgs:Human.ThomasCrowther a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Thomas Crowther"@en ;
+    rdfs:label "Thomas Crowther (human)"@en ;
+    rdfs:comment "Ecologist studying the connections between biodiversity and climate change. Chair, advisory council, United Nations Decade on Ecosystem Restoration. Founder, Restor (already built). Former professor, Department of Environmental Systems Science, ETH Zürich, where he started Crowther Lab, an interdisciplinary group studying how global-scale ecological systems interact to regulate climate. Named a World Economic Forum Young Global Leader (2021) for his work on biodiversity protection and restoration."@en ;
     .
