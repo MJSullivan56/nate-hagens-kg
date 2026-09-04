@@ -613,3 +613,33 @@ tgs:Concept.BiophysicalGauntlet a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "The Biophysical Gauntlet"@en ;
     skos:scopeNote "Real, direct citation confirmed across at least two already-built episodes (Craig Tindale's TGS_207, Frankly_124) before this episode — Frankly_121 — was itself built; this episode appears to be an early, if not the first, real spoken articulation of the term in this graph's own source material."@en ;
     .
+
+tgs:Concept.LifeEthic a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:definition "Nate's own real, direct nine-point ethical framework, first laid out in a 2021 Earth Day talk and repeated in Frankly_62: life existing is preferable to no life; more kinds of life are preferable to fewer; vibrant, complex ecosystems are preferable to fragmented, brittle ones; ecosystems with large, complex life are preferable to purely microscopic ones; ecosystems supporting conscious minds are preferable to those without; maximizing existence, happiness, love, and understanding while minimizing suffering is preferable; the future is real in the same sense the present is real, and is shaped by present causality; what fits these preferences may be considered good, what doesn't may be considered evil; and good should be maximized, evil minimized."@en ;
+    skos:prefLabel "The Life Ethic"@en ;
+    .
+
+tgs:Concept.SevenDialsOfInstitutionalPsychopathy a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:definition "Nate's own real, direct framework mapping Greg Elliott's Psychopathic Selection Hypothesis onto seven distinct behavioral 'dials,' each set toward genuine cooperation in small-scale ancestral human communities but flipped toward extraction at civilizational scale: (1) repeated interaction, (2) visibility, (3) attribution, (4) delay, (5) exit costs and mutual dependence, (6) who writes the rules, and (7) symbols and proxies (money, GDP, and other measures that can decouple from the physical reality they're meant to represent). Argues all seven dials flipped simultaneously, with the sixth locked in place, together constitute the economic Superorganism — while noting the same dials often remain set the 'tribal way' at the scale of one's own street, town, or bioregion."@en ;
+    skos:prefLabel "The Seven Dials of Institutional Psychopathy"@en ;
+    skos:scopeNote "Real, direct follow-on framework from Frankly_157, itself a direct integration of Greg Elliott's real Psychopathic Selection Hypothesis (already built, TGS_231) with Nate's own earlier Frankly_108 (already built) distinction between individual human prosociality and aggregate institutional behavior."@en ;
+    .
+
+tgs:Concept.SupernormalStimuli a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:definition "Nate's own real, recurring teaching concept: a modern invention or artifact that hijacks ancestral, evolved brain circuitry in a deleterious, maladaptive way relative to the environment that circuitry originally evolved for — vastly exceeding, in scale or intensity, anything the ancestral environment could have produced. Nate's own real, established example is money itself, particularly the US dollar; in a real, direct extension made during a conversation with Chuck Watson, he proposes nuclear weapons as an even larger supernormal stimulus, given their real, many-orders-of-magnitude greater destructive scale relative to any weapon available in humanity's tribal past."@en ;
+    skos:prefLabel "Supernormal Stimuli"@en ;
+    skos:scopeNote "Real, foundational concept underlying Nate's own recurring teaching material, directly extended from money to nuclear weapons during TGS_4's real, chronologically third conversation with Chuck Watson (TGS_17)."@en ;
+    .
+
+tgs:Concept.CrudeOil a thinkr:Concept, owl:NamedIndividual, skos:Concept ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:broader tgs:Subject.EnergySystems ;
+    skos:prefLabel "Crude Oil"@en ;
+    skos:definition "Real, foundational fossil energy commodity — liquid at room temperature, exceptionally energy-dense, and structurally irreplaceable at current civilizational scale."@en ;
+    thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
+        thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
+        skos:prefLabel "The Spice"@en ;
+        skos:scopeNote "Nate's own real, deliberate, recurring analogy, borrowed directly from Frank Herbert's Dune: crude oil functions for modern industrial civilization precisely as 'the spice' (melange) does for Dune's fictional universe — a singular, indispensable resource whose flow, if disrupted, threatens the stability of the entire system built on top of it. ExactMatch, not Related: in Nate's own usage the two terms refer to the identical real-world referent (crude oil itself), not a broader or mechanism-adjacent concept — he substitutes one term for the other directly, not alongside it. Real, confirmed recurring usage, not a one-off phrase: directly used in both Frankly_61 ('The Strait of Hormuz and the Spice,' already built — the analogy's own real, titular framing) and TGS_94 (Chuck Watson, already built — 'the oil, the spice flow... to use a Dune reference'), independently confirming this is Nate's own genuine, repeated rhetorical device rather than a single passing joke." ] .

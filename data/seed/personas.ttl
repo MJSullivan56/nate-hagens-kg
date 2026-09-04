@@ -1005,10 +1005,11 @@ tgs:Persona.JohnGowdy a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.LynAlden a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.LynAlden ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_LynAlden ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_LynAlden ;
     skos:prefLabel "Lyn Alden"@en ;
     rdfs:label "Lyn Alden (persona)"@en ;
-    skos:scopeNote "Professional relationship only — Nate's own words describe 'multiple mutual friends' (third parties), not a direct claim of personal friendship between the two of them; no 'friend' language exchanged directly, unlike the evidentiary bar met for e.g. Persona.MatthewMonahan or Persona.GregElliott."@en ;
+    skos:scopeNote "UPGRADED 2026-09-04 to Personal+Professional — her real second appearance, TGS_188, closes with Nate's own direct 'to be continued, my friend' and her own real confirmation, 'thank you for having me again.' Her first appearance (TGS_113) only had 'multiple mutual friends' (third parties), not a direct claim between the two of them — the later episode supplies that direct evidence."@en ;
     .
 
 tgs:Persona.TristanHarris a thinkr:Persona, owl:NamedIndividual ;
@@ -1481,4 +1482,32 @@ tgs:Persona.ThomasCrowther a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Thomas Crowther"@en ;
     rdfs:label "Thomas Crowther (persona)"@en ;
     skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript, a real first conversation."@en ;
+    .
+
+tgs:Persona.PeterTurchin a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterTurchin ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_PeterTurchin ;
+    skos:prefLabel "Peter Turchin"@en ;
+    rdfs:label "Peter Turchin (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language of any kind appears in this transcript, a real first conversation."@en ;
+    .
+
+tgs:Persona.SamHarris a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SamHarris ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SamHarris ;
+    skos:prefLabel "Sam Harris"@en ;
+    rdfs:label "Sam Harris (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, confirmed directly by his own closing words, 'great to meet you.'"@en ;
+    .
+
+tgs:Persona.ThomasMurphy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ThomasMurphy ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ThomasMurphy ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ThomasMurphy ;
+    skos:prefLabel "Thomas Murphy"@en ;
+    rdfs:label "Thomas Murphy (persona)"@en ;
+    skos:scopeNote "Personal tag directly and multiply evidenced: Nate's own real opening words, 'my friend Tom Murphy,' his own real, direct mid-episode reflection, 'I now better understand why we get along so well,' and his own closing, 'to be continued, my friend.'"@en ;
     .

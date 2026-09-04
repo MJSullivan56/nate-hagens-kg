@@ -1539,3 +1539,163 @@ tgs:Human.ThomasCrowther a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Thomas Crowther (human)"@en ;
     rdfs:comment "Ecologist studying the connections between biodiversity and climate change. Chair, advisory council, United Nations Decade on Ecosystem Restoration. Founder, Restor (already built). Former professor, Department of Environmental Systems Science, ETH Zürich, where he started Crowther Lab, an interdisciplinary group studying how global-scale ecological systems interact to regulate climate. Named a World Economic Forum Young Global Leader (2021) for his work on biodiversity protection and restoration."@en ;
     .
+
+tgs:Human.PeterTurchin a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Peter Turchin"@en ;
+    rdfs:label "Peter Turchin (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Peter_Turchin> ;
+    rdfs:comment "Russian-American scientist. Founder of cliodynamics, applying quantitative, data-driven methods to the study of historical dynamics. Developed structural-demographic theory and the real, widely-cited concept of 'elite overproduction' — more aspirants for elite positions than a society can actually accommodate, a real driver of political instability. Director, the Seshat Databank project. Author of ten books, including War and Peace and War, Ages of Discord, and tgs:Work.EndTimes. CORRECTED 2026-09-02: an earlier pass here wrongly assumed he had never been a TGS guest — he has a real, direct solo appearance, TGS #164, already built in this graph."@en ;
+    .
+
+tgs:Human.GreggHenriques a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Gregg Henriques"@en ;
+    rdfs:label "Gregg Henriques (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Gregg_Henriques> ;
+    rdfs:comment "Professor of Psychology, James Madison University. Creator of the Tree of Knowledge (ToK) System, a real, integrative metatheory attempting to unify psychology as a coherent science by mapping the real relationships between matter, life, mind, and culture."@en ;
+    .
+
+tgs:Human.ChristopherMastropietro a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Christopher Mastropietro"@en ;
+    rdfs:label "Christopher Mastropietro (human)"@en ;
+    rdfs:comment "Trained philosopher. Co-author, with John Vervaeke (already built) and Filip Miscevic, of Zombies in Western Culture: A Twenty-First Century Crisis. Has worked directly with Vervaeke on adapting his own real Awakening from the Meaning Crisis lecture series into book form."@en ;
+    .
+
+tgs:Human.RobertLustig a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Robert Lustig"@en ;
+    rdfs:label "Robert Lustig (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Robert_Lustig> ;
+    rdfs:comment "Pediatric endocrinologist; Professor Emeritus, University of California, San Francisco. Real, prominent critic of dietary sugar and processed food, known for his real, widely-viewed 2009 lecture 'Sugar: The Bitter Truth.' Author of Fat Chance and Metabolical."@en ;
+    .
+
+tgs:Human.LiseVanSusteren a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Lise Van Susteren"@en ;
+    rdfs:label "Lise Van Susteren (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lise_Van_Susteren> ;
+    rdfs:comment "Forensic psychiatrist. Real, direct co-founder of the Climate Psychiatry Alliance, working on the psychological effects of climate change, including her own coined concept of 'pretraumatic stress.' Real, direct personal detail: a childhood neighbor of Nate Hagens's."@en ;
+    .
+
+tgs:Human.TyroneHayes a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Tyrone Hayes"@en ;
+    rdfs:label "Tyrone Hayes (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tyrone_Hayes> ;
+    rdfs:comment "Professor of Integrative Biology, UC Berkeley. Real, direct research found the herbicide atrazine to be a potent endocrine disruptor in frogs, causing real, documented sexual abnormalities. His findings led to a real, extensively publicized, years-long conflict with Syngenta, the herbicide's manufacturer, who conducted a real, documented campaign to discredit him personally."@en ;
+    .
+
+tgs:Human.DavidKorten a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "David Korten"@en ;
+    rdfs:label "David Korten (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/David_Korten> ;
+    rdfs:comment "Author and prominent critic of corporate globalization. Co-founder, YES! Magazine. Author of the real, influential When Corporations Rule the World and The Great Turning: From Empire to Earth Community."@en ;
+    .
+
+tgs:Human.DavidSteindlRast a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "David Steindl-Rast"@en ;
+    rdfs:label "David Steindl-Rast (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/David_Steindl-Rast> ;
+    rdfs:comment "Austrian-American Benedictine monk. Real, direct teacher of gratefulness as a spiritual practice; co-founder, gratefulness.org (A Network for Grateful Living). Prominent figure in real interfaith dialogue between Christianity and Buddhism."@en ;
+    .
+
+tgs:Human.HazelHenderson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Hazel Henderson"@en ;
+    rdfs:label "Hazel Henderson (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hazel_Henderson> ;
+    rdfs:comment "British-American futurist and economist (1933-2022). Real, prominent critic of conventional GDP-based economics; pioneer of alternative economic and quality-of-life indicators. Founder, Ethical Markets Media. Author of Creating Alternative Futures and Building a Win-Win World."@en ;
+    .
+
+tgs:Human.PierLuigiLuisi a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Pier Luigi Luisi"@en ;
+    rdfs:label "Pier Luigi Luisi (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pier_Luigi_Luisi> ;
+    rdfs:comment "Italian biochemist. Real, direct research on the origin of life, autopoiesis, and synthetic biology, particularly minimal self-replicating cell-like systems. Real, direct collaborator with Fritjof Capra on the systems view of life."@en ;
+    .
+
+tgs:Human.BarbaraMcClintock a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Barbara McClintock"@en ;
+    rdfs:label "Barbara McClintock (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Barbara_McClintock> ;
+    rdfs:comment "American scientist and cytogeneticist (1902-1992). Awarded the 1983 Nobel Prize in Physiology or Medicine, unshared, for her real discovery of transposons ('jumping genes') — genetic elements capable of changing position within a genome, a discovery decades ahead of its time in molecular biology. Worked for most of her career at Cold Spring Harbor Laboratory."@en ;
+    .
+
+tgs:Human.KarlineJanmaat a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Karline Janmaat"@en ;
+    rdfs:label "Karline Janmaat (human)"@en ;
+    rdfs:comment "Primatologist. Affiliated with the Max Planck Institute and the University of Amsterdam. Real, direct research on primate cognition, spatial memory, and foraging strategies, particularly in wild chimpanzees."@en ;
+    .
+
+tgs:Human.JenniferJacquet a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jennifer Jacquet"@en ;
+    rdfs:label "Jennifer Jacquet (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jennifer_Jacquet> ;
+    rdfs:comment "Associate Professor of Environmental Studies, New York University. Real, direct research on shame as a collective-action mechanism for addressing large-scale environmental and animal-ethics problems. Author of Is Shame Necessary?"@en ;
+    .
+
+tgs:Human.HagaiLevine a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Hagai Levine"@en ;
+    rdfs:label "Hagai Levine (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hagai_Levine> ;
+    rdfs:comment "Israeli epidemiologist, Hebrew University of Jerusalem. Real, direct co-author, with Shanna Swan, of major real meta-analyses documenting a significant global decline in human sperm counts over recent decades."@en ;
+    .
+
+tgs:Human.JoshSchrei a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Joshua Michael Schrei"@en ;
+    rdfs:label "Joshua Michael Schrei (human)"@en ;
+    rdfs:comment "Podcaster, mythteller, and teacher, focused on the cosmologies and mythologies of the world, particularly the Indian subcontinent. Founder, The Emerald Podcast (The Mythic Body), combining narrative, music, and interviews to explore myth and imagination. Has taught mythology and somatic disciplines for over 20 years."@en ;
+    .
+
+tgs:Human.RandyHayes a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Randy Hayes"@en ;
+    rdfs:label "Randy Hayes (human)"@en ;
+    rdfs:comment "Founder, Rainforest Action Network (RAN), a real, prominent organization campaigning against tropical deforestation since the 1980s. More recently involved with Foundation Earth and real rewilding advocacy work. Real, direct personal detail: named by Nate Hagens as 'my friend' during a real citation in another episode, though never himself a TGS guest."@en ;
+    .
+
+tgs:Human.PeteMyers a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Pete Myers"@en ;
+    rdfs:label "Pete Myers (human)"@en ;
+    rdfs:comment "Founder and Chief Scientist, Environmental Health Sciences, publisher of EHN.org and DailyClimate.org. Real, direct research background in endocrine-disrupting chemicals and their real, documented health effects."@en ;
+    .
+
+tgs:Human.AtossaSoltani a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Atossa Soltani"@en ;
+    rdfs:label "Atossa Soltani (human)"@en ;
+    rdfs:comment "Founder, Amazon Watch, a real, prominent organization protecting the Amazon rainforest and defending indigenous peoples' rights, working directly with indigenous communities across the Amazon basin including in Ecuador. Real, direct affiliations with the World Economic Forum, XPRIZE, and the Rights of Nature Tribunal."@en ;
+    .
+
+tgs:Human.JaneGoodall a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jane Goodall"@en ;
+    rdfs:label "Jane Goodall (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jane_Goodall> ;
+    rdfs:comment "English primatologist and anthropologist (1934-2025). Widely considered the world's foremost expert on chimpanzees, following her real, groundbreaking field research beginning at Gombe, Tanzania, in 1960. Founder, the Jane Goodall Institute; UN Messenger of Peace. Real, direct honors included the Kyoto Prize, the Templeton Prize, and the US Presidential Medal of Freedom (2025). Died October 1, 2025, at age 91."@en ;
+    .
+
+tgs:Human.DianFossey a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Dian Fossey"@en ;
+    rdfs:label "Dian Fossey (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Dian_Fossey> ;
+    rdfs:comment "American zoologist and primatologist (1932-1985). Conducted real, extensive field study of mountain gorilla populations in Rwanda; founded the Karisoke Research Center. Author of Gorillas in the Mist. Murdered in 1985 at her own research camp, a real, still-unsolved case widely believed connected to her real, direct anti-poaching activism."@en ;
+    .
+
+tgs:Human.ThichNhatHanh a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Thích Nhất Hạnh"@en ;
+    rdfs:label "Thích Nhất Hạnh (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Th%C3%ADch_Nh%E1%BA%A5t_H%E1%BA%A1nh> ;
+    rdfs:comment "Vietnamese Thiền Buddhist monk, peace activist, and teacher (1926-2022). Real, widely credited with popularizing mindfulness practice in the West. Founder, Plum Village Tradition and Monastery in France. Nominated for the Nobel Peace Prize by Martin Luther King Jr."@en ;
+    .
+
+tgs:Human.LynnMargulis a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Lynn Margulis"@en ;
+    rdfs:label "Lynn Margulis (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lynn_Margulis> ;
+    rdfs:comment "American evolutionary biologist (1938-2011). Real, direct originator of the serial endosymbiotic theory — that mitochondria and chloroplasts originated as free-living bacteria later incorporated into other cells — now the mainstream account of eukaryotic cell evolution. Real, direct collaborator with James Lovelock on developing the Gaia hypothesis. Elected to the National Academy of Sciences."@en ;
+    .
+
+tgs:Human.SamHarris a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sam Harris"@en ;
+    rdfs:label "Sam Harris (human)"@en ;
+    rdfs:comment "Author of five New York Times bestsellers, including The End of Faith (2005 PEN Award for Nonfiction), The Moral Landscape, Free Will, Lying, tgs:Work.WakingUp, and Islam and the Future of Tolerance. Hosts the Making Sense podcast (Webby Award, Science & Education). BA, Philosophy, Stanford University; PhD, Neuroscience, UCLA. Has practiced meditation for over 30 years, studying with Tibetan, Indian, Burmese, and Western teachers. Creator, the Waking Up meditation app."@en ;
+    .
+
+tgs:Human.ThomasMurphy a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Thomas Murphy"@en ;
+    rdfs:label "Thomas Murphy (human)"@en ;
+    rdfs:comment "Professor, Physics Department, UC San Diego; Associate Director, Center for Astrophysics and Space Sciences (CASS). Author of tgs:Work.EnergyAndHumanAmbitions and the real, long-running 'Do the Math' blog. From 2003-2020, led the APOLLO project, an ultra-precise test of General Relativity using lunar laser ranging. His research interests have since shifted toward quantitative assessment of the challenges facing long-term human success on a finite planet."@en ;
+    .

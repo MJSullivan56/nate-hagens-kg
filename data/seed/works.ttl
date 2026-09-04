@@ -599,3 +599,28 @@ tgs:Work.NewEconomyForTheBrazilianAmazon a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Real research initiative on economic incentives and payment structures for standing-forest conservation in the Brazilian Amazon, directly discussed by André Guimarães."@en ;
     dct:source <https://www.wri.org/research/new-economy-brazil-amazon> ;
     .
+
+tgs:Work.EndTimes a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "End Times: Elites, Counter-Elites, and the Path of Political Disintegration"@en ;
+    rdfs:comment "Peter Turchin. Applies cliodynamics and structural-demographic theory directly to the contemporary United States, arguing real, measurable elite overproduction and popular immiseration are driving the country toward real, historically-recurring political instability."@en ;
+    dct:creator tgs:Human.PeterTurchin ;
+    .
+
+tgs:Work.WakingUp a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Waking Up: A Guide to Spirituality Without Religion"@en ;
+    rdfs:comment "Sam Harris. Real, direct exploration of meditation, consciousness, and self-transcendence from a secular, scientifically-grounded perspective. Also the name of Harris's own meditation app."@en ;
+    dct:creator tgs:Human.SamHarris ;
+    .
+
+tgs:Work.DrillingDown a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Drilling Down: The Gulf Oil Debacle and Our Energy Dilemma"@en ;
+    rdfs:comment "Tad Patzek and Joseph Tainter (already built). Real, direct co-authored examination of the Deepwater Horizon disaster as a case study in energy complexity and diminishing returns."@en ;
+    dct:creator tgs:Human.TadPatzek ;
+    .
+
+tgs:Work.EnergyAndHumanAmbitions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Energy and Human Ambitions on a Finite Planet"@en ;
+    rdfs:comment "Thomas Murphy. Real, free, open-access textbook applying physics directly to questions of energy, growth, and the long-term viability of human ambitions on a finite planet."@en ;
+    dct:creator tgs:Human.ThomasMurphy ;
+    dct:source <https://escholarship.org/uc/item/9js5291m> ;
+    .

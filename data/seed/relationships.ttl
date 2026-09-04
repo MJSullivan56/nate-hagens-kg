@@ -692,7 +692,6 @@ tgs:Relationship.NateHagens_KateRaworth a thinkr:Relationship, owl:NamedIndividu
     thinkr:hasObject tgs:Persona.KateRaworth ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' personal and professional relationship with Kate Raworth"@en ;
-    skos:scopeNote "Personal tag directly evidenced: Nate's own words introducing TGS_100, 'I have asked for episode 100, a friend of mine who works in a related space to interview me' — Kate independently echoes it, 'my friend' (spoken to Nate, not about him)."@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -703,8 +702,13 @@ tgs:Relationship.NateHagens_KateRaworth a thinkr:Relationship, owl:NamedIndividu
           thinkr:subjectRole thinkr:InteractionRole.Guest ;
           thinkr:objectRole thinkr:InteractionRole.Host ;
           thinkr:episode tgs:Interview.TGS_100_NateHagens ;
-          dcterms:date "2023-11-21"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence — Nate's own words in RR-3: 'four of my colleagues and friends,' 'we're all friends' framing throughout."@en .
+          dcterms:date "2023-11-21"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_77_KateRaworth ;
+          dcterms:date "2023-06-14"^^xsd:date ] ;
+    skos:scopeNote "Fixed 2026-09-04: this record previously had two separate skos:scopeNote lines, a real duplicate-property bug matching a pattern caught and fixed elsewhere in this graph — consolidated here. Direct textual evidence, chronological: TGS_77 (her real, earliest interaction, directly confirmed in her own words, 'this was our first public conversation') opens with Nate's own real words, 'my friend and self-described renegade economist,' closing 'to be continued, my friend.' RR-3 (later): Nate's own words, 'four of my colleagues and friends,' 'we're all friends' framing throughout. TGS_100 (later still, Kate interviewing Nate for his own 100th episode): Nate's own words introducing it, 'a friend of mine who works in a related space to interview me' — Kate independently echoes it, 'my friend' (spoken to Nate, not about him)."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-21 bootstrap.
@@ -733,8 +737,33 @@ tgs:Relationship.NateHagens_ChuckWatson a thinkr:Relationship, owl:NamedIndividu
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace ;
-          dcterms:date "2026-01-08"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence — Nate's own words in RR-21: 'Chuck, you and I are, are, uh, good friends,' plus 'on and off camera. We've had a lot of conversations.' Real, further TGS history real but deferred — see Persona.ChuckWatson's own scopeNote."@en .
+          dcterms:date "2026-01-08"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_4_ChuckWatson ;
+          dcterms:date "2021-12-21"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_17_ChuckWatson ;
+          dcterms:date "2022-04-28"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_94_ChuckWatson ;
+          dcterms:date "2023-10-18"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_97_ChuckWatson ;
+          dcterms:date "2023-11-02"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_114_ChuckWatson ;
+          dcterms:date "2024-03-12"^^xsd:date ] ;
+    skos:scopeNote "Real, direct origin story found in TGS_4 (2026-09-04), his real earliest appearance — Nate's own real, specific words: 'I've known Chuck for about 15 years when we used his damage infrastructure maps on the oildrum.com every time there was a hurricane that was threatening the oil and gas infrastructure in the Gulf of Mexico... Chuck has become a friend, a colleague.' Real, direct reinforcement at close: 'to be continued, my friend.' This is the real, most specific and longest-standing relationship evidence found for any guest in this graph, predating and superseding the more general RR-21 evidence ('good friends... a lot of conversations')."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-22 bootstrap.
@@ -783,8 +812,13 @@ tgs:Relationship.NateHagens_MichaelEvery a thinkr:Relationship, owl:NamedIndivid
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_118_MichaelEvery ;
-          dcterms:date "2024-03-14"^^xsd:date ] ;
-    skos:scopeNote "UPGRADED 2026-08-13 from Professional-only to Personal+Professional — RR-12's own real transcript has Nate's closing 'to be continued, my friends,' addressed to both guests, plus repeated references throughout to prior direct conversations ('last time we spoke, Nate'). RR-12 and RR-16 now both built as real hasInteractions. RR-16's own transcript independently reconfirms Every's real Marxist-household upbringing, first disclosed during the RR-12 build. Episode #118, his real solo appearance and earliest of the four, is now also built (2026-08-31), from show notes only — see tgs:Interview.TGS_118_MichaelEvery's own scopeNote for a real, unresolved date discrepancy in the source material."@en .
+          dcterms:date "2024-03-14"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_223_MichaelEvery ;
+          dcterms:date "2026-06-09"^^xsd:date ] ;
+    skos:scopeNote "UPGRADED 2026-08-13 from Professional-only to Personal+Professional — RR-12's own real transcript has Nate's closing 'to be continued, my friends,' addressed to both guests, plus repeated references throughout to prior direct conversations ('last time we spoke, Nate'). RR-12 and RR-16 now both built as real hasInteractions. RR-16's own transcript independently reconfirms Every's real Marxist-household upbringing, first disclosed during the RR-12 build. Episode #118, his real solo appearance and earliest of the four, is now also built (2026-08-31), from show notes only — see tgs:Interview.TGS_118_MichaelEvery's own scopeNote for a real, unresolved date discrepancy in the source material. TGS_223 (2026-09-04), his real most recent solo appearance, reconfirms the friendship directly: Nate's own closing, 'sawasdee khrap, my friend' (a real Thai greeting, reflecting Every's own Bangkok-based background), plus a real, direct mutual reference to bonding over shared reading of Polybius during a prior appearance."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-23 bootstrap.
@@ -818,8 +852,13 @@ tgs:Relationship.NateHagens_SianSutherland a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_23_ThePlasticDetox ;
-          dcterms:date "2026-02-19"^^xsd:date ] ;
-    skos:scopeNote "Evidence is a likely transcription artifact worth flagging honestly rather than silently smoothing over: Nate's own words describe Sian as 'our mutual fund and also former guest,' which makes no contextual sense and is almost certainly a mis-transcription of 'mutual friend' — treated here as real Personal-relationship evidence given the surrounding warm, collegial framing throughout, but the specific phrase itself should not be quoted as if literal."@en .
+          dcterms:date "2026-02-19"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_89_SianSutherland ;
+          dcterms:date "2023-08-31"^^xsd:date ] ;
+    skos:scopeNote "Evidence is a likely transcription artifact worth flagging honestly rather than silently smoothing over: Nate's own words describe Sian as 'our mutual fund and also former guest,' which makes no contextual sense and is almost certainly a mis-transcription of 'mutual friend' — treated here as real Personal-relationship evidence given the surrounding warm, collegial framing throughout, but the specific phrase itself should not be quoted as if literal. Real, direct origin story confirmed in TGS_89 (2026-09-04), her real first appearance: Nate directly proposes a future roundtable naming Shanna Swan, Pete Myers, and Martin Scheringer by name — this real, live proposal is the direct origin of RR-23 ('The Plastic Detox,' already built), not a coincidental later pairing. TGS_89 itself has no explicit 'friend' language of its own beyond a bare 'to be continued.'"@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-4 "Titanic Oceans" bootstrap.
@@ -893,8 +932,13 @@ tgs:Relationship.NateHagens_DougaldHine a thinkr:Relationship, owl:NamedIndividu
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
-          dcterms:date "2023-10-03"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence — Nate's own words in RR-5: 'three new friends of mine,' and confirms he'd met Hine and Thiel in person in Sweden shortly before recording."@en .
+          dcterms:date "2023-10-03"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_163_DougaldHine ;
+          dcterms:date "2024-11-12"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-5: 'three new friends of mine,' and confirms he'd met Hine and Thiel in person in Sweden shortly before recording. Real, direct reinforcement from TGS_163 (2026-09-04), explicitly introduced as 'a repeat appearance': closing exchange includes Nate's own real, warm words, 'you're a good dude,' and Hine's own real reply, 'it's always a pleasure to talk to you.'"@en .
 
 tgs:Relationship.NateHagens_ChrisSmaje a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1000,8 +1044,13 @@ tgs:Relationship.NateHagens_AndrewMillison a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_178_AndrewMillison ;
-          dcterms:date "2025-04-16"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence — Nate's own closing words in RR-6: 'I'm proud to call all of you friends and colleagues,' addressed to all four guests."@en .
+          dcterms:date "2025-04-16"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_64_AndrewMillison ;
+          dcterms:date "2023-03-13"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own closing words in RR-6: 'I'm proud to call all of you friends and colleagues,' addressed to all four guests. TGS_64 (2026-09-04), his real earliest appearance, predating RR-6, has no explicit 'friend' language of its own, though real warmth is present ('you're a great human being,' 'let's stay in touch') — the Personal tag rests on the later RR-6 evidence, not on this episode independently."@en .
 
 tgs:Relationship.NateHagens_VandanaShiva a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1202,8 +1251,13 @@ tgs:Relationship.NateHagens_LukeGromen a thinkr:Relationship, owl:NamedIndividua
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_12_TheGlobalStakesOfTheUSElection ;
-          dcterms:date "2024-10-16"^^xsd:date ] ;
-    skos:scopeNote "Professional — an established, real prior guest relationship ('emeritus guest,' Nate's own words), but no explicit personal-friendship language specific to Nate found in this transcript (the closing 'my friends' addresses both guests together, already captured on Michael Every's own relationship record)."@en .
+          dcterms:date "2024-10-16"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_91_LukeGromen ;
+          dcterms:date "2023-08-29"^^xsd:date ] ;
+    skos:scopeNote "Kept Professional-only — TGS_91 (2026-09-04), his real, chronologically earlier solo appearance, has no 'friend' language of any kind either, despite real warmth ('I've been a long time admirer of you and your work'). Consistent with the existing Professional-only tag. Fixed 2026-09-04: this record previously had a second, orphaned scopeNote left behind from an earlier edit, a real duplicate-property bug matching a pattern caught and fixed elsewhere in this graph — consolidated here. Real, pre-existing evidence from RR-12 (shared with Michael Every, already built): an established, real prior guest relationship ('emeritus guest,' Nate's own words), but no explicit personal-friendship language specific to Nate found in that transcript either — the closing 'my friends' there addresses both guests together, already captured on Michael Every's own relationship record."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-14 "Bioregioning 101" bootstrap.
@@ -1219,8 +1273,13 @@ tgs:Relationship.NateHagens_DanielChristianWahl a thinkr:Relationship, owl:Named
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
-          dcterms:date "2024-12-11"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence — Nate's own words in RR-14: 'since, uh, at least Samantha and Daniel are friends of mine, I, I feel entitled to ask dumb questions.'"@en .
+          dcterms:date "2024-12-11"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_139_DanielChristianWahl ;
+          dcterms:date "2024-07-24"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own words in RR-14: 'since, uh, at least Samantha and Daniel are friends of mine, I, I feel entitled to ask dumb questions.' Real, direct, independent evidence also found in TGS_139 (2026-09-04), his real, chronologically earlier first meeting (July 2024, predating RR-14 by about five months): Nate's own real closing words, 'so nice to meet you finally... we're very aligned, my friend' — confirming the friendship formed at or around this first real meeting, not solely inferred from the later RR-14 group reference."@en .
 
 tgs:Relationship.NateHagens_IsabelCarlisle a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1465,8 +1524,13 @@ tgs:Relationship.NateHagens_JoanDiamond a thinkr:Relationship, owl:NamedIndividu
     thinkr:hasObject tgs:Persona.JoanDiamond ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' personal and professional relationship with Joan Diamond"@en ;
-    skos:scopeNote "Real, direct, unusually warm evidence, not inferred: Nate's own words introducing her real prior TGS episode (#28, 'From Kool-Aid to Lemonade'), 'my longtime friend, colleague, board member, and muse, Joanie Diamond' — she sits on the board of Energy and Our Future (ISEOF), Nate's own organization, a real, ongoing institutional relationship. Also credited in the Great Simplification Animated Series (already built in this graph) for script/sound contributions, and directly named again in Frankly_80 as a past guest the podcast's own audience is expected to recognize."@en ;
-    .
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_28_JoanDiamond ;
+          dcterms:date "2022-06-30"^^xsd:date ] ;
+    skos:scopeNote "Real, direct, unusually warm evidence, not inferred: Nate's own words introducing her real prior TGS episode (#28, 'From Kool-Aid to Lemonade'), 'my longtime friend, colleague, board member, and muse, Joanie Diamond' — she sits on the board of Energy and Our Future (ISEOF), Nate's own organization, a real, ongoing institutional relationship. Also credited in the Great Simplification Animated Series (already built in this graph) for script/sound contributions, and directly named again in Frankly_80 as a past guest the podcast's own audience is expected to recognize. Real, direct confirmation now found in TGS_28 itself (2026-09-04): 'Joan and I talk almost every day,' 'Aloha, my friend,' and Nate's own real, direct tribute at close — 'I could not have accomplished what I've done to this point without your frequent support and wisdom and grace' — among the most personally significant relationship records found in this entire graph."@en .
 
 #############################################
 # ADDED 2026-08-13 — TGS_167 bootstrap.
@@ -1635,15 +1699,20 @@ tgs:Relationship.NateHagens_JohnGowdy a thinkr:Relationship, owl:NamedIndividual
 tgs:Relationship.NateHagens_LynAlden a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
     thinkr:hasObject tgs:Persona.LynAlden ;
-    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
-    skos:prefLabel "Nate Hagens' professional relationship with Lyn Alden"@en ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Lyn Alden"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_113_LynAlden ;
-          dcterms:date "2024-02-21"^^xsd:date ] ;
-    .
+          dcterms:date "2024-02-21"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_188_LynAlden ;
+          dcterms:date "2025-05-28"^^xsd:date ] ;
+    skos:scopeNote "UPGRADED 2026-09-04 from Professional-only to Personal+Professional — TGS_188's own real closing words, Nate's direct 'to be continued, my friend,' and Lyn's own real, direct confirmation of a repeat appearance, 'thank you for having me again.'"@en .
 
 tgs:Relationship.NateHagens_TristanHarris a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1797,8 +1866,13 @@ tgs:Relationship.NateHagens_HelenThompson a thinkr:Relationship, owl:NamedIndivi
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_98_HelenThompson ;
-          dcterms:date "2023-10-30"^^xsd:date ] ;
-    .
+          dcterms:date "2023-10-30"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_152_HelenThompson ;
+          dcterms:date "2024-11-11"^^xsd:date ] ;
+    skos:scopeNote "Kept Professional-only — TGS_152 (2026-09-04), her real second appearance, confirmed directly ('thank you very much, Nate, for having me back'), has no 'friend' language of any kind either. Consistent with the existing Professional-only tag."@en .
 
 tgs:Relationship.NateHagens_ChrisKeefer a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1823,8 +1897,13 @@ tgs:Relationship.NateHagens_JaneMuncke a thinkr:Relationship, owl:NamedIndividua
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_154_JaneMuncke ;
-          dcterms:date "2024-12-02"^^xsd:date ] ;
-    .
+          dcterms:date "2024-12-02"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_104_JaneMuncke ;
+          dcterms:date "2023-11-01"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence found in TGS_104 (2026-09-04), her real, chronologically earlier first appearance: Nate's own real opening words, 'my friend Jane Muncke,' plus a real, direct reference to an actual missed in-person meeting — 'I'm sorry I missed you on my last trip' — confirming a genuine real-world relationship beyond the podcast itself."@en .
 
 tgs:Relationship.NateHagens_PeterBrannen a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1849,8 +1928,13 @@ tgs:Relationship.NateHagens_SamanthaSweetwater a thinkr:Relationship, owl:NamedI
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_202_SamanthaSweetwater ;
-          dcterms:date "2025-10-01"^^xsd:date ] ;
-    .
+          dcterms:date "2025-10-01"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_112_SamanthaSweetwater ;
+          dcterms:date "2023-11-06"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence found in TGS_112 (2026-09-04), her real, chronologically earlier first appearance: Nate's own real opening words, 'my friend Samantha Sweetwater,' and his own closing, 'to be continued, my friend' — confirming the friendship was already established at this earlier point, not something that developed only by the later TGS_202 appearance."@en .
 
 tgs:Relationship.NateHagens_TadPatzek a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -1862,8 +1946,13 @@ tgs:Relationship.NateHagens_TadPatzek a thinkr:Relationship, owl:NamedIndividual
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_225_TadPatzek ;
-          dcterms:date "2026-06-18"^^xsd:date ] ;
-    .
+          dcterms:date "2026-06-18"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_219_TadPatzek ;
+          dcterms:date "2026-03-11"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence found in TGS_219 (2026-09-04), his real, chronologically earlier first appearance: Nate's own real words at close, 'Professor Tad Patzek, my friend,' plus 'to be continued, my friend' — consistent with, and now predating, the already-known ~20-year friendship."@en .
 
 tgs:Relationship.NateHagens_DavidSloanWilson a thinkr:Relationship, owl:NamedIndividual ;
     thinkr:hasSubject tgs:Persona.NateHagens ;
@@ -2263,3 +2352,42 @@ tgs:Relationship.NateHagens_ThomasCrowther a thinkr:Relationship, owl:NamedIndiv
           thinkr:episode tgs:Interview.TGS_177_ThomasCrowther ;
           dcterms:date "2025-04-15"^^xsd:date ] ;
     .
+
+tgs:Relationship.NateHagens_PeterTurchin a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.PeterTurchin ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Peter Turchin"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_164_PeterTurchin ;
+          dcterms:date "2024-11-22"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_SamHarris a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SamHarris ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Sam Harris"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_216_SamHarris ;
+          dcterms:date "2026-02-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_ThomasMurphy a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ThomasMurphy ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Thomas Murphy"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_18_ThomasMurphy ;
+          dcterms:date "2022-03-15"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own real words: 'my friend Tom Murphy' (open), 'I now better understand why we get along so well' (mid-episode), and 'to be continued, my friend' (close)."@en .
