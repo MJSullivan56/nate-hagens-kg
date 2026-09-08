@@ -324,13 +324,6 @@ tgs:Human.UgoBardi a thinkr:Human,
     owl:sameAs <http://dbpedia.org/resource/Ugo_Bardi> ;
     .
 
-tgs:Human.JohanRockstrom a thinkr:Human,
-        owl:NamedIndividual ;
-    skos:prefLabel "Johan Rockström"@en ;
-    rdfs:label "Johan Rockström (human)"@en ;
-    owl:sameAs <http://dbpedia.org/resource/Johan_Rockström> ;
-    .
-
 #############################################
 # ADDED 2026-08-13 — RR-26 "Why Community Fails" guest bootstrap.
 # All 3 independently verified via real web search before minting, same
@@ -1416,6 +1409,7 @@ tgs:Human.AnastassiaMakarieva a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.JohanRockstrom a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Johan Rockström"@en ;
     rdfs:label "Johan Rockström (human)"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Johan_Rockström> ;
     rdfs:comment "Internationally recognized scientist on global sustainability; led development of the Planetary Boundaries framework (tgs:Concept.PlanetaryBoundaries). Leading scientist on global water resources, with over 25 years of applied water research in tropical regions and more than 150 research publications. Advisor for sustainable development at the World Economic Forum, UN SDSN, and UNFCCC conferences. Chair, advisory board, EAT Foundation; member, Earth League; chair, Earth Commission. Affiliated with the Potsdam Institute."@en ;
     .
 
@@ -1698,4 +1692,74 @@ tgs:Human.ThomasMurphy a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Thomas Murphy"@en ;
     rdfs:label "Thomas Murphy (human)"@en ;
     rdfs:comment "Professor, Physics Department, UC San Diego; Associate Director, Center for Astrophysics and Space Sciences (CASS). Author of tgs:Work.EnergyAndHumanAmbitions and the real, long-running 'Do the Math' blog. From 2003-2020, led the APOLLO project, an ultra-precise test of General Relativity using lunar laser ranging. His research interests have since shifted toward quantitative assessment of the challenges facing long-term human success on a finite planet."@en ;
+    .
+
+tgs:Human.RobHopkins a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Rob Hopkins"@en ;
+    rdfs:label "Rob Hopkins (human)"@en ;
+    rdfs:comment "Co-founder, Transition Network and Transition Town Totnes (both already built). Author of tgs:Work.TheTransitionHandbook, tgs:Work.FromWhatIsToWhatIf, and tgs:Work.HowToFallInLoveWithTheFuture. Ashoka Fellow; PhD, University of Plymouth, plus two honorary doctorates. Hosted 100 episodes of his own podcast, From What If to What Next. Made an Honorary Citizen of Liège, Belgium (November 2022). Collaborative music project with artist Mr Kit, Field Recordings from the Future."@en ;
+    .
+
+tgs:Human.GeoffreyWest a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Geoffrey West"@en ;
+    rdfs:label "Geoffrey West (human)"@en ;
+    rdfs:comment "Theoretical physicist, Santa Fe Institute (former president). Real, direct originator of applying biological scaling laws (Kleiber's Law) to cities, companies, and economies — the finding that energy use scales to roughly the three-quarter power of size across organisms, cities, and economies alike. Author of Scale: The Universal Laws of Growth, Innovation, Sustainability, and the Pace of Life in Organisms, Cities, Economies, and Companies. Real, direct guest on TGS discussing metabolism and the hidden laws of nature (TGS_117, already built)."@en ;
+    .
+
+tgs:Human.RoryJohnston a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Rory Johnston"@en ;
+    rdfs:label "Rory Johnston (human)"@en ;
+    rdfs:comment "Toronto-based oil market researcher; founder, Commodity Context (already built). Lecturer, University of Toronto's Munk School of Global Affairs and Public Policy. Host, the Oil Ground Up podcast. Fellow, both the Canadian Global Affairs Institute and the Payne Institute for Public Policy at the Colorado School of Mines. Previously led commodity economics research at Scotiabank, setting the bank's own energy and metals price forecasts and sitting on its senior credit committee for commodity-exposed sectors."@en ;
+    .
+
+tgs:Human.AlanBlinder a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Alan Blinder"@en ;
+    rdfs:label "Alan Blinder (human)"@en ;
+    rdfs:comment "American economist. Former Vice Chairman, Federal Reserve Board of Governors; former member, White House Council of Economic Advisers. Author of multiple widely-used economics textbooks. Directly named and criticized in Frankly_99 (already built) for continuing to teach the upward-sloping supply curve despite his own published research finding only about 11% of firms actually exhibit that pattern — Nate directly suspects the real figure is now closer to zero."@en ;
+    .
+
+tgs:Human.XiyeBastida a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Xiye Bastida"@en ;
+    rdfs:label "Xiye Bastida (human)"@en ;
+    rdfs:comment "23-year-old Indigenous (Otomi) environmental justice activist. Co-founder and Executive Director, Re-Earth Initiative (already built). Member, Planetary Guardians (already built). Organizer, Fridays for Future climate strikes. TIME 100 Next honoree; UN Spirit Award recipient; Forbes Changemaker; 776 Fellow; Forbes 30 Under 30 Social Impact List. Director, the real, upcoming documentary The Way of the Whale (tgs:Work.TheWayOfTheWhale, already built)."@en ;
+    .
+
+tgs:Human.SunitaNarain a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sunita Narain"@en ;
+    rdfs:label "Sunita Narain (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sunita_Narain> ;
+    rdfs:comment "Indian environmentalist and political activist. Director General, Centre for Science and Environment (CSE), New Delhi, since 2011 (with CSE since 1982); editor, Down To Earth magazine. Real, direct advocacy focus on equitable global climate agreements from a Global South perspective. Recipient of the Padma Shri (2005) and the Edinburgh Medal (2020); named one of TIME's 100 Most Influential People (2016). Real, direct Planetary Guardians peer of Xiye Bastida, cited in TGS_208 (already built)."@en ;
+    .
+
+tgs:Human.KatharineHayhoe a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Katharine Hayhoe"@en ;
+    rdfs:label "Katharine Hayhoe (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Katharine_Hayhoe> ;
+    rdfs:comment "Atmospheric scientist. Chief Scientist, The Nature Conservancy, since 2021; Horn Distinguished Professor, Texas Tech University. Real, direct focus on climate communication specifically, including across religious and political divides — she is herself a real, practicing evangelical Christian. Author of Saving Us: A Climate Scientist's Case for Hope and Healing in a Divided World; lead author, multiple US National Climate Assessments. Directly quoted in TGS_208 (already built): 'the climate crisis is a communication crisis.'"@en ;
+    .
+
+tgs:Human.SylviaEarle a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sylvia Earle"@en ;
+    rdfs:label "Sylvia Earle (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sylvia_Earle> ;
+    rdfs:comment "Oceanographer, marine biologist, and explorer. First woman to serve as Chief Scientist of NOAA (1990). Founder, President, and Chairman, Mission Blue / The Sylvia Earle Alliance, real, direct work identifying and protecting real ocean 'Hope Spots' worldwide. National Geographic Society Explorer in Residence. Known as 'Her Deepness'; named Time magazine's first 'Hero for the Planet' (1998). Cited in TGS_208 (already built)."@en ;
+    .
+
+tgs:Human.JuliaCarabiasLillo a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Julia Carabias Lillo"@en ;
+    rdfs:label "Julia Carabias Lillo (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Julia_Carabias_Lillo> ;
+    rdfs:comment "Mexican ecologist and environmentalist. Served as Mexico's Secretary of Environment, Natural Resources, and Fisheries, 1994-2000, under President Ernesto Zedillo, during which she real, directly doubled the country's protected-area coverage. Professor, National Autonomous University of Mexico (UNAM). Recipient of the UNEP Champions of the Earth Prize (2005) and the International Cosmos Prize (2004). Directly credited in TGS_208 (already built) for leading a successful collaborative effort protecting a real whale birthing site."@en ;
+    .
+
+tgs:Human.BillMcKibben a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Bill McKibben"@en ;
+    rdfs:label "Bill McKibben (human)"@en ;
+    rdfs:comment "Environmentalist, author, journalist. Co-founder, 350.org (already built), the first global grassroots climate campaign. Founder, Third Act (already built), organizing people over 60 for climate and justice action. Author of 20 books, including The End of Nature (1989, already built), real, widely regarded as the first book for a general audience specifically about climate change. Real, direct role in launching opposition to the Keystone XL pipeline and the fossil-fuel divestment campaign."@en ;
+    .
+
+tgs:Human.KevinAnderson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Kevin Anderson"@en ;
+    rdfs:label "Kevin Anderson (human)"@en ;
+    rdfs:comment "Professor of Energy and Climate Change, University of Manchester; visiting professor, Uppsala (Sweden) and Bergen (Norway). Formerly Zennström Professor at Uppsala and Director, Tyndall Centre for Climate Change Research. Co-founder, Climate Uncensored. Chartered engineer and Fellow, Institution of Mechanical Engineers, with a decade of prior industrial experience in the petrochemical industry."@en ;
     .

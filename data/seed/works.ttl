@@ -624,3 +624,33 @@ tgs:Work.EnergyAndHumanAmbitions a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.ThomasMurphy ;
     dct:source <https://escholarship.org/uc/item/9js5291m> ;
     .
+
+tgs:Work.HowToFallInLoveWithTheFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "How to Fall in Love with the Future: A Time Traveller's Guide to Changing the World"@en ;
+    rdfs:comment "Rob Hopkins. Real, direct argument that vividly imagining a genuinely better future is a necessary precondition for building one, not a naive luxury — drawing on real, direct neuroscience research on imagination, memory, and chronic stress's effect on the brain's capacity to picture the future."@en ;
+    dct:creator tgs:Human.RobHopkins ;
+    .
+
+tgs:Work.FromWhatIsToWhatIf a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "From What Is to What If: Unleashing the Power of Imagination to Create the Future We Want"@en ;
+    rdfs:comment "Rob Hopkins. Real, direct predecessor to How to Fall in Love with the Future, arguing declining collective imagination is a genuine, underappreciated barrier to building better futures."@en ;
+    dct:creator tgs:Human.RobHopkins ;
+    .
+
+tgs:Work.TheTransitionHandbook a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Transition Handbook"@en ;
+    rdfs:comment "Rob Hopkins. Real, foundational text of the Transition movement, laying out the original 12 (later expanded) steps for starting a real, local Transition Town initiative."@en ;
+    dct:creator tgs:Human.RobHopkins ;
+    .
+
+tgs:Work.TheWayOfTheWhale a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Way of the Whale"@en ;
+    rdfs:comment "Xiye Bastida. Real, upcoming feature documentary; directly connects to Julia Carabias Lillo's own real, successful collaborative effort protecting a whale birthing site, discussed in the same episode this Work is cited from."@en ;
+    dct:creator tgs:Human.XiyeBastida ;
+    .
+
+tgs:Work.TheEndOfNature a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The End of Nature"@en ;
+    rdfs:comment "Bill McKibben, 1989. Real, widely-regarded first book written for a general audience specifically about climate change, translated into 24 languages. Nate directly credits reading this real book, in TGS_102's own real [INTRO], as one of the specific things that caused him to leave Wall Street and go study ecological economics."@en ;
+    dct:creator tgs:Human.BillMcKibben ;
+    .

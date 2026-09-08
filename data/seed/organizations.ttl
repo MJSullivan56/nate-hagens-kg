@@ -174,3 +174,45 @@ tgs:Organization.Restor a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Real, open-data online platform for the global ecological restoration movement, connecting restoration projects, funders, and scientific data. Founded by Thomas Crowther (already built)."@en ;
     owl:sameAs <https://restor.eco/> ;
     .
+
+tgs:Organization.TransitionNetwork a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Transition Network"@en ;
+    skos:definition "Real, international movement of community-led responses to climate change and economic instability, active in roughly 50 countries, organized around local economy projects, community energy companies, and community food projects. Co-founded by Rob Hopkins (already built) alongside Transition Town Totnes, its first and namesake initiative."@en ;
+    owl:sameAs <https://transitionnetwork.org/> ;
+    .
+
+tgs:Organization.CommodityContext a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Commodity Context"@en ;
+    skos:definition "Real, direct oil-market research and analysis business founded by Rory Johnston (already built), publishing a real Substack newsletter and advising institutional investors, policymakers, and corporate decision-makers on commodity markets."@en ;
+    owl:sameAs <https://www.commoditycontext.com/> ;
+    .
+
+tgs:Organization.ReEarthInitiative a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Re-Earth Initiative"@en ;
+    skos:definition "Real, global youth-led organization co-founded by Xiye Bastida (already built), raising and allocating funding to small-scale, effective climate and ecological projects across frontline communities in the Global South, including a real, direct participatory-grantmaking model where grantees themselves help guide funding decisions."@en ;
+    owl:sameAs <https://reearthin.org/> ;
+    .
+
+tgs:Organization.PlanetaryGuardians a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Planetary Guardians"@en ;
+    skos:definition "Real, independent collective working to elevate the Planetary Boundaries framework (already a formal Concept in this graph) as a public measurement standard, inviting broad participation in guardianship of the biosphere. Real, direct members include Xiye Bastida, the late Jane Goodall, and several already-built TGS guests including Johan Rockström and Carlos Nobre."@en ;
+    owl:sameAs <https://www.planetaryguardians.org/> ;
+    .
+
+tgs:Organization.ThreeFiftyOrg a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "350.org"@en ;
+    skos:definition "Real, first global grassroots climate campaign, co-founded by Bill McKibben (already built), organizing protests and demonstrations on every continent including Antarctica. Real, direct role in launching opposition to the Keystone XL pipeline and the fossil-fuel divestment campaign, which became the largest anti-corporate campaign in history."@en ;
+    owl:sameAs <https://350.org/> ;
+    .
+
+tgs:Organization.ThirdAct a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Third Act"@en ;
+    skos:definition "Real, direct organization founded by Bill McKibben (already built), organizing people over the age of 60 for action on climate and social justice — built on the real, direct premise that older generations hold real, significant structural and financial power, and real, available time."@en ;
+    owl:sameAs <https://thirdact.org/> ;
+    .
+
+tgs:Organization.BeyondPlastics a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Beyond Plastics"@en ;
+    skos:definition "Real, direct nationwide project working to end plastic pollution, directly cited in TGS_102 (already built)."@en ;
+    owl:sameAs <https://www.beyondplastics.org/> ;
+    .

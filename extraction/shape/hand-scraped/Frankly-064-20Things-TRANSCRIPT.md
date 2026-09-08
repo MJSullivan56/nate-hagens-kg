@@ -1,0 +1,99 @@
+# Chapter 1: Introduction
+
+Greetings, it's been a few weeks since I had a Frankly. I have been working, believe it or not, on averting a World War III, with conversations in DC and elsewhere. I feel we're slouching towards some situation, and it's bizarrely not in the news, etc. I digress — that is not the focus of this Frankly.
+
+I would like to talk about the future, and some of the things that are likely to happen that are out of our control, and because of them, some of the things that might be in our control. I'd like to think about the control knobs, or the volume knobs, of the future. I'm going to list ten — which are definitely not exhaustive categories — of what future decades might hold that are out of our control, and follow with ten that might be in our control.
+
+Tomorrow, or the next day, I'm going up north fishing with nine of my male relatives, which is kind of an annual pilgrimage, so there will be no Frankly next week. When I come back I'm going to be tanner, fatter, and full of foul language, and probably with sores on my fingers. So without further ado, here are the ten volume knobs.
+
+# Chapter 2: External macro trends future
+
+### cooler to a warmer world
+
+First of all, many of you will instantly agree and understand this first one, and many of you will shrug it off: the volume knob from a cooler to a warmer world will be unfolding over coming decades and centuries — unless something incredibly bizarre, like a nuclear war, were to happen. This year it's an El Niño year, so it probably will peak and then go back down for a few years, but the trend is higher. I don't know where we're going to stop, but two degrees is almost a certainty, and 2.5 or 3°C above pre-industrial times are quite possible, if not likely. This has major, major consequences for how we live — maybe not here in the Northern United States as much as in Saudi Arabia, where last week, on the pilgrimage, over a thousand people died because the temperature was 51°C, like 125°F or something. This is going to have a huge role in our lives. At this point it's largely out of our control. It's going to cause hundreds of millions of migrations northward of humans. The volume knob on heat will be going up.
+
+### freedom versus constraints
+
+Next, and we're already starting to see this: the volume knob on freedom versus constraints. If freedom is the high volume, it's going to be dialed down, towards more and more constraints, on the upslope of the carbon pulse with available credit we lived in open societies, democracy, and lots of rules — lots of freedom, very few rules — and I think that's going to start to reverse, with rationing and taxes and regulations and prohibitions, etc. We have just lived through one of the freest times in history, and that volume knob is going to go the other direction.
+
+### Unipolar to multipolar. 
+
+That is the way we went in the last century, and now the volume knob is going to go the other way — we're headed towards a multipolar world. You can see this happening every day. I was just overseas, and you can see the narrative in the United States is different about the United States than it is in the rest of the world. People are watching what's happening in Israel, and both Israel and the United States are losing a lot of global goodwill because of what's happening. The United States, Russia, China — all of this is ultimately about resources and power and control. While on the upslope of the carbon pulse, everyone had access, and could print money and grow their own economies, which gave more resources and goods and services to their population. Now we're hitting limits. So this is a world of more conflict and less peace, and a world of different countries choosing sides, etc. There are certainly things we can do to avert the worst of this, but for most of us this geopolitical game of Risk is beyond our control, and that volume knob is going to be going up.
+
+### Credit versus cash. 
+
+We have lived in a world where cheap, available borrowing — in order to consume now and pay with income in the future — has been prevalent, at least in the industrial north, and this is going to start to change. We're adding a trillion dollars in debt every three months in the United States. This is all backstopped by the Federal Reserve, the central bank, massively expanding their balance sheet, not only in the US but around the world. What is money is starting to be a question. There's no doubt that governments around the world will continue to print money and backstop things, but over time it will become less and less. Creditworthy borrowers' interest rates will go up. It won't be as easy to get a loan, let alone a loan with cheap interest. So over time, we're going to be using our credit cards, as citizens alive on the planet, less than we are today, and cash and paying upfront is going to become higher up on the volume knob.
+
+### Richer versus poorer. 
+
+The volume knob is going to tend towards poorer, in the sense of less energy and material throughput per human on the planet — of course there will be a distribution aspect to that, but we've just been through an amazing uptick in goods and services, population times consumption. We're a thousand times larger economy today than in the year 1500, and that's going to start to reverse. So on average there will be wider and deeper poverty in the world. A little sub-knob on rich versus poor is equality versus inequality, and I expect, at least for a while, inequality will continue to stretch, both in wealth and income, especially with AI added into the mix. Once the Great Simplification starts in earnest, everyone will definitely become poorer, but the inner volume knob will change, because a lot of the richest people in the world will lose a lot of their wealth in that Wile E. Coyote, Ponzi-scheme "poof" moment, at some indeterminate future date.
+
+### peace versus conflict
+
+As I mentioned before, peace versus conflict is another volume knob — I meant that in the geopolitical sense, but this will also apply in the more local sense. Yesterday the government of Kenya had riots, because they put an eco-tax on plastics and diapers and things like that, and people revolted and burned down the Parliament building, and they had to repeal the taxes today. These sorts of events, where citizens react with angst and sometimes violence, are going to become more the norm. So the volume knob is going to go up, from peace and stability to more conflict.
+
+### Global versus local. 
+
+The carbon pulse — cheap energy, available credit, peace in the world — has allowed us to continue to expand the global economy, to just-in-time complex supply chains with letters of credit, and we've created a very complicated global distribution of food and micro-components, etc. Not only because energy is going to get expensive, but also because of a move to a multipolar world, some of these interconnected lanes of commerce and agreement are going to shrink, and there's going to be more near-shoring and more things made locally. That means we're going to have less of the things available that we used to, and some of the things we still do import will be more intermittent and more costly. So I think the world is about to become a bigger place again, in coming decades. That doesn't mean global trade is going to stop, but it might be limited to very selective things — and actually this could be a good thing. But we are headed from globalization more towards a local and regional world in coming decades.
+
+### collective conversation, versus tribal conversations
+
+Another volume knob is a unified, collective goal and conversation, versus more isolated and tribal conversations. There are so many issues in the world right now, and a lot of people tend to focus on one or two. We're all part of a growing capitalist, materialist, status-based consumption society, and as that phrase implies, you're going to find different flavors of how people respond to this, that are going to be isolated from other demographics, both globally and within countries — we're going to become much more in-group focused. So far the in-group focus of the last few decades is "I'm a Green Bay Packers fan and I don't like Chicago Bears fans." The in-groups of the future are perhaps going to be a little bit more serious than sporting events.
+
+### The future versus the present. 
+
+Right now, energy surplus has allowed us to care about the environment and care about the future, and as events get tougher, the volume knob is going to move from the future back to a focus on the present. Events will steepen the discount rates of people — which, as an aside, makes it even more imperative that the pro-social, pro-future humans out there now engage before those cultural discount rates steepen. So I think there's going to be a volume knob shift towards a focus on the very near term.
+
+### complex versus simplification
+
+Lastly — out of a list of a hundred of these I probably could have come up with — we're going to move from a complex situation to more of a simplification. That doesn't mean we're not going to use artificial intelligence and continue to innovate and have amazing technology, but over time the weight of all the trends I'm describing here are going to lead to a more simplified society, because we can't afford all the nodes, all the really resource- and trade- and energy-intensive institutions we have today. Just take medical care, for example — 20% of American GDP goes to the healthcare industry, and it's really a patch. It's not making us healthier. It's just dealing with existing metabolic syndrome and other problems. So in the future we're going to have to use simpler methods for a lot of the things in our society. We'll have to use 20% of the money and energy to get 80% of the benefits that we used to. Things like that. Gradually — and many countries, Ukraine, Syria, Bangladesh, Madagascar, Afghanistan, are already approaching a simplification — more countries will be joining that.
+
+So with that backdrop — and again, I could have had a lot of different categories, but that was really a preamble to this — realizing, or squinting and seeing the shape of these various volume knobs of the macro landscape of our situation, what are the individual volume knobs in our own lives that we might be able to shift consciously, ahead of time?
+
+# Chapter 3: Individual responses — isolation to interconnectedness
+
+### need for community
+
+I've also come up with ten. The first one: we're going to need humans again, we're going to need community again. The carbon pulse has allowed us to be individual queens and kings and princes and princesses in our own little castles, but as things get tougher, we're going to have to be connected again — both socially, with skills, with local input-output matrices on what we're doing in our watershed and our community, and hopefully to nature. So start being less isolated, and turn the volume knob up towards interconnection, towards interrelatedness.
+
+### from money to human capital
+
+Second is, as I've said before, money is really a marker for real capital, the things we care about. So turn the volume up from a focus on money to what it really means, towards real capital — towards our health, our knowledge, our skills, our friends, our networks, the ecological and built capital in our backyards, in our houses, in our communities. I think the more people that start to make that transmutation in their minds — moving away from strictly monetary representations of their net worth, to a wider definition that includes real capital — would be helpful.
+
+### consumption to regeneration
+
+Building on that: a volume knob from consumption to regeneration. Seventy percent of energy and money in the world today goes towards consumption — private consumption, public consumption — and probably another 10% if you break out the consumption of private investment. So almost 80% goes to immediate consumption of some sort. As we understand what we face on the downslope of the carbon pulse, instead of consuming things, invest in things that allow a return in broader capital, rather than just money — in ecosystem services, in social reciprocity, in relationships, in knowledge. We can regenerate. We can invest our scarce resources, including human capital, into things that pay us back on a longer-term basis. So move the volume knob up towards regenerative ideas.
+
+### narrow view of the world to a much wider view
+
+Next is one of my favorite concepts, which is to move from a narrow view of the world to a much wider view of the world. Widen the volume knob towards using wide-boundary analysis, perspective, understanding, empathy, and a systems view of things. It's difficult, because we prefer to look at things from a narrow issue, because then it's binary — we know where we stand if things are black and white. But a lot of things in the world are in the gray area in between. The systems story is what makes the most sense, and a systems view of life also makes it richer, more interesting, more engaging, and potentially more impactful. Turn the volume from narrow to wide.
+
+### 24/7 access to stimulation
+
+Next is regarding our own neurochemistry. The 20th century, and thus far even more the early quarter of the 21st, are about dopamine, are about 24/7 access to stimulation. Humans really don't need baseload — we are baseload, we carry it around in our bodies, in our brains, whether the electricity or the lights are on, or we have gasoline in our car. We've become dependent on 24/7 access to things, and I think in the future it would be much healthier to turn the volume from baseload to intermittence. Live your life by fasting a certain day of the week, or not buying something, or not using energy, because those things will be training grounds for the reality of coming decades. Baseload is something that our current society requires and assumes is normal, but we don't really need it. I mean, when I was a kid, there were times I couldn't get a ride to the fair, or I had nothing to do, and I just finished reading The Hobbit for the third time and I was bored. Okay, boredom is okay. Boredom can be helpful. Right now if you're bored, it's like, "Oh my God, I've got to find some stimulation to keep me going" — that has to change. Turn the volume knob towards intermittence in your own life.
+
+### technology versus reality
+
+Next is technology versus reality. We live in a completely, and increasingly more, tech-dominated world, and it's not just cell phones, it's all the other things. I think to dial the knob away from — recognizing that this tool is largely for convenience and comfort, and turning billions of barrels of ancient sunlight into microliters of dopamine — towards a recognition of your relationships, and the nature where you live, and your community, and that world should become more prominent, more loud, on the volume meter.
+
+### critique to awe and wonder
+
+Next, I thought of the fact that as things get worse, we tend to critique — "oh, it's their fault, if it weren't for this" — and it would become very political as well. I think to turn the volume knob from critique to awe and wonder, and remember the unlikely, amazing beauty and luck and fortune we have just to be alive. What a miracle just to be here — and to every day have gratitude, and find something in the world, in your morning hike or your meditation or walking down a street and talking to a stranger, that gives you awe and wonder. Because with all the other ten volume knobs that are out of our control that I mentioned earlier, it's easy to just critique and blame — of course, that's simple — but I think we have to turn that knob towards appreciation, awe, and wonder. The critique can still be there, it's just less loud.
+
+### Apathy to goodness. 
+
+I think as these events accelerate, there will be more people who just give up and are apathetic about the future. As an aside, there are lots of people who want me to interview David Wengrow, who, with David Graeber, who's passed away, wrote a book called The Dawn of Everything. On the flip side, the anthropologists I know have completely panned that book as being a backcast on political ideology and cherry-picking examples from the past. I'm agnostic on that, and I may have more to talk about with that in the future, but my point in bringing that up is: do we need a book to tell us that humans can be good? Do we need academic research to look in the past for clues of how human goodness and pro-social behavior — and just doing what's right — arose? We don't need a book to tell us that. We know it intuitively, in what we can do in our interaction with others, and we can live by example, irrespective of what academics say about our distant past. So I think turn the volume knob from apathy towards goodness, and the more people that do that, there's an autocorrelation, a positive feedback that might come from that.
+
+### Shallow versus deep. 
+
+So many of the things in our lives are really trivial, and give us comfort and convenience, and repeat what we did yesterday. The times we are alive are profound. The next few decades will be the most important resolution of the human experiment and the human predicament, ever — with 8 billion of us, almost 10% of all the members of Homo sapiens who have ever lived, alive today. As longtime followers of this podcast might know, there is no greater challenge, no greater thing that gives me — Nate — meaning in my life, than to roll my sleeves up, pass the baton, and try to change the initial conditions of the future by inviting people to play a role, by changing the hearts and minds, at the time we're alive, to play a role in your community, at your school, with your kids, with your neighborhood, with the global environment, with your local ecosystem. We have to move from measuring our success — as a culture, as individuals — by how much money we have and how much stuff we have and how much we can flex with our clothes and our cues, to: are we on the team of life? Do we use the time we have on this planet towards a better future than the default?
+
+### socienty optimized for power
+
+Which brings me to the last volume meter, which is: our society right now optimizes for power. Power, in an energy sense, is energy per unit time, so our society optimizes for that. But the people within the society — the hierarchy of people — are optimizing social power, which is usually measured by dollars, bank accounts, and social influence. That has to change. We have to look, in a wider boundary, at the stakes of our times, and more of us, individually and collectively, need to optimize for life. Because life — complex life, millions of species, the ecosystems that we live on, this one blue-green planet — is at risk. Last week I did a podcast with Johan Rockström, and he talked about all the different boundaries that we are exceeding, leaving the safe space of the Holocene. There is no greater stakes than that. Yes, politics and war and financial haircuts and poverty and all those other things are going to shout louder in our heads in coming decades, but there is no greater challenge, and no greater thing that we can do, than protect and breathe more life into life on this planet — and that will take a village, that will take a lot of humans working collectively.
+
+---
+
+So in total, here were ten volume knobs of how I foresee things unfolding in coming decades, and ten ways that we can slightly, or maybe crank up, the volume in our own lives on some of these things. I'm preaching, of sorts, but I'm also a client of the Great Simplification, and I'm trying to make all these ten changes that I just outlined, in my own life.
+
+So, to be continued — I will talk to you in two weeks, after I get back from fishing. Cheers.

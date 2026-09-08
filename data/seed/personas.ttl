@@ -1106,7 +1106,7 @@ tgs:Persona.ChrisKeefer a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ChrisKeefer ;
     skos:prefLabel "Chris Keefer"@en ;
     rdfs:label "Chris Keefer (persona)"@en ;
-    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: 'please welcome my friend Dr. Chris Keefer' is vocative; 'you're a good dude, Chris' is real warmth but not a substantive claim of relationship either. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8. This is his real second TGS appearance; his first (TGS_123, 'Empowering the Future: from Nuclear to Podcasting,' ~April 2024) is confirmed directly in this episode's own transcript but not yet built in this graph."@en ;
+    skos:scopeNote "CORRECTED 2026-08-30, per MJSullivan's own refined evidentiary rule: 'please welcome my friend Dr. Chris Keefer' is vocative; 'you're a good dude, Chris' is real warmth but not a substantive claim of relationship either. Reverted from Personal+Professional to Professional-only. See wwns-methodology.md §8. UPDATE 2026-09-08: his real first appearance, TGS_123, is now built — checked directly against the same rule (see Relationship.NateHagens_ChrisKeefer's own scopeNote); it uses the same vocative pattern plus a real, warm passage about Nate's work shaping Keefer's thinking, neither of which meets the graph's own bar for Personal. Stays Professional-only."@en ;
     .
 
 tgs:Persona.JaneMuncke a thinkr:Persona, owl:NamedIndividual ;
@@ -1510,4 +1510,60 @@ tgs:Persona.ThomasMurphy a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Thomas Murphy"@en ;
     rdfs:label "Thomas Murphy (persona)"@en ;
     skos:scopeNote "Personal tag directly and multiply evidenced: Nate's own real opening words, 'my friend Tom Murphy,' his own real, direct mid-episode reflection, 'I now better understand why we get along so well,' and his own closing, 'to be continued, my friend.'"@en ;
+    .
+
+tgs:Persona.RobHopkins a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RobHopkins ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_RobHopkins ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RobHopkins ;
+    skos:prefLabel "Rob Hopkins"@en ;
+    rdfs:label "Rob Hopkins (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own real closing words, 'good to see you, my friend,' with Hopkins's own real, warm reply calling the invitation 'an enormous honor.'"@en ;
+    .
+
+tgs:Persona.GeoffreyWest a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GeoffreyWest ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_GeoffreyWest ;
+    skos:prefLabel "Geoffrey West"@en ;
+    rdfs:label "Geoffrey West (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first conversation, warm but without 'friend' language; closes with 'let's please stay in touch' rather than any direct personal claim."@en ;
+    .
+
+tgs:Persona.RoryJohnston a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RoryJohnston ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RoryJohnston ;
+    skos:prefLabel "Rory Johnston"@en ;
+    rdfs:label "Rory Johnston (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first appearance, no 'friend' language of any kind; closes with a real, warm 'thank you so much for having me' but nothing beyond that."@en ;
+    .
+
+tgs:Persona.XiyeBastida a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.XiyeBastida ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_XiyeBastida ;
+    skos:prefLabel "Xiye Bastida"@en ;
+    rdfs:label "Xiye Bastida (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language from either side — but real, unusually direct emotional candor from Nate is worth preserving precisely: their real first conversation, and he states directly, in the episode's own real [INTRO], that it 'really moved' him and reminded him why he does this work at all."@en ;
+    .
+
+tgs:Persona.BillMcKibben a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BillMcKibben ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_BillMcKibben ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BillMcKibben ;
+    skos:prefLabel "Bill McKibben"@en ;
+    rdfs:label "Bill McKibben (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own real, direct words in the episode's own [INTRO], 'my old friend, Bill McKibben.' Real, direct note on the relationship's own real character: Nate is equally direct that they 'don't always agree on prescriptions and energy in the economy,' but 'share a deep aligned value system' — a real, mature friendship that doesn't require full agreement."@en ;
+    .
+
+tgs:Persona.KevinAnderson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KevinAnderson ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KevinAnderson ;
+    skos:prefLabel "Kevin Anderson"@en ;
+    rdfs:label "Kevin Anderson (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, formal open ('welcome to the program' / 'nice to be with you'), no 'friend' language at any point. Real, substantive mutual respect closes the episode instead: Nate directly tells him 'you are exhibiting both courage and integrity,' which Anderson accepts with real, direct modesty rather than personal warmth."@en ;
     .
