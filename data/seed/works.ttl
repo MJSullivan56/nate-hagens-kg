@@ -654,3 +654,45 @@ tgs:Work.TheEndOfNature a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Bill McKibben, 1989. Real, widely-regarded first book written for a general audience specifically about climate change, translated into 24 languages. Nate directly credits reading this real book, in TGS_102's own real [INTRO], as one of the specific things that caused him to leave Wall Street and go study ecological economics."@en ;
     dct:creator tgs:Human.BillMcKibben ;
     .
+
+tgs:Work.TheDebunkingHandbook a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Debunking Handbook"@en ;
+    rdfs:comment "John Cook and collaborators. Real, direct practical guide to correcting misinformation effectively, addressing why simply presenting correct facts often fails and can even backfire, reinforcing the very misconception it's meant to correct."@en ;
+    dct:creator tgs:Human.JohnCook ;
+    .
+
+tgs:Work.ShortingTheGrid a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Shorting the Grid: The Hidden Fragility of Our Electric Grid"@en ;
+    rdfs:comment "Meredith Angwin. Real, direct analysis of the US electric grid from both a physical-science and policy perspective, arguing genuine grid fragility stems as much from real, diffuse governance and accountability structures as from any single technical cause."@en ;
+    dct:creator tgs:Human.MeredithAngwin ;
+    .
+
+tgs:Work.SmallIsBeautiful a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Small Is Beautiful: A Study of Economics As If People Mattered"@en ;
+    rdfs:comment "E.F. Schumacher, 1973. Real, foundational text arguing for human-scale, decentralized, 'appropriate' technology over indiscriminate bigness — ranked by The Times Literary Supplement among the 100 most influential books published since World War II (1995). Directly develops Schumacher's own real concept of Buddhist economics, formed while working as an economic consultant in Burma in 1955."@en ;
+    dct:creator tgs:Human.EFSchumacher ;
+    .
+
+tgs:Work.ArtificialSuperintelligenceAFuturisticApproach a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Artificial Superintelligence: A Futuristic Approach"@en ;
+    rdfs:comment "Roman Yampolskiy, 2016. Real, early foundational text in AI safety, examining the risks and control problems posed by hypothetical superintelligent systems."@en ;
+    dct:creator tgs:Human.RomanYampolskiy ;
+    .
+
+tgs:Work.AIUnexplainableUnpredictableUncontrollable a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "AI: Unexplainable, Unpredictable, Uncontrollable"@en ;
+    rdfs:comment "Roman Yampolskiy. Real, direct argument that a genuinely safe, controllable general superintelligence is a mathematical impossibility, not merely a difficult engineering problem — the central thesis directly discussed in TGS_233 (already built)."@en ;
+    dct:creator tgs:Human.RomanYampolskiy ;
+    .
+
+tgs:Work.BraveNewWar a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Brave New War: The Next Stage of Terrorism and the End of Globalization"@en ;
+    rdfs:comment "John Robb, 2007. Real, direct introduction of the concept of 'open-source warfare' and 'global guerrillas' — decentralized, networked non-state actors using globalization's own interconnected systems (pipelines, power grids, financial markets) against it via small, cheap, disproportionately damaging attacks. Featured in a real, direct New York Times column by David Brooks."@en ;
+    dct:creator tgs:Human.JohnRobb ;
+    .
+
+tgs:Work.TheSpaceOfPossibleMindDesigns a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Space of Possible Mind Designs"@en ;
+    rdfs:comment "Roman Yampolskiy, 2015. Real, direct paper presented at the AGI Conference (Springer, DOI 10.1007/978-3-319-21365-1_23; also available as an arXiv preprint). Equates all minds to software, proves several real, formal properties of the resulting 'mind design space' (its infinitude, and the size and representational complexity of individual minds), surveys prior mind-design taxonomies (directly building on Aaron Sloman's 1984 'The Structure of the Space of Possible Minds'), and formally proposes a new field of study, intellectology (already built as tgs:Concept.Intellectology). Real, direct expanded 2023 treatment of the same material published as 'Taxonomies of Intelligence: A Comprehensive Guide to the Universe of Minds' (Seeds of Science, DOI 10.53975/9r72-i78l)."@en ;
+    dct:creator tgs:Human.RomanYampolskiy ;
+    .

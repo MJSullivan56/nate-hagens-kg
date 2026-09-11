@@ -216,3 +216,69 @@ tgs:Organization.BeyondPlastics a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Real, direct nationwide project working to end plastic pollution, directly cited in TGS_102 (already built)."@en ;
     owl:sameAs <https://www.beyondplastics.org/> ;
     .
+
+tgs:Organization.SkepticalScience a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Skeptical Science"@en ;
+    skos:definition "Real, direct educational website founded by John Cook (already built) in 2007, real, widely regarded as one of the most reputable sources explaining the actual science behind global heating. Winner, 2011 Australian Museum Eureka Prize for the Advancement of Climate Change Knowledge; 2016 Friend of the Planet Award, National Center for Science Education."@en ;
+    owl:sameAs <https://skepticalscience.com/> ;
+    .
+
+tgs:Organization.CrankyUncle a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Cranky Uncle"@en ;
+    skos:definition "Real, direct misinformation-inoculation game created by John Cook (already built), combining critical thinking, cartoons, and gamification to build genuine resilience against misleading arguments across any subject, not only climate. Real, direct partner organizations include UNICEF, applied specifically to vaccine misinformation."@en ;
+    owl:sameAs <https://crankyuncle.com/> ;
+    .
+
+tgs:Organization.ElectricPowerResearchInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Electric Power Research Institute"@en ;
+    skos:definition "Real, direct US electric-power research organization where Meredith Angwin (already built) served as one of the first women to hold a project manager role, leading real, direct projects in renewable and nuclear energy."@en ;
+    owl:sameAs <https://www.epri.com/> ;
+    .
+
+tgs:Organization.SchumacherCenterForNewEconomics a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Schumacher Center for a New Economics"@en ;
+    skos:definition "Real, direct successor to the original E.F. Schumacher Society, based in Great Barrington, Massachusetts, and real, direct home of Schumacher's own personal library and archives. Continues his work through research, lectures, and technical assistance aimed at building strong, diverse local economies."@en ;
+    owl:sameAs <https://centerforneweconomics.org/> ;
+    .
+
+tgs:Organization.SchumacherInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "The Schumacher Institute"@en ;
+    skos:definition "Real, independent research organization based in Bristol, England, part of the real, direct 'Schumacher Circle' of organizations founded in E.F. Schumacher's memory or inspired by his work — alongside Schumacher College, the Soil Association, and Practical Action (the former Intermediate Technology Development Group, which Schumacher himself founded in 1966)."@en ;
+    owl:sameAs <https://schumacherinstitute.org.uk/> ;
+    .
+
+tgs:Organization.CyberSecurityLabLouisville a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Cyber Security Lab, University of Louisville"@en ;
+    skos:definition "Real, direct research lab within the Department of Computer Engineering and Computer Science at the University of Louisville's Speed School of Engineering, founded and directed by Roman Yampolskiy (already built) since 2012."@en ;
+    owl:sameAs <https://engineering.louisville.edu/faculty/roman-v-yampolskiy> ;
+    .
+
+tgs:Organization.Conjecture a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Conjecture"@en ;
+    skos:definition "Real, direct AI safety research company founded March 2022 by Connor Leahy (already built), Sid Black, and Gabriel Alfour, born directly out of EleutherAI (already built). Real, stated mission to scale applied AI alignment research, pursuing 'Cognitive Emulation' — building interpretable AI from the ground up rather than attempting to align existing large language models after the fact. Leahy led the company as CEO until stepping down in early 2026."@en ;
+    owl:sameAs <https://www.conjecture.dev/about> ;
+    .
+
+tgs:Organization.EleutherAI a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "EleutherAI"@en ;
+    skos:definition "Real, direct open-source large language model research collective, co-founded July 2020 by Connor Leahy (already built) with Sid Black and Leo Gao out of a Discord server, aiming to replicate GPT-3 in the open. Real, direct outputs include The Pile (2020), GPT-Neo (2021), GPT-J-6B (2021, the largest open-source GPT-3-style model at release), and GPT-NeoX-20B (2022). Real, direct early home for discussions on the risks of the same advanced AI systems it helped build."@en ;
+    owl:sameAs <https://www.eleuther.ai/> ;
+    .
+
+tgs:Organization.ControlAI a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ControlAI"@en ;
+    skos:definition "Real, direct nonprofit AI-risk advocacy organization, running real, direct campaigns including a citizen letter-writing tool and 'The Direct Institutional Plan.' Connor Leahy (already built) joined as US Director in early 2026 after stepping down as Conjecture's CEO, having previously served as an advisor."@en ;
+    owl:sameAs <https://controlai.com/> ;
+    .
+
+tgs:Organization.GlobalGuerrillasReport a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Global Guerrillas Report"@en ;
+    skos:definition "Real, direct newsletter and podcast published by John Robb (already built), covering the intersection of war, politics, and technology — a real, direct continuation of the Global Guerrillas blog he launched in 2004."@en ;
+    owl:sameAs <https://johnrobb.substack.com/> ;
+    .
+
+tgs:Organization.PlanetLabs a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Planet Labs"@en ;
+    skos:definition "Real, direct Earth-imaging and geospatial data company (formally Planet Labs PBC, a Public Benefit Corporation), headquartered in San Francisco, co-founded in 2010 by Will Marshall (already built) with Chris Boshuizen and Robbie Schingler. Operates the world's largest constellation of Earth-observing satellites, imaging the entire planet's landmass daily, with a real, direct stated mission (written into its own PBC charter) to make global change visible, accessible, and actionable in service of a more sustainable and secure world."@en ;
+    owl:sameAs <https://www.planet.com/> ;
+    .

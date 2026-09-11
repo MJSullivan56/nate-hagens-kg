@@ -597,8 +597,13 @@ tgs:Relationship.NateHagens_PedroPrieto a thinkr:Relationship, owl:NamedIndividu
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:PanelDiscussion.RR_1_ElectricVehicles ;
-          dcterms:date "2023-04-23"^^xsd:date ] ;
-    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in RR-1's substack write-up: 'my longtime Spanish polymath friend, the telecommunications/solar/energy systems expert Pedro Prieto.'"@en .
+          dcterms:date "2023-04-23"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_176_PedroPrieto ;
+          dcterms:date "2025-05-01"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence, not inference — Nate's own words in RR-1's substack write-up: 'my longtime Spanish polymath friend, the telecommunications/solar/energy systems expert Pedro Prieto.' Real, direct, extraordinarily strong confirmation found in TGS_176 (2026-09-08): Nate's own real, direct words, 'Pedro has been a friend of mine for 20 years,' plus 'happy belated birthday' and 'to be continued, my friend' at close — among the most explicit, longest-standing friendships confirmed in this entire graph."@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-10 full enrichment.
@@ -2489,3 +2494,107 @@ tgs:Relationship.NateHagens_KevinAnderson a thinkr:Relationship, owl:NamedIndivi
           thinkr:episode tgs:Interview.TGS_82_KevinAnderson ;
           dcterms:date "2023-07-17"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, direct mutual professional respect closes the episode: Nate's own words, 'you are exhibiting both courage and integrity,' met with Anderson's own real, direct modesty rather than personal warmth."@en .
+
+tgs:Relationship.NateHagens_JohnCook a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnCook ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with John Cook"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_212_JohnCook ;
+          dcterms:date "2025-12-16"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, direct forward-looking professional interest closes the episode: Nate's own words, 'let's follow up on that,' regarding Cook's own real, ongoing research measuring climate fiction's actual persuasive impact."@en .
+
+tgs:Relationship.NateHagens_MeredithAngwin a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MeredithAngwin ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Meredith Angwin"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_196_MeredithAngwin ;
+          dcterms:date "2025-09-17"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, direct warm exchange closes the episode: Nate's own words, 'you're pro reality,' offered in response to Angwin's own real, direct self-description as 'pro renewable, but basically pro electricity.'"@en .
+
+tgs:Relationship.NateHagens_RomanYampolskiy a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RomanYampolskiy ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Roman Yampolskiy"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_233_RomanYampolskiy ;
+          dcterms:date "2026-09-01"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, direct warm professional closing: Nate's own words, 'the antidote to some of the things we face... is humans like you,' followed by signing off in Russian, 'Spasiba,' a real, considerate nod to Yampolskiy's own heritage."@en .
+
+tgs:Relationship.NateHagens_ConnorLeahy a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ConnorLeahy ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Connor Leahy"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_184_ConnorLeahy ;
+          dcterms:date "2025-05-21"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own real, direct words at close, 'to be continued, my friend.' Real, direct forward invitation: Nate asks Connor to return in six to nine months specifically to discuss humanism, values, and institutional coordination — a real, concrete, traceable lead for a possible future episode."@en .
+
+tgs:Relationship.NateHagens_JohnRobb a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnRobb ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with John Robb"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_110_JohnRobb ;
+          dcterms:date "2023-12-04"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language or mutual warmth exchanged at close. Real, notable, substantive but one-directional admission: Nate's own real, direct words in the episode's own [INTRO], 'I've followed John for a long time now and many in my inner circle make an effort to pay attention to what he says.' Real, direct forward interest: Nate directly says he'd 'love to have you back' for a deeper dive."@en .
+
+tgs:Relationship.NateHagens_WillMarshall a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.WillMarshall ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Will Marshall"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_173_WillMarshall ;
+          dcterms:date "2025-03-14"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, notable, concrete detail: Nate directly toured Planet Labs' own satellite factory in person, calling it 'really eye-opening' — real, in-person contact beyond a remote interview."@en .
+
+tgs:Relationship.NateHagens_MalinPinsky a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MalinPinsky ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Malin Pinsky"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_179_MalinPinsky ;
+          dcterms:date "2025-04-22"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — no 'friend' language from either side; a real, formal first meeting. Real, direct forward interest: Nate invites Pinsky back within a year for a deeper dive on either evolutionary adaptation or fisheries/geopolitical ripple effects, both real, specific candidate topics Pinsky himself named."@en .
+
+tgs:Relationship.NateHagens_DanOConnor a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.DanOConnor ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Dan O'Connor"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_168_DanOConnor ;
+          dcterms:date "2025-02-05"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence — Nate's own real, direct closing words, 'to be continued, my friend,' despite this being their real, first conversation with no prior-relationship language anywhere in the episode. Real, direct separate statement: Nate calls the conversation 'novel' and says he's 'never had a guest like' O'Connor — warmth appears to have formed genuinely during this specific exchange."@en .

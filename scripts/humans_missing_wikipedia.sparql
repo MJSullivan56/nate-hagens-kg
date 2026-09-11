@@ -1,0 +1,18 @@
+# humans_missing_wikipedia.sparql
+# Every Human in the graph that does NOT yet have a Wikipedia link
+# (owl:sameAs to en.wikipedia.org). A live version of the batch audit
+# done earlier -- run this any time to see the current, real gap list.
+# Run with:
+#   oxigraph query --location ../tgs_store --query-file humans_missing_wikipedia.sparql
+
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?label WHERE {
+  ?h a thinkr:Human ;
+     skos:prefLabel ?label .
+  FILTER NOT EXISTS {
+    ?h owl:sameAs ?wiki .
+    FILTER(STRSTARTS(STR(?wiki), "https://en.wikipedia.org/"))
+  }
+} ORDER BY ?label

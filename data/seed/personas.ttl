@@ -1567,3 +1567,77 @@ tgs:Persona.KevinAnderson a thinkr:Persona, owl:NamedIndividual ;
     rdfs:label "Kevin Anderson (persona)"@en ;
     skos:scopeNote "Kept Professional-only — a real first meeting, formal open ('welcome to the program' / 'nice to be with you'), no 'friend' language at any point. Real, substantive mutual respect closes the episode instead: Nate directly tells him 'you are exhibiting both courage and integrity,' which Anderson accepts with real, direct modesty rather than personal warmth."@en ;
     .
+
+tgs:Persona.JohnCook a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnCook ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnCook ;
+    skos:prefLabel "John Cook"@en ;
+    rdfs:label "John Cook (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, no 'friend' language from either side. Real, direct, forward-looking professional interest closes the episode instead: Nate's own real words, 'let's follow up on that,' regarding Cook's own real, ongoing research on climate fiction's measurable impact."@en ;
+    .
+
+tgs:Persona.MeredithAngwin a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MeredithAngwin ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MeredithAngwin ;
+    skos:prefLabel "Meredith Angwin"@en ;
+    rdfs:label "Meredith Angwin (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, no 'friend' language of any kind. Real, direct warm exchange closes the episode instead: Nate's own real words, 'you're pro reality,' in real, direct response to Angwin's own real self-description, 'I'm pro renewable, but I'm basically pro electricity.'"@en ;
+    .
+
+tgs:Persona.RomanYampolskiy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RomanYampolskiy ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RomanYampolskiy ;
+    skos:prefLabel "Roman Yampolskiy"@en ;
+    rdfs:label "Roman Yampolskiy (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, no 'friend' language from either side. Real, direct, warm professional closing instead: Nate's own words, 'the antidote to some of the things we face... is humans like you,' followed by a real, considerate cultural touch — signing off with 'Spasiba' (Russian for thank you), a nod to Yampolskiy's own real Latvian/Russian heritage."@en ;
+    .
+
+tgs:Persona.ConnorLeahy a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ConnorLeahy ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_ConnorLeahy ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ConnorLeahy ;
+    skos:prefLabel "Connor Leahy"@en ;
+    rdfs:label "Connor Leahy (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own real, direct words at close, 'to be continued, my friend.' Real, direct forward invitation also present: Nate directly asks Connor to return in six to nine months to discuss humanism, values, and institutional coordination."@en ;
+    .
+
+tgs:Persona.JohnRobb a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnRobb ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnRobb ;
+    skos:prefLabel "John Robb"@en ;
+    rdfs:label "John Robb (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — no 'friend' language or mutual warmth exchanged at close ('thank you for your insights and your continued work... to be continued, John'). Real, notable, substantive but one-directional admission worth preserving: Nate's own real, direct words in the episode's own [INTRO], 'I've followed John for a long time now and many in my inner circle make an effort to pay attention to what he says.'"@en ;
+    .
+
+tgs:Persona.WillMarshall a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WillMarshall ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_WillMarshall ;
+    skos:prefLabel "Will Marshall"@en ;
+    rdfs:label "Will Marshall (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, no 'friend' language from either side. Real, notable, concrete detail: Nate directly toured Planet Labs' own satellite factory in person, calling it 'really eye-opening,' suggesting real, in-person contact beyond a remote interview."@en ;
+    .
+
+tgs:Persona.MalinPinsky a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MalinPinsky ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MalinPinsky ;
+    skos:prefLabel "Malin Pinsky"@en ;
+    rdfs:label "Malin Pinsky (persona)"@en ;
+    skos:scopeNote "Kept Professional-only — a real first meeting, no 'friend' language of any kind. Real, direct forward interest: Nate directly invites Pinsky back within a year for a deeper dive, and Pinsky names two real, specific candidate topics (evolutionary adaptation, or the ripple effects through fisheries and geopolitics)."@en ;
+    .
+
+tgs:Persona.DanOConnor a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanOConnor ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_DanOConnor ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_DanOConnor ;
+    skos:prefLabel "Dan O'Connor"@en ;
+    rdfs:label "Dan O'Connor (persona)"@en ;
+    skos:scopeNote "Personal tag directly evidenced: Nate's own real, direct closing words, 'to be continued, my friend' — despite this being their real, first conversation (no prior-relationship language anywhere in the episode), suggesting real, immediate warmth formed during the conversation itself. Nate directly, separately states this was 'novel' and that he's 'never had a guest like' O'Connor."@en ;
+    .

@@ -9,17 +9,18 @@ near-term focus. The prior citation-frequency-only tracker
 purposes; its own real historical notes on already-resolved gaps still
 stand and aren't repeated here.
 
-**Current real state (updated 2026-09-08)**: 116 unbuilt episodes from
+**Current real state (updated 2026-09-10)**: 98 unbuilt episodes from
 2024 onward, roughly 87 unbuilt episodes from before 2024 (deprioritized,
 not deleted — see the bottom section; this count is a best estimate, not
 independently re-verified against the master CSV, which was lost in a
 container reset this session — see the addendum at the bottom for two
 pre-2024 episodes built anyway).
 
-**Since this tracker's original build, ten items from its own list are
-now built and removed below**: TGS-218 (Rory Johnston), TGS-212 (John
-Cook), TGS-208 (Xiye Bastida), TGS-123 (Chris Keefer), TGS-103 (Peter
-Brannen), Frankly-99, Frankly-77, Frankly-64, Frankly-63, and Frankly-60.
+**Since this tracker's original build, twelve items from its own list
+are now built and removed below**: TGS-218 (Rory Johnston), TGS-212
+(John Cook), TGS-208 (Xiye Bastida), TGS-196 (Meredith Angwin), TGS-176
+(Pedro Prieto), TGS-123 (Chris Keefer), TGS-103 (Peter Brannen),
+Frankly-99, Frankly-77, Frankly-64, Frankly-63, and Frankly-60.
 TGS-182 was explicitly reviewed and skipped (real companion/rebroadcast
 of an existing movie, not new content) — kept in the pool below with
 that note rather than removed, since it was a deliberate decision, not
@@ -49,15 +50,10 @@ candidates.
 | 2026-06-16 | FRANKLY-146 | The Ultimate Alternative: Are You Okay With Nuclear Warfare? | — |
 | 2026-05-29 | FRANKLY-144 | A Word I Can’t Seem to Understand: Non-Duality and Our Living World | — |
 | 2026-05-27 | TGS-221 | Darkness Deficit Disorder: How Constant Stimulation Has Shaped our Consumption | Andrew Holecek |
-| 2026-05-08 | FRANKLY-141 | Wide Boundary News: Sacrificing Wilderness, Oil Data Propaganda, and Feeding the Superorganism’s Brain | — |
-| 2026-04-11 | FRANKLY-137 | Everything is About to Change: The World After Cheap Energy | — |
-| 2026-04-10 | FRANKLY-136 | Built for Cheap Energy: What Happens When the Oil Stops Flowing | — |
-| 2026-04-09 | FRANKLY-135 | The Untold Energy Story: What You Actually Need to Know About Oil | — |
 | 2026-04-03 | FRANKLY-134 | What Does “Winning” Even Mean?: A World at the Edge of Change | — |
 | 2026-03-27 | FRANKLY-133 | Iran, U.S., and the Rest: The Unavoidable Pig in the Python | — |
 | 2026-03-13 | FRANKLY-131 | Preparing for a More Fragile World: Iran Effects and End of Empire? | — |
 | 2026-03-10 | FRANKLY-130 | Wide Boundary News: The Iranian War, Rising Gas Prices, and the Single Point Failure | — |
-| 2026-02-27 | FRANKLY-128 | Ultra-Processed Information: AI and the Coming Deluge of Noise | — |
 | 2026-02-13 | FRANKLY-125 | The End of ‘Progress?’: Uncomfortable Questions for Unsettled Times | — |
 | 2026-02-04 | TGS-209 | How to Read the Signs of Collapse: Economic Stagnation, Resource Scarcity, and Europe’s Industrial Decline | Balazs Matics |
 | 2026-01-16 | FRANKLY-119 | Technology and Wealth: The Straw, the Siphon, and the Sieve | — |
@@ -70,7 +66,6 @@ candidates.
 | 2025-11-19 | TGS-201 | Two Ways of Knowing: How Merging Science & Indigenous Wisdom Fuels New Discoveries | Rosa Vasquez Espinoza |
 | 2025-11-12 | TGS-200 | Will We Artificially Cool the Planet? The Science and Politics of Geoengineering | Ted Parson |
 | 2025-10-17 | FRANKLY-110 | What Sloths Teach Us About the Superorganism | — |
-| 2025-10-08 | TGS-196 | Is the U.S. Electric Grid Stable? Policy, Renewables, and Who Is Responsible If The Grid Fails | Meredith Angwin |
 | 2025-10-03 | FRANKLY-109 | Peak Oil, Ponzi Pyramids, and Planetary Boundaries | — |
 | 2025-10-01 | TGS-195 | Moral Ambition: Redefining Success for the Global Good | Rutger Bregman |
 | 2025-09-12 | FRANKLY-107 | This Week’s Learnings: Gold Holdings, Political Divides, and the DOE Climate Report | — |
@@ -84,28 +79,19 @@ candidates.
 | 2025-07-18 | FRANKLY-102 | This Week’s Learnings: Corn Sweat, Coral Bleaching, and the Climate Credit Crunch | — |
 | 2025-07-11 | FRANKLY-101 | What I Want to Want for the Future | — |
 | 2025-06-27 | FRANKLY-100 | Ask Nate Anything 2025 | — |
-| 2025-06-25 | TGS-184 | Connor Leahy — Algorithmic Cancer: Why AI Development Is Not What You Think | Connor Leahy |
 | 2025-06-18 | TGS-183 | Rod Schoonover — The National Security Risks We’re Not Prepared For: Adapting In an Age of Actorless Threats | Rod Schoonover |
 | 2025-06-13 | TGS-182 | The Systems Science Behind Our Global Crises: How Energy Drives Economics, Ecology, and Our Future \| The Great Simplification Movie (explicitly skipped — real companion/rebroadcast of an existing movie, per MJSullivan) | — |
-| 2025-05-28 | TGS-179 | Malin Pinsky — The Fish are Fleeing: How Shifting Marine Ecosystems are Upending Life | Malin Pinsky |
-| 2025-05-23 | FRANKLY-96 | The 8 Faces of AI: Who Will You Become As AI Accelerates? | — |
-| 2025-05-16 | FRANKLY-95 | The Parent and the Pendulum | — |
 | 2025-05-09 | FRANKLY-94 | Social Overshoot? Dunbar’s Number, Real Relationships, and Musical Chairs | — |
-| 2025-05-07 | TGS-176 | Pedro Prieto – Fragile Electric Grids: Did Renewables Cause the Blackout in Spain? | Pedro Prieto |
 | 2025-05-02 | FRANKLY-93 | Information Burnout: Are We Past Peak Sensemaking? | — |
-| 2025-04-25 | FRANKLY-92 | Artificial Intelligence – In Service of Life? | — |
 | 2025-04-23 | TGS-174 | Maren Urner – The Neuroscience of Good Journalism: How Constructive Journalism Uses Information to Empower | Maren Urner |
 | 2025-04-18 | FRANKLY-91 | Unintended Consequences in a Complex World | — |
-| 2025-04-16 | TGS-173 | Will Marshall – Planetary Insights: How Satellites Could Transform Our Understanding of Earth’s Predicament | Will Marshall |
 | 2025-04-11 | TGS-172 | Living the Change: How TGS Viewers are Transforming Their Lives and Communities | — |
 | 2025-04-04 | FRANKLY-90 | Net Zero and Other Delusions: What Can’t, Won’t and Might Happen | — |
 | 2025-04-02 | TGS-170 | Kristine Tompkins – Rewilding 15 Million Acres: Why True Wealth Means More Than Money | Kristine Tompkins |
 | 2025-03-21 | FRANKLY-89 | Thinking and Feeling | — |
-| 2025-03-19 | TGS-168 | Dan O’Connor – Threats to U.S. Security: Aging Infrastructure, Fragile Systems, and Information Warfare | Dan O’Connor |
 | 2025-02-21 | FRANKLY-86 | What is Wealth? | — |
 | 2025-02-07 | FRANKLY-84 | Share Your Story: A Call for Responses to The Great Simplification | — |
 | 2025-02-05 | TGS-162 | Jean-Baptiste Fressoz: “Always Adding More: The Unpopular Reality about Energy Transitions” | Jean-Baptiste Fressoz |
-| 2025-01-31 | FRANKLY-83 | Artificial Intelligence and the Lost Ark | — |
 | 2025-01-29 | TGS-161 | Scott Tinker: “The Uncertain Future of Oil: Energy Poverty, Depletion, and ‘Green’ Ambitions” | Scott Tinker |
 | 2025-01-24 | FRANKLY-82 | Power vs Life: Towards Wide Boundary Sovereignty | — |
 | 2025-01-22 | TGS-160 | Birgitte Bischoff: “Navigating International Crises: The Evolving Challenges for Humanitarian Organizations” | Birgitte Bischoff |
@@ -123,14 +109,12 @@ candidates.
 | 2024-11-29 | FRANKLY-78 | A Brief Clarification on Human Behavior | — |
 | 2024-11-15 | FRANKLY-76 | The Battles of Our Time | — |
 | 2024-11-06 | TGS-149 | John Fullerton: “Regenerative Economics: New Economic Paradigms, Living Systems, & Holistic Thinking” | John Fullerton |
-| 2024-11-01 | FRANKLY-75 | Somebody’s Gonna Win | — |
 | 2024-10-30 | TGS-148 | Richard Gephardt: “Preserving Democracy: A Call for Civility” | Richard Gephardt |
 | 2024-10-23 | TGS-147 | Indy Johar: “The Foundational Challenge: Stewardship, Responsibility, and Designing a New System” | Indy Johar |
 | 2024-10-13 | TGS-145 | Kari Stoever: “Planetary Health Check: The State of Earth’s Critical Systems” | Kari Stoever |
 | 2024-10-09 | TGS-144 | Erik Fernholm: “Inner Development Goals: Cultivating Change from the Inside Out” | Erik Fernholm |
 | 2024-10-04 | FRANKLY-73 | The Superorganism and the Self | — |
 | 2024-10-02 | TGS-143 | Suzanne Simard: “Rooted in Connection: Exploring the Hidden Ties in Earth’s Forests” | Suzanne Simard |
-| 2024-09-27 | FRANKLY-72 | What if Climate Change Was a Hoax? | — |
 | 2024-09-18 | TGS-141 | Stefan Rahmstorf: “Global Heating 101: Rapid-Fire Answers to the Biggest Climate Questions” | Stefan Rahmstorf |
 | 2024-09-11 | TGS-140 | Jeffrey Sachs: “U.S. Full Spectrum Dominance: Nuclear Risks and The End of Empire” | Jeffrey Sachs |
 | 2024-08-21 | TGS-137 | Mamphela Ramphele: “The Art of Movement Building: Personal Liberation for Public Change” | Mamphela Ramphele |
@@ -148,7 +132,6 @@ candidates.
 | 2024-03-27 | TGS-116 | Riane Eisler: “Domination and Partnership in Society” | Riane Eisler |
 | 2024-03-01 | FRANKLY-55 | 7 Key Interventions for the Future | — |
 | 2024-02-28 | TGS-111 | Sandra Faber: “The Universe and Our Place in It” | Sandra Faber |
-| 2024-02-21 | TGS-110 | John Robb: “Networked Tribalism, AI, and Asteroids” | John Robb |
 | 2024-02-16 | FRANKLY-54 | Reflections From India | — |
 | 2024-02-14 | TGS-109 | Ashley Hodgson: “The New Enlightenment and Behavioral Economics” | Ashley Hodgson |
 | 2024-02-07 | TGS-108 | Steve Keen: “On the Origins of Energy Blindness” | Steve Keen |

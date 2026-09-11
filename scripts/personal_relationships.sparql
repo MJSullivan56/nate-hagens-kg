@@ -1,0 +1,13 @@
+# personal_relationships.sparql
+# Every relationship in the graph tagged Personal (not just
+# Professional) -- i.e., real, confirmed friendships, not just guest
+# appearances.
+# Run with:
+#   oxigraph query --location ../tgs_store --query-file personal_relationships.sparql
+
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label WHERE {
+  ?rel thinkr:hasRelationshipType thinkr:RelationshipType.Personal ;
+       skos:prefLabel ?label .
+} ORDER BY ?label

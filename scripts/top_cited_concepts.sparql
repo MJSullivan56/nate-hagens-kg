@@ -1,0 +1,12 @@
+# top_cited_concepts.sparql
+# Which Concepts get discussed by the most episodes -- a quick way to
+# see which ideas are the graph's real anchors.
+# Run with:
+#   oxigraph query --location ../tgs_store --query-file top_cited_concepts.sparql
+
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label (COUNT(?ep) AS ?n) WHERE {
+  ?ep thinkr:discusses ?concept .
+  ?concept skos:prefLabel ?label .
+} GROUP BY ?label ORDER BY DESC(?n) LIMIT 15

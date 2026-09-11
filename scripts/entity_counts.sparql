@@ -1,0 +1,10 @@
+# entity_counts.sparql
+# Quick sanity check: how many of each kind of thing is in the graph.
+# Run with:
+#   oxigraph query --location ../tgs_store --query-file entity_counts.sparql
+
+PREFIX thinkr: <http://example.org/thinkr#>
+SELECT ?type (COUNT(?s) AS ?n) WHERE {
+  ?s a ?type .
+  FILTER(STRSTARTS(STR(?type), "http://example.org/thinkr#"))
+} GROUP BY ?type ORDER BY DESC(?n)
