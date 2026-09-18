@@ -1893,3 +1893,39 @@ tgs:Human.PierreTeilhardDeChardin a thinkr:Human, owl:NamedIndividual ;
     owl:sameAs <https://en.wikipedia.org/wiki/Pierre_Teilhard_de_Chardin> ;
     rdfs:comment "French Jesuit priest, paleontologist, philosopher, and mystic (1881-1955). Ordained 1911; directed the real 1929 excavations at the Peking Man site at Zhoukoudian, China. Real, direct originator of the concept of the 'Noosphere' — a global layer of collective human thought and consciousness, remarkably anticipating the internet decades before its creation. Author of The Phenomenon of Man and The Divine Milieu (both published posthumously, given real, direct disapproval from Jesuit and Church authorities during his lifetime). Real, direct central theory: humanity is evolving, mentally and socially, toward a final spiritual unity he called the Omega Point. Directly, extensively quoted in Frankly_75 (already built) — Nate's own real, direct closing line, describing 'a sensual longing for communion with others who have a large vision.'"@en ;
     .
+
+tgs:Human.SarahWilson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sarah Wilson"@en ;
+    rdfs:label "Sarah Wilson (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sarah_Wilson_(journalist)> ;
+    rdfs:comment "Australian journalist, author, and social philosopher. Editor of Cosmopolitan Australia at 29; hosted the first series of MasterChef Australia; founded the global I Quit Sugar movement (sold 2022, all proceeds to charity, to focus on climate/collapse work). Multiple New York Times and Amazon bestselling author: First, We Make the Beast Beautiful (anxiety memoir), This One Wild and Precious Life (US Gold Nautilus Prize), and I Eat the Stars: How to Live Fully and Beautifully in a Collapsing World (2026), the direct real subject of her TGS-234 appearance. Ranked in the top 200 most influential authors in the world two years running. Real, direct personal history named in this episode: has spoken openly, including in a prior book, about her own struggles with anxiety, bipolar disorder, and obsessive-compulsive disorder. Lives nomadically; based in Paris for the ~3 years preceding this episode. Real, direct links from this episode's own show notes: her author site (sarahwilson.com/about), her Substack ('This is Precious'), and her Wild podcast."@en ;
+    owl:sameAs <https://sarahwilson.com/about/> ;
+    .
+
+tgs:Human.OlivierHamant a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Olivier Hamant"@en ;
+    rdfs:label "Olivier Hamant (human)"@en ;
+    rdfs:comment "French biologist and biophysicist (b. 1975). Director of Research at INRAE (French National Research Institute for Agriculture, Food and Environment); teaches at the École Normale Supérieure de Lyon; directs the Institut Michel Serres, an interdisciplinary institute focused on ecological transition. Published roughly 100 scientific articles on plant biophysics and development before turning that research toward a broader real, direct argument: that modern civilization has confused 'performance' with genuine fitness, prizing efficiency/optimization/specialization when most living systems survive by prioritizing robustness instead. Real, direct works: a 60-page real manifesto, 'Antidote to the Cult of Performance: Robustness from Nature' (also published in French as 'La troisième voie du vivant'), and a real, English-translated book, 'The Benefits of Imperfection: Biology, Society, and Beyond.' Real, honest note: a French-language Wikipedia page exists (confirmed directly); no genuine English-language Wikipedia page was found in the same search, so no owl:sameAs to English Wikipedia is asserted here."@en ;
+    owl:sameAs <https://www.ens-lyon.fr/en/research/honors-and-awards/olivier-hamant-biologist-rdp> ;
+    .
+
+tgs:Human.JohnChurchill a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "John Churchill"@en ;
+    rdfs:label "John Churchill (human)"@en ;
+    rdfs:comment "British-born clinical psychologist, dharma teacher, and former Buddhist monk. Holds a Doctorate in Clinical Psychology from William James College; practitioner of Traditional Chinese Medicine. Studied Buddhist psychology as a monk at Samye Ling Monastery in Scotland; spent 15 years training and teaching Great Seal (Mahamudra) meditation in an Indo-Tibetan Mahayana lineage under Dr. Daniel P. Brown. A founding member of Ken Wilber's Integral Institute. Author of 'Becoming Buddha: Buddhist Contemplative Psychology in a Western Context.' For 25+ years has developed the real, direct 'Fourth Turning Planetary Dharma' -- his own synthesis of Indo-Tibetan contemplative technology and Western developmental psychology, including a redesigned 'Nine Stages of Calm-Staying' practice path and 'Embodying the Open Ground.' Co-founder of Planetary Dharma, Samadhi Integral, and Karuna Mandala. Married to his partner Nicole since 2000; two teenage children, Trinity and Bodhi."@en ;
+    owl:sameAs <https://www.planetarydharma.com/john-1> ;
+    .
+
+tgs:Human.SalMercogliano a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sal Mercogliano"@en ;
+    rdfs:label "Sal Mercogliano (human)"@en ;
+    rdfs:comment "Maritime historian, former merchant mariner, and Professor of History (twice named Professor of the Year) and Chair of the Department of History, Criminal Justice, and Political Science at Campbell University in North Carolina; adjunct professor at the US Merchant Marine Academy. Holds a B.S. in Marine Transportation from SUNY Maritime College (with a merchant marine deck officer license, unlimited tonnage 2nd mate), an M.A. in Maritime History and Nautical Archaeology from East Carolina University, and a Ph.D. in Military and Naval History from the University of Alabama. Sailed for the US Navy's Military Sealift Command as a merchant mariner. Author of 'Fourth Arm of Defense: Sealift and Maritime Logistics in the Vietnam War'; regular contributor to gCaptain, Sea History, Naval History, and US Naval Institute Proceedings. Founded the YouTube channel 'What's Going on With Shipping?' in 2021 following the Ever Given Suez Canal grounding, growing it from 137 subscribers into a widely-cited real, direct source on maritime affairs, with real, repeated appearances on BBC, CNN, NPR, and other major outlets; testified before the US Senate Commerce Committee's subcommittee on Coast Guard, Maritime and Fisheries on shipbuilding policy."@en ;
+    owl:sameAs <https://directory.campbell.edu/people/sal-mercogliano/> ;
+    .
+
+tgs:Human.GeorgeSoros a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "George Soros"@en ;
+    rdfs:label "George Soros (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/George_Soros> ;
+    rdfs:comment "Hungarian-American investor and philanthropist (b. 1930), founder of Soros Fund Management and the Open Society Foundations. A former student of philosopher Karl Popper at the London School of Economics, Soros developed his own real, direct theory of reflexivity -- the claim that market values are driven by participants' own fallible beliefs, not just economic fundamentals, and that beliefs and events feed back on each other in reflexive loops producing boom/bust cycles rather than equilibrium. Directly credited, by name, in Frankly-133 for this theory specifically, in the context of Nate's own real argument that the correlation between financial markets and biophysical reality is likely to reverse as physical constraints reassert themselves. Not a TGS guest; cited for this specific theory, not for his own extensive, separate political and philanthropic activities."@en ;
+    .

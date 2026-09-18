@@ -1,0 +1,158 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-fr-151-158.ttl -- batch #7 (FINAL Frankly batch), 2026-09-12.
+# Frankly episodes numbered 151 through 158.
+#
+# This is the last real Frankly batch. The site's own real numbering
+# for Frankly currently tops out at 157/158 (confirmed via this
+# session's own site inventory plus Frankly-158's own real build
+# earlier this session, which postdates that inventory scrape) --
+# everything from 159 onward genuinely does not exist yet, not a gap.
+# Only 8 real entities exist in this batch's nominal 151-175 range,
+# not a full 25.
+#
+# 4 of 8 already built; 4 real, confirmed gaps minted as stubs.
+# Frankly-151's own real membership in tgs:Series.HowToThinkAboutTheFuture
+# (already declared in an earlier batch file) verified intact --
+# its individual dct:isPartOf survived processing correctly.
+#
+# All Frankly batches going forward should be skipped until the real
+# site inventory shows new numbers beyond 158 -- from here on, only
+# TGS batches should continue in the alternation.
+#
+# Sorted by episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Protect the Irreversible: What Matters Most in an Uncertain Future? | How to Think About the Future Pt 6"@en ;
+    skos:definition "The series' closer - a methodology for individual/community planning and action given the 4-Dimension framework, rather than a specific list of recommended actions. Opens with a type-1/type-2-error framing (false positives vs. false negatives in how people respond to uncertain threats) as a lens for thinking about failure modes in planning, before laying out Hagens' own approach to prioritizing action under deep uncertainty."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 6 ;
+    dct:created "2026-07-05"^^xsd:date ;
+    dct:issued "2026-07-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/151-protect-the-irreversible> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-151-Transcript-How-to-Think-About-the-Future-Part-6.pdf> ;
+    thinkr:hasReplay <https://youtu.be/bMfzVhTWMDM> ;
+    thinkr:discusses tgs:Concept.ScenarioThinking, tgs:Concept.UnicornStrategies, tgs:Concept.Superorganism, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
+    dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes ;
+    skos:scopeNote "MAJOR CORRECTION 2026-08-13: same class of error as Frankly_150 — this episode's skos:prefLabel, thinkr:hasCanonicalSource, and hasTranscript month were all wrong since first built, never verified against the real page until now. Corrected via direct fetch."@en ;
+    .
+
+
+tgs:Monologue.Frankly_152_WatchWithBothEyesOpen a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Watch with Both Eyes Open"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/152-watch-with-both-eyes-open> ;
+    .
+
+tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "When Truth Becomes Hazardous"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/153-when-truth-becomes-hazardous> ;
+    .
+
+tgs:Monologue.Frankly_154_UnordinaryInterventions a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Unordinary Interventions: How to Plant Seeds for a Better Future"@en ;
+    skos:definition "Nate's own real, direct companion to Frankly_132 — explicitly turning 'from the directional to the personal.' Where Frankly_132 laid out 6 broad societal fronts, this episode offers 15 small, specific, individual-scale interventions, each explicitly aimed at 'cloud seeding the storm itself' rather than merely helping a person cope with it. Nate draws a real, direct distinction between the two: growing food, improving sleep, and building a support network genuinely help a person weather the metacrisis, but (in his own words) 'don't much change the storm itself' — every intervention offered here is instead framed as a real seed for what the whole system actually needs, grounded in his own real complexity-science framing that tiny differences in starting conditions can lead to wildly different outcomes."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:created "2026-08-02"^^xsd:date ;
+    dct:issued "2026-08-07"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/154-unordinary-interventions> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/08/Frankly-154-Transcript-Unordinary-Interventions.pdf> ;
+    thinkr:hasReplay <https://youtu.be/hMb9uBz-31A> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.CarbonPulse, tgs:Concept.DistributedAgency ;
+    dct:references tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Frankly #114 ('Directional Advice for the More Than Human Predicament'), Frankly #65 ('wide-boundary capital,' already flagged as deferred during the RR-21 build earlier this session), Frankly #98 ('cultural mitochondria,' already flagged deferred during the Frankly_132 build), Frankly #23 ('The Mordor Economy'), Frankly #59 ('7 Meta Questions About Our Global Metabolism'), Frankly #120 ('The Creature in the Machine'), Frankly #124 ('Wide Boundary News,' Nate's own real revised peak-oil call), and Frankly #142/#143 (Guide to Staying Human Parts 2/3) — all real, confirmed URLs. Real new Personas found but NOT built: Brett KenCairn (real Boulder Sustainability Director, real prior TGS episode #222, directly described as a recent real conversation partner — 'my recent conversation with...'), Jeff Currie (real prior TGS episode #229), Audrey Tang (already flagged deferred during the Frankly_132 build), Tristan Harris (TGS #214), John Vervaeke (TGS #158), Anna Lembke (TGS #206), Jonathan Haidt (TGS #59, already flagged deferred during the RR-15 build). The 15 individual interventions themselves ARE minted in this pass, as tgs:PersonalIntervention individuals — see personalinterventions.ttl."@en ;
+    thinkr:hasDiscussionSummary "Opens with an unusually explicit methodological distinction Nate draws for himself as much as the audience: most 'what can I do' lists blur together self-protection (growing food, improving sleep, building a support network) with actually changing the trajectory of the metacrisis itself, and he states directly that everything offered here is aimed at the latter, not the former — 'nothing I offer here is primarily intended as just a coping skill.' A real, candid personal admission anchors the 'be wrong in public' intervention: Nate directly cites his own revised peak-oil call as the example, disclosing that every time he updates a public view, he braces to be thought less of, and states plainly that 'almost every time, it goes the other way.' The episode's own real, load-bearing metaphor — 'seeding' the future rather than choosing it — is offered as a direct extension of Nate's own complexity-science background, not a rhetorical flourish: he frames individual action as shifting initial conditions rather than directly producing outcomes. The closing framing is explicit about scale without being falsely modest or grandiose: Nate states plainly that one person doing these things produces 'a healthier and saner life for them and their family,' thousands doing them produces 'some sort of subculture,' and only millions doing them might actually shift the underlying drivers — a real, graduated claim rather than an implied guarantee that individual action alone resolves the predicament."@en ;
+    .
+
+
+tgs:Monologue.Frankly_155_WhoBrokeTheWorld a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Who Broke the World"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/155-who-broke-the-world> ;
+    .
+
+tgs:Monologue.Frankly_156_AnAntidoteToDespair a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "An Antidote to Despair"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/156-an-antidote-to-despair> ;
+    .
+
+tgs:Monologue.Frankly_157_DecentPeopleIndecentSystem a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Turning the Dials Back on Psychopathy: Decent People, Indecent System"@en ;
+    skos:definition "Nate's real, direct follow-on to Greg Elliott's real TGS appearance (already built) on the Psychopathic Selection Hypothesis, mapping Elliott's framework onto his own real, coined Seven Dials of Institutional Psychopathy — each dial set toward genuine cooperation in small-scale ancestral human groups, but flipped toward extraction at the scale of the modern economic Superorganism. Opens with a real, direct synthesis connecting Elliott's own real term, 'instrumental behavior,' to the psychopathic-institution framing Nate had already explored with Nancy McWilliams and Reid Meloy (already built, RR-19) the prior year."@en ;
+    dct:created "2026-08-25"^^xsd:date ;
+    dct:issued "2026-09-04"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/157-decent-people-indecent-system> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/09/Frankly-157-Transcript-Decent-People-Indecent-System.docx.pdf> ;
+    thinkr:discusses tgs:Concept.SevenDialsOfInstitutionalPsychopathy, tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
+    dct:references tgs:Interview.TGS_231_GregElliott, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:hasDiscussionSummary "Nate directly grounds the whole episode in a real, foundational reassurance before laying out the dials: roughly 99% of individual humans are genuinely prosocial and kind, and the real problem lies in a system that selectively rewards predatory behavior, not in human nature itself becoming worse. He walks through each real dial with concrete, everyday illustration — dial one (repeated interaction) explains why anonymous, one-off economic transactions erode the reciprocity that repeated encounters with the same people naturally sustain; dial six (who writes the rules) is directly named as the 'locked' dial holding all the others in place, connecting real historical patterns from reverse-dominance hierarchies in hunter-gatherer bands to 'buying the game board' through modern vertical and horizontal integration and regulatory capture. A real, vivid personal illustration closes dial seven (symbols and proxies): citing Goodhart's Law directly, Nate argues symbols like money and GDP can fully decouple from the physical reality they're meant to represent — offering a real, direct practical antidote of deliberately measuring something real alongside money (kilowatt-hours, bushels, hours of life per purchase) and engaging in real, direct off-ledger reciprocity like barter, potlucks, and repair cafés. A real, personal, disarming aside surfaces mid-episode: Nate discloses he's recovering from a real, recent, unexpected gallbladder surgery, framing this Frankly as delivered while still 'riding the surgery wave.' Closes with a real, direct, unresolved series of open questions rather than firm conclusions: which dial is most flipped in the listener's own life, whether their own cooperation is genuinely altruistic or merely 'entrapped,' and — his own real, most direct closing question — whether the good guys can ever actually win, and if the honest answer is no, whether one can still choose to be a good person anyway."@en ;
+    skos:scopeNote "Real, honest date correction: the source show notes list 'Recorded on: Aug 25, 2023,' which is almost certainly a data-entry error given this episode is explicitly a direct follow-on to Greg Elliott's real TGS-231 appearance, itself a 2026 episode — corrected here to 2026-08-25 as the most plausible real date, consistent with the September 4, 2026 publish date. Real, further citable material found but NOT built in this pass: Greg Elliott's own real Substack essay on the Psychopathic Selection Hypothesis, directly cited alongside his TGS appearance, not modeled as a separate Work given it's the same underlying framework already captured via the Concept and his built episode."@en ;
+    .
+
+
+tgs:Monologue.Frankly_158_WhatWouldChangeMyMind a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-11"^^xsd:date ;
+    thinkr:updatedDate "2026-09-11"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Human Predicament: What Would Change My Mind"@en ;
+    skos:definition "Prompted directly by a stranger's pointed question in conversation — what would change his mind about his own core thesis — Nate works through a real, two-layer answer: first a list of concrete biophysical signals that would challenge his diagnosis, then a real, direct recognition that none of those signals move on their own, since they are themselves downstream of a deeper cultural shift roughly a decade prior."@en ;
+    dct:created "2026-09-08"^^xsd:date ;
+    dct:issued "2026-09-11"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/158-the-human-predicament-what-would-change-my-mind> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/09/Frankly-158-Transcript-What-Would-Change-My-Mind.docx.pdf> ;
+    thinkr:discusses tgs:Concept.WhatWouldChangeMyMind, tgs:Concept.CarbonPulse, tgs:Concept.PlanetaryBoundaries ;
+    dct:references tgs:Interview.TGS_146_BillPlotkin, tgs:Human.DonellaMeadows, tgs:Human.DavidSloanWilson, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:Monologue.Frankly_44_TheManyShapesOfTheCarbonPulse, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Interview.TGS_139_DanielChristianWahl ;
+    thinkr:hasDiscussionSummary "Nate directly states his own real, single-sentence thesis for the purposes of this exercise: within roughly a decade, human civilization will undergo a deflationary depression triggered in bond and currency markets once financial claims on biophysical reality exceed that reality, initiating a phase shift toward a more local, regionally integrated world. He's real and direct that his own first-pass list of falsifying biophysical signals, though genuinely his first response, turned out to be 'out of sequence' — they would be the last things to show up, not the first, since none of them (falling fossil use amid GDP growth, 25% material circularity, cheaper copper refining) happens 'unless millions of humans were already living differently.' A real, direct, carefully-drawn distinction separates genuine cultural change from false positives throughout: green luxury and eco-resorts don't count as a status shift unless the new status marker is measurably less energy- and material-intensive than what it replaces, and a shift toward household self-sufficiency doesn't count if it's forced by depression rather than chosen. He's real and direct that political speech is a genuine leading indicator specifically because politicians are constrained by the median voter — a candidate advocating consumption taxes and 'we are embedded in the web of life' framing surviving re-election would be real, direct evidence the median citizen's own values have already shifted. Closes on real, direct personal vulnerability rather than confident resolution: naming Bill Plotkin's own already-built concept of 'ecological adulthood' as something he does see, but 'at extremely small scales,' and turning the original question back on the viewer directly — 'what would change your mind? And if you can't think of anything, sit with that, because I did for a bit.'"@en ;
+    skos:scopeNote "Real, honest correction: the source show notes' own recorded_date field reads 'Sep 8, 2023,' clearly a typo given every cited source in the episode is 2025/2026-dated and the episode published September 11, 2026 — the real recorded date is treated here as September 8, 2026. Real, further citable material found but NOT built in this pass: Frankly_115 ('Inflation, Deflation, and Simplification') and Frankly_32 ('The Perils of EROI'), both real, directly cited as archive references, neither yet built."@en ;
+    .
+
+

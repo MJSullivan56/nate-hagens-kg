@@ -2598,3 +2598,55 @@ tgs:Relationship.NateHagens_DanOConnor a thinkr:Relationship, owl:NamedIndividua
           thinkr:episode tgs:Interview.TGS_168_DanOConnor ;
           dcterms:date "2025-02-05"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence — Nate's own real, direct closing words, 'to be continued, my friend,' despite this being their real, first conversation with no prior-relationship language anywhere in the episode. Real, direct separate statement: Nate calls the conversation 'novel' and says he's 'never had a guest like' O'Connor — warmth appears to have formed genuinely during this specific exchange."@en .
+
+tgs:Relationship.NateHagens_SarahWilson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SarahWilson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with Sarah Wilson"@en ;
+    skos:scopeNote "RelationshipType.Personal — direct, explicit evidence from Nate's own real intro to TGS-234: 'luckily, Sarah and I are friends, and she brought enough energy and stories to balance our conversation' (Nate notes he was recording with a cold and low energy). Not modeled as a new/first-episode friendship the way Persona.GregElliott's own relationship was -- Nate's own phrasing implies an existing, prior friendship, not one formed during this episode."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_234_SarahWilson ] ;
+    .
+
+tgs:Relationship.NateHagens_OlivierHamant a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.OlivierHamant ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Olivier Hamant"@en ;
+    skos:scopeNote "Professional relationship only -- no evidence in the TGS_230 transcript of a personal/pre-existing friendship. Nate's own real intro states directly this is their first conversation ('here we are, our first conversation'), and the episode closes on warm but professional terms ('great to meet you,' 'to be continued') rather than any explicit friendship claim."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_230_OlivierHamant ] ;
+    .
+
+tgs:Relationship.NateHagens_JohnChurchill a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnChurchill ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' personal and professional relationship with John Churchill"@en ;
+    skos:scopeNote "RelationshipType.Personal -- direct evidence from Nate's own real closing line: 'Thank you for all your work, and your vision and your time today. Definitely to be continued, my friend.' Same real evidentiary bar as Persona.GregElliott's own Personal tag."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_228_JohnChurchill ] ;
+    .
+
+tgs:Relationship.NateHagens_SalMercogliano a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SalMercogliano ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Sal Mercogliano"@en ;
+    skos:scopeNote "Professional relationship only -- their first conversation, invited on short notice given real, live relevance to the unfolding Strait of Hormuz crisis. Closing exchange is warm but professional ('it was nice to meet you, and to be continued, Sal' / 'it was a pleasure to talk to you'), not a personal-friendship claim."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_227_SalMercogliano ] ;
+    .

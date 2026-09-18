@@ -1641,3 +1641,61 @@ tgs:Persona.DanOConnor a thinkr:Persona, owl:NamedIndividual ;
     rdfs:label "Dan O'Connor (persona)"@en ;
     skos:scopeNote "Personal tag directly evidenced: Nate's own real, direct closing words, 'to be continued, my friend' — despite this being their real, first conversation (no prior-relationship language anywhere in the episode), suggesting real, immediate warmth formed during the conversation itself. Nate directly, separately states this was 'novel' and that he's 'never had a guest like' O'Connor."@en ;
     .
+
+tgs:Persona.StefanRahmstorf a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.StefanRahmstorf ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    skos:prefLabel "Stefan Rahmstorf"@en ;
+    rdfs:label "Stefan Rahmstorf (persona)"@en ;
+    skos:scopeNote "Real, direct gap closed (2026-09-12): tgs:Human.StefanRahmstorf was built earlier this session (from Frankly-72's own real citation) but its own matching Persona was never created, leaving him without one despite the established one-Human-one-Persona pattern. No real relationship evidence exists yet -- his own real TGS episode (TGS-141, minted as a stub in this same batch) has not been built from a transcript, so no thinkr:hasProfessionalRelationship is asserted here; add one once real episode content exists."@en ;
+    .
+
+tgs:Persona.SunitaNarain a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SunitaNarain ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    skos:prefLabel "Sunita Narain"@en ;
+    rdfs:label "Sunita Narain (persona)"@en ;
+    skos:scopeNote "Real, direct gap closed (2026-09-12): tgs:Human.SunitaNarain was built earlier this session (from Xiye Bastida's TGS-208 citation) but its own matching Persona was never created -- the same real gap pattern found and fixed for Stefan Rahmstorf in the prior batch, now confirmed as a genuine, recurring issue worth a dedicated future audit. No real relationship evidence exists yet -- her own real TGS episode (TGS-159, minted as a stub in this same batch) has not been built from a transcript, so no thinkr:hasProfessionalRelationship is asserted here; add one once real episode content exists."@en ;
+    .
+
+tgs:Persona.RobertLustig a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RobertLustig ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    skos:prefLabel "Robert Lustig"@en ;
+    rdfs:label "Robert Lustig (persona)"@en ;
+    skos:scopeNote "Real, direct gap closed (2026-09-12): tgs:Human.RobertLustig was built earlier this session (from Frankly-128's own citation) but its own matching Persona was never created -- the third instance of this same real gap pattern found this session (after Rahmstorf and Narain), confirming it as a genuine, recurring issue. His own real TGS episode (TGS-69, already minted as a stub in an earlier batch this session) has not been built from a transcript, so no thinkr:hasProfessionalRelationship is asserted here; add one once real episode content exists."@en ;
+    .
+
+tgs:Persona.SarahWilson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SarahWilson ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SarahWilson ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_SarahWilson ;
+    skos:prefLabel "Sarah Wilson"@en ;
+    rdfs:label "Sarah Wilson (persona)"@en ;
+    .
+
+tgs:Persona.OlivierHamant a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.OlivierHamant ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_OlivierHamant ;
+    skos:prefLabel "Olivier Hamant"@en ;
+    rdfs:label "Olivier Hamant (persona)"@en ;
+    .
+
+tgs:Persona.JohnChurchill a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnChurchill ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnChurchill ;
+    thinkr:hasPersonalRelationship tgs:Relationship.NateHagens_JohnChurchill ;
+    skos:prefLabel "John Churchill"@en ;
+    rdfs:label "John Churchill (persona)"@en ;
+    .
+
+tgs:Persona.SalMercogliano a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SalMercogliano ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SalMercogliano ;
+    skos:prefLabel "Sal Mercogliano"@en ;
+    rdfs:label "Sal Mercogliano (persona)"@en ;
+    .

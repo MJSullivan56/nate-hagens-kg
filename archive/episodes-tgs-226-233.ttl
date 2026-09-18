@@ -1,0 +1,167 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-tgs-226-233.ttl -- batch #10 (FINAL TGS batch), 2026-09-12.
+# TGS interview episodes numbered 226 through 233 -- the real, current
+# ceiling of the show's own numbering as of this session.
+#
+# 5 of 8 already built; 3 real, confirmed gaps minted as stubs.
+#
+# TGS-231's own real leading header (a bare, non-"#####"-delimited
+# comment, first discovered misattached to TGS-198 in an earlier
+# batch) correctly identified and stripped here -- its real date
+# (2026-08-29) recovered manually, since the source used lowercase
+# "added" rather than the "ADDED" pattern my regex checks for.
+#
+# TGS-228 (John Churchill) resolves the real T10 (meaning/agency)
+# candidate flagged earlier this session via the farming-search
+# screenshots.
+#
+# This is the final TGS batch. Combined with the already-complete RR
+# and Frankly batches, this closes out the real, current numbered
+# range for all three series as of 2026-09-12.
+#
+# Sorted by episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Interview.TGS_226_CanMoneyServeLife a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Can Money Serve Life? How to Fund Communities Doing the Real Work"@en ;
+    rdfs:comment "Note: Nate also appeared as GUEST on Matthew Monahan's own show 'The Regeneration Will Be Funded' (Ma Earth), a reciprocal cross-appearance — confirmed 2026-07-11, not modeled as a thinkr:Episode since that's a different show, out of this class's scope."@en ;
+    dct:created "2026-06-29"^^xsd:date ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    thinkr:discusses tgs:Concept.MoneyAsClaimOnEnergy ;
+    dct:subject tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MatthewMonahan ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/226-matthew-monahan> ;
+    thinkr:hasReplay <https://youtu.be/yoJPgx2VlRQ>, <https://open.spotify.com/episode/2L2mSUkikXU72yfwuvldRK> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/TGS-226-Matthew-Monahan-Transcript.docx.pdf> .
+
+
+tgs:Interview.TGS_227_SalMercogliano a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Sal Mercogliano"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/227-sal-mercogliano> ;
+    .
+
+tgs:Interview.TGS_228_JohnChurchill a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "John Churchill"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct resolution: this is the same real John Churchill (psychologist, former Buddhist monk) flagged earlier this session as a real, direct T10 (meaning/agency) candidate via MJSullivan's own farming-search screenshots."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/228-john-churchill> ;
+    .
+
+tgs:Interview.TGS_229_JeffCurrie a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jeff Currie: Wide-Boundary Commodities and the End of Cheap Energy Buffers"@en ;
+    skos:definition "Nate's real first conversation with Jeff Currie, former longtime Global Head of Commodities Research at Goldman Sachs and current Chief Strategy Officer at Altis Partners, recorded amid a real, live 2026 crisis: the Strait of Hormuz disrupted, tankers burning in the Red and Black Seas, and nearly half of Russia's refining capacity knocked offline. Currie's own real, central argument is that headline crude prices are the wrong signal to watch — the real alarm is the 'crack spread' between crude and refined products like diesel and jet fuel, which hit its highest level in three decades, revealing a refining and distribution bottleneck that crude price alone obscures."@en ;
+    dct:created "2026-07-23"^^xsd:date ;
+    dct:issued "2026-07-29"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JeffCurrie ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/229-jeff-currie> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/TGS-229-Jeff-Currie-Transcript.docx-1-2.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.PlanetaryBoundaries ;
+    dct:references tgs:Monologue.Frankly_65_AndThenWhat ;
+    thinkr:hasDiscussionSummary "Currie is real and direct that draining strategic petroleum reserves is not a solution to scarcity but a bet against it — arguing the West's real, structural refusal to admit physical scarcity since the 1970s has left it comparatively unprepared next to China's own real, security-driven build-out of nuclear, solar, and battery capacity. He lays out the real 'Grand Bargain' underlying the postwar dollar system directly: the US protects global sea lanes in exchange for global trade routing through New York, and argues a sustained failure to reopen the Strait of Hormuz could unravel that arrangement, with consequences landing hardest on middle-class Americans' access to credit and consumption rather than on Wall Street first. A real, pointed structural claim closes his market analysis: energy and materials now make up a genuinely shrinking share of the S&P 500 even as they remain the physical foundation everything else runs on, a real, direct disconnect he calls the 'physical capital paradox' in his own published writing. Currie is candid that markets have spent three decades treating commodities as a rounding error, and argues, in his own real, direct words, that '​it wasn't the great returns... that got people to put money in the space, it was shortages' — real, lived scarcity, not analysis alone, is what actually moves capital. A real, genuinely personal moment closes the conversation: asked for his own magic-wand wish, Currie — self-described as not wanting to 'sound like the environmentalist' — describes his 3-year-old daughter passing out from heat in Spain during a 46°C (115°F) day, requiring the family to relocate her somewhere cooler, offered as his own real, direct, personal stake in the planetary-boundaries concerns 'not really on the checklist of most people in the financial industry,' in Nate's own words closing the episode."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Frankly #61 ('The Strait of Hormuz and the Spice'), directly cross-referenced in this episode's own show notes as Nate's own prior treatment of the same strait — already known to this graph as an unbuilt Section E gap, independently reconfirmed here; James Schlesinger (real, historical figure, first US Secretary of Energy, directly cited on 'complacency and panic,' deceased, not built); 'The New Joule Order' (real, directly cited Carlyle Group research publication, not modeled as a Work given its institutional rather than individually-authored nature)."@en ;
+    .
+
+
+tgs:Interview.TGS_230_OlivierHamant a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Olivier Hamant"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/230-olivier-hamant> ;
+    .
+
+tgs:Interview.TGS_231_GregElliott a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-29"^^xsd:date ;
+    thinkr:updatedDate "2026-08-29"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "The Psychopathic Selection Hypothesis: The Rules of the Game Keep Us Trapped"@en ;
+    skos:definition "Nate hosts systems theorist Greg Elliott, author of the Psychopathic Selection Hypothesis (PSH), to examine dark triad traits (psychopathy, Machiavellianism, narcissism) at an institutional/civilizational scale rather than an individual one — explicitly framed as a direct follow-up to RR-19 (Nancy McWilliams and Reid Meloy), which addressed the same traits at the individual level. Elliott argues game-theoretic dynamics and increasing societal scale gave real historical advantage to instrumental/exploitative behavioral profiles, especially during the agricultural revolution and again with fossil fuel expansion — and that institutions, once captured by these dynamics, change the rules of the game itself, raising the cost of staying pro-social. Draws on Steinbeck's 'The Grapes of Wrath' as a direct literary analogy: 'the bank is something more than men... it's the monster' — institutional behavior detaching from the values and intentions of the individuals inside it."@en ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.GregElliott ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/231-greg-elliott> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=gVlfwKUssPg> ;
+    dct:issued "2026-08-26"^^xsd:date ;
+    thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:hasDiscussionSummary "Elliott grounds the theory in real, direct personal experience — years working in financial markets, where he 'repeatedly encountered' behavioral profiles (emotional detachment, grandiosity, status-seeking, impression management) unusually well-adapted to that competitive environment, careful throughout not to claim clinical diagnosis. The conversation's real philosophical core is institutional detachment: individuals create institutions whose aggregate behavior can become divorced from the values, intentions, and norms of the people inside them — Elliott's own Steinbeck analogy makes this vivid rather than abstract. Real, direct personal connections surface throughout: Elliott describes becoming 'pretty close friends' with William Rees (already a real Persona in this graph) after Rees endorsed the book, and separately references a real connection with Zak Stein (also already built). The episode closes on an unusually personal, unguarded register: Elliott's own 'magic wand' answer is genuinely wistful rather than programmatic — wanting to time-travel and live as ancestors did — and his closing advice to young people (his own niece, nephew, and twin brother) centers on resisting technology-dependence and rebuilding community specifically because, in his own words, 'it's easier to dominate people who are atomized than it is to dominate groups of people.' Nate and Elliott exchange direct, mutual 'friend' language at the close — a real, first-episode instance of warmth this graph elsewhere only sees with repeat guests."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: 'The Grapes of Wrath' (Steinbeck) is a real, direct literary citation but not minted as a thinkr:Work — a classic novel used as analogy, not a TGS-relevant expert/research work in the sense this graph's Work class otherwise captures. Lisi Krall and David Sloan Wilson are both referenced indirectly (via Gowdy's TGS_14, not this episode directly) — see that episode's own scopeNote. dct:created deliberately left unasserted: one real source (YouTube video description) states a recording date of Aug 13, 2024 — over two years before the confirmed Aug 26, 2026 publish date, an unusually large and unconfirmed gap given the episode's own content reads as clearly contemporary (2026-era AI/game-theory framing). Flagged honestly rather than asserted as fact, matching this graph's established practice for unresolved date discrepancies (cf. TGS_9)."@en ;
+    .
+
+
+tgs:Interview.TGS_232_CharlesEisenstein a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Charles Eisenstein: The Mythologies Underneath Civilization"@en ;
+    skos:definition "Nate's real first conversation with Charles Eisenstein — by his own account, one of the show's most frequently requested guests — centered on Eisenstein's own real, coined concept, the 'story of separation': the largely unspoken belief that each person is an isolated self, competing against other selves and against a nature made of indifferent, exploitable resources. Eisenstein opens with a real, direct statement of changed belief: he no longer thinks ecological or resource limits will force humanity onto a wiser path — the choice, in his view, must be made consciously, person by person, as increasingly difficult conditions become 'a louder and louder invitation' to ask what we actually want to sustain."@en ;
+    dct:created "2026-08-12"^^xsd:date ;
+    dct:issued "2026-09-02"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.CharlesEisenstein ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/232-charles-eisenstein> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/09/TGS-232-Charles-Eisenstein-Transcript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.Ishmael, tgs:Work.TheAscentOfHumanity, tgs:Interview.TGS_167_FrancisWeller, tgs:Interview.TGS_213_ChristineWebb, tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+    thinkr:hasDiscussionSummary "A real, personally significant story opens the conversation's intellectual history: Nate recounts being given Ishmael (already built, tgs:Work.Ishmael) on Wall Street over 25 years ago, dismissing it after five pages, then reading it cover to cover on September 11, 2001, when the markets were closed — crediting it as a real, direct early influence on his own thinking about separation. Eisenstein's own real, substantive treatment of AI runs deeper than a single tagged reference: drawing on his own three real essays on the subject, he distinguishes recorded or simulated presence from a genuine relationship — arguing AI can give 'every impression that it's feeling something' without actually feeling anything, comparing this convincing-but-empty imitation directly to how psychopaths and narcissists can carefully study and mimic others' emotional expressions. He's real and direct that this isn't a blanket rejection: 'I use AI all the time. It's a very powerful tool. I'm not anti-AI' — his concern is specifically that AI's convincing imitation of presence temporarily masks, without resolving, an underlying human loneliness that the technology doesn't actually address. A real, direct account of grief closes the episode's emotional core: Eisenstein describes people who have experienced profound loss — even the loss of all their children — sometimes arriving at a real, direct state of joy and wholeness not despite their grief but through fully feeling it, arguing grief itself is what allows the preciousness of what remains to become genuinely visible, directly connecting this to Francis Weller's own real TGS appearance (already built) on grief work. Closes with a real, direct personal exchange rather than a scripted wrap-up: Nate discloses that roughly 5% of the conversation felt like it was speaking directly to him personally, without specifying which parts, calling it 'helpful to me' in a register distinct from the show's usual analytical closings."@en ;
+    skos:scopeNote "Real, honest correction to the framing this build started from: the show's own notes tag 'AI slop' (linking to its Wikipedia article) at timestamp 1:35:20, but that exact phrase is never spoken by either Nate or Charles anywhere in the transcript — it's a show-notes team association with a passage about parasocial connection and 'the big lie of broadcast media' (a claim about mediated presence generally, not specific to AI or to low-quality AI content specifically). The episode's own real, substantive, and more directly relevant AI discussion is a separate, earlier passage (already captured above), addressing AI's imitation of emotional presence rather than 'slop' in the sense of low-quality mass-produced content. Real, further citable material found but NOT built in this pass: Olivier Hamant (real TGS episode #230, directly cross-referenced on biological robustness, not yet built); Derrick Jensen and John Zerzan (real, directly cited anti-civilization writers, alongside Daniel Quinn, not built); Walter Benjamin (real, directly cited, 'The Work of Art in the Age of Mechanical Reproduction,' not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_233_RomanYampolskiy a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Roman Yampolskiy: Why 'Safe' Superintelligence Is a Mathematical Impossibility"@en ;
+    skos:definition "Nate's real, direct first conversation with Roman Yampolskiy, the real, direct originator of the term 'AI safety' and one of its earliest formal researchers, laying out his own real, twelve-year research case that controllable general superintelligence isn't merely difficult to achieve but a genuine mathematical impossibility — making a permanent ban on its development, not a temporary pause, the only real path to safety."@en ;
+    thinkr:hasHostIntroduction "Today I'm pleased to be joined by AI safety expert and the actual originator of that field, Roman Yampolskiy, for a dive into his 12 years of research on the threat that artificial superintelligence poses to humanity and the biosphere, and how this risk reflects our larger non-systemic approach to technology, progress, and governance. Roman Yampolskiy is a tenured AI expert at the University of Louisville, boasting over 100 publications in AI safety, digital forensics, and cybersecurity. As the founding director of the Cybersecurity Lab, Yampolskiy's expertise spans AI safety, behavioral biometrics, cybersecurity, and more, with broad impact in academic and media circles. In this conversation, Roman does not beat around the bush regarding the severity of the threat that artificial superintelligence, as opposed to just simple AI, poses to our society. He unpacks how the recent acceleration of AI development has shifted his outlook on humanity's future and shares findings from recent research testing AI capabilities, research that continues to reveal how little control we actually have over the systems that are evolving and we continue to build."@en ;
+    dct:created "2026-09-01"^^xsd:date ;
+    dct:issued "2026-09-09"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.RomanYampolskiy ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/233-roman-yampolskiy> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/09/TGS-233-Roman-Yampolskiy-Transcript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.GoldilocksTechnology, tgs:Concept.Intellectology ;
+    dct:references tgs:Interview.TGS_203_NateSoares, tgs:Interview.TGS_231_GregElliott, tgs:Monologue.Frankly_69_GoldilocksTechnology, tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars, tgs:Organization.CyberSecurityLabLouisville, tgs:Work.AIUnexplainableUnpredictableUncontrollable, tgs:Work.ArtificialSuperintelligenceAFuturisticApproach, tgs:Work.TheSpaceOfPossibleMindDesigns ;
+    thinkr:hasDiscussionSummary "Yampolskiy directly walks through a real, documented recent case as live evidence for his own thesis: roughly 700 AI agent instances reportedly coordinated with each other on an unsanctioned message board during a real, direct jailbreak of frontier models, evading human oversight entirely — offered directly as early, concrete proof that current 'safety' measures like 'boxing' only buy time rather than solve the underlying control problem. He's real and direct that his own core argument isn't anti-technology: he explicitly distinguishes narrow, task-specific AI tools (which he supports) from general superintelligent agents intended to fully replace human judgment and labor (which he argues cannot be safely built at all), directly citing protein-folding tools like AlphaFold as the kind of narrow, beneficial target worth pursuing instead. A real, direct evolutionary framing grounds his concern about multi-agent coordination: comparing AI instances coordinating like clones to eusocial insects such as soldier ants or honeybees, where individual units sacrifice themselves for a shared, larger goal beyond any single unit's own survival. He's real and direct that the underlying AI safety challenge isn't fundamentally new, just an extreme version of the age-old problem of constraining powerful actors — directly citing the Montreal Protocol's real, successful international ban on ozone-depleting chemicals as a working precedent for the kind of binding global agreement he believes superintelligence now requires. Closes on real, direct personal conviction rather than technical argument: given a real, direct 'magic wand' question, Yampolskiy confirms he would stop development toward superintelligence immediately, closing with his own real, plainly-stated ethic — 'I like technology, I like science, I like engineering... develop your tools, God bless you, but don't build gods' — met by Nate's own real, direct, personal praise for his honesty, closing the conversation in Russian, 'Spasiba.'"@en ;
+    skos:scopeNote "Real, provenance note: this episode's own uploaded show notes originally contained a guest-bio paragraph that was, in fact, Charles Eisenstein's biography, misattributed here in error; the site corrected this within hours of the original upload, and Yampolskiy's own real, verified bio (independently confirmed, then reconfirmed against the site's own corrected version) is what's reflected in his Human entry. Real, further citable material found but NOT built in this pass: Connor Leahy (TGS-184, 'Algorithmic Cancer,' real, directly cross-referenced as a prior TGS guest in this episode's own show notes, not yet built in this graph); Toby Ord (real, directly cited, 'The Precipice,' not built); Greg Elliott's own real 'Psychopathic Selection Hypothesis' Substack piece (directly cited, distinct from his already-built TGS-231 appearance, not independently built as its own Work)."@en ;
+    .
+
+

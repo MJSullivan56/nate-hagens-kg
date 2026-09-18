@@ -1,0 +1,92 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-animated.ttl -- new canonical file, created 2026-09-12
+# during the TGS/RR/Frankly merge. A real, genuine 4th episode class
+# (thinkr:EpisodeType.AnimatedVideo) was discovered during a final
+# cross-check of Series declarations against the merged files --
+# entirely missed by every batch this whole session, since all batch
+# extraction regexes only matched tgs:Interview./tgs:Monologue./
+# tgs:PanelDiscussion. patterns, never tgs:AnimatedVideo. This
+# real gap was caught only because tgs:Series.GreatSimplificationAnimatedSeries
+# turned up "MISSING" during a final, comprehensive Series check --
+# worth remembering this exact failure mode (a real class nobody knew
+# to search for) as a genuinely different risk than the header-
+# misattachment issues found throughout the batch process.
+#
+# Real, direct content: the show's own official 4-part animated
+# explanatory series (EnergyandOurFuture.org/ISEOF, animated by
+# Jumbo), one Series individual plus its 4 real member episodes.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Series.GreatSimplificationAnimatedSeries a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    dct:hasPart
+        tgs:AnimatedVideo.Part1EnergyBlind, tgs:AnimatedVideo.Part2TheHumanSuperorganism,
+        tgs:AnimatedVideo.Part3TheHumanBeing, tgs:AnimatedVideo.Part4TheGreatSimplification ;
+    skos:prefLabel "The Great Simplification Animated Series"@en ;
+    rdfs:comment "4-part animated explanatory series (EnergyandOurFuture.org/ISEOF, animated by Jumbo), combined into a single 32-minute film premiered via YouTube Premiere May 19, 2022. Real, consistent-across-all-4-parts production credits: Nate Hagens (Executive Producer), Leslie Batt-Lutz (Creative Director), Elizabeth Sirianni (Editor & Creative Consultant), Justin Ritchie (Producer, Jumbo), Elliot Wilks (Lead Animator & Art Director, Jumbo). Part-specific credits (illustrator, voice coaches) are on each individual AnimatedVideo. Real 'thanks to' contributors credited across all 4 parts for script/sound/suggestions: tgs:Human.DJWhite, tgs:Human.ChuckWatson (Chuck Watson's identification here is plausible given his own extensive, real, established TGS collaboration, but not independently confirmed as the same individual beyond name match), and tgs:Human.JoanDiamond — all three already real, built Personas in this graph. Joan Diamond's status was upgraded 2026-08-13 (same day) from an unbuilt acknowledgment-level credit to a full Persona, after Frankly_80's own transcript independently confirmed her as a real prior TGS guest (#28) and an unusually close relationship ('longtime friend, colleague, board member, and muse'). Rex Weyler, Kyle Saunders, Travis Hall, and Todd Hagens remain real but not built as individuals — peripheral acknowledgment-level credits."@en ;
+    dct:creator tgs:Human.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/resources> ;
+    .
+
+tgs:AnimatedVideo.Part1EnergyBlind a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.AnimatedVideo ;
+    skos:prefLabel "Energy Blind (Part 1 of 4)"@en ;
+    skos:definition "Real, direct narrative of deep-time human history — from Earth's formation through the Neolithic agricultural revolution to the 19th-century discovery of fossil-energy extraction — arguing the last 200 years of growth rest on a one-time geological windfall of stored solar energy, and that modern culture and institutions systematically fail to appreciate this ('energy blind'). Closes on the real, direct claim that early access to fossil energy would have appeared 'indistinguishable from magic' to prior generations, and that instead of recognizing the windfall, modern culture built stories crediting the resulting wealth to human ingenuity alone."@en ;
+    dct:isPartOf tgs:Series.GreatSimplificationAnimatedSeries ;
+    thinkr:seriesPosition 1 ;
+    thinkr:hasCanonicalSource <https://www.youtube.com/watch?v=T19tHn_LA80> ;
+    thinkr:hasTranscript <https://www.youtube.com/watch?v=T19tHn_LA80> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness, tgs:Concept.CarbonPulse ;
+    dct:contributor "Caleb Bond (Illustrator)"@en ;
+    .
+
+tgs:AnimatedVideo.Part2TheHumanSuperorganism a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.AnimatedVideo ;
+    skos:prefLabel "The Human Superorganism (Part 2 of 4)"@en ;
+    skos:definition "Real, direct explanation of the Carbon Pulse and Superorganism concepts as narration — energy as 'the currency of life,' the real biophysical relationship between money, technology, and finite energy/materials ('money is ultimately a direct claim on energy and resources'), and how growth-oriented institutions have self-organized around fossil-fuel-derived surplus, closing with the real, direct line: 'the human species... has become a mindless, insatiable, energy hungry, super organism.'"@en ;
+    dct:isPartOf tgs:Series.GreatSimplificationAnimatedSeries ;
+    thinkr:seriesPosition 2 ;
+    thinkr:hasCanonicalSource <https://www.youtube.com/watch?v=oNewKEOby80> ;
+    thinkr:hasTranscript <https://www.youtube.com/watch?v=oNewKEOby80> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.CarbonPulse ;
+    dct:contributor "Caleb Bond (Illustrator)"@en ;
+    .
+
+tgs:AnimatedVideo.Part3TheHumanBeing a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.AnimatedVideo ;
+    skos:prefLabel "The Human Being (Part 3 of 4)"@en ;
+    skos:definition "Real, direct examination of evolved human psychology as the actual driver of the Superorganism described in Part 2 — dopamine/reward-prediction dynamics, status-signaling and in-group/out-group tribalism, hyperbolic discounting of the future, and the real claim that 'modern society is only a single brief example out of thousands of successful arrangements in human history,' closing on a real, direct reframe that a global superorganism 'is not our destiny.'"@en ;
+    dct:isPartOf tgs:Series.GreatSimplificationAnimatedSeries ;
+    thinkr:seriesPosition 3 ;
+    thinkr:hasCanonicalSource <https://www.youtube.com/watch?v=OEbSysJt30I> ;
+    thinkr:hasTranscript <https://www.youtube.com/watch?v=OEbSysJt30I> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:contributor "Joseph Navarra (Illustrator)"@en, "Mike Kriefski (Voice Coach)"@en, "Eric Borchardt (Voice Coach)"@en ;
+    skos:scopeNote "MJSullivan's own uploaded file for this part carried Part 2's real URL by mistake (a real, direct copy-paste error, confirmed and corrected by MJSullivan directly); the real URL used here was independently verified via web search before being confirmed by MJSullivan."@en ;
+    .
+
+tgs:AnimatedVideo.Part4TheGreatSimplification a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.AnimatedVideo ;
+    skos:prefLabel "The Great Simplification (Part 4 of 4)"@en ;
+    skos:definition "Real, direct synthesis of Parts 1-3 into a single argument, structured as 6 real named chapters: The Road Ahead, Flawed Societal Lenses (economist/financial/technology lenses, all real, direct critiques — the technology lens described matches this graph's own real SchoolOfThought.TechnoOptimism closely), The Systems Lens, The Necessity of Energy, The Great Simplification itself, and Navigating the Future. Closes by naming 'the great simplification' directly as the coming era's own real name, arguing available pathways range from genuinely preferable to nearly unthinkable, and that navigating them well will require 'imagination, foresight, empathy, and above all, wisdom.'"@en ;
+    dct:isPartOf tgs:Series.GreatSimplificationAnimatedSeries ;
+    thinkr:seriesPosition 4 ;
+    thinkr:hasCanonicalSource <https://www.youtube.com/watch?v=n9wDHAJswOg> ;
+    thinkr:hasTranscript <https://www.youtube.com/watch?v=n9wDHAJswOg> ;
+    thinkr:discusses tgs:Concept.GreatSimplification, tgs:Concept.CarbonPulse, tgs:Concept.Superorganism, tgs:SchoolOfThought.TechnoOptimism ;
+    dct:references <https://www.artberman.com/blog/addicted-to-electricity-a-preview-of-the-great-simplification/> ;
+    dct:contributor "Joseph Navarra (Illustrator)"@en, "Mike Kriefski (Voice Coach)"@en, "Eric Borchardt (Voice Coach)"@en ;
+    skos:scopeNote "Real backlink in this video's own official show notes to Art Berman's own real blog post, 'Addicted to Electricity: A Preview of The Great Simplification' — Art Berman is already a real, built Persona in this graph (RR-1, RR-16), but the blog post itself is a distinct real artifact from either of those; linked here as a direct URL rather than minted as its own Work individual, kept proportionate to its role as a single citation rather than a central source."@en ;
+    .

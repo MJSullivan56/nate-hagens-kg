@@ -1,0 +1,395 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-tgs-26-50.ttl -- batch #2, 2026-09-12.
+# TGS interview episodes numbered 26 through 50.
+#
+# 14 of 25 numbers already built; 11 real, confirmed gaps minted as
+# genuine minimal stubs. Two stubs (TGS-30 Steve Keen, TGS-45 Jon
+# Erickson) link directly to real, already-existing Personas from a
+# prior panel appearance (RR-3) rather than left as bare, disconnected
+# placeholders -- caught mid-batch and retroactively applied to
+# TGS-16's own stub from the PRIOR batch too (Tristan Harris), which
+# had missed the same real, existing Persona link.
+#
+# tgs:Series.BendNotBreak is NOT re-declared here, even though TGS-31,
+# 42, and 50 (all in this range) are real members -- it already lives
+# in episodes-tgs-1-25.ttl, and duplicating the same individual across
+# batch files would be redundant. Resolves naturally once batches
+# accumulate into one file.
+#
+# Sorted by episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Interview.TGS_26_PeterWhybrow a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Peter Whybrow"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/26-peter-whybrow> ;
+    .
+
+tgs:Interview.TGS_27_JoeTainter a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Joseph Tainter: The Collapse of Complex Societies"@en ;
+    skos:definition "BUILT OUT 2026-08-30 from a stub, using a complete real transcript and show notes. A genuinely foundational episode, both intellectually and personally: Nate directly credits Tainter's 1988 book, alongside Herman Daly's work, as a direct cause of his own decision to leave Wall Street. Tainter, an archaeologist by training, develops the real, technical distinction underlying his entire collapse theory — complexity (structure plus organization working together) versus mere complication (structure without organization) — illustrated with a real, vivid historical example: the 1942 US landing in North Africa, where 500,000 different types of military items were shipped but loaded haphazardly rather than in proper 'combat loading' order, making the operation complicated but not complex. Traces his own real intellectual origin to 1983, reading ecological optimal foraging theory and recognizing that the same cost-benefit logic explaining animal foraging strategies could explain why societies grow in complexity — and, its flip side, why they collapse."@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:issued "2022-07-13"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JosephTainter ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/27-joe-tainter> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=undp6sgCIX4> ;
+    thinkr:discusses tgs:Concept.ComplexityCollapse, tgs:Concept.MaximumPowerPrinciple ;
+    thinkr:hasDiscussionSummary "The episode's real theoretical core is Tainter's own direct claim that complexity always carries a real metabolic cost — a hunter-gatherer band of a hundred people costs only their own basic caloric metabolism to sustain, while modern complex societies require thousands of kilocalories per person to maintain, a cost historically paid in direct human labor before fossil fuels made it feel free. A real, extended discussion of innovation's own rising costs follows: Tainter contrasts Charles Darwin working alone in his 19th-century study with how research is actually conducted today — large institutional teams, energy-intensive buildings and equipment — arguing that innovation itself has become more complex and energy-dependent over time, potentially undermining the very mechanism (technological innovation) many assume will resolve energy decline. Tainter is real and consistent in his refusal to offer simple prescriptions throughout: asked repeatedly for concrete advice, his answer keeps returning to 'awareness' as the necessary first step, explicitly declining to promise it leads anywhere certain — 'we're a species that muddles through. That's all we've ever done and all we ever will do.' His own real, direct concern for the coming decade is notably specific and political rather than purely ecological: how declining material living standards and innovation will generate real political conflict within industrialized nations. The conversation closes on a genuinely personal note from Nate himself, thanking Tainter directly for research that 'was a life changing recognition' and naming the real, direct causal link to his own departure from a Wall Street career — one of the most personally revealing author-attributions found anywhere in this graph."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Herman Daly — directly named by Nate as a co-influence alongside Tainter on his own real career change, not yet a Persona in this graph despite being foundational to ecological economics broadly; Tadeusz Patzek — Tainter's real co-author on Drilling Down, already independently known to this graph as one of the 11 real repeat-guest coverage gaps (docs/repeat-guest-coverage.md, tgs-digest); Paul Ehrlich's real TGS episode #9 is independently reconfirmed here (already confirmed via TGS_12/Dennis Meadows) via this episode's own separate citation. 'Living in the Future's Past' (dir. Susan Kucera, featuring Jeff Bridges) is a real documentary both Tainter and Nate appeared in — a real, direct prior connection, not built as a Work individual in this pass."@en ;
+    .
+
+
+tgs:Interview.TGS_28_JoanDiamond a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Joan Diamond: \"From Kool-Aid to Lemonade\""@en ;
+    skos:definition "Nate's real, direct conversation with his own real, extremely close friend Joan Diamond — Executive Director of Stanford's Millennium Alliance for Humanity and the Biosphere, and a board member of Nate's own organization, Energy and Our Future (ISEOF) — whom he directly describes talking to 'almost every day.' Diamond helps frame how to genuinely plan for deep uncertainty without collapsing into either false certainty or paralyzing worst-case fixation, drawing on her own real, extensive background in nuclear-risk scenario planning."@en ;
+    dct:created "2022-06-30"^^xsd:date ;
+    dct:issued "2022-07-21"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoanDiamond ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/28-joan-diamond> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=LEm8QbKSglM> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/07/TGS28JoanDiamondTranscript.docx1_.pdf> ;
+    dct:references tgs:Interview.TGS_9_PaulEhrlich ;
+    thinkr:hasDiscussionSummary "Diamond directly grounds her scenario-planning approach in her own real, extensive nuclear-risk workshop experience, arguing genuine future-planning requires holding multiple real, plausible scenarios simultaneously rather than fixating on either optimistic or worst-case outcomes alone — a real, structured discipline distinct from simple forecasting. She's real and direct about a genuine structural tension facing nonprofits and research institutions: they must compete for the same limited funding dollars as the very problems they're trying to solve, creating a real, direct conflict between institutional survival and genuinely collaborative problem-solving. A real, pointed critique of modern academia closes her own institutional-analysis section: increasing specialization has made individual experts genuinely less capable of addressing real, complex, cross-disciplinary problems, even as the problems themselves grow more interconnected — with universities increasingly operating like corporations rather than genuinely open centers of inquiry. Closes on a real, extraordinarily warm personal note distinct from the substantive analysis: Nate directly credits Diamond as essential to his own real accomplishments — 'I could not have accomplished what I've done to this point without your frequent support and wisdom and grace' — a real, direct tribute given in front of the show's own audience, not merely privately."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Jamie Wheal (real, directly cited, his own real TGS episode #13, not built); Louise Penny (real, directly cited novelist, The Madness of Crowds, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_29_JoshFarleyAppearance2 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    rdfs:comment "Title still unconfirmed as of 2026-08-13 (real canonical URL now confirmed via RR-1's own real show notes) — placeholder skos:prefLabel kept honest rather than inventing one."@en ;
+    skos:prefLabel "Josh Farley (Episode 29, title unconfirmed)"@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoshFarley ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/29-josh-farley> .
+
+
+tgs:Interview.TGS_30_SteveKeen a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Steve Keen"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.SteveKeen already exists in this graph (from a real, prior panel appearance) -- linked directly rather than left as a bare, disconnected stub."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/30-steve-keen> ;
+    thinkr:hasGuest tgs:Persona.SteveKeen ;
+    .
+
+tgs:Interview.TGS_31_SensemakingUncertaintyPurpose a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Bend Not Break Part 3: Sensemaking, Uncertainty, and Purpose"@en ;
+    rdfs:comment "Nate's own Substack post about this episode explicitly says the conversation diverged from its planned topic, 'and this divergence means we've extended this Bend Not Break series to (at least) 5 installments' — this is the episode where the series grew from its original shorter plan."@en ;
+    dct:created "2022-08-10"^^xsd:date ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/31-daniel-schmachtenberger> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=kTFqnPEyweE> ;
+    dct:isPartOf tgs:Series.BendNotBreak ;
+    thinkr:seriesPosition 3 .
+
+
+tgs:Interview.TGS_32_TimotheeParrique a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Timothee Parrique"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/32-timothee-parrique> ;
+    .
+
+tgs:Interview.TGS_33_KrisDeDecker a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Kris De Decker: \"Low Tech: What, Why and How\""@en ;
+    skos:definition "Nate's real first conversation with Kris De Decker, creator of Low-Tech Magazine and No Tech Magazine, introducing his own real, central distinction between high-tech and low-tech approaches to a lower-energy future. De Decker directly argues renewable energy systems don't actually fit the current growth-dependent economic system, since intermittent generation requires either accepting variable availability (adjusting energy use to weather and season, a real low-tech response) or building storage and overcapacity to simulate constant supply (a real high-tech, materials-intensive response) — arguing the latter path is what's actually being pursued despite its own real resource costs."@en ;
+    dct:created "2022-08-11"^^xsd:date ;
+    dct:issued "2022-08-24"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.KrisDeDecker ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/33-kris-de-decker> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS33_KrisDeDecker.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/08/TGS33KrisDeDeckerTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness ;
+    dct:references tgs:Interview.TGS_27_JoeTainter ;
+    thinkr:hasDiscussionSummary "De Decker directly credits solar batteries' real, short practical lifespan (typically just a few years) as a genuine constraint most renewable-energy optimism overlooks, arguing this alone makes 'simulating' constant fossil-fuel-style availability through storage a real, ongoing resource drain rather than a one-time fix. A real, direct case study grounds his low-tech alternative concretely: Finland's own real public discussion of planned 'energy descent' — deliberately adjusting consumption downward and seasonally rather than assuming supply must always meet current demand. Real, current events ground the conversation's urgency directly: recorded during the acute 2022 European energy crisis, with De Decker discussing Russia's real, live threat to cut gas supply and its direct effect on food production in Belgium and the Netherlands, alongside a real, concrete account of Spain's own real emergency law restricting air conditioning in public buildings. Real, striking urban-heat evidence closes the built-environment section: a London hospital's real data center crashed from heat during a 2022 heatwave, offered as a direct, physical illustration of digital infrastructure's own real vulnerability to a warming climate it also contributes to. Closes with real, unhedged personal conviction rather than a hedged policy position: asked for his own magic-wand wish, De Decker names abolishing the car outright as the single highest-leverage change, arguing car-centric infrastructure has quietly consumed roughly 90% of public space and eliminated the everyday street-level social contact that once functioned as informal community oversight — followed immediately by a second real target, the smartphone, both offered as the two changes that alone would deliver what he calls 'a low tech paradise.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Joseph Tainter (real TGS episode #27, directly cross-referenced regarding complexity and diminishing returns — already built in this graph, cited here rather than deferred)."@en ;
+    .
+
+
+tgs:Interview.TGS_34_KirilSokoloff a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-21"^^xsd:date ;
+    thinkr:updatedDate "2026-08-21"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Kiril Sokoloff: \"What's the Most Important Question in Today's World?\""@en ;
+    skos:definition "Nate hosts veteran investor Kiril Sokoloff (Chairman and Founder, 13D Research & Strategy, since 1983) for a wide-ranging conversation taking a real, direct biophysical-economics view of global energy and financial systems — peak oil, the shale revolution, inflation as a real oil-induced phenomenon since 1973, wealth distribution, and geopolitics (BRICS, the Shanghai Cooperation Organisation, dollar hegemony), closing on Sokoloff's own real, personal reflections on Buddhism and what he calls 'the scaling of human consciousness.'"@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.KirilSokoloff ;
+    dct:created "2022-08-17"^^xsd:date ;
+    dct:issued "2022-08-31"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/34-kiril-sokoloff> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/08/TGS34KirilSokoloffTranscript.pdf> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS34_KirillSokoloff.mp3> ;
+    dct:references tgs:Work.RealityBlind ;
+    skos:scopeNote "No YouTube video exists for this episode — confirmed via the real scrape record's own explicit _gaps: [youtube_url] marker, not merely unfilled. Real, direct show-notes citations to this graph's own already-built Work.RealityBlind, at two separate specific page references (peak oil, and the real global oil-production decline rate absent new drilling) — a genuine, deliberate authorial choice to cite his own book mid-conversation, not incidental."@en ;
+    thinkr:hasDiscussionSummary "A genuinely wide-ranging, historically-grounded conversation, anchored throughout in Sokoloff's own real, direct expertise tracking multi-decade economic cycles. He offers a real, pointed distinction between deflationary and inflationary forces — technological productivity gains as inherently deflationary, set directly against energy depletion as inherently inflationary — and argues all US inflation since 1973 traces to oil. A real, substantive discussion of electric vehicles is notably unromantic: Sokoloff raises copper supply as a genuine bottleneck for battery production, not a solved problem. The conversation's geopolitical section is real and specific rather than abstract — BRICS expansion, the Shanghai Cooperation Organisation, dollar-based monetary hegemony, and Sokoloff's own direct, unhedged characterization of Western sanctions on Russia as economic self-harm for Europe. A genuinely personal turn closes the episode: Sokoloff moves from markets into Buddhism, the Dalai Lama, and Gandhi, framing 'empathic understanding' as a real precondition for navigating the systemic challenges discussed earlier — a real, direct bridge between his professional expertise and his own stated spiritual practice, not a tacked-on closing platitude."@en ;
+    .
+
+
+tgs:Interview.TGS_35_SteveVavrus a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Steve Vavrus: \"Arctic Fever? Taking the Arctic's Temperature\""@en ;
+    skos:definition "Nate's real first-ever conversation with Arctic climate specialist Steve Vavrus (University of Wisconsin-Madison, IPCC scientist), grounded throughout in real, precise climate mechanics rather than the show's more typical systems/civilizational framing. Covers why the Arctic and Antarctic function as Earth's real thermal 'bookends' shaping mid-latitude weather via jet-stream dynamics, the real, measured finding that Arctic warming runs roughly four times the global average, and the resulting real risk of a slower, more meandering jet stream producing longer, more persistent extreme-weather events. Real, specific historical grounding: the last interglacial period (peaking ~125,000 years ago) saw enough Arctic warming to raise global sea levels 6-9 meters, against a present-day range of concern closer to one meter — offered as real, direct evidence for how much warmer the Arctic can get under sustained forcing. Vavrus is careful and direct about real scientific uncertainty on tipping points: sea-ice loss itself appears reversible under climate models (ice returns if warming reverses), unlike the much slower, more consequential loss of continental ice sheets (Greenland, East/West Antarctic)."@en ;
+    dct:created "2022-08-18"^^xsd:date ;
+    dct:issued "2022-09-07"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.SteveVavrus ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/35-steve-vavrus> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS35_SteveVavrus.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/09/TGS35SteveVavrusTranscript.docx1_.pdf> ;
+    thinkr:hasDiscussionSummary "A real, notable structural feature: Nate directly names and compliments Vavrus's own scientific detachment mid-conversation ('you are speaking almost as if it were a peer review conversation') before asking how he manages the emotional weight of the work — Vavrus's answer is genuinely candid, describing himself as 'human first and scientist second,' comparing his own necessary compartmentalization to a surgeon who 'better not be worried' mid-procedure, while directly admitting 'we as a species are really screwing things up' outside of working hours. Real, concrete geoengineering discussion follows, with Vavrus focused less on the physical feasibility of interventions like stratospheric sulfate aerosols or brightened sea ice — both real, relatively inexpensive schemes — and more on the genuinely unresolved question of legal authority: 'who has the power' to deploy a scheme with real, likely-unintended planetary-scale consequences. Nate's own aside about being personally 'friends with the people who run Vesta' (an olivine-rock carbon-sequestration organization) is a real, direct personal disclosure, not a hypothetical reference. Real, vivid human-scale testimony punctuates the more abstract science: a Djiboutian woman's account, relayed secondhand by Nate from a recent poly-crisis conference, of livestock struggling under warming nighttime temperatures — grounding wet-bulb-temperature physiology in a real, specific human consequence rather than an abstract threshold. Closes on genuine, unforced hope: Vavrus points to young people's engagement and real historical precedent (the Depression, World War II) as reasons the climate crisis, while a 'different animal,' remains a human-caused and therefore human-solvable problem — distinct, in his own words, from 'a deadly asteroid coming at us.' His own real magic-wand answer is notably self-deprecating: he'd first resign as benevolent dictator, then name political polarization itself, amplified by social media, as the thing he'd most want to 'turn down the temperature' on."@en ;
+    skos:scopeNote "Real, direct citation confirmed via this episode's own show notes, independently of the transcript excerpt reviewed in this pass: Arctic permafrost is noted as storing more carbon than currently exists in the entire atmosphere — a direct, real match for the WWNS permafrost candidate (Communications Earth & Environment attribution paper). This episode does not explicitly name any of Nate's own branded concepts (Superorganism, Carbon Pulse, etc.) — thinkr:discusses deliberately left minimal rather than forcing a link the conversation doesn't actually make; Nate's own aside about GDP counting gross rather than net energy, and an increasing future share of energy going to extraction and environmental remediation, is a real, close thematic echo of his own Mordor economy framing (Frankly_23, already built) but not named as such in this specific conversation."@en ;
+    .
+
+
+tgs:Interview.TGS_36_DouglasRushkoff a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Douglas Rushkoff"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/36-douglas-rushkoff> ;
+    .
+
+tgs:Interview.TGS_37_MartinScheringer a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Martin Scheringer: \"The Growing Threat from Chemical Pollution\""@en ;
+    skos:definition "Nate hosts environmental chemist Martin Scheringer to discuss his own real, recent paper proposing PFAS ('forever chemicals') as a new planetary boundary in their own right. Scheringer is real and direct about the sheer scale of the underlying problem: roughly 5,000 distinct PFAS compounds exist among up to 300,000 chemicals in commercial use globally, most with genuinely unknown health effects, and PFAS themselves 'never degrade into anything' — the real, literal meaning of 'forever' in their common name. Real, direct rebuttal of a common dismissive framing: 'the solution to pollution is dilution' — Scheringer argues this mid-20th-century assumption fails completely for persistent, bioaccumulative chemicals that simply don't break down regardless of dilution."@en ;
+    dct:created "2022-08-19"^^xsd:date ;
+    dct:issued "2022-09-21"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MartinScheringer ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/37-martin-scheringer> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS37_MartinScheringer.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/09/TGS37MartinScheringerTranscript.docx.pdf> ;
+    thinkr:hasDiscussionSummary "A real, memorable illustration of institutional science-communication failure: the real, public 'RoundUp challenge,' where scientist Patrick Moore offered to drink glyphosate on camera to demonstrate its safety, then refused when actually handed the glass — offered directly as a case study in how confident public claims about chemical safety often don't survive real, direct scrutiny. A real, striking biological indicator closes the health-effects section: average golden retriever lifespans have fallen measurably since the 1950s, offered as a real, accessible proxy for broader chemical-exposure effects that are harder to see directly in slower-aging humans. Scheringer's own real, considered closing answer, when asked for a single best intervention, is refreshingly humble rather than a confident magic bullet — 'there is not one thing I could do here... that would be the magic bullet,' preferring instead to defer to real, collective expert consultation, floating directly the idea of a politically-neutral scientific council to advise on genuinely poly-crisis risks."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is almost entirely primary scientific/regulatory sources (EPA, IPCC, peer-reviewed papers) and real films (Dark Waters) rather than other people — no new deferred Persona candidates surfaced here beyond what's already tracked elsewhere in this graph."@en ;
+    .
+
+
+tgs:Interview.TGS_38_SebastianHeitmann a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Sebastian Heitmann"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/38-sebastian-heitmann> ;
+    .
+
+tgs:Interview.TGS_39_AyanMahamoud a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Ayan Mahamoud"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/39-ayan-mahamoud> ;
+    .
+
+tgs:Interview.TGS_40_MaryEvelynTucker a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Mary Evelyn Tucker"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/40-mary-evelyn-tucker> ;
+    .
+
+tgs:Interview.TGS_41_MartyKearns a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Marty Kearns"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/41-marty-kearns> ;
+    .
+
+tgs:Interview.TGS_42_ModelingDriversMetacrisis a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Bend Not Break Part 4: Modeling the Drivers of the Metacrisis"@en ;
+    dct:created "2022-10-26"^^xsd:date ;
+    thinkr:discusses tgs:Concept.Metacrisis ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/42-daniel-schmachtenberger> ;
+    dct:isPartOf tgs:Series.BendNotBreak ;
+    thinkr:seriesPosition 4 .
+
+
+tgs:Interview.TGS_43_BetsyTaylor a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Betsy Taylor"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/43-betsy-taylor> ;
+    .
+
+tgs:Interview.TGS_44_DieselAndTheBarrelOfOil a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Diesel Shortages and What's Really in a Barrel of Oil"@en ;
+    skos:definition "Berman's second appearance — a deep dive into oil refining, prompted by real 2022 diesel shortages: why a barrel of crude yields many products beyond gasoline, why diesel specifically matters to the global economy, whether the US is genuinely energy-independent as a 'net exporter,' and how the Russia/Ukraine war reshaped global energy geopolitics."@en ;
+    dct:created "2022-10-25"^^xsd:date ;
+    dct:issued "2022-11-08"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/44-art-berman> ;
+    skos:scopeNote "Canonical URL follows this graph's own confirmed real pattern for Berman's other episodes (03/92/101 all use /episode/N-art-berman or /N-arthurberman) — NOT independently re-verified via a live fetch for this specific episode, unlike 03/92/101/220's URLs which were. Flagged honestly rather than silently treated as equally certain. Comparatively little direct discusses-worthy overlap with this graph's already-modeled Concepts — this episode is a specific technical deep-dive (refining chemistry, diesel logistics) rather than the broader energy/civilization framing of Berman's other 4 appearances; no discusses links added rather than force a weak one. Real further citation surfaced but not modeled: Vaclav Smil's 'Four Pillars of Modern Civilization' (a real, citable external work on ammonia/steel/cement/plastics as civilization's material foundations) — a plausible future Work individual, deferred."@en .
+
+
+tgs:Interview.TGS_45_JonErickson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jon Erickson"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.JonErickson already exists in this graph (from a real, prior panel appearance) -- linked directly rather than left as a bare, disconnected stub."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/45-jon-erickson> ;
+    thinkr:hasGuest tgs:Persona.JonErickson ;
+    .
+
+tgs:Interview.TGS_46_VandanaShiva a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Vandana Shiva: \"Agroecology and The Great Simplification\""@en ;
+    skos:definition "Nate's real, direct first-ever conversation with Vandana Shiva, physicist-turned-agroecology activist and founder of the Research Foundation for Science, Technology and Ecology. Nate directly discloses a real, notable distinction: he'd known OF her by reputation for over 20 years, with many real, shared mutual friends, but this was genuinely the first time the two had ever spoken directly."@en ;
+    dct:created "2022-11-16"^^xsd:date ;
+    dct:issued "2022-11-23"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.VandanaShiva ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/46-vandana-shiva> ;
+    dct:references tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems ;
+    thinkr:hasDiscussionSummary "Shiva directly argues industrial agriculture's real productivity claims are structurally misleading, since they typically measure yield per single crop rather than genuine total nutritional output per acre of a real, diverse polyculture — a real, foundational critique underlying her broader agroecology advocacy. She's real and direct about her own real, four-decade institutional commitment through the Research Foundation for Science, Technology and Ecology, framing her work as directly opposing what she considers a real, deliberate narrowing of both biological and cognitive diversity by industrial and corporate agricultural interests. Closes on a real, warm, human note distinct from the conversation's substantive weight: Shiva directly invites Nate to visit her in India, and the two close by discussing the real, specific meal she's about to eat — capsicum, potato, and chapati — offered as a small, genuine moment of human connection after a wide-ranging discussion."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise almost entirely encyclopedic (agroecology, biodiversity, seed sovereignty) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Interview.TGS_47_PatrickOphuls a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Patrick Ophuls"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/47-patrick-ophuls> ;
+    .
+
+tgs:Interview.TGS_48_TomasBjorkman a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Tomas Björkman: \"The Great Transformation – Metamodernism and The Future\""@en ;
+    skos:definition "Nate's real first conversation with Swedish social entrepreneur Tomas Björkman, centered on his own real, championed philosophical framework of 'metamodernism' — a genuine synthesis moving past postmodernism's fragmentation toward renewed shared meaning without simply returning to pre-modern certainty. Björkman traces his own real intellectual and career arc directly — from physics and mathematics through investment banking to founding the Ekskäret Foundation (already built) — arguing more mindful, genuinely engaged global citizens are a real, necessary precondition for navigating civilization's coming challenges, not a soft addition to more material solutions."@en ;
+    dct:created "2022-11-09"^^xsd:date ;
+    dct:issued "2022-12-07"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.TomasBjorkman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/48-tomas-bjorkman> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS48_TomasBjorkman.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/12/TGS48TomasBjorkmanTranscript.docx1_.pdf> ;
+    dct:references tgs:Work.TheMarketMyth, tgs:Work.TheNordicSecret, tgs:Work.TheWorldWeCreate, tgs:Monologue.Frankly_23_MordorEconomy, tgs:Interview.TGS_214_TristanHarris ;
+    thinkr:hasDiscussionSummary "A real, striking statistic anchors Björkman's critique of modern markets directly: roughly 85% of exchange value in today's global economy consists of immaterial property rights rather than physical goods, offered as real, direct evidence for how detached financial abstraction has become from physical reality — with Disney's own real, repeated copyright-term extensions (informally dubbed the 'Mickey Mouse' extensions) cited as a concrete illustration. His own real, historical case study grounds the Inner Development Goals framework's plausibility: the real Nordic 'Bildung' tradition of folk high schools and adult retreat centers, credited by Björkman as producing the civic and personal maturity underlying Nordic countries' own real social outcomes — with a real, striking direct link drawn to Rosa Parks, who attended a real, similar Bildung-style institution, the Highlander Folk School in Tennessee, before her role in the Montgomery bus boycott. A real, warm, unscripted personal moment closes the episode: Björkman's own magic-wand answer — tweaking social media algorithms away from pure engagement-profit toward collective sensemaking and expanded empathy — prompts Nate to directly connect it to Tristan Harris's own real 'ring to Mordor' framing from his own TGS appearance (already built), with Björkman agreeing the fix itself could be a genuinely small technical tweak, not a fundamental reinvention. Closes on real, direct mutual energization rather than a standard sign-off: Nate discloses having slept poorly the night before, but describes the conversation itself as 'turbocharging' him, crediting the real, simple fact of finding someone on a different continent working toward the same goal."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Lene Rachel Andersen (real, direct co-author of The Nordic Secret, not built); this episode's own citation list is otherwise largely encyclopedic (Bildung tradition, Dunbar's number, metamodernism itself) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Interview.TGS_49_SimonMichaux a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Simon Michaux: \"The Arcadians\""@en ;
+    skos:definition "Nate's real second conversation with Simon Michaux, recorded on Halloween (both real, direct references to costumes open the episode — Michaux in a Superman shirt), building a preliminary real framework for societal response to the biophysical constraints laid out in their first conversation (TGS_19). Introduces Michaux's own real, distinctive four-part social taxonomy — 'the Arcadians' — describing how society is dividing into four parallel groups by paradigm as constraints intensify: the 'Old School' (denial, business-as-usual, roughly two-thirds to three-quarters of society currently, down from a real, estimated 95% two decades ago), the 'Vikings' (those who understand the old system is ending but choose short-term extraction over rebuilding), the 'Realists' (prepper-minded, focused on one-to-five-year survival needs), and the 'Arcadians' — the group Michaux places both himself and Nate within — thinking in 50-to-100-year timescales about genuinely rebuilding a wiser, more sustainable society, explicitly for the benefit of generations who will do the work without living to see its outcome."@en ;
+    dct:created "2022-10-31"^^xsd:date ;
+    dct:issued "2022-12-14"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.SimonMichaux ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/49-simon-michaux> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS49_SimonMichaux.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/12/TGS49_SimonMichaux.docx2_.pdf> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness ;
+    dct:references tgs:Work.BottlenecksOf21stCentury ;
+    thinkr:hasDiscussionSummary "Michaux directly credits a real conversation with Steve Keen (already a known, deferred citation elsewhere in this graph via TGS #30) as the origin of the 'Vikings' category specifically — those who recognize the old system's collapse but choose short-term extraction over collective rebuilding, a real, distinct social response Michaux believes will prove self-limiting once there's nothing left to take. Michaux's own real, structural proposal reprojects Maslow's hierarchy of needs onto entire systems rather than individuals: real, distinct 'hierarchies of need' for energy, food, water, sewage/sanitation, heating, and industrial capacity, arguing modern society has forgotten these are industrially and technologically delivered rather than simply given, and that industry itself — mining, smelting, manufacturing — is wrongly treated as an afterthought despite being the real, physical foundation everything else depends on. A real, direct connection to Nate's own prior work closes the conceptual section: Nate connects the Arcadian framing directly to 'The Bottlenecks of the 21st Century' (his own real first book, co-written with DJ White, already built in this graph), framing the show's entire purpose as growing the real number of people thinking in Arcadian terms. Real, concrete personal confirmation closes the episode: Nate directly credits an actual, completed in-person visit to Michaux ('your actions when you came over on August 8th were amazing, and they have legs') — fulfilling the specific plan mentioned at the close of their first conversation five months earlier."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Steve Keen (real TGS episode #30, directly cross-referenced, credited directly with originating the 'Vikings' framing in conversation with Michaux) — already a known, deferred citation elsewhere in this graph."@en ;
+    .
+
+
+tgs:Interview.TGS_50_CriteriaCategoriesResponse a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Bend Not Break Part 5: Criteria and Categories for Response"@en ;
+    rdfs:comment "The final installment — confirmed via multiple sources as the series close, though 'How does it end' framing throughout the search results leaves open whether Daniel/Nate consider this genuinely final or just final-for-now."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/50-daniel-schmachtenberger> ;
+    thinkr:hasReplay <https://youtu.be/Kep8Fi_rUUI> ;
+    dct:isPartOf tgs:Series.BendNotBreak ;
+    thinkr:seriesPosition 5 .
+
+

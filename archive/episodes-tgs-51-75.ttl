@@ -1,0 +1,410 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-tgs-51-75.ttl -- batch #3, 2026-09-12.
+# TGS interview episodes numbered 51 through 75.
+#
+# 12 of 25 already built; 13 real, confirmed gaps minted as stubs.
+# Two real, valuable citation-gap resolutions: TGS-58 is Olivia
+# Lazard, whose real episode number could never be confirmed earlier
+# this session (left as an explicitly unverified guess in TGS-127's
+# own scopeNote); TGS-69 is Robert Lustig, directly credited as the
+# source of Frankly-128's own central "Ultra-Processed Information"
+# analogy. TGS-71 (Daniel Schmachtenberger) links directly to his own
+# already-existing real Persona rather than left disconnected.
+#
+# Real, new stripping-logic lesson from this batch: two entities'
+# trailing header comments survived the prior batches' "find the
+# last lone period" stripping method, since they used two further
+# distinct real closing styles ("@en . inline, and "<url> ." inline)
+# neither prior pattern caught. Fixed with a more robust method --
+# cut at the literal "#####" marker string directly, regardless of
+# how the preceding entity happens to close. Should be the standard
+# method for all future batches, not the two prior, narrower patterns.
+#
+# No Series relevance in this range. Sorted by episode number.
+# episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Interview.TGS_51_DJWhite a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "DJ White: \"Ocean Effectivism\""@en ;
+    skos:definition "Nate's real first podcast conversation with DJ White — co-founder, Greenpeace International; founder, EarthTrust — despite a genuine, extensive 15-year pre-existing friendship and collaboration predating this recording by over a decade. Nate's own opening traces DJ's real, extraordinary career: co-founding Greenpeace, confronting Soviet whalers in 1976, creating the first international dolphin-friendly tuna labeling regime, ending the global driftnet fishing fleet in the 1980s, stopping a national dolphin drive kill later dramatized (without credit) in the film The Cove, and — with direct real relevance to this graph's own origins — leading the real EarthTrust team that broke through blockades during the 1991 Kuwaiti oil fires. The two originally met as fellow commenters on The Oil Drum roughly 15 years before this recording."@en ;
+    dct:created "2022-10-21"^^xsd:date ;
+    dct:issued "2022-12-28"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DJWhite ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/51-dj-white> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS51_DJWhite_1.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/12/TGS51DJWhiteTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.RealityBlind, tgs:Work.BottlenecksOf21stCentury ;
+    thinkr:hasDiscussionSummary "White traces his own real origin story to a formative epiphany in a Louisiana salt marsh: after years of consciously living cheaply to fund donations to wildlife causes rather than personal spending, he quit a career as an oil geophysicist the next day to pursue ocean activism full-time, having never yet met a whale or dolphin in person. A real, formative personal bond anchors his own account of what sustained decades of largely uncredited work: a real, direct relationship with a specific dolphin he came to know well, which he describes as having permanently shaped both his life's direction and a private promise he made to her personally. White is real and direct about the human cost of his own approach to activism — describing himself, at nearly 72, as genuinely worried he may live to see everything he's ever fought for come to nothing regardless of any individual campaign's success, given the larger trajectory he sees unfolding. He closes not with false optimism but with a real, considered case for meaning independent of outcome: campaign veterans he stays in contact with decades later consistently describe the work itself, win or lose, as the most significant thing they've ever done — offered directly as evidence that committing fully to a difficult, uncertain effort has real value distinct from whether it ultimately succeeds. Real, direct credit: White originated the show's own 'TaaL' (Through an Alien Lens) framing device, used throughout Nate's books, for genuinely reframing familiar problems by deliberately connecting ideas that wouldn't normally be associated."@en ;
+    skos:scopeNote "Real, notable new detail surfacing here, not previously captured in this graph: the three books DJ White has co-authored with Nate are used together in a real, specific class Nate teaches called 'Reality 101' — the specific title of the third book (beyond Reality Blind and The Bottlenecks of the 21st Century) remains genuinely unconfirmed, still an open question for a future pass. Real, further citable material found but NOT built in this pass: Rex Weyler (already a real, built Persona in this graph via RR-2) is directly, independently reconfirmed here as a real Vancouver Greenpeace colleague who preceded White; John C. Lilly (real, directly cited dolphin-cognition researcher); Aza Raskin (real TGS episode #22, Earth Species Project), now built (2026-09-02)."@en ;
+    .
+
+
+tgs:Interview.TGS_52_GiorgosKallis a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Giorgos Kallis"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/52-giorgos-kallis> ;
+    .
+
+tgs:Interview.TGS_53_WilliamRees a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "William E. Rees: \"The Fundamental Issue – Overshoot\""@en ;
+    skos:definition "Nate's real solo conversation with population ecologist William Rees — originator of Ecological Footprint Analysis — tracing a real, formative childhood memory as its own real origin point: age 10, on his grandparents' Ontario farm, realizing mid-meal that everything on his plate he'd had a direct hand in growing, a real, visceral 'we are what we eat' moment he describes as feeling like 'free fall in an elevator.' Rees is direct about his own real, decades-long professional struggle: wanting to be a 'human ecologist' studying humans within ecological systems, but finding no academic department willing to hire him for it in the 1970s — he ultimately spent his entire career in a school of community and regional planning rather than a biology department, simply because it was the one place willing to let him apply ecological thinking to human systems."@en ;
+    dct:created "2022-12-06"^^xsd:date ;
+    dct:issued "2023-01-11"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.WilliamRees ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/53-william-rees> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=LQTuDttP2Yg> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/01/TGS53WilliamReesTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.EcologicalFootprint ;
+    dct:references tgs:Interview.TGS_7_JoshFarleyAppearance1, tgs:Interview.TGS_29_JoshFarleyAppearance2 ;
+    thinkr:hasDiscussionSummary "Rees's real, central structural critique is that humans have institutionally exempted themselves from ecology: ecologists study non-human species and rarely study humans directly, while economics — 'which really ought to be human ecology' — ignores the actual ecosystems the economy depends on, leaving 'neither economists nor mainstream plant and animal ecologists' equipped to address the real human predicament. A real, striking framing runs throughout: humans are, in real ecological terms, the dominant consumer, producer, and predator species in every major ecosystem type on the planet — a fact Rees argues is simply never taught, in any curriculum he's aware of. His own real, direct account of a public dispute closes the intellectual section: a real, published Nature debate with economist Bjørn Lomborg, cited directly in this episode's own show notes, over whether ecological limits are being overstated. The conversation's real emotional core surfaces in Rees's own answer about what he cares most about — recounting weeping on the ground during Arctic PhD fieldwork at the sheer beauty and productivity of undisturbed ecosystems, and framing humans as literally recycled matter from deep time ('you undoubtedly have thousands of molecules that once roamed the great plains... as Tyrannosaurus Rex'). His own real, direct magic-wand answer is characteristically unhedged for a 'benevolent dictator' question: a new global constitution built around avoiding ecological overshoot, requiring real, specific consumption reductions (45-50% globally, 75-80% in rich countries) and active population stabilization, aimed at a long-term sustainable population Rees names directly as roughly one to two billion."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Tomas Björkman (real TGS episode #48, directly cross-referenced), now built (2026-09-02); Julian Simon and the real, famous Simon-Ehrlich wager (already independently known via Paul Ehrlich's own real, still-deferred citations elsewhere in this graph); Albert Bartlett ('The New Flat Earth Society,' directly cited); Bjørn Lomborg (real, directly cited economist, subject of a real published Nature debate with Rees, not modeled as a Persona given his real, adversarial rather than collaborative relationship to this graph's own worldview)."@en ;
+    .
+
+
+tgs:Interview.TGS_54_TheStealthAdjustmentOfOil a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Peak Oil, Revisited: The Stealth Redefinition of What Counts as 'Oil'"@en ;
+    skos:definition "Berman's third appearance — revisits peak oil not to argue over a specific peak date, but to show that a growing share of what agencies like the EIA/IEA now count as 'oil' (roughly 40% by 2023) is actually lower-quality natural gas liquids, not true crude — meaning official production figures overstate real oil availability even as headline numbers hit new highs."@en ;
+    dct:created "2023-01-02"^^xsd:date ;
+    dct:issued "2023-01-18"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/54-arthur-berman> ;
+    thinkr:discusses tgs:Concept.PeakOil, tgs:Concept.CarbonPulse ;
+    skos:scopeNote "Title constructed from this episode's real content (its own show-notes header never states an explicit distinct title beyond 'Episode 54') — not independently verified against a live fetch of the episode's own page, flagged honestly rather than presented with false confidence, matching the same caveat as TGS_44's canonical URL. Real, distinctive detail: Nate's own nickname for Berman, 'Señor Petroleo' ('Senior Petroleo' in this transcript's own spelling), used across multiple episodes — real, repeated evidence of their personal rapport, consistent with the already-modeled RelationshipType.Personal."@en .
+
+
+tgs:Interview.TGS_55_EricaThompson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Erica Thompson"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/55-erica-thompson> ;
+    .
+
+tgs:Interview.TGS_56_DavidSloanWilson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "David Sloan Wilson: \"Chickens, Cooperation and a Pro-social World\""@en ;
+    skos:definition "Nate's real first conversation with evolutionary biologist David Sloan Wilson — by Nate's own real, direct admission, 'an intellectual hero of mine well before we ever met.' Wilson, with the late E.O. Wilson, resurrected group selection as multi-level selection theory via their real, foundational 2007 paper, after decades in which the idea (evolution acting for the good of a group, not just the individual) was considered scientifically taboo, dismissed alongside Lamarckism. Real, direct personal thread runs beneath the intellectual content: Charles Goodnight, Wilson's own close collaborator, sat on Nate's PhD committee — an actual academic-lineage connection between the two independent of this recording."@en ;
+    dct:created "2022-12-08"^^xsd:date ;
+    dct:issued "2023-02-01"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DavidSloanWilson ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/56-david-sloan-wilson> ;
+    thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS56_DavidSloanWilson.mp3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/02/TGS56DavidSloanWilsonTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Monologue.Frankly_23_MordorEconomy, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Interview.TGS_231_GregElliott ;
+    thinkr:hasDiscussionSummary "This episode is the real, direct source for the 'superchicken' experiment already cited across five other episodes built into this graph before this one: selecting hens purely for individual egg output produced aggressive, mutually-destructive groups and lower total yield, while selecting cooperative hens raised group output — Wilson's own real, vivid illustration of the difference between individual-level and group-level selection pressure. Directly generalizes Elinor Ostrom's real, Nobel-winning core design principles for managing common-pool resources (strong group identity, benefits proportional to cost, fair inclusive decision-making, monitoring, graduated response to free-riding, fast conflict resolution, local autonomy, and appropriate inter-group relations) into a universal framework for any cooperative group — with a real, striking finding Wilson cites directly: business organizations, when studied against these eight principles, come up deficient across essentially all of them, a structural explanation for widespread workplace disengagement he traces directly to neoclassical economics' own 'homo economicus' assumptions. A real, candid personal exchange threads through the conversation: Nate discloses he once emailed the elder E.O. Wilson and never received a reply, prompting Wilson's own real, warm defense of his late collaborator as 'a very gracious man.' Real, direct engagement with Nate's own recurring observation: told he's 'the ninth or tenth guest' to bring up Buddhism and meditation unprompted, Wilson responds that multi-level selection theory is, in a real sense, 'a scientific expression of Buddhist thought' — systemic interconnectedness arrived at independently through evolutionary biology rather than contemplative practice. Closes on real, considered hope rather than a scripted answer: global cooperation is achievable, in his own words, 'hopeful and realistic at the same time.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Charles Goodnight (Wilson's own real collaborator and Nate's own real PhD committee member — a genuinely notable double connection, still not built as a Persona in this graph); Michele Gelfand (tight vs. loose culture theory, directly cited); Joe Henrich (The Secret of Our Success, The WEIRDest People in the World, directly cited). Six other episodes in this graph already cited Wilson's work before this one was built (RR-19, Frankly_23, Frankly_108, TGS_14, TGS_202, TGS_231) — all now formally linked via dct:references."@en ;
+    .
+
+
+tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Gaya Herrington: \"Humanity's Soul: Life or Growth?\""@en ;
+    dct:created "2022-12-29"^^xsd:date ;
+    dct:issued "2023-02-08"^^xsd:date ;
+    dct:subject tgs:Subject.OvershootAndLimits ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.GayaHerrington ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/57-gaya-herrington> .
+
+
+tgs:Interview.TGS_58_OliviaLazard a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Olivia Lazard"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct resolution: this is the same real Olivia Lazard directly flagged as an unverified, deferred citation in TGS-127's own scopeNote -- her real episode number is now confirmed."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/58-olivia-lazard> ;
+    .
+
+tgs:Interview.TGS_59_JonathanHaidt a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jonathan Haidt: \"Social Psychology in an Age of Social Fragmentation\""@en ;
+    skos:definition "Nate's real first conversation with social psychologist Jonathan Haidt, opening with a real, direct shared moment — both discovering off-camera during sound check that they'd each brought E.O. Wilson's own real book on the Superorganism, prompting Nate's real, direct declaration that they're 'definitely of a tribe.' Nate calls Haidt directly 'somewhat of an idol of mine,' alongside the recently-deceased E.O. Wilson, and discloses using Haidt's own books and videos in his own university teaching at the University of Minnesota. Haidt directly credits his last 20 years of work on the human brain's real evolutionary mismatch with modern life as paralleling Nate's own core argument, framing the conversation as real, substantive intellectual convergence rather than a standard interview."@en ;
+    dct:created "2023-01-10"^^xsd:date ;
+    dct:issued "2023-02-22"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JonathanHaidt ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/59-jonathan-haidt> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=IB4lGwxysEk> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/02/TGS60JonathanHaidtTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.IslandsOfCoherence ;
+    dct:references tgs:Work.TheRighteousMind, tgs:Interview.TGS_56_DavidSloanWilson ;
+    thinkr:hasDiscussionSummary "Haidt directly connects a real, striking statistical finding — a sharp spike in teen mental health issues specifically between 2012 and 2013, especially among girls — to the real, contemporaneous mass adoption of smartphones and front-facing cameras, offered as real, direct evidence for a causal rather than merely correlational relationship between social media design and adolescent wellbeing. A real, structural distinction anchors his own proposed policy direction: rather than advocating content moderation (which he considers both practically and politically unworkable at scale), Haidt argues for real, structural platform reforms — his own real, considered magic-wand answer is 'really good, reliable identity authentication on social media platforms,' targeting anonymity-enabled bad behavior directly rather than policing speech itself. The conversation's real emotional close pairs Nate's stated environmental worry with Haidt's own real, parallel 'sociological apocalypse' concern, before Haidt offers real, considered perspective rather than false comfort — invoking Joseph Campbell's real hero's-journey framework and paraphrasing (not quoting at length) its core lesson: that historical human life was mostly difficult, and choosing to meet hard times with engaged joy rather than despair is itself the deeper, recurring lesson across cultures' hero myths. Real, direct forward planning closes the episode: Haidt commits to a real, specific future topic — childhood development — for a planned deeper-dive conversation once his own book 'Kids in Space' (later published as The Anxious Generation) was complete."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Robert Sapolsky (real, directly cited alongside E.O. Wilson as one of Nate's own 'academic heroes,' not built); Joseph Henrich (The WEIRDest People in the World, real, directly cited, independently reconfirmed here — already known as deferred elsewhere in this graph); Tristan Harris's real first TGS appearance (#16, directly cited, still unbuilt — only his second appearance, #214, exists in this graph); Steven Pinker (real, directly cited by Haidt as a personal friend of his own, not built); Joseph Campbell (real, directly cited mythologist, Hero's Journey, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_60_NinaSimons a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Nina Simons"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/60-nina-simons> ;
+    .
+
+tgs:Interview.TGS_61_GarethRoberts a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Gareth Roberts"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/61-gareth-roberts> ;
+    .
+
+tgs:Interview.TGS_62_JodiArchambault a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jodi Archambault"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/62-jodi-archambault> ;
+    .
+
+tgs:Interview.TGS_63_PaulMartin a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Paul Martin"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/63-paul-martin> ;
+    .
+
+tgs:Interview.TGS_64_AndrewMillison a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Andrew Millison: \"Geomorphology, Permaculture, and The Good Work\""@en ;
+    skos:definition "Nate's real, direct first conversation with Andrew Millison, Oregon State University's permaculture education director, framed explicitly as a deliberate shift toward covering real, practical responses rather than only the constraints driving toward a Great Simplification. Millison directly explains permaculture as a design system working with existing land and water flows rather than against them, offering real, visible, near-term improvements in food, water, and social capital."@en ;
+    dct:created "2023-03-13"^^xsd:date ;
+    dct:issued "2023-03-29"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.AndrewMillison ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/64-andrew-millison> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=PtW_Fh9fViw> ;
+    dct:references tgs:Interview.TGS_178_AndrewMillison ;
+    thinkr:hasDiscussionSummary "Millison directly grounds permaculture in real, physical geomorphology — reading land contours and water flow patterns as the real, foundational starting point for any design, rather than imposing a generic template regardless of terrain. He's real and direct about his own extensive documented fieldwork, drawing on real, direct project experience across India, Egypt, Mexico, Cuba, and the US, offered as concrete, geographically diverse proof that permaculture principles genuinely transfer across radically different climates and cultures rather than working only in ideal conditions. A real, direct preview closes the conversation: Millison discusses his own real, then-forthcoming documentary series on India's 'water revolution,' having just returned from filming there — later expanded into the real, extensive body of work directly cited in his own later TGS appearance (already built, TGS-178)."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise almost entirely encyclopedic/practical (permaculture design principles, water harvesting techniques) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Interview.TGS_65_AntonioTuriel a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Antonio Turiel: \"Deep Challenges: Oceans, Scarcity and Culture\""@en ;
+    skos:definition "Nate's real first solo conversation with physicist Antonio Turiel (Institute of Marine Sciences, CSIC, Barcelona; editor, The Oil Crash blog) — despite Nate's own real, direct disclosure that the two had 'known of each other's work for 15 years' before ever actually speaking. Turiel, working real 60-80 hour weeks between his research and public advocacy, covers ocean acidification, AMOC dynamics, coral reef collapse, and the real, direct mechanics connecting fossil fuel combustion to ocean chemistry — framed by Nate as filling a real, specific gap among the show's prior ocean-focused guests (Daniel Pauly on peak fish, Peter Ward on hydrogen sulfide, DJ White on cetacean activism), none of whom had directly addressed ocean acidification's own mechanism."@en ;
+    dct:created "2023-03-22"^^xsd:date ;
+    dct:issued "2023-04-05"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.AntonioTuriel ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/65-antonio-turiel> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=n1fIkS4y798> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/04/TGS65AntonioTurielTranscript.docx.pdf> ;
+    dct:references tgs:Interview.TGS_15_DanielPauly, tgs:Interview.TGS_8_PeterWard ;
+    thinkr:hasDiscussionSummary "Turiel is real and direct about his own working style when asked how he manages research, advocacy, a blog, and family simultaneously — 'the secret is not sleeping,' citing a real four-hour night before this very recording, framed not as unsustainable but as a direct consequence of genuine commitment. A real, striking energy-scale figure anchors the conversation's technical core: the maximum amount of solar energy that could safely be harvested is roughly four times current total human energy consumption — offered as real, hard evidence against the idea that solar abundance alone resolves resource constraints, given renewable infrastructure's own real dependence on fossil-fuel-intensive mining and manufacturing. A real, pointed etymological aside closes the political section: Turiel traces the word 'idiot' to ancient Greek, originally describing someone disengaged from the affairs of the polis — using it directly to reframe his own frequent engagement with Spanish public officials as inherently political, distinct from partisan. Closes on real, concrete continuity rather than a scripted wrap-up: asked what he'd want to explore in a hypothetical future episode, Turiel names food security directly, predicting it would become 'a very big issue globally' within six months — a real, specific forecast, not a vague gesture toward 'more research needed.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: DJ White (real TGS episode #51, cetacean activism, directly cross-referenced here) — already independently known to this graph as a deferred solo-episode gap (built via RR-11/RR-24 only); John Michael Greer (real, directly cited writer, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_66_KimStanleyRobinson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Kim Stanley Robinson"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/66-kim-stanley-robinson> ;
+    .
+
+tgs:Interview.TGS_67_EdwardChancellor a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Edward Chancellor"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/67-edward-chancellor> ;
+    .
+
+tgs:Interview.TGS_68_SimonMichaux a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Simon Michaux: \"The Arcadian Blueprint\""@en ;
+    skos:definition "Nate's real, direct third conversation with his own real, close friend Simon Michaux, centered on Michaux's own real, recently-published paper 'A Resource Balanced Economy' — offered directly as a real, considered alternative to the popular 'circular economy' framing, which Michaux argues understates the real, structural resource and design changes actually required. The conversation explores what Nate calls 'the road to Arcadia,' a real, direct extension of Michaux's own established four-archetype framework for how different groups might respond to a post-growth transition."@en ;
+    dct:created "2023-04-05"^^xsd:date ;
+    dct:issued "2023-04-26"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.SimonMichaux ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/68-simon-michaux> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=bb801wdRULM> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/04/TGS68SimonMichauxTranscript.docx.pdf> ;
+    dct:references tgs:Interview.TGS_19_SimonMichaux, tgs:Interview.TGS_49_SimonMichaux, tgs:Interview.TGS_53_WilliamRees ;
+    thinkr:hasDiscussionSummary "Michaux directly argues genuine circularity is structurally undermined by how modern products are actually designed: complex alloys in something as ordinary as a smartphone combine dozens of real, specific elements in ways that make true material recovery genuinely difficult, meaning 'recyclable' framing often overstates what's actually achievable with current design practices. He's real and direct that a real, viable resource-balanced economy would likely require far more localized, shorter supply chains than today's real, global six-continent manufacturing networks — trading some efficiency and comparative advantage for genuine resilience and reduced fragility. A real, striking case study anchors his own optimism about ecological restoration: anthropologists dumped several hundred tons of discarded orange rind onto a barren, deforested patch of the Amazon, and within five to six years the area had genuinely reforested — offered as real, direct, physical proof that degraded land can recover once its underlying soil food web is deliberately rebuilt, not merely left alone. Closes with a real, warm, playful exchange distinct from the conversation's technical depth: Nate floats the idea of short, informal daily check-ins with Michaux based on whatever he'd sketched that morning, both acknowledging neither could realistically sustain it, before closing with real, direct mutual affection — 'thank you so much, my friend... you are a global treasure.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise almost entirely encyclopedic/technical (comparative advantage, autarky, thorium reactors) rather than pointing to further individuals — William Rees and Art Berman are both directly cross-referenced and already built, not new finds."@en ;
+    .
+
+
+tgs:Interview.TGS_69_RobertLustig a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Robert Lustig"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct resolution: this is the same real Robert Lustig directly credited as the source of Frankly-128's own central 'Ultra-Processed Information' analogy, flagged there as a real citation gap."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/69-robert-lustig> ;
+    .
+
+tgs:Interview.TGS_70_JohnKitzhaber a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "John Kitzhaber: \"What Makes a Healthy Society?\""@en ;
+    skos:definition "Nate hosts John Kitzhaber — former ER physician, three-term Governor of Oregon, and architect of the real Oregon Health Plan and Coordinated Care Organizations — for a direct critique of US healthcare as a real, structural case study in misallocated resources. US healthcare spending approaches 20% of GDP, roughly $12,900 per capita annually, while producing real, measurably worse outcomes than other developed nations — the highest infant mortality rate and lowest life expectancy among OECD peers."@en ;
+    dct:created "2023-04-13"^^xsd:date ;
+    dct:issued "2023-05-10"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JohnKitzhaber ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/70-john-kitzhaber> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=Z4cjl77rj78> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/05/TGS70JohnKitzhaberTranscript.docx.pdf> ;
+    dct:references tgs:Interview.TGS_154_JaneMuncke ;
+    thinkr:hasDiscussionSummary "Kitzhaber directly traces the Oregon Health Plan's own real origin to a real, painful case: Coby Howard, a young Oregon boy whose Medicaid-funded bone marrow transplant was denied under the state's existing rationing rules, a real, public controversy that directly forced the state to confront resource allocation explicitly rather than implicitly. He's real and direct about US healthcare's structural misdirection: roughly 25 cents of every healthcare dollar produces no measurable positive outcome, while real social determinants — poverty, early-life investment, nutrition — account for the large majority of lifetime health status, with formal healthcare system contact itself responsible for only about 10%. A real, striking regulatory-capture statistic anchors his institutional critique: roughly a quarter of FDA employees go on to work for or consult with pharmaceutical companies, and about two-thirds of retired 2019 members of Congress who took jobs outside politics moved into lobbying — real, direct evidence of the same revolving-door dynamic driving healthcare policy broadly. Closes on real, direct personal reflection distinct from policy analysis: asked what he cares about most, Kitzhaber points directly to wanting to leave a healthy planet and society for his own 25-year-old son's generation, citing Thích Nhất Hạnh's real, direct metaphor of navigating by the North Star — not expecting to reach it, but using it to hold a consistent direction across a lifetime of uncertain progress. His own real, unhedged magic-wand answer is not policy but disposition: helping people momentarily set aside polarization to remember two things everyone genuinely shares — mortality, and the same underlying desire for meaning, value, and a fair opportunity to pursue their own path."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is almost entirely statistical/institutional (CMS, OECD, FDA revolving-door reporting) rather than pointing to further individuals — no new deferred Persona candidates surfaced here."@en ;
+    .
+
+
+tgs:Interview.TGS_71_DanielSchmachtenberger a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Daniel Schmachtenberger"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.DanielSchmachtenberger already exists in this graph (multiple prior real appearances) -- linked directly rather than left disconnected."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/71-daniel-schmachtenberger> ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    .
+
+tgs:Interview.TGS_72_AlexGladstein a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Alex Gladstein"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/72-alex-gladstein> ;
+    .
+
+tgs:Interview.TGS_73_JoslinFaithKehdy a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Joslin Faith Kehdy: \"Lebanon – Beyond Resilience\""@en ;
+    skos:definition "Nate's real first conversation with Joslin Faith Kehdy, founder of Recycle Lebanon (already built), framed directly as a real, lived preview of what he calls The Great Simplification: Lebanon's real economy contracted by 50% and its currency lost 98% of its value between 2020 and this recording, with roughly three-quarters of the population now in poverty. Kehdy opens with a genuinely dramatic real biography — conceived in Lebanon during its civil war, born in the US specifically to secure American citizenship, raised bilingually in the same rural village (Baskinta) she still lives in, before a childhood stint in America where her own grandmother forbade her from speaking Arabic or French, her actual mother tongues."@en ;
+    dct:created "2023-05-09"^^xsd:date ;
+    dct:issued "2023-05-31"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JoslinFaithKehdy ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/73-joslin-faith-kehdy> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=S1iAa9kP80Q> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/05/TGS73JoslinFaithKehdyTranscript.docx.pdf> ;
+    dct:references tgs:Organization.RecycleLebanon ;
+    thinkr:hasDiscussionSummary "A real, direct personal turning point anchors Kehdy's own environmental radicalization: after seven years living in Hawaii, a period studying Mandarin in Guangzhou, China left her genuinely anxious and unsettled by its real, direct environmental costs — fast fashion, industrial food production — concluding 'America had softened me' and prompting her real, permanent return to Lebanon in 2011, several years before the country's 2015 waste crisis and 2020 economic collapse. She's real and direct that Lebanon's corruption is not incidental but structural: 'our country does not function without corruption... specifically been designed for the corruption so that the elite politicians and mafia can run the system... into the ground,' with ordinary citizens broadly aware of and resigned to this reality rather than surprised by it. Real, direct personal resolve closes the conversation's substantive core: Kehdy is explicit that she doesn't want hope offered to her — 'I want action, I want reality, I want hands on the ground' — arguing that in genuine crisis, philosophizing about hope and faith becomes a real, dangerous form of delay, and that interconnection and mutual aid, not individual optimism, are what actually determine whether a community survives collapse. Closes on a real, warm, human note distinct from the conversation's gravity: asked what she'll have for dinner that evening with her father, Kehdy describes real, specific preserved sardines her father caught and cured himself, alongside bread and hummus — a small, concrete, grounding detail after an otherwise heavy conversation."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is largely encyclopedic (Lebanese economic crisis reporting, Recycle Lebanon's own project pages) rather than pointing to further individuals — no new deferred Persona candidates surfaced here."@en ;
+    .
+
+
+tgs:Interview.TGS_74_JamesFleay a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "James Fleay"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/74-james-fleay> ;
+    .
+
+tgs:Interview.TGS_75_KrisDeDecker a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Kris De Decker: \"Looking Back Towards a Human Powered Future\""@en ;
+    skos:definition "Nate's real second conversation with low-tech researcher Kris De Decker (Low-Tech Magazine, Barcelona), a deliberate deeper dive into five categories of appropriate technology — real, concrete alternatives to high-tech defaults for heating, cooling, transportation, and more. Opens with Nate's own real framing for why this matters: the show's usual concepts land cognitively but not emotionally, since 'we're not forced to do it yet' — directly citing a real prior conversation with someone in Lebanon (a 50% GDP collapse) already living the reduced-consumption future most listeners can only imagine. De Decker's central, vivid reframing treats human muscle power as a real, legitimate energy source in its own right — comparable to roughly one square meter of solar panel on a sunny day, but unlike solar, available on demand: 'humans are base load,' in Nate's own memorable phrase."@en ;
+    dct:created "2023-05-10"^^xsd:date ;
+    dct:issued "2023-06-14"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.KrisDeDecker ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/75-kris-de-decker> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=4MYqRvm7vX4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/06/TGS75KrisDeDeckerTranscript.docx-1.pdf> ;
+    thinkr:discusses tgs:Concept.JevonsParadox ;
+    thinkr:hasDiscussionSummary "A real, direct personal demonstration grounds the abstract argument: De Decker runs a real hybrid solar/human-power system in his own Barcelona apartment, using a bike generator (built around a wind-turbine-style charge controller) to shrink the battery storage his system needs — battery costs and embodied energy typically account for 70-80% of an off-grid system's total burden. He's candid that combining human and renewable power isn't really about the electricity itself, but about the psychological shift it forces: producing your own power makes you 'think twice about how much power you need' in a way that supply-side renewable-energy discourse alone never does. The conversation's real emotional throughline is De Decker's own repeated argument that most needed change is social, not technical — 'communal household tasks' (shared kitchens, laundries, bathhouses, modeled on real historical precedents from Roman bathhouses to Soviet communal apartments) are framed explicitly as 'social innovation instead of technological innovation,' requiring no new components, just a different mindset about what's normal to do alone versus together. A real, extended detour into US healthcare closes the conversation on a genuinely provocative note: De Decker argues a substantial share of modern medical resource use (single-use plastics, energy-intensive sterilization, aggressive treatment of otherwise self-limiting conditions) reflects profit incentives and defensive practice rather than health necessity, citing a real case study suggesting some historical, less-resource-intensive medical practices produced comparable outcomes. The episode closes on real, unscripted warmth — Nate half-jokingly proposes he'd move into a De Decker-branded communal apartment building 'as long as they allowed dogs' — before De Decker previews a real, specific future research direction: an in-progress piece on the history of steel production and the real difficulty of 'escaping the Iron Age' given how much supposedly sustainable technology still depends on it."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Joslin Faith Kehdy (real TGS episode #73, the Lebanon-based sustainable-packaging guest Nate references directly and calls 'my friend'), now built (2026-09-02); Robert Lustig, now built (2026-09-02); John Kitzhaber is also now built. DJ White and Simon Michaux are both directly cited by name, but only their real panel appearances (RR-11/RR-24 for White; RR-1 for Michaux) are currently built in this graph — their own real solo episodes (TGS #51 for White; #19 and #49 for Michaux) remain unbuilt, so dct:references was deliberately not asserted here rather than pointing at individuals that don't yet exist."@en ;
+    .
+
+

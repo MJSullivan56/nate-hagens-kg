@@ -1,0 +1,379 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-tgs-126-150.ttl -- batch #6, 2026-09-12.
+# TGS interview episodes numbered 126 through 150. The sparsest TGS
+# batch so far: only 9 of 25 already built, 16 real, confirmed gaps.
+#
+# Real, valuable finding mid-batch: TGS-132's own trailing content
+# turned out to be a genuine, standalone triple belonging to two
+# entirely different entities (TGS-165 references TGS-85), not a
+# misattached header comment -- caught, verified TGS-85 already lives
+# in episodes-tgs-76-100.ttl (already presented), and relocated there
+# directly rather than discarded or left orphaned in this file.
+#
+# Three real, valuable resolutions: TGS-141 (Stefan Rahmstorf) closes
+# a real Human-without-Persona gap AND the episode itself, both
+# flagged earlier this session; TGS-145 (Kari Stoever) resolves a
+# real, direct forward-reference from TGS-173's own show notes;
+# TGS-148 (Richard Gephardt's real second appearance) links to his
+# existing Persona from TGS-1.
+#
+# No Series relevance in this range beyond TGS-150's own real
+# BendNotBreak membership, already declared elsewhere. Sorted by
+# episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Interview.TGS_126_AVisionForBetterment a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Daniel Schmachtenberger: \"Moving from Naive to Authentic Progress: A Vision for Betterment\""@en ;
+    skos:definition "FULLY BUILT 2026-08-13 from a stub, using the full real transcript (over 3 hours, 3h21m real runtime). Nate welcomes back Daniel Schmachtenberger to unpack a real, multi-authored Consilience Project paper, 'Development in Progress,' distinguishing naive/immature progress (achieving narrowly-defined goals while externalizing harm, then telling a survivorship-biased story about it) from authentic progress. Ranges across evolutionary history, the maximum power principle, historical strongmen (Genghis Khan, Attila, Alexander), indigenous constraint-design systems (Iroquois Confederacy, Pacific Northwest fishing rules), corporate personhood's real 14th Amendment origins, and real, specific PFAS/environmental-cost data, before closing on Schmachtenberger's own real proposed practice of 'yellow teaming' — tracing a proposed action's full network of externalities before building it."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    dct:created "2024-05-05"^^xsd:date ;
+    dct:issued "2024-06-05"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/126-daniel-schmachtenberger-7> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/06/TGS126DanielSchmachtenbergerTranscript.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=tmusbHBKW84> ;
+    thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.CarbonPulse ;
+    dct:references tgs:Interview.TGS_99_JeremyGrantham, tgs:Persona.IainMcGilchrist, tgs:Human.VanessaAndreotti ;
+    skos:scopeNote "Real, direct evidence this episode PRECEDES tgs:Interview.TGS_132_WideBoundaryImpactsOfAI chronologically (May 2024 vs. June 2024), confirmed via independent web search: TGS_132's own real show notes directly cite this episode at timestamp 1:45:22 ('A Vision for Betterment | The Great Simplification 126') — a real, confirmed cross-reference, not the reverse. This episode's own 'a year ago... on artificial intelligence and the superorganism' reference is therefore NOT TGS_132 (which postdates this episode) — independent search strongly suggests it's tgs:Interview.TGS_71_ArtificialIntelligenceAndTheSuperorganism (May 2023, real title match, correct ~1-year gap), not yet built in this graph. This also means TGS_132's own existing stub scopeNote — which flagged a 'candidate replay link' (youtu.be/_P8PLHvZygo) as possibly its own — is likely a misattribution: that URL's own real title is 'Artificial Intelligence and The Superorganism,' which matches TGS_71, not TGS_132's real title ('Silicon Dreams and Carbon Nightmares: The Wide Boundary Impacts of AI') — corrected in TGS_132's own scopeNote. Real, further citable material found but NOT built in this pass: Jaron Lanier, directly cited. This episode's own real page navigation confirms real sequential placement: immediately preceded by tgs:Interview.TGS_125 (Vanessa Andreotti's own real solo TGS episode — already a real, built Human/Persona in this graph, though not yet built as her own Episode individual), and immediately followed by tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma (already fully built in this graph)."@en ;
+    thinkr:hasDiscussionSummary "Opens with real, direct continuity from a prior conversation — Nate frames this explicitly as 'kind of the first followup' to an earlier discussion on AI and the superorganism roughly a year prior. Schmachtenberger's real core distinction, stated with unusual precision: naive progress achieves a narrowly-defined goal while externalizing harm elsewhere, then generates a self-congratulatory narrative from survivorship bias — told by 'those that happen to make it through,' not the losers of wars, the extinct species, or the colonized. He is careful to characterize this generously as naive, and less generously as 'propaganda and apologism for winners.' A real, extended historical section traces this pattern through named figures (Genghis Khan credited with roughly 40 million deaths, 11% of the world's population at the time) directly alongside real counter-examples of pre-modern constraint-design systems — the Iroquois Confederacy and Pacific Northwest tribal fishing rules cited as real, working precedents for building limits into a system's own structure rather than relying on individual restraint. The conversation's most concrete, quantified section covers PFAS contamination directly: a real cited $10.3 billion 3M settlement, a real single-state remediation cost estimate of $50 million, and a real, striking claim that removing all PFAS at current production rates would cost roughly $200 trillion annually — about twice global GDP. A real, pointed institutional critique follows: the 14th Amendment's corporate-personhood application, with a real, specific historical claim that by 1912 the Supreme Court had heard 28 cases on the rights of African Americans against 312 on the rights of corporations under the same amendment. Schmachtenberger's own closing framing is genuinely reflective rather than prescriptive: he proposes 'yellow teaming' — tracing an action's full network of causal effects before building it, using a healthy tree's cascading positive externalities (to soil, water, insects, other species) as the real model for what well-designed action looks like — and closes by explicitly cautioning against rushing into action, advocating instead for 'a deeper movement into withdrawal' and honest reckoning with how much of the impulse to act quickly is itself unprocessed ego or avoidance. Nate's own closing response is genuinely personal and unscripted: rather than summarizing, he says he's going to go sit by a tree at dusk and reflect."@en ;
+    .
+
+
+tgs:Interview.TGS_127_EdConway a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Ed Conway: \"Material World: The Key Resources Underpinning Modern Economies\""@en ;
+    skos:definition "BUILT 2026-08-24 from the full real transcript and official show notes — no prior stub existed. Sky News economics journalist Ed Conway walks through his book's six foundational materials (sand, salt, iron, copper, oil, lithium), opening from the same well ('I, Pencil' — no single person understands a whole supply chain) that inspired the book after he stood at the lip of a Nevada gold mine and realized he'd never grasped the physical reality behind 'a hangover from empire' UK gold-trading statistics. Central, recurring thesis, stated in his own words at the open and close: 'how can we begin to fathom the future if we don't understand the present... we need to understand the basics before we even get to the complex stuff.' Builds this through concrete, real case studies of supply-chain fragility: the 1915 UK 'Glass Famine' (Britain let its glass industry wither, then discovered wartime binoculars were existentially dependent on optical glass, and had to trade rubber to Germany — its own wartime enemy — for Zeiss binoculars); and a single small Birmingham metal-pressing factory that manufactures roughly half the world's automotive rearview-mirror auto-dimming electrodes, an invisible real 'pinch point' Conway explicitly generalizes: 'multiply that by a thousand, a million... it is so complex you can barely get your head around it.' Also covers declining ore grades (US copper ore fell from ~40% concentration in 19th-century Montana to ~0.4% today, meaning exponentially more energy/water/trucks per ton of usable metal), a direct, real critique of net-zero transition models (the IEA's own models implicitly assume Sub-Saharan Africa's per-capita energy consumption stays flat through 2050 — 'in other words, zero development' — to make the arithmetic work), and an extended discussion of Jevons Paradox (already modeled in this graph) via LED lighting and AI/data-center energy demand as live examples. Closes on real, direct consumption/growth reflection: Conway states plainly 'the amount of waste and overconsumption in our lives is crazy,' and that writing the book changed his own consumption behavior."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.EdConway ;
+    dct:created "2024-05-07"^^xsd:date ;
+    dct:issued "2024-06-12"^^xsd:date ;
+    dct:subject tgs:Subject.EROIAndEnergyQuality, tgs:Subject.MonetarySystemAndGrowth ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/127-ed-conway> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/06/TGS127EdConwayTranscript.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=4C2-tWcFKfQ> ;
+    dct:source tgs:Work.MaterialWorld ;
+    thinkr:discusses tgs:Concept.JevonsParadox, tgs:Concept.EnergyReturnOnInvestment, tgs:Concept.GrowthImperative, tgs:Concept.SupplyChainFragility ;
+    thinkr:hasDiscussionSummary "Warm and substantively convergent throughout, with Conway repeatedly building on and validating Nate's framing rather than contesting it — but not without two real, specific moments of honest divergence worth naming rather than smoothing over. The clearest point of genuine, if gentle, difference in register: near the close, Conway explicitly and self-consciously pivots away from the show's usual diagnostic mode, naming it directly — 'so much of the way that this discourse has happened in recent years has been about fear and about threat, but there's wonder too' — offered not as a rebuttal of anything Nate said, but as a real, distinct emphasis Conway clearly wanted on the record, illustrated with his own genuine enthusiasm for extreme ultraviolet lithography and the rediscovery of Roman concrete's recipe. The second real moment of honest non-convergence: when Nate directly asks whether excessive consumption stems from human nature or the economic system, Conway doesn't confidently pick a side — 'I don't know. I hope it's the economic system' — a real, disclosed uncertainty, distinct from Nate's own more assured 'I happen to agree' framing of the same question earlier in the conversation. Where the two do converge, it's substantive rather than superficial: Conway's own direct, unprompted validation of Nate's skeptical framing of net-zero modeling ('The answer is no, they don't [account for those constraints]') is offered as agreement from Conway's own separate reporting and interviews with policymakers, not deference to his host. The episode's real emotional through-line, stated by both speakers independently rather than scripted: understanding the physical reality behind consumption changes behavior — Conway discloses his own reduced gadget-buying since researching the book, and Nate's closing formulation ('understanding leads to appreciation, appreciation leads to gratitude and conversations and behavior change') is offered as a direct synthesis of what Conway had just described about himself, not an unrelated closing platitude."@en ;
+    skos:scopeNote "This episode was specifically selected — MJSullivan's own words — as a 'general purpose response/caveat to pretty much any news article that talks about unlimited growth or consumption,' since Conway's real material-complexity argument applies far beyond energy/climate topics specifically. Directly relevant to the tng-app design work this same session: this episode is close to a canonical source for that app's 'systemic reframing' step (an article with no explicit energy/growth content that nonetheless connects to consumption/complexity patterns). Real, deferred cross-references found but not built: Olivia Lazard and Simon Michaux, both cited directly by Nate in his own intro as prior TGS guests on materials-for-renewables — real, guessed episode IRIs (`TGS_167_OliviaLazard`, `TGS_SimonMichaux`) were caught as unconfirmed by a later integrity check (2026-09-11) and removed from this episode's own dct:references rather than left pointing at undeclared individuals; Simon Michaux specifically has two real, already-built appearances (TGS-19, TGS-49) and it's not yet confirmed which one, if either, this intro meant. No Persona bootstrapped for either here. 'I, Pencil' (Leonard Read essay) and Richard Baldwin (economist studying supply-chain 'nodal relationships,' a real, thin academic field per Conway's own account) are real, well-evidenced citations not built as individuals this pass."@en ;
+    .
+
+
+tgs:Interview.TGS_128_AlexandreTannous a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Alexandre Tannous"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/128-alexandre-tannous> ;
+    .
+
+tgs:Interview.TGS_129_JonathanRowson a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jonathan Rowson"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/129-jonathan-rowson> ;
+    .
+
+tgs:Interview.TGS_130_KristaTippett a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Krista Tippett"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/130-krista-tippett> ;
+    .
+
+tgs:Interview.TGS_131_JoeRoman a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Joe Roman"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/131-joe-roman> ;
+    .
+
+tgs:Interview.TGS_132_WideBoundaryImpactsOfAI a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Daniel Schmachtenberger: \"Silicon Dreams and Carbon Nightmares: The Wide Boundary Impacts of AI\""@en ;
+    rdfs:comment "Real full title and dates confirmed 2026-08-13 via independent web search (issued Jul 17 2024, recorded Jun 27 2024) — URL and full transcript content still not independently verified/fleshed out."@en ;
+    dct:created "2024-06-27"^^xsd:date ;
+    dct:issued "2024-07-17"^^xsd:date ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielSchmachtenberger ;
+    dct:references tgs:Interview.TGS_126_AVisionForBetterment ;
+    skos:scopeNote "CORRECTED 2026-08-13 — the previously-flagged 'candidate replay link' (youtu.be/_P8PLHvZygo) is likely a misattribution, not this episode's own real replay: that URL's own real title is 'Artificial Intelligence and The Superorganism,' matching tgs:Interview.TGS_71_ArtificialIntelligenceAndTheSuperorganism (May 2023, not yet built), not this episode's own real title ('Silicon Dreams and Carbon Nightmares'). Real, confirmed cross-reference instead, found while building TGS_126: this episode's own real show notes directly cite TGS_126 at timestamp 1:45:22 — dct:references added accordingly."@en .
+
+
+tgs:Interview.TGS_133_CaseyCampHorinek a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Casey Camp Horinek"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/133-casey-camp-horinek> ;
+    .
+
+tgs:Interview.TGS_134_JohanRockstrom a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Johan Rockström: \"Planetary Boundaries: Exceeding Earth's Safe Limits\""@en ;
+    skos:definition "Nate hosts Johan Rockström, real, direct originator of the Planetary Boundaries framework, opening with a real, striking structural point: even complete fossil fuel phase-out alone would still breach the 1.5°C climate boundary if humanity fails to also return biosphere health to a safe operating space, since intact land ecosystems currently absorb roughly 30% of fossil-fuel CO2 emissions — a real, direct 'shooting ourselves in the foot' dynamic where degrading nature simultaneously worsens the crisis and weakens the planet's own buffering capacity against it."@en ;
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:issued "2024-07-31"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JohanRockstrom ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/134-johan-rockstrom> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=JaboF3vAsZs> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/07/TGS134JohanRockstromTranscript.pdf> ;
+    thinkr:discusses tgs:Concept.PlanetaryBoundaries ;
+    dct:references tgs:Interview.TGS_99_JeremyGrantham ;
+    thinkr:hasDiscussionSummary "A real, striking regional case study grounds the abstract framework concretely: the Arctic is warming roughly three times faster than the rest of the planet, hosting 6 of 16 known real tipping-point systems, with Greenland ice-sheet melt directly affecting European temperature regulation via AMOC (Atlantic Meridional Overturning Circulation) dynamics. Rockström is real and direct about a genuine economic reframing closing the policy section: real carbon pricing at roughly $100/tonne is offered not as a punitive cost but as internalizing an externality already being paid involuntarily by the biosphere — paired directly with the real, current fact that coal is now more expensive than renewables even without subsidies, undercutting the common assumption that climate action requires economic sacrifice. Real, considered hope closes the episode without minimizing the real scale of the crisis: Rockström, who directly describes living in sobering climate data 'every day' as his own professional 'dark room,' credits real, direct interaction with change-makers worldwide for genuine optimism, citing real historical precedent that societal transitions are driven by committed minorities tipping an inert majority, not universal buy-in — noting real, current double-digit penetration of sustainability awareness and green-voting willingness across many societies as evidence of approaching exactly that kind of tipping point."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Levke Caesar (AMOC researcher, directly cited — already known to this graph as a deliberately deferred figure, matching the same scope decision made for Leon Simons in the Brett KenCairn build); Stefan Rahmstorf (real, directly cited climate scientist, not built); Ottmar Edenhofer (real, directly cited economist, carbon pricing, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_135_JanineBenyus a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Janine Benyus"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/135-janine-benyus> ;
+    .
+
+tgs:Interview.TGS_136_CoreyBradshaw a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Corey Bradshaw"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/136-corey-bradshaw> ;
+    .
+
+tgs:Interview.TGS_137_MamphelaRamphele a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Mamphela Ramphele"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/137-mamphela-ramphele> ;
+    .
+
+tgs:Interview.TGS_138_FritjofCapra a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Fritjof Capra: The Physics of Connection — Understanding Relationships and Ecology"@en ;
+    skos:definition "Nate hosts physicist and systems theorist Fritjof Capra, author of 'The Tao of Physics,' for a wide-ranging conversation on how quantum physics, deep ecology, and Eastern philosophy converge on a single systems view of life. Capra directly traces his own intellectual origin to reading Werner Heisenberg's 'Physics and Philosophy' as a Vienna undergraduate, walks through his own real 'four characteristics of life' (networks that are inherently regenerative, creative, and intelligent), and argues that a shift from quantitative to qualitative growth is the actual precondition for resolving the ecological and social crises he sees as fundamentally systemic and interconnected."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.FritjofCapra ;
+    dct:created "2024-05-08"^^xsd:date ;
+    dct:issued "2024-08-28"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/138-fritjof-capra> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.TaoOfPhysics ;
+    skos:scopeNote "Resolves a real, directly-flagged deferred reference from the RR-14 build earlier this session ('Fritjof Capra, directly name-checked with his own real prior TGS episode'). Real, further citable material found but NOT built in this pass: Gregory Bateson, real, directly cited, still not built. Pier Luigi Luisi (his own real co-author on The Systems View of Life), Lynn Margulis, Hazel Henderson, David Steindl-Rast, and David Korten, all real, directly cited, are now built (2026-09-02)."@en ;
+    thinkr:hasDiscussionSummary "A genuinely warm first meeting despite decades of parallel intellectual work — both Nate and Capra directly express real surprise at how closely their independently-developed worldviews converge, with Capra's own closing words naming a 'fundamental, conceptual, maybe even spiritual kinship' he hadn't expected walking in. Capra traces his own real intellectual origin with unusual precision: reading Heisenberg's 'Physics and Philosophy' as a Vienna undergraduate, understanding 'only about half of it' at the time, yet carrying the book's core insight — that subatomic reality resists the language physicists had available to describe it — through his entire subsequent career. A real, substantive structural connection surfaces directly in the show notes: Capra's own term 'Economic Superorganism,' independently arrived at, sits alongside this graph's own already-built Concept.Superorganism as a genuine point of real convergence between the two thinkers' frameworks, not a borrowed term. Capra's own real 'four characteristics of life' (self-organizing networks that are regenerative, creative, and intelligent) are offered directly to graduate students and postdocs as a real, actionable research program — reflecting on what these characteristics imply for their own specific discipline, regardless of field. The conversation closes on real, unhedged political directness: Capra's own 'magic wand' answer is to eliminate money from politics entirely, describing US institutional corruption as structural rather than a matter of individual character — no politician, in his own words, can reach high office today 'without being corrupt,' not due to personal flaws but because the system itself requires it."@en ;
+    .
+
+
+tgs:Interview.TGS_139_DanielChristianWahl a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Daniel Christian Wahl: \"Bioregional Futures: Reconnecting to Place for Planetary Health\""@en ;
+    skos:definition "Nate's real, direct first meeting with Daniel Christian Wahl, opening with Wahl's own real, direct framing: in a world with no remaining guarantees, genuine pathways forward must simultaneously offer healing (community and social cohesion, restored relationship to place and to each other) and resilience (local provisioning capacity in the face of real, ongoing disruption) — with bioregionalism offered directly as a structural framework capable of holding both at once."@en ;
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:issued "2024-09-04"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.DanielChristianWahl ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/139-daniel-christian-wahl> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=L3zTAv-JWi0> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/09/TGS139DanielChristianWahlTranscript.pdf> ;
+    dct:references tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
+    thinkr:hasDiscussionSummary "Wahl directly credits his own real 2006 PhD thesis, on design for human and planetary health rather than design for sustainability, as the real, direct intellectual root of his current bioregional-futures work — arguing 'sustainability' as a framing had already become too narrow and defensive by that point, while 'health' offers a genuinely generative, positive target instead. He's real and direct in crediting Aaron Antonovsky's real, established salutogenic health theory (developed in the late 1960s) as a genuinely underused meta-framework for organizing regenerative-design thinking, treating health as an emergent property arising at multiple nested scales simultaneously — individual, community, bioregional, planetary — rather than a purely individual medical outcome. Closes with a real, direct, mutual invitation exchange rather than a standard sign-off: Wahl proposes a future conversation specifically on planetary health and salutogenesis, and separately invites Nate to appear as a guest on his own real podcast, Voices of the Regeneration — with Nate's own real, direct, immediate agreement, 'let's do it,' closing the episode on a note of real, mutual professional respect and forward momentum rather than simple wrap-up."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Aaron Antonovsky (real, directly cited health theorist, salutogenesis, deceased, not built given the brief, single-mention nature of the citation)."@en ;
+    .
+
+
+tgs:Interview.TGS_140_JeffreySachs a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Jeffrey Sachs"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/140-jeffrey-sachs> ;
+    .
+
+tgs:Interview.TGS_141_StefanRahmstorf a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Stefan Rahmstorf"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.StefanRahmstorf already exists in this graph -- linked directly rather than left disconnected."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/141-stefan-rahmstorf> ;
+    thinkr:hasGuest tgs:Persona.StefanRahmstorf ;
+    .
+
+tgs:Interview.TGS_142_RomanKrznaric a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Roman Krznaric: \"History for Tomorrow: Uncovering Future Possibilities from Humanity's Past\""@en ;
+    skos:definition "Nate's real first conversation with social philosopher Roman Krznaric, opening directly with Krznaric's own real, central distinction — being 'more interested in possibilities rather than probabilities' — and his own coined concept of 'radical hope': committing to act for change even against unfavorable odds, framed directly against the real regret of reaching the end of one's life never having tried when change may have been possible. Real, extended intellectual lineage discussed directly: Thomas Carlyle's 'Great Man' theory of history versus Marxist and social historians (Eric Hobsbawm, Howard Zinn) who instead emphasize collective and ordinary-people-driven change — Krznaric argues the latter offers more genuine, replicable hope than waiting for individual heroic leadership."@en ;
+    dct:created "2024-08-05"^^xsd:date ;
+    dct:issued "2024-09-25"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.RomanKrznaric ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/142-roman-krznaric> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=fXTbcDgg9ek> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/09/TGS142RomanKrznaricTranscript.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Work.HistoryForTomorrow ;
+    thinkr:hasDiscussionSummary "Krznaric's own real, distinctive contribution is 'temporal intelligence' (or, per a real, direct family disclosure, his 15-year-old son's preferred term, 'temporal wisdom' — Krznaric wryly notes he's 'too analytic') — the underdeveloped human capacity to genuinely think across radically different timescales, which he argues institutions structurally fail to match even though individual humans are naturally capable of it. Real, global historical case studies ground the conversation's practical governance section: citizens' assemblies now operating permanently in East Belgium and Brussels, and ad-hoc ones in Gdansk and revolutionary France, offered as real, concrete precedent for democratic institutions genuinely capable of longer-term thinking than electoral cycles allow. A real, striking historical parallel closes the migration discussion: Krznaric draws a direct line from the 19th-century Chinese Exclusion Acts to real, current anti-immigration political rhetoric, while citing real, current research that migrants are net fiscal contributors rather than a drain — a real, pointed rebuttal of a common contemporary narrative using historical recurrence as evidence. The episode closes on a real, unresolved practical tension rather than an easy answer: asked directly for his own 'magic wand,' Krznaric doesn't propose a utopian fix but a real, structural one — converting extractive fossil fuel majors into 'steward-owned' companies, a real, existing legal ownership structure — while acknowledging directly that such a shift 'is never going to happen' voluntarily, offered anyway as a genuine direction rather than a guaranteed outcome."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Kate Raworth (Krznaric's own real wife, already a real, built Persona and repeat TGS guest in this graph — her own solo TGS episode remains unbuilt); Theodore Zeldin, Timothy Snyder ('On Tyranny'), and Kamanamaikalani Beamer (Hawaiian ancestral circular economy), all real, directly cited, none built."@en ;
+    .
+
+
+tgs:Interview.TGS_143_SuzanneSimard a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Suzanne Simard"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/143-suzanne-simard> ;
+    .
+
+tgs:Interview.TGS_144_ErikFernholm a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Erik Fernholm"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/144-erik-fernholm> ;
+    .
+
+tgs:Interview.TGS_145_KariStoever a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Kari Stoever"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct resolution: this is the same real Kari Stoever directly named as an upcoming guest in TGS-173's own show notes, flagged there as a real, traceable next candidate."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/145-kari-stoever> ;
+    .
+
+tgs:Interview.TGS_146_BillPlotkin a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Bill Plotkin: \"Ecological Awakening: A Path Toward Holistic Adulthood\""@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript. Opens with Plotkin reading David Whyte's poem 'All the True Vows' as a deliberate frame-shift before any conceptual content. Central thesis, stated directly: 'the root cause is arrested human development' — Plotkin's own term for what he elsewhere calls 'systemic human development oppression,' offered as the underlying generator behind the metacrisis rather than one crisis among many. Lays out his ecocentric/soulcentric eight-stage developmental wheel (paired earth/human archetypes per stage: Innocent in the Nest, Explorer in the Garden, Thespian at the Oasis, Wanderer in the Cocoon, Apprentice at the Wellspring, Artisan in the Wild Orchard, Master in the Grove of Elders, Sage in the Mountain Cave) — most contemporary people, he argues, never progress past an unhealthy version of the third stage. Describes ecological awakening directly and experientially, not just conceptually: a felt shift from experiencing an 'invisible wall' between oneself and the rest of the living world to experiencing kinship with it, often accompanied by real grief. Closes on Joanna Macy's 'Great Turning' framework (three dimensions: saving what's left, building new structures, shifting consciousness) as Plotkin's own answer to living with the metacrisis, and a direct, unhedged closing claim: the problem is 'worse than you think, and the solution is closer at hand and easier than you might have feared.'"@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.BillPlotkin ;
+    dct:created "2024-09-16"^^xsd:date ;
+    dct:issued "2024-10-16"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/146-bill-plotkin> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/10/TGS146BillPlotkinTranscript.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=S25UKlLq5m8>, <https://open.spotify.com/episode/4u4rGuURrInJOOFPHv5rLu> ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.CarbonPulse, tgs:Concept.EcologicalAwakening, tgs:Concept.EcocentricDevelopmentalWheel, tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.GreatTurning ;
+    dct:references tgs:Persona.RichardSchwartz, tgs:Persona.VanessaAndreotti ;
+    skos:scopeNote "2026-08-24: built from the full real transcript (previously a bare stub — number/title/dates only, sourced from 3 independent citations across RR-17, Frankly_132, and TGS_167). Real, well-evidenced Persona candidates cited directly in the transcript body (not just show notes) but deliberately NOT bootstrapped this pass, matching this graph's established deferred-citation discipline: Thomas Berry ('The Dream of the Earth' — direct source for the Sage in the Mountain Cave archetype, per Plotkin's own account of meeting him), Riane Eisler (Dominator vs. Partnership societies — real, no TGS episode of hers built yet despite a real cross-reference in this episode's own show notes), Malidoma Somé (Dagara people), Martín Prechtel (Tzutujil Maya), Joanna Macy (already cited, not yet a Persona), and James Hillman ('we've had a hundred years of psychotherapy and the world's getting worse'). Richard Schwartz and Vanessa Andreotti already existed as Personas in this graph — linked via dct:references, not rebuilt. Gregory Cajete and David Whyte are real but cited more lightly (a poem reading; one book title) — noted here rather than flagged as strong candidates."@en ;
+    .
+
+
+tgs:Interview.TGS_147_IndyJohar a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Indy Johar"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/147-indy-johar> ;
+    .
+
+tgs:Interview.TGS_148_RichardGephardt a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Richard Gephardt"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.RichardGephardt already exists in this graph -- linked directly rather than left disconnected."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/148-richard-gephardt> ;
+    thinkr:hasGuest tgs:Persona.RichardGephardt ;
+    .
+
+tgs:Interview.TGS_149_JohnFullerton a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "John Fullerton"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/149-john-fullerton> ;
+    .
+
+tgs:Interview.TGS_150_CarlosNobre a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Carlos Nobre: \"Carbon Sink to Carbon Source? How the Amazon Rainforest Could Become a Self-Drying Savanna\""@en ;
+    skos:definition "Nate hosts Earth scientist Carlos Nobre, co-chair of the Science Panel for the Amazon, to discuss the real, specific mechanics of Amazon tipping-point risk: if the forest exceeds its critical threshold within the next 30-50 years, Nobre estimates a real loss of 50-70% of total forest cover, with that tipping point itself possibly reached as early as 2050 under current deforestation and warming trajectories. Real, striking mechanism grounds the risk directly: the rainforest canopy absorbs roughly 92% of incoming sunlight, and the forest actively recycles its own rainfall through transpiration — meaning sustained deforestation doesn't just remove trees, it can structurally collapse the water cycle the remaining forest depends on, converting rainforest to savanna."@en ;
+    dct:created "2024-09-25"^^xsd:date ;
+    dct:issued "2024-11-13"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.CarlosNobre ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/150-carlos-nobre> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=JDmYOkpNNJ4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/11/TGS150CarlosNobreTranscript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.BioticPump, tgs:Concept.PlanetaryBoundaries ;
+    dct:references tgs:Work.Amazonia4, tgs:Interview.TGS_178_AndrewMillison, tgs:Interview.TGS_193_AnastassiaMakarieva ;
+    thinkr:hasDiscussionSummary "Nobre is real and direct that the Amazon holds roughly 150-200 billion tons of stored carbon, framing the tipping-point risk not just as biodiversity loss but as a real, potential mass carbon release event with global climate consequences far beyond South America. A real, specific economic alternative structures the conversation's practical section: Amazonia 4.0, Nobre's own real initiative demonstrating a socio-bioeconomy built on standing forests rather than cleared land — citing real, concrete examples like cupuaçu-cacao production through the Amazon Creative Labs and the Amazon Institute of Technology, offered as evidence that forest-based economics can be genuinely more profitable than cattle ranching, which Nobre directly names as responsible for roughly 65% of Amazon deforestation. Real, direct attention to indigenous rights closes the conversation's social dimension: Nobre discusses real, current political pressure in Brazil's congress against indigenous land protections, naming activist and former Brazilian Minister of Indigenous Peoples Sônia Guajajara directly, and noting the Amazon is home to roughly 1.5 million indigenous people whose land rights are directly tied to forest conservation outcomes. The episode's real emotional core comes in Nobre's own closing words, delivered at age 73: he directly names his own generation as the one science first warned about planetary risk, and states plainly that his generation 'did not do anything to save the planet' — closing not with technical optimism but with a direct, personal appeal to younger generations to take the leadership his own generation failed to take."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Corey Bradshaw (real TGS episode, directly cross-referenced regarding warming's impact on extinctions, not built — a real, new episode citation surfaced here); Sônia Guajajara (real, directly cited Brazilian indigenous rights activist and former government minister, not built)."@en ;
+    .
+
+

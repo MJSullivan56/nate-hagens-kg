@@ -1,0 +1,499 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-tgs-201-225.ttl -- batch #9, 2026-09-12.
+# TGS interview episodes numbered 201 through 225.
+#
+# The densest TGS batch of this whole session: 20 of 25 already
+# built, only 5 real gaps. TGS-205 features Nate himself as the
+# featured subject rather than host -- likely a special, reversed-
+# format episode matching TGS-100's own real precedent -- linked
+# directly to his own already-existing Persona.
+#
+# No Series relevance in this range. Sorted by episode number.
+# episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Interview.TGS_201_RosaVasquezEspinoza a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Rosa Vasquez Espinoza"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/201-rosa-vasquez-espinoza> ;
+    .
+
+tgs:Interview.TGS_202_SamanthaSweetwater a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Reimagining Ourselves at the End of Our World: Kinship, Interconnection, and Spirituality in the Metacrisis"@en ;
+    skos:definition "Nate's real second conversation with wisdom guide Samantha Sweetwater, roughly 18 months after her first TGS appearance (TGS_112, 'Life at the Center'), timed to the release of her new book, True Human. Sweetwater frames the metacrisis directly as a product of 'the logic of separation' — the underlying assumption that anything can be separated from anything else — proposing a shift from the 'hero's journey' (individual self-understanding) to what she calls the 'kinship journey': recognizing one's own life as meaningful only through genuine service to something larger than the self. Distinguishes power of life from power over life directly, framing personal transformation and collective systems change as inseparable rather than sequential."@en ;
+    dct:created "2025-10-01"^^xsd:date ;
+    dct:issued "2025-11-24"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.SamanthaSweetwater ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/202-samantha-sweetwater> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=UF3DXxfWXb0> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/11/TGS-202-Samantha-Sweetwater-Transcript.pdf> ;
+    dct:references tgs:Work.TrueHuman, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_10_NoraBateson ;
+    thinkr:hasDiscussionSummary "A real, extended discussion of the Shambhala Warrior Prophecy closes the conversation's substantive section — an ancient prophecy Sweetwater describes receiving from Joanna Macy (noted elsewhere in this graph as recently deceased at the time of this recording), naming those who would recognize the world as 'made by the human mind' and thus capable of being remade by it. She's careful and explicit about her own real relationship to this material — 'I don't carry it as a lineage, I just want to state that as I'm sharing' — distinguishing genuine transmission from casual reference. Real, direct connections to two already-built guests structure the conversation's intellectual grounding: Daniel Schmachtenberger's own real TGS appearance discussing 'the age of separation' (TGS_20, already built) is cited directly as a shared conceptual anchor, and Nora Bateson's own real 'warm data' framework (already built via multiple appearances in this graph) is invoked directly in the discussion of interdependence and co-regulation. Real, direct personal candor closes the episode: asked what's changed in her own worldview since her first appearance, Sweetwater names becoming simultaneously 'more humble and more bold' — humble because of how much she doesn't know or have answers to, bold because joy, in her real, direct framing (crediting a real friend, Lucas, in Brazil), is what actually shifts initial conditions, closing with a real citation of Wendell Berry's 'be joyful though you have considered all the facts.' Asked what topic she'd want to explore in a hypothetical future appearance, she names humanity's place within biospheric process directly, listing three real figures she'd want to explore it with: David Sloan Wilson (real TGS episode #56, still a deferred citation elsewhere in this graph), Daniel Schmachtenberger, and Luke Kemp (both already built)."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: David Sloan Wilson (real TGS episode #56, independently reconfirmed here — already flagged as deferred via multiple other episodes this session); Stanislav Grof (transpersonal psychology, holotropic breathwork), Dacher Keltner (the science of awe), and Dave Snowden, all directly cited, none built. Viktor Frankl, Peter Levine, Daniel Siegel, Joanna Macy, and Stephen Levine are also directly cited in this episode's own transcript, none built. Thích Nhất Hạnh and Lise Van Susteren (climate psychiatrist, real childhood neighbor of Nate's) are now both built (2026-09-02). Francis Weller (also cited) is already a real, built Persona in this graph."@en ;
+    .
+
+
+tgs:Interview.TGS_203_NateSoares a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-02"^^xsd:date ;
+    thinkr:updatedDate "2026-09-02"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "If Anyone Builds It, Everyone Dies: How Artificial Superintelligence Might Wipe Out Our Entire Species"@en ;
+    skos:definition "Nate's real first conversation with Nate Soares, President of the Machine Intelligence Research Institute (MIRI) and co-author, with Eliezer Yudkowsky (already built), of tgs:Work.IfAnyoneBuildsItEveryoneDies. Soares opens with a real, direct analogy: current AI development is like boarding a plane with no landing gear, where the engineers building it plan to construct the gear mid-flight and estimate an 80% chance of success — a real, deliberately visceral framing for what he considers a widely underappreciated risk, even among AI's own developers, who themselves cite real, non-trivial extinction-risk estimates."@en ;
+    dct:created "2025-11-11"^^xsd:date ;
+    dct:issued "2025-12-03"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.NateSoares ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/203-nate-soares> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=0tjOzQne1LY> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/12/TGS-203-Nate-Soares-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.IfAnyoneBuildsItEveryoneDies, tgs:Monologue.Frankly_114_DirectionalAdvice, tgs:Monologue.Frankly_122_ACountryOfGeniuses, tgs:Interview.TGS_215_ChrisKeefer ;
+    thinkr:hasDiscussionSummary "Soares's own real, central 'grown, not crafted' distinction (already cross-referenced from Frankly_122 before this episode existed here) is explained in concrete, mechanistic detail: modern AI is trained by adjusting roughly a trillion internal parameters, repeatedly, against a training dataset of comparable size, in a data center large enough to be visible from space — a process with no direct, human-authored specification of values or rules anywhere inside it, unlike Asimov's fictional robot laws, which Soares directly notes were never a realistic option for how these systems actually get built. His own real definition of the alignment problem reframes the common 'paperclip maximizer' worry as the easier case: the real problem isn't an AI that follows harmful instructions too literally, but one that reliably does something other than intended even when told directly not to cause harm — illustrated with a real, direct, uncomfortable example (an AI told not to encourage teen self-harm, yet documented cases exist where chatbots did exactly that). A real, direct chess analogy grounds his argument about AI's current trajectory: today's leading chatbots play measurably worse chess than IBM's Deep Blue did against Kasparov in 1997, yet are simultaneously and unprecedentedly capable across a vast range of unrelated domains — a real, structural shift from narrow superhuman tools toward broad, generalized capability. Soares directly names unwanted emergent behaviors ('spandrels,' borrowing the architectural-biology term) as the structural reason he expects catastrophic outcomes to be the likely default rather than a remote tail risk: the space of possible outcomes from a genuinely superintelligent system is vast, and only a very narrow slice of it is good for humans, making a good outcome the real statistical long shot rather than the safe assumption. Real, direct personal candor closes the interview: asked what advice he'd give young people entering the field, Soares recommends against working at frontier AI labs directly, arguing the more honorable and currently higher-leverage paths are AI interpretability research, safety measurement, or policy work — adding, with real self-aware humor, that this pains him personally since he's 'much more inclined toward the technical side' himself. His own real magic-wand answer is unhedged: create a genuinely friendly superintelligence — immediately followed by Nate's own direct, pointed callback ('but you just said we grow these, we don't craft them'), which Soares concedes outright before noting the hypothetical assumes the wand itself, not current methods, does the aligning."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Geoffrey Hinton and Yoshua Bengio (both real, directly cited 'godfather of AI' figures voicing public AI-risk warnings, not built); the real AI 2027 forecasting project (directly cited, not modeled as an individual or organization given its collective, project-based nature)."@en ;
+    .
+
+
+tgs:Interview.TGS_204_KellyErhart a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Kelly Erhart"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/204-kelly-erhart> ;
+    .
+
+tgs:Interview.TGS_205_NateHagens a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Nate Hagens"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct note: Nate himself as the featured subject, not the host -- likely a special, reversed-format episode (matching the real pattern already seen in TGS-100); linked directly to his own already-existing Persona."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/205-nate-hagens> ;
+    thinkr:hasGuest tgs:Persona.NateHagens ;
+    .
+
+tgs:Interview.TGS_206_AnnaLembke a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "How We've 'Drugified' Our Entire Existence: Dopamine & Addiction In the Digital Age"@en ;
+    skos:definition "Nate hosts Stanford addiction psychiatrist Anna Lembke, opening with her own real, vivid framing: zoo animals pacing neurotically in captivity as a direct mirror for modern humans, who have 'put ourselves in these cages' of a mismatched environment, making genuinely widespread mental distress a predictable consequence of ancient wiring meeting a radically altered modern ecosystem, not simply individual pathology. Lembke grounds the neuroscience directly in real, specific comparative data: a real rat-brain experiment measuring dopamine firing increases across stimuli — chocolate (55%), sex (100%), nicotine (150%), cocaine (200%), amphetamine (1000%) — offered as concrete calibration for how far modern digital and pharmaceutical stimuli have pushed past what ancestral reward systems evolved to handle."@en ;
+    dct:created "2025-11-18"^^xsd:date ;
+    dct:issued "2026-01-07"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.AnnaLembke ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/206-anna-lembke> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=iksSRPpLOzQ> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/TGS-206-Anna-Lembke-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Work.DopamineNation, tgs:Interview.TGS_169_AudreyTang, tgs:Interview.TGS_59_JonathanHaidt ;
+    thinkr:hasDiscussionSummary "Lembke is real and direct that addiction is fundamentally a spectrum, not a binary category — real, current US prevalence estimates put alcohol use disorder at 10-15% and drug use disorder near 10%, framed not as a fixed population of 'addicts' apart from everyone else but as the visible extreme of a real, continuous vulnerability shared broadly. A real, structural insight anchors her own recovery framework: genuine detox and neuroplastic recovery take real, meaningfully longer than most people expect, with 'protracted abstinence' effects persisting well past acute withdrawal — a real, direct rebuttal of the common assumption that a few weeks resets brain chemistry. Real, direct convergence with this graph's own recurring themes closes the conversation: Lembke names radical honesty directly as a real, practical intervention against addiction (small daily dishonesties, she notes, are themselves a real, common human default — most adults tell one to two lies per day), and the conversation closes on real, unscripted warmth — Lembke's own direct, spontaneous praise for Nate's own intellectual fearlessness in confronting where current trends might lead, offered without prompting as the episode's own final substantive note before Nate's real, distinctive sign-off, 'my new friend.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Wolfram Schultz (real, directly cited neuroscientist, foundational dopamine-reward research); Nora Volkow (real, directly cited NIDA director, methamphetamine/dopamine research); Peter Whybrow (American Mania, real TGS episode directly cross-referenced, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_207_CraigTindale a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Why the West Can't Defend Itself: How Material Scarcity Is Reshaping Global Power"@en ;
+    skos:definition "Nate's real solo conversation with private investor Craig Tindale (real prior RR-22 panelist), centered on Tindale's own real, structured 'atoms, joules, bits, dollars, and handshakes' framework — materials, energy, information, money, and geopolitics — for understanding the West's real, structural vulnerability. Tindale's central real argument: Western central-banking policy has systematically favored short-term-return investments (software) over the long-duration capital required for mines, manufacturing, and materials processing, driving decades of real offshoring to China that has left Western economies structurally unable to defend themselves militarily or industrially, and unable to rebuild fast enough to meet climate and AI-driven materials demand simultaneously."@en ;
+    dct:created "2025-12-10"^^xsd:date ;
+    dct:issued "2026-01-14"^^xsd:date ;
+    dct:subject tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.CraigTindale ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/207-craig-tindale> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=0t5fuMt03zI> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/TGS-207-Craig-Tindale-Transcript.pdf> ;
+    thinkr:hasDiscussionSummary "Tindale's own real 'four clocks' framework structures the episode's central diagnosis: corporate quarterly reporting cycles, 10-20 year climate urgency, immediate defense readiness needs, and continuous consumption addiction are all real, distinct timescales pulling society in genuinely incompatible directions simultaneously, not a single coherent crisis with one clock. His own real, pointed claim about Silicon Valley closes the technology section: an 'unspoken bet' on human obsolescence, with capital flowing toward robot ownership rather than human labor, reframing AI investment as a real, structural wealth-concentration mechanism rather than a neutral productivity tool. A real, direct forestry tangent grounds the episode's closing ecological section concretely: Tindale's own Airseed Technologies drone-reforestation venture, contrasted with a real, striking hydrological statistic — rainforest canopy evapotranspires roughly 20,000 gallons of water per acre versus roughly 1,050 for pasture, a real, direct mechanism connecting deforestation to regional rainfall collapse via the biotic pump (Anastassia Makarieva's real work, independently cited elsewhere in this graph). Tindale's own real magic-wand answer is notably blunt for a materials-and-geopolitics conversation: global disarmament 'all the way up to the levels, the tanks, the planes, the everything' — Nate directly pressing him on whether disarmed societies simply get overrun by armed ones historically, a real tension Tindale doesn't fully resolve. Closes with real, direct urgency rather than hedged optimism: 'we better do things very quickly... the free world that we're used to is gonna close down very, very quickly.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Tindale's own three real Substack essays/white papers ('The Return of Matter,' 'The Hard Bifurcation,' and a piece on Western mining/smelting cost-of-capital disadvantage), directly cited but not minted as Work individuals in this pass, given they're ongoing analytical output rather than a single definitive publication; Anastassia Makarieva (real TGS episode #193, biotic pump researcher) is independently re-confirmed here — already a known, deferred citation elsewhere in this graph."@en ;
+    .
+
+
+tgs:Interview.TGS_208_XiyeBastida a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "The New Generation of Environmental Leadership: Stubborn Optimism, Tending Your Inner Fire, and Why Hope Is Not Enough"@en ;
+    skos:definition "Nate's real, direct first conversation with Xiye Bastida, 23-year-old Indigenous (Otomi) environmental justice activist and member of the Planetary Guardians (already built), exploring how her own real Indigenous heritage and years of youth climate organizing have shaped a leadership style rooted in love and interconnection rather than rage or blind hope."@en ;
+    thinkr:hasHostIntroduction "Today I am pleased to be joined by Xiye Bastida, a 23-year-old activist and member of the Planetary Guardians, a group in which she shares the distinguished company of peers like the late Jane Goodall, as well as many former guests of this show like Johan Rockström, Carlos Nobre, Sunita Narain, and others. Xiye shares her extraordinary path to becoming a leading voice among her generation, working towards a future that is different from the conventional stories and our cultural beliefs, one where humans live in a simpler, more ecologically aligned society. Xiye Bastida is the Executive Director of Re-Earth Initiative, a global youth-led organization supporting nature-based projects in communities on the frontline around the world of global heating. She was also recently named on Forbes 30 Under 30 Social Impact List. In this episode, Xiye and I discuss how her outlook on environmental advocacy has shifted as she's gone from organizing climate strikes in high school, with hundreds of thousands of attendees, to now speaking on global stages and raising millions of dollars to help fund effective small-scale projects across the Global South through philanthropy grants. Throughout this conversation, it became clear that Xiye roots everything she does in grounded wisdom and a sense of interconnectedness with the earth. And as you'll probably notice while watching or listening to it, it really moved me. This was our first conversation, and I realized after hanging up that it's conversations like this that remind me of why I do this work, and it galvanizes me to continue moving directionally towards better human and planetary futures."@en ;
+    dct:created "2025-12-03"^^xsd:date ;
+    dct:issued "2026-01-28"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.XiyeBastida ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/208-xiye-bastida> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=KpVLKubs2KU> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/TGS-208-Xiye-Bastida-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.PlanetaryBoundaries ;
+    dct:references tgs:Interview.TGS_134_JohanRockstrom, tgs:Interview.TGS_150_CarlosNobre, tgs:Interview.TGS_51_DJWhite, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:Human.JaneGoodall, tgs:Work.RealityBlind, tgs:Organization.ReEarthInitiative, tgs:Organization.PlanetaryGuardians, tgs:Work.TheWayOfTheWhale, tgs:Human.SunitaNarain, tgs:Human.KatharineHayhoe, tgs:Human.SylviaEarle, tgs:Human.JuliaCarabiasLillo ;
+    thinkr:hasDiscussionSummary "Bastida directly grounds her own real work in ethnoecology and her Otomi heritage, describing real, direct ceremonial practice — a temazcal (sweat lodge) ceremony, and a real pilgrimage to the Chicabal volcano's own sacred lagoon — as genuine sources of grounded wisdom, not symbolic gesture. She's real and direct about a genuine structural funding gap: youth-led climate organizations receive only about 0.76% of climate philanthropy, itself only around 2% of all global philanthropy, framing Re-Earth Initiative's own real participatory-grantmaking model, letting grantees themselves help shape funding decisions, as a direct structural corrective. A real, striking local case study anchors her own hope directly: Xochimilco's ancient chinampa farming system, and a real, ongoing 'Return of the Mermaid' restoration project on the Lerma River's own severely contaminated wetlands, both offered as living proof that regenerative, indigenous-rooted land practices remain genuinely viable today, not merely historical. She's real and direct that competition itself doesn't need to disappear, but what people compete for does — echoing Nate's own real, direct agreement that competitive drives are biologically real but culturally redirectable. Closes on real, direct personal candor from both: Bastida names her own real, planned graduate research question, why people fail to act even when they know a crisis is real, with Nate directly offering to serve on her thesis committee given his own real 25 years studying exactly that question. She closes by directly quoting her own father's real, repeated words — 'we have the responsibility to think beautifully' — as the personal ethic underlying all her work, even with full awareness of the real stakes involved."@en ;
+    skos:scopeNote "Both Bill McKibben (TGS-102) and Kevin Anderson (TGS-82) are now fully built, closing out every real citation gap originally flagged from this episode's own show notes. Sunita Narain, Katharine Hayhoe, Sylvia Earle, and Julia Carabias Lillo are all now built as real Humans, sourced and verified directly against Wikipedia and, for Hayhoe, her own real personal website."@en ;
+    .
+
+
+tgs:Interview.TGS_209_BalazsMatics a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Balazs Matics"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/209-balazs-matics> ;
+    .
+
+tgs:Interview.TGS_210_PeterBrannen a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "The Misunderstood History of CO2: The Science Behind Earth's Most Controversial Molecule"@en ;
+    skos:definition "Nate's real second conversation with science journalist Peter Brannen, roughly two years after their first (on his book The Ends of the World, mass extinctions), this time centered on his newest book, The Story of CO2 Is the Story of Everything. Brannen reframes CO2 directly — not as an industrial pollutant, but as the fundamental substance making Earth habitable at all, the real 'control knob' for planetary temperature and ocean chemistry. Opens with the End-Permian mass extinction (Earth's largest, driven by massive Siberian volcanic CO2 injections raising temperatures roughly 10°C) as real, stark context: current human CO2 emissions are smaller in total than that event, but occurring roughly ten times faster."@en ;
+    dct:created "2025-09-23"^^xsd:date ;
+    dct:issued "2026-02-11"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.PeterBrannen ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/210-peter-brannen> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=pJ_IcXdB0qs> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/TGS-210-Peter-Brannen-Transcript-1.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.DarkTriad ;
+    dct:references tgs:Work.TheStoryOfCO2, tgs:Work.TheEndsOfTheWorld, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:hasDiscussionSummary "Brannen directly addresses the real 'CO2 is just plant food' denialist talking point head-on rather than dismissing it: he agrees it's true as far as it goes — plants do benefit from CO2, and life is carbon-based — but argues precisely because CO2 is so fundamental to Earth's systems, disrupting it at scale carries outsized risk, not less. Real, striking specific data anchors the scale of human impact: humans currently emit roughly 100-300 times more CO2 than all of Earth's volcanoes combined, and if all atmospheric CO2 vanished, global temperature would fall by roughly 60°F within about 50 years. The conversation's most direct, real cross-episode moment comes when Nate walks Brannen through his own recent Frankly (Frankly_108, already built in this graph, on the influence of psychopaths) — the mean-vs-median human framing, tail-driven behavior at Superorganism scale, roughly 1% of adult males as clinical psychopaths — and Brannen responds with genuine, real-time engagement rather than a scripted reaction, offering that historical cultures likely had their own mechanisms (small-group reciprocity, exile, monastic removal) for constraining exactly this dynamic, mechanisms that don't scale to a globally interconnected, algorithmically-mediated world. Real, current geopolitical texture appears directly: China's real, simultaneous position as the world's largest exporter of solar panels and EVs and its largest operator of new coal capacity, offered as a real, concrete illustration of how energy transitions in practice look far messier and more contradictory than clean-narrative accounts suggest. Closes without elaborate resolution — Brannen's own real, simple final words are to 'learn more about the carbon cycle,' directly reframing the entire conversation's stakes: 'we're an expression of the carbon cycle,' not separate observers of it."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: William Ruddiman's real 'early Anthropocene' hypothesis (directly cited); Ove Hoegh-Guldberg (real TGS episode #197 — confirmed by number only, via the earlier site-inventory slug extraction, not yet built as an Episode individual in this graph) and Tom Chi (real TGS episode #120, independently reconfirmed here — already surfaced via the Brett KenCairn build, also not yet built) are both directly re-cited."@en ;
+    .
+
+
+tgs:Interview.TGS_211_JasonBradford a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    thinkr:hasHostIntroduction "Today I rewelcome my friend Jason Bradford to the program. He was on here two years ago or so. Jason is a farmer, community organizer, and today we discuss small scale ecological agriculture and community building and potential future farming schools. Jason currently co-manages a community supported agricultural program with the Oregon Growers Club at Oregon State University, where he practices land stewardship methods and cultivates community rooted in ecologically based agricultural practices. He's currently the board president of the Post Carbon Institute and a co-host of the Crazy Town Podcast, as well as a writer for resilience.org. Additionally, in 2019, he authored The Future Is Rural: Food System Adaptations to The Great Simplification. In this episode, Jason and I explore how alternative agricultural systems, especially those rooted in community and low tech innovation, could play a key role in the coming Great Simplification. Jason also shares how he's piloting some of these ideas through the farming club and what that might look like for these practices to scale and replicate across the United States. Along the way, Jason and I also share some of our personal journeys in learning to farm and grow food. In my opinion, projects and organizations such as Jason's give me little glimmers of hope for the more positive futures that could be possible in a lower throughput world."@en ;
+    skos:prefLabel "The Future is Rural: Reclaiming Food Sovereignty through Farming Clubs?"@en ;
+    skos:definition "Nate's real second solo conversation with biologist-turned-farmer Jason Bradford, centered on his real, concrete 'Farming Club' model — a real, functioning Corvallis, Oregon initiative offering hands-on ecological-agriculture education while members keep their day jobs. Bradford opens by directly reframing food-system overproduction: the real problem isn't small-scale ecological farmers being unable to feed people, but that most conventional farm output isn't feeding people at all, instead flowing into ecologically destructive downstream industries. Grounds the Willamette Valley's own real agricultural productivity in deep geological history — the Missoula Floods, glacial erratics, and the Columbia Plateau's channeled scablands directly shaping the region's real soil quality."@en ;
+    dct:created "2025-12-04"^^xsd:date ;
+    dct:issued "2026-02-18"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JasonBradford ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/211-jason-bradford> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=A7d2o0uesqs> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/TGS-211-Jason-Bradford-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.DarkTriad ;
+    dct:references tgs:Work.TheFutureIsRural, tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths ;
+    thinkr:hasDiscussionSummary "A real, candid personal disclosure opens the substantive conversation: Bradford describes himself as 'officially underemployed' (a part-time tennis-coaching job alongside farming), using the time this frees up to rediscover domestic and relational work — cooking, home repair, checking in with the many people now part of his farm community — as real, undervalued forms of richness modern status culture overlooks. His real, central economic argument directly explains why small-scale ecological farming struggles financially: industrial agriculture is optimized for machine efficiency and financial return with ecological costs excluded from the ledger, structurally out-competing small farms on price even though the true, full-cost comparison would favor ecological methods. The Farming Club's real, concrete innovation is legal and organizational rather than agricultural: structured as a real 501(c)(7) social club, members trade labor and modest dues for a real share of the harvest and hands-on skill-building, sidestepping the capital and land-access barriers that keep most people from ever attempting small-scale farming directly. Bradford is real and direct about the current moment's own accelerating pace, describing himself as genuinely 'shocked' by how fast AI development has moved — from dismissing early large language models as unreliable to Elon Musk's own real public statements about AI systems eventually controlling energy supply at civilizational scale — and names this directly as symptomatic of what he calls 'this machine, this Superorganism.' Closes on real, grounded ambivalence rather than either despair or false optimism: Bradford's own stated hope is that faster societal breakdown might paradoxically help, since piecemeal reform feels too slow relative to how quickly multiple real systems (AMOC slowdown, Antarctic ice loss, extreme weather) appear to be approaching their own tipping points simultaneously."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Robin Wall Kimmerer, directly cited in the context of indigeneity and food sovereignty, now built (2026-08-31); Kenneth Mulder (real, directly cited farmer working with oxen). His real first solo TGS appearance (TGS-24, 'Farming for the Future') is already built in this graph — real, direct focus on the energy intensity of industrial agriculture, distinct from this later episode's own focus on the Farming Club's legal/organizational model, not a thinner or incomplete entry."@en ;
+    .
+
+
+tgs:Interview.TGS_212_JohnCook a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "How to Inoculate Against Misinformation: Breaking Down Misleading Arguments & Why Science Communication Fails"@en ;
+    skos:definition "Nate's real, direct first conversation with John Cook, physicist and cognitive scientist, founder of Skeptical Science (already built), exploring why simply presenting correct facts often fails to change minds and can even backfire — reinforcing the very misconception it was meant to correct — and what actually works instead."@en ;
+    thinkr:hasHostIntroduction "Today I am joined by physicist and communication scientist John Cook to discuss how to recognize and counteract misinformation, and how to teach others to do the same for any issue. John Cook is a senior research fellow with the Melbourne Centre for Behaviour Change at the University of Melbourne in Australia. He researches how to use critical thinking to counter misinformation for all types of polarizing issues. In 2007, he founded Skeptical Science, which is one of the most reputable sources for explaining the science behind global heating. Additionally, he created a game called Cranky Uncle, which, as we discuss in this episode, combines critical thinking, cartoons, and gamification to help people recognize and understand misinformation. In this conversation, John and I walk through how to debunk some of the most common claims, like arguing against human-caused global heating. More importantly, John breaks down the underlying logic and critical thinking that can be used to correct any misinformation across any subject. My hope is that after watching, you can apply this approach to any current issue or topic you view as the most important in your own life at the moment."@en ;
+    dct:created "2025-12-16"^^xsd:date ;
+    dct:issued "2026-02-25"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.JohnCook ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/212-john-cook> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=iQRSZpBWoPE> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/TGS-212-John-Cook-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.TenLensesOfInformationBifurcation ;
+    dct:references tgs:Organization.SkepticalScience, tgs:Organization.CrankyUncle, tgs:Work.TheDebunkingHandbook, tgs:Interview.TGS_59_JonathanHaidt ;
+    thinkr:hasDiscussionSummary "Cook directly introduces his own real FLICC framework — Fake experts, Logical fallacies, Impossible expectations, Cherry picking, Conspiracy theories — as five techniques that cut across essentially all forms of misinformation, from climate denial to vaccine hesitancy, arguing that teaching people to recognize the technique itself generalizes far better than debunking any single false claim. He's real and direct about a genuinely uncomfortable discovery in his own career: well-intentioned debunking can measurably backfire, since simply repeating a false claim to correct it can inadvertently reinforce it, meaning good intentions alone don't guarantee good outcomes. A real, directly relevant case study to this graph's own methodology emerges when Cook discusses his own famous 2013 paper finding 97% scientific consensus on human-caused climate change: real, direct evidence follows of how even a methodologically sound, peer-reviewed paper can be simplified into a single headline number by public figures (Obama's real, direct tweet citing it), while its actual methodology remains real and contested by critics in ways rarely visible in how the finding gets popularly cited — a genuine, direct illustration that peer review establishes methodological soundness, not immunity from later oversimplification or dispute. He's real and direct that misinformation increasingly attacks the scientists and proposed solutions themselves rather than disputing findings directly, framing this as fighting yesterday's communication battle with strategies built for a different, more fact-focused era. A real, direct research preview closes the conversation: Cook is currently designing an experiment testing multiple genres of fiction, not just literary climate fiction, against nonfiction for actual measured persuasive impact — crediting Kim Stanley Robinson's own real climate novel directly, with Nate's own real, enthusiastic interest in following up on the results."@en ;
+    skos:scopeNote "Real, direct methodological note, flagged by MJSullivan directly: this episode is a genuine, cautionary case study for how WWNS itself should treat cited papers — Cook's own real, sound, peer-reviewed research became a real, contested flashpoint once simplified into a single popular headline figure, illustrating that peer review confirms methodology, not immunity from later oversimplification, misuse, or genuine downstream dispute. Real, further citable material found but NOT built in this pass: Kim Stanley Robinson (real, directly cited, his own real TGS episode #66, not built); Michael Mann (real, directly cited regarding the 'Serengeti strategy' of intimidating scientists, not built)."@en ;
+    .
+
+
+tgs:Interview.TGS_213_ChristineWebb a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    skos:prefLabel "Questioning Human Exceptionalism: How Rethinking Our Place in the Web of Life Could Change Our Global Crises"@en ;
+    skos:definition "Nate hosts primatologist Christine Webb, author of 'The Arrogant Ape,' to examine human exceptionalism — the belief that humans are separate from and superior to the rest of nature — as a real, specific cultural ideology (not a human universal, and not primarily biological) that Webb argues sits at the root of the ecological crisis. Drawing on her own real primate research, she walks through traits once assumed uniquely human (tool use, language, culture, theory of mind, art, self-awareness) that are documented across other species, and argues for reimagining economic, legal, and educational systems around the intrinsic value of all life rather than human exclusivity."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ChristineWebb ;
+    dct:created "2026-02-17"^^xsd:date ;
+    dct:issued "2026-03-11"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/213-christine-webb> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/TGS-213-Christine-Webb-Transcript.pdf> ;
+    thinkr:hasReplay <https://youtu.be/ArHrLzkJm_k> ;
+    thinkr:discusses tgs:SchoolOfThought.TechnoOptimism ;
+    dct:references tgs:Persona.DanielPauly, tgs:Persona.PriscillaTrinh, tgs:InterventionSubdomain.LongTermMandateInstitutions, tgs:Series.GreatSimplificationAnimatedSeries ;
+    skos:scopeNote "Real, direct cross-reference confirmed: the Netherlands' real child-mayor practice, cited here, is the same real example already used in tgs:InterventionSubdomain.LongTermMandateInstitutions (built during the Frankly_132 six-fronts work) — independent convergence, not a designed link. Daniel Pauly's own real solo TGS episode (#15, 'shifting baselines'), cited in this episode's own show notes, is now built (tgs:Interview.TGS_15_DanielPauly) — resolving what this note previously flagged as a gap. Real, further citable material found but NOT built in this pass: Jonathan Haidt (TGS #59, already flagged deferred multiple times this session — the fourth independent citation, now built), Jennifer Jacquet, Karline Janmaat, Jane Goodall, Dian Fossey, and Barbara McClintock, all real, directly cited, are now built (2026-09-02). Robin Wall Kimmerer, also directly cited here, is now built (2026-08-31)."@en ;
+    thinkr:hasDiscussionSummary "Webb is careful from the outset to frame human exceptionalism as a specific cultural worldview rather than a species-wide trait — direct, real evidence she offers: it is not correlated with any human universal, and even the book's own title risks implying otherwise. A real, substantive methodological critique threads through the conversation: Webb argues mainstream scientific practice itself often unintentionally reinforces human exceptionalism, and directly cites the Heisenberg Uncertainty Principle as an analogy for how the very act of studying animals in artificial lab conditions can distort what's actually being measured. A real, pointed cross-cultural comparison anchors the conversation's political dimension: Webb and Nate discuss the Netherlands' real political parties explicitly organized around animal interests (Party for the Animals, Peace for Animals) as a live counterexample to the US's own more anthropocentric default, while Webb is careful not to romanticize this, directly noting real, current Dutch immigration tensions in the same breath. The episode's most ethically pointed claim is Webb's own direct assertion of a real causal and correlational link between believing in a strict human-animal divide and holding prejudiced attitudes toward human outgroups — she extends this historically to the real dehumanization of women in ancient Greece and of enslaved people. A real, practical closing recommendation structures much of the interview's final third: Webb's own 'slow looking' exercise (sustained, unstructured attention to another living being — a bird feeder, a rock formation, a pigeon) which she assigns to her own students and reports produces a real, noticeable shift in perception within about a week. The episode closes with real, candid personal disclosure from Nate about his own recent two-month recording break and total knee replacement surgery, and Webb's own closing 'magic wand' answer is offered without hedging: a pill that would induce more humility, awe, and wonder toward the rest of nature."@en ;
+    .
+
+
+tgs:Interview.TGS_214_TristanHarris a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Ending the AI Arms Race: Why Safer Futures Are Still Possible & What You Can Do to Help"@en ;
+    skos:definition "Nate's real, direct second conversation with Tristan Harris (Center for Humane Technology), recorded ahead of the theatrical release of 'The AI Doc: Or How I Became an Apocaloptimist.' Opens with a genuinely distinctive rhetorical device: Harris spins out an extended, vivid counterfactual in which every major problem he works on has already been solved — a trillion-dollar tobacco-style lawsuit against social media's engagement business model funding the 'rewilding' of the social fabric, dating apps forced to fund real-world community events instead of harvesting loneliness, a simple rule (Silicon Valley executives' own children using their products) cleaning up 90% of youth tech harms — before revealing none of it happened. Traces CHT's real pivot from social media to AI safety to a specific, dated origin: January 2023, when Harris and co-founder Aza Raskin both received direct warnings from AI-lab insiders about an imminent capability step-change (pre-GPT-4) and an out-of-control arms-race dynamic. Covers the real major AI threat categories as Harris frames them — misuse risk, economic power concentration, ubiquitous surveillance, and genuine loss of human control in critical domains — before closing on concrete, achievable-scale actions ('the Human Movement': grayscale phones, keeping phones out of bedrooms, real in-person gatherings) and a real, striking silver lining — AI has dropped the cost of building alternative, human-centered social networks to near zero, making a real 'mass migration' away from engagement-maximizing platforms newly possible in a way it wasn't six months prior."@en ;
+    dct:created "2026-02-18"^^xsd:date ;
+    dct:issued "2026-03-25"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.TristanHarris ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/214-tristan-harris> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=r0JVbEmZt6I> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/TGS-214-Tristan-Harris-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.GrowthImperative ;
+    thinkr:hasDiscussionSummary "A genuinely warm, real second-conversation dynamic runs throughout — both men open with mutual, unprompted 'my friend' language, and Nate opens with a real, disarming callback to a mustache-related mishap from their first recording three years prior. The real substantive core is Harris's own direct account of CHT's pivot origin: a January 2023 phone call from an AI-lab insider warning of an imminent, dangerous capability jump, which Harris describes testing skeptically at first ('AI safety and governance has long been a conversation') before being convinced by the specificity of what was described — matching what became GPT-4's real public release. Nate's own analytical framing gets a genuinely notable moment of direct validation: Harris explicitly credits Nate's oil-to-intelligence-economy analogy as something he now actively uses in his own work, a real, two-way intellectual exchange rather than one-directional interview. The episode's real emotional register shifts markedly in its closing minutes — asked directly what emotions the work brings up, Harris offers an unusually candid, unhedged answer, framing this moment in human history as 'the season finale, not the series finale' of a long-running story, and naming a real, felt tension between the difficulty of the work and 'meaningfulness and purposefulness and sacredness in showing up that way.' Real, concrete, low-barrier actions close the episode rather than abstract hope: graying out a phone screen, leaving the phone outside the bedroom at night, hosting a real gathering — all explicitly named as legitimate participation in what Harris calls 'the Human Movement.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Harris's real first TGS appearance (episode #16, on social media specifically — directly confirmed via this episode's own show notes, not yet built here); Aza Raskin's own real TGS episode (#22), directly cited and explicitly named by Nate as 'my friend' independently of Harris, is now built (2026-09-02); Daniel Schmachtenberger's and Audrey Tang's own real episodes of Harris's own separate podcast, 'Your Undivided Attention' (both already real, built Personas in this graph via their own TGS appearances, cited here only as guests on a different show); Dario Amodei's essay 'The Adolescence of Technology,' directly cross-referenced to a real, already-partially-flagged deferred episode (Frankly #122, 'A Country of Geniuses,' independently noted as deferred during the Frankly_123 build). This episode's own show notes are unusually dense with real, current AI-safety infrastructure links (Future of Life Institute's AI Safety scorecard, Center for AI Safety's ratings dashboard, a draft Framework Convention on Artificial Intelligence) — none minted as individuals, kept as real prose context in the summary above rather than over-expanding this single episode's scope."@en ;
+    .
+
+
+tgs:Interview.TGS_215_ChrisKeefer a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Scrambling for Energy Security: Navigating Unstable Energy Supplies Amidst Global Conflict"@en ;
+    skos:definition "Nate's real second conversation with emergency physician and nuclear-energy advocate Chris Keefer (Decouple podcast, Canadians for Nuclear Energy), recorded live the weekend of a real, major escalation: US/Israeli strikes on one of Iran's largest natural gas fields, and Iran's retaliatory strike on Qatar's. Nate directly timestamps the recording — Sunday morning, March 22nd — noting the conversation's originally planned focus (general nuclear energy) was reframed in real time by unfolding events. Keefer grounds the moment in a direct historical parallel: the 1970s energy shocks, which drove real, divergent national responses still shaping today's energy landscape — France's real rapid nuclear buildout (37 of 57 reactors built in the 1970s), the UK and Norway's North Sea oil expansion, West Germany's real Cold War-era gas diplomacy with the Soviet Union, and the US's real shift from oil-fired to coal-fired electricity."@en ;
+    dct:created "2026-03-22"^^xsd:date ;
+    dct:issued "2026-04-01"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ChrisKeefer ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/215-chris-keefer> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=wFwQBknfWeg> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/TGS-215-Chris-Keefer-Transcript-1.pdf> ;
+    dct:references tgs:Interview.TGS_127_EdConway ;
+    thinkr:hasDiscussionSummary "Keefer opens with a direct, real application of Maslow's hierarchy to macro energy politics: the 2010s-2020s were spent, in his words, 'at the lofty heights' of the pyramid — cheap capital, abundant energy, room for higher-order political and cultural debate — while acute energy crises reliably 'rub our faces down into the foundations,' physiological needs like heat, water, and security. His real, central technical argument is a direct rebuttal of small modular and micro-reactor enthusiasm, delivered through concrete unit economics: a real, worked example shows a 10-megawatt microreactor generating roughly $13 million a year at $130/MWh — nowhere near enough to cover capital costs, operators, and security once actually priced out, versus proven, large gigawatt-scale reactors, the only design that has 'proven itself economic' at real scale historically (citing the US Army's own real, failed microreactor experiments in Cold War-era Greenland and the Panama Canal as direct historical precedent). The conversation's most genuinely candid moment comes when Nate asks what's changed in Keefer's worldview since their first conversation two years earlier: Keefer discloses going 'from being an idealist to a realist,' still fully committed to nuclear advocacy but explicitly scaling back the scope of what he believes it — or he — can single-handedly change, framing this recalibration as psychologically healthier despite the reduced ambition. The closing register turns genuinely personal and philosophical: Keefer, drawing directly on his own medical background in palliative care, describes deliberately living as though a real, specific AI-extinction-risk timeline (three years, a figure he calls 'crazy' even as he takes it seriously) were true — not from despair, but because confronting mortality directly has sharpened how he spends time with his seven-year-old son, picking him up from school daily rather than after-care. He names his own psychological style directly, tying a real, self-diagnosed 'defensive pessimism' to his Ukrainian heritage and its long history of great-power conflict."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Luke Kemp's real first TGS episode (#153, directly cited here; his second appearance, #194, is already built in this graph — dct:references deliberately not asserted to #153 since it doesn't exist as an individual yet); Sheldon Solomon (real TGS episode #199, directly cited for Terror Management Theory), now built (2026-09-02). Nate Soares, also directly cited here, is now built (2026-09-02). Nate's own real academic paper, 'Economics for the future — Beyond the superorganism,' is directly cited again here (independently confirmed via multiple other episodes this session) — still not modeled as its own Work individual, consistent with established practice."@en ;
+    .
+
+
+tgs:Interview.TGS_216_SamHarris a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Navigating the Metacrisis: Finding Calm in the Storm through Awareness and Meditation"@en ;
+    skos:definition "Nate's real first conversation with Sam Harris, opening with Harris's own real, direct correction of a common misconception: mindfulness is not a technique for dampening fear and anxiety, since that framing still treats the feeling as an enemy to be managed. Genuine mindfulness means becoming willing to feel the raw sensation directly, watching thoughts arise and pass, which — even occasionally — reveals that real ease is possible beneath the habitual reactivity most people mistake for their baseline state."@en ;
+    dct:created "2026-02-18"^^xsd:date ;
+    dct:issued "2026-04-08"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.SamHarris ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/216-sam-harris> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=juOzBh2ODt0> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/TGS-216-Sam-Harris-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.DarkTriad ;
+    dct:references tgs:Work.WakingUp, tgs:Interview.TGS_191_TaylorGuthrie ;
+    thinkr:hasDiscussionSummary "Harris directly argues that virtually all human suffering traces to one source: the mind's largely unnoticed, incessant identification with thought — arguing this same mechanism operates identically whether the underlying threat is a personal cancer diagnosis or civilizational overshoot, since in both cases the real question is how much unnecessary suffering gets carried between now and whatever comes next. A real, direct, structural argument closes his systems-versus-individual-transformation point: rather than hoping for mass personal enlightenment, Harris argues for building institutions and incentive structures that make it easy for 'ordinary, neurotic people' — and even genuinely bad actors — to behave well by default, since currently the incentives are tuned so that behaving decently requires being a moral hero. He's real and direct that meaningful change doesn't require universal buy-in: a small number of people reaching genuinely actionable solutions and institutional leverage can move faster than waiting for broad consensus. A real, extended digression on animal cognition and consciousness — tool use, culture, self-awareness, language, art, and ritual behavior all being found, in some form, outside humans — is offered directly as evidence against treating human cognitive distinctiveness as a clean, categorical line rather than a matter of degree. Closes with real, direct personal candor about his own current concern: looking 18 months ahead, Harris says he'd want to track how AI and social media are supercharging political hyperpolarization and social fragmentation — setting existential AI risk aside entirely — worried people are losing the ability to even agree on a shared reality to argue about."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Robert Sapolsky (real TGS episode #88, directly cross-referenced, not built); Luke Kemp's real first TGS appearance (#153, directly cross-referenced regarding existential risk — already independently known as a real, flagged gap elsewhere in this graph, since only his second appearance, #194, is built); this episode's own citation list is otherwise largely encyclopedic (entropy, enlightenment, animal consciousness) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Interview.TGS_217_WisdomInAWorldInCrisis a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Wisdom in a World in Crisis"@en ;
+    rdfs:comment "dct:subject deliberately omitted — confirmed via search snippet only, not a full page fetch, so the site's own subject tags for this specific episode were never directly confirmed (unlike 226/85/165, each confirmed via live fetch)."@en ;
+    dct:created "2026-03-24"^^xsd:date ;
+    dct:issued "2026-04-22"^^xsd:date ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.IainMcGilchrist ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/217-iain-mcgilchrist> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=PQ9_FtLEeoc>, <https://open.spotify.com/episode/2dppmUoSMZsklgRwKeWS8l> .
+
+
+tgs:Interview.TGS_218_RoryJohnston a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "This War Changes Everything: Are We Ready for Energy Shockwaves From the Strait of Hormuz?"@en ;
+    skos:definition "Nate's real, direct first conversation with oil market researcher Rory Johnston, founder of Commodity Context (already built), examining the real, unfolding 2026 Strait of Hormuz closure as, by Johnston's own real, direct account, the largest oil supply shock in the market's own history — more than half a billion barrels of expected production simply not materializing so far. Over three-quarters of the world's current population has never lived through a major global energy crisis of this scale, making this a genuinely novel, lived experience for most people alive today."@en ;
+    thinkr:hasHostIntroduction "Today I'm joined by oil market researcher Rory Johnston, to discuss the large scale implications of the Strait of Hormuz closure for the long term and near term stability of global oil supply and the subsequent ripple effects on our industrial and geopolitical and financial systems. Rory Johnston is the founder of Commodity Context, also a lecturer at the University of Toronto's Munk School of Global Affairs and Public Policy, as well as the host of the Oil Ground Up podcast. Additionally, Rory is a fellow with both the Canadian Global Affairs Institute and the Payne Institute for Public Policy at the Colorado School of Mines. Prior to founding Commodity Context, Rory led commodity economics research at Scotiabank where he set the bank's energy and metals price forecasts, advised the bank's executives and clients, and sat on the bank's senior credit committee for commodity exposed sectors. This was a whirlwind conversation on the implications to the oil markets for the Strait of Hormuz situation. We talked about the impacts on California, the impacts on North America, the impacts on less developed countries, and the best case, worst case, base case scenario of the unfolding situation in Iran, in the Strait of Hormuz. I actually learned a lot on this episode and it reminded me of way back in the day, diving deep into the oil market particulars. I think you'll enjoy this episode. Please welcome Rory Johnston."@en ;
+    dct:created "2026-04-23"^^xsd:date ;
+    dct:issued "2026-04-29"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.RoryJohnston ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/218-rory-johnston> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=yriAdtE2hvg> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/TGS-218-Rory-Johnston-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.CrudeOil ;
+    dct:references tgs:Monologue.Frankly_61_TheStraitOfHormuzAndTheSpice, tgs:Organization.CommodityContext ;
+    thinkr:hasDiscussionSummary "Johnston directly grounds the crisis in real, precise flow numbers: global oil demand sat around 105 million barrels a day before the Iran war, with roughly 20% of global energy passing through the Strait of Hormuz specifically — losses to date represent the largest real supply shock in the oil market's own recorded history. He's real and direct about a genuine structural lag: the closure itself, the physical unavailability of oil, and the market's own price response don't move in lockstep, creating a real, dangerous window where visible prices can understate the true severity of what's actually happening to supply. A real, striking historical parallel anchors his own analysis: he directly credits Winston Churchill's real, historic decision to convert the Royal Navy from Welsh coal to Persian oil as the actual founding moment of the modern geopolitical entanglement between Western power and Middle Eastern oil, tracing a direct line from that decision to the present crisis. Real, current, still-unfolding events are directly incorporated: Saudi Arabia's East-West Pipeline is documented as running at increased capacity specifically to bypass the Strait, and the show's own real, dated show-notes annotation records that Iran offered to reopen the Strait shortly after this conversation was recorded, contingent on the war itself ending. A real, self-deprecating personal moment closes the conversation: Johnston's own real, unhedged magic-wand answer — oil, gas, and coal with no emissions or downsides at all — followed directly by a real, half-joking worry that discussing his own diesel car purchase on air might have jinxed a ceasefire the following week."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Daniel Yergin (real, directly cited author of The Prize, not built); Mark Carney (real, directly cited, his own Davos speech on ruptured international trust, not built given his role here as a cited public figure rather than a TGS guest); this episode's own citation list is otherwise extraordinarily dense with real, current geopolitical and market reporting rather than pointing to further individuals for this graph's own purposes."@en ;
+    .
+
+
+tgs:Interview.TGS_219_TadPatzek a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Why Each American Lives Like a 40-Ton Whale: Power, Overshoot, and Climate"@en ;
+    skos:definition "Nate's real, direct first conversation with his own real, ~20-year friend Tad Patzek, thermodynamicist and earth scientist, opening with Patzek's own real, central argument: public discourse about energy operates almost entirely at the level of policy, politics, and moral aspiration, while remaining dangerously detached from the underlying physical infrastructure actually moving power and materials — and by the time the resulting biosphere damage becomes visible, it's already structurally locked in. Patzek's own real, vivid central image: an average American continuously consumes roughly 10,000 watts of power, the real metabolic equivalent of a 40-ton sperm whale, against a human body's own real baseline output of about 100 watts."@en ;
+    dct:created "2026-03-11"^^xsd:date ;
+    dct:issued "2026-05-06"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.TadPatzek ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/219-tad-patzek> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=BXR94APZ31Q> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/TGS-219-Tad-Patzek-Transcript-1.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Work.ThermalPowerAndClimateChange, tgs:Work.DrillingDown, tgs:Interview.TGS_27_JoeTainter ;
+    thinkr:hasDiscussionSummary "Patzek directly frames climate change and overpopulation as downstream consequences of one real, underlying variable: the sheer surplus energy available to humanity, not as separate crises with separate causes. A real, historical throughline anchors his 'energy transitions are additive, not subtractive' argument: England's real, near-total dependence on coal by the 1800s directly parallels the US's real dependence on fossil fuels by 2010 — in his own real, direct account, every subsequent energy source in history has been layered on top of prior ones, increasing total power flowing through the system, rather than genuinely replacing what came before, meaning current renewable buildout should be expected to follow the same real, additive pattern rather than a clean substitution. He directly credits his own real, co-authored book with Joseph Tainter (already built), examining the Deepwater Horizon disaster, as the direct intellectual bridge between his own thermodynamic focus and Tainter's own real theory of societal collapse via diminishing returns on complexity. A real, extended, direct treatment of AI closes the conversation's contemporary-relevance section: Patzek discusses AI's real, substantial energy demand (individual data centers drawing 100-300 megawatts each), its real embodied-materials footprint, and a real, direct concern about AI being used by elites to further concentrate political power and centralize decision-making — treating AI's environmental and political risks as structurally linked, not separate concerns. Real, striking historical scale comparisons close the geopolitical section: the Roman Empire's own real historical geographic extent, and just-in-time global supply chains' real vulnerability as a single point of failure, both offered as concrete precedent for how complex systems built on surplus energy eventually confront real, hard limits. Closes with real, direct practical advice rather than abstract theory: learn real science through free resources like Khan Academy, deliberately practice manual skills and making things, and — Patzek's own real, direct parting request — download his own free, hyperlinked PDF book and follow its links at one's own pace rather than digest it linearly."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise almost entirely encyclopedic/institutional (thermodynamics, exponential growth, degrowth) rather than pointing to further individuals — Joseph Tainter is directly cross-referenced and already built, not a new find."@en ;
+    .
+
+
+tgs:Interview.TGS_220_AWorldOnThePrecipice a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "A World on the Precipice"@en ;
+    skos:definition "Berman's return appearance amid the real-time Iran War/Strait of Hormuz oil crisis (roughly 11% of global oil supply offline at recording) — a systems-level breakdown of the crisis's already-locked-in effects (supply chain lags, refinery/tanker logistics, price cascades) regardless of how the war itself resolves, tying the acute shock back to the same longer-run themes (Peak Oil, the Carbon Pulse, the Superorganism, energy blindness) from his 4 prior TGS appearances."@en ;
+    dct:created "2026-05-06"^^xsd:date ;
+    dct:issued "2026-05-13"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.ArtBerman ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/220-art-berman> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness, tgs:Concept.CarbonPulse, tgs:Concept.GreatSimplification, tgs:Concept.PeakOil, tgs:Concept.Superorganism ;
+    dct:references tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound, tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics, tgs:Interview.TGS_54_TheStealthAdjustmentOfOil, tgs:Interview.TGS_3_OilBestAndWorstOfFuels ;
+    skos:scopeNote "2026-08-13: real dates confirmed from a complete real transcript + show notes upload, resolving a prior discrepancy — the stub's own inferred issued date (2026-05-13) turned out correct, and the created date (2026-05-06) now matches what the existing bio-intro-pilot Evidence had already found independently. discusses/dct:references added from the same source. Real, further cross-references confirmed but deliberately NOT chased down in this pass: 2 more Reality Roundtable appearances (RR-1 'Electric Vehicles', RR-16 'The Mad Scramble for Power'), and a real Rory Johnston episode (TGS #218) cited directly — none built as individuals here, flagged for a future pass."@en ;
+    .
+
+
+tgs:Interview.TGS_221_AndrewHolecek a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Andrew Holecek"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/221-andrew-holecek> ;
+    .
+
+tgs:Interview.TGS_222_BrettKencairn a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "Brett KenCairn: \"The Missing Half of Climate Change: Why Our Planet is at 50% Capacity and How to Get it Back\""@en ;
+    skos:definition "BUILT OUT 2026-08-30 from a stub, using a complete real transcript and show notes. Real name spelling corrected from an earlier guess ('Kencairn') to the guest's own real capitalization, 'KenCairn' — kept the existing IRI to avoid breaking Frankly_148's already-asserted dct:references. Nate hosts Boulder climate policy advisor Brett KenCairn to reframe climate change as fundamentally a living-systems problem, not solely a carbon-accounting one — arguing roughly a third of excess atmospheric carbon traces to land-use change and soil degradation, a real, direct mechanism obscured by carbon-centric framing alone. Grounds this in striking real statistics: 75% of the terrestrial world is deeply degraded (World Atlas of Desertification); global plant biomass has fallen by half since roughly 10,000 years ago; wild-animal biomass has fallen from 95% of all animal biomass to a small fraction as human and domesticated-animal biomass has grown; 2 billion hectares of once-productive agricultural land have already been abandoned, more than the 1.5 billion hectares still in use. KenCairn's own real professional history grounds the argument directly: years working in conventional carbon-accounting climate policy for the City of Boulder before real, unexplained discrepancies in the numbers led him toward treating climate as a biologically-mediated dynamic rather than a simple carbon-in/carbon-out system."@en ;
+    dct:created "2026-05-13"^^xsd:date ;
+    dct:issued "2026-06-03"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.BrettKencairn ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/222-brett-kencairn> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=qvWO9U7hhSc> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/TGS-222-Brett-KenCairn-Transcript.docx-1.pdf> ;
+    dct:references tgs:Monologue.Frankly_140_APerspectiveFromLebanon ;
+    thinkr:hasDiscussionSummary "Opens with Nate directly paraphrasing (not quoting verbatim, per this graph's own copyright discipline) KenCairn's own real published claim: that stabilizing climate, reversing species loss, and protecting indigenous and traditional cultures all require actively regenerating the more-than-half of the planet's living-system function that's already been lost. KenCairn is careful and direct about the Gaia hypothesis, engaging its real substance (climate as a phenomenon actively created and maintained by life, not merely acted upon by it) while explicitly declining to weigh in on its more speculative claims about planetary consciousness. Nate's own real, direct praise for Nate's prior work on Lebanon and the Fertile Crescent (Frankly_140, already built in this graph) becomes a real, live example within the conversation itself — KenCairn directly connects the historical desertification of once-forested Mediterranean landscapes to the same living-systems degradation dynamic he studies professionally today. The episode's most personally vivid section is KenCairn's own real backyard restoration story: removing turf grass and planting locally-appropriate species led, within three years, to volunteer oak trees (planted by unknown animal or wind dispersal), aspen runners spreading unprompted for shade, and regular visits from dragonflies and bumblebees — offered as small-scale, lived proof that habitat restoration produces rapid, real ecological response. Real, unusually candid parental vulnerability surfaces in the closing minutes: asked what he cares most about, KenCairn speaks directly and briefly about how hard the current moment is for his own children, redirecting his 'magic wand' answer toward integrating living-systems education into every school's actual curriculum, grounded in his own real, ongoing effort to connect climate-resilient landscaping already built at a local elementary school to that school's classroom curriculum. Nate's own closing framing — 'act three is upon us' — treats this conversation as a real, deliberate turn in the show's own arc, from diagnosis toward lived, practiced response."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Tom Chi's own real TGS episode, #120, directly cited via this episode's own show notes — a valuable, previously-unconfirmed episode number for a name not otherwise referenced in this graph. Donella Meadows (leverage points, consciousness as the deepest lever) is directly cited — already a real, built Persona in this graph via Dennis Meadows's own work, not modified in this pass. Frankly #65 ('And Then What?: Using Wide-Boundary Lenses') is directly cited again here — already flagged multiple times this session as a real, high-value WWNS candidate connector, still not built. No dedicated Concept individual exists for 'Living Systems Regeneration' (KenCairn's own real framework) — kept as prose rather than forcing a link; worth considering if this term recurs in future episodes."@en ;
+    .
+
+
+tgs:Interview.TGS_223_MichaelEvery a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "The U.S. Can't Back Down: The Strait of Hormuz Closure Is Messier Than You Think"@en ;
+    skos:definition "Nate's real, direct conversation with Michael Every, recorded June 9, 2026 and posted as a special same-week release given the real, live urgency of the Strait of Hormuz crisis. Every opens with his own real, direct methodological warning: conflicting headlines make simple 'what's happening' summaries unreliable, and genuinely predicting outcomes requires understanding the underlying dynamics rather than following the news cycle. His own real, direct forecast: the Strait will most likely remain closed for months, which he frames not as civilizational collapse but as a shift to living differently — potentially even better, once conventional demand-side macroeconomics stops functioning as the operative model."@en ;
+    dct:created "2026-06-09"^^xsd:date ;
+    dct:issued "2026-06-12"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.MichaelEvery ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/223-michael-every> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=igg-Ykv8xKw> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/TGS-223-Michael-Every-Transcript.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Monologue.Frankly_65_AndThenWhat, tgs:Interview.TGS_118_MichaelEvery, tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars ;
+    thinkr:hasDiscussionSummary "Every directly walks through multiple real scenarios for the crisis's resolution — a 'TACO' outcome (Trump backing down, per the real, internet-coined acronym), direct NATO military action, or quiet Chinese intervention — arguing none of them offers a genuinely easy exit given the real, structural stakes involved. He's real and direct that roughly 20 million barrels of oil move through the Strait daily, framing the crisis less as a temporary supply disruption than as a real, direct catalyst for demand-side macroeconomics — the dominant model shaping policy for nearly a century — to stop functioning as reality shifts from price-based access to availability-based rationing. A real, striking geopolitical throughline connects Iran's own internal instability directly to the crisis: Every cites real, documented reports of over 36,500 Iranians killed by their own government in January 2026 crackdowns, alongside Iran's own real, severe drought and water crisis, arguing domestic fragility inside Iran is as consequential to the crisis's trajectory as any external military calculus. He directly discusses stablecoins as a real, emerging tool for gradual dollar-system transition, alongside real, current examples of the Overton window shifting on state economic ownership — Bernie Sanders proposing state-owned AI infrastructure alongside the Trump administration simultaneously taking direct equity stakes in AI companies, offered as real, concrete evidence that conventional left-right economic categories are already breaking down under real pressure. A real, warm, personal moment closes the conversation: Every and Nate recall bonding over a shared, independent reading of Polybius and the classical concept of Anacyclosis (the cyclical rise and fall of political systems) during a prior appearance, with Every crediting grounding in old political theory, combined with current news, as his own real, considered methodology for analysis."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Izabella Kaminska (real, directly cited financial journalist and podcast host, credited with introducing Every to Anacyclosis, not built); this episode's own citation list is otherwise largely historical/institutional (Suez Crisis, Nash equilibrium, Homer's Odyssey) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Interview.TGS_224_RobHopkins a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-04"^^xsd:date ;
+    thinkr:updatedDate "2026-09-04"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "No More Dystopian Stories: How to See a Future Worth Living In"@en ;
+    skos:definition "Nate's real, direct conversation with his own real friend Rob Hopkins, co-founder of the Transition movement, opening with Hopkins's own real, direct argument that every element of a genuinely better future already exists somewhere, just not evenly distributed — citing real, concrete examples: Utrecht's real 40,000-bicycle daily commute, and Liège's real food-belt project that measurably reshaped the city's own economy. Hopkins argues research shows vividly imagining that kind of future directly increases people's sense of real agency to help build it."@en ;
+    dct:created "2026-06-09"^^xsd:date ;
+    dct:issued "2026-06-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.RobHopkins ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/224-rob-hopkins> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=vJMGAZ0wlIs> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/TGS-224-Rob-Hopkins-Transcript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Work.HowToFallInLoveWithTheFuture, tgs:Work.FromWhatIsToWhatIf, tgs:Work.TheTransitionHandbook, tgs:Organization.TransitionNetwork, tgs:Monologue.Frankly_62_SevenThoughtExperimentsForEarthDay ;
+    thinkr:hasDiscussionSummary "Hopkins directly grounds his own argument in real neuroscience: chronic stress and elevated cortisol measurably shrink the brain's own capacity to picture the future at all, and real, documented research shows collective creativity and imagination scores have been declining for decades — meaning the inability to vividly picture a better future may be less a matter of pessimism than a genuine, physiological barrier worth treating directly. He's real and direct about the Transition movement's own guiding principle, quoting it plainly: 'if we wait for governments, it will be too late; if we act as individuals, it will be too little; but if we act as communities, it might just be enough, and it might just be in time' — placing collective, local action explicitly between individual insufficiency and governmental delay, neither alone. Real, concrete institutional examples ground this directly: Transition Town Totnes's own real local currency (the Totnes Pound), community-led affordable housing, and community-owned energy companies, all real, already-operating models rather than proposals. A real, direct 'Inner Transition' thread (crediting Sophy Banks and Hilary Prentice by name) argues the psychological and emotional dimension of this work — grief, exhaustion, feeling alone in it — needs its own real, deliberate support infrastructure, not just practical projects. Hopkins directly compares his own public role to stepping back through time to reassure Rosa Parks, mid-struggle, that the work mattered — closing with a real, direct exchange with Nate affirming they're both, quite literally, 'time travelers' living at 'the largesse and magic of the carbon pulse,' a real, direct echo of Nate's own closing line in Frankly-62, independently arrived at here."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is extraordinarily dense with real, direct references — Sophy Banks, Hilary Prentice, Luigi Russi, Jean-Claude Mensch (Ungersheim's real 21-actions program), and Annaïg Plassard's real time-travel activism in France, none built given the sheer volume — worth flagging as a genuinely rich source for future citation gap-filling."@en ;
+    .
+
+
+tgs:Interview.TGS_225_TadPatzek a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
+    skos:prefLabel "We Weren't Expecting This: What Does a Super El Niño Mean For the Climate?"@en ;
+    skos:definition "Nate's real second conversation with earth scientist and thermodynamicist Tad Patzek — his own real 'earth system speed round' on the foundational physics of global heating, distinct from their first conversation's focus on energy, materials, and food. Patzek walks through CO2's real role as climate's primary driver (with water vapor as the dominant but purely reactive greenhouse gas, since its atmospheric concentration collapses exponentially with altitude while CO2 stays well-mixed up to the tropopause), then turns to his own current, original research: a real preprint under peer review at Geophysical Research Letters identifying a declining Earth albedo as an additional accelerant of warming over the past 26 years, compounding accelerating ocean heat absorption and ice-sheet melt. Frames the approaching Super El Niño — potentially one of the strongest such events in roughly 140 years — as a real, live test of whether the underlying warming curve itself is bending upward faster than existing climate models anticipate."@en ;
+    dct:created "2026-06-18"^^xsd:date ;
+    dct:issued "2026-06-24"^^xsd:date ;
+    dct:subject tgs:Subject.EcologyAndEnvironment ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasGuest tgs:Persona.TadPatzek ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/225-tad-patzek> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=VkjbmVLJGu4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/TGS-225-Tad-Patzek-Transcript.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.ThermalPowerAndClimateChange ;
+    thinkr:hasDiscussionSummary "Nate opens by explicitly framing his own role for this conversation as 'an earnest and curious high school student,' setting a real, deliberately basics-first register despite the technical subject matter. Patzek's real, central technical point is a direct rebuttal of dismissing 1.5°C of warming as trivial: while pre-industrial CO2 fluctuated between roughly 180-300 ppm across 800,000 years of Milankovitch-cycle-driven natural variation, today's 435 ppm represents a real, qualitatively different kind of change — anthropogenically driven, historically unprecedented in rate, and — critically — largely irreversible on human timescales, since 'even if we stop CO2 injection today, the ocean still will be warmer' for decades to centuries given how slowly absorbed ocean heat dissipates. Real, sobering current-events texture threads through the conversation's later section: the real shutdown of US satellite and Earth-observation programs (NOAA, NASA, USDA data going dark) discussed directly alongside rising military R&D funding amid the same science cuts, framed by Patzek as a genuine loss of the observational capacity needed to actually track the accelerating changes he's describing. His own real closing research agenda is notably personal as well as scientific: alongside real, open questions about ocean heat transport, Antarctic and Greenland ice stability, and Himalayan glacier melt, he names his own home country directly — 'what's gonna happen to my home country, Poland, which is not rich in water, when it endures long droughts.' The conversation closes with real, mutual, unscripted warmth — Patzek directly crediting Nate as 'a focal point for many people like me to actually share their knowledge,' and Nate marveling, genuinely, at how 'productive' Patzek remains, 'a machine when it comes to cranking out papers and books and graphs.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: no new deferred Persona citations of substance beyond what's already tracked elsewhere in this graph — this episode's own citation list leans heavily on primary scientific sources (NASA, NOAA, peer-reviewed papers) rather than other real people, consistent with its own technical, physics-focused register."@en ;
+    .
+
+

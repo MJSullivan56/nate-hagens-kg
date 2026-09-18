@@ -1,0 +1,313 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-fr-1-25.ttl -- PILOT #3, 2026-09-12.
+# Frankly episodes numbered 1 through 25, split out of episodes.ttl
+# as the third real pilot for the TGS/RR/Frankly three-way split.
+#
+# A genuinely different, much sparser pattern than TGS's own pilot:
+# only 3 of 25 numbers were already built (11, 20, 23) -- 22 real,
+# confirmed gaps, each minted here as a genuine minimal stub (real
+# number/title/URL only). A real stress-test of the stub-minting
+# workflow at much higher volume than either prior pilot needed.
+#
+# One real, direct correction made mid-build, not just during this
+# pilot's own extraction: Frankly-20's real hasHost/hasGuest
+# properties were reversed in the SOURCE file itself (episodes.ttl) --
+# Nora Bateson interviews Nate, not the other way around, a genuine
+# reversal of the show's usual format that had been asserted
+# backwards. Corrected directly in episodes.ttl (not just here) per
+# MJSullivan's own direct catch, since it predated this pilot and
+# would have been wrong regardless of whether the split happens.
+#
+# No Series individuals reference any Frankly in this specific range.
+# Sorted by episode number. episodes.ttl itself is left otherwise
+# untouched by this pilot beyond that one real, necessary correction.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Monologue.Frankly_1_WhatWarInTheUkraineMeansForEnergyAndMoney a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "What War in the Ukraine Means for Energy and Money"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-1-what-war-in-the-ukraine-means-for-energy-and-money> ;
+    .
+
+tgs:Monologue.Frankly_2_AreAmericansWillingToRiskNuclearWar a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Are Americans Willing to Risk Nuclear War?"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-02-are-americans-willing-to-risk-nuclear-war> ;
+    .
+
+tgs:Monologue.Frankly_3_EnergyBlindness a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Energy Blindness"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-03-energy-blindness> ;
+    .
+
+tgs:Monologue.Frankly_4_MeetingTheFutureHalfway a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Meeting the Future Halfway"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-04-meeting-the-future-halfway> ;
+    .
+
+tgs:Monologue.Frankly_5_FaqsOnEpisodes125 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "FAQs on Episodes 1-25"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-05-faqs-on-episodes-1-25> ;
+    .
+
+tgs:Monologue.Frankly_6_TheEndOfAbundance a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The End of Abundance"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-06-the-end-of-abundance> ;
+    .
+
+tgs:Monologue.Frankly_7_GrowthUntilNot a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Growth Until Not"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-07-growth-until-not> ;
+    .
+
+tgs:Monologue.Frankly_8_The6thPool a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The 6th Pool"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-08-the-6th-pool> ;
+    .
+
+tgs:Monologue.Frankly_9_CreaturesUnited a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Creatures United"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-09-creatures-united> ;
+    .
+
+tgs:Monologue.Frankly_10_The7StagesOfClimate a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The 7 Stages of Climate"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/frankly-10-the-7-stages-of-climate> ;
+    .
+
+tgs:Monologue.Frankly_11_InSpiteOf a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "In Spite Of..."@en ;
+    skos:definition "Prompted directly by real, live nuclear-war rhetoric in the news that week, Nate lays out a real, structured evolutionary-biology framework for understanding spite — behavior that incurs a real cost to oneself, provided it imposes a greater cost on a competitor — as a genuine, evolutionarily adaptive strategy under conditions of relative rather than absolute fitness. Distinguishes relative fitness (reproductive success measured against competitors, the real currency of evolution) from absolute fitness (raw offspring count or physical condition), and situates spite as the fourth quadrant of a real behavioral matrix alongside selfishness, cooperation, and altruism."@en ;
+    dct:created "2022-10-04"^^xsd:date ;
+    dct:issued "2022-10-07"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/11-in-spite-of> ;
+    thinkr:discusses tgs:Concept.RelativeFitnessSpiteFramework, tgs:Concept.CarbonPulse ;
+    thinkr:hasDiscussionSummary "A real, direct historical argument connects the four behavioral quadrants to economic history: for most of human history, under flat economic stability, cooperation was the dominant strategy within small tribal groups; the past two centuries of real economic growth made selfishness dominant instead, since energy surplus meant individuals no longer needed their tribe to get ahead. Nate's own real, direct concern closes the argument: as growth flattens or reverses, spite becomes a real, live behavioral option whenever people perceive they can no longer get ahead through either selfish individual effort or cooperation — framed with a real, concrete micro-scale example (an economically disadvantaged person throwing rocks at a wealthy neighbor's solar panels) before scaling directly to nuclear war as, in Nate's own real words, 'the big daddy of spite.' He's direct that the same evolutionary wiring that makes a spider in one's hair feel more urgent than a car crash statistic also makes the immediate, visceral logic of striking a rival nation outweigh full recognition of the real, catastrophic consequences for everyone, including the initiating nation itself. Closes with real, direct self-awareness about the show's own limits: 'I am more an expert of the challenges and the constraints we have than the solutions,' offering understanding motivated reasoning and confirmation bias as the real, best available first step toward a genuinely prosocial response, rather than a solved answer."@en ;
+    skos:scopeNote "Real, honest provenance note: no formal transcript or show-notes YAML was ever produced for this episode — MJSullivan hand-scraped the real content directly from the show's own site. The real canonical URL was constructed following this graph's established site convention, not independently verified against a live page. No thinkr:hasReplay or thinkr:hasTranscript is asserted, since no such URLs were captured in the source material. This episode closes a real citation gap first flagged in Frankly_71's own scopeNote and confirmed by episode number directly by MJSullivan (2026-08-31)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_12_TheSpeedBump a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Speed Bump"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/12-the-speed-bump> ;
+    .
+
+tgs:Monologue.Frankly_13_TheQuietPartOutLoud a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Quiet Part Out Loud"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/13-the-quiet-part-out-loud> ;
+    .
+
+tgs:Monologue.Frankly_14_7ShadesOfJekyllAndHyde a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "7 Shades of Jekyll and Hyde"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/14-7-shades-of-jekyll-and-hyde> ;
+    .
+
+tgs:Monologue.Frankly_15_7RealitiesNoMatterWhoWins a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "7 Realities No Matter Who Wins"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/15-7-realities-no-matter-who-wins> ;
+    .
+
+tgs:Monologue.Frankly_16_7BoundariesOfClimateConcern a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "7 Boundaries of Climate Concern"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/16-7-boundaries-of-climate-concern> ;
+    .
+
+tgs:Monologue.Frankly_17_RussiaBeCarefulWhatWeWishFor a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Russia: Be Careful What We Wish For"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/17-russia-be-careful-what-we-wish-for> ;
+    .
+
+tgs:Monologue.Frankly_18_EnergyGratitude a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Energy Gratitude"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/18-energy-gratitude> ;
+    .
+
+tgs:Monologue.Frankly_19_Islands a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Islands"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/19-islands> ;
+    .
+
+tgs:Interview.Frankly_20_KeepingWarmData a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Staying Warm Data with Nora Bateson"@en ;
+    skos:definition "Real, direct role correction (2026-09-12): Nora Bateson interviews Nate, not the reverse — a genuine reversal of the show's usual format, not a naming slip. Nate discusses, as the one being interviewed, the real, acute electricity-price spike in Sweden (roughly 35-40x normal) as a live 'dress rehearsal' for The Great Simplification — what people are actually doing in their own homes to adapt, whether there's a single villain or a broad systemic root cause, and how quickly lived behavior changes once a comfortable baseline (cheap, reliable heat) is suddenly removed."@en ;
+    dct:created "2022-12-16"^^xsd:date ;
+    dct:issued "2022-12-16"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NoraBateson ;
+    thinkr:hasGuest tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/20-keeping-warm-data> ;
+    thinkr:discusses tgs:Concept.GreatSimplification ;
+    dct:references tgs:Interview.TGS_10_NoraBateson, tgs:SchoolOfThought.WarmData, tgs:Work.RealityBlind ;
+    skos:scopeNote "MJSullivan's own real finding this session: this episode's show notes (unlike others processed so far) preserve real, per-item citation links to primary sources (news articles, government data, Wikipedia, and — notably — a direct page-level citation into Work.RealityBlind for the 'Loss Aversion' discussion). Real further citable material NOT built into this graph, deliberately deferred (mostly narrow, single-episode-specific news citations rather than recurring entities): Swedish electricity-price/production-mix news coverage (thelocal.se, energimyndigheten.se), a nuclear-fusion Nature article, and passing mentions of Angela Merkel and Margaret Thatcher (real people, not bootstrapped here — too tangential to this episode's own core content to justify it)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_21_ReflectionsPredictionsIntentions a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Reflections, Predictions, Intentions"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/21-reflections-predictions-intentions> ;
+    .
+
+tgs:Monologue.Frankly_22_TheSimpleStoryOfCivilization a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Simple Story of Civilization"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/22-the-simple-story-of-civilization> ;
+    .
+
+tgs:Monologue.Frankly_23_MordorEconomy a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Mordor Economy"@en ;
+    skos:definition "BUILT OUT 2026-08-30 from a stub, using a manually-cleaned YouTube transcript (MJSullivan's own scrape and cleanup — no official downloadable transcript exists for this episode, matching the same real gap flagged for RR-13 and Frankly_47) plus official show notes. Real, direct origin explanation for one of this graph's own four core economic ScenarioFacets: Nate lays out, in his own words, the biophysical logic behind a 'Mordor economy' — a path where continued economic growth requires directing an ever-larger share of energy and GDP toward procuring energy itself (rising from a real historical low of ~5% in 1999, per Carey King's own research, toward 15% or more) and toward remediating the ecological damage from burning it, leaving less and less surplus for everything else society values. Grounds this in the maximum power principle and Kleiber's Law (organisms' metabolic energy use scaling to the 3/4 power of mass, a scaling relationship Nate argues also holds for national economies), and in Tim Garrett's own real framing of civilization as an energy-dissipating structure. Frames Mordor and the Great Simplification as the two real default trajectories, with the explicit stated goal of the whole show being to change the initial conditions that determine which one a society actually lands in."@en ;
+    dct:created "2023-01-27"^^xsd:date ;
+    dct:issued "2023-01-27"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/23-mordor-economy> ;
+    dct:source <https://www.thegreatsimplification.com/s/F23-The-Mordor-Economy-Graphs-for-Show-Notes.pdf> ;
+    thinkr:discusses tgs:Concept.MaximumPowerPrinciple, tgs:Concept.KleibersLaw, tgs:Concept.GreatSimplification, tgs:Concept.Superorganism ;
+    dct:references tgs:Interview.TGS_54_TheStealthAdjustmentOfOil ;
+    thinkr:hasDiscussionSummary "Opens by explicitly naming its own two prior real airings of this idea — the 2021 Earth Day talk, and 'last week' on Art Berman's own podcast — before walking through the logic in full for the first time on TGS itself. The real analytical core is a direct biophysical rebuttal of a 'we'll just get more efficient' techno-optimist response: Nate cites a real, specific figure (33% more efficient in energy-to-GDP terms since 1995, alongside 50% more total energy used in that same period) as live evidence that efficiency gains have driven higher consumption, not lower, a real-world instance of Jevons Paradox applied at civilizational scale. The Bank of Japan owning over 50% of its own government's bonds is used as a single, concrete, real data point standing in for the much larger abstract claim that debt issuance lets economies keep growing on paper even as real net energy declines — Nate is candid about revising his own prior thinking here, directly naming a 'logical mistake I made a decade or so ago' in assuming GDP would track net energy decline directly, corrected once he accounted for debt's own real capacity to paper over that gap. Closes by explicitly naming the Great Simplification as the real alternative to a Mordor economy, framing this whole show's actual purpose as changing the 'initial conditions' that determine which path a society ends up on, rather than treating either as fixed or inevitable."@en ;
+    skos:scopeNote "CORRECTED 2026-08-30: an earlier draft of this stub claimed the episode title's use of 'Mordor' was 'structurally unrelated' to this graph's own ScenarioFacet.Mordor, calling it 'a coincidental echo... not a citation relationship' — this was wrong, based only on a title-level guess before real content was available. The real transcript and show notes confirm this episode is the direct, original explanation of the Mordor economy concept the ScenarioFacet is itself named after — dcterms:references added on ScenarioFacet.Mordor accordingly; see that individual's own scopeNote. Real, further citable material found but NOT built in this pass: Tim Garrett (real energy/thermodynamics researcher, directly cited, not yet a Persona in this graph); the 2021 Earth Day talk (real, distinct prior airing of this same material, external to the numbered TGS/Frankly/RR series so out of this class's scope); episode #37 (Martin Scheringer, PFAS pollution) — already a real, deferred citation elsewhere in this graph (RR-15's own scopeNote), independently reconfirmed here."@en ;
+    .
+
+
+tgs:Monologue.Frankly_24_NotForSale a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Not for Sale"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/24-not-for-sale> ;
+    .
+
+tgs:Monologue.Frankly_25_LossAversion a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Loss Aversion"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/25-loss-aversion> ;
+    .
+

@@ -1,0 +1,500 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-fr-126-150.ttl -- batch #6, 2026-09-12.
+# Frankly episodes numbered 126 through 150.
+#
+# 17 of 25 already built; 8 real, confirmed gaps minted as stubs.
+#
+# tgs:Series.HowToThinkAboutTheFuture declared here: a real 6-part
+# series, 5 of its 6 members (Frankly-138/139/145/148/150) falling
+# within this batch -- the 6th (Frankly-151) is already fully built
+# in episodes.ttl, just sitting one number past this batch's own
+# numeric boundary; it'll be included directly when the 151-175 batch
+# is processed. tgs:Series.AGuideToStayingHuman is NOT re-declared,
+# even though two of its three members (142, 143) live here -- it
+# already lives in episodes-fr-101-125.ttl (already presented), since
+# its first member (129) is there.
+#
+# #146's own real title names itself "Part 4" of a likely
+# "Uncomfortable Questions for Unsettled Times" series -- not minted,
+# since no real Parts 1-3 have surfaced in this graph yet.
+#
+# Sorted by episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Series.HowToThinkAboutTheFuture a thinkr:Series, dcmitype:Collection, owl:NamedIndividual ;
+    dct:hasPart
+        tgs:Monologue.Frankly_138_Part1ChangingTheFuture,
+        tgs:Monologue.Frankly_139_Part2FourVariables,
+        tgs:Monologue.Frankly_145_Part3UphillFutures,
+        tgs:Monologue.Frankly_148_Part4CompositeWorlds,
+        tgs:Monologue.Frankly_150_Part5PersonalLandscapes,
+        tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty ;
+    skos:prefLabel "How to Think About the Future"@en ;
+    rdfs:comment "6-part Frankly series (Frankly #138/139/145/148/150/151), confirmed complete 2026-07-15/16 via all 6 real transcripts. Grew organically, same pattern as Bend Not Break — Part 4's own opening notes the series kept getting longer than planned, and Part 5 was originally meant to be the finale before Hagens split it into a personal-application aside (Part 5) plus a separate planning-methodology closer (Part 6). Part 4 is the framework-defining episode (the 4-Dimension/16-Facet/256-combination scenario matrix, modeled in scenariodimensions.ttl/scenariofacets.ttl/scenarios.ttl) — Parts 1-3 build the conceptual groundwork, Parts 5-6 apply it."@en ;
+    .
+
+tgs:Monologue.Frankly_126_HumanityAsDrJekyllAndMrHyde a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Humanity as Dr. Jekyll & Mr. Hyde: The Symptoms, Patterns, and Drivers"@en ;
+    skos:definition "An unusually long, systematically structured Frankly (Nate's own framing: 'foundational... therefore a long one'), separating the more-than-human predicament into three explicit layers: symptoms (the familiar list — global heating, biodiversity loss, exceeding seven of nine planetary boundaries, rising inequality alongside all-time stock market highs, geopolitical tension, attention fragmentation), the recurring systemic patterns beneath them, and — the episode's real focus — the deeper driving forces locking those patterns in place. Names six such drivers (power-law concentration/the Matthew Principle, tragedy-of-the-commons dynamics, time-discounting/short-termism, and a narrowing cultural definition of 'us' that excludes the natural world, among others), framing all of them not as moral failures but as ancient, once-adaptive human instincts that destabilize systems once scale exceeds a real inflection point — Dr. Jekyll at tribal scale, Mr. Hyde at civilizational scale. Explicitly triggered by 'the recent Jeffrey Epstein files' as a live, current example of dark-triad-shaped institutional capture."@en ;
+    dct:created "2026-02-11"^^xsd:date ;
+    dct:issued "2026-02-20"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/126-humanity-as-dr-jekyll-and-mr-hyde> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=nCHra4-tFIw> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/Frankly-126-Transcript-Humanity-as-Dr.-Jekyll-and-Mr.-Hyde.pdf> ;
+    dct:source <https://natehagens.substack.com/p/essay-humanity-as-dr-jekyll-and-mr> ;
+    thinkr:discusses tgs:Concept.MaximumPowerPrinciple, tgs:Concept.Superorganism, tgs:Concept.DarkTriad, tgs:Concept.Metacrisis, tgs:Concept.GrowthImperative ;
+    dct:references tgs:Interview.TGS_14_JohnGowdy ;
+    thinkr:hasDiscussionSummary "A real, direct personal detail grounds the tragedy-of-the-commons section: Nate names his own real PhD advisor, Robert Costanza, as the originator of the 'social trap' framing he builds on. The power-law concentration section is developed with real, concrete cross-domain examples before ever reaching human systems — large trees intercepting most forest sunlight, a small share of river channels carrying most water flow — building the Matthew Principle (initial advantage compounding through feedback, 'the rich getting richer') as a real, general pattern rather than a human-specific critique. Nate is careful and repeated in his own framing that none of this describes moral failure: 'Mr. Hyde is not evil... what happens when ancient instincts operate inside systems that move faster and reach farther than our moral intuitions were shaped for.' Real, concrete partial answers are named rather than left abstract — Mondragon Cooperative enterprises and commons-based resource management as existing examples of systems that keep 'ancestral Jekyll traits' intact even as they scale — though Nate is honest that he doesn't yet have a full answer for whether such models can generalize beyond the local. Closes not with resolution but a real, direct set of open questions for the audience, explicitly flagging this as the start of a year-long thread he intends to keep developing rather than a settled conclusion."@en ;
+    skos:scopeNote "Real, valuable discoveries surfaced by this episode's own show notes, not built in this pass: Lisi Krall — previously known in this graph only as John Gowdy's real co-author on Ultrasocial, now confirmed to have her own real, dedicated TGS episode (#86); Luke Kemp — already tracked as one of 11 real repeat-guest coverage gaps in docs/repeat-guest-coverage.md (tgs-digest), now confirmed with TWO real episode numbers (#194 and #153) rather than the two previously recorded there, worth updating that tracker. Real, notable title discrepancy: this episode's own show notes cite Frankly_108 under the title 'Frankly: Why Humans Are Better Than We Think,' but this graph's existing stub for the same canonical URL uses 'The Influence of Psychopaths' (sourced from RR-26's own citation) — not resolved in this pass, worth checking against Frankly_108's own real page when it's eventually built out. dct:references to TGS_14 (John Gowdy) reflects this episode's own direct citation of his real work on the economic Superorganism; John Gowdy is himself already a real, built Persona and Episode in this graph."@en ;
+    .
+
+
+tgs:Monologue.Frankly_127_WideBoundaryNews a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Wide Boundary News 2/23/26"@en ;
+    skos:definition "A real, structured 'denominator check' anchors this Wide Boundary News installment: wind and solar generated more EU electricity than fossil fuels for the first time (30% versus 29%), but Nate pairs this directly against real German de-industrialization data — BASF unprofitable in Germany for two years, over 100,000 manufacturing jobs lost, nearly 1,000 manufacturing bankruptcies in the first half of 2025, and five consecutive quarters of negative GDP — arguing the renewable share looks better partly because industrial demand, the denominator, is shrinking. Applies the identical real lens to China: 2025 CO2 emissions were flat to slightly down, but Nate traces this to a real construction-sector collapse (cement production down nearly 10%) masking record real coal production (4.8 billion tons) rather than genuine clean-energy displacement."@en ;
+    dct:created "2026-02-18"^^xsd:date ;
+    dct:issued "2026-02-23"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.Geopolitics, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/127-wide-boundary-news> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.BiophysicalPyramid ;
+    dct:references tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace, tgs:Monologue.Frankly_121_WideBoundaryNews, tgs:Monologue.Frankly_61_TheStraitOfHormuzAndTheSpice ;
+    thinkr:hasDiscussionSummary "Introduces a real, structured three-pricing-model framework for comparing national energy strategies: Model 1 (unhindered cost pricing, e.g. China), Model 2 (adding a 'green wedge' for ecological externalities), and Model 3 (adding both a green wedge and a 'depletion wedge' taxing non-renewable inputs, e.g. Germany's roughly $10/gallon gasoline) — Nate's own real, direct argument is that Model 3 nations make the best long-term decisions while being systematically outcompeted short-term by Model 1 nations, since all three run simultaneously on an uneven playing field. A real, striking climate-attribution mechanism grounds the warming-record segment: decades of simultaneously rising greenhouse gases and rising sulfur-pollution aerosols (which reflect sunlight and brighten clouds) partially masked underlying warming — as sulfur pollution is now being cleaned up for real public-health reasons, that shading is dissipating and accumulated warming is becoming more fully visible. A real, striking and counterintuitive ecology finding closes the environmental section: a century of biodiversity survey data shows species turnover has significantly slowed rather than accelerated as ecologists predicted under warming — read not as stability but as ecosystems losing the internal 'spare parts' needed for future reorganization, a real, structural fragility that looks fine until sudden collapse. The New START nuclear treaty's real February 4, 2026 expiration without replacement — leaving zero legally binding limits on the US and Russian nuclear arsenals for the first time since the 1970s — is directly connected to the real RR-21 panel with Mark Medish and Chuck Watson (both already built in this graph), with Watson's own real concept of 'risk homeostasis' (behavioral desensitization to repeated safe outcomes, like habitually running red lights) applied directly to escalating Iran tensions and repeated past 'surgical' US military strikes. Closes on a real, pointed cultural observation: real-money prediction markets (Polymarket) offering live odds on whether the US will bomb Iran are read directly as evidence that geopolitical violence has been fully absorbed into the entertainment and wagering layer of culture, with the event's actual civilizational gravity and its casual, betting-app treatment now 'completely decoupled.'"@en ;
+    skos:scopeNote "Real, honest transcription correction: the raw transcript renders 'Mark Medish' (RR-21's real co-panelist, already built in this graph) as 'Mark Menish' — corrected directly here after cross-referencing RR-21's own real guest list. Real, further citable material found but NOT built in this pass: the real Bulletin of the Atomic Scientists and Chatham House reports on 2026 nuclear escalation risk, both directly cited as institutional sources rather than individual citations."@en ;
+    .
+
+
+tgs:Monologue.Frankly_128_UltraProcessedInformation a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Ultra-Processed Information: AI and the Coming Deluge of Noise"@en ;
+    skos:definition "Nate directly opens with a real, personal observation: opening his phone each morning increasingly produces disorientation rather than the clarity he's looking for, prompting a real, direct analogy between AI-generated information and industrially processed food — both made cheap and abundant by a fossil-fueled system while quietly stripping out what actually nourishes."@en ;
+    dct:created "2026-02-25"^^xsd:date ;
+    dct:issued "2026-02-27"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/128-ultra-processed-information> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=Ucgyd5ML0j4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/Frankly-128-Transcript-Ultra-Processed-Information.pdf> ;
+    thinkr:discusses tgs:Concept.UltraProcessedInformation, tgs:Concept.ThreeInformationFilters, tgs:Concept.CarbonPulse ;
+    dct:references tgs:PanelDiscussion.RR_20_HackingHumanAttachment, tgs:Interview.TGS_22_AzaRaskin, tgs:Human.TristanHarris ;
+    thinkr:hasDiscussionSummary "Nate directly distinguishes two real, diverging outcomes as AI-generated content scales: for those with strong foundational knowledge and skill using large language models, AI can genuinely increase true signal, while for the majority, the sheer increase in content volume will far outpace any increase in real signal, risking a genuine feeling of drowning. He's real and direct that the coming glut isn't accidental: just as food manufacturers engineer a 'bliss point' of salt, sugar, and fat, AI content is becoming engineered for an attention-economy equivalent — novelty, polarization, and righteousness blended for maximum engagement rather than truth. A real, direct, uncomfortable prediction closes his own analogy: just as the physical obesity crisis was 'solved' not by fixing the food system but by overlaying it with profitable pharmaceutical appetite suppressants (GLP-1 drugs), he directly predicts any future 'cognitive GLP-1' will likely be sold by the very same companies whose AI systems created the underlying problem. He's real and direct that Zak Stein and Nora Bateson's own already-built Reality Roundtable discussion directly informs his concern about cognitive atrophy: as AI increasingly handles research, synthesis, and writing, the cognitive muscles once required for that effort begin to atrophy, compounding the disorientation from information overload itself. Closes on his own real, practical three-filter discipline — is it true, is it relevant, is it useful — directly crediting friends Aza Raskin and Tristan Harris (both already built) for the foundational observation that attention itself is becoming civilization's scarcest resource, closing with a real, direct, personally resonant line: 'in a world where words are about to become incredibly cheap, our careful attention may just become an expression of our ethics.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Robert Lustig's own real TGS-69 appearance ('Processed Food, Metabolism, and The Ills of Society'), directly credited as the source of the food-system half of this episode's own central analogy, not yet built; Tristan Harris's own real TGS-16 appearance, directly cited, not yet built despite Harris himself already being a built Human in this graph."@en ;
+    .
+
+
+tgs:Monologue.Frankly_129_DesperatelySeekingAgency a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 1): Desperately Seeking Agency"@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript and official show notes. Opens against the backdrop of the real 2026 Iran war / Strait of Hormuz crisis (Operation Epic Fury), but Nate explicitly declines geopolitical analysis to launch a new, tentatively-titled 'Staying Human' series instead, opening Part 1 with the real question: why does growing awareness of the more-than-human predicament so often produce paralysis rather than action? He traces the gap through learned-helplessness and self-efficacy research (nervous systems learning whether effort produces outcomes), frames a digital environment designed to fragment attention as actively degrading follow-through, and reframes the Superorganism (already modeled in this graph) as a system that advertises choice while eroding the conditions for it. Closes with a concrete practice, not a program: protect one real hour in the next three days as a kept promise to rebuild self-trust — the precondition Nate argues is required before community-level and institutional work can follow."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 1 ;
+    dct:created "2026-03-04"^^xsd:date ;
+    dct:issued "2026-03-06"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/129-a-guide-to-staying-human-part-1> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/Frankly-129-Transcript-A-Guide-to-Staying-Human-Part-1.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=Ao2MJeiPiL4>, <https://open.spotify.com/episode/0WdRQsyD7koPMV6i4tFNvS> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Concept.TheoryOfChange, tgs:Concept.PersonalAgency ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: three real cross-referenced episodes in this episode's own show notes — Frankly #61 ('The Strait of Hormuz and the Spice'), Frankly #127 ('Wide Boundary News 2/23/26'), and Frankly #98 ('10 Qualities That Could Change the Future: The Seeds of New Cultural Mitochondria', also cited by Frankly_132) — none built as Episode individuals yet. Real, well-evidenced NEW Concept candidates surfaced but not minted this pass: Learned Helplessness and Self-Efficacy (Bandura) — cited only in this episode so far, held pending recurrence elsewhere, unlike Concept.PersonalAgency which this series' own Part 2 directly builds on and cross-references."@en ;
+    .
+
+
+tgs:Monologue.Frankly_130_WideBoundaryNews31026 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Wide Boundary News (3/10/26)"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/wide-boundary-news-3-10-26> ;
+    .
+
+tgs:Monologue.Frankly_131_IranEffectsLocalPreparednessAndEndOfEmpire a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Iran Effects Local Preparedness and End of Empire"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/131-iran-effects-local-preparedness-and-end-of-empire> ;
+    .
+
+tgs:Monologue.Frankly_132_FrameworkForAction a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "What to Do as the World Falls Apart: A Framework for Action"@en ;
+    skos:definition "BUILT OUT 2026-08-13 from a stub, using the full real transcript and official show notes. MJSullivan flagged this as a second key episode this session (alongside Frankly_139), 'as it provides an actionable framework for things you can do.' Recorded during the real 2026 Iran war/Strait of Hormuz crisis, Nate explicitly marks this as a turning point — after 20+ years of diagnosis, he shifts to a first-pass, explicitly labeled draft framework for action, organized as 4 levels: a personal foundation of inner work (nervous-system regulation, agency, grief work), 'Finding the Others' (trusted networks, shared vocabulary, scenario/shortfall planning), Six Fronts of intervention (Infrastructure & physical stock/flow, Poverty & displacement, Ecological interventions, Civic resilience & governance, Culture & meaning, Economic transition/commons/post-growth), and a Timeline axis of three overlapping, non-sequential phases (Phase A: the Stability Window; Phase B: Bend Not Break; Phase C: the Stable Attractor) that cut across all six fronts."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:created "2026-03-17"^^xsd:date ;
+    dct:issued "2026-03-20"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/132-what-to-do-as-the-world-falls-apart> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/Frankly-132-Transcript-What-to-Do-as-the-World-Falls-Apart.pdf> ;
+    thinkr:hasReplay <https://youtu.be/TH8aHQ3Y6Zk> ;
+    dct:source <https://natehagens.substack.com/p/essay-what-to-do-as-the-world-falls> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.GreatSimplification, tgs:Concept.DarkTriad, tgs:Concept.DistributedAgency ;
+    dct:references tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:Monologue.Frankly_129_DesperatelySeekingAgency,
+        tgs:PanelDiscussion.RR_23_ThePlasticDetox, tgs:Persona.ShannaSwan, tgs:Persona.SianSutherland,
+        tgs:Persona.ZakStein, tgs:Persona.DanielSchmachtenberger, tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Frankly_88 ('Snow, the Singularity, and Rocks in the River'), Frankly_65 ('And Then What, Using Wide Boundary Lenses'), and Frankly_98 ('10 Qualities That Could Change the Future') — real, confirmed URLs, direct sources for the 'Rocks in the River,' 'Islands of Coherence,' and 'Cultural Mitochondria' terms Hagens uses here, none built as Episode individuals yet. Audrey Tang (TGS #169) and Helena Norberg-Hodge (TGS #181) both real, confirmed, cited by name with direct episode links — neither built as a Persona in this pass. Peter Strack (TGS #166, 2000-Watt Society) and Alexis Zeigler (TGS #171, Living Energy Farm) both real, confirmed, cited — neither built. TWO items this note previously flagged as deferred are now resolved, both same day: Frankly_58 ('The Fellowship of the Ring, Bend Not Break') is now built as a real Episode individual and added to dct:references above; and the SIX FRONTS/30 SUBDOMAINS/THREE TIMELINE PHASES this episode introduces are now fully minted (tgs:Concept.FrameworkForAction, tgs:InterventionFront, tgs:InterventionSubdomain, tgs:ResponsePhase — see interventionfronts.ttl and responsephases.ttl)."@en ;
+    thinkr:hasDiscussionSummary "Nate frames this explicitly and repeatedly as a personal turning point, not just another episode — 'as much a personal rite of passage as it is a Frankly,' gestating for a decade and finally organized under the pressure of real, live world events (the Iran war, unfolding in real time as he records). A genuinely notable rhetorical move: Nate directly names the risk of his own prior 20 years of work — that continued diagnosis without a action framework becomes 'a category error' once the underlying diagnosis is broadly accepted — and explicitly declines to spend this episode on news updates about the Strait of Hormuz crisis itself, redirecting instead to what he calls the only proportionate conversation: what to actually do. The most philosophically pointed moment is Nate's direct, carefully-hedged engagement with anti-capitalist and decolonial critique: he states real sympathy for those values and concedes 'there's much in those critiques that's correct,' but argues explicitly that naming the system correctly is not itself a plan, and that waiting for total systemic transformation as a precondition for any other action means 'waiting forever' — arguing instead for parallel construction, building new structures while the old ones still stand. The Timeline axis is offered as the episode's own 'most important orienting idea' — explicitly not a sequence to complete and move past, but three genuinely overlapping conditions, with Phase C (the stable attractor) framed as impossible to reach by skipping the disruption of Phases A and B, only reachable by building through them. The episode closes on a real, personal reflection on leadership: Nate argues modern systems select for Dark Triad traits (already a real, built Concept in this graph) in leaders, creating adverse selection, and offers a genuinely counter-intuitive closing reframe — that a viewer's own reluctance to lead 'might be a good indication that you could be a good leader tomorrow.' He explicitly declines to resolve the framework's own open question of what to do, insisting that question 'can only be answered by us as individuals,' a real refusal to prescribe despite having just spent nearly an hour building a framework that could easily be read as prescriptive."@en ;
+    .
+
+
+tgs:Monologue.Frankly_133_IranUsAndTheRest a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Iran Us and the Rest"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/133-iran-us-and-the-rest> ;
+    .
+
+tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A World At the Edge of Change"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/134-a-world-at-the-edge-of-change> ;
+    .
+
+tgs:Monologue.Frankly_135_OilOneOhOne a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-10"^^xsd:date ;
+    thinkr:updatedDate "2026-09-10"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Untold Energy Story: What You Actually Need to Know About Oil"@en ;
+    skos:definition "Nate directly opens by naming the real, urgent occasion for this episode: with his team's own longer, professionally-produced 'Reality 101' series still in production, the real, unfolding Strait of Hormuz crisis prompted him to rush-produce this three-part video series on oil in three days. The first installment covers real, foundational concepts — what oil physically is, the real, direct work it performs, and why most people remain 'energy blind' to it."@en ;
+    dct:created "2026-03-30"^^xsd:date ;
+    dct:issued "2026-04-09"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/135-oil-101> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=uRIxJ4B3fNQ> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-135-Transcript-Oil-101.docx.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Monologue.Frankly_136_OilTwoOhOne, tgs:Monologue.Frankly_77_SevenPhilosophiesOnTheFuture ;
+    thinkr:hasDiscussionSummary "Nate directly reframes oil's own real origin story away from the popular 'dinosaur goo' image: it formed from ancient marine phytoplankton compressed over geologic time, a real 'solar battery that took millions of years to charge' and that humanity is draining in centuries. He's real and direct with the precise, quantified math: one barrel of oil contains roughly 1,700 kilowatt-hours of real work potential, equivalent to about 5 years of average human labor once combined with machines, at a real, current market cost of roughly $100 — an economic subsidy he calls 'indistinguishable from magic on human timescales.' Scaling this up, he's direct that roughly 100 billion barrels of oil-equivalent fossil hydrocarbons are consumed globally each year, equivalent to a real 500 billion human-labor-equivalents working alongside an actual 5 billion human workforce — a ratio of 100 fossil 'ghost workers' for every living one. He's real and direct about his own personal, professional experience of energy blindness: his three real, Nobel-Prize-winning graduate economics professors at the University of Chicago never once mentioned energy as a contributor to economic productivity, since the ample supply throughout their own careers let them treat a genuinely exceptional period of history as though it were simply normal. Closes on a real, direct, personal metabolic comparison: the human body requires roughly 2,000 kilocalories daily, while the average American's real, total energy footprint — heating, transport, food, supply chains — runs to roughly 200,000 kilocalories daily, a hundred times the body's own actual need, almost entirely invisible in daily experience."@en ;
+    skos:scopeNote "Real, direct first installment of a genuine three-part trilogy, recorded back-to-back with Frankly_136 and Frankly_137 (both already built) and released on consecutive days. Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise largely encyclopedic and institutional (EIA data, Reality Blind citations, real-time Strait of Hormuz news coverage) rather than pointing to further individuals."@en ;
+    .
+
+
+tgs:Monologue.Frankly_136_OilTwoOhOne a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Built for Cheap Energy: What Happens When the Oil Stops Flowing"@en ;
+    skos:definition "The real, direct second installment of the Oil trilogy, extending the first video's own foundational framing into how modern institutions, food systems, and global supply chains are structurally calibrated to cheap, abundant energy — and what genuinely breaks when that assumption fails."@en ;
+    dct:created "2026-03-31"^^xsd:date ;
+    dct:issued "2026-04-10"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/136-oil-201> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=_kEwDNlNwF0> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-136-Transcript-Oil-201.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse ;
+    dct:references tgs:Monologue.Frankly_135_OilOneOhOne, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound ;
+    thinkr:hasDiscussionSummary "Nate directly grounds the food system's own real energy dependence in precise figures: roughly 10 calories of fossil hydrocarbon input go into every single calorie of food reaching a plate, and roughly half the nitrogen in a human body today carries a real, direct chemical signature traceable to the Haber-Bosch industrial process — a single process that alone enables Earth to feed roughly 4 of its 8 billion people. He's real and direct that swapping to electric vehicles addresses only a real, narrow slice of oil's total function: only about 40% of a barrel becomes gasoline, with the remainder feeding roughly 6,000 other real, everyday products, from asphalt to medicines to synthetic clothing. A real, pointed corrective closes his own treatment of corporate blame: only around 12% of global oil reserves belong to publicly traded companies like ExxonMobil or Shell, with the other 88% held by national oil companies — meaning oil is genuinely 'a story of nations and geology, not corporations.' He's real and direct in distinguishing energy from power: organisms and economies alike compete on power (the rate of usable energy delivery), not raw energy quantity, which is why oil's own real, direct combination of density, portability, and storability cannot simply be substituted by intermittent wind and solar without also solving for reliable, on-demand delivery. Closes on real, direct historical correction: contrary to the popular 'energy transition' narrative, humanity has never actually transitioned off a prior energy source, only ever added new ones on top — directly invoking Jevons paradox (efficiency gains expanding total consumption, not shrinking it) as the real, underlying mechanical reason why."@en ;
+    skos:scopeNote "Real, direct second installment of the Oil trilogy — see Frankly_135 (already built) for the real, shared production context. Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise largely encyclopedic and institutional (USDA dairy data, Exxon depletion figures, USGS critical-minerals data) rather than pointing to further individuals; TGS_101 (Art Berman, already built) is directly cross-referenced via its own real 'slurping sound' framing, not a new find."@en ;
+    .
+
+
+tgs:Monologue.Frankly_137_OilThreeOhOne a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Everything is About to Change: The World After Cheap Energy"@en ;
+    skos:definition "The real, direct third and final installment of the Oil trilogy, framing the entire series through the Carbon Pulse: a one-time inheritance of ancient stored sunlight — real, direct source of the 'fossil sunlight' term — being burned through in a few hundred years, with direct, explicit implications for money, governance, ecology, and human psychology on its downslope."@en ;
+    dct:created "2026-03-31"^^xsd:date ;
+    dct:issued "2026-04-11"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.EcologyAndEnvironment, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/137-oil-301> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=_Jv09GZ4lmE> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-137-Transcript-Oil-301.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.Superorganism ;
+    dct:references tgs:Monologue.Frankly_136_OilTwoOhOne, tgs:Monologue.Frankly_121_WideBoundaryNews, tgs:Monologue.Frankly_23_MordorEconomy, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    thinkr:hasDiscussionSummary "Nate directly names crude oil and gas as 'fossil sunlight' — ancient solar energy captured by long-dead phytoplankton, concentrated by geologic time — closing the trilogy's own real, central metaphor. He's real and direct that money is a claim on physical work, not a substitute for it, arguing the entire growth-based financial system, its debt, interest, and repayment structures, is predicated on an assumption of ever-more affordable energy that the Carbon Pulse's own real shape does not actually support going forward. A real, direct historical grounding anchors his own warning about deforestation risk: citing Easter Island, the 19th-century US Eastern Seaboard, and Greece after its 2009 financial crisis as real, concrete precedents for what happens when populations lose access to their primary energy source and turn to wood instead. He's real and direct that the energy crisis and the ecological crisis are not two separate problems but 'two faces of the same predicament' — the Carbon Pulse simultaneously created the ecological damage from burning fossil fuels and the depletion crisis from extracting them too quickly. A real, pointed geopolitical observation closes his own systemic analysis: nations are now choosing sides based on energy access rather than ideology, directly citing China's real, long-term LNG and oil contracts with Qatar, Iran, and Russia as concrete evidence the post-WWII global order, itself built on cheap oil tied to American power, is now genuinely in question. Closes on real, direct personal conviction rather than pure systems analysis: naming connection, purpose, community, and service as 'ancient satisfactions' that predate the Carbon Pulse by hundreds of thousands of years and require no barrel of oil at all, framing the Great Simplification as a real, potential 'species growing up' rather than necessarily a collapse, and previewing a real, direct future series called 'Staying Human.'"@en ;
+    skos:scopeNote "Real, direct source of the already-confirmed 'fossil sunlight' citation for tgs:Concept.CrudeOil's own alternate-term entry. Real, direct third installment of the Oil trilogy — see Frankly_135 and Frankly_136 (both already built) for the real, shared production context and Strait of Hormuz occasion. Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise largely current-events/institutional (real-time 2026 Reuters/UNCTAD coverage of the Hormuz crisis, OPEC data) rather than pointing to further individuals; Frankly_75 ('Somebody's Gonna Win'), directly cited, is not yet built."@en ;
+    .
+
+
+tgs:Monologue.Frankly_138_Part1ChangingTheFuture a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "How to Think About the Future (Part 1): Changing the Future Starts with How You Think"@en ;
+    skos:definition "Opens the series by naming a pattern Hagens says he hears repeatedly from the audience: people who have already settled on one storyline about the future and filter everything else through it. Introduces Scenario Thinking as the alternative, names 3 reasons holding multiple futures at once is hard in practice (the nervous system wants resolution, careers/identities attach to particular futures, cultural incentives reward confident stories over honest uncertainty), and closes by introducing Shortfall Risk, which the episode's own description states will act as connective tissue across the rest of the series."@en ;
+    dct:created "2026-04-11"^^xsd:date ;
+    dct:issued "2026-04-17"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 1 ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/138-how-to-think-about-the-future-part-1> ;
+    thinkr:hasReplay <https://youtu.be/vgq_6GIHmCA> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-138-Transcript-How-to-Think-About-the-Future-Part-1.pdf> ;
+    dct:source <https://natehagens.substack.com/p/essay-how-to-think-about-the-future> ;
+    thinkr:discusses
+        tgs:Concept.GreatSimplification,
+        tgs:Concept.Wetware,
+        tgs:Concept.TerrorManagementTheory,
+        tgs:Concept.ShortfallRisk,
+        tgs:Concept.ScenarioThinking,
+        tgs:Concept.MoreThanHumanPredicament,
+        tgs:Concept.NarrativeAsActiveInference,
+        tgs:Concept.Rebuildables,
+        tgs:Concept.ComplexSystemsThinking ;
+    dct:references
+        tgs:Organization.TheOilDrum,
+        tgs:Monologue.Frankly_129_DesperatelySeekingAgency,
+        tgs:Monologue.Frankly_132_FrameworkForAction,
+        tgs:Interview.TGS_85_WisdomNatureAndTheBrain,
+        tgs:Interview.TGS_165_WisdomOverPower,
+        tgs:Work.ComplexityAndPostmodernism,
+        tgs:Work.GlobalTippingPointsReport2025 ;
+    skos:scopeNote "REBUILT 2026-08-13 from Frankly_138's own official show-notes page (thegreatsimplification.com/frankly-original/138-...) — a real, structured, WordPress-generated per-episode topic index Hagens' team maintains, discovered this session as a much stronger extraction source than transcript-reading or generic NER. Every thinkr:discusses/dct:references link above traces to a specific labeled entry in that page, not inferred. Fixed 2 real bugs from this stub's first draft: thinkr:hasCanonicalSource was used twice (its own scopeNote documents cardinality-one; the essay link now correctly uses the general dct:source instead) and was typed as an xsd:anyURI string literal rather than a proper linked resource (thinkr:hasCanonicalSource is declared owl:ObjectProperty, not a datatype property — every other use of it in this graph uses a bare IRI)."@en .
+
+
+tgs:Monologue.Frankly_139_Part2FourVariables a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "How to Think About the Future (Part 2): Four Variables Shaping the Coming Decades"@en ;
+    skos:definition "2ND PASS 2026-08-13, using the full real transcript (previously built from show notes only). This is the episode that formally introduces the complete 4-Dimension/16-Facet scenario framework this graph's own ScenarioDimension/ScenarioFacet structure is built from — Nate treats his long-standing 4-scenario Economic grid (Green Growth, Mordor, The Great Simplification, Mad Max) as the foundation, then layers three more grids on top: Power and Distribution (concentration of decision-making authority vs. where material gains flow), Geopolitical (cooperation vs. adversarial relations, crossed with interdependence vs. self-sufficiency), and Earth Systems (climate stress vs. biosphere integrity, explicitly from an already-compromised 2026 baseline, not a neutral one). Technology and demographics are both explicitly considered and deliberately NOT given their own grids — Nate argues both act as modifiers/amplifiers of whatever direction the underlying system is already moving, rather than independent dimensions."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 2 ;
+    dct:created "2026-04-20"^^xsd:date ;
+    dct:issued "2026-04-24"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/139-how-to-think-about-the-future-part-2> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/04/Frankly-139-Transcript-How-to-Think-About-the-Future-Part-2.pdf> ;
+    thinkr:hasReplay <https://youtu.be/5R0oUGPf9C4> ;
+    dct:source <https://natehagens.substack.com/p/essay-how-to-think-about-the-future-92e> ;
+    thinkr:discusses tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.CarbonPulse, tgs:Concept.Superorganism,
+        tgs:ScenarioFacet.GreenGrowth, tgs:ScenarioFacet.Mordor, tgs:ScenarioFacet.TheGreatSimplification, tgs:ScenarioFacet.MadMax,
+        tgs:ScenarioFacet.CivicIdeal, tgs:ScenarioFacet.TheStewardshipDeal, tgs:ScenarioFacet.ACapturedDemocracy, tgs:ScenarioFacet.ForcedFeudalism,
+        tgs:ScenarioFacet.TheGlobalizationIdeal, tgs:ScenarioFacet.FriendlyNeighborsWithGoodFences, tgs:ScenarioFacet.TheGeopoliticalDangerZone, tgs:ScenarioFacet.TheColdWarScenario,
+        tgs:ScenarioFacet.StrainedButWorkable, tgs:ScenarioFacet.QuietUnraveling, tgs:ScenarioFacet.HothouseTriage, tgs:ScenarioFacet.CascadingBreakdown ;
+    dct:references tgs:Persona.DanielSchmachtenberger, tgs:Series.BendNotBreak, tgs:Interview.TGS_12_DennisMeadows, tgs:Work.ScenarioThinkingHistoricalEvolution ;
+    skos:scopeNote "2ND PASS 2026-08-13 — MJSullivan flagged this as 'the key episode that describes these quadrants' given the axis-correction work done this session (see ScenarioDimension.Economic and ScenarioDimension.Geopolitical's own scopeNotes), and supplied the full transcript for a proper enrichment pass rather than relying on show notes alone. discusses list corrected from the original single tgs:Concept.GreatSimplification (now split into Concept + ScenarioFacet — see that split's own history) to the specific tgs:ScenarioFacet.TheGreatSimplification, and substantially expanded: this episode is the real primary source for all 16 ScenarioFacets across all 4 Dimensions, not just the original 4 Economic ones it had been scoped to before this pass. tgs:Concept.Superorganism added as a real, direct reference — Hagens' own words describing the Cold War Facet as 'the fission of the Superorganism.' Real, further citable material found but NOT built in this pass: 'Fire apes' (a real recurring Reality Blind term, cited directly to a specific page); the real statistic that 26 people hold the same financial claims on biophysical reality as the bottom 4 billion humans (sourced to a real Oxfam report); Concept.DarkTriad already built elsewhere in this graph is referenced again here but not formally dct:referenced in this pass, to avoid overloading a single episode's reference list without a clear stopping point. hasCanonicalSource fixed 2026-08-13 (original 1st-pass note, still accurate) — same xsd:anyURI-literal-instead-of-proper-resource bug originally found and fixed on Frankly_138, never applied to the rest of this series until now."@en ;
+    thinkr:hasDiscussionSummary "A genuinely foundational episode for this graph's own scenario-matrix structure, not just another Frankly. Nate opens by directly naming a cognitive trap — settling on one preferred future and then judging everything else against it — and argues for holding a real distribution of possible futures instead. The four-grid structure is built up methodically and explicitly incompletely: Nate states outright that technology and demographics were both considered for their own separate grids and deliberately excluded, arguing both function as amplifiers of whatever direction the underlying system is already moving rather than independent axes — AI specifically is framed as already inside the Earth Systems grid, since data-center electricity demand is itself a direct new draw on the energy/biophysical system the whole framework is built around. A real, distinctive moment of self-aware epistemic humility: Nate explicitly invites the audience to propose grids he hasn't considered, naming mental/physical health and freedom of information/communication as real candidates he chose not to include. The Geopolitical grid's own real-time grounding is notable — recorded during the actual 2026 Iran war and Strait of Hormuz closure, Nate uses that live, unfolding event as a direct real-world example of the 'adversarial and interdependent' quadrant, citing the Philippines' energy emergency, Bangladesh's school closures, and Japan's emergency oil-reserve release as concurrent real evidence. Nate draws a real, pointed distinction between what a contraction-vs-growth headline means for the 'fairness' question (during growth) versus the 'is there enough' question (during contraction) — the same quadrant axes, he argues, describe a fundamentally different lived experience depending on which economic direction they're paired with. The episode closes by explicitly refusing to let any single quadrant stand as a full future on its own — Nate states directly that nobody will 'live in The Great Simplification in general,' only in a Great Simplification combined with a specific power structure, geopolitical backdrop, and ecological condition, previewing Part 3's work building concrete scenario composites from these four layers."@en ;
+    .
+
+
+tgs:Monologue.Frankly_140_APerspectiveFromLebanon a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Perspective From Lebanon: Who Will We Be When Things Get Hard?"@en ;
+    skos:definition "BUILT OUT 2026-08-30 from a stub, using a complete real transcript and show notes. An unusually personal Frankly, prompted by a real conversation with a close friend of Nate's — his own meditation coach — who lives in Beirut and has been living through daily bombing, hosting displaced families in her small apartment, and grieving friends killed in the conflict. She is unnamed throughout, both in the original episode and here, and has explicitly declined to appear on the show herself; her privacy is respected in this build accordingly — no attempt is made to identify her. Nate uses her account, and her own real, striking equanimity despite the danger she's in, to distill the show's broader work down to three real, deliberately simpler and more personal questions: who are we going to be once comfort and convenience thin out; how are we going to actually live under a coming biophysical constraint; and what are we willing to expend our own life's energy to protect. Real, direct correction to the raw transcript's own phonetic error: 'Bio Ocumalafe' is Bayo Akomolafe, confirmed directly via this episode's own show notes ('A Slower Urgency')."@en ;
+    dct:created "2026-04-30"^^xsd:date ;
+    dct:issued "2026-05-01"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/140-a-perspective-from-lebanon> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=pILjdgXeh_o> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-140-Transcript-A-Perspective-From-Lebanon.pdf> ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.CarbonPulse, tgs:Concept.DistributedAgency ;
+    dct:references tgs:PanelDiscussion.RR_17_MovingFromApathyToAction, tgs:Interview.TGS_146_BillPlotkin, tgs:Interview.TGS_138_FritjofCapra, tgs:Monologue.Frankly_88_SnowSingularityRocksInTheRiver, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Persona.BayoAkomolafe, tgs:Work.PewAmericansMorallyBad2026 ;
+    thinkr:hasDiscussionSummary "Opens with a real, direct disclosure of exhaustion — four years of twice-weekly content, described in his own words as 'shedding my skin, perhaps shedding multiple skins' — before explaining the real conversation that prompted this pause: his friend's account of constant, un-actionable fight-or-flight (nowhere to flee to, no one to fight), and her own real, striking equanimity despite it, grounded in a weekly community meditation practice (now around 60 people, notably including both Muslim and Jewish participants) and a real, centuries-old lineage of mutual trust in her home village. A real, specific human cost is named directly: journalist Amal Khalil, known for helping injured animals amid the bombing, among a real, cited total of 260 journalists killed across Gaza, Lebanon, Yemen, and Iran. Nate is candid about the real discomfort of his own position — 'a woman in Beirut is coaching a guy in Minnesota' whose own country is not indirectly connected to the violence she's living through — without resolving or dismissing that tension. The episode's real emotional turn comes as Nate applies his friend's grounded state as a direct contrast to his own: sitting safely in a comfortable office, watching the news, he recognizes his own nervous system generating a real fight-or-flight response to no actual physical danger, while she — facing genuine danger — remains calmer. Closes without prescriptions, deliberately: 'I don't have any pithy ending or recommendations,' offering instead small, concrete grounding practices (going outside, calling someone loved, noticing a meadowlark identified on the Merlin app) as how nervous systems 'remember it's safe enough to think and act clearly again.' Ends on a real, candid admission of his own next direction: after '20 years' of what he calls 'biophysical macro,' his real, stated next curiosity is 'biophysical micro' — who people are and might become individually — explicitly naming himself 'a newbie' on this front."@en ;
+    skos:scopeNote "Friend's identity deliberately not researched or asserted, consistent with her own real, explicit refusal to appear on the show — respecting a stated privacy preference for a private individual in an active, dangerous situation, not a gap in available information. Real, further citable material found but NOT built in this pass: Frankly #106 ('10 Things Worth More Than a Pound of Gold'), directly cross-referenced — now built, see that episode's own entry. Bayo Akomolafe (real, directly cited philosopher/author) is now a real, built Persona in this graph, added 2026-08-30 alongside Frankly_106's own build — dct:references updated accordingly above. Real, direct confirmation, tracked down 2026-08-30: this episode's own show notes cite a genuinely distinct, real Pew piece — 'In 25-Country Survey, Americans Especially Likely To View Fellow Citizens as Morally Bad' (Mar 2026, now minted as tgs:Work.PewAmericansMorallyBad2026) — not the same as the May 2025 general-trust piece already tracked in the WWNS candidate list (docs/wwns-topic-coverage-tracker.md, tgs-digest). This one is genuinely sharper: the US is the only country of 25 surveyed where more adults rate compatriots' morality as bad than good, driven by a real, direct partisan mechanism rather than general moral strictness — worth considering as a real, stronger replacement or complement to the existing candidate #12 entry."@en ;
+    .
+
+
+tgs:Monologue.Frankly_141_WideBoundaryNews a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-08"^^xsd:date ;
+    thinkr:updatedDate "2026-09-08"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Wide Boundary News: Sacrificing Wilderness, Oil Data Propaganda, and Feeding the Superorganism's Brain"@en ;
+    skos:definition "Nate directly works through six real, separate current news items — US oil production data, the Iran/Strait of Hormuz crisis, fertilizer and cooking-fuel cascades, Minnesota's Boundary Waters mining decision, AI data center expansion, and a record-setting dairy cow — widening each one several orders of magnitude to surface a real, single underlying pattern: nearly every institution and narrative currently in use was calibrated for the carbon pulse's upslope, with no real plan for its downslope or plateau."@en ;
+    dct:created "2026-05-05"^^xsd:date ;
+    dct:issued "2026-05-08"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.EcologyAndEnvironment, tgs:Subject.Geopolitics ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/141-wide-boundary-news-5-8-26> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=g-BJ9XkP2Pc> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-141-Transcript-WBN-5_8_26.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.Superorganism ;
+    dct:references tgs:Human.ArtBerman ;
+    thinkr:hasDiscussionSummary "Nate directly dissects a real, current US Department of Energy claim that US oil production exceeds Saudi Arabia and Russia combined, showing this is technically accurate only because the US figure bundles crude oil with natural gas liquids, biofuels, and refinery gain, while the Saudi and Russian figures are reported on a real, narrower crude-only basis — a direct, concrete demonstration of how a headline claim can be entirely true and still structurally misleading through category selection alone. He's real and direct that the US remains a net importer of actual crude oil despite widely-repeated claims of being a net oil exporter, since the real export surplus is almost entirely natural gas liquids used for things like plastic packaging, not gasoline or diesel. A real, direct cascading-consequences chain traces the Strait of Hormuz closure from oil price spikes down through fertilizer shortages (roughly 3 million tons monthly of blocked urea, ammonia, and phosphate) to a real, human-scale image: households in Mumbai lining up at 3am for LPG cooking-gas cylinders as families in Kenya revert from clean gas back to charcoal after a decade of progress. He directly uses a real historical parallel, post-Soviet Russia's own environmental collapse once central regulation weakened in the 1990s, to challenge the naive assumption that a shrinking economy automatically produces less pollution — resource extraction continued regardless, just without oversight. A real, direct physiological analogy anchors his AI/data-center concern: human brains consume roughly 20% of the body's metabolic energy despite being only 2% of its mass, offered as a direct parallel for the Superorganism now diverting outsized energy toward its own 'cognitive layer,' with Nate directly, honestly admitting nobody yet knows whether that allocation is justified. Closes on a deliberately small, real, concrete story most viewers wouldn't have otherwise seen: a real, record-setting dairy cow producing ten times her 1925 counterpart's milk yield, offered directly as 'the carbon pulse made into flesh' and a synecdoche for everything selectively bred or engineered for an energy regime now ending."@en ;
+    skos:scopeNote "Real, direct methodological note: this episode was studied specifically for technique to fold into the WWNS series' own methodology — see the separate write-up accompanying this build for the concrete insights extracted. Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise extraordinarily dense with real, current institutional and news reporting (DOE materials, EIA data, Holstein Association records) rather than pointing to further individuals — Art Berman is already built and directly cross-referenced, not a new find."@en ;
+    .
+
+
+tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 2): Navigating Dread and Carrying the Weight of Tomorrow"@en ;
+    skos:definition "BUILT OUT 2026-08-24 from a stub, using the full real transcript and official show notes. Opens on Art Berman's own framing of Operation Epic Fury as 'the biggest blunder in human history' (TGS_220), then turns inward: Nate names what he's actually feeling as dread, and draws on climate psychiatrist Lise Van Susteren's term 'pre-traumatic stress' (the body responding to a trauma that hasn't happened yet). Walks through the neuroscience in real depth — amygdala/HPA-axis/cortisol machinery evolved for immediate physical threats, chronically activated but never discharged by slow-moving abstract risk, producing allostatic load that measurably impairs the hippocampus and prefrontal cortex. Cites a real study finding ~28% of subjects are 'extreme dreaders' who'd rather take a stronger shock immediately than wait for a milder one — direct evidence dread itself can cost more than the feared event. Explicitly connects back to Part 1: 'agency is the opposite stance' to dread, since a meaningful action gives the threat system 'a different signal.' Closes with five practical pathways (mental reframing, somatic/breath practice, agency, community/co-regulation, and what Nate calls 'befriending the darkness') and five concrete steps for when dread arises, ending on a direct forward-pointer to Part 3's topic: the movement from dread into presence, and the default mode network."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 2 ;
+    dct:created "2026-05-14"^^xsd:date ;
+    dct:issued "2026-05-15"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/142-a-guide-to-staying-human-part-2> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-142-Transcript-A-Guide-to-Staying-Human-Part-2.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=4gJ9E233hfw>, <https://open.spotify.com/episode/4lvZfG1sdQW7vnGZs8zc01> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part-9e6> ;
+    thinkr:discusses tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Metacrisis, tgs:Concept.PersonalAgency, tgs:Concept.Dread ;
+    dct:references tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_191_TaylorGuthrie, tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: TGS #202 (Samantha Sweetwater), cited alongside RR-17 as a Joanna Macy/Work That Reconnects cross-reference, not yet an Episode individual. Real Persona candidates cited by name but deliberately NOT bootstrapped this pass, matching this graph's established deferred-citation pattern (Audrey Tang, Helena Norberg-Hodge, etc. in Frankly_132's own scopeNote): Viktor Frankl, Peter Levine (somatic experiencing), Daniel Siegel ('name it to tame it'), Joanna Macy (noted in the transcript as recently deceased), and Stephen Levine — none built as Persona individuals here. Lise Van Susteren (climate psychiatrist, 'pre-traumatic stress' coinage, real personal detail — a childhood neighbor of Nate's), now built (2026-09-02). Francis Weller, cited alongside Macy, already exists in this graph as tgs:Persona.FrancisWeller — not re-flagged."@en ;
+    .
+
+
+tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Guide to Staying Human (Part 3): The Default Mode Network and the Metacrisis"@en ;
+    skos:definition "BUILT 2026-08-24 from a complete real transcript and official show notes — no prior stub existed. Opens on a real personal anecdote (missing a dawn birdsong and a full cup of coffee while mentally simulating 2026 diesel-rationing scenarios) to introduce the default mode network (DMN) — the brain system active during self-referential processing, theory of mind, mind-wandering, and mental time travel, anti-correlated with the task-positive network (TPN). Cites a real Harvard study ('A Wandering Mind is an Unhappy Mind') and the real canonical DMN discovery paper, and explicitly points back to this graph's own tgs:Interview.TGS_191_TaylorGuthrie as the only prior TGS coverage of the DMN. Names 5 specific real reasons metacrisis-aware people are especially vulnerable to chronic DMN dominance (emotional loading, no resolution signal, social isolation, vocational necessity of simulation, and a moral license that frames presence as a kind of abandonment), and explicitly links this episode back to Part 2: 'the same phenomenon I called full dread in last week's Frankly, but viewed from a slightly different angle' — coining a new term, 'future capture,' for the DMN-dominance experience when the content is civilizational. Closes with five pathways back to presence (the senses, the pause, single-tasking, beauty, and the finitude of things) and three concrete daily practices."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.AGuideToStayingHuman ;
+    thinkr:seriesPosition 3 ;
+    dct:created "2026-05-18"^^xsd:date ;
+    dct:issued "2026-05-22"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/143-a-guide-to-staying-human-part-3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Frankly-143-Transcript-A-Guide-to-Staying-Human-Part-3.docx-1.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=fZB6Ep8qSos>, <https://open.spotify.com/episode/3DzB8zatmpgek0Lfzkz67M> ;
+    dct:source <https://natehagens.substack.com/p/essay-a-guide-to-staying-human-part-e54> ;
+    thinkr:discusses tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Metacrisis, tgs:Concept.Dread, tgs:Concept.Presence, tgs:Concept.DefaultModeNetwork, tgs:Concept.FutureCapture ;
+    dct:references tgs:Interview.TGS_191_TaylorGuthrie, tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Interview.TGS_165_WisdomOverPower, tgs:Persona.IainMcGilchrist ;
+    skos:scopeNote """'Supernormal' appears once in this episode's own transcript ('our supernormal, unbelievable modern era') but as a casual adjective, not an invocation of tgs:Concept.SupernormalStimuli as a term of art — that Concept isn't yet built in this graph, and this single non-technical usage is deliberately not minting it; the show notes' own link to it is show-notes editorializing, not something Nate himself cites here.
+        Task Positive Network (TPN) is real and load-bearing to this episode's own DMN/TPN anti-correlation framing but kept out as a separate Concept this pass — folded into Concept.DefaultModeNetwork's own definition instead, matching this graph's 'don't over-split a paired mechanism' discipline. Real Persona candidates cited but not bootstrapped: Thich Nhat Hanh.
+        Iain McGilchrist and his 2 prior TGS appearances (#85, #165) already existed in this graph — linked, not rebuilt."""@en ;
+    .
+
+
+tgs:Monologue.Frankly_144_AWordICantSeemToUnderstand a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Word I Cant Seem to Understand"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/144-a-word-i-cant-seem-to-understand> ;
+    .
+
+tgs:Monologue.Frankly_145_Part3UphillFutures a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "How to Think About the Future (Part 3): Uphill Futures in a Downhill World"@en ;
+    skos:definition "Introduces a landscape metaphor (borrowed from developmental biology's Waddington landscape and lake-ecology succession) for thinking about civilizational futures: valleys (stable states systems settle into), ridges (the barriers/cost of transitioning between them), switchbacks (deliberate human effort — trust-building, institution-building — that makes an otherwise-too-steep transition possible), and erosion (neglect or active harm that makes a transition permanently harder). Central claim: the easiest-to-reach futures are not the same as the most desirable ones — desirable futures generally require sustained uphill effort to both reach and remain in, while undesirable ones tend to be the default downhill path requiring no coordinated effort at all."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 3 ;
+    dct:created "2026-05-22"^^xsd:date ;
+    dct:issued "2026-06-05"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/145-how-to-think-about-the-future-part-3> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/Frankly-145-Transcript-HTTATF-Pt-3.docx.pdf> ;
+    thinkr:hasReplay <https://youtu.be/vTBQ1AS-KVw> ;
+    dct:source <https://natehagens.substack.com/p/essay-uphill-futures-in-a-downhill> ;
+    thinkr:discusses tgs:Concept.TheSenecaEffect, tgs:Concept.LandscapeOfPossibleFutures, tgs:Concept.Metacrisis, tgs:Concept.ShortfallRisk ;
+    skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real URL uses a different month folder AND retains a .docx.pdf double-extension — the pattern-matched guess used across this whole series turned out inconsistent with the real site for parts 3/5/6, confirmed only via direct page fetches, not assumed)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Uncomfortable Questions for Unsettled Times Part 4"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built. Real, direct series signal: its own title names itself 'Part 4' -- a real, likely multi-part 'Uncomfortable Questions for Unsettled Times' series, but no confirmed Parts 1-3 have surfaced in this graph yet; not minted as a Series individual until real, earlier parts are confirmed."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/146-uncomfortable-questions-for-unsettled-times-part-4> ;
+    .
+
+tgs:Monologue.Frankly_147_HowToPlay5dChess a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "How to Play 5D Chess"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/147-how-to-play-5d-chess> ;
+    .
+
+tgs:Monologue.Frankly_148_Part4CompositeWorlds a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "How to Think About the Future (Part 4): Mordor to the Long Repair - How Might Daily Life Feel in the Next Decades?"@en ;
+    skos:definition "The framework-defining episode of this series: proposes 4 Dimensions (grids) - Economic, Power & Distribution, Geopolitical, Earth Systems - each with 4 Facet options, for 256 mathematically possible composite futures, and builds out 4 representative named examples in detail (The Long Repair, Mordor Persists, Fortress World, The Unraveling - modeled as thinkr:Scenario individuals in scenarios.ttl). Explicit that these 4 are chosen to stretch thinking, not presented as an exhaustive or equally-likely set, and that the real future will likely be some regional patchwork of all of them rather than any single one holding globally."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 4 ;
+    dct:created "2026-06-09"^^xsd:date ;
+    dct:issued "2026-06-25"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/148-how-to-think-about-the-future-part-4> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/06/Frankly-148-Transcript-How-to-Think-About-the-Future-Part-4.pdf> ;
+    thinkr:hasReplay <https://youtu.be/KlkAeQ5xdeQ> ;
+    dct:source <https://natehagens.substack.com/p/mordor-to-the-long-repair-how-might> ;
+    thinkr:discusses tgs:Concept.ShortfallRisk, tgs:Concept.ScenarioThinking, tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MoreThanHumanPredicament, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
+    dct:references tgs:Interview.TGS_27_JoeTainter, tgs:Monologue.Frankly_140_APerspectiveFromLebanon, tgs:Interview.TGS_222_BrettKencairn, tgs:Interview.TGS_178_AndrewMillison ;
+    skos:scopeNote "2026-08-13: real dates/subject/replay/essay added, transcript URL corrected (real is 2026/06, not the 2026/04 pattern-matched guess), dct:references added (Tainter -> real guest episode #27, closing a gap flagged weeks ago in the original backlog; #222/#178 resolved to real guest names via the show notes own URL slugs, not left as bare numbers)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_149_ALegacyWorthCelebrating a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Legacy Worth Celebrating"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/149-a-legacy-worth-celebrating> ;
+    .
+
+tgs:Monologue.Frankly_150_Part5PersonalLandscapes a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Foundations Before Outcomes: The Future Beneath Your Feet | How to Think About the Future Pt 5"@en ;
+    skos:definition "Applies the same landscape/valleys/ridges framework from Part 3, at the scale of an individual person's life rather than civilizational futures - originally intended as the series finale (no-regret responses to the 4 composite worlds from Part 4) before Hagens split that material off into Part 6, once he realized a personal/individual-scale version of the same macro dynamics was worth its own episode."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:isPartOf tgs:Series.HowToThinkAboutTheFuture ;
+    thinkr:seriesPosition 5 ;
+    dct:created "2026-07-05"^^xsd:date ;
+    dct:issued "2026-07-10"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/150-foundations-before-outcomes> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/07/Frankly-150-Transcript-How-to-Think-About-the-Future-Part-5.docx.pdf> ;
+    thinkr:hasReplay <https://youtu.be/YvJ4HkWIsL8> ;
+    thinkr:discusses tgs:Concept.Metacrisis, tgs:Concept.PerpetualMulligans, tgs:Scenario.GS-CI-FN-SW, tgs:Scenario.MO-CD-GD-QU, tgs:Scenario.GS-FF-CW-HT, tgs:Scenario.MM-FF-CW-CB ;
+    dct:references tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    skos:scopeNote "MAJOR CORRECTION 2026-08-13: this episode's skos:prefLabel and thinkr:hasCanonicalSource were both WRONG since first built — a plausible-looking, pattern-matched title/URL that was never actually verified against the real page (the guessed URL 404s). Corrected via direct fetch of the real page. Same lesson as several other corrections this session: a plausible guess is not the same claim as a verified fact, even when it fits an established naming convention."@en ;
+    .
+
+

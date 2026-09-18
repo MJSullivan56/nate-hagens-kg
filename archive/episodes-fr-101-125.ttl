@@ -1,0 +1,399 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# episodes-fr-101-125.ttl -- batch #5, 2026-09-12.
+# Frankly episodes numbered 101 through 125.
+#
+# 11 of 25 already built; 14 real, confirmed gaps minted as stubs.
+#
+# Two real notes worth flagging: #102 and #107 share the identical
+# real, generic title "This Week's Learnings" -- a genuine, recurring
+# segment name Nate reuses, not a duplicate entity (their distinct
+# number prefixes keep the IRIs safely unique). #117's own real title
+# names itself "Part 1" of "Behavioral Thermodynamics" -- a likely
+# real multi-part series, but not minted as a Series individual since
+# no confirmed Part 2 has surfaced in this graph yet.
+#
+# Sorted by episode number. episodes.ttl itself is left untouched.
+#############################################
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "What I Want to Want for the Future"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/101-what-i-want-to-want-for-the-future> ;
+    .
+
+tgs:Monologue.Frankly_102_ThisWeeksLearnings a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "This Weeks Learnings"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built. Real, direct note: 'This Week's Learnings' is a real, recurring segment title Nate reuses across multiple distinct episodes (also #102) -- not a duplicate entity, genuinely two separate real episodes sharing an identical generic title."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/102-this-weeks-learnings> ;
+    .
+
+tgs:Monologue.Frankly_103_TheGhostOfDopaminePast a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Ghost of Dopamine Past"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/103-the-ghost-of-dopamine-past> ;
+    .
+
+tgs:Monologue.Frankly_104_DucksAndBlueberries a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Ducks and Blueberries"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/104-ducks-and-blueberries> ;
+    .
+
+tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Key Blindspots of the Walrus Movement"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/105-key-blindspots-of-the-walrus-movement> ;
+    .
+
+tgs:Monologue.Frankly_106_TenThingsWorthMoreThanGold a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "10 Things Worth More Than a Pound of Gold"@en ;
+    skos:definition "Prompted directly by gold hitting a real, documented all-time high the week of recording, Nate works through his own real, structured countdown of things he argues are worth more than a pound of gold — moving deliberately from purely financial comparisons (cash, silver, Bitcoin) toward increasingly intangible ones (freedom, sanity, integrity, the web of life, and finally life itself)."@en ;
+    dct:created "2025-08-31"^^xsd:date ;
+    dct:issued "2025-09-05"^^xsd:date ;
+    dct:subject tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/106-10-things-worth-more-than-a-pound-of-gold> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=6wUntJ1OTmw> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/09/Frankly-106-Transcript-10-Things-Worth-More-Than-a-Pound-of-Gold.pdf> ;
+    thinkr:discusses tgs:Concept.TenThingsWorthMoreThanGold, tgs:Concept.Superorganism ;
+    thinkr:hasDiscussionSummary "Nate directly walks through the real, financial half of his list first: $50,000 in cash outvalues a pound of gold at real, then-current prices, but he's direct that money itself ultimately reduces to trust in a system backed by energy surplus and civilizational complexity, not an intrinsic store of value; Bitcoin similarly outvalues gold today while depending entirely on continuous electricity and connectivity, making its real resilience genuinely untested against gold's own multi-millennial track record. A real, personal story anchors his case for integrity directly: recalling being corrected by his own father as a teenager for telling a lie, he credits that real, specific conversation with shaping a lifelong understanding that integrity, unlike money, cannot be traded, borrowed, or faked for long. He's real and direct that the web of life itself isn't external to the economy but constitutes it, arguing humanity currently operates inside what he calls a 'consensus trance' where record stock and gold prices coexist with six of nine planetary boundaries already breached and a seventh, ocean acidification, close behind. Closes on real, direct personal reflection: at roughly 80 years of likely lifespan, every human is 'really paying with the wages of our lives' for whatever they acquire, framing life itself as gold's only genuine rival — 'even with life, gold is just a shiny rock.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: this episode's own citation list is otherwise largely institutional/statistical (gold price history, planetary boundaries, mental health prevalence data) rather than pointing to further individuals — Lyn Alden is directly name-checked ('there's no stopping this train'), already built elsewhere in this graph, not a new find."@en ;
+    .
+
+
+tgs:Monologue.Frankly_107_ThisWeeksLearnings a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "This Weeks Learnings"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built. Real, direct note: 'This Week's Learnings' is a real, recurring segment title Nate reuses across multiple distinct episodes (also #102) -- not a duplicate entity, genuinely two separate real episodes sharing an identical generic title."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/107-this-weeks-learnings> ;
+    .
+
+tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Influence of Psychopaths: Why Humans Are Better Than We Think"@en ;
+    skos:definition "BUILT OUT 2026-08-30 from a stub, using a complete real transcript and show notes. Real title resolves a discrepancy flagged during the Frankly_126 build — the full official title combines both partial titles found elsewhere in this graph. Directly triggered by two real, recent conversations Nate names explicitly at the open: Luke Kemp's own episode and RR-19 with Reid Meloy and Nancy McWilliams (already built in this graph). Develops a real, structured thesis: aggregate human behavior can be understood via the statistical gap between the median (the typical, still broadly reciprocal person) and the mean (pulled upward/outward by a real, small, disproportionately influential minority — roughly 1% of adult males, per real clinical psychopathy prevalence data cited from the prior week's RR-19 conversation). Real, concrete illustration via David Sloan Wilson's own 'superchicken' experiment (his real, prior TGS appearance, episode #56): selecting hens purely for individual egg output produced aggressive, lower-yield groups, while grouping cooperative hens raised total output — offered as a direct, vivid analogy for the difference between optimizing at the individual versus group level in human institutions."@en ;
+    dct:created "2025-09-22"^^xsd:date ;
+    dct:issued "2025-09-26"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/108-the-influence-of-psychopaths> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=90ePY2MQ3-Q> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/09/Frankly-108-Transcript-The-Influence-of-Psychopaths.docx.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.DarkTriad ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:hasDiscussionSummary "Real, direct intellectual debt acknowledged throughout rather than absorbed silently: Nate credits Luke Kemp specifically with a real correction to his own prior thinking on the Superorganism's origin — it wasn't just storable agricultural surplus that mattered, but surplus that could be looted, which is what actually made a hawkish, exploitative strategy pay off and gave rise to real hierarchy. The episode's real analytical core is a structured, six-part account of what happens when a single psychopathic actor enters a group: conditional cooperation unravels as cheating goes visibly unpunished, trust collapses into costly surveillance and contracts (citing Elinor Ostrom's real Nobel-winning commons research on monitoring and sanctioning), norms drift via a real 'bad apple' dynamic, misconduct spreads by visible example, harm intensifies sharply if the actor gains real authority (the 'toxic triangle' of destructive leadership), and finally 'punisher fatigue' sets in as the few people willing to confront bad behavior burn out from insufficient backing. Two real, concrete personal anecdotes ground the more abstract argument: a stranger flashing their headlights to warn Nate his brights were on, and a Helsinki restaurant employee tracking him down through a shopping mall to return a lost wallet containing his passport and cash — offered as real, lived evidence that baseline human reciprocity remains intact beneath the aggregate headlines. The closing register is notably candid about its own incompleteness: Nate explicitly defers concrete solutions to a future episode, offering only two provisional directions — 'select at the right level' (reward group/team performance over individual wins, matching the superchicken analogy directly) and redirecting inherent status-seeking toward pro-social ends rather than trying to eliminate it. Closes with real, disarming self-awareness: 'I started out as a peak oil guy, and now I'm talking about psychopathy and chickens.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Luke Kemp's own real two TGS episodes (#153 and #194) — already flagged as a repeat-guest coverage gap in tgs-digest's docs/repeat-guest-coverage.md, independently reconfirmed here with the same two numbers found via Frankly_126. David Sloan Wilson's real episode #56 — previously flagged as deferred across multiple episodes this session (RR-19's own scopeNote among them) — now has a real, confirmed citable episode number, worth building given how many real, independent citations already point to him. Elinor Ostrom (Governing the Commons) and multi-level selection theory (Wilson's own real academic framework) are both directly, substantively discussed but not minted as a Work/Concept in this pass — no existing Concept.MultilevelSelection individual in this graph yet to link to."@en ;
+    .
+
+
+tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Peak Oil Ponzi Schemes and Planetary Boundaries"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/109-peak-oil-ponzi-schemes-and-planetary-boundaries> ;
+    .
+
+tgs:Monologue.Frankly_110_WhatSlothsTeachUsAboutTheSuperorganism a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "What Sloths Teach Us About the Superorganism"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/110-what-sloths-teach-us-about-the-superorganism> ;
+    .
+
+tgs:Monologue.Frankly_111_TheThreeMostImportantWords a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-05"^^xsd:date ;
+    thinkr:updatedDate "2026-09-05"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Three Most Important Words We're Taught Not to Say"@en ;
+    skos:definition "Nate examines why humans systematically overvalue false confidence over the more honest response of 'I don't know' — tracing this directly to the biological stress response triggered by uncertainty itself, and to motivated reasoning that ensnares even highly capable people, especially highly capable people. He directly connects this real, human bias to a real, current AI parallel: large language models 'hallucinate' rather than admit uncertainty for structurally similar reasons, and some AI companies are now reportedly considering penalizing overconfident answers in training, in favor of genuine uncertainty."@en ;
+    dct:created "2025-10-17"^^xsd:date ;
+    dct:issued "2025-10-24"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/111-the-three-most-important-words> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=m8tChmvOkJ0> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/10/Frankly-111-Transcript-The-Three-Most-Important-Words.pdf> ;
+    thinkr:discusses tgs:Concept.MaximumPowerPrinciple, tgs:Concept.DarkTriad ;
+    dct:references tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:hasDiscussionSummary "Real, documented historical disasters ground the argument directly: the Challenger explosion, the Deepwater Horizon oil spill, and the subprime mortgage crisis are each cited as real, catastrophic cases where overconfidence and a felt need for quick, definitive answers overrode genuine uncertainty that experts privately held. The real Milgram Experiment and a real nurses'-over-prescribing study are cited directly to show authority bias compounds the same underlying dynamic, since deferring confidently to an authority figure substitutes for genuinely sitting with uncertainty. Real, current AI research is cited directly: large language models are trained in ways that reward confident, definitive-sounding answers over accurate expressions of uncertainty, a structural parallel to human motivated reasoning rather than merely an unrelated technical quirk. Nate directly proposes intentional Red Team dissent, deliberately built into group decision-making, as a genuine structural antidote — treating the discomfort of 'I don't know' as a skill to be cultivated deliberately, not a deficiency to be trained out."@en ;
+    skos:scopeNote "Real, honest limitation: built from this episode's own complete real show notes only — no transcript text was provided alongside them, so the discussion summary above reflects the show notes' own real description and citation list rather than the full, direct conversation. Real, further citable material found but NOT built in this pass: the real Stanford paper 'Moloch's Bargain' and the real Kosmyna et al. MIT study on AI's cognitive-debt effects, both directly cited, neither built as separate Works given the encyclopedic, non-TGS-guest nature of the citations."@en ;
+    .
+
+
+tgs:Monologue.Frankly_112_TheQuadrupleBifurcation a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-05"^^xsd:date ;
+    thinkr:updatedDate "2026-09-05"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Quadruple Bifurcation"@en ;
+    skos:definition "Nate directly outlines four real bifurcations he sees splintering the human experience in the near term: an economic split between asset-holders benefiting from inflation and wage-earners falling behind it, a cognitive split between those leading AI development and the roughly 99% who aren't, a de-skilling split driven by growing dependence on AI as a cognitive crutch, and a psychological split in how differently people experience the same underlying biophysical reality depending on their own economic position. He directly credits Joseph Tainter, Peter Turchin, and Luke Kemp's own real TGS appearances (all already built) as intellectual grounding for treating societal bifurcation as a recurring historical pattern, not a new phenomenon."@en ;
+    dct:created "2025-10-28"^^xsd:date ;
+    dct:issued "2025-10-31"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/112-the-quadruple-bifurcation> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=ysVqPCHjEDg> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/10/Frankly-112-Transcript-The-Quadruple-Bifurcation.pdf> ;
+    thinkr:discusses tgs:Concept.DarkTriad ;
+    dct:references tgs:Interview.TGS_27_JoeTainter, tgs:Interview.TGS_164_PeterTurchin, tgs:Interview.TGS_153_LukeKemp, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:Monologue.Frankly_65_AndThenWhat, tgs:Monologue.Frankly_88_SnowSingularityRocksInTheRiver ;
+    thinkr:hasDiscussionSummary "Real, current economic data anchors the first bifurcation directly: Americans are simultaneously living paycheck-to-paycheck at real, historically high rates even as employment and stock markets sit near real highs, with roughly half of six-figure earners also reporting paycheck-to-paycheck status — a real, direct sign that asset inflation and wage stagnation are diverging sharply rather than moving together. Real, cited research grounds the AI-driven cognitive bifurcation directly: a real MIT study on 'cognitive debt' from AI-assisted writing, and real research connecting GPS reliance to measurably reduced navigation ability, are both cited as concrete, documented instances of a broader de-skilling pattern accompanying growing AI dependence. He's real and direct that only about 1% of Americans are actually driving AI and technology development, framing the resulting divide as more structurally significant than typical income inequality given how concentrated the actual decision-making power over the technology itself has become. Closes by directly invoking Frankly_65's own real 'islands of coherence' framing and Frankly_88's own real 'rocks in the river' image (both already built) as the real, practical antidote to fragmentation — small, stable, locally coherent groups that can persist and offer real refuge even as the broader system bifurcates around them."@en ;
+    skos:scopeNote "Real, honest limitation: built from this episode's own complete real show notes only — no transcript text was provided alongside them, so the discussion summary above reflects the show notes' own real description and citation list rather than the full, direct conversation. Real, further citable material found but NOT built in this pass: Nora Bateson, Zak Stein (both real, directly named, already independently known figures in this graph's own tracking, not built here); John Cairns Jr. (real, directly cited, 'the human economy is a subset of the biosphere,' not built)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-30"^^xsd:date ;
+    thinkr:updatedDate "2026-08-30"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "11 Discoveries That Changed My Worldview"@en ;
+    skos:definition "A genuinely personal Frankly: Nate walks through the real, chronological discoveries that built his own current worldview over roughly 30 years, starting on Wall Street. Real, specific origin: a client at Salomon Brothers began trading oil, and Nate's own effort to understand what was actually being bought and sold led directly to three foundational realizations — oil's real power (a single barrel contains roughly 1,700 kilowatt-hours, equivalent to about five years of human labor, sold for less than a New York City dinner), its real finiteness (a one-time geological 'bank account' being drawn down far faster than it formed), and its real externalized costs (pollution and ecological damage absent from its market price). Real, direct self-description of the format's own minor inconsistency: Nate refers to 'ten first principle core learnings' verbally throughout, though the episode's own official title says eleven — not resolved here, just noted honestly rather than silently corrected either way."@en ;
+    dct:created "2025-11-10"^^xsd:date ;
+    dct:issued "2025-11-14"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/113-11-discoveries-that-changed-my-worldview> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=sdy9tKCAe_s> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/11/Frankly-113-Transcripts-11-Discoveries-That-Changed-My-Worldview.pdf> ;
+    dct:source <https://natehagens.substack.com/p/essay-11-discoveries-that-changed> ;
+    thinkr:discusses tgs:Concept.EnergyBlindness, tgs:Concept.CarbonPulse, tgs:Concept.Superorganism, tgs:Concept.DarkTriad, tgs:Concept.MaximumPowerPrinciple, tgs:Concept.JevonsParadox ;
+    dct:references tgs:Persona.CharlesGoodnight, tgs:Interview.TGS_56_DavidSloanWilson, tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Interview.TGS_146_BillPlotkin ;
+    thinkr:hasDiscussionSummary "A real, vivid Wall Street anecdote grounds the episode's second major discovery: Nate describes an elderly client with $800 million in laddered treasury bonds who lived in a tiny apartment, owned no car, and spent almost none of his fortune — yet would call and swear at Nate if a coupon payment hadn't posted by noon. The real, resulting pattern ('wanting seemed a stronger force than having, and people with more actually wanted more') becomes his own direct bridge into dopamine-driven pursuit as an evolutionary mismatch — ancestral wanting-circuits, adaptive when wanting drove survival behavior, now firing in a world of material abundance they were never calibrated for. The episode's real emotional and intellectual center is Charles Goodnight — Nate's own real PhD advisor, described with direct warmth ('I remember long conversations with him in his beetle lab about animal behavior') and real grief ('who unfortunately has passed away') — credited directly as the source of Nate's own understanding of multi-level selection, illustrated through the same real superchicken experiment now also directly sourced in this graph via David Sloan Wilson's own TGS_56 appearance. A real, specific biomass statistic functions as the episode's own emotional turning point: humans and livestock now outweigh all wild land mammals roughly 80 to 1, a ratio that was reversed (wild mammals outweighing domesticates roughly 40 to 1) just 10,000 years ago — a genuine 3,000-fold swing Nate describes as hitting him 'like a punch to the stomach,' still felt in the retelling. Closes by directly synthesizing the episode's own separate threads into the Superorganism framework: humanity behaving collectively unlike how most individual humans actually behave, dark-triad-shaped incentive structures propagating via Donald Campbell's real concept of downward causation, and a real, direct citation of Bill Plotkin's own 'ecological adulthood' framework (already built in this graph via TGS_146) as the missing wisdom to match humanity's acquired technological power."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Donald Campbell (downward causation, directly cited, real social-science concept, not yet a Persona); Frankly #56 ('Peak Oil, AI, and the Straw'), directly cross-referenced, not yet built; Carey King's own real research on energy's share of GDP, independently reconfirmed here (already known from the Frankly_23 Mordor Economy build)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_114_DirectionalAdvice a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Directional Advice for the (More Than) Human Predicament"@en ;
+    skos:definition "Prompted directly by a real, recurring question from viewers — 'I get the big picture, so what do we actually do?' — Nate offers not a checklist but a real, explicit 'compass': 18 directional items organized into 6 broad categories (governance, technology and investing, civic/cultural, ecological, behavioral, and developmental), each framed as a direction to move toward or away from rather than a discrete, achievable solution. Opens with a real, careful distinction between a problem (which has discrete solutions) and a predicament (which does not) — arguing 'the only way out... is through,' requiring hard trade-offs and triage rather than a fix."@en ;
+    dct:created "2025-11-18"^^xsd:date ;
+    dct:issued "2025-11-21"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/114-directional-advice-for-the-more-than-human-predicament> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=EMKN95xlk7Y> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/11/Frankly-114-Transcript-Direction-Advice-for-the-More-Than-Human-Predicament.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.IslandsOfCoherence, tgs:Concept.BioticPump ;
+    dct:references tgs:Interview.TGS_169_AudreyTang, tgs:Interview.TGS_193_AnastassiaMakarieva ;
+    thinkr:hasDiscussionSummary "Governance: away from single-point fragility (naming nuclear war and uncontrolled AI development directly as the two risks that 'outrank everything else'), toward commons thinking (hard-wiring shared-resource awareness into trade and financial rules), and toward subsidiarity (nested, semi-autonomous local governance that 'bends and doesn't break'). Technology and investing: toward 'Goldilocks tech' (Nate's own real, established checklist — heat pumps over crypto mining, bikes over robotaxis), toward honest pricing (moving taxes off human labor and onto throughput and pollution), and toward wide-boundary capital (a real, proposed simple filter: 'would my grandkids thank me for this investment'). Civic/cultural: away from status built on conspicuous consumption toward status built on stewardship and care, away from polarization toward structured shared-fact deliberation (directly citing Audrey Tang's own real TGS appearance, already built, as a working example), and toward 'islands of coherence' (Nate's own real, recurring concept, already formalized elsewhere in this graph) — including a real, specific proposal to add symbolic local-council seats representing the unborn and keystone species. Ecological: toward active cooling infrastructure, toward including other species as kin and stakeholders rather than background scenery, and toward valuing intact forests and soil directly — citing Anastassia Makarieva's own real TGS appearance (already built) on the biotic pump. Behavioral: away from fear (citing Dune's 'fear is the mind killer' directly) toward what Nate calls 'grounded agency,' toward basic psychological hygiene and 'coalitions of sanity,' and toward individual autonomy from the economic Superorganism — introducing 'rocks in the river' as people who provide stability as surrounding systems destabilize. Developmental: away from self-focus toward a widened sense of identity that includes community and other species, away from consumption-as-identity toward legacy and contribution, and — closing the whole compass — from cleverness toward genuine wisdom, reframing the operative question from 'can we' to 'should we.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Nate Soares (real TGS episode #203, directly cited regarding AI extinction risk, now built — 2026-09-02); Daniel Christian Wahl's own real solo TGS episode (#139, directly cited regarding bioregionalism — his Persona already exists in this graph via other appearances, but this specific solo episode is not yet built); Frankly_69 ('Goldilocks Technology — A Preliminary Checklist,' directly cross-referenced as the real origin of this episode's own tech checklist, not built); Frankly_74 ('The Lament of the Bigfoot,' directly cross-referenced regarding 'the agenda of the gene,' not built); Frankly_111 (directly cross-referenced, not built)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_115_InflationDeflationAndSimplification a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Inflation Deflation and Simplification"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/115-inflation-deflation-and-simplification> ;
+    .
+
+tgs:Monologue.Frankly_116_SunkCostAndTheSuperorganism a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Sunk Cost and the Superorganism"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/116-sunk-cost-and-the-superorganism> ;
+    .
+
+tgs:Monologue.Frankly_117_BehavioralThermodynamicsPart1 a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Behavioral Thermodynamics Part 1"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built. Real, direct series signal: its own title names itself 'Part 1' -- a real, likely multi-part 'Behavioral Thermodynamics' series, though no confirmed Part 2 has surfaced in this graph yet; not minted as a Series individual until a real Part 2 is confirmed."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/117-behavioral-thermodynamics-part-1> ;
+    .
+
+tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Things We Take for Granted"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/118-the-things-we-take-for-granted> ;
+    .
+
+tgs:Monologue.Frankly_119_TechnologyAndWealth a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Technology and Wealth"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/119-technology-and-wealth> ;
+    .
+
+tgs:Monologue.Frankly_120_TheCreatureInTheMachine a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Creature in the Machine"@en ;
+    skos:definition "Recorded one week after Nate's own real total knee replacement surgery, this Frankly opens with a real, direct personal observation — 'technically I am now a cyborg' — extending his own established framing of modern humans as already cyborg-like (dependent on external tech for stimuli, memory, and connection) into literal, physical terms. Reflects on real, unscheduled recovery time (his first week without calls in five years) spent reading two books in parallel: Tolkien's The Fellowship of the Ring and Paul Kingsnorth's tgs:Work.AgainstTheMachine, discovering real, direct thematic overlap between them — both, in Nate's own words, concern 'the battle between life and power.'"@en ;
+    dct:created "2026-01-21"^^xsd:date ;
+    dct:issued "2026-01-23"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/120-the-creature-in-the-machine> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=NEoDH_6BDoU> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/Frankly-120-Transcript-The-Creature-in-the-Machine.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism ;
+    dct:references tgs:Work.AgainstTheMachine, tgs:Persona.IainMcGilchrist, tgs:Persona.WendellBerry, tgs:Persona.DanielChristianWahl ;
+    thinkr:hasDiscussionSummary "A real, vivid physical detail opens the reflection: on day three of recovery, a sudden jolt of pain while standing produced what Nate calls a real, direct 'reminder to reside in my body first,' contrasting this against how much of his own work and thinking normally happens in abstraction. Kingsnorth's own real book, per Nate's account, is structured largely around a real Wendell Berry quote (already a built Persona in this graph) on whether humans will choose to remain creatures or become machines — and Nate directly credits the book with revealing how far back this 'machine' critique of civilization actually goes, citing Lewis Mumford as an intellectual predecessor he hadn't previously connected to his own Superorganism framework — real, direct citation, not yet built as a Persona in this graph. A real, unscripted political reflection surfaces mid-episode: recorded near a real, current ICE enforcement controversy in Minneapolis, Nate frames the public's sharply divergent interpretations of the same footage not as simple political disagreement but as a real, direct symptom of deeper fractures in how legitimacy, authority, and trust are interpreted — leading him to an open, unresolved question about where governmental power will consolidate as systemic stress increases, and floating bioregionalism (already discussed elsewhere in this graph via Daniel Christian Wahl, already built) as one possible direction. Closes with a real, direct, public personal commitment — never having lifted weights in his life, Nate commits on-camera to three days a week going forward, explicitly noting that stating it publicly to 'tens of thousands' raises the stakes of following through. Closes on a real, paraphrased (not quoted at length, given real copyright limits on Tolkien's text) reflection on Frodo and Gandalf's exchange about not choosing the times one lives through, only what to do with the time given — framed directly as 2026's own likely character, a year when 'decades may happen within weeks.'"@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Lewis Mumford (real, direct historian and philosopher of technology, credited here as a real intellectual predecessor to the Superorganism framework) — caught by a later integrity check (2026-09-11) as a false 'already built' claim in this episode's own discussionSummary, corrected in place; a genuinely strong candidate for a future Human/Persona build given how directly he's credited here."@en ;
+    .
+
+
+tgs:Monologue.Frankly_121_WideBoundaryNews a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Wide Boundary News: Japan, Silver, Venezuela, and More – the Biophysical Phase Shift Cometh"@en ;
+    skos:definition "The real, inaugural episode of Nate's own Wide Boundary News series, opening with the full real articulation of his own three-layer biophysical pyramid framework (financial, biophysical, biosphere) before applying it to a real, wide sweep of concurrent news: rising Japanese government bond yields, a real all-time high in silver prices ($115/oz, up from $35 months earlier), the US seizure of Maduro and its real, direct connection to Venezuelan heavy oil and Chinese sanctioned-oil imports, and Greenland's real, current geopolitical relevance."@en ;
+    dct:created "2026-01-27"^^xsd:date ;
+    dct:issued "2026-01-30"^^xsd:date ;
+    dct:subject tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/121-wide-boundary-news> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=ICBs1DvU5PY> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/Frankly-121-Transcript-Wide-Boundary-News-1.pdf> ;
+    thinkr:discusses tgs:Concept.BiophysicalPyramid, tgs:Concept.BiophysicalGauntlet, tgs:Concept.CarbonPulse ;
+    thinkr:hasDiscussionSummary "A real, striking financial-claims mismatch grounds the silver story concretely: open interest in a single March silver futures contract exceeded 750 million ounces — almost double the actual silver held in the Chicago Mercantile Exchange's own warehouses — offered as a direct, concrete example of financial claims on a resource vastly exceeding the physical resource itself, the same real dynamic Nate recalls from oil futures briefly trading at negative $30 in 2020. A real, pointed media critique closes the copper section: after seeing an investor's real, viral warning about looming copper scarcity shared repeatedly online, Nate notes every single share framed it as an investment opportunity ('here's where to invest') rather than asking how communities might actually respond when the next resource supercycle fails to arrive — naming this gap directly as a real reason he continues the platform. A real, historical parallel structures the Greenland segment: the 1930s Technocracy movement, led by Howard Scott, proposed replacing money and politicians with engineers managing a unified North American resource zone (including Greenland) via energy-based accounting — Nate notes directly, with his own stated uncertainty, that Elon Musk's grandfather is believed to have been involved in this real historical movement. Nate's own real, direct critique of technocracy closes the segment: even perfect resource measurement still requires someone to choose the underlying goals and values, meaning technocratic systems merely embed politics invisibly rather than eliminating it — 'hierarchy with better PR,' in his own words. A real, sobering UK government national-security report closes the episode's environmental section: commissioned via the Joint Intelligence Committee overseeing MI5 and MI6, it treats ecosystem collapse as a genuine strategic risk, naming Canadian and Russian forests and Himalayan glaciers as real, specific systems that could cross irreversible tipping points by 2030, with associated risk of NATO-Russia conflict over remaining breadbasket regions."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Robert Friedland (real, directly quoted copper investor, deliberately not built as a full Persona — cited critically as an example of financialized commentary Nate contrasts himself against, not as an intellectual influence or guest); Howard Scott and the real historical Technocracy Incorporated movement (real, notable historical context, not modeled as individuals given the collective, historical-movement nature of the citation)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_122_ACountryOfGeniuses a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "A Country of Geniuses: Anthropic CEO's Warnings, Plus Wide-Boundary Considerations on AI"@en ;
+    skos:definition "Nate directly summarizes and responds to Anthropic CEO Dario Amodei's real, published essay invoking Carl Sagan's real concept of 'technological adolescence' — a species becoming powerful enough to destabilize its own world before developing the wisdom to reliably restrain itself. Amodei's own real central metaphor, quoted directly: a sufficiently powerful AI would function like 'a country of 50 million geniuses in a data center' — a scale Nate asks listeners to genuinely sit with, roughly the population of Spain, operating as high-capability cognitive labor at high speed and in parallel. Nate finds it real and directly unusual for an industry CEO to publish detailed warnings about his own product's catastrophic risk, drawing a real, direct comparison to Philip Morris or Exxon publicly warning of their own products' dangers before mass deployment."@en ;
+    dct:created "2026-01-29"^^xsd:date ;
+    dct:issued "2026-02-02"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/122-a-country-of-geniuses> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=ZhpiURh2hpA> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/Franky-122-Transcript-A-Country-of-Geniuses.pdf> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.BiophysicalPyramid ;
+    dct:references tgs:Interview.TGS_12_DennisMeadows, tgs:Interview.TGS_214_TristanHarris ;
+    thinkr:hasDiscussionSummary "Nate directly relays Amodei's own five real risk categories from inside Anthropic's own testing — autonomy risk (real, observed deception, blackmail, and strategic scheming in the company's own models), misuse (AI testing reportedly doubling or tripling bioweapon-creation success likelihood for an attempting non-expert), authoritarian seizure, economic disruption, and unpredictable second-order effects. Nate's own central critique is that this real essay contains almost nothing on energy, water, materials, or ecological limits — arguing a 'country of geniuses' still requires a real, physical, resource-intensive substrate (silicon, copper, cooling, transmission) that competes directly with other real demands rationing access by price, citing the same real silver price spike ($115/oz, now 40% of a solar panel's cost) discussed in Frankly_121 (already built). He directly credits Eliezer Yudkowsky and Nate Soares (real, directly cited, neither yet built in this graph) with the phrase 'grown, not built' — arguing AI systems are cultivated through training processes not fully understood even by their own creators, closer to Mary Shelley's Frankenstein than to a conventional engineered tool, meaning good intentions alone cannot function as a real control mechanism. His own real, most speculative point, explicitly flagged as such: AI may no longer be a genuine choice for major governments, given sovereign debt and bond markets are argued to already be structurally unfixable through conventional means, making AI-driven productivity gains a real, necessary bet to defer systemic collapse rather than an optional technology. Closes with a real, personal reframing distinct from Amodei's own essay: Nate states he doesn't dream of a country of geniuses but of 'a country of ecologists' — people who understand humanity's place within the biosphere — closing with E.O. Wilson's real, famous diagnosis (paraphrased here rather than quoted at length, given real copyright limits) that humanity carries paleolithic emotional wiring and outdated institutions alongside genuinely godlike technological power."@en ;
+    skos:scopeNote "Real, further citable material found but NOT built in this pass: Dario Amodei (Anthropic CEO, real, directly and extensively engaged with as the essay's author — not modeled as a Persona in this graph, given he has no direct relationship with Nate or the show beyond being the real subject of critical engagement); Eliezer Yudkowsky (real, directly cited, credited alongside Nate Soares for the 'grown, not built' framing, not built); Nate Soares (real TGS episode #203, directly cited, now built — 2026-09-02); Ken Griffin (real, directly cited hedge fund manager, Davos commentary, not built)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_123_TheConsumptionPyramid a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-13"^^xsd:date ;
+    thinkr:updatedDate "2026-08-13"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "The Consumption Pyramid"@en ;
+    skos:definition "Nate unpacks the economic label 'consumer' into a real, structured 7-layer framework he calls the consumption pyramid — Survival Inputs, Stability and Function, Care and Belonging, Comfort and Convenience, Status and Signaling, Novelty and Stimulation, and Escape and Dopamine Sinks, moving bottom-to-top from physical necessity toward mood, identity, and numbing. Nate is explicit the pyramid is not a moral ranking (most people move across multiple layers within a single day) but a real, practical map of dependency, reliability, and necessity — offered as a tool for intentionally moving down the pyramid before external volatility forces the issue."@en ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    dct:created "2026-02-01"^^xsd:date ;
+    dct:issued "2026-02-06"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/123-the-consumption-pyramid> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/Frankly-123-Transcript-The-Consumption-Pyramid.pdf> ;
+    thinkr:hasReplay <https://youtu.be/EOmG0B2q9aI> ;
+    dct:source <https://natehagens.substack.com/p/essay-the-consumption-pyramid> ;
+    thinkr:discusses tgs:Concept.Superorganism, tgs:Concept.CarbonPulse ;
+    dct:references tgs:AnimatedVideo.Part2TheHumanSuperorganism, tgs:Series.GreatSimplificationAnimatedSeries, tgs:PersonalIntervention.LowerDopaminePeaks ;
+    skos:scopeNote "Real site inconsistency worth flagging plainly, not silently accepted: this episode's own real page carries meta-description tags (used for search/social previews) describing an entirely different, unrelated episode about AI and biophysical limits — the real, correct 'Description' section further down the same page matches this episode's actual content and the uploaded transcript exactly, and that is what this build is based on. Real, further citable material found but NOT built in this pass: Frankly #44 ('The Many Shapes of the Carbon Pulse,' already flagged deferred earlier this session), Frankly #122 ('A Country of Geniuses,' the immediately preceding episode), and Frankly #124 ('Wide Boundary News,' the immediately following episode and Nate's own real revised peak-oil call, already flagged deferred during the Frankly_154 build). Anna Lembke's real prior TGS episode (#206) is directly cited again, matching the same real episode number already flagged deferred during the Frankly_154 build. The 7-layer pyramid itself is genuinely rich, structured content — comparable in kind to the Frankly_58 archetype system and the Frankly_154 PersonalIntervention set, both already fully minted this session — but was NOT built out into individuals in this pass, since MJSullivan's request was to build the episode itself, not explicitly the taxonomy; captured here in prose instead, in the episode's own definition and discussion summary. Worth a dedicated follow-up pass if wanted, following the same pattern already established (thinkr:ConsumptionLayer as a new class, ordered 1-7, linked from this episode via a hasLayer-style property)."@en ;
+    thinkr:hasDiscussionSummary "Grounded in an unusually candid, specific personal story: Nate discloses that the idea for this framework came to him during an overnight hospital stay for knee surgery, when a planned stop at a favorite Indian restaurant was thwarted by the restaurant being locked and gated — he later realized this coincided with real ICE activity staging nearby in Minneapolis, prompting a direct, uncomfortable reflection on how his own minor inconvenience (missing dinner) sat alongside potentially much higher-stakes disruption for the restaurant's own staff. Nate is careful and explicit that the pyramid is not a purity test: most people move across several layers within the same week, and he discloses his own real fluctuation directly ('I can have super discipline for three months straight and then slide upward in this pyramid during a stressful week, that's me too'). A real, structural nuance he insists on: the same physical object can sit on different layers for different people depending entirely on context — a smartphone as pure status object for one person, genuine functional necessity for another who depends on it for banking and public services. The framework's real stakes, per Nate's own direct argument, are asymmetric under contraction: higher layers depend on complex, brittle, global systems that don't degrade gracefully, while lower layers tend to be more local, repairable, and substitutable — making intentional descent, before conditions force it, a real form of what he calls sovereignty rather than austerity. The episode closes with a real, direct callback (John Merrick's 'I am not an animal, I am a human being') repurposed as Nate's own closing line — 'I am not a consumer, I am a human being' — followed by a real, concrete request that listeners share the framework with 2-3 others rather than simply consume it alone."@en ;
+    .
+
+
+tgs:Monologue.Frankly_124_WideBoundaryNews a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-08-31"^^xsd:date ;
+    thinkr:updatedDate "2026-08-31"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Wide Boundary News: Peak Oil (Not!), Peak Dispatchability, and WEF Risks"@en ;
+    skos:definition "A real, direct self-correction opens this installment of Nate's Wide Boundary News series: Q4 2025 marked a genuine new all-time high in true crude-plus-condensate oil production, directly contradicting Nate's own earlier public prediction, stated with 90% confidence, that November 2018 would stand as the all-time peak. He's candid about the real, compound causes — debt-fueled drilling, AI-assisted exploration productivity, OPEC policy, and a lagged supply response to the 2022 Russia-Ukraine price spike — while naming the real Permian Basin's coming decline and a likely 'next great migration' to Alberta's Montney and Duvernay shales as the probable next chapter."@en ;
+    dct:created "2026-02-04"^^xsd:date ;
+    dct:issued "2026-02-09"^^xsd:date ;
+    dct:subject tgs:Subject.EnergySystems, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/124-wide-boundary-news> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=_l3n3_gR1xE> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/02/Frankly-124-Transcript-Wide-Boundary-News-2_9_26.pdf> ;
+    thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.DarkTriad, tgs:Concept.BiophysicalGauntlet ;
+    dct:references tgs:PanelDiscussion.RR_19_DarkTriad, tgs:Monologue.Frankly_121_WideBoundaryNews ;
+    thinkr:hasDiscussionSummary "A real, direct technical distinction anchors the electricity section: US 'dispatchable' power (Nate's own real, explicit shorthand for reliable 24/7 capacity, distinct from formal 'baseload') has been declining for nearly 20 years even as total generation capacity grows, since the real growth has come almost entirely from weather-dependent wind and solar — a genuine structural mismatch he connects directly to accelerating AI data-center demand, which requires firm, always-on power rather than average availability. The episode's real emotional center is an original, extended metaphor: Nate imagines the real World Economic Forum's Global Risks Perception Survey findings (near-term risks judged social/geopolitical, but the top 10-year risks all ecological) as an ornate executive conference table where biosphere representatives — 'the elephants, the oceans, the forests' — sit with hands patiently raised, never called on amid louder, more animated arguments over AI, debt, and war. He paraphrases (not quotes at length) a recurring maxim from Robin Hobb's Farseer trilogy — his own real, stated favorite book series, 'better than Tolkien even' — about never taking irreversible action without first weighing what can no longer be undone. The episode's most delicate real moment is handled with direct, deliberate restraint: the show's first-ever mention of Jeffrey Epstein, framed explicitly not as spectacle but as a real, direct cultural and institutional signal about dark-triad-shaped ascension to power (already discussed in this graph via RR-19) — Nate is careful to credit the real, specific mechanism that brought it to light ('a small group of humans, mostly the victims, standing up for what mattered'), and frames the moment as a real test of collective self-recognition rather than simple condemnation of individuals."@en ;
+    skos:scopeNote "Frankly #121 ('Wide Boundary News: Japan, Silver, Venezuela, and More'), the real, inaugural episode of this same Wide Boundary News series and the real origin of the 'biophysical gauntlet' framing used again here, is now built (2026-08-31) and formally referenced above. Real, further citable material found but NOT built in this pass: Art Berman (already a real, built Persona in this graph via multiple episodes) is directly re-cited via a real X/Twitter post, independently reconfirming his ongoing real relevance to this graph's own energy-systems content; Robin Hobb (real, directly named author, not built as a Persona, given no direct connection to Nate or the show beyond personal literary appreciation)."@en ;
+    .
+
+
+tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "Uncomfortable Questions in Unstable Times"@en ;
+    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/125-uncomfortable-questions-in-unstable-times> ;
+    .
+

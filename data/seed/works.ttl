@@ -136,6 +136,7 @@ tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/view/388478403/i/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork ;
     .
 
 #############################################

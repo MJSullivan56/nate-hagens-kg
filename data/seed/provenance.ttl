@@ -1,0 +1,3080 @@
+@prefix tgs:   <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+#############################################
+# provenance.ttl -- PILOT, 2026-09-12. Formalizes build/revision history
+# as its own registry, per direct instruction, distinct from the
+# already-existing Evidence/Source/LinkNote model (which supports
+# evidentiary claims like Concept-echoesIdeaOf-Persona, not build
+# history). Granularity: per-entity, per direct instruction -- one
+# RevisionEvent per real episode, not one per batch.
+#
+# Piloted here against all 27 Reality Roundtable entities, migrating
+# real, implied/explicit provenance already sitting in each entity's
+# own scopeNote prose. Deliberately does NOT remove that provenance
+# language from the scopeNotes themselves in this pilot pass -- this
+# is an ADDITIVE structural layer for review, not a rewrite of
+# episodes-rr.ttl. If this pilot is approved, a follow-up pass would
+# trim the now-redundant provenance sentences out of each scopeNote,
+# leaving scopeNote for genuinely evidentiary/citation content only.
+#############################################
+
+<http://example.org/thinkr#> a owl:Ontology ;
+    rdfs:comment "Provenance extension to thinkr-core: real build/revision history, distinct from the Evidence/Source/LinkNote evidentiary-claim model."@en .
+
+thinkr:RevisionEvent a owl:Class ;
+    rdfs:comment "A single real, dated change to one entity's own content -- its initial build, or a later correction/enrichment/migration. One per entity per real event, not one per batch."@en .
+
+thinkr:RevisionKindType a owl:Class ;
+    rdfs:comment "Enumerated kind of a RevisionEvent."@en .
+
+thinkr:RevisionKindType.InitialBuild a thinkr:RevisionKindType ;
+    skos:prefLabel "Initial build"@en .
+
+thinkr:RevisionKindType.Correction a thinkr:RevisionKindType ;
+    skos:prefLabel "Correction"@en ;
+    rdfs:comment "Fixes something that was wrong -- a stub replaced with a full build, a broken reference, a factual error."@en .
+
+thinkr:RevisionKindType.Enrichment a thinkr:RevisionKindType ;
+    skos:prefLabel "Enrichment"@en ;
+    rdfs:comment "Adds real, new, correct content to an already-correct entity -- not fixing an error, extending coverage."@en .
+
+thinkr:RevisionKindType.StructuralMigration a thinkr:RevisionKindType ;
+    skos:prefLabel "Structural migration"@en ;
+    rdfs:comment "Schema-level change -- a property moved domain, a file was split, a class was renamed. Not a content change."@en .
+
+thinkr:RevisionKindType.StubCreated a thinkr:RevisionKindType ;
+    skos:prefLabel "Stub created"@en ;
+    rdfs:comment "A minimal placeholder entity -- real number, title, and URL confirmed from the site's own inventory, but no transcript processed and no real content built yet. Distinct from InitialBuild, which implies a full construction from real source material. Added 2026-09-12, first real need surfacing during the TGS #1-25 pilot, which mints confirmed-but-unbuilt episodes as real stubs rather than leaving them absent from the graph entirely."@en .
+
+thinkr:affects a owl:ObjectProperty ;
+    rdfs:domain thinkr:RevisionEvent ;
+    rdfs:comment "The entity this event changed."@en .
+
+thinkr:revisionDate a owl:DatatypeProperty ;
+    rdfs:domain thinkr:RevisionEvent ;
+    rdfs:range xsd:date .
+
+thinkr:revisionKind a owl:ObjectProperty ;
+    rdfs:domain thinkr:RevisionEvent ;
+    rdfs:range thinkr:RevisionKindType .
+
+thinkr:revisionNote a owl:DatatypeProperty ;
+    rdfs:domain thinkr:RevisionEvent ;
+    rdfs:range xsd:string ;
+    rdfs:comment "What happened and why, in prose."@en .
+
+thinkr:performedBy a owl:DatatypeProperty ;
+    rdfs:domain thinkr:RevisionEvent ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Which process made this change -- a session identifier, 'Claude Code batch N', a person's name directly. String for now, not an enumerated type -- becomes more structured once the automated Code pass gives this a real, consistent value to standardize around."@en .
+
+thinkr:createdDate a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range xsd:date ;
+    rdfs:comment "When this graph RECORD was first authored -- not the real-world episode's own recording/publish date (that's dct:created/dct:issued, already in wide use). Simple, always-present, directly on the entity -- the fast, flat answer to 'when did this entry first exist.' Distinct from and complementary to thinkr:RevisionEvent, which carries the richer WHY/WHAT-CHANGED narrative and can capture multiple real events even within a single calendar day, which a single date property cannot."@en .
+
+thinkr:updatedDate a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Episode ;
+    rdfs:range xsd:date ;
+    rdfs:comment "When this graph record was last meaningfully changed. Equal to createdDate until a real, later revision happens. Should track the most recent thinkr:RevisionEvent's own revisionDate for this entity, where one exists with a later date than createdDate."@en .
+
+#############################################
+# The 27 real RevisionEvents, RR-1 through RR-27.
+#############################################
+
+tgs:RevisionEvent.RR_1_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_1_ElectricVehicles ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct modeling decision worth preserving: Olivia Lazard was originally scheduled but couldn't attend due to travel issues (per Nate's own substack write-up) -- deliberately NOT modeled as thinkr:hasGuest, since she never actually appeared."@en ;
+    .
+
+tgs:RevisionEvent.RR_2_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_2_DeeperEcology ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_3_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_3_UnlearningEconomics ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_4_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_4_TitanicOceans ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct modeling decision worth preserving: DJ White was originally invited as a fourth panelist but could not attend; Nate reads his own written question aloud instead -- not modeled as thinkr:hasGuest for the same reason as RR-1's Olivia Lazard."@en ;
+    .
+
+tgs:RevisionEvent.RR_5_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_6_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_7_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_7_PovertyBlind ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_8_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_8_TheIndicMind ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_9_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct data-quality note worth preserving: the episode's own real page shows an internal date inconsistency (issued date vs. recorded date, chronologically impossible as originally listed) -- flagged plainly rather than silently resolved one way."@en ;
+    .
+
+tgs:RevisionEvent.RR_10_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct bare stub first bootstrapped via RR-26's own cross-reference, before a full transcript was available."@en ;
+    .
+
+tgs:RevisionEvent.RR_10_Correction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Fully enriched from a complete real transcript plus real linked show notes (MJSullivan's own upload), resolving the RR-10 gap flagged since RR-26's original bootstrap and closing the last remaining RR gap in the graph at that time."@en ;
+    .
+
+tgs:RevisionEvent.RR_11_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. This episode's own real citation of tgs:Work.BottlenecksOf21stCentury directly prompted that Work's own build in this same session."@en ;
+    .
+
+tgs:RevisionEvent.RR_12_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_12_TheGlobalStakesOfTheUSElection ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_13_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_13_FutureCouncil ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct source-quality note worth preserving: the only RR in this graph sourced from a cleaned-up YouTube auto-generated transcript rather than an official TGS-hosted PDF, since the site hosts no downloadable transcript for this episode."@en ;
+    .
+
+tgs:RevisionEvent.RR_14_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_14_TheFutureIsLocal ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct source-quality note worth preserving: the source transcript appears to mislabel several passages as a different speaker than who actually said them -- flagged plainly rather than silently trusted."@en ;
+    .
+
+tgs:RevisionEvent.RR_15_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_15_ThePlasticCrisis ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct cross-reference note worth preserving: this episode was already anticipated as a deferred reference during this graph's own RR-23 build; that forward-reference is now real and bidirectional."@en ;
+    .
+
+tgs:RevisionEvent.RR_16_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_16_TheMadScrambleForPower ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_17_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_17_MovingFromApathyToAction ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_18_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_18_HowWaterShapesOurPlanet ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct sequence-completion note worth preserving: this was the final Reality Roundtable built in this graph, completing the full numbered sequence RR-1 through RR-27."@en ;
+    .
+
+tgs:RevisionEvent.RR_19_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct bare stub first built before a full transcript was available."@en ;
+    .
+
+tgs:RevisionEvent.RR_19_Correction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_19_DarkTriad ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Fully rebuilt from a complete real transcript plus real fetched show notes (MJSullivan's own upload, cross-verified against a direct fetch of the episode's own page), replacing the earlier bare stub entirely."@en ;
+    .
+
+tgs:RevisionEvent.RR_20_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_20_HackingHumanAttachment ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_21_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.RR_22_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct quote worth preserving: Nate's own words frame this episode as 'probably one of the most intense conversations I've had on this platform in the four years of doing this podcast.'"@en ;
+    .
+
+tgs:RevisionEvent.RR_23_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_23_ThePlasticDetox ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision to this entity itself -- note that Shanna Swan's own separate real TGS-2 appearance, cross-referenced here, was resolved from deferred to built later in this same session, but that is TGS-2's own revision history, not RR-23's."@en ;
+    .
+
+tgs:RevisionEvent.RR_24_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct build-rationale note worth preserving: built specifically as a test case for the 'antagonistic' side of this graph's own network, per MJSullivan's own framing -- the episode's real content directly and repeatedly names techno-optimism as its own subject."@en ;
+    .
+
+tgs:RevisionEvent.RR_25_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct dating note worth preserving: recorded the same day as the real 2026 Iran war/Strait of Hormuz crisis (March 25, 2026), directly acknowledged by Nate at the top of the conversation."@en ;
+    .
+
+tgs:RevisionEvent.RR_26_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_26_WhyCommunityFails ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Real, direct bare stub first built, with RadicalHospitality and Amonging initially judged borderline-worthy as Concepts rather than built outright."@en ;
+    .
+
+tgs:RevisionEvent.RR_26_Correction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_26_WhyCommunityFails ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Resolved via MJSullivan's own real extracted link list from this episode's real show notes: RadicalHospitality and Amonging both built as real Concepts, upgraded from an earlier borderline judgment."@en ;
+    .
+
+tgs:RevisionEvent.RR_27_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:PanelDiscussion.RR_27_AnEcologicalPsychology ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Unusually rich in real, direct cross-references to already-built content in this graph, including a named citation of Frankly-97 ('The Superorganism in 7 Minutes')."@en ;
+    .
+
+#############################################
+# TGS #1-25 pilot batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_1_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_1_RichardGephardt ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_2_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_2_ShannaSwan ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_3_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_3_OilBestAndWorstOfFuels ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_4_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_4_ChuckWatson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_5_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_5_BendNotBreakPart1 ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed. Real, direct series context: Part 1 of the real, 5-part tgs:Series.BendNotBreak, discovered as a series on 2026-07-13."@en ;
+    .
+
+tgs:RevisionEvent.TGS_6_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_6_HermanDaly ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_7_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_7_JoshFarleyAppearance1 ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_8_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_8_PeterWard ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_9_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_9_PaulEhrlich ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_10_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_10_NoraBateson ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct source-quality note worth preserving: sourced from a YouTube auto-generated transcript, honestly flagged as lower quality, plus MJSullivan's own manually-rebuilt show notes preserving the original page's real citation links."@en ;
+    .
+
+tgs:RevisionEvent.TGS_11_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_11_RexWeyler ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Real, direct light build from confirmed show notes and multiple independent podcast-platform summaries, NOT a full transcript-based build -- distinct from every other InitialBuild in this batch. Real, direct correction mid-pilot: this session's own earlier site-inventory scrape had silently missed this episode entirely, since its real URL carries no leading number (episode/rex-weyler) unlike virtually every other episode on the site; corrected once MJSullivan directly supplied the real number and URL."@en ;
+    .
+
+tgs:RevisionEvent.TGS_12_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_12_DennisMeadows ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_13_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_13_JamieWheal ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_14_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_14_JohnGowdy ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed. Real, direct side effect of this build: a duplicate tgs:Human.KateRaworth/tgs:Persona.KateRaworth definition, accidentally split across earlier sessions, was consolidated into one clean definition each -- harmless under RDF's own set semantics, but redundant; no content lost."@en ;
+    .
+
+tgs:RevisionEvent.TGS_15_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_15_DanielPauly ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct sequence note worth preserving: the show's real first-ever episode. MJSullivan's own framing of this build ('here's a politician') directly surfaced a real, session-wide gap in this graph's own ProfessionalRole system -- see enumerations.ttl's own updated class comment for the full story."@en ;
+    .
+
+tgs:RevisionEvent.TGS_16_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_16_TristanHarris ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct standing note: independently flagged as a citation target at least three separate times earlier this session (Frankly-128, TGS-110, John Robb's own episode) -- a real, concrete priority candidate for a genuine future build."@en ;
+    .
+
+tgs:RevisionEvent.TGS_16_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_16_TristanHarris ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Real, direct correction caught during the TGS #26-50 batch, same day: tgs:Persona.TristanHarris already existed in this graph and had been left unlinked on this stub -- added directly rather than left as a bare, disconnected placeholder."@en ;
+    .
+
+tgs:RevisionEvent.TGS_17_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_17_ChuckWatson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct context worth preserving: recorded as a special same-week release responding directly to the October 2023 outbreak of the Israel-Hamas war. Real, direct origin point for RR-21: Nate's own live invitation here for a future governance-focused roundtable is what that panel discussion later became."@en ;
+    .
+
+tgs:RevisionEvent.TGS_18_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_18_ThomasMurphy ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, already-resolved site data discrepancy worth preserving: the source filename says #78, but the site's own real resolution confirms #77 [sic -- #18 in this graph's own real numbering], matching a pattern already seen in several earlier builds."@en ;
+    .
+
+tgs:RevisionEvent.TGS_19_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_19_SimonMichaux ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_20_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_20_MaximumPowerHyperAgents ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed. Real, direct series context: Part 2 of the real, 5-part tgs:Series.BendNotBreak."@en ;
+    .
+
+tgs:RevisionEvent.TGS_21_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_21_VickiRobin ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct standing note: flagged earlier this session as a real candidate for T10 (meaning/agency), given her own well-known work reframing money as life energy."@en ;
+    .
+
+tgs:RevisionEvent.TGS_22_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_22_AzaRaskin ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_23_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_23_TimWatkins ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number and URL confirmed via this session's own site inventory; real episode title not yet independently confirmed. No transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_24_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_24_JasonBradford ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_25_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_25_GerardoCeballos ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number and URL confirmed via this session's own site inventory; real episode title not yet independently confirmed. No transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #1-25 pilot batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_11_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_11_InSpiteOf ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_20_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.Frankly_20_KeepingWarmData ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, direct role correction (2026-09-12): this episode's own hasHost/hasGuest properties were reversed at the source -- Nora Bateson interviews Nate, not the other way around, a genuine, deliberate reversal of the show's usual format. Corrected directly in episodes.ttl per MJSullivan's own direct catch."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_23_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_23_MordorEconomy ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_1_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_1_WhatWarInTheUkraineMeansForEnergyAndMoney ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_2_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_2_AreAmericansWillingToRiskNuclearWar ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_3_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_3_EnergyBlindness ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_4_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_4_MeetingTheFutureHalfway ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_5_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_5_FaqsOnEpisodes125 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_6_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_6_TheEndOfAbundance ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_7_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_7_GrowthUntilNot ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_8_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_8_The6thPool ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_9_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_9_CreaturesUnited ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_10_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_10_The7StagesOfClimate ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_12_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_12_TheSpeedBump ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_13_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_13_TheQuietPartOutLoud ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_14_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_14_7ShadesOfJekyllAndHyde ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_15_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_15_7RealitiesNoMatterWhoWins ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_16_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_16_7BoundariesOfClimateConcern ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_17_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_17_RussiaBeCarefulWhatWeWishFor ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_18_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_18_EnergyGratitude ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_19_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_19_Islands ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_21_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_21_ReflectionsPredictionsIntentions ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_22_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_22_TheSimpleStoryOfCivilization ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_24_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_24_NotForSale ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_25_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_25_LossAversion ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #26-50 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_27_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_27_JoeTainter ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_28_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_28_JoanDiamond ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_29_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_29_JoshFarleyAppearance2 ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_31_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_31_SensemakingUncertaintyPurpose ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_33_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_33_KrisDeDecker ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_34_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_34_KirilSokoloff ;
+    thinkr:revisionDate "2026-08-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_35_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_35_SteveVavrus ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_37_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_37_MartinScheringer ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_42_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_44_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_44_DieselAndTheBarrelOfOil ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_46_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_46_VandanaShiva ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_48_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_48_TomasBjorkman ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_49_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_49_SimonMichaux ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_50_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_26_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_26_PeterWhybrow ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_30_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_30_SteveKeen ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_32_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_32_TimotheeParrique ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_36_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_36_DouglasRushkoff ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_38_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_38_SebastianHeitmann ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_39_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_39_AyanMahamoud ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_40_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_40_MaryEvelynTucker ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_41_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_41_MartyKearns ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_43_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_43_BetsyTaylor ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_45_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_45_JonErickson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_47_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_47_PatrickOphuls ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #26-50 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_44_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_44_TheManyShapesOfTheCarbonPulse ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_47_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_47_FranklyReFranklys ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_26_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_26_ABiggerBoat ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_27_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_27_UsaButWaitTheresMore ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_28_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_28_TheRealGlobalMacro ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_29_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_29_RealityProbabilityAndPerception ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_30_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_30_MissingWords ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_31_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_31_ReflectionsOnBeyondGrowth ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_32_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_32_ThePerilsOfEroi ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_33_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_33_NatoUkrainePlayingRussianRouletteWithComplexLife ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_34_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_35_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_35_The10ThingsThatBringMeJoy ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_36_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_36_CoolPrivilege ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_37_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_37_JustStopOilPart1Gasoline ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct part of the newly-confirmed tgs:Series.JustStopOil, a genuine 4-part series."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_38_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_38_The7ThingsThatScareMeMost ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_39_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_39_JustStopOilPart2OilIsTheEconomy ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct part of the newly-confirmed tgs:Series.JustStopOil, a genuine 4-part series."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_40_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_40_JustStopOilPart310PathwaysToPostGrowth ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct part of the newly-confirmed tgs:Series.JustStopOil, a genuine 4-part series."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_41_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_41_JustStopOilPart4TheIntersection ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Real, direct part of the newly-confirmed tgs:Series.JustStopOil, a genuine 4-part series."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_42_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_42_RunningTheSystemsDiscourseGauntlet ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_43_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_43_FossilEnergySubsidiesTheBottomLine ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_45_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_45_OneRingToRuleThemAll ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_46_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_46_TheMiddleEastStormwatch ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_48_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_48_TheBiophysicalTaxmanCometh ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_49_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_49_AiVsRealEcology ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_50_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_50_Cop28AndTheSmokeUnderTheDoor ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #51-75 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_51_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_51_DJWhite ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_53_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_53_WilliamRees ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_54_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_54_TheStealthAdjustmentOfOil ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_56_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_56_DavidSloanWilson ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_57_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity -- exact date unrecorded rather than guessed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_59_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_59_JonathanHaidt ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_64_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_64_AndrewMillison ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_65_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_65_AntonioTuriel ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_68_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_68_SimonMichaux ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_70_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_70_JohnKitzhaber ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_73_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_73_JoslinFaithKehdy ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_75_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_75_KrisDeDecker ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_52_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_52_GiorgosKallis ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_55_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_55_EricaThompson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_58_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_58_OliviaLazard ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real, previously-unverified Olivia Lazard citation gap from TGS-127."@en ;
+    .
+
+tgs:RevisionEvent.TGS_60_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_60_NinaSimons ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_61_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_61_GarethRoberts ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_62_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_62_JodiArchambault ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_63_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_63_PaulMartin ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_66_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_66_KimStanleyRobinson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_67_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_67_EdwardChancellor ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_69_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_69_RobertLustig ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real, previously-flagged Robert Lustig citation gap from Frankly-128."@en ;
+    .
+
+tgs:RevisionEvent.TGS_71_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_71_DanielSchmachtenberger ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_72_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_72_AlexGladstein ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_74_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_74_JamesFleay ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #51-75 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_56_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_56_PeakOilAIAndTheStraw ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_57_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_57_InformationBifurcation ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_58_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_59_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_59_SevenMetaQuestionsAboutOurGlobalMetabolism ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_60_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_61_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_61_TheStraitOfHormuzAndTheSpice ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_62_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_62_SevenThoughtExperimentsForEarthDay ;
+    thinkr:revisionDate "2026-09-03"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_63_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_63_SevenKeyQuestionsOnNuclearConflict ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_64_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_64_TwentyControlKnobs ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_65_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_65_AndThenWhat ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_68_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_68_OvershootAndItsSevenFundamentalDrivers ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_69_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_69_GoldilocksTechnology ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_71_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_71_WeakestLinks ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_72_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_74_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_75_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_75_SomebodysGonnaWin ;
+    thinkr:revisionDate "2026-09-10"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_51_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_51_SystemicThemesFor2024 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_52_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_52_TheBehavioralStack ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_53_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_53_TheHavesAndTheHaveNots ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_54_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_54_ReflectionsFromIndia ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_55_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_55_7KeyInterventionsForTheFuture ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_66_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_66_RealityParty ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_67_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_67_TheSolutionsThatCanBeNamedAreNotTheSolutions ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_70_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_70_AskMeAnything ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_73_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #76-100 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_76_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_76_DanielZetah ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_77_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_77_KateRaworth ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_82_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_82_KevinAnderson ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_84_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_84_JeanMarcJancovici ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_85_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_86_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_86_LisiKrall ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_89_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_89_SianSutherland ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_91_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_91_LukeGromen ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_92_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_94_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_94_ChuckWatson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_97_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_97_ChuckWatson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_98_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_98_HelenThompson ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_99_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_99_JeremyGrantham ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_100_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_100_NateHagens ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_78_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_78_InigoCapellanPerez ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Real guest name recovered via direct search after the site's own slug dropped all accented characters."@en ;
+    .
+
+tgs:RevisionEvent.TGS_79_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_79_AnneBikleAndDavidMontgomery ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real title/number already surfaced via MJSullivan's own farming-search screenshots."@en ;
+    .
+
+tgs:RevisionEvent.TGS_80_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_80_TaimurAhmad ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real, previously-flagged Taimur Ahmad citation gap from TGS-82."@en ;
+    .
+
+tgs:RevisionEvent.TGS_81_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_81_RogerPielke ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_83_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_83_Doomberg ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_87_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_87_GrahamPalmer ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_88_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_88_RobertSapolsky ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_90_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_90_NickHaddad ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_93_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_93_JorisVanDerSchot ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_95_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_95_SirDavidKing ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_96_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_96_DavidHolmgren ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #76-100 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_77_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_77_SevenPhilosophiesOnTheFuture ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_80_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_83_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_85_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_85_TheLightTriad ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_87_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_87_TheCentralQuestionsOfOurTime ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_88_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_88_SnowSingularityRocksInTheRiver ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_92_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_92_AIInServiceOfLife ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_95_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_95_TheParentAndThePendulum ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_96_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_96_TheEightFacesOfAI ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_97_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_98_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_99_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_99_TenCoreMythsOfBusinessSchools ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_76_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_76_TheBattlesOfOurTime ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_78_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_78_ABriefClarificationOnHumanBehavior ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_79_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_79_TheBiggestTakeawaysFromTheLogicOfTheSuperorganism ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_81_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_82_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_82_PowerVsLife ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_84_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_84_ShareYourStory ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_86_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_86_WhatIsWealth ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_89_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_89_ThinkingAndFeeling ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_90_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_91_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_91_UnintendedConsequences ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_93_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_93_InformationBurnout ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_94_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_94_SocialOvershoot ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real citation gap flagged in Frankly-95's own scopeNote."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_100_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_100_AskNateAnything2025 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #101-125 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_101_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_102_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_102_BillMcKibben ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_103_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_103_PeterBrannen ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_104_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_104_JaneMuncke ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_110_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_110_JohnRobb ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_112_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_112_SamanthaSweetwater ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_113_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_113_LynAlden ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_114_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_114_ChuckWatson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_115_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_115_PatrickKnodel ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_117_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_117_GeoffreyWest ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_118_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_118_MichaelEvery ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_119_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_119_LutherKrueger ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_120_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_120_TomChi ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_121_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_121_PellaThiel ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_122_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_122_ZakStein ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_123_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_123_ChrisKeefer ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_125_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_125_VanessaAndreotti ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_105_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_105_LeonSimons ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_106_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_106_AlexaFirmenich ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_107_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_107_MarioGiampietro ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_108_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_108_SteveKeen ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona (second solo appearance) rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_109_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_109_AshleyHodgson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_111_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_111_SandraFaber ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_116_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_116_RianeEisler ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_124_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_124_LevkeCaesar ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #101-125 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_106_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_106_TenThingsWorthMoreThanAPoundOfGold ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_108_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_111_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_111_TheThreeMostImportantWords ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_112_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_112_TheQuadrupleBifurcation ;
+    thinkr:revisionDate "2026-09-05"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_113_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_114_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_114_DirectionalAdvice ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_120_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_120_TheCreatureInTheMachine ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_121_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_121_WideBoundaryNews ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_122_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_122_ACountryOfGeniuses ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_123_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_123_TheConsumptionPyramid ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_124_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_124_WideBoundaryNews ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_101_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_102_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_102_ThisWeeksLearnings ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Shares its real, generic title with the other 'This Week's Learnings' episode -- a recurring segment name, not a duplicate."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_103_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_103_TheGhostOfDopaminePast ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_104_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_104_DucksAndBlueberries ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_105_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_107_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_107_ThisWeeksLearnings ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Shares its real, generic title with the other 'This Week's Learnings' episode -- a recurring segment name, not a duplicate."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_109_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_110_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_110_WhatSlothsTeachUsAboutTheSuperorganism ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_115_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_115_InflationDeflationAndSimplification ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_116_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_116_SunkCostAndTheSuperorganism ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_117_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_117_BehavioralThermodynamicsPart1 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Its own real title names itself Part 1 of a likely multi-part series, not yet confirmed with a real Part 2."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_118_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_119_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_119_TechnologyAndWealth ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_125_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_85_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Real, direct retroactive fix discovered while processing the TGS #126-150 batch: a standalone triple (TGS_165_WisdomOverPower dct:references TGS_85_WisdomNatureAndTheBrain) had been sitting as trailing content on TGS-132's own block in the original file, misattached the same way header comments were in earlier batches. Relocated directly into episodes-tgs-76-100.ttl (already presented), since that file is where TGS-85 itself lives."@en ;
+    .
+
+#############################################
+# TGS #126-150 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_126_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_126_AVisionForBetterment ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_127_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_127_EdConway ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_132_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_134_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_134_JohanRockstrom ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_138_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_138_FritjofCapra ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_139_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_139_DanielChristianWahl ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_142_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_142_RomanKrznaric ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_146_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_146_BillPlotkin ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_150_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_150_CarlosNobre ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_128_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_128_AlexandreTannous ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_129_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_129_JonathanRowson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_130_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_130_KristaTippett ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_131_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_131_JoeRoman ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_133_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_133_CaseyCampHorinek ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_135_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_135_JanineBenyus ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_136_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_136_CoreyBradshaw ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_137_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_137_MamphelaRamphele ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_140_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_140_JeffreySachs ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_141_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_141_StefanRahmstorf ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves a real Human-without-Persona gap AND the episode itself -- both closed in this same batch."@en ;
+    .
+
+tgs:RevisionEvent.TGS_143_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_143_SuzanneSimard ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_144_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_144_ErikFernholm ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_145_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_145_KariStoever ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real, direct forward-reference from TGS-173's own show notes."@en ;
+    .
+
+tgs:RevisionEvent.TGS_147_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_147_IndyJohar ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_148_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_148_RichardGephardt ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona (second appearance) rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_149_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_149_JohnFullerton ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #126-150 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_126_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_126_HumanityAsDrJekyllAndMrHyde ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_127_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_127_WideBoundaryNews ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_128_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_128_UltraProcessedInformation ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_129_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_132_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_132_FrameworkForAction ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_135_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_135_OilOneOhOne ;
+    thinkr:revisionDate "2026-09-10"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_136_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_136_OilTwoOhOne ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_137_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_137_OilThreeOhOne ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_138_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_138_Part1ChangingTheFuture ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_139_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_139_Part2FourVariables ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_140_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_140_APerspectiveFromLebanon ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_141_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_141_WideBoundaryNews ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_142_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_143_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_145_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_148_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_150_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_150_Part5PersonalLandscapes ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_130_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_130_WideBoundaryNews31026 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_131_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_131_IranEffectsLocalPreparednessAndEndOfEmpire ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_133_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_133_IranUsAndTheRest ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_134_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_144_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_144_AWordICantSeemToUnderstand ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_146_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Its own real title names itself Part 4 of a likely multi-part series, not yet confirmed with real earlier parts."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_147_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_147_HowToPlay5dChess ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_149_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_149_ALegacyWorthCelebrating ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #151-175 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_151_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_151_AndreGuimaraes ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_152_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_152_HelenThompson ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_153_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_153_LukeKemp ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_154_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_154_JaneMuncke ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_158_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_158_JohnVervaeke ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_163_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_163_DougaldHine ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_164_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_164_PeterTurchin ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_165_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_165_WisdomOverPower ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_166_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_166_PeterStrack ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_167_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_167_FrancisWeller ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_168_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_168_DanOConnor ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_169_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_169_AudreyTang ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_171_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_171_AlexisZeigler ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_173_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_173_WillMarshall ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_175_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_175_JeanMarcJancovici ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_155_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_155_JeremyGrantham ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_156_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_156_ChristianSawyer ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_157_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_157_BestOfTgs ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_159_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_159_SunitaNarain ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to an already-existing real Persona rather than left disconnected."@en ;
+    .
+
+tgs:RevisionEvent.TGS_160_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_160_BirgitteBischoff ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_161_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_161_ScottTinker ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_162_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_162_JeanBaptisteFressoz ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_170_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_170_KristineTompkins ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_172_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_172_LivingTheChange ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_174_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_174_MarenUrner ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# Frankly #151-158 batch (FINAL Frankly batch), RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.Frankly_151_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_154_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_154_UnordinaryInterventions ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_157_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_157_DecentPeopleIndecentSystem ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_158_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_158_WhatWouldChangeMyMind ;
+    thinkr:revisionDate "2026-09-11"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_152_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_152_WatchWithBothEyesOpen ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_153_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_155_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_155_WhoBrokeTheWorld ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_156_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_156_AnAntidoteToDespair ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #176-200 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_176_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_176_PedroPrieto ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_177_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_177_ThomasCrowther ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_178_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_178_AndrewMillison ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_179_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_179_MalinPinsky ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_180_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_180_ZakStein ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_181_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_181_HelenaNorbergHodge ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_184_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_184_ConnorLeahy ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_185_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_185_MythsShapingOurEconomies ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_188_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_188_LynAlden ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_190_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_190_StephenJenkinson ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_191_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_191_TaylorGuthrie ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_193_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_193_AnastassiaMakarieva ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_194_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_194_LukeKemp ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_196_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_196_MeredithAngwin ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_197_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_197_OveHoeghGuldberg ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_198_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_198_StacyMitchell ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_199_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_199_SheldonSolomon ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_182_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_182_TheSystemsScience ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_183_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_183_RodSchoonover ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_186_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_186_WesCarter ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_187_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_187_EarthDay2025 ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_189_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_189_OliverMilman ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_192_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_192_SunilAmrith ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_195_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_195_RutgerBregman ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_200_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_200_TedParson ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #201-225 batch, RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_202_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_202_SamanthaSweetwater ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_203_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_203_NateSoares ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_206_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_206_AnnaLembke ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_207_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_207_CraigTindale ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_208_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_208_XiyeBastida ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_210_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_210_PeterBrannen ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_211_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_211_JasonBradford ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_212_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_212_JohnCook ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_213_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_213_ChristineWebb ;
+    thinkr:revisionDate "2026-08-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_214_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_214_TristanHarris ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_215_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_215_ChrisKeefer ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_216_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_216_SamHarris ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_217_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_218_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_218_RoryJohnston ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_219_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_219_TadPatzek ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_220_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_220_AWorldOnThePrecipice ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_222_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_222_BrettKencairn ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_223_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_223_MichaelEvery ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_224_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_224_RobHopkins ;
+    thinkr:revisionDate "2026-09-04"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_225_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_225_TadPatzek ;
+    thinkr:revisionDate "2026-08-30"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_201_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_201_RosaVasquezEspinoza ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_204_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_204_KellyErhart ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_205_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_205_NateHagens ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to Nate's own already-existing real Persona."@en ;
+    .
+
+tgs:RevisionEvent.TGS_209_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_209_BalazsMatics ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_221_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_221_AndrewHolecek ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+#############################################
+# TGS #226-233 batch (FINAL TGS batch), RevisionEvents added 2026-09-12.
+#############################################
+
+tgs:RevisionEvent.TGS_226_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_226_CanMoneyServeLife ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes."@en ;
+    .
+
+tgs:RevisionEvent.TGS_229_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_229_JeffCurrie ;
+    thinkr:revisionDate "2026-09-02"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_231_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_231_GregElliott ;
+    thinkr:revisionDate "2026-08-29"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes. Real date recovered from a bare, non-standard-format leading comment, first discovered misattached to TGS-198 two batches earlier."@en ;
+    .
+
+tgs:RevisionEvent.TGS_232_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_232_CharlesEisenstein ;
+    thinkr:revisionDate "2026-08-31"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_233_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_233_RomanYampolskiy ;
+    thinkr:revisionDate "2026-09-08"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_227_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_227_SalMercogliano ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_228_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_228_JohnChurchill ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Resolves the real T10 candidate flagged via the farming-search screenshots earlier this session."@en ;
+    .
+
+tgs:RevisionEvent.TGS_230_Stub a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_230_OlivierHamant ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
+    thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_106_DuplicateResolution a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_106_TenThingsWorthMoreThanAPoundOfGold ;
+    thinkr:revisionDate "2026-09-12"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Real, genuine pre-existing duplicate discovered during the TGS/RR/Frankly merge: this episode had been independently, fully built twice in the original episodes.ttl under two slightly different real IRI names (this one, and the now-retired Frankly_106_TenThingsWorthMoreThanGold) -- predates all of this session's batch-pilot work; not something the merge process itself created, only what it caught. Resolved by keeping the more complete of the two (this one carries a real, formal dct:references property the other only had in prose) and discarding the other entirely."@en ;
+    .
