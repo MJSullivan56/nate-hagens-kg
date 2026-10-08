@@ -1699,3 +1699,19 @@ tgs:Persona.SalMercogliano a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Sal Mercogliano"@en ;
     rdfs:label "Sal Mercogliano (persona)"@en ;
     .
+
+tgs:Persona.RobertPape a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RobertPape ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RobertPape ;
+    skos:prefLabel "Robert Pape"@en ;
+    rdfs:label "Robert Pape (persona)"@en ;
+    .
+
+tgs:Persona.ZekeHausfather a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ZekeHausfather ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ZekeHausfather ;
+    skos:prefLabel "Zeke Hausfather"@en ;
+    rdfs:label "Zeke Hausfather (persona)"@en ;
+    .
