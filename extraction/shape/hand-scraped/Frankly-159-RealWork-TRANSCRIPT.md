@@ -4,7 +4,7 @@ _PLEASE NOTE: This transcript has been auto-generated and has not been fully pro
 
 ---
 
-[00:00:00] Nate Hagens: Hello. I should be giving an update on the situation in the Middle East where the USA is, continuing to commit slow-motion economic and geopolitical self-destruction. Saudi export capacity is crippled, by the Ansar Allah attacks. Diesel in the USA is six dollars, approaching seven dollars and rising. 
+[00:00:00] Nate Hagens: Hello. I should be giving an update on the situation in the Middle East where the USA is continuing to commit slow-motion economic and geopolitical self-destruction. Saudi export capacity is crippled, by the Ansar Allah attacks. Diesel in the USA is six dollars, approaching seven dollars and rising. 
 
 [00:00:27] The Strategic Petroleum Reserve emergency oil caverns are hitting new lows. Global bond yields are breaking out due to inflationary expectations. Certain motor oil products at Costco have purchasing caps and limits and the like. But instead, I feel compelled to look two or three steps ahead at what the real work is for us now, if we look not at the headlines, but at the systemic implication for coming years and decades. 
 

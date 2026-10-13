@@ -1984,11 +1984,25 @@ tgs:RevisionEvent.Frankly_101_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.Frankly_101_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Stub upgraded to a full build from the official transcript and show notes: definition, discussion summary of all thirteen wants, dates, transcript, discusses (4 concepts, 1 newly minted: WhatIWantToWant), and 2 dct:references with matching dct:isReferencedBy back-links. Also extended tgs:Concept.GhostOfDopaminePast's scopeNote to record this earlier, passing use of the phrase."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_102_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_102_ThisWeeksLearnings ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed. Shares its real, generic title with the other 'This Week's Learnings' episode -- a recurring segment name, not a duplicate."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_102_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_102_ThisWeeksLearnings ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Stub upgraded to a full build from the official transcript and show notes: full title, definition, discussion summary of all five topics, dates, transcript, discusses (7 concepts, 3 newly minted: WetBulbTemperature, ClimateCreditCrunch, EmpathyHandicap, plus ResponsePhase.BendNotBreak), 5 dct:references with matching dct:isReferencedBy back-links, a new Work (Economics for the Future -- Beyond the Superorganism) and a new Human/Persona for Günther Thallinger. Corrected the stub's note that misnumbered the other 'This Week's Learnings' episode (it is #107)."@en ;
     .
 
 tgs:RevisionEvent.Frankly_103_Stub a thinkr:RevisionEvent ;
@@ -1998,6 +2012,13 @@ tgs:RevisionEvent.Frankly_103_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.Frankly_103_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_103_TheGhostOfDopaminePast ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Stub upgraded to a full build from the official transcript and show notes: definition, discussion summary, dates, transcript, discusses (5 concepts, 2 newly minted: GhostOfDopaminePast, RewardPredictionError, plus PersonalIntervention.LowerDopaminePeaks), 5 dct:references with matching dct:isReferencedBy back-links, a new Work (American Mania) and new Human/Persona pairs for Peter Whybrow and Wolfram Schultz."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_104_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_104_DucksAndBlueberries ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
@@ -2005,11 +2026,25 @@ tgs:RevisionEvent.Frankly_104_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.Frankly_104_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_104_DucksAndBlueberries ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Stub upgraded to a full build from the official transcript and show notes: full title, definition, discussion summary, dates, transcript, discusses (3 concepts, 1 newly minted: PriceCostAndValue), and dct:references Reality Blind with the matching dct:isReferencedBy back-link. Kept the existing dct:isReferencedBy from TGS_202."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_105_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, title, and URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_105_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Stub upgraded to a full build from the official transcript, show notes and companion Substack essay: definition, discussion summary of all nine blindspots, dates, transcript, discusses (12 concepts, 2 newly minted: WalrusMovementBlindspots, CantillonEffect), 4 dct:references with matching dct:isReferencedBy back-links, and a newly minted Work (A Short History of Progress) with its author Ronald Wright (Human and Persona). Spoken figures that differ from the essay are recorded in the episode's scopeNote, with the essay's figures treated as authoritative."@en ;
     .
 
 tgs:RevisionEvent.Frankly_107_Stub a thinkr:RevisionEvent ;
@@ -2276,6 +2311,13 @@ tgs:RevisionEvent.Frankly_127_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
     .
 
+tgs:RevisionEvent.Frankly_127_TranscriptLink a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_127_WideBoundaryNews ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added the official transcript link (supplied by MJSullivan) and a dct:isReferencedBy back-link from Frankly_129."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_128_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_128_UltraProcessedInformation ;
     thinkr:revisionDate "2026-09-08"^^xsd:date ;
@@ -2287,6 +2329,13 @@ tgs:RevisionEvent.Frankly_129_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_129_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, createdDate/updatedDate, 4 discussed concepts, 7 dct:references with matching back-links (new Work Tiny Habits; new Human/Persona BJ Fogg), and the full dct:isReferencedBy list from 13 later episodes; rewrote the scopeNote, whose claim that Frankly_61, 98 and 127 were unbuilt was out of date."@en ;
     .
 
 tgs:RevisionEvent.Frankly_132_Initial a thinkr:RevisionEvent ;
@@ -2321,6 +2370,13 @@ tgs:RevisionEvent.Frankly_138_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.Frankly_138_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_138_Part1ChangingTheFuture ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, 4 discussed concepts (1 newly minted: SingleStoryThinking), 6 dct:references, and back-links for all 13 references, including 6 pre-existing ones that had none."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_139_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_139_Part2FourVariables ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
@@ -2346,10 +2402,24 @@ tgs:RevisionEvent.Frankly_142_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.Frankly_142_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, 7 discussed concepts (2 newly minted: FivePathwaysThroughDread, AllostaticLoad), 14 dct:references with back-links on all 17 references, the complete dct:isReferencedBy list, a new Work (Man's Search for Meaning), new Human/Persona pairs for Viktor Frankl, Peter Levine, Stephen Levine and Daniel Siegel, and a Persona for Lise Van Susteren; rewrote the scopeNote, whose deferred-candidate list is now resolved."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_143_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_143_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, 3 discussed concepts (1 newly minted: FivePathwaysToPresence), 9 dct:references (3 newly minted Works; new Human/Persona for Jean-Pierre de Caussade; Persona for Thich Nhat Hanh), back-links on all 13 references, and dct:isReferencedBy from Frankly_144; updated the scopeNote. Added the dct prefix declaration to personas.ttl so Persona individuals can carry back-links."@en ;
     .
 
 tgs:RevisionEvent.Frankly_145_Initial a thinkr:RevisionEvent ;
@@ -2358,16 +2428,37 @@ tgs:RevisionEvent.Frankly_145_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.Frankly_145_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, 5 discussed concepts (3 newly minted: UphillAndDownhillFutures, EpigeneticLandscape, AlternativeStableStates), 9 dct:references (2 newly minted Works: The Strategy of the Genes, The Seneca Effect), back-links on all 9 references, and extended the scopeNote with show-notes quirks."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_148_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.Frankly_148_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Set prefLabel to the official title; added discussion summary, updatedDate, 8 discussed concepts (1 newly minted: HealingVsDying), 7 dct:references (2 newly minted Works, with a new Human/Persona for David Graeber), and back-links for all 11 references, including the 4 that previously had none."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_150_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_150_Part5PersonalLandscapes ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_150_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_150_Part5PersonalLandscapes ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, companion essay, 4 discussed concepts (1 newly minted: PersonalCompositeFutures) and 7 dct:references with matching back-links; extended the scopeNote."@en ;
     .
 
 tgs:RevisionEvent.Frankly_130_Stub a thinkr:RevisionEvent ;
@@ -2614,6 +2705,20 @@ tgs:RevisionEvent.Frankly_151_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.Frankly_151_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added discussion summary, updatedDate, 6 discussed concepts (2 newly minted: ProtectTheIrreversible, RobustActions) and 7 dct:references with matching back-links; extended the scopeNote."@en ;
+    .
+
+tgs:RevisionEvent.UnicornStrategies_Correction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Concept.UnicornStrategies ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Definition and scopeNote corrected against the Frankly_151 transcript: unicorn strategies are deliberately focused commitments, not actions robust across all composite futures (those are tgs:Concept.RobustActions). The named examples (ocean conservation, nuclear disarmament, Indigenous language preservation) were already right; the gloss around them was inverted."@en ;
+    .
+
 tgs:RevisionEvent.Frankly_154_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Monologue.Frankly_154_UnordinaryInterventions ;
     thinkr:revisionDate "2026-08-13"^^xsd:date ;
@@ -2633,6 +2738,13 @@ tgs:RevisionEvent.Frankly_158_Initial a thinkr:RevisionEvent ;
     thinkr:revisionDate "2026-09-11"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_160_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_160_AStateOfTheWorldAddress ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Initial full build from the official transcript and show notes, placed between Frankly_159 and Frankly_161: definition, discussion summary, dates, transcript, discusses (15 concepts, 2 newly minted: CollectiveMaturity, MultipolarTrap), and 22 dct:references with matching dct:isReferencedBy back-links. Also updated Frankly_161's scopeNote, which had recorded Frankly_160 as a gap."@en ;
     .
 
 tgs:RevisionEvent.Frankly_152_Stub a thinkr:RevisionEvent ;
@@ -2719,6 +2831,13 @@ tgs:RevisionEvent.TGS_185_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_185_MythsShapingOurEconomies ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_185_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_185_MythsShapingOurEconomies ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from a hand-cleaned transcript supplied by the project owner (the official auto-generated transcript was unreadable) and the official show notes. Added definition, host introduction, discussion summary, dates, transcript and replay links, 11 discussed concepts (3 newly minted: MultilevelSelection, UneconomicGrowth, SocialDilemma), 9 references (1 newly minted Work), and back-links on all of them. Removed the stale 'air date not confirmed' comment. Gave the TGS_185 appearance in Relationship.NateHagens_JoshFarley its air date. Corrected Evidence.Superorganism_JoshFarley_TGS_185, which attributed Nate's line about the Superorganism to Farley and misdated the episode to 2026, and removed a stale note in Human.JoshFarley saying Herman Daly was not yet modeled."@en ;
     .
 
 tgs:RevisionEvent.TGS_188_Initial a thinkr:RevisionEvent ;
@@ -2848,6 +2967,13 @@ tgs:RevisionEvent.TGS_202_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
     .
 
+tgs:RevisionEvent.TGS_202_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_202_SamanthaSweetwater ;
+    thinkr:revisionDate "2026-10-10"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Rebuilt against the full transcript and show notes: added thinkr:discusses (8 concepts, 3 newly minted: LogicOfSeparation, PowerOfLifeVsPowerOverLife, KinshipJourney), host introduction, 14 further dct:references with matching dct:isReferencedBy back-links, and a full discussion summary. Corrected the earlier build's scopeNote, which listed five people (Frankl, Peter and Stephen Levine, Van Susteren, Weller) not present in this transcript, and its placement of Nora Bateson's warm data."@en ;
+    .
+
 tgs:RevisionEvent.TGS_203_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_203_NateSoares ;
     thinkr:revisionDate "2026-09-02"^^xsd:date ;
@@ -2931,6 +3057,13 @@ tgs:RevisionEvent.TGS_217_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
     .
 
+tgs:RevisionEvent.TGS_217_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from a hand-cleaned transcript supplied by the project owner (the official auto-generated transcript was badly garbled) and the official show notes. Added the full title, definition, host introduction, discussion summary, transcript link, dct:subject (confirmed by the show notes' keywords, replacing the comment explaining its omission), 10 discussed concepts (3 newly minted: DividedBrain, SoftFeudalism, Panpsychism), 13 references (3 newly minted Works), and back-links on all of them."@en ;
+    .
+
 tgs:RevisionEvent.TGS_218_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_218_RoryJohnston ;
     thinkr:revisionDate "2026-09-08"^^xsd:date ;
@@ -2949,6 +3082,13 @@ tgs:RevisionEvent.TGS_220_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_220_AWorldOnThePrecipice ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes. Real, honest gap: no explicit build-date header was ever recorded for this entity."@en ;
+    .
+
+tgs:RevisionEvent.TGS_220_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_220_AWorldOnThePrecipice ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Enriched from the combined show notes and transcript: added host introduction, replay link, discussion summary, updatedDate, 10 further discussed concepts (3 newly minted: LootableSurplus, FourPillarsOfCivilization, DispatchablePower), 18 further references (including RR-1, RR-16 and TGS_218, previously flagged but unbuilt), back-links on all 22 references, and an extended scopeNote."@en ;
     .
 
 tgs:RevisionEvent.TGS_222_Initial a thinkr:RevisionEvent ;
@@ -3023,6 +3163,13 @@ tgs:RevisionEvent.TGS_226_Initial a thinkr:RevisionEvent ;
     thinkr:revisionNote "Built directly from transcript and show notes."@en ;
     .
 
+tgs:RevisionEvent.TGS_226_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_226_CanMoneyServeLife ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes: added definition, host introduction, discussion summary, updatedDate, 7 further discussed concepts (3 newly minted: RegenerativeFinance, QuadraticFunding, RightsOfNature), 13 references, and back-links on all of them. Updated Organization.BiomeTrust's definition with the episode's own description and figures."@en ;
+    .
+
 tgs:RevisionEvent.TGS_229_Initial a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_229_JeffCurrie ;
     thinkr:revisionDate "2026-09-02"^^xsd:date ;
@@ -3049,6 +3196,20 @@ tgs:RevisionEvent.TGS_233_Initial a thinkr:RevisionEvent ;
     thinkr:revisionDate "2026-09-08"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built directly from transcript and show notes, no further revision."@en ;
+    .
+
+tgs:RevisionEvent.TGS_235_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_235_RobertPape ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built from the official show notes and transcript. Minted 4 concepts (EscalationTrap, SecondPrecisionRevolution, PunishmentStrategy, OffshoreBalancing), 6 Works by Robert Pape, and Relationship.NateHagens_RobertPape (resolving a long-standing unresolved IRI). Back-links on all 16 references. Replaced TGS_237's raw-URL reference to this episode with the new IRI. Corrected Human.RobertPape's comment: publisher of Our Own Worst Enemies (The New Press per the show notes, not University of Chicago Press), its timing (one day, not one week, before the episode aired), and the June 15 post's actual title."@en ;
+    .
+
+tgs:RevisionEvent.TGS_236_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_236_ZekeHausfather ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built from the official show notes and transcript. Minted 5 concepts (ClimateSensitivity, AerosolMasking, ZeroEmissionsCommitment, EarthEnergyImbalance, ClimateAsANormalProblem), 4 Works, and Relationship.NateHagens_ZekeHausfather, resolving the last unresolved IRI in the graph. Back-links on all 12 references. Corrected Human.ZekeHausfather's comment: Berkeley Earth is one of 14 independent groups producing global temperature records (per the transcript), not 'one of five', and the 2027 projection is about 1.8°C on air but 1.71°C in the show notes' fact-check."@en ;
     .
 
 tgs:RevisionEvent.TGS_227_Stub a thinkr:RevisionEvent ;

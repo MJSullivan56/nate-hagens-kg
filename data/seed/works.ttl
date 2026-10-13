@@ -40,6 +40,7 @@ tgs:Work.TheMasterAndHisEmissary a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2009 book by Iain McGilchrist (Yale University Press). Argues the brain's two hemispheres offer fundamentally different kinds of attention to the world, and that Western culture has become dominated by narrow, left-hemisphere thinking at the expense of the right's broader, contextual awareness. Sold over 200,000 copies."@en ;
     dct:creator tgs:Human.IainMcGilchrist ;
     owl:sameAs <http://dbpedia.org/resource/The_Master_and_His_Emissary> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
     .
 
 tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
@@ -47,6 +48,7 @@ tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
     dct:creator tgs:Human.IainMcGilchrist ;
     owl:sameAs <http://dbpedia.org/resource/The_Matter_with_Things> ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
     .
 
 #############################################
@@ -83,11 +85,13 @@ tgs:Work.FiveInsightsForAvoidingGlobalCollapse a thinkr:Work, owl:NamedIndividua
 tgs:Work.ComplexityAndPostmodernism a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Complexity and Postmodernism: Understanding Complex Systems"@en ;
     rdfs:comment "1998 book by Paul Cilliers (Routledge), cited in Frankly_138's show notes alongside the episode's complex-systems-thinking discussion. Author/title NOT independently re-verified this session — taken directly from the official show notes' own citation, which is itself a stronger source than an unverified transcript mention."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_138_Part1ChangingTheFuture ;
     .
 
 tgs:Work.GlobalTippingPointsReport2025 a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Global Tipping Points Report 2025"@en ;
     rdfs:comment "Cited in Frankly_138's show notes specifically for its treatment of ice-sheet and soil-system tipping points. Full authorship/publisher NOT independently verified this session — real, citable report per the official show notes' own link, worth a proper WebFetch verification pass before treating this stub as complete."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_145_Part3UphillFutures ;
     .
 
 #############################################
@@ -100,7 +104,7 @@ tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/> ;
-    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman ;
+    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
         skos:prefLabel "Reality Blind"@en ;
@@ -137,7 +141,7 @@ tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/view/388478403/i/> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork ;
+    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
     .
 
 #############################################
@@ -389,6 +393,7 @@ tgs:Work.TrueHuman a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Samantha Sweetwater, Q4 2025. Offers a path for sense-making through the metacrisis, framing it as a spiritual opportunity calling for cultivated relational intelligence and moral imagination, centered on a shift from the 'hero's journey' to what she calls the 'kinship journey' — recognizing one's own life as meaningful only in service to something larger than oneself."@en ;
     dct:creator tgs:Human.SamanthaSweetwater ;
     dct:issued "2025"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_202_SamanthaSweetwater ;
     .
 
 tgs:Work.ThermalPowerAndClimateChange a thinkr:Work, owl:NamedIndividual ;
@@ -491,6 +496,7 @@ tgs:Work.AgainstTheMachine a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Against the Machine: On the Unmaking of Humanity"@en ;
     rdfs:comment "Paul Kingsnorth. Real, direct historical overview of philosophers and thinkers who observed Superorganism-like qualities emerging at scale from human activity, framing 'the Machine' as a civilizational force that turns creatures into components. Structured largely around a real, central Wendell Berry quote on whether humans will choose to be creatures or machines."@en ;
     dct:creator tgs:Human.PaulKingsnorth ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
     .
 
 tgs:Work.Ishmael a thinkr:Work, owl:NamedIndividual ;
@@ -708,4 +714,265 @@ tgs:Work.EnergyTransitionsOrAdditions a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Richard York and Shannon Elizabeth Bell, Energy Research & Social Science, vol. 51, pp. 40-43, 2019 (available online 16 January 2019). Short peer-reviewed commentary arguing that the growth of renewable energy has so far expanded total energy production rather than displacing fossil fuels -- better described as energy 'additions' than 'transitions' -- and that calling it a transition is misleading and could inhibit meaningful policy to reduce fossil fuel use. Cited in TGS-237's show notes as an 'Episode Foundation' and as support for Art Berman's 'there never has been an energy transition' argument. Author names, journal, volume, pages, and online date verified via WebSearch 2026-10-07. No DOI recorded and no creator Humans modeled (neither author has an entry in this graph); the ScienceDirect link from the show notes is used as the source."@en ;
     dct:source <https://www.sciencedirect.com/science/article/abs/pii/S2214629618312246> ;
     dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman ;
+    .
+
+#############################################
+# ADDED 2026-10-09 -- the three research 'Episode Foundations' cited in Frankly_161's show notes.
+#############################################
+
+tgs:Work.CanariesInTheCoalMine a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence"@en ;
+    rdfs:comment "Erik Brynjolfsson, Bharat Chandar and Ruyu Chen, Stanford Digital Economy Lab working paper, first released August 2025, revised 12 August 2026. Uses ADP administrative payroll data covering millions of US workers. Finds employment of 22- to 25-year-olds in the most AI-exposed occupations falling relative to less-exposed peers: about 13% in the original release (per Frankly_161's show notes) and 19% below trend in the 2026 revision, with data through June 2026 (verified on the Stanford page, 2026-10-09). Cited in Frankly_161 as evidence for tgs:Concept.BrokenApprenticeship."@en ;
+    dct:source <https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment ;
+    .
+
+tgs:Work.GenerativeAIWithoutGuardrailsCanHarmLearning a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Generative AI Without Guardrails Can Harm Learning: Evidence from High School Mathematics"@en ;
+    rdfs:comment "Hamsa Bastani, Osbert Bastani, Alp Sungu, Haosen Ge, Özge Kabakcı and Rei Mariman, PNAS vol. 122 (2025), DOI 10.1073/pnas.2422633122; earlier circulated on SSRN as 'Generative AI Can Harm Learning' (Wharton explainer, August 2024). Field experiment with nearly 1,000 Turkish high-school math students: an unguarded GPT-4-style interface raised practice performance 48% but lowered unassisted exam performance 17% versus control; a tutor version with guardrails raised practice 127% with no exam penalty. Cited in Frankly_161, risk #13. Note that the guardrailed result is not mentioned in the episode."@en ;
+    dct:source <https://doi.org/10.1073/pnas.2422633122> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment ;
+    .
+
+tgs:Work.YourBrainOnChatGPT a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task"@en ;
+    rdfs:comment "Nataliya Kosmyna, Eugene Hauptmann, Ye Tong Yuan, Jessica Situ, Xian-Hao Liao, Ashly Vivian Beresnitzky, Iris Braunstein and Pattie Maes, MIT Media Lab, arXiv 2506.08872 (v1 10 June 2025, v2 31 December 2025). 54 participants wrote essays with an LLM, a search engine, or no tools across three sessions (18 switched groups in a fourth) under EEG; LLM users showed the weakest brain connectivity and underperformed on neural, linguistic and behavioral measures. Source of the term 'cognitive debt' as Nate uses it in Frankly_161, risk #13."@en ;
+    dct:source <https://arxiv.org/abs/2506.08872> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment ;
+    .
+
+#############################################
+# ADDED 2026-10-10 -- Joseph Campbell's book, source of tgs:Concept.HerosJourney.
+#############################################
+
+tgs:Work.TheHeroWithAThousandFaces a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Hero with a Thousand Faces"@en ;
+    rdfs:comment "Joseph Campbell, 1949 (Bollingen Series XVII). A work of comparative mythology setting out the 'monomyth' (tgs:Concept.HerosJourney): a pattern of separation, initiation and return that Campbell traced across the world's myths and religions. Later a major influence on George Lucas's Star Wars."@en ;
+    dct:creator tgs:Human.JosephCampbell ;
+    dct:issued "1949"^^xsd:gYear ;
+    owl:sameAs <http://dbpedia.org/resource/The_Hero_with_a_Thousand_Faces> ;
+    .
+
+tgs:Work.AShortHistoryOfProgress a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Short History of Progress"@en ;
+    rdfs:comment "Ronald Wright, 2004 (Toronto: House of Anansi), his contribution to the 2004 CBC Massey Lectures. Examines civilization's roughly 10,000-year experiment through a series of 'progress traps' and concludes that civilization must become environmentally sustainable to survive. Won the 2005 CBA Libris Award for Non-Fiction Book of the Year. Nate says he often reads its Cortés passage in his presentations: independent civilizations on both sides of the Earth arrived at the same template of surplus, scale and hierarchy."@en ;
+    dct:creator tgs:Human.RonaldWright ;
+    dct:issued "2004"^^xsd:gYear ;
+    dct:source <https://archive.org/details/shorthistoryofpr0000wrig/mode/2up> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/A_Short_History_of_Progress> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
+    .
+
+tgs:Work.AmericanMania a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "American Mania: When More Is Not Enough"@en ;
+    rdfs:comment "Peter C. Whybrow, 2005 (W. W. Norton). Argues that a consumer culture of constant novelty and reward pushes the brain's ancient reward systems beyond what they evolved for, producing a culture-wide mania of overwork, debt and dissatisfaction. Nate says he found Wolfram Schultz's dopamine experiments through this book (Frankly_103)."@en ;
+    dct:creator tgs:Human.PeterWhybrow ;
+    dct:issued "2005"^^xsd:gYear ;
+    dct:source <http://www.petercwhybrow.com/american-mania.html> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_103_TheGhostOfDopaminePast ;
+    .
+
+tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Economics for the Future -- Beyond the Superorganism"@en ;
+    rdfs:comment "N. J. Hagens, Ecological Economics (2020). Nate's peer-reviewed statement of the economic Superorganism: a global economy that self-organizes around growth, powered by fossil energy and directed by financial markets, and what an economics for the energy-constrained future would need to account for. Linked from Frankly_102's show notes as the reference for 'the economic Superorganism.'"@en ;
+    dct:creator tgs:Human.NateHagens ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:source <https://www.sciencedirect.com/science/article/pii/S0921800919310067> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    .
+
+tgs:Work.TinyHabits a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Tiny Habits: The Small Changes That Change Everything"@en ;
+    rdfs:comment "BJ Fogg, Stanford behavior scientist, 2019. A method for building habits by making the first step so small that success is nearly guaranteed and anchoring it to an existing routine. Nate says (Frankly_129) he learned about mastery experiences from it two years earlier: each small win gives the nervous system 'better proof instead of another broken promise.'"@en ;
+    dct:creator tgs:Human.BJFogg ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:source <https://tinyhabits.com/book/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    .
+
+tgs:Work.TheCollapseOfComplexSocieties a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Collapse of Complex Societies"@en ;
+    rdfs:comment "Joseph A. Tainter, 1988 (Cambridge University Press). Argues that societies solve problems by adding complexity, that complexity faces diminishing marginal returns, and that collapse is a rational simplification when its costs outrun its benefits; the basis for tgs:Concept.ComplexityCollapse. Cited by Nate in Frankly_148 on why Fortress World's surveillance and enforcement become unaffordable as energy and complexity decline ('just ask the Romans, or Joseph Tainter')."@en ;
+    dct:creator tgs:Human.JosephTainter ;
+    dct:issued "1988"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Collapse_of_Complex_Societies> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
+    .
+
+tgs:Work.BullshitJobs a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bullshit Jobs: A Theory"@en ;
+    rdfs:comment "David Graeber, 2018 (Simon & Schuster), expanding his 2013 essay 'On the Phenomenon of Bullshit Jobs': a large share of modern paid work is pointless even to those who do it. Cited by Nate in Frankly_148: the Long Repair would have 'fewer of what David Graeber called bullshit jobs' and more respect for physical, maintenance and care work."@en ;
+    dct:creator tgs:Human.DavidGraeber ;
+    dct:issued "2018"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bullshit_Jobs> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
+    .
+
+tgs:Work.MansSearchForMeaning a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Man's Search for Meaning"@en ;
+    rdfs:comment "Viktor E. Frankl, 1946 (originally published in German). An account of his imprisonment in Nazi concentration camps and the basis of logotherapy, arguing that people retain the freedom to choose their attitude and find meaning even in conditions they cannot change. Cited by Nate in Frankly_142 as the root of his first pathway through dread, reframing."@en ;
+    dct:creator tgs:Human.ViktorFrankl ;
+    dct:issued "1946"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    .
+
+tgs:Work.AWanderingMindIsAnUnhappyMind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Wandering Mind Is an Unhappy Mind"@en ;
+    rdfs:comment "Matthew A. Killingsworth and Daniel T. Gilbert (Harvard), Science 330 (2010). Experience sampling of about a quarter of a million moments via the Track Your Happiness phone app found people's minds wandering in 46.9% of samples and people less happy when their minds wandered, whatever they were doing. Cited by Nate in Frankly_143 (he rounds to 47%)."@en ;
+    dct:issued "2010"^^xsd:gYear ;
+    dct:source <https://greatergood.berkeley.edu/images/uploads/A_Wandering_Mind_Is_an_Unhappy_Mind.pdf> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    .
+
+tgs:Work.ADefaultModeOfBrainFunction a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Default Mode of Brain Function"@en ;
+    rdfs:comment "Marcus E. Raichle and colleagues, Proceedings of the National Academy of Sciences 98 (2001). Proposed a baseline 'default mode' of brain activity in regions that deactivate during goal-directed tasks, the origin of the term default mode network (tgs:Concept.DefaultModeNetwork). Cited by Nate in Frankly_143 as the canonical paper."@en ;
+    dct:issued "2001"^^xsd:gYear ;
+    dct:source <https://pubmed.ncbi.nlm.nih.gov/11209064/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    .
+
+tgs:Work.SacramentOfThePresentMoment a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Sacrament of the Present Moment (Abandonment to Divine Providence)"@en ;
+    rdfs:comment "Spiritual teaching attributed to the French Jesuit Jean-Pierre de Caussade (1675-1751), compiled from his letters and talks and first published in 1861 as L'Abandon a la providence divine; known in English as Abandonment to Divine Providence and, in a later translation, The Sacrament of the Present Moment. Its idea, as Nate puts it in Frankly_143: whatever is occurring now is the form in which life is being given to you, and to be elsewhere is a refusal of the gift."@en ;
+    dct:creator tgs:Human.JeanPierreDeCaussade ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jean_Pierre_de_Caussade> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    .
+
+tgs:Work.TheStrategyOfTheGenes a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Strategy of the Genes"@en ;
+    rdfs:comment "C. H. Waddington, 1957 (George Allen & Unwin). A study of developmental biology and genetics that presents the epigenetic landscape, in which a developing cell rolls down branching valleys toward a committed fate. Cited in Frankly_145's show notes as the source of the landscape image Nate builds his civilizational terrain map on."@en ;
+    dct:creator tgs:Human.ConradWaddington ;
+    dct:issued "1957"^^xsd:gYear ;
+    owl:sameAs <https://www.taylorfrancis.com/books/mono/10.4324/9781315765471/strategy-genes-waddington> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    .
+
+tgs:Work.TheSenecaEffect a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Seneca Effect: Why Growth Is Slow but Collapse Is Rapid"@en ;
+    rdfs:comment "Ugo Bardi, 2017 (Springer), a Report to the Club of Rome. Argues that complex systems tend to decline much faster than they grew, taking the name from Seneca's remark that fortune grows slowly but ruin is swift. Cited in Frankly_145, where Nate credits his 'friend in Italy' for the asymmetry between slow-built, high-trust systems and their rapid collapse."@en ;
+    dct:creator tgs:Human.UgoBardi ;
+    dct:issued "2017"^^xsd:gYear ;
+    owl:sameAs <https://www.clubofrome.org/publication/the-seneca-effect-2017/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    .
+
+tgs:Work.BombingToWin a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bombing to Win: Air Power and Coercion in War"@en ;
+    rdfs:comment "Robert A. Pape, 1996 (Cornell University Press). A study of when strategic bombing coerces an enemy, comparing punishment, risk, denial and decapitation strategies. Cited by Pape in TGS_235 as the source of his analysis of punishment strategies and of the British plans to firebomb 58 German towns."@en ;
+    dct:creator tgs:Human.RobertPape ;
+    dct:issued "1996"^^xsd:gYear ;
+    owl:sameAs <https://cpost.uchicago.edu/publications/bombing_to_win_air_power_and_coercion_in_war> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.DyingToWin a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Dying to Win: The Strategic Logic of Suicide Terrorism"@en ;
+    rdfs:comment "Robert A. Pape, 2005 (Random House). Argues from a database of suicide attacks that suicide terrorism is mainly a strategic response to foreign military occupation rather than a product of religion. Linked in TGS_235's show notes where Pape insists Iran wants power, not 'a religious goal.'"@en ;
+    dct:creator tgs:Human.RobertPape ;
+    dct:issued "2005"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Dying_to_Win> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.OurOwnWorstEnemies a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Our Own Worst Enemies: America in the Age of Violent Populism"@en ;
+    rdfs:comment "Robert A. Pape, published September 22, 2026 (The New Press, per the show notes' publisher link), the day before TGS_235 aired. Listed in the episode's show notes as his newest book; not discussed on air."@en ;
+    dct:creator tgs:Human.RobertPape ;
+    dct:issued "2026-09-22"^^xsd:date ;
+    owl:sameAs <https://thenewpress.org/books/our-own-worst-enemies/> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.WhyEconomicSanctionsDoNotWork a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Why Economic Sanctions Do Not Work"@en ;
+    rdfs:comment "Robert A. Pape, International Security 22(2), 1997. Argues that economic sanctions rarely achieve major political goals. The featured article in TGS_235's show notes, linked where Pape describes the April 2026 US naval blockade of Iran as punishment of the whole society."@en ;
+    dct:creator tgs:Human.RobertPape ;
+    dct:issued "1997"^^xsd:gYear ;
+    owl:sameAs <https://direct.mit.edu/isec/article/22/2/90/11579/Why-Economic-Sanctions-Do-Not-Work> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.HammerAndAnvil a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hammer and Anvil: How to Defeat ISIS"@en ;
+    rdfs:comment "Foreign Affairs, January 2015, co-authored by Robert A. Pape. Proposes defeating ISIS by pairing limited US air power (the hammer) with local ground forces (the anvil). Listed among TGS_235's Episode Foundations and linked where Pape cites the ISIS campaign as a model of offshore balancing."@en ;
+    dct:creator tgs:Human.RobertPape ;
+    dct:issued "2015"^^xsd:gYear ;
+    owl:sameAs <https://www.foreignaffairs.com/articles/iraq/2015-01-02/hammer-and-anvil> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.EscalationTrapSubstack a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Escalation Trap (Substack)"@en ;
+    rdfs:comment "Robert Pape's running Substack analysis of the 2026 US-Iran war. TGS_235 cites two posts: 'Uncertain Deal, And Iran Certainly Enters Its Period of Maximum Leverage' (June 15, 2026), which forecast a second Red Sea front and expanded Iranian demands, and 'Iran's October Surprise' (September 14, 2026), on the prospect of an Iranian nuclear test."@en ;
+    dct:creator tgs:Human.RobertPape ;
+    owl:sameAs <https://escalationtrap.substack.com/> ;
+    dct:isReferencedBy tgs:Interview.TGS_235_RobertPape ;
+    .
+
+tgs:Work.TheClimateBrink a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Climate Brink (newsletter and dashboard)"@en ;
+    rdfs:comment "Zeke Hausfather's Substack newsletter and the associated Climate Brink Dashboard of global temperature updates, histories and projections. Listed among TGS_236's Episode Foundations; many of the episode's figures (the El Niño lag, the 2027 forecast, aerosol declines, the acceleration debate) link to its posts."@en ;
+    dct:creator tgs:Human.ZekeHausfather ;
+    owl:sameAs <https://www.theclimatebrink.com/> ;
+    owl:sameAs <https://dashboard.theclimatebrink.com/> ;
+    dct:isReferencedBy tgs:Interview.TGS_236_ZekeHausfather ;
+    .
+
+tgs:Work.TheRealEnergyUseOfAgenticAI a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The real energy use of agentic AI"@en ;
+    rdfs:comment "Zeke Hausfather, The Climate Brink, 2026. Estimates AI energy use beyond single chatbot prompts from four months of his own Claude Code use: a median session of about 0.6 kWh (range 0.25-1.2 kWh) and an average day of agent use of about 3.0 kWh, more than running two refrigerators, against about 0.24 Wh for a median Gemini text prompt. Discussed in TGS_236, where he expects Jevons paradox to push AI energy use higher."@en ;
+    dct:creator tgs:Human.ZekeHausfather ;
+    dct:issued "2026"^^xsd:gYear ;
+    owl:sameAs <https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai> ;
+    dct:isReferencedBy tgs:Interview.TGS_236_ZekeHausfather ;
+    .
+
+tgs:Work.CMIP7ScenariosForAR7 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "CMIP7 scenarios for the IPCC Seventh Assessment Report (ScenarioMIP)"@en ;
+    rdfs:comment "Geoscientific Model Development 19:2627 (2026). The ScenarioMIP paper setting out the emissions scenarios for the Seventh Assessment Report, named high, medium, low and very low and extended to 2150, with the high scenario built on an SSP3 world (about 3.3°C by 2100, range 2.5-4.4°C). Listed among TGS_236's Episode Foundations; Hausfather describes it as work 'we published a few months back.' Author list not modeled here."@en ;
+    dct:issued "2026"^^xsd:gYear ;
+    owl:sameAs <https://gmd.copernicus.org/articles/19/2627/2026/> ;
+    dct:isReferencedBy tgs:Interview.TGS_236_ZekeHausfather ;
+    .
+
+tgs:Work.RecentStrengtheningOfEasternPacificENSO a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Recent strengthening of eastern Pacific ENSO in the last millennium paleorecord"@en ;
+    rdfs:comment "Science, 2026. Uses a thousand-year Galápagos coral record to find that El Niño events of the last 50 years are stronger than any earlier in the record. Listed among TGS_236's Episode Foundations; Hausfather cites it on air as 'published in Nature a couple weeks back' (the show notes correct the journal) while cautioning against over-attributing El Niño strength to climate change. Author list not modeled here."@en ;
+    dct:issued "2026"^^xsd:gYear ;
+    owl:sameAs <https://www.science.org/doi/10.1126/science.ady2660> ;
+    dct:isReferencedBy tgs:Interview.TGS_236_ZekeHausfather ;
+    .
+
+tgs:Work.EcologicalEconomicsPrinciplesAndApplications a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Ecological Economics: Principles and Applications"@en ;
+    rdfs:comment "Herman E. Daly and Joshua Farley, Island Press, 2003 (2nd edition 2010). A foundational textbook of ecological economics, treating the economy as a subsystem of a finite biosphere. Named in Farley's TGS_185 guest bio; on air he says he is using his sabbatical to revise 'the ecological economics textbook' substantially."@en ;
+    dct:creator tgs:Human.HermanDaly, tgs:Human.JoshFarley ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_185_MythsShapingOurEconomies ;
+    .
+
+tgs:Work.TheSabbath a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Sabbath: Its Meaning for Modern Man"@en ;
+    rdfs:comment "Abraham Joshua Heschel, 1951. A meditation on the Sabbath as 'a palace in time.' In TGS_217 Iain McGilchrist recommends it and credits Heschel with the distinction between halakha and aggadah that he maps onto the left and right hemispheres. Heschel is not yet modeled as a Human or Persona."@en ;
+    dct:issued "1951"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Sabbath_(Heschel)> ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    .
+
+tgs:Work.WholenessAndTheImplicateOrder a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Wholeness and the Implicate Order"@en ;
+    rdfs:comment "David Bohm, 1980. The physicist's account of an undivided wholeness in which explicit, unfolded order emerges from and returns to an implicate, enfolded order. In TGS_217 Iain McGilchrist says it 'meant an enormous amount' to him, as an image of the implicit being made explicit without destroying the whole. Bohm is not yet modeled as a Human or Persona."@en ;
+    dct:issued "1980"^^xsd:gYear ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wholeness_and_the_Implicate_Order> ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    .
+
+tgs:Work.LivingInWonder a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Living in Wonder"@en ;
+    rdfs:comment "Rod Dreher, 2024 (full title: Living in Wonder: Finding Mystery and Meaning in a Secular Age). Cited by Iain McGilchrist in TGS_217 for the loss of wonder he attributes to reductive materialism; wonder is one of the three qualities, with humility and compassion, he expects in a reoriented person. Dreher is not yet modeled as a Human or Persona."@en ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
     .

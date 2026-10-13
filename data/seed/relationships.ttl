@@ -282,7 +282,7 @@ tgs:Relationship.NateHagens_JoshFarley a thinkr:Relationship, owl:NamedIndividua
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_185_MythsShapingOurEconomies ;
-          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+          dcterms:date "2025-07-16"^^xsd:date ],
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
@@ -2655,4 +2655,32 @@ tgs:Relationship.NateHagens_SalMercogliano a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_227_SalMercogliano ] ;
+    .
+
+tgs:Relationship.NateHagens_RobertPape a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RobertPape ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Robert Pape"@en ;
+    skos:scopeNote "Professional relationship only: their first conversation ('This is our first conversation. I've been following your work, this summer'). The tone is warm (Nate calls him a 'fellow Midwesterner' and closes 'to be continued, my friend') but there is no evidence of a prior personal relationship. Declared 2026-10-13; Persona.RobertPape had pointed to this IRI before it existed, which check_state.py reported as unresolved."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_235_RobertPape ;
+          dcterms:date "2026-09-23"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_ZekeHausfather a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ZekeHausfather ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Zeke Hausfather"@en ;
+    skos:scopeNote "Professional relationship: Hausfather's first TGS appearance in this graph, and Nate's question 'I don't know how often you, if at all, you watch my podcast' suggests no prior acquaintance. The close ('to be continued, my friend') is Nate's usual warm sign-off. Declared 2026-10-13; Persona.ZekeHausfather had pointed to this IRI before it existed, which check_state.py reported as unresolved."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_236_ZekeHausfather ;
+          dcterms:date "2026-09-30"^^xsd:date ] ;
     .

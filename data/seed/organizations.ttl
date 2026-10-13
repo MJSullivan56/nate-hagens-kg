@@ -34,6 +34,7 @@ tgs:Organization.TheOilDrum a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "The Oil Drum"@en ;
     skos:definition "A collaborative blog/community devoted to analysis and discussion of energy, peak oil, and sustainability, founded March 2005 by Kyle Saunders ('Prof. Goose') and Dave Summers ('Heading Out'). Active until 2013. Distinct from the broader tgs:SchoolOfThought.PeakOilMovement it was part of — a specific, independently-notable institution within that wider community, same relationship as Doughnut Economics sits within broader ecological economics. Nate Hagens was Managing/Lead Editor here before founding TGS — see tgs:Human.NateHagens."@en ;
     owl:sameAs <http://dbpedia.org/resource/The_Oil_Drum>  ;
+    dcterms:isReferencedBy tgs:Monologue.Frankly_138_Part1ChangingTheFuture ;
     .
 
 tgs:Organization.PostCarbonInstitute a thinkr:Organization, owl:NamedIndividual ;
@@ -47,11 +48,13 @@ tgs:Organization.PostCarbonInstitute a thinkr:Organization, owl:NamedIndividual 
 tgs:Organization.MaEarth a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Ma Earth"@en ;
     skos:definition "Collective/quadratic-funding crowdfunding platform for regenerative land and ecological projects, pairing philanthropic matching funds with community fundraising (e.g. mangrove restoration in the Pacific, a war-amputee farming cooperative in the Congo). Co-founded 2023 by tgs:Human.MatthewMonahan. NO owl:sameAs: verified 2026-07-11, no genuine Wikipedia page found — a small organization (~2 employees per one source), plausibly below Wikipedia's notability bar."@en ;
+    dcterms:isReferencedBy tgs:Interview.TGS_226_CanMoneyServeLife ;
     .
 
 tgs:Organization.BiomeTrust a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Biome Trust"@en ;
-    skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Human.MatthewMonahan. Limited independent detail available as of 2026-07-11 — flagged honestly rather than embellished; revisit if more source material surfaces."@en ;
+    skos:definition "A philanthropic foundation, co-founded/co-stewarded 2022-present by tgs:Human.MatthewMonahan, which he describes in TGS_226 as his family's grant-making fund run with some collaborators. By his account it has granted roughly $10 million over its lifetime, and its repeated difficulty getting funds onto the ground efficiently led to the founding of tgs:Organization.MaEarth. Listed among the selection partners for Ma Earth's third funding round."@en ;
+    dcterms:isReferencedBy tgs:Interview.TGS_226_CanMoneyServeLife ;
     .
 
 tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
@@ -71,6 +74,7 @@ tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
 tgs:Organization.MangaroaFarms a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Mangaroa Farms"@en ;
     skos:definition "A community food hub, regenerative agriculture project, and resilience education centre in the Hutt Valley, Upper Hutt, New Zealand (near the Mangaroa River). Founded 2018 by brothers Matthew and Brian Monahan (with Catlin Powers) as a living laboratory for transitioning former dairy and pine plantation land into regenerative agriculture and native forest. Structurally part of/owned by tgs:Organization.BiomeTrust, per Mangaroa Farms' own 'About Us' page and multiple independent sources. Originally surfaced via Nate Hagens' own guest introduction for Matthew Monahan (TGS_226 transcript) — a new extraction pattern piloted 2026-07-14, reading episode intros as a distinct primary source rather than relying on generic NER or web search alone (see docs/sidecar-cleanup-handoff.md). Independently verified 2026-07-14 via multiple sources (mangaroa.org, NZBusiness Magazine, Good Magazine, Quorum Sense, Waterford Press) — real, active, well-documented. NO owl:sameAs asserted: no Wikipedia/DBpedia/Wikidata entry found, plausibly below the notability bar for a small regional farm."@en ;
+    dcterms:isReferencedBy tgs:Interview.TGS_226_CanMoneyServeLife ;
     .
 
 #############################################

@@ -1,0 +1,12 @@
+# Ideas Nate keeps returning to on his own (Frankly monologues) that no guest interview has ever picked up.
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?label (COUNT(DISTINCT ?m) AS ?monologues) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?m),"Monologue."); separator=", ") AS ?where) WHERE {
+  ?m thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ; thinkr:discusses ?c .
+  ?c a thinkr:Concept ; skos:prefLabel ?label .
+  FILTER NOT EXISTS { ?i thinkr:hasEpisodeType thinkr:EpisodeType.Interview ; thinkr:discusses ?c }
+} GROUP BY ?label ORDER BY DESC(?monologues) LIMIT 3

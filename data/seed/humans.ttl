@@ -6,6 +6,7 @@
 @prefix tgs: <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
@@ -81,6 +82,7 @@ tgs:Human.EOWilson a thinkr:Human,
     owl:sameAs 
         <http://dbpedia.org/resource/E._O._Wilson> ,
         <http://www.wikidata.org/entity/Q211029> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
     .
 
 tgs:Human.ElinorOstrom a thinkr:Human,
@@ -297,7 +299,7 @@ tgs:Human.ArtBerman a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.JoshFarley a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Joshua C. Farley"@en ;
     rdfs:label "Joshua C. Farley (human)"@en ;
-    rdfs:comment "Also publicly known as 'Josh Farley.' Ecological economist, Professor of Community Development & Applied Economics and Public Administration, University of Vermont; Fellow, Gund Institute for Environment (formerly Gund Institute for Ecological Economics — not yet modeled as its own AcademicInstitution/Organization individual, same deferred status as Berman's ASPO-USA). Past President, International Society for Ecological Economics (ISEE). BS Biology (Grinnell College), MIA (Columbia University), PhD Agricultural and Resource Economics (Cornell University). Co-author with Herman Daly of 'Ecological Economics: Principles and Applications' (Island Press, 2003; 2nd ed. 2010) — a foundational textbook in the field. Current research focus, per his own guest-intro description in TGS_185 (2026-07-15 bio-intro extraction pilot finding): economics of essential resources, democratization of monetary and financial systems, evolution of cooperation, economics of information, and the commons. NOTE: Herman Daly is himself a confirmed real TGS guest (extraction/transcripts_raw/TGS06HermanDalyTranscript.docx.pdf) but is NOT yet modeled in this graph — a real, well-evidenced future bootstrap candidate surfaced as a byproduct of this one, not yet acted on. NO owl:sameAs asserted: checked for a genuine Wikipedia page across two separate searches 2026-07-14, none found despite extensive independent academic documentation (UVM's own faculty profile, Google Scholar citation record, ResearchGate, a full CV) — confirmed absent, not merely unchecked. Wikidata was NOT independently checked."@en ;
+    rdfs:comment "Also publicly known as 'Josh Farley.' Ecological economist, Professor of Community Development & Applied Economics and Public Administration, University of Vermont; Fellow, Gund Institute for Environment (formerly Gund Institute for Ecological Economics — not yet modeled as its own AcademicInstitution/Organization individual, same deferred status as Berman's ASPO-USA). Past President, International Society for Ecological Economics (ISEE). BS Biology (Grinnell College), MIA (Columbia University), PhD Agricultural and Resource Economics (Cornell University). Co-author with Herman Daly of 'Ecological Economics: Principles and Applications' (Island Press, 2003; 2nd ed. 2010) — a foundational textbook in the field. Current research focus, per his own guest-intro description in TGS_185 (2026-07-15 bio-intro extraction pilot finding): economics of essential resources, democratization of monetary and financial systems, evolution of cooperation, economics of information, and the commons. Herman Daly is now modeled (tgs:Human.HermanDaly, tgs:Interview.TGS_6_HermanDaly). NO owl:sameAs asserted: checked for a genuine Wikipedia page across two separate searches 2026-07-14, none found despite extensive independent academic documentation (UVM's own faculty profile, Google Scholar citation record, ResearchGate, a full CV) — confirmed absent, not merely unchecked. Wikidata was NOT independently checked."@en ;
     thinkr:memberOf tgs:AcademicInstitution.UniversityOfVermont ;
     .
 
@@ -1071,6 +1073,7 @@ tgs:Human.FrancisWeller a thinkr:Human,
     rdfs:label "Francis Weller (human)"@en ;
     owl:sameAs <https://www.francisweller.net/> ;
     rdfs:comment "American psychotherapist (MFT, retired), writer, and self-described soul activist; 40+ years developing what he calls soul-centered psychotherapy, synthesizing psychology, anthropology, mythology, alchemy, indigenous cultures, and poetic traditions. Founder and director, WisdomBridge (educational programs integrating indigenous and Western wisdom traditions). Author of the bestselling 'The Wild Edge of Sorrow: Rituals of Renewal and the Sacred Work of Grief' (real, direct originator of the 'Five Gates of Grief' framework), 'The Threshold Between Loss and Revelation' (with Rashani Réa), 'In the Absence of the Ordinary: Soul Work for Times of Uncertainty,' and 'Entering the Healing Ground' (the official Wild Edge of Sorrow workbook). Real endorsement from Joanna Macy (already discussed extensively in this graph's own RR-17 build) appears on his own book jacket. BA, University of Wisconsin-Green Bay; two Master's degrees, John F. Kennedy University."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
     .
 
 #############################################
@@ -1153,6 +1156,7 @@ tgs:Human.JoannaMacy a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Joanna Macy"@en ;
     rdfs:label "Joanna Macy (human)"@en ;
     owl:sameAs <http://dbpedia.org/resource/Joanna_Macy> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
     .
 
 # added 2026-08-25
@@ -1272,7 +1276,7 @@ tgs:Human.PeterBrannen a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.SamanthaSweetwater a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Samantha Sweetwater"@en ;
     rdfs:label "Samantha Sweetwater (human)"@en ;
-    rdfs:comment "Wisdom guide, author, and founder of One Life Circle ('a ministry of remembering'). Over three decades facilitating individuals and organizations across five continents through personal, cultural, ecological, and spiritual emergence; mentors leaders in business, technology, and finance on navigating awakening and aligning impact with regenerative futures. Founder, Dancing Freedom and Peacebody Japan (embodied-awakening movements; has trained hundreds of facilitators). Former seed farmer. MA, Wisdom Studies; BA, Social Theory and Dance. Initiated into indigenous lineages of Africa (the Bwiti tradition, Gabon), Latin America, and Turtle Island. Author of tgs:Work.TrueHuman."@en ;
+    rdfs:comment "Wisdom guide, author, and founder of One Life Circle ('a ministry of remembering'). Over three decades facilitating individuals and organizations across five continents through personal, cultural, ecological, and spiritual emergence; mentors leaders in business, technology, and finance on navigating awakening and aligning impact with regenerative futures. Founder, Dancing Freedom and Peacebody Japan (embodied-awakening movements; has trained hundreds of facilitators). Former seed farmer. MA, Wisdom Studies; BA, Social Theory and Dance. Initiated into indigenous lineages of Africa (the Bwiti tradition, Gabon), Latin America, and Turtle Island. Author of tgs:Work.TrueHuman. Her own website (checked 2026-10-10) describes her as an author, thought leader, ceremonial guide, teacher and executive coach, and as a 'Gaian wisdom teacher' working toward 'a Gaian Civilization'; it offers soul mentoring, executive coaching, ceremony, and The Kinship Journey, a six-month online immersion named after the concept in her book (tgs:Concept.KinshipJourney)."@en ;
     .
 
 tgs:Human.TadPatzek a thinkr:Human, owl:NamedIndividual ;
@@ -1603,6 +1607,7 @@ tgs:Human.LiseVanSusteren a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Lise Van Susteren (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Lise_Van_Susteren> ;
     rdfs:comment "Forensic psychiatrist. Real, direct co-founder of the Climate Psychiatry Alliance, working on the psychological effects of climate change, including her own coined concept of 'pretraumatic stress.' Real, direct personal detail: a childhood neighbor of Nate Hagens's."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
     .
 
 tgs:Human.TyroneHayes a thinkr:Human, owl:NamedIndividual ;
@@ -1710,6 +1715,7 @@ tgs:Human.ThichNhatHanh a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Thích Nhất Hạnh (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Th%C3%ADch_Nh%E1%BA%A5t_H%E1%BA%A1nh> ;
     rdfs:comment "Vietnamese Thiền Buddhist monk, peace activist, and teacher (1926-2022). Real, widely credited with popularizing mindfulness practice in the West. Founder, Plum Village Tradition and Monastery in France. Nominated for the Nobel Peace Prize by Martin Luther King Jr."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
     .
 
 tgs:Human.LynnMargulis a thinkr:Human, owl:NamedIndividual ;
@@ -1934,7 +1940,7 @@ tgs:Human.RobertPape a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Robert Pape"@en ;
     rdfs:label "Robert Pape (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Robert_Pape> ;
-    rdfs:comment "Robert A. Pape, Professor of Political Science at the University of Chicago, specializing in international security affairs. Director of the Chicago Project on Security and Threats (CPOST). Received his PhD from the University of Chicago in 1988; previously taught international relations at Dartmouth College for five years and air power strategy for the USAF's School of Advanced Airpower Studies for three years. Author of Bombing to Win: Air Power and Coercion in War (Cornell, 1996); Dying to Win: The Strategic Logic of Suicide Terrorism (Random House, 2005); and Our Own Worst Enemies: America in the Age of Violent Populism (University of Chicago Press, published 2026-09-22, one week before this episode aired). Runs the Escalation Trap Substack (escalationtrap.substack.com), a real-time running analysis of the 2026 US-Iran war and its implications, which he began publishing in mid-2026. Real, direct TGS-235 context: has spent over two decades modeling US strikes on Iran; the June 15, 2026 Escalation Trap post ('Iran and the Era of Maximum Leverage') predicted the opening of a second Red Sea front and Iran's expanded demands — both of which occurred by September 15 when this conversation was recorded."@en ;
+    rdfs:comment "Robert A. Pape, Professor of Political Science at the University of Chicago, specializing in international security affairs. Director of the Chicago Project on Security and Threats (CPOST). Received his PhD from the University of Chicago in 1988; previously taught international relations at Dartmouth College for five years and air power strategy for the USAF's School of Advanced Airpower Studies for three years. Author of Bombing to Win: Air Power and Coercion in War (Cornell, 1996); Dying to Win: The Strategic Logic of Suicide Terrorism (Random House, 2005); and Our Own Worst Enemies: America in the Age of Violent Populism (The New Press, per the TGS-235 show notes' publisher link; published 2026-09-22, the day before this episode aired). Runs the Escalation Trap Substack (escalationtrap.substack.com), a real-time running analysis of the 2026 US-Iran war and its implications, which he began publishing in mid-2026. Real, direct TGS-235 context: has spent over two decades modeling US strikes on Iran; the June 15, 2026 Escalation Trap post ('Uncertain Deal, And Iran Certainly Enters Its Period of Maximum Leverage'; Pape calls it 'Iran and the era of maximum leverage' on air) predicted the opening of a second Red Sea front and Iran's expanded demands — both of which occurred by September 15 when this conversation was recorded."@en ;
     owl:sameAs <https://political-science.uchicago.edu/directory/Robert-Pape> ;
     .
 
@@ -1943,5 +1949,100 @@ tgs:Human.ZekeHausfather a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Zeke Hausfather (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Zeke_Hausfather> ;
     owl:sameAs <https://www.zekehausfather.com/> ;
-    rdfs:comment "Climate scientist and data journalist. Senior Scientist at Berkeley Earth, where he helps produce one of the world's primary global surface temperature records. Lead author, Chapter 2 (Observed Climate Change) of the IPCC Seventh Assessment Report (AR7); contributing author, IPCC Sixth Assessment Report (AR6); authored the climate trends chapter of the Fifth US National Climate Assessment; testified as an expert witness before the US House Committee on Science, Space, and Technology. Climate Science Contributor at Carbon Brief. At Stripe, leads climate research for Frontier — a $2 billion advance market commitment accelerating permanent carbon removal, working on enhanced rock weathering, river liming, ocean alkalinity enhancement, biomass carbon removal, and direct air capture. Runs The Climate Brink (theclimatebrink.com), a Substack newsletter and climate dashboard. Founded and ran Efficiency 2.0, a clean-tech company helping utilities reduce customer energy use, for roughly a decade before returning to academia; PhD in energy and resources, UC Berkeley. Real, direct TGS-236 context: recorded 2026-09-16, one of five independent global temperature dataset leads; his latest 2027 temperature projection (~1.8°C above pre-industrial) was the episode's most-cited headline figure."@en ;
+    rdfs:comment "Climate scientist and data journalist. Senior Scientist at Berkeley Earth, where he helps produce one of the world's primary global surface temperature records. Lead author, Chapter 2 (Observed Climate Change) of the IPCC Seventh Assessment Report (AR7); contributing author, IPCC Sixth Assessment Report (AR6); authored the climate trends chapter of the Fifth US National Climate Assessment; testified as an expert witness before the US House Committee on Science, Space, and Technology. Climate Science Contributor at Carbon Brief. At Stripe, leads climate research for Frontier — a $2 billion advance market commitment accelerating permanent carbon removal, working on enhanced rock weathering, river liming, ocean alkalinity enhancement, biomass carbon removal, and direct air capture. Runs The Climate Brink (theclimatebrink.com), a Substack newsletter and climate dashboard. Founded and ran Efficiency 2.0, a clean-tech company helping utilities reduce customer energy use, for roughly a decade before returning to academia; PhD in energy and resources, UC Berkeley. Real, direct TGS-236 context: recorded 2026-09-16, Berkeley Earth is one of 14 independent research groups producing global temperature records; his latest 2027 temperature projection (about 1.8°C above pre-industrial on air; 1.71°C in the show notes' fact-check) was the episode's most-cited headline figure."@en ;
+    .
+
+# ADDED 2026-10-10 -- Joseph Campbell, originator of tgs:Concept.HerosJourney (named in TGS_202).
+tgs:Human.JosephCampbell a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Joseph Campbell"@en ;
+    rdfs:label "Joseph Campbell (human)"@en ;
+    rdfs:comment "Joseph John Campbell (26 March 1904, White Plains, New York - 30 October 1987, Honolulu, Hawaii), American writer and scholar of comparative mythology and comparative religion; professor of literature at Sarah Lawrence College from 1934 until his retirement in 1972. Author of tgs:Work.TheHeroWithAThousandFaces (1949), source of tgs:Concept.HerosJourney; also The Masks of God (four volumes, 1959-1968) and The Power of Myth (1988, conversations with Bill Moyers). Best known for the maxim 'follow your bliss.'"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Joseph_Campbell> ;
+    owl:sameAs <http://dbpedia.org/resource/Joseph_Campbell> ;
+    .
+
+tgs:Human.RonaldWright a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Ronald Wright"@en ;
+    rdfs:label "Ronald Wright (human)"@en ;
+    rdfs:comment "Ronald Wright (born 1948, London, England), Canadian writer, historian and novelist; author of tgs:Work.AShortHistoryOfProgress (2004 Massey Lectures). Not to be confused with Robert Wright, the American author of Nonzero and The Moral Animal: the Frankly_105 transcript says 'Robert Wright,' but the book and the episode's show notes name Ronald Wright."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ronald_Wright> ;
+    .
+
+tgs:Human.PeterWhybrow a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Peter Whybrow"@en ;
+    rdfs:label "Peter Whybrow (human)"@en ;
+    rdfs:comment "Peter C. Whybrow (born 13 June 1939, Hatfield, Hertfordshire, England), English psychiatrist and author; Judson Braun Distinguished Professor of Psychiatry and Biobehavioral Sciences at the David Geffen School of Medicine, UCLA, and from 1997 to 2020 director of the Semel Institute for Neuroscience and Human Behavior. Research on thyroid hormones in the adult brain and mood disorders, especially bipolar disorder. Books include A Mood Apart (1997), tgs:Work.AmericanMania (2005) and The Well-Tuned Brain (2015). Guest on TGS episode 26; Nate calls him a friend (Frankly_103)."@en ;
+    foaf:homepage <http://www.petercwhybrow.com/about.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Peter_Whybrow> ;
+    .
+
+tgs:Human.WolframSchultz a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Wolfram Schultz"@en ;
+    rdfs:label "Wolfram Schultz (human)"@en ;
+    rdfs:comment "Neuroscientist, Professor of Neuroscience at the University of Cambridge and Fellow of the Royal Society, known for showing that dopamine neurons signal reward prediction errors (tgs:Concept.RewardPredictionError); landmark paper with Peter Dayan and P. Read Montague, 'A neural substrate of prediction and reward,' Science (1997). Awards include The Brain Prize (2017) and the Gruber Prize in Neuroscience (2018)."@en ;
+    foaf:homepage <https://www.wolframschultz.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wolfram_Schultz> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_103_TheGhostOfDopaminePast ;
+    .
+
+tgs:Human.GuntherThallinger a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Günther Thallinger"@en ;
+    rdfs:label "Günther Thallinger (human)"@en ;
+    rdfs:comment "Member of the Board of Management of Allianz SE and chair of its investment board; previously CEO of Allianz Investment Management. In spring 2025 he published a widely reported LinkedIn essay warning that climate change threatens the foundations of the financial sector through insurance (tgs:Concept.ClimateCreditCrunch), read at length by Nate in Frankly_102. The auto-transcript renders his name as 'Gunther Inger' and the company as 'World Alliance.'"@en ;
+    foaf:homepage <https://www.allianz.com/en/about-us/corporate-management/board-of-management/members.html#thallinger> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings ;
+    .
+
+tgs:Human.BJFogg a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "BJ Fogg"@en ;
+    rdfs:label "BJ Fogg (human)"@en ;
+    rdfs:comment "Behavior scientist at Stanford University, founder of the Behavior Design Lab, known for the Fogg Behavior Model and the Tiny Habits method; author of tgs:Work.TinyHabits."@en ;
+    foaf:homepage <https://www.bjfogg.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/B._J._Fogg> ;
+    .
+
+tgs:Human.DavidGraeber a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "David Graeber"@en ;
+    rdfs:label "David Graeber (human)"@en ;
+    rdfs:comment "David Graeber (1961-2020), American anthropologist and anarchist activist, professor at the London School of Economics; author of Debt: The First 5,000 Years (2011), tgs:Work.BullshitJobs (2018) and, with David Wengrow, The Dawn of Everything (2021)."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/David_Graeber> ;
+    .
+
+tgs:Human.ViktorFrankl a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Viktor Frankl"@en ;
+    rdfs:label "Viktor Frankl (human)"@en ;
+    rdfs:comment "Viktor E. Frankl (1905-1997), Austrian psychiatrist and neurologist, Holocaust survivor and founder of logotherapy; author of tgs:Work.MansSearchForMeaning."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Viktor_Frankl> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    .
+
+tgs:Human.PeterLevine a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Peter Levine"@en ;
+    rdfs:label "Peter Levine (human)"@en ;
+    rdfs:comment "Peter A. Levine, American psychotherapist and researcher who developed Somatic Experiencing, a body-based approach to trauma resolution; author of Waking the Tiger (1997). Not to be confused with tgs:Human.StephenLevine. Cited in Frankly_142 for discharging an incomplete fight-or-flight response."@en ;
+    foaf:homepage <https://www.somaticexperiencing.com/about-peter> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    .
+
+tgs:Human.StephenLevine a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Stephen Levine"@en ;
+    rdfs:label "Stephen Levine (human)"@en ;
+    rdfs:comment "Stephen Levine (1937-2016), American poet, author and teacher known for decades of work with the dying, including Who Dies? (1982). Not to be confused with tgs:Human.PeterLevine. Cited in Frankly_142 for observing how alive the dying often are."@en ;
+    foaf:homepage <https://levinetalks.com/About-Us> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    .
+
+tgs:Human.DanielSiegel a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Daniel Siegel"@en ;
+    rdfs:label "Daniel Siegel (human)"@en ;
+    rdfs:comment "Daniel J. Siegel, American psychiatrist, clinical professor at the UCLA School of Medicine and founder of the Mindsight Institute; known for interpersonal neurobiology and the phrase 'name it to tame it,' cited in Frankly_142."@en ;
+    foaf:homepage <https://drdansiegel.com/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    .
+
+tgs:Human.JeanPierreDeCaussade a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jean-Pierre de Caussade"@en ;
+    rdfs:label "Jean-Pierre de Caussade (human)"@en ;
+    rdfs:comment "French Jesuit priest and spiritual writer (1675-1751) to whom tgs:Work.SacramentOfThePresentMoment is attributed. Nate refers to him in Frankly_143 as an eighteenth-century priest whose name he could not recall; the show notes name him."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jean_Pierre_de_Caussade> ;
     .

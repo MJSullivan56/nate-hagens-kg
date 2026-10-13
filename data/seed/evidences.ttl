@@ -111,8 +111,8 @@ tgs:Evidence.Superorganism_JoshFarley a thinkr:Evidence,
 tgs:Evidence.Superorganism_JoshFarley_TGS_185 a thinkr:Evidence,
         owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Candidate ;
-    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    dcterms:description "Corroborating, independent of Evidence.Superorganism_JoshFarley: in TGS_185 (aired 2026, ~18 years after they met per the transcript's own framing), Farley himself uses the term unprompted mid-conversation — 'the, Economic power structure, that, serves the, Superorganism' — the guest using Hagens' own term, not just Hagens describing the guest's thinking. Flagged Candidate, not yet human-reviewed."@en ;
+    thinkr:evidencePolarity thinkr:PolarityType.Mentions ;
+    dcterms:description "Corrected 2026-10-13 against a hand-cleaned transcript. In TGS_185 (recorded 2025-06-10, aired 2025-07-16; Nate says Farley became his PhD committee chair 20 years earlier), the line 'the economic power structure that serves the Superorganism' is Nate's own, spoken in reply to Farley's remark that they were discussing the same myths 20 years ago. Farley does not use the term himself in this episode, so this is a host mention in a conversation with Farley, not independent guest corroboration; it was previously recorded as Farley using the term unprompted, based on a garbled auto-generated transcript, with the air year given as 2026. Farley's own substance in the episode (multilevel selection, the economy as a subsystem of nature, the trust-fund analogy for fossil fuels) is compatible with the Superorganism framing but does not name it. Flagged Candidate, not yet human-reviewed."@en ;
     dcterms:source <https://www.thegreatsimplification.com/episode/185-josh-farley> .
 
 tgs:Evidence.Wetware_SigmundFreud a thinkr:Evidence,

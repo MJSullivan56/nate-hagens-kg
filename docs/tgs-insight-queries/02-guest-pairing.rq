@@ -1,0 +1,15 @@
+# Two guests who have never shared an episode but discuss the most of the same ideas (Nate's own framework concepts excluded, since nearly everyone touches those).
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?g1 ?g2 (COUNT(DISTINCT ?c) AS ?shared) (GROUP_CONCAT(DISTINCT ?cl; separator="; ") AS ?concepts) WHERE {
+  ?e1 thinkr:hasGuest ?g1 ; thinkr:discusses ?c .
+  ?e2 thinkr:hasGuest ?g2 ; thinkr:discusses ?c .
+  ?c a thinkr:Concept ; skos:prefLabel ?cl .
+  FILTER NOT EXISTS { ?c a thinkr:HagensConcept }
+  FILTER(STR(?g1) < STR(?g2) && ?g1 != tgs:Persona.NateHagens && ?g2 != tgs:Persona.NateHagens)
+  FILTER NOT EXISTS { ?x thinkr:hasGuest ?g1, ?g2 }
+} GROUP BY ?g1 ?g2 ORDER BY DESC(?shared) LIMIT 3

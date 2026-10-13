@@ -1,0 +1,11 @@
+# Which episode sits on the deepest chain of back-references (how much of the back catalog it reaches, citation-of-citation)?
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?ep ?title (COUNT(DISTINCT ?anc) AS ?reaches) WHERE {
+  ?ep a thinkr:Episode ; skos:prefLabel ?title ; dct:references+ ?anc . ?anc a thinkr:Episode .
+  FILTER(?anc != ?ep)
+} GROUP BY ?ep ?title ORDER BY DESC(?reaches) LIMIT 3

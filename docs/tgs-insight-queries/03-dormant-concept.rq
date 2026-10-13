@@ -1,0 +1,15 @@
+# The idea that went quiet the longest before coming back: biggest gap between two consecutive episodes discussing it.
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?label ?before ?d1 ?after ?d2 ?gapDays WHERE {
+  ?c a thinkr:Concept ; skos:prefLabel ?label .
+  ?before thinkr:discusses ?c ; dct:issued ?d1 .
+  ?after  thinkr:discusses ?c ; dct:issued ?d2 .
+  FILTER(?d2 > ?d1)
+  FILTER NOT EXISTS { ?mid thinkr:discusses ?c ; dct:issued ?dm . FILTER(?dm > ?d1 && ?dm < ?d2) }
+  BIND((YEAR(?d2)-YEAR(?d1))*365 + (MONTH(?d2)-MONTH(?d1))*30 + (DAY(?d2)-DAY(?d1)) AS ?gapDays)
+} ORDER BY DESC(?gapDays) LIMIT 3

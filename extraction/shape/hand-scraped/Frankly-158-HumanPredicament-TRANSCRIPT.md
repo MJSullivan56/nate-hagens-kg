@@ -58,7 +58,7 @@ _PLEASE NOTE: This transcript has been auto-generated and has not been fully pro
 
 ## Time
 
-[00:13:13] Time. What do people do with their time? Our fossil energy slaves have bought us lots of free hours, and a few generations ago, most of our waking time went to getting food and water and heat and clothing, and the carbon pulse, for many, has removed those menial, but perhaps meaningful, tasks. So a new signal here would be people's time moving away from categories like television and shopping and five to eight hours of phone screen time, and into categories like household maintenance, like cooking and repair and gardening, caring for others, volunteering, socializing in real life There's also a false positive here if this happened in a massive economic depression when people would be forced to do everything I just said out of necessity. 
+[00:13:13] Time. What do people do with their time? Our fossil energy slaves have bought us lots of free hours, and a few generations ago, most of our waking time went to getting food and water and heat and clothing, and the carbon pulse for many, has removed those menial but perhaps meaningful tasks. So a new signal here would be people's time moving away from categories like television and shopping and five to eight hours of phone screen time, and into categories like household maintenance, like cooking and repair and gardening, caring for others, volunteering, socializing in real life There's also a false positive here if this happened in a massive economic depression when people would be forced to do everything I just said out of necessity. 
 
 ## Blame
 

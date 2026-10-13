@@ -153,6 +153,7 @@ tgs:Archetype.Disarmer a thinkr:Archetype, owl:NamedIndividual ;
     skos:prefLabel "The Disarmer"@en ;
     skos:definition "Real nuclear disarmament work, given the real backdrop of 12,000+ active nuclear warheads and live conflicts (Russia/Ukraine, Israel/Gaza) — Hagens frames the archetype as either a genuine peace activist or something more Machiavellian aimed at the same real reduction in catastrophic risk."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
+    skos:scopeNote "Verified against the Frankly_58 transcript [17:30], 2026-10-08: Nate first entertains a broader reading of the word -- 'we should disarm people with the truth and move to a different Overton window conversation' -- then explicitly sets it aside ('that's not what I had in mind') in favor of nuclear disarmament. Do not extend this archetype to polarization or tribalism: in Frankly_58 that role belongs to tgs:Archetype.Silvertongue ('we have a tribal temperament and social media has polarized and splintered...'). WWNS #4 used the Disarmer more broadly and said so in the text."@en ;
     .
 
 tgs:Archetype.Muse a thinkr:Archetype, owl:NamedIndividual ;

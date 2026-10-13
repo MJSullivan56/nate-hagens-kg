@@ -4,6 +4,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <http://example.org/tgs#> a owl:Ontology ;
     owl:imports <http://example.org/thinkr#> ;
@@ -113,7 +114,9 @@ tgs:Persona.EOWilson a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.ElinorOstrom a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ElinorOstrom ;
     skos:prefLabel "Elinor Ostrom"@en ;
-    rdfs:label "Elinor Ostrom (persona)"@en .
+    rdfs:label "Elinor Ostrom (persona)"@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    .
 
 tgs:Persona.EmileDurkheim a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.EmileDurkheim ;
@@ -356,7 +359,9 @@ tgs:Persona.IainMcGilchrist a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IainMcGilchrist ;
     skos:prefLabel "Iain McGilchrist"@en ;
     rdfs:label "Iain McGilchrist (persona)"@en ;
-    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.IainMcGilchrist, 2026-07-14, Batch 3. hasProfessionalRelationship ADDED 2026-07-15: closing a symmetric-indexing gap found during the has*Relationship audit (see Persona.NateHagens's own scopeNote)."@en .
+    skos:scopeNote "hasPersonEntityType moved here from tgs:Human.IainMcGilchrist, 2026-07-14, Batch 3. hasProfessionalRelationship ADDED 2026-07-15: closing a symmetric-indexing gap found during the has*Relationship audit (see Persona.NateHagens's own scopeNote)."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_143_GuideToStayingHumanPart3 ;
+    .
 
 tgs:Persona.DanielSchmachtenberger a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.DanielSchmachtenberger ;
@@ -423,12 +428,16 @@ tgs:Persona.GayaHerrington a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.ConradWaddington a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ConradWaddington ;
     skos:prefLabel "Conrad Hal Waddington"@en ;
-    rdfs:label "Conrad Hal Waddington (persona)"@en .
+    rdfs:label "Conrad Hal Waddington (persona)"@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    .
 
 tgs:Persona.UgoBardi a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.UgoBardi ;
     skos:prefLabel "Ugo Bardi"@en ;
-    rdfs:label "Ugo Bardi (persona)"@en .
+    rdfs:label "Ugo Bardi (persona)"@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_145_Part3UphillFutures ;
+    .
 
 tgs:Persona.JohanRockstrom a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.JohanRockstrom ;
@@ -1135,7 +1144,8 @@ tgs:Persona.SamanthaSweetwater a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SamanthaSweetwater ;
     skos:prefLabel "Samantha Sweetwater"@en ;
     rdfs:label "Samantha Sweetwater (persona)"@en ;
-    skos:scopeNote "Personal tag directly evidenced, both directions: Nate's own words, 'I've been following your progress... as one of your friends,' and his real closing words, 'to be continued, my friend.' This is her real second TGS appearance, roughly 18 months after her first (TGS_112, 'Life at the Center,' already tracked in this graph's repeat-guest coverage) — TGS_112 itself remains unbuilt."@en ;
+    foaf:homepage <https://www.samanthasweetwater.com/> ;
+    skos:scopeNote "Personal tag directly evidenced, both directions: Nate's own words, 'I've been following your progress... as one of your friends,' and his real closing words, 'to be continued, my friend.' This is her real second TGS appearance, roughly 18 months after her first (TGS_112, 'Life at the Center,' already tracked in this graph's repeat-guest coverage) — TGS_112 was built 2026-09-04."@en ;
     .
 
 tgs:Persona.TadPatzek a thinkr:Persona, owl:NamedIndividual ;
@@ -1353,7 +1363,9 @@ tgs:Persona.HelenaNorbergHodge a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.PaulKingsnorth a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.PaulKingsnorth ;
     skos:prefLabel "Paul Kingsnorth"@en ;
-    rdfs:label "Paul Kingsnorth (persona)"@en .
+    rdfs:label "Paul Kingsnorth (persona)"@en ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    .
 
 tgs:Persona.CharlesEisenstein a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.CharlesEisenstein ;
@@ -1715,3 +1727,74 @@ tgs:Persona.ZekeHausfather a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Zeke Hausfather"@en ;
     rdfs:label "Zeke Hausfather (persona)"@en ;
     .
+
+# ADDED 2026-10-10 -- Joseph Campbell (see tgs:Concept.HerosJourney).
+tgs:Persona.JosephCampbell a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JosephCampbell ;
+    skos:prefLabel "Joseph Campbell"@en ;
+    rdfs:label "Joseph Campbell (persona)"@en .
+
+tgs:Persona.RonaldWright a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RonaldWright ;
+    skos:prefLabel "Ronald Wright"@en ;
+    rdfs:label "Ronald Wright (persona)"@en .
+
+tgs:Persona.PeterWhybrow a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterWhybrow ;
+    skos:prefLabel "Peter Whybrow"@en ;
+    rdfs:label "Peter Whybrow (persona)"@en .
+
+tgs:Persona.WolframSchultz a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WolframSchultz ;
+    skos:prefLabel "Wolfram Schultz"@en ;
+    rdfs:label "Wolfram Schultz (persona)"@en .
+
+tgs:Persona.GuntherThallinger a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.GuntherThallinger ;
+    skos:prefLabel "Günther Thallinger"@en ;
+    rdfs:label "Günther Thallinger (persona)"@en .
+
+tgs:Persona.BJFogg a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BJFogg ;
+    skos:prefLabel "BJ Fogg"@en ;
+    rdfs:label "BJ Fogg (persona)"@en .
+
+tgs:Persona.DavidGraeber a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DavidGraeber ;
+    skos:prefLabel "David Graeber"@en ;
+    rdfs:label "David Graeber (persona)"@en .
+
+tgs:Persona.ViktorFrankl a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ViktorFrankl ;
+    skos:prefLabel "Viktor Frankl"@en ;
+    rdfs:label "Viktor Frankl (persona)"@en .
+
+tgs:Persona.PeterLevine a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.PeterLevine ;
+    skos:prefLabel "Peter Levine"@en ;
+    rdfs:label "Peter Levine (persona)"@en .
+
+tgs:Persona.StephenLevine a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.StephenLevine ;
+    skos:prefLabel "Stephen Levine"@en ;
+    rdfs:label "Stephen Levine (persona)"@en .
+
+tgs:Persona.DanielSiegel a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.DanielSiegel ;
+    skos:prefLabel "Daniel Siegel"@en ;
+    rdfs:label "Daniel Siegel (persona)"@en .
+
+tgs:Persona.LiseVanSusteren a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.LiseVanSusteren ;
+    skos:prefLabel "Lise Van Susteren"@en ;
+    rdfs:label "Lise Van Susteren (persona)"@en .
+
+tgs:Persona.JeanPierreDeCaussade a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JeanPierreDeCaussade ;
+    skos:prefLabel "Jean-Pierre de Caussade"@en ;
+    rdfs:label "Jean-Pierre de Caussade (persona)"@en .
+
+tgs:Persona.ThichNhatHanh a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ThichNhatHanh ;
+    skos:prefLabel "Thích Nhất Hạnh"@en ;
+    rdfs:label "Thích Nhất Hạnh (persona)"@en .

@@ -44,6 +44,7 @@ tgs:PanelDiscussion.RR_1_ElectricVehicles a thinkr:Episode, owl:NamedIndividual 
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.ArtBerman, tgs:Persona.SimonMichaux, tgs:Persona.PedroPrieto ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr01-berman-michaux-prieto> ;
+    dct:isReferencedBy tgs:Interview.TGS_220_AWorldOnThePrecipice ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/06/RR01BermanMichauxPrietoTranscript.docx1_.pdf> ;
     thinkr:discusses tgs:Concept.EnergyReturnOnInvestment, tgs:Concept.EnergyBlindness ;
     dct:references tgs:Interview.TGS_3_OilBestAndWorstOfFuels, tgs:Interview.TGS_44_DieselAndTheBarrelOfOil, tgs:Interview.TGS_54_TheStealthAdjustmentOfOil, tgs:Interview.TGS_7_JoshFarleyAppearance1, tgs:Interview.TGS_29_JoshFarleyAppearance2 ;
@@ -64,6 +65,7 @@ tgs:PanelDiscussion.RR_2_DeeperEcology a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.WilliamRees, tgs:Persona.NoraBateson, tgs:Persona.RexWeyler ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr02-bateson-rees-weyler> ;
+    dct:isReferencedBy tgs:Interview.TGS_202_SamanthaSweetwater ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/07/BatesonReesWeyler.pdf> ;
     thinkr:discusses tgs:Concept.Overshoot, tgs:Concept.EcologicalFootprint, tgs:Concept.LimitsToGrowth ;
     dct:references tgs:Interview.TGS_10_NoraBateson ;
@@ -84,6 +86,7 @@ tgs:PanelDiscussion.RR_3_UnlearningEconomics a thinkr:Episode, owl:NamedIndividu
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.JonErickson, tgs:Persona.JoshFarley, tgs:Persona.SteveKeen, tgs:Persona.KateRaworth ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/rr03-erickson-farley-raworth-keen> ;
+    dct:isReferencedBy tgs:Interview.TGS_185_MythsShapingOurEconomies ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2023/08/RR03EricksonFarleyRaworthKeenTranscript.docx.pdf> ;
     thinkr:discusses tgs:SchoolOfThought.DoughnutEconomics, tgs:SchoolOfThought.PlanetaryBoundaries, tgs:Concept.EnergyReturnOnInvestment ;
     skos:scopeNote "Real, further citable material found but NOT built in this pass: all 4 guests' own real prior TGS solo episodes are now confirmed with real URLs (Erickson #45, Keen #30, both via RR-3's own real show notes; Raworth's via YouTube, no canonical TGS-site URL). Real, specific named academic references that could become their own citation-only Personas if this thread is revisited: Elinor Ostrom (Nobel laureate, commons governance), Thorstein Veblen, E.O. Wilson (Consilience) — none built here."@en ;
@@ -215,6 +218,7 @@ tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication a thinkr:Episode, owl:NamedI
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.RexWeyler, tgs:Persona.VanessaAndreotti, tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-10> ;
+    dct:isReferencedBy tgs:Interview.TGS_202_SamanthaSweetwater ;
     thinkr:discusses tgs:Concept.Schismogenesis, tgs:Concept.Metacrisis, tgs:SchoolOfThought.WarmData ;
     skos:scopeNote "2026-08-13: fully enriched from a complete real transcript + real linked show notes (MJSullivan's own upload), resolving the RR-10 gap flagged since Nora's original RR-26 bootstrap and closing the last remaining built-RR summary gap. Real, further citable material found but NOT built in this pass: Vanessa Andreotti's own real prior solo TGS appearance (#125, 'Hospicing Modernity'); the Dunning-Kruger curve, discussed at length by Schmachtenberger, has no matching Concept individual in this graph yet; Chief Ninawa (a real Indigenous leader quoted via Andreotti) and David Bohm/Krishnamurti (cited directly by Schmachtenberger) are real, deferred citation candidates."@en ;
     thinkr:hasDiscussionSummary "The most philosophically dense and least topic-driven of the built RRs — four guests who know each other's work well (Nate's own framing: 'you have been on my podcast, many of you more than once') build directly on each other rather than staying in their own lanes, so the discussion reads more like one extended, co-authored argument than four separate positions. Nora opens with the central frame (communication itself as ecology, not transmission); Rex immediately extends it with a direct ecological parallel (a monoculture forest versus a real one); Vanessa reframes it again through a decolonial lens (the difference between 'environment' as something external and 'ecology' as something we're inside of, and how English itself can fail to carry non-Western concepts of land); Daniel closes the opening round by grounding it further in physics and boundary theory (there are no truly separable things, only permeable exchange). None of the four ever pushes back on another's framing — disagreement essentially doesn't happen — but there is real, substantive addition happening in each turn, not just restatement. The one moment of process friction is instructive rather than adversarial: Daniel is candid that dialectical and empathetic communication tools can both be genuinely healing AND weaponized (a fact he treats as unresolved and requiring ongoing discernment, not a settled question), and he shares his own experience running couples counseling as the clearest illustration of how two people's honest accounts of the same relationship can diverge completely. Nate's own contribution is again unusually personal — he opens by admitting he was 'in a foul mood' before the conversation started and closes by directly stating his mood had genuinely lifted by the end, treating his own emotional shift as real evidence for the argument being made rather than an aside."@en ;
@@ -291,6 +295,7 @@ tgs:PanelDiscussion.RR_14_TheFutureIsLocal a thinkr:Episode, owl:NamedIndividual
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.DanielChristianWahl, tgs:Persona.IsabelCarlisle, tgs:Persona.SamanthaPower ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-14> ;
+    dct:isReferencedBy tgs:Interview.TGS_226_CanMoneyServeLife ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/01/RR14Bioregioning101Transcript.pdf> ;
     thinkr:discusses tgs:Concept.Superorganism ;
     dct:references tgs:Persona.NoraBateson ;
@@ -331,6 +336,7 @@ tgs:PanelDiscussion.RR_16_TheMadScrambleForPower a thinkr:Episode, owl:NamedIndi
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.ArtBerman, tgs:Persona.MichaelEvery, tgs:Persona.IzabellaKaminska ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-16> ;
+    dct:isReferencedBy tgs:Interview.TGS_220_AWorldOnThePrecipice ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/04/RR16TranscriptTheMadScrambleforPower.pdf> ;
     dct:references tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars ;
     skos:scopeNote "Michael Every's own 'statecraft'/'what is GDP for' framing, directly and extensively discussed here, is the same real conceptual throughline he brings to RR-22 (built earlier this session with Craig Tindale) — a real, recurring cross-episode theme for this Persona specifically, not yet minted as its own Concept individual in this graph. This episode's own transcript independently reconfirms Every's real Marxist-household upbringing, first disclosed during the RR-12 build. Note: the episode's own real page metadata mislabels its Apple Music link with RR-15's title ('The Plastic Crisis...') — a real site artifact, not corrected here, only noted."@en ;
@@ -350,6 +356,7 @@ tgs:PanelDiscussion.RR_17_MovingFromApathyToAction a thinkr:Episode, owl:NamedIn
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.JohnSeed, tgs:Persona.SkyeCielitaFlor ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-17> ;
+    dct:isReferencedBy tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/07/RR-17-Transcript-Moving-from-Apathy-to-Action.pdf> ;
     thinkr:discusses tgs:Concept.DistributedAgency ;
     dct:references tgs:Persona.DanielSchmachtenberger, tgs:Work.ThinkingLikeAMountain ;
@@ -388,6 +395,7 @@ tgs:PanelDiscussion.RR_19_DarkTriad a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.NancyMcWilliams, tgs:Persona.ReidMeloy ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-19> ;
+    dct:isReferencedBy tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Interview.TGS_220_AWorldOnThePrecipice ;
     thinkr:hasReplay <https://www.youtube.com/watch?v=XnHSRCN1iAY>, <https://open.spotify.com/episode/6Rg4noyHxfFpgy8ub6jvZH> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/09/RR-19-Transcript-Dark-Triad-Personality-Traits.pdf> ;
     thinkr:discusses tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
@@ -408,6 +416,7 @@ tgs:PanelDiscussion.RR_20_HackingHumanAttachment a thinkr:Episode, owl:NamedIndi
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.NoraBateson, tgs:Persona.ZakStein ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-20> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_150_Part5PersonalLandscapes ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2025/11/RR-20-Transcript-Hacking-Human-Attachment-1.pdf> ;
     thinkr:discusses tgs:Concept.CarbonPulse, tgs:Concept.DarkTriad, tgs:Concept.Superorganism ;
     thinkr:hasDiscussionSummary "A real division of labor between two friends who never disagree but consistently work from different registers — Zak Stein supplies the mechanistic explanation (mirror neurons, the attachment system versus the attentional system, Harlow's monkeys and operant conditioning, the historical throughline from B.F. Skinner to AI tutors), while Nora Bateson consistently reframes the same point in relational/felt terms (warm data, the missing 'rhythm of breath' in digital communication, the edge of the self). Neither treats this as competing frameworks; each explicitly builds on the other's point rather than substituting for it. The one moment resembling internal friction is Zak checking his own argument's edges rather than disagreeing with Nora — catching himself mid-critique to note that dismissing all technology outright is its own kind of naivety ('how far will you push your techno-pessimism'), and that the same critical tools used against chatbots could equally be pointed at real technological benefits (Novocaine, reliable garbage collection) he doesn't actually want to lose. Nate's own participation is unusually personal for an interview host — he narrates his own emotional arc in real time (a 'pit in my stomach' partway through, open shame about once mocking the Amish for opting out of exactly this risk, then explicit relief and hope by the close), and at one point the conversation is genuinely interrupted by an unplanned real-world moment — a garbage truck's noise triggering his own threat-detection reflex — which he and the guests fold directly into the discussion rather than treat as a distraction, since it illustrates the very embodied, evolved cognition the conversation argues chatbots are bypassing. The clearest moment of real-time concept-building: Nate offers 'wide boundary self-awareness' as his own gloss on Nora's father's old definition of sanity ('the ability to perceive your own epistemology'), and Nora accepts and extends it rather than correcting it."@en ;
@@ -428,6 +437,7 @@ tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace a thinkr:Episode, owl:NamedIndi
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.MarkMedish, tgs:Persona.ChuckWatson ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-21> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/01/RR-21-Transcript-Why-Science-Communication-Fails.pdf> ;
     thinkr:discusses tgs:Concept.DarkTriad ;
     dct:references tgs:PanelDiscussion.RR_19_DarkTriad ;
@@ -448,6 +458,7 @@ tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars a thinkr:Episode, owl:
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.CraigTindale, tgs:Persona.MichaelEvery ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/reality-roundtable-22> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_160_AStateOfTheWorldAddress ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/03/RR-22-Transcript-Could-the-West-Lose-the-Resource-Wars_.pdf> ;
     thinkr:discusses tgs:Concept.GrowthImperative ;
     dct:references tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace ;

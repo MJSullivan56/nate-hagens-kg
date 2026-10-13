@@ -302,11 +302,11 @@ tgs:Concept.PerpetualMulligans a thinkr:Concept, thinkr:HagensConcept, owl:Named
     skos:definition "Hagens' own framing for how cheap, abundant fossil energy has functioned historically as an economic 'do-over' — letting mistakes, inefficiencies, and bad decisions get absorbed and corrected via sheer energy surplus rather than genuine adaptation, a buffer that thins as energy surplus declines."@en .
 
 tgs:Concept.UnicornStrategies a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
-    dcterms:source <https://www.thegreatsimplification.com> ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/151-protect-the-irreversible> ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "Unicorn Strategies"@en ;
-    skos:definition "Hagens' own term for actions that are good moves regardless of which of the 4 composite future Scenarios (see tgs:Scenario) actually comes to pass — genuinely robust across radically different futures rather than a bet on one specific outcome. Named examples from the source episode: ocean conservation, nuclear disarmament, indigenous language preservation."@en ;
-    skos:scopeNote "Deliberately NOT formally linked to thinkr:Scenario via any property — the relationship (robust across all 4 named Scenarios) is real but this session's own 'don't over-link prematurely' discipline applies; noted here in prose instead."@en .
+    skos:definition "Hagens' term (Frankly_151) for deliberately focused commitments -- a single cause someone cares about 'with an intensity that organizes their entire life' -- pursued even though they matter much more in some composite futures than in others, rather than hedged across all of them. His examples: ocean conservation (actions that matter most in futures where the biosphere can still be protected; a shout-out to his friend DJ), nuclear disarmament (preserving a taboo that matters enormously in some worlds and less in others), and preserving an Indigenous language (something that cannot be rebuilt once lost, whatever future it is lost in). They make sense because humans 'are not interchangeable planning units' but beings with particular loves and callings: someone whose life's work is protecting wild salmon runs should not divert that energy to community resilience because a framework told them to hedge. For most people he suggests a mix: a base of robust actions plus one or two unicorn commitments."@en ;
+    skos:scopeNote "Corrected 2026-10-13 against the Frankly_151 transcript. The earlier definition described unicorn strategies as actions robust across all four composite futures, which inverts Nate's meaning; actions that pay off in every future are tgs:Concept.RobustActions, and unicorn strategies are the deliberately focused, unhedged complement. Coda question from the same episode: 'Is there a unicorn commitment deep in you, something you love enough to focus on, even if the work is narrower?'"@en .
 
 #############################################
 # ADDED 2026-08-13 — RR-26 "Why Community Fails" bootstrap.
@@ -949,4 +949,408 @@ tgs:Concept.EnergyGrowthRateDependence a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Energy Growth-Rate Dependence"@en ;
     skos:definition "Art Berman's organizing thesis in TGS-237: the global economy -- and the stories it tells about a better future -- depends not just on a high level of energy supply but on a continually rising rate of growth in that supply, yet the rate of growth in total energy supply has been falling since the late 1960s (the essay the show notes cite, 'The Iran War Phase Shift,' puts the peak of total energy-system growth at about 4.6% in 1968). The world has spent 50-plus years adapting cleverly to that shortfall, which is why an abrupt loss of roughly 10 million barrels a day 'rips the Band-Aid off.' A companion point is overhead: at 8.2 billion people, simply maintaining the existing system takes an enormous and growing share of energy, so holding it up today takes more than supplying the whole system, growth included, took 40-50 years ago; oil demand growth has already slowed from roughly 2 to roughly 1 million barrels a day per year. Berman's recurring emphasis is that rates matter more than absolute amounts -- for markets and for system stability alike."@en ;
     skos:scopeNote "Descriptive label for the thesis Art develops in TGS-237 (and in the essay it cites); neither Art nor Nate coins this term in the episode. Related to but distinct from tgs:Concept.GrowthImperative (debt-based monetary growth, not physical energy-supply growth rates) and tgs:Concept.ComplexityCollapse (the overhead-of-complexity half of the argument is Tainter-like, but Art does not discuss collapse here)."@en ;
+    .
+
+#############################################
+# ADDED 2026-10-09 -- from Frankly_161 'Humanity's Icarus Moment'.
+#############################################
+
+tgs:Concept.HumanitysIcarusMoment a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Humanity's Icarus Moment (Twenty AI Risks)"@en ;
+    skos:definition "Nate's own named framework (Frankly_161) of twenty risks along humanity's flight path with AI, organized by the full Icarus myth, in which Daedalus warned of danger on both sides: fly too high and the sun melts the wax, fly too low and sea spray soaks the feathers. THE WINGS -- what AI is made of: (20) fossil lock-in, (19) the appetite for energy and materials, (18) the efficiency rebound, (17) deflation of a debt-financed build-out, (16) loss of robustness through over-optimization, (15) eating the library. THE SEA -- slow risks we do not feel: (14) the broken apprenticeship (tgs:Concept.BrokenApprenticeship), (13) the dumbing down of humans (cognitive debt), (12) ambient language drifting toward the statistical average, (11) the end of shared reality, (10) captured attachment, (9) the children. THE SUN -- fast risks of power and racing: (8) techno-feudalism, (7) the second bifurcation between AI users and non-users, (6) cognitive colonialism, (5) surveillance, (4) the race to AGI and nuclear stability, (3) military fusion and 'flash war', (2) loss of control. (1) is deliberately left blank -- a nod to humility and emergence -- with the observation that what actually killed Icarus was the delight of flying, which nobody warned him about. Framing premise: AI is a second army of trillions of cognitive workers added to a civilization that has never recognized its first army of fossil energy slaves (tgs:Concept.EnergySlaves), and in most cases it acts as an upgrade to the growth-seeking superorganism (tgs:Concept.Superorganism) rather than an escape from it."@en ;
+    skos:scopeNote "Nate's numbering counts down from 20 to 1. He says he cut an original list of 35 to reach twenty, and that many of these risks deserve their own episodes. Related, earlier AI typologies: tgs:Concept.EightFacesOfAI (Frankly_96, how individuals relate to AI) and tgs:Concept.CorporationsAsMisalignedAI (Frankly_159), which risk #2's closing remark echoes without naming."@en ;
+    .
+
+tgs:Concept.BrokenApprenticeship a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "The Broken Apprenticeship"@en ;
+    skos:definition "Nate's name (risk #14 in Frankly_161) for what happens when companies, one by one, make the economically rational decision to stop hiring at the entry level: keep the senior people, give them a large language model, and skip the young. The routine work being automated -- a paralegal reading a thousand contracts, a junior accountant building spreadsheets -- is how a field transmits knowledge to its next generation, because it is routine, language-intensive and supervised. Judgment, the thing senior people are kept on for, was built by years of doing that work poorly and being corrected. Each firm's choice is correct on a narrow, quarterly-earnings boundary; together they eat the seed corn of every profession at once and invert the pyramid of institutional and professional structures. Within five to twenty years, nobody can do the work without the model, and nobody can tell when the model is wrong."@en ;
+    dcterms:source <https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/> ;
+    skos:scopeNote "Evidence Nate cites: tgs:Work.CanariesInTheCoalMine (employment of 22- to 25-year-olds in the most AI-exposed jobs falling relative to older workers -- 13% in the August 2025 release, 19% in the 12 August 2026 revision). The show notes also point to Matt Beane's research on tacit knowledge and supervised routine work (The Skill Code), not built. A sea-side risk in Nate's framing: slow, and invisible on a narrow-boundary scorecard."@en ;
+    .
+
+#############################################
+# ADDED 2026-10-10 -- from TGS_202 (Samantha Sweetwater, 'True Human').
+#############################################
+
+tgs:Concept.LogicOfSeparation a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "The Logic of Separation (Five Domains of Separation)"@en ;
+    skos:definition "Samantha Sweetwater's framing (TGS_202; developed in tgs:Work.TrueHuman) of what underlies the metacrisis: a world structured according to 'the logic of separation,' the idea that anything can be separated from anything else -- ultimately a species separating itself from the Gaian processes that made it. She maps it across five domains: (1) an evolutionary age -- a neutral, Gaian epoch in which a species complex enough to tell stories and build technology differentiates a sense of self from the biosphere, punctuated by agriculture, fiat currency and religions that export the divine from place, and culminating in the Anthropocene, with Thomas Berry's Ecozoic or the Symbiocene as what might follow; (2) stories that reify separation, such as Manifest Destiny or humans at the top of an evolutionary pyramid; (3) structures that reify it, such as houses whose walls don't breathe, monocropping, or reducing climate to a single carbon metric; (4) game-theoretic separation -- a growth-dependent, GDP-measured economy whose incentives require people to cut themselves off from what they feel; and (5) ideologies of dominion, particularly patriarchy and racism, which organize power in ways that block a sense of shared belonging. Its opposites are interdependence (a fact of flows of matter, energy and communication) and interbeing (Thich Nhat Hanh's term for the felt, interior recognition of shared reality)."@en ;
+    thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
+    skos:scopeNote "Sweetwater credits Daniel Schmachtenberger's TGS discussion of the age of separation (TGS_20) for mapping the historical sequence; the five-domain structure is hers. She notes the five domains are not equally charged: the first she treats as neutral, the fifth as 'the edgy zone.' Related: tgs:Concept.Metacrisis."@en ;
+    .
+
+tgs:Concept.PowerOfLifeVsPowerOverLife a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Power of Life vs. Power Over Life"@en ;
+    skos:definition "A distinction central to Samantha Sweetwater's tgs:Work.TrueHuman, discussed in TGS_202. Power over life is oriented to narrow goals and discrete objectives -- instrumentalizing work, generating profit, gaining optionality -- without caring for the costs it externalizes, whether physical, mental, emotional or ecological. The power of life is already present everywhere: breathing, a plant exhaling, the pulse of blood, cognition, a mutually meaningful conversation. Her question for each person is how to participate in processes that bind power over life so that the power of life 'wins the game' -- citing Daniel Schmachtenberger's argument that, with existential technology, an unbound power-over-life game becomes omni-lose. Practical forms she offers include withdrawing attention from power games and multiplying non-transactional acts of reciprocity."@en ;
+    thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
+    skos:scopeNote "Nate says he ends many of his recent presentations with a chessboard image (factories versus trees) captioned 'power versus life?', and in TGS_202 he maps the distinction onto his own framing: the economic superorganism (tgs:Concept.Superorganism), the maximum power principle (tgs:Concept.MaximumPowerPrinciple) and the outsized influence of dark-triad personalities (tgs:Concept.DarkTriad; Frankly_108). Sweetwater agrees that binding dark-triad influence is one domain of the question. Close to, but distinct from, Nate's own tgs:Concept.InServiceOfLife."@en ;
+    .
+
+tgs:Concept.KinshipJourney a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The Kinship Journey"@en ;
+    skos:definition "Samantha Sweetwater's term (TGS_202; tgs:Work.TrueHuman) for what she describes as an epochal shift in the primary narrative of personal development, away from the hero's journey (tgs:Concept.HerosJourney). The hero's journey begins when you realize you need to understand yourself; the kinship journey begins when you realize that disconnection is the problem -- which she links to crises of addiction and loneliness, climate anxiety, political distress, and executives realizing their value chains are 'participating in the end of the world.' It is the recognition that a life cannot be meaningful unless you find how you are part of the ecology, in service to something larger than yourself. She frames it as a counter to hyper-individualism, noting that most indigenous societies valued individual sovereignty without treating it as the only thing that mattered."@en ;
+    skos:scopeNote "Sweetwater credits Dan Siegel's description of a shift in personal development from 'me' to 'we' ('MWe'; not built in this graph). In TGS_202 Nate challenges it with multilevel selection (David Sloan Wilson and E.O. Wilson: selfish individuals beat cooperators within groups, cooperative groups beat selfish ones); her answer is that insecurity underlies the emergence of fascism, and that security lies more in the 'we' than in the 'me.'"@en ;
+    .
+
+tgs:Concept.HerosJourney a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The Hero's Journey (Monomyth)"@en ;
+    skos:altLabel "Monomyth"@en ;
+    skos:definition "Joseph Campbell's 'monomyth,' set out in The Hero with a Thousand Faces (1949), a term he borrowed from James Joyce's Finnegans Wake: a pattern Campbell found across myths and religions in which a hero leaves the everyday world, undergoes trials and a decisive victory, and returns transformed, with the power to benefit others. Its three phases -- separation (or departure), initiation and return -- Campbell called 'the nuclear unit of the monomyth' and 'a magnification of the formula represented in the rites of passage'; he subdivided them into 17 stages. Widely popularized through George Lucas's Star Wars (1977), Christopher Vogler's 12-stage screenwriting adaptation (The Writer's Journey), and Bill Moyers's 1988 interviews with Campbell, The Power of Myth."@en ;
+    dcterms:source <https://www.jcf.org/learn/joseph-campbell-heros-journey>, <https://en.wikipedia.org/wiki/Hero%27s_journey> ;
+    skos:scopeNote "Minted 2026-10-10 because Samantha Sweetwater names it in TGS_202 as the dominant narrative of personal development that her tgs:Concept.KinshipJourney is meant to succeed. Her one-line characterization there -- the hero's journey 'begins when you realize that you need to understand yourself' -- is her reading of it as a story of individual self-development; Campbell's own first stage is the call to adventure. Noted criticisms: folklorists such as Alan Dundes and Barre Toelken argue Campbell selected stories that fit the model; others call it Eurocentric and masculine-centered, prompting alternatives such as Maureen Murdock's The Heroine's Journey (1990). Source work: tgs:Work.TheHeroWithAThousandFaces."@en ;
+    thinkr:influencedBy tgs:Persona.JosephCampbell ;
+    .
+
+tgs:Concept.WalrusMovementBlindspots a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.OvershootAndLimits ;
+    skos:prefLabel "Key Blindspots of the Walrus Movement"@en ;
+    skos:definition "Nate's named list (Frankly_105) of nine blindspots in what he calls the 'walrus movement' -- a playful placeholder for people championing bold social and ecological ideals, used instead of labels that have become culture-war identities. Organizing claim: a worldview can be morally right but biophysically untenable. The nine, in the companion essay's wording: (1) Profit and Extraction Are Bad; (2) The Main Problem Is Capitalism; (3) Authoritarianism Is a Right-Wing Phenomenon; (4) A Fair Society Means Equal Outcomes; (5) Fossil Fuel Companies Are Primarily to Blame; (6) Renewables Can Replace Fossil Fuels; (7) We Can Print Our Way to Prosperity; (8) Reality Is Subjective; (9) Human Rights Are Unbounded. Each is answered from a biophysical or evolutionary angle: surplus-seeking as optimal foraging, capitalism as software on ancient social-primate hardware in service of the Superorganism, authoritarianism as a stress response of any ideology, money as a claim on energy and materials, and rights as agreements contingent on surplus."@en ;
+    dcterms:source <https://natehagens.substack.com/p/essay-key-blindspots-of-the-walrus> ;
+    skos:scopeNote "Framed by Nate as the counterpart to tgs:Concept.TenCoreMythsOfBusinessSchools (Frankly_99), after viewers asked him to critique the other side. He declined to write a matching list for conservatives, saying that critique would concern values and narrow boundaries rather than facts and systems. Related: tgs:Concept.PurityVsEffectiveness (purity politics), tgs:Concept.Wetware (evolved hardware), tgs:Concept.MoneyAsClaimOnEnergy and tgs:Concept.CantillonEffect (blindspot 7), tgs:Concept.EnergyAdditionsNotTransitions (blindspot 6)."@en ;
+    .
+
+tgs:Concept.CantillonEffect a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.MonetarySystemAndGrowth ;
+    skos:prefLabel "Cantillon Effect"@en ;
+    skos:definition "The observation, named for the eighteenth-century economist Richard Cantillon, that newly created money does not reach everyone at once: those closest to where it enters the economy (banks, asset markets, government contractors) benefit first, before prices rise, while those furthest away (wage earners and the poor) meet the higher prices later. Nate uses it in Frankly_105 to argue that money printing works as a regressive tax: owners of stocks and real estate see their net worth balloon while the poor feel rising rents and food and fuel prices 'earlier and harder.'"@en ;
+    dcterms:source <https://fee.org/articles/the-cantillon-effect-because-of-inflation-we-re-financing-the-financiers/> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_105's critique of Modern Monetary Theory (blindspot 7 of tgs:Concept.WalrusMovementBlindspots). Nate extends it two ways: taxes that later claw back new money arrive after the gains have become hard-to-tax assets, so even progressive taxes leave the first-round skew in place; and because the dollar is the reserve currency, US money creation exports inflation to countries that borrow or buy food, fuel and raw materials in dollars. Related: tgs:Concept.MoneyAsClaimOnEnergy."@en ;
+    .
+
+tgs:Concept.PriceCostAndValue a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Price, Cost and Value"@en ;
+    skos:altLabel "Blueberry moment"@en ;
+    skos:definition "Nate's three-way distinction (Frankly_104): price is what the sticker says; cost is the full ecological and replacement cost, which never appears on the sticker; value is what the thing actually does for us. The price shapes the story we tell ourselves about what something is for -- the same pint of blueberries was a snack for his ducks at $1 and too good for them at $5 -- so cheapness drives consumption the price does not justify. Applied to energy: fossil fuels are priced far below both their cost (environmental damage) and their value (a gallon of gasoline at $3 delivers, in his estimate, perhaps a thousand times that in wide-boundary benefit), so we burn them 'like feeding blueberries to ducks.' A 'blueberry moment' is noticing that a price, not the thing itself, changed how you treat something."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_104. Related: tgs:Concept.EnergyBlindness (energy treated as just another priced input), tgs:Concept.EnergySlaves (the value side of fossil energy, from Reality Blind's 'Our Fossil Armies' chapter), tgs:Concept.EightForcesOnPrices (Frankly_115, what drives prices), tgs:Concept.WideBoundarySunkCost (Frankly_116, another wide-boundary widening of a standard economic idea)."@en ;
+    .
+
+tgs:Concept.GhostOfDopaminePast a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.BehavioralEconomicsAndCognition ;
+    skos:prefLabel "The Ghost of Dopamine Past"@en ;
+    skos:definition "Nate's term (Frankly_103) for the way our recent and distant past behavior carves neural pathways that require ever-higher baseline dopamine to feel normal. Because dopamine signals reward prediction error (tgs:Concept.RewardPredictionError), a life of constant high stimulation -- notifications, metrics, games -- raises the expected reward, and quiet, ancestrally normal experiences (a doe and fawn on the road, half an hour on a park bench watching birds, reading a book) no longer register. A hungry ghost of dopamine past produces an over-consumptive 'ghost of dopamine present' and narrows the 'ghost of dopamine future': we can only imagine futures that keep us on the high treadmill. Remedies he offers: dopamine fasting, a pause between trigger and response, lowering the stimulation baseline (grayscale phones), and socializing the dopamine."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_103. Nate presents it as a driver mainly in the technologically connected global North and West, with implications for planetary boundaries because cultural reward-seeking runs through material consumption. Related: tgs:Concept.SupernormalStimuli, tgs:Concept.Wetware, tgs:PersonalIntervention.LowerDopaminePeaks (the grayscale-phone practice he credits to Audrey Tang). Earlier passing use: Nate names the ghost of dopamine past in Frankly_101 (published 11 July 2025), three weeks before this episode."@en ;
+    .
+
+tgs:Concept.RewardPredictionError a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.BehavioralEconomicsAndCognition ;
+    skos:prefLabel "Reward Prediction Error"@en ;
+    skos:definition "The finding, from Wolfram Schultz and colleagues' recordings of midbrain dopamine neurons in monkeys, that dopamine signals the difference between expected and actual reward rather than reward itself: neurons fire most when a reward is better than expected, not at all when it matches expectation, and below baseline when an expected reward fails to arrive. Once a cue reliably predicts a reward, the firing moves from the reward to the cue. Dopamine therefore works as a learning signal, which explains adaptation to good circumstances and why anticipated pleasures feel smaller than unexpected ones."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Wolfram_Schultz> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_103, where Nate describes the experiment in detail as the foundation for tgs:Concept.GhostOfDopaminePast and draws out implications for addiction, motivation, decision-making and planetary boundaries. Landmark paper: Schultz, Dayan and Montague, 'A neural substrate of prediction and reward,' Science (1997)."@en ;
+    thinkr:influencedBy tgs:Persona.WolframSchultz ;
+    .
+
+tgs:Concept.WetBulbTemperature a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Wet-Bulb Temperature"@en ;
+    skos:definition "A single measure combining heat and humidity: the lowest temperature to which air can be cooled by evaporating water into it, which is how hot conditions feel to a body cooling itself by sweating. The higher the dew point, the more moisture in the air and the harder it is for sweat to evaporate. At a sustained wet-bulb temperature of about 35 C (95 F), humans can no longer cool themselves even in shade with a breeze and unlimited water, which is why rising dew points and wet-bulb events are a growing concern in a warming world."@en ;
+    dcterms:source <https://www.weather.gov/tsa/wbgt> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_102, where Nate arrives at it through 'corn sweat': an acre of corn transpires 3,000 to 4,000 gallons of water a day (fast-growing GMO varieties perhaps 6,000), raising the local dew point by 3 to 5 F during Midwestern summers (Ohio State Extension, linked in the show notes). The 35 C figure is the commonly cited theoretical limit; later laboratory work suggests the practical limit for many people is lower."@en ;
+    .
+
+tgs:Concept.ClimateCreditCrunch a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Climate-Induced Credit Crunch"@en ;
+    skos:definition "The warning, set out in 2025 by Allianz board member Günther Thallinger, that climate risk threatens the financial system through insurance: when property can no longer be insured, it cannot be mortgaged, banks stop lending against it, and credit markets freeze -- not only for housing but for infrastructure, transportation, agriculture and industry. The economic value of whole coastal and wildfire-prone regions would 'begin to vanish from financial ledgers' and markets would reprice 'rapidly and brutally.' His conclusion: 'There is no capitalism without functioning financial services, and there are no financial services without the ability to price and manage climate risk.'"@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_102, where Nate reads the post at length. His own additions: he doubts markets can solve it, since they price risk while also requiring growth (money is created without the interest needed to repay it -- tgs:Concept.GrowthImperative, tgs:Concept.Superorganism), and he expects credit risk to arrive before 1.5, 1.75 or 2 degrees of warming. He describes ecology and finance as two conversations with a growing overlap."@en ;
+    thinkr:influencedBy tgs:Persona.GuntherThallinger ;
+    .
+
+tgs:Concept.EmpathyHandicap a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The Empathy Handicap"@en ;
+    skos:definition "Nate's term (Frankly_102) for the possibility that people with a wider boundary of care carry a heavier psychological load. Responding to data showing higher rates of mental-health diagnoses among young US liberals, especially liberal women -- a pattern online commenters mocked as weak-mindedness -- he proposes instead that progressives tend to have a wider boundary of empathy and concern, and that women tend to have shallower discount rates than men (weighing the future more heavily), so those attending to the sixth mass extinction, ocean change and climate decades ahead have more to worry about than people who do not care or think it a hoax."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_102. Offered by Nate as a hypothesis he wants to explore with a guest, not a finding; he notes he could not trace the source of the viral chart but found a published figure (linked in the show notes) showing the same pattern. Related: tgs:Concept.DiscountRatesAndPresentBias."@en ;
+    .
+
+tgs:Concept.WhatIWantToWant a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "What I Want to Want"@en ;
+    skos:definition "Nate's framing (Frankly_101) of second-order desire: not what we want, which is shaped by youth, culture, advertising, status games and the 'ghost of dopamine past,' but what we would want to want, judged from a future vantage point perhaps beyond our own lifetimes. His own list of thirteen: basic needs; stability; agency; restraint ('guardrails for the commons'); full-spectrum love; friendship and networks; community; a craft; entertainment, novelty and play; curiosity, wonder and awe; daily access to the natural world; a non-human companion; and purpose. Most are internal and durable 'in good times or bad, with money or with no money'; none requires yachts, skyscrapers or brand names, since once basic needs are met 'most of the best things in life are free or close to it.' He argues any real conversation about the future should start here, with desire, rather than with technology or policy."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_101. Presented as personal foundations of humanity rather than goals, with an invitation for viewers to write their own list. Nate ties the gap between what we want and what we would want to want to sunk cost in culture and in our own lives (see tgs:Concept.WideBoundarySunkCost, Frankly_116). Related lists: tgs:Concept.CulturalMitochondria (Frankly_98), tgs:Concept.TenThingsWorthMoreThanGold (Frankly_106)."@en ;
+    .
+
+tgs:Concept.CollectiveMaturity a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Collective Maturity"@en ;
+    skos:definition "Nate's framing (Frankly_160) of the response the predicament asks of us: 'I'm not going to ask you for optimism, and I'm not asking you to despair. I am merely asking you for maturity.' Maturity here means recognizing, at scale, that the energy system that delivered unprecedented material abundance is the same one now threatening the ecological stability we depend on; accepting that 'there are no answers to what we face. There are only responses,' and that those responses will not be fair, since those who did least to cause the damage will suffer most; and acting anyway, because responses aggregate -- in how we grow food, how much and what kind of energy we use, and how we treat our neighbors, human and animal -- moving the future between 'the default and the possible.' Its emotional stance is facing what comes 'with open eyes and hearts.'"@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_160, whose show notes describe the moment as 'a test of collective maturity' and add that there is 'no single solution or clean reset.' Related: tgs:Concept.PredicamentNotProblem (responses, not answers), tgs:Concept.FrameworkForAction (Frankly_132, responses that aggregate), tgs:Concept.MoreThanHumanPredicament; the open-eyes stance echoes Frankly_152 ('Watch With Both Eyes Open')."@en ;
+    .
+
+tgs:Concept.MultipolarTrap a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsFrameworks, tgs:Subject.Geopolitics ;
+    skos:prefLabel "Multipolar Trap"@en ;
+    skos:definition "A coordination failure in which many competing actors each act rationally in their own interest and together produce an outcome that is worse for all of them, while no single actor can step out without being outcompeted. Nate's plain-language version (Frankly_160): if all of nearly two hundred nations used less energy together, all would benefit, but a country that restrains itself alone falls behind economically and militarily, and its leaders are replaced by someone promising growth -- 'What is best for all of us is not what is best for each of us.' A widely used term in TGS conversations about the metacrisis, closely related to the collective action problem and the tragedy of the commons."@en ;
+    dcterms:source <https://conversational-leadership.net/multipolar-trap> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_160, whose show notes link both the multipolar trap and the collective action problem (with a Reality Blind chapter) at the point where the speech explains why governments have failed to act for fifty years. The term is most associated in TGS with Daniel Schmachtenberger's conversations on the metacrisis; worth linking from those episodes as they are enriched. Related: tgs:Concept.GrowthImperative, tgs:Concept.Superorganism."@en ;
+    thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
+    .
+
+tgs:Concept.ProtectTheIrreversible a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsFrameworks, tgs:Subject.OvershootAndLimits ;
+    skos:prefLabel "Protect the Irreversible"@en ;
+    skos:definition "Nate's compass for planning under uncertainty (Frankly_151): some losses can be rebuilt and some cannot, so spend disproportionate effort protecting the irreversible and accept more risk on the reversible. At the scale of one person the distinction is obvious -- you can make back $100,000 but cannot regrow an arm -- but civilizational planning weighs a dollar of lost GDP the same as an inch of lost topsoil. Reversible: money, market positions, consumer goods, jobs and careers. Irreversible or practically irreversible: topsoil, fossil aquifers such as the Ogallala, species, pollinator populations, social trust, institutional knowledge, the nuclear taboo, children's developmental windows, and personal health past a threshold. Current culture inverts the priority, optimizing quarterly earnings and GDP while letting the irreversible erode; the correction is to be willing to lose money, efficiency or comfort to protect what cannot come back."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_151, whose title is this principle. Closely related to tgs:Concept.ShortfallRisk (Frankly_138), which names the danger of something essential falling below an unrecoverable threshold; this concept is the prioritization rule that follows from it. Nate frames it as the response to two failure modes: type II errors of omission and type I errors of acting on a partial map -- above all, treating permanent growth as certain. Related: tgs:Concept.RobustActions."@en ;
+    .
+
+tgs:Concept.RobustActions a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsFrameworks, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Robust Actions"@en ;
+    skos:definition "Nate's term (Frankly_151) for actions that produce lasting value whichever composite future arrives, so they can be taken decisively without certainty -- in contrast to speculation, which 'bets everything on one outcome' and loses everything if wrong. His examples: building soil health; food security and ecological resilience; strengthening relationships with people within walking distance, since community ties built before a crisis are 'exponentially more valuable' than ones built during it; learning practical skills (food production, repair, basic medical knowledge, water management, building, teaching); reducing dependence on fragile overseas supply chains; and protecting local watersheds, pollinators and soil biology. He likens the logic to ecological resilience: organisms robust across many environments persist through change even if less optimized for any one, so under real uncertainty 'robustness beats out optimization.'"@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_151. Contrast: tgs:Concept.UnicornStrategies, deliberately focused commitments that are not hedged across futures; Nate suggests most people combine a base of robust actions with one or two unicorn commitments. Related: tgs:Concept.RobustnessVsPerformance (Olivier Hamant, TGS_230), tgs:Concept.ProtectTheIrreversible, tgs:Concept.LandscapeOfPossibleFutures (robust actions as switchbacks in almost every landscape)."@en ;
+    .
+
+tgs:Concept.PersonalCompositeFutures a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsFrameworks ;
+    skos:prefLabel "Personal Composite Futures (Foundations Before Outcomes)"@en ;
+    skos:definition "Nate's personal-scale version (Frankly_150) of the four composite worlds from his How to Think About the Future series. Two dimensions we navigate: throughput (is your material throughput and complexity expanding or simplifying, and is that regenerative or extractive for you?) and agency (who controls your time and attention, and who captures the value -- your biology, social expectations, financial obligations and attention platforms standing in for military, political, financial and technological power). Two slower foundations that constrain both: the body and nervous system ('your personal earth system,' which 'bats last') and the relational web (the people who would come at two in the morning). Combined, they give four personal composites: personal Long Repair (deliberate simplification, real agency, intact foundations -- the only regenerative path, and one that looks like failure by culture's growth-and-productivity scoreboard); personal Mordor (expanding throughput and captured agency while drawing down health and relationships); personal Fortress (prepared but isolated, an illusion of control); and personal Unraveling (several areas failing at once, setbacks arriving before recovery). The principle: foundations before outcomes -- no amount of good decisions about throughput and agency makes up for crumbling foundations."@en ;
+    dcterms:source <https://natehagens.substack.com/p/essay-foundations-before-outcomes> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_150. Maps to the four tgs:Scenario composite worlds of Frankly_148 (the Long Repair, More Mordor, Fortress World, the Unraveling) without asserting a formal link, matching the series' existing practice. Includes Nate's term 'personal switchbacking' for unglamorous foundation work -- sleep, walks, cooking, unhurried time with others, putting the phone down -- an individual-scale application of tgs:Concept.LandscapeOfPossibleFutures. He also carries over the series' asymmetry: under stress it is easier to slide from personal Long Repair into personal Fortress than to climb from personal Mordor into personal Long Repair. Related: tgs:Concept.PersonalAgency, tgs:Concept.PerpetualMulligans, tgs:Concept.RedQueenEffect."@en ;
+    .
+
+tgs:Concept.HealingVsDying a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsFrameworks, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Healing vs. Dying (Stable Is Not Good)"@en ;
+    skos:definition "Nate's argument (Frankly_148) that a culture calibrated to growth cannot easily tell a healing contraction from a dying one. A system can be 'rock solid stable and deeply ill at the same time': Mordor Persists is stable 'the way cancer is stable' -- self-perpetuating and, by the body's own measures, vigorous -- while it eats its host, and financial markets, quarterly earnings and GDP 'are basically measuring blood flow to a tumor and calling the patient healthy.' Conversely the Long Repair, the future most worth striving toward, reads as decline by every current yardstick (consumption, GDP, physical wealth) and so triggers a gut-level dread, because our nervous systems cannot distinguish 'the tumor is shrinking because the patient is dying' from 'the tumor is shrinking because the patient is healing.' The Superorganism resists the Long Repair the way a body resists a treatment that makes you feel worse before you feel better. Nate calls this conflation, at the level of a whole culture, possibly 'one of the deepest challenges in the entire more than human predicament.'"@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_148. Carried forward by Nate in Frankly_150 (at the scale of one life: the personal future most worth building 'looks like failure' to a culture measuring growth and productivity) and recapped in Frankly_151. Builds on Part 3's point that stable is not the same as good (tgs:Concept.LandscapeOfPossibleFutures). Related: tgs:Concept.PersonalCompositeFutures, tgs:Concept.GrowthImperative."@en ;
+    .
+
+tgs:Concept.SingleStoryThinking a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.BehavioralEconomicsAndCognition ;
+    skos:prefLabel "Single-Story Thinking"@en ;
+    skos:definition "Nate's name (Frankly_138) for the human default of holding one storyline about the future and filtering everything else through it -- the viewer convinced of imminent economic collapse finds ecological restoration a luxury; the one convinced AI will change everything finds soil biology quaint; the one who thinks global heating is a hoax finds climate episodes a waste of time. He sees three reasons it persists: nervous systems want certainty, because holding several possibilities open is metabolically expensive and resolution lets the mind stop working; careers and identities attach to particular futures (green growth, techno-optimism, peak oil, collapse awareness, colonizing Mars), so people 'defend their futures much the same way they defend their families'; and institutions reward confident stories over honest uncertainty. Most competing storylines are not wrong but incomplete -- different slices, layers or time horizons of one coupled system. Religion was the older version, a single story held by everyone around you, and deep cultural stories (progress as the natural shape of history, humans separate from nature, more stuff is better) still shape what people think possible more than data does."@en ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_138. The problem to which tgs:Concept.ScenarioThinking is Nate's answer; he frames the move as going from forecasting (trying to be right) to scenario thinking (being prepared for several futures and contributing to the better ones), and says both dominant cultural narratives -- 'everything will be fine because technology' and 'everything's going to collapse' -- lead people to check out. Show notes link a talk titled 'The Danger of Single Story Thinking' and research on narrative as active inference (tgs:Concept.NarrativeAsActiveInference). Related: tgs:Concept.Wetware, tgs:Concept.TerrorManagementTheory."@en ;
+    .
+
+tgs:Concept.FivePathwaysThroughDread a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Five Pathways Through Dread"@en ;
+    skos:definition "Nate's framework (Frankly_142) for metabolizing dread rather than being consumed by it, offered as directional, not as silver bullets: (1) mental reframing -- not denying the data but choosing, among true statements, the ones that leave you able to act ('we are on a historical precipice... and I am alive to witness and participate in this' rather than 'we are doomed'), after Viktor Frankl; (2) the body -- long exhales, vagal toning, cold water, walking outdoors, and Peter Levine's somatic discharge of an incomplete fight-or-flight response; (3) agency -- a real action within reach sends the threat system a different signal, since dread is 'being acted upon by a future that you cannot influence'; (4) community -- dread held with others is lighter because nervous systems co-regulate, and lonely dread is the worst kind; (5) befriending the darkness -- for those with baseline stability, going into dread rather than around it (Buddhist, Stoic and mystical traditions, Francis Weller, Joanna Macy) until it transforms not into hope but into presence. Paired with five steps for the moment dread arises: name it out loud (Daniel Siegel's 'name it to tame it'), locate it in the body, take five long exhales, do one thing within reach today, and find one person to sit with this week."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/Dread-Guide.png> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_142 (A Guide to Staying Human, Part 2). The dcterms:source is the show notes' one-page 'A Practice for Dread' guide. Builds on tgs:Concept.PersonalAgency (Part 1) and leads into tgs:Concept.Presence and tgs:Concept.DefaultModeNetwork (Part 3, Frankly_143). Nate notes that the fifth pathway assumes some stability and that people in acute crisis should seek professional support (the show notes give the 988 Lifeline). Related: tgs:Concept.Dread, tgs:Concept.AllostaticLoad."@en ;
+    .
+
+tgs:Concept.AllostaticLoad a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Allostatic Load"@en ;
+    skos:definition "The cumulative physiological wear from chronic or repeated stress-response activation. Nate's account (Frankly_142): the amygdala, HPA axis and cortisol response evolved for threats that are immediate, brief and physical, after which the cortisol clears; slow-moving, abstract, systemic threats trigger the same machinery but offer no running or fighting to discharge it, so cortisol stays elevated for weeks or years. The cost: impaired hippocampal memory formation, a weakened prefrontal cortex (planning and impulse control), dysregulated sleep and immune function, and a push toward addictive behaviors that temporarily silence the alarm -- narrowing the cognitive bandwidth needed to face the very threat being dreaded."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Allostatic_load> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_142; Nate returns to it in Frankly_150 (show notes link 'cortisol, allostatic load' where he describes running on 'caffeine and cortisol and compulsions'). The physiological mechanism beneath tgs:Concept.Dread."@en ;
+    .
+
+tgs:Concept.FivePathwaysToPresence a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Five Pathways to Presence"@en ;
+    skos:definition "Nate's framework (Frankly_143) for returning from future capture to the present, offered as directions rather than a sufficient program: (1) the senses -- 'the mind cannot be in the future and in the body at the same time,' so ask what you hear, see and touch; somatic attention quiets the default mode network (Thich Nhat Hanh: drink the tea, wash the dish, walk the path); (2) the pause -- notice the almost subliminal window between the impulse to reach for the phone, news or email and the reaching, and what the reaching takes you away from; (3) single-tasking -- the brain does not do two attentional tasks at once but switches badly, so multitasking is 'one of the great lies' of the late industrial era; (4) beauty -- after Iain McGilchrist, the nervous system is built to be arrested by beauty, and letting yourself be stopped by it 'is the practice of presence'; (5) the gift of finitude -- the metacrisis-aware person's sharpened sense that everything is contingent and unrepeatable, which held one way drives dread and held another drives presence, since the present is the only place contingent things can be received. With three daily practices: don't scold yourself for leaving (the coming back is the practice), choose one daily encounter to be fully present for, and receive each thing as if it were the last."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/wp-content/uploads/2026/05/practice_for_presence.jpg> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_143 (A Guide to Staying Human, Part 3); the dcterms:source is the show notes' one-page 'A Practical Guide for Practicing Presence.' Companion to tgs:Concept.FivePathwaysThroughDread (Part 2): dread is what future capture feels like, and these pathways address what it does to attention. Nate distinguishes three kinds of leaving the present: healthy mental time travel that returns, drift, and tgs:Concept.FutureCapture. Related: tgs:Concept.Presence, tgs:Concept.DefaultModeNetwork, tgs:Concept.SupernormalStimuli."@en ;
+    .
+
+tgs:Concept.UphillAndDownhillFutures a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsScience, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Uphill and Downhill Futures"@en ;
+    skos:definition "Nate's claim (Frankly_145) that futures are not equally reachable: downhill futures are the path of least resistance that current momentum and incentives already favor and that take no new energy or coordination to reach, while uphill futures take sustained effort to reach and sustained effort to remain in. The easiest futures are not the most desirable; high-trust, coordinated systems such as democracy are energetically costly to maintain, while degraded, low-trust, coercive systems are 'in a thermodynamic sense, the lower energy state' that systems roll toward when effort stops. In 2026 he names economic contraction plus adversarial geopolitics plus concentrated power as the downhill path, and contraction with cooperative geopolitics and shared power as possible but uphill. Uphill is not impossible (living cells, spawning salmon and redwoods lifting water all succeed at uphill projects); it means the climb has costs and stopping short means sliding back. The tilt shifts over time as energy descent, climate change and biodiversity loss reshape the terrain, and it depends on where one stands."@en ;
+    dcterms:source <https://natehagens.substack.com/p/essay-uphill-futures-in-a-downhill> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_145. Complements tgs:Concept.LandscapeOfPossibleFutures, which holds the terrain vocabulary (valleys, ridges, switchbacks, erosion); this concept holds the directional claim about which way the terrain tilts. Related: tgs:Concept.TheSenecaEffect (the asymmetry of growth and collapse), tgs:Concept.AlternativeStableStates."@en ;
+    .
+
+tgs:Concept.EpigeneticLandscape a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "Epigenetic Landscape (Waddington Landscape)"@en ;
+    skos:definition "Conrad Waddington's 1950s image of cell development as a ball rolling down a surface of branching valleys: a stem cell starts with many possible fates, and at each fork some close off until it settles into a committed type (heart, liver, neuron) that it will not leave without extraordinary intervention. Valleys differ in depth and the ridges between them in height, so some transitions between cell states are easy and others need enormous energy or rare conditions. Set out in The Strategy of the Genes (1957). Nate uses it in Frankly_145 as the biological source of his landscape of civilizational futures."@en ;
+    dcterms:source <https://journals.biologists.com/dev/article/152/14/dev204617/368764/From-genes-to-patterns-five-key-dynamical-systems> ;
+    thinkr:influencedBy tgs:Persona.ConradWaddington ;
+    skos:scopeNote "Minted 2026-10-13 as the external concept behind tgs:Concept.LandscapeOfPossibleFutures, which is Nate's reframing of it for societies."@en ;
+    .
+
+tgs:Concept.AlternativeStableStates a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Alternative Stable States"@en ;
+    skos:definition "The ecological finding that a system can settle into more than one self-reinforcing state under similar conditions, and that the shift between them is often asymmetric (hysteresis): a tipping point is crossed quickly, but returning needs far more than removing the original stressor. Nate's example in Frankly_145 is a lake: a few years of nutrient runoff can flip a clear, plant-rich lake into a murky, algae-dominated one held in place by a self-perpetuating loop, while flipping it back, even after the runoff stops, can take decades because the plants, oxygen, fish and nutrient cycles must all be rebuilt. He applies the same asymmetry to societies: a slide from democracy to authoritarianism can take months, the return a generation or more."@en ;
+    dcterms:source <https://esd.copernicus.org/articles/15/653/2024/> ;
+    skos:scopeNote "Minted 2026-10-13 for Frankly_145. In Nate's terrain vocabulary these are the 'valleys' of tgs:Concept.LandscapeOfPossibleFutures; the asymmetry is what he links to tgs:Concept.TheSenecaEffect."@en ;
+    .
+
+tgs:Concept.EscalationTrap a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.Geopolitics ;
+    skos:prefLabel "Escalation Trap"@en ;
+    skos:definition "Robert Pape's three-stage model of how a militarily successful attack becomes a strategic failure (TGS_235). Stage one: the attacker's bombs hit their aim points and kill the leaders, a tactical success. Stage two: the attacked side does not collapse but gains power, motivated by survival, so the attacker has failed strategically. Stage three: the attacker cannot simply walk away, because withdrawing would leave the opponent's new power in place, so it keeps debating and attempting further escalation. Pape says his twenty years of modeling US strikes on Iran always produced this pattern, that other escalation traps exist in history, and that the 2026 Iran war is the worst: Iran's selective, orchestrated control of the Strait of Hormuz gave it leverage over a fifth of the world's oil, unlike North Vietnam after 1975, so the US could not exit as it did from Vietnam."@en ;
+    dcterms:source <https://escalationtrap.substack.com/> ;
+    thinkr:influencedBy tgs:Persona.RobertPape ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_235. Pape names his running Substack analysis after it (tgs:Work.EscalationTrapSubstack). Related: tgs:Concept.SecondPrecisionRevolution (the means by which Iran gained power in stage two), tgs:Concept.PunishmentStrategy (why escalation by punishment deepens the trap)."@en ;
+    .
+
+tgs:Concept.SecondPrecisionRevolution a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.Geopolitics ;
+    skos:prefLabel "Second Precision Revolution"@en ;
+    skos:definition "Robert Pape's term (TGS_235) for the rise of cheap, mass-produced drones that let weaker states and groups withstand, and impose costs on, far stronger militaries. In the 2026 Iran war, Iran used mass drones together with naval mines to control the Strait of Hormuz selectively, without an army, and the same technology let Iran, the Houthis and Iraqi militias threaten Gulf pipelines, refineries and US bases. Pape also credits drones, built on a professional officer corps and logistics, for Ukraine's recent gains against Russia, and notes that Gulf states could run drone-based interdiction themselves."@en ;
+    dcterms:source <https://energi.media/news/robert-pape-cheap-drones-are-ending-the-era-of-american-military-dominance/> ;
+    thinkr:influencedBy tgs:Persona.RobertPape ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_235. Related: tgs:Concept.EscalationTrap."@en ;
+    .
+
+tgs:Concept.PunishmentStrategy a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Punishment Strategy (Coercion by Punishment)"@en ;
+    skos:definition "A coercive strategy that tries to change an opponent's behavior by imposing rising costs on its leaders, people or military, with the threat of more pain to come. Robert Pape analyzes it against other coercive strategies in Bombing to Win (1996) and argues in TGS_235 that it generally fails because people under punishment respond with fight or flight, not cooperation, and rally behind their government. He defines a strategy by its mechanism, not its tools: action, mechanism, outcome. On that definition Trump has a consistent strategy, punishment, used with tariffs and at home as well as against Iran, where it escalated from killing leaders to bombing to an April 2026 blockade that punished the whole society and made the IRGC more popular. Historical example: the German Blitz on London and Coventry led the British public to demand payback, and Churchill replaced his air staff and backed Arthur Harris's area bombing of German cities."@en ;
+    dcterms:source <https://cpost.uchicago.edu/publications/bombing_to_win_air_power_and_coercion_in_war> ;
+    thinkr:influencedBy tgs:Persona.RobertPape ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_235. Nate's on-air gloss, '5D reverse spite,' links it to tgs:Concept.RelativeFitnessSpiteFramework: the punisher harms itself most over time. Pape's related 1997 article tgs:Work.WhyEconomicSanctionsDoNotWork applies the same logic to sanctions."@en ;
+    .
+
+tgs:Concept.OffshoreBalancing a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.Geopolitics ;
+    skos:prefLabel "Offshore Balancing"@en ;
+    skos:definition "A grand strategy in which a great power keeps a regional balance of power mainly through local actors, intervening directly only at the margins rather than garrisoning the region itself. In TGS_235 Robert Pape proposes it as the alternative to escalating or walking away in the Iran war: a multi-year strategy aimed at regional stability rather than regime change, with the US doing about 20% of the heavy lifting and local forces the rest. His examples are the campaign that defeated ISIS (US air power supporting a ground coalition including the Syrian Kurds) and US advisers who, after Russia took Crimea in 2014, helped Ukraine build a professional officer and NCO corps and logistics. For the Gulf he recommends military advisers to help the frontline Gulf states build militaries able to run operations such as tanker interdiction themselves."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Offshore_balancing> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_235. An established realist concept (the show notes link the general Wikipedia article), not Pape's own coinage; his Gulf version and its examples are his. He thinks it becomes feasible only after the 2026 midterms, when leaders would have a long enough time horizon."@en ;
+    .
+
+tgs:Concept.ClimateSensitivity a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Climate Sensitivity"@en ;
+    skos:definition "How much the planet warms in response to a doubling of atmospheric CO2 (from the pre-industrial 280 ppm to 560 ppm), set by feedbacks from clouds, water vapor and snow and ice albedo. As Zeke Hausfather explains in TGS_236, the IPCC's last assessment gave a very likely range of 2 to 5°C (best estimate 3°C), with more uncertainty on the high side. Three timescales: transient climate response (about 20 years around the time of doubling), equilibrium climate sensitivity (300 to 500 years, once fast processes and the ocean mostly equilibrate) and Earth system sensitivity (much longer, including ice sheets and ecosystems). Equilibrium and Earth system sensitivity come from idealized experiments that hold concentrations fixed, which would itself require continued emissions. With human choices and carbon-cycle feedbacks, it is one of the three big uncertainties in future warming."@en ;
+    dcterms:source <https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. Related: tgs:Concept.AerosolMasking (high-sensitivity models need high aerosol masking to match observed warming), tgs:Concept.ZeroEmissionsCommitment."@en ;
+    .
+
+tgs:Concept.AerosolMasking a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Aerosol Masking (and Unmasking)"@en ;
+    skos:definition "The cooling effect of air pollution, chiefly sulfur dioxide, which reflects sunlight directly and seeds bright low clouds, hiding part of the warming greenhouse gases have already caused; cleaning up the pollution 'unmasks' that warming. In TGS_236 Zeke Hausfather says aerosols have masked roughly a third of historical warming (the IPCC best estimate is about 0.5°C, range 0.22-0.96°C), that global SO2 emissions are down about 40%, China's 75% and shipping's about 80% after the 2020 IMO low-sulfur fuel rule, and that in his estimate nearly all the recent acceleration in warming, from about 0.2 to about 0.3°C per decade, comes from these cuts. Shipping's cuts matter more than their share because ships pollute otherwise clean marine air. Because high-sensitivity models need high masking to match observations, the size of the effect is tied to how much future warming to expect. He still prefers clean air, given millions of premature deaths a year from air pollution."@en ;
+    dcterms:source <https://www.carbonbrief.org/explainer-how-human-caused-aerosols-are-masking-global-warming> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. The same topic was the focus of Nate's earlier conversation with Leon Simons (tgs:Interview.TGS_105_LeonSimons), referenced from TGS_236, which had no concept for it. Related: tgs:Concept.EarthEnergyImbalance, tgs:Concept.ClimateSensitivity."@en ;
+    .
+
+tgs:Concept.ZeroEmissionsCommitment a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Zero Emissions Commitment"@en ;
+    skos:definition "The warming (or cooling) still to come after human CO2 emissions stop. Model studies put it near zero (a 50-year multi-model mean of about -0.07°C): once emissions reach zero, land and ocean sinks draw atmospheric CO2 down, perhaps by about 80 ppm, while the ocean, still out of equilibrium after absorbing about 90% of trapped heat, keeps warming, and the two roughly cancel. As Zeke Hausfather puts it in TGS_236, this is good news (not much warming 'in the pipeline') and bad news (we are stuck with the warming we have, and the Earth will not cool without removing more carbon than we emit). It differs from the fixed-concentration experiments behind equilibrium and Earth system sensitivity, in which warming continues for centuries."@en ;
+    dcterms:source <https://bg.copernicus.org/articles/17/2987/2020/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. Related: tgs:Concept.ClimateSensitivity; it is the reason Hausfather argues carbon removal will be needed to cool the planet in the long term."@en ;
+    .
+
+tgs:Concept.EarthEnergyImbalance a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Earth's Energy Imbalance"@en ;
+    skos:definition "The difference between the energy Earth absorbs from the sun and the energy it radiates back to space, a direct measure of how much heat is being trapped. Measured from orbit since the early 2010s by the CERES satellite instruments, it has been rising, and recently rising faster. In TGS_236 Zeke Hausfather says the open question is how much of the recent rise reflects falling sulfur emissions (temporary, 'the devil we know') and how much a temperature-driven loss of low clouds (a feedback that would keep growing with warming); high-sensitivity models show the larger cloud loss. Nate cites Tad Patzek's comparison that the imbalance is about 20 times the energy flow of the entire human economy."@en ;
+    dcterms:source <https://essd.copernicus.org/articles/15/1675/2023/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. Related: tgs:Concept.AerosolMasking, tgs:Concept.ClimateSensitivity."@en ;
+    .
+
+tgs:Concept.ClimateAsANormalProblem a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Climate as a Normal Problem"@en ;
+    skos:definition "Zeke Hausfather's argument (TGS_236) that climate change should be treated as a serious but normal problem, like poverty, hunger or pollution, which societies have historically managed to address, rather than as an existential 'ur-problem' to which all others are subordinate. He quotes the late climate scientist Stephen Schneider that the end of the world and 'good for us' are the two least likely outcomes, and draws a parallel with treating AI as a normal technology. Portraying problems as existential to motivate action, he says, feeds crisis fatigue and doom, and doom and apathy are the real enemies; but politics that only responds to crises makes normal problems hard to address. He pairs it with practical levers: political engagement, early adoption of clean technology to drive costs down, and carbon pricing."@en ;
+    dcterms:source <https://www.theclimatebrink.com/p/on-the-gates-climate-memo> ;
+    thinkr:influencedBy tgs:Persona.ZekeHausfather ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. Stands in deliberate tension with Nate's own framing in tgs:Concept.PredicamentNotProblem: Hausfather treats climate as a solvable problem among many, while Nate treats the larger situation as a predicament to be navigated rather than solved. Nate does not challenge the framing on air."@en ;
+    .
+
+tgs:Concept.MultilevelSelection a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Multilevel Selection"@en ;
+    skos:definition "The evolutionary theory that natural selection acts at several levels at once: within a group the selfish individual outcompetes others, but between groups the group with the fewest selfish individuals wins, so selfishness at one level undermines welfare at the next level up. As Josh Farley sets it out in TGS_185, it runs through the major evolutionary transitions in which once-independent units became so interdependent they could survive only as a collective: archaea and bacteria into the eukaryotic cell, cells into multicellular animals, animals into social species. A mitochondrion or cell that turns selfish is disease or cancer; a human who pursues only self-interest harms society; and for humans the decisive group-level selection is cultural. Farley's conclusion is that the individual should relate to society, and humanity to nature, as a cell relates to the body."@en ;
+    dcterms:source <https://link.springer.com/rwe/10.1007/978-3-319-19650-3_647> ;
+    thinkr:influencedBy tgs:Persona.DavidSloanWilson ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_185. Associated above all with David Sloan Wilson (tgs:Interview.TGS_56_DavidSloanWilson), whose good-versus-evil classroom test Farley also cites. Nate's counterpoint in TGS_185: in the short run the most power-maximizing cultures outcompete wiser ones (see tgs:Concept.Superorganism, tgs:Concept.MaximumPowerPrinciple)."@en ;
+    .
+
+tgs:Concept.UneconomicGrowth a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.OvershootAndLimits ;
+    skos:prefLabel "Uneconomic Growth"@en ;
+    skos:definition "Herman Daly's term for economic growth whose added ecological and social costs exceed its added benefits. Because the economy is a subsystem of a finite biosphere, every product draws on ecosystems' structural building blocks and returns waste, so beyond some point growth makes us poorer, not richer. In TGS_185 Josh Farley calls it basic microeconomics applied to the whole economy (stop doing more of something when its marginal cost exceeds its marginal benefit) and contrasts firms' falling costs with society's steeply rising cost curve as growth burns more oil, destabilizes the climate and wipes out species. He notes the idea has spread far enough to be discussed at Davos. It follows from rejecting the myth that nature is a small subset of the economy."@en ;
+    dcterms:source <https://www.investopedia.com/terms/u/uneconomic-growth.asp> ;
+    thinkr:influencedBy tgs:Persona.HermanDaly ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_185. Related: tgs:Concept.GrowthImperative, tgs:Concept.LimitsToGrowth, tgs:Concept.TenCoreMythsOfBusinessSchools."@en ;
+    .
+
+tgs:Concept.SocialDilemma a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Social Dilemma"@en ;
+    skos:definition "A situation in which each individual is better off acting in their own self-interest whatever others do, yet when everyone does so society as a whole is worse off; the prisoner's dilemma and the tragedy of the commons are the classic forms. In TGS_185 Josh Farley argues these are not exceptions to Adam Smith's invisible hand but the reality of every major challenge today (climate change, biodiversity loss, even the shift to non-rival renewable energy), because when the benefits of an act such as burning fossil fuels flow to the individual and the costs are shared, a system that tells people to maximize private benefit is 'suicidal.' Cooperation, enabled by culturally evolved moral norms, is how human groups solve them."@en ;
+    dcterms:source <https://www.sciencedirect.com/science/article/abs/pii/S0749597812001276> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_185. Related: tgs:Concept.MultilevelSelection (why cooperative groups outcompete selfish ones), tgs:Concept.MultipolarTrap (the same structure among competing actors), tgs:Concept.CircleOfTrustLocalism."@en ;
+    .
+
+tgs:Concept.DividedBrain a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.BehavioralEconomicsAndCognition ;
+    skos:prefLabel "The Divided Brain (Hemisphere Hypothesis)"@en ;
+    skos:definition "Iain McGilchrist's account, set out in The Master and His Emissary (2009) and The Matter with Things (2021), that the brain's two hemispheres differ not in what they do (logic versus emotion, which he says is wrong) but in how they attend to the world. The left hemisphere gives narrow, focused attention for grasping and using: its world is made of static, fungible, categorized, explicit fragments, it values utility, money and power, and it is prone to anger, certainty and delusion. The right gives broad, sustained, vigilant attention: its world is uncertain, interconnected, embodied and implicit, and it grasps the whole and the values of connection, truth, goodness, beauty and love. The left is 'a very good servant, but a very poor master'; McGilchrist argues Western civilization has three times flourished in balance and declined as the left took over, and that modern culture is left-dominated. Evolutionary origin: a bird must focus on a seed while watching for predators."@en ;
+    dcterms:source <https://channelmcgilchrist.com/hemisphere-theory/> ;
+    thinkr:influencedBy tgs:Persona.IainMcGilchrist ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_217, though it is the core of all three McGilchrist episodes (tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Interview.TGS_165_WisdomOverPower) and is cited in Frankly_161; no concept for it existed before. Related: tgs:Concept.Presence, tgs:Concept.LogicOfSeparation."@en ;
+    .
+
+tgs:Concept.SoftFeudalism a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Soft Feudalism"@en ;
+    skos:definition "Nate's term (Frankly_129, A Guide to Staying Human Part 1) for a society that is not formally feudal but works like one: comfort and consumer choice inside walls of institutions, incentives, ownership patterns and the physics of a carbon-intensive life, which 'in an Orwellian sense, we call freedoms,' while people's attention and money are extracted for 'the riders of the Superorganism.' In TGS_217 he names the modern feudal lord as the economic Superorganism, 'a hungry ghost,' and asks how people who value truth, beauty and goodness can resist its pull; Iain McGilchrist likes the image and adds that pre-industrial peasants had far more leisure than modern workers, so the intensification of labor came with industrialization and capitalism. The response both point to is reclaiming time and spaciousness as a first step toward agency."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/129-a-guide-to-staying-human-part-1> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_217, which links back to Frankly_129 for the term. Related: tgs:Concept.Superorganism, tgs:Concept.PersonalAgency."@en ;
+    .
+
+tgs:Concept.Panpsychism a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Panpsychism (Pan-experientialism)"@en ;
+    skos:definition "The philosophical view that mind, or inwardness, is a fundamental feature of everything rather than something that emerged from wholly mindless matter at some point. In TGS_217 Iain McGilchrist, who holds it, prefers the near-synonym pan-experientialism: there is something it is like to be anything, even a subatomic particle, though utterly unlike human experience. Consciousness cannot arise from matter without 'a miracle,' so consciousness and matter are two manifestations of one underlying reality, and matter is 'a phase of consciousness,' as ice, liquid water and vapor are phases of water, supplying the persistence and resistance a creative cosmos needs. He notes it is now widely respected among academic philosophers. He distinguishes his panentheism (God in everything and everything in God, yet more than the sum of things) from pantheism (God is simply the sum of everything)."@en ;
+    dcterms:source <https://plato.stanford.edu/entries/panpsychism/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_217, where Nate says he does not know what the word means. Related: tgs:Concept.NonDuality."@en ;
+    .
+
+tgs:Concept.RegenerativeFinance a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Regenerative Finance (ReFi)"@en ;
+    skos:definition "An aspirational field, in Matthew Monahan's words in TGS_226 'more of a Schelling point' than a fixed definition, that asks how money and financial systems could put life back at the center, restoring ecosystem health and aligning the economy with the conditions for life rather than working against them. It builds on John Fullerton's regenerative economics. Monahan identifies three failures it must address in current funding: it is top-down and abstract (carbon credits and net-zero pledges that never reach local stewards), siloed (philanthropy, impact investing and government in separate buckets, with nonprofits competing and re-applying), and low-trust (missing feedback loops). His responses include bottom-up, community-defined funding, interoperable data that projects own, trust and reputation infrastructure, and, cautiously, complementary currencies and public blockchains. The open risk Nate raises is that pricing and trading nature more accurately could extend the same growth and commodification logic; Monahan therefore starts with gifts rather than ecological credits."@en ;
+    dcterms:source <https://blog.toucan.earth/what-is-refi-regenerative-finance/> ;
+    thinkr:influencedBy tgs:Persona.MatthewMonahan ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_226. Related: tgs:Concept.QuadraticFunding, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.GrowthImperative; see also tgs:Interview.TGS_149_JohnFullerton."@en ;
+    .
+
+tgs:Concept.QuadraticFunding a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Quadratic Funding"@en ;
+    skos:definition "A matching-fund mechanism in which a pool of money is distributed to projects according to the breadth of community support rather than only its size: many small contributions earn more matching than a few large ones (formally, a project's match grows with the square of the sum of the square roots of its individual contributions). Popularized for open-source software through Gitcoin, it is the starting mechanism of Ma Earth's funding rounds described in TGS_226, where a philanthropic matching pool ($1 million in round three) is allocated according to how each project's three-week community campaign goes, so that the community's signal steers philanthropic money. Monahan plans to let future rounds use other mechanisms too, such as direct matching and prize competitions."@en ;
+    dcterms:source <https://www.wtfisqf.com/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_226. The formal description follows the standard definition behind the show notes' 'WTF is QF?' link; Monahan does not give the formula on air. Related: tgs:Concept.RegenerativeFinance."@en ;
+    .
+
+tgs:Concept.RightsOfNature a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Rights of Nature"@en ;
+    skos:definition "The legal and ethical movement to recognize ecosystems, species or natural features (rivers, mountains, whales) as holders of rights or legal persons, rather than property. In TGS_226 Matthew Monahan highlights two mountains in Ma Earth's third funding round: Taranaki Maunga in Aotearoa New Zealand, granted personhood through a treaty settlement between the Crown and Māori, which can steward its own funds; and Pyramid Mountain, the first US mountain to own itself, governed through a guardianship council, along with rights-of-whales initiatives. The show notes link it to Nate's earlier episode with Pella Thiel on ecocide law and the rights of nature."@en ;
+    dcterms:source <https://www.garn.org/rights-of-nature/> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_226. The topic is central to tgs:Interview.TGS_121_PellaThiel, which had no concept for it."@en ;
+    .
+
+tgs:Concept.LootableSurplus a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.Geopolitics ;
+    skos:prefLabel "Lootable Surplus"@en ;
+    skos:definition "Luke Kemp's idea that early states and hierarchies (his 'Goliaths') grew where there were resources that could be seized and stored, such as grain, metals or domesticated animals, together with geographic containment and new weapons. In TGS_220 Art Berman says it is the idea of Kemp's he most values and extends it: war made whole polities lootable, so that for 5,000-6,000 years the principal method of economic growth has been looting, appropriating what other states have through warfare. With Peter Turchin's account that farming provided the calories, weapons set the pace and bureaucracy turned energy and war into lasting power, it leads Berman to recast the agricultural-surplus story as largely a story about war, and cities as protection: 'a castle with a bunch of serfs around it that got big.'"@en ;
+    dcterms:source <https://theconversation.com/friday-essay-how-societies-evolved-into-fear-dominated-goliaths-then-collapsed-263800> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_220; originates in Kemp's own appearances (tgs:Interview.TGS_153_LukeKemp, tgs:Interview.TGS_194_LukeKemp). Related: tgs:Concept.SoftFeudalism, tgs:Concept.MultilevelSelection (Berman's question 'cooperation with whom?')."@en ;
+    .
+
+tgs:Concept.FourPillarsOfCivilization a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.OvershootAndLimits ;
+    skos:prefLabel "Four Pillars of Modern Civilization (Smil)"@en ;
+    skos:definition "Vaclav Smil's argument that cement, steel, plastics and ammonia (fertilizer) are the four material pillars of modern civilization, all produced and distributed with fossil energy. In TGS_220 Nate and Art Berman discuss Berman's chart, made before the Iran war, showing steel and cement declining, fertilizer flat to declining and plastics near or below peak, which the data suggest means the global material economy has already peaked while the financial layer has not caught up. Berman: there can be no growth without cement and steel, no modern healthcare without plastics, and no 8.5 billion people without fertilizer; with three pillars declining, civilization is 'on shaky ground.'"@en ;
+    dcterms:source <https://vaclavsmil.com/wp-content/uploads/2020/01/Substantia.pdf> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_220. Vaclav Smil is not yet modeled as a Human or Persona. Related: tgs:Concept.Rebuildables, tgs:Concept.BiophysicalPyramid."@en ;
+    .
+
+tgs:Concept.DispatchablePower a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Dispatchable Power"@en ;
+    skos:definition "Electricity available on demand, like a cab sent by a dispatcher, as opposed to wind and solar, which generate only when the wind blows or the sun shines. In TGS_220 Art Berman notes that all recent US electricity growth has been wind and solar while dispatchable supply has fallen, mostly because coal is collapsing, so when AI hyperscalers announced the largest US power-demand growth in decades they 'didn't even give the renewable guys a call,' turning instead to natural gas, nuclear and even old jet engines (gas turbines are back-ordered for years). New plants of any kind must also clear grid operators' interconnection queues. He frames it as a question of power, energy per unit time, which modern society values above energy itself; renewable electricity is 'perfectly fine' but 'not fit for purpose,' as light oil is for someone who needs diesel."@en ;
+    dcterms:source <https://energyeducation.ca/encyclopedia/Non-dispatchable_source_of_electricity> ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_220. Related: tgs:Concept.MaximumPowerPrinciple, tgs:Concept.Rebuildables."@en ;
     .
