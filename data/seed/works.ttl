@@ -40,7 +40,7 @@ tgs:Work.TheMasterAndHisEmissary a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2009 book by Iain McGilchrist (Yale University Press). Argues the brain's two hemispheres offer fundamentally different kinds of attention to the world, and that Western culture has become dominated by narrow, left-hemisphere thinking at the expense of the right's broader, contextual awareness. Sold over 200,000 copies."@en ;
     dct:creator tgs:Human.IainMcGilchrist ;
     owl:sameAs <http://dbpedia.org/resource/The_Master_and_His_Emissary> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    dct:isReferencedBy tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_217_WisdomInAWorldInCrisis, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_126_AVisionForBetterment ;
     .
 
 tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
@@ -104,7 +104,7 @@ tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/> ;
-    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice ;
+    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_238_IndyJohar, tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_50_CriteriaCategoriesResponse, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_86_WhatIsWealth, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
         skos:prefLabel "Reality Blind"@en ;
@@ -141,7 +141,7 @@ tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/view/388478403/i/> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
     .
 
 #############################################
@@ -185,6 +185,7 @@ tgs:Work.FutureCouncilFilm a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2024 documentary film directed by Damon Gameau, following eight children (ages 11-14) across Europe by biodiesel-fueled bus, confronting corporate leaders (Nestlé, Decathlon, ING, among others) about climate accountability. Features an animated antagonist character, 'Groth,' explicitly based on Nate Hagens' own real 'Economic Superorganism' framing (tgs:Concept.Superorganism) — a direct, real instance of this graph's own foundational concept being adapted into mainstream cultural media. Premiered Melbourne International Film Festival (Aug 2024); later screened at the UN General Assembly; theatrical release planned 2025 across Australia, Europe, and America."@en ;
     dct:creator tgs:Human.DamonGameau ;
     dct:issued "2024"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf ;
     .
 
 #############################################
@@ -358,6 +359,7 @@ tgs:Work.GoliathsCurse a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.LukeKemp ;
     dct:source <https://www.penguin.co.uk/books/321192/goliaths-curse-by-kemp-luke/9780241741238> ;
     dct:issued "2025"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_209_BalazsMatics ;
     .
 
 tgs:Work.Disorder2022 a thinkr:Work, owl:NamedIndividual ;
@@ -462,6 +464,7 @@ tgs:Work.TheRighteousMind a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Jonathan Haidt, 2012. New York Times bestseller examining the intuitive foundations of morality and how moral reasoning varies across cultural and political divisions."@en ;
     dct:creator tgs:Human.JonathanHaidt ;
     dct:issued "2012"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
     .
 
 tgs:Work.PratiquementDurable a thinkr:Work, owl:NamedIndividual ;
@@ -778,7 +781,7 @@ tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism a thinkr:Work, owl:NamedInd
     dct:creator tgs:Human.NateHagens ;
     dct:issued "2020"^^xsd:gYear ;
     dct:source <https://www.sciencedirect.com/science/article/pii/S0921800919310067> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency ;
+    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Interview.TGS_195_RutgerBregman, tgs:Monologue.TGS_187_EarthDay2025, tgs:Interview.TGS_186_WesCarter, tgs:Interview.TGS_183_RodSchoonover, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Monologue.Frankly_85_TheLightTriad, tgs:Monologue.Frankly_54_ReflectionsFromIndia, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
     .
 
 tgs:Work.TinyHabits a thinkr:Work, owl:NamedIndividual ;
@@ -796,7 +799,7 @@ tgs:Work.TheCollapseOfComplexSocieties a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.JosephTainter ;
     dct:issued "1988"^^xsd:gYear ;
     owl:sameAs <https://en.wikipedia.org/wiki/The_Collapse_of_Complex_Societies> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds ;
+    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics ;
     .
 
 tgs:Work.BullshitJobs a thinkr:Work, owl:NamedIndividual ;
@@ -967,7 +970,7 @@ tgs:Work.WholenessAndTheImplicateOrder a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "David Bohm, 1980. The physicist's account of an undivided wholeness in which explicit, unfolded order emerges from and returns to an implicate, enfolded order. In TGS_217 Iain McGilchrist says it 'meant an enormous amount' to him, as an image of the implicit being made explicit without destroying the whole. Bohm is not yet modeled as a Human or Persona."@en ;
     dct:issued "1980"^^xsd:gYear ;
     owl:sameAs <https://en.wikipedia.org/wiki/Wholeness_and_the_Implicate_Order> ;
-    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose ;
     .
 
 tgs:Work.LivingInWonder a thinkr:Work, owl:NamedIndividual ;
@@ -975,4 +978,368 @@ tgs:Work.LivingInWonder a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Rod Dreher, 2024 (full title: Living in Wonder: Finding Mystery and Meaning in a Secular Age). Cited by Iain McGilchrist in TGS_217 for the loss of wonder he attributes to reductive materialism; wonder is one of the three qualities, with humility and compassion, he expects in a reoriented person. Dreher is not yet modeled as a Human or Persona."@en ;
     dct:issued "2024"^^xsd:gYear ;
     dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    .
+
+tgs:Work.TotalEclipseOfTheMind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Total Eclipse of the Mind: Unleashing the Power of Darkness for Creativity, Healing, and Transformation"@en ;
+    rdfs:comment "Andrew Holecek, published May 2026, drawing on more than thirty years of his own dark retreats, with a foreword by Tenzin Wangyal Rinpoche. Discussed in TGS_221; Holecek says he wrote it as much to keep unprepared people out of dark retreat as to invite prepared ones in, and it includes a chapter on contraindications developed with physicians, psychologists, psychiatrists and ophthalmologists."@en ;
+    dct:creator tgs:Human.AndrewHolecek ;
+    dct:issued "2026"^^xsd:gYear ;
+    owl:sameAs <https://www.andrewholecek.com/total-eclipse-of-the-mind-book/> ;
+    dct:isReferencedBy tgs:Interview.TGS_221_AndrewHolecek ;
+    .
+
+tgs:Work.TheHonestSorcerer a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Honest Sorcerer (Substack)"@en ;
+    rdfs:comment "Balázs Matics's Substack blog on energy, economics, industrial materials and the future of civilization, written anonymously until his TGS_209 interview. Essays cited in that episode's show notes include 'Beyond the Mordor Economy', 'Life in the Empty Quarter', '2026: Year of the [Wile E.] Coyote', 'A Diesel-Powered Civilization', 'The Oil Import Curse', 'The Spectre of Peak Oil', 'Running on Empty: Copper' and 'Peak Steel'; TGS_220's show notes also link two of its posts on diesel and the 'next economy'."@en ;
+    dct:creator tgs:Human.BalazsMatics ;
+    owl:sameAs <https://thehonestsorcerer.substack.com/> ;
+    dct:isReferencedBy tgs:Interview.TGS_209_BalazsMatics ;
+    .
+
+tgs:Work.TheMinistryForTheFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Ministry for the Future"@en ;
+    rdfs:comment "2020 climate novel by Kim Stanley Robinson (Orbit Books), the subject of his TGS_66 appearance. In TGS_204 Kelly Erhart cites its glaciologist character who pumps meltwater from beneath Antarctic glaciers to slow them, as an example of a glacier-stabilization intervention."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Ministry_for_the_Future> ;
+    dct:isReferencedBy tgs:Interview.TGS_204_KellyErhart, tgs:Interview.TGS_200_TedParson, tgs:Monologue.Frankly_54_ReflectionsFromIndia ;
+    .
+
+tgs:Work.AFewRulesForPredictingTheFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Few Rules for Predicting the Future"@en ;
+    rdfs:comment "Essay by the novelist Octavia E. Butler (Essence, 2000). Kelly Erhart, calling it 'Seven Lessons for Predicting the Future' in TGS_204, cites Butler's memory of daily Cold War bomb drills, when no one could imagine the decades of relative peace that followed, as her reason for wanting children despite a disrupted future."@en ;
+    owl:sameAs <https://antiableistcomposition.wordpress.com/wp-content/uploads/2020/07/octavia_e._butler_a_few_rules_.pdf> ;
+    dct:isReferencedBy tgs:Interview.TGS_204_KellyErhart ;
+    .
+
+tgs:Work.TheSpiritOfTheRainforest a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Spirit of the Rainforest: How Indigenous Wisdom and Scientific Curiosity Reconnects Us to the Natural World"@en ;
+    rdfs:comment "Book by Rosa Vásquez Espinoza (2025), an adventure-driven account of Amazonian wildlife, places and stories and of her work joining Indigenous knowledge and science; one of its last chapters describes the ayahuasca experience that led her to study animal self-medication. Promoted in TGS_201, where Nate calls it 'the Spirit in the Forest'."@en ;
+    dct:creator tgs:Human.RosaVasquezEspinoza ;
+    owl:sameAs <https://www.rosavespinoza.com/book> ;
+    dct:isReferencedBy tgs:Interview.TGS_201_RosaVasquezEspinoza ;
+    .
+
+tgs:Work.SolarGeoengineeringHistoryMethodsGovernanceProspects a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Solar Geoengineering: History, Methods, Governance, Prospects"@en ;
+    rdfs:comment "Review article by Edward A. (Ted) Parson and David W. Keith in the Annual Review of Environment and Resources, covering the history, methods, governance and prospects of solar geoengineering. Linked in the show notes of both TGS_200 and TGS_204."@en ;
+    dct:creator tgs:Human.TedParson ;
+    owl:sameAs <https://www.annualreviews.org/content/journals/10.1146/annurev-environ-112321-081911> ;
+    dct:isReferencedBy tgs:Interview.TGS_200_TedParson, tgs:Interview.TGS_204_KellyErhart ;
+    .
+
+tgs:Work.SolarGeoengineeringScenariosOfFutureGovernanceChallenges a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Solar geoengineering: Scenarios of future governance challenges"@en ;
+    rdfs:comment "Article by Edward A. Parson and Jesse L. Reynolds in Futures (2021), using scenarios to explore governance challenges that solar geoengineering could raise; the basis for the political scenario exercises Parson describes in TGS_200. Linked in the show notes of both TGS_200 and TGS_204."@en ;
+    dct:creator tgs:Human.TedParson ;
+    owl:sameAs <https://www.sciencedirect.com/science/article/pii/S0016328721001154> ;
+    dct:isReferencedBy tgs:Interview.TGS_200_TedParson, tgs:Interview.TGS_204_KellyErhart ;
+    .
+
+tgs:Work.ProtectingTheOzoneLayer a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Protecting the Ozone Layer: Science and Strategy"@en ;
+    rdfs:comment "2003 book by Edward A. Parson (Oxford University Press), winner of the International Studies Association's Sprout Award and widely regarded as the authoritative account of how international cooperation to protect the ozone layer developed. In TGS_200 Parson calls the Montreal Protocol 'an extraordinary triumph of cooperative, scientifically informed international governance' that still works."@en ;
+    dct:creator tgs:Human.TedParson ;
+    owl:sameAs <https://academic.oup.com/book/32484> ;
+    dct:isReferencedBy tgs:Interview.TGS_200_TedParson ;
+    .
+
+tgs:Work.TurnsOutAirPollutionWasGoodForSomething a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Turns Out Air Pollution Was Good for Something"@en ;
+    rdfs:comment "New York Times opinion essay by Zeke Hausfather and David Keith (2025-09-21) on the cooling that sulfur pollution provided and the case for considering a small stratospheric replacement as it is cleaned up. In TGS_200, recorded four days later, Ted Parson cites it as an op-ed by colleagues 'a couple of days ago': for every hundred units of sulfur cut near the ground, perhaps one could go up high."@en ;
+    dct:creator tgs:Human.ZekeHausfather ;
+    owl:sameAs <https://www.nytimes.com/2025/09/21/opinion/geoengineering-planet-cooling-sulfur.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_200_TedParson ;
+    .
+
+tgs:Work.MoralAmbition a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Moral Ambition: Stop Wasting Your Talent and Start Making a Difference"@en ;
+    rdfs:comment "Book by Rutger Bregman (2025), the subject of TGS_195, which he describes as partly a self-help book written for himself. It draws on the British abolitionists, the suffragists, the move from the Gilded Age to the Progressive Era, resistance rescuers in the Second World War and the Shrimp Welfare Project; all his income from it goes to the School for Moral Ambition."@en ;
+    dct:creator tgs:Human.RutgerBregman ;
+    owl:sameAs <https://rutgerbregman.com/books> ;
+    dct:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Work.Humankind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Humankind: A Hopeful History"@en ;
+    rdfs:comment "Book by Rutger Bregman (2020), a Sunday Times and New York Times bestseller arguing for fundamental human decency and 'survival of the friendliest'; its unexpected success led him to take the Giving What We Can pledge, and its argument underlies the kindness principle of the School for Moral Ambition (TGS_195)."@en ;
+    dct:creator tgs:Human.RutgerBregman ;
+    owl:sameAs <https://rutgerbregman.com/books> ;
+    dct:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Work.UtopiaForRealists a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Utopia for Realists: And How We Can Get There"@en ;
+    rdfs:comment "Book by Rutger Bregman (English edition 2017), a Sunday Times and New York Times bestseller; in TGS_195 he recalls its chapter on moving beyond GDP as a measure of wealth."@en ;
+    dct:creator tgs:Human.RutgerBregman ;
+    owl:sameAs <https://rutgerbregman.com/books> ;
+    dct:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Work.MoralCapital a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Moral Capital: Foundations of British Abolitionism"@en ;
+    rdfs:comment "Book by the historian Christopher Leslie Brown (University of North Carolina Press, 2006). Rutger Bregman (TGS_195) draws on its argument that, after losing the American colonies, Britain's identity crisis let abolitionists present ending the slave trade as national redemption and part of the British character."@en ;
+    owl:sameAs <https://uncpress.org/9780807856987/moral-capital/> ;
+    dct:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Work.TheBurningEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Burning Earth: A History"@en ;
+    rdfs:comment "Book by Sunil Amrith (W. W. Norton, 2024), an environmental history of the modern world that foregrounds the experience of the Global South, beginning about a thousand years ago with the expansion of rice cultivation in China; named a 2024 essential read by The New Yorker and a 'book we love' by NPR. Its chapter on migration opens with a quotation from Chekhov's Sakhalin Island (TGS_192)."@en ;
+    dct:creator tgs:Human.SunilAmrith ;
+    owl:sameAs <https://wwnorton.com/books/9781324007180> ;
+    dct:isReferencedBy tgs:Interview.TGS_192_SunilAmrith ;
+    .
+
+tgs:Work.UnrulyWaters a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Unruly Waters: How Rains, Rivers, Coasts, and Seas Have Shaped Asia's History"@en ;
+    rdfs:comment "Book by Sunil Amrith (Basic Books, 2018) on the relationship between water and human societies in Asia, including violent conflict, inequality and migration; discussed in TGS_192."@en ;
+    dct:creator tgs:Human.SunilAmrith ;
+    owl:sameAs <https://www.hachettebookgroup.com/titles/sunil-amrith/unruly-waters/9780465097739/> ;
+    dct:isReferencedBy tgs:Interview.TGS_192_SunilAmrith ;
+    .
+
+tgs:Work.CrossingTheBayOfBengal a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Crossing the Bay of Bengal: The Furies of Nature and the Fortunes of Migrants"@en ;
+    rdfs:comment "Book by Sunil Amrith (Harvard University Press, 2013) on centuries of migration and cultural exchange around the Bay of Bengal, the starting point of his view, presented in TGS_192, that migration is a normal part of human life."@en ;
+    dct:creator tgs:Human.SunilAmrith ;
+    dct:isReferencedBy tgs:Interview.TGS_192_SunilAmrith ;
+    .
+
+tgs:Work.TheInsectCrisis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Insect Crisis"@en ;
+    rdfs:comment "Oliver Milman's first book (Atlantic Books, 2022), an account of the worldwide collapse of insect populations and its threat to everything from birds to food; shortlisted for the Wainwright Prize for Conservation Writing. Its reporting includes the monarch butterfly overwintering forests of central Mexico. The subject of TGS_189."@en ;
+    dct:creator tgs:Human.OliverMilman ;
+    owl:sameAs <https://olivermilman.com/the-insect-crisis/> ;
+    dct:isReferencedBy tgs:Interview.TGS_189_OliverMilman ;
+    .
+
+tgs:Work.TheLittleThingsThatRunTheWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Little Things That Run the World (The Importance and Conservation of Invertebrates)"@en ;
+    rdfs:comment "1987 essay by E. O. Wilson in Conservation Biology arguing that invertebrates, insects above all, sustain ecosystems and deserve conservation attention. Oliver Milman borrows its title phrase in TGS_189."@en ;
+    dct:creator tgs:Human.EOWilson ;
+    owl:sameAs <https://faculty.washington.edu/timbillo/Readings%20and%20documents/ABRIDGED%20READINGS%20for%20PERU/Wilson_1987_Little_things_that_run.pdf> ;
+    dct:isReferencedBy tgs:Interview.TGS_189_OliverMilman ;
+    .
+
+tgs:Work.TheSovereignIndividual a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Sovereign Individual"@en ;
+    rdfs:comment "1997 book by James Dale Davidson and William Rees-Mogg predicting that digital technology and cybercurrency would let some individuals escape the power of nation states. In TGS_187 Nate credits it with being 'somewhat right' and uses it as the foil for his wider-boundary idea of sovereignty."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Sovereign_Individual> ;
+    dct:isReferencedBy tgs:Monologue.TGS_187_EarthDay2025, tgs:Monologue.Frankly_82_PowerVsLife ;
+    .
+
+tgs:Work.ClimateChangeNationalIntelligenceAssessment2008 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "2008 Intelligence Community Assessment of the National Security Implications of Global Climate Change (classified)"@en ;
+    rdfs:comment "The US intelligence community's first flagship assessment of climate change's national security implications, produced in 2008 under President George W. Bush, signed off by every intelligence agency and welcomed across parties; it remains classified although, per Rod Schoonover (TGS_183), it contains 'practically nothing classified'. Schoonover has pushed for its declassification; the show notes link the National Security Archive's Climate Change Transparency Project."@en ;
+    owl:sameAs <https://nsarchive.gwu.edu/briefing-book/climate-change-transparency-project-intelligence/2025-02-28/climate-intelligence> ;
+    dct:isReferencedBy tgs:Interview.TGS_183_RodSchoonover ;
+    .
+
+tgs:Work.TheSecurityThreatThatBindsUs a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Security Threat That Binds Us: The Unraveling of Ecological and Natural Security and What the United States Can Do About It"@en ;
+    rdfs:comment "2021 report from the Council on Strategic Risks, with Rod Schoonover among its authors, on ecological disruption as a national security threat and US policy responses; linked in the TGS_183 show notes."@en ;
+    dct:creator tgs:Human.RodSchoonover ;
+    owl:sameAs <https://councilonstrategicrisks.org/wp-content/uploads/2021/01/The-Security-Threat-That-Binds-Us_2021_2-1.pdf> ;
+    dct:isReferencedBy tgs:Interview.TGS_183_RodSchoonover ;
+    .
+
+tgs:Work.FiveUrgentQuestionsOnEcologicalSecurity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Five Urgent Questions on Ecological Security"@en ;
+    rdfs:comment "SIPRI Insights on Peace and Security paper (2023) by Rod Schoonover and colleagues, setting out the research and policy agenda for ecological security; linked in the TGS_183 show notes."@en ;
+    dct:creator tgs:Human.RodSchoonover ;
+    owl:sameAs <https://www.sipri.org/publications/2023/sipri-insights-peace-and-security/five-urgent-questions-ecological-security> ;
+    dct:isReferencedBy tgs:Interview.TGS_183_RodSchoonover ;
+    .
+
+tgs:Work.CivilizationalOptionalityEssay a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Civilizational Optionality"@en ;
+    rdfs:comment "Essay by Indy Johar published by the Long Now Foundation, accompanying his Long Now talk 'Civilizational Optioneering' (2026). Listed under Episode Foundations in the TGS_238 show notes."@en ;
+    dct:creator tgs:Human.IndyJohar ;
+    owl:sameAs <https://longnow.org/ideas/civilizational-optionality-indy-johar-long-now/> ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    .
+
+tgs:Work.MoneyAsAClaimOnFutureEnergy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Money as a Claim on Future Energy"@en ;
+    rdfs:comment "Substack essay by Indy Johar, listed under Episode Foundations in the TGS_238 show notes; its title echoes Nate's own framing (tgs:Concept.MoneyAsClaimOnEnergy)."@en ;
+    dct:creator tgs:Human.IndyJohar ;
+    owl:sameAs <https://indyjohar.substack.com/p/money-as-a-claim-on-future-energy> ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    .
+
+tgs:Work.LoadingTheDiceAgainstPensions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Loading the DICE Against Pensions"@en ;
+    rdfs:comment "Carbon Tracker report on how climate-economy models such as DICE, used by pension funds, understate climate risk. Listed under Next Steps in the TGS_238 show notes."@en ;
+    owl:sameAs <https://carbontracker.org/reports/loading-the-dice-against-pensions/> ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    .
+
+tgs:Work.GlobalPolycrisisCausalMechanisms a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Global polycrisis: the causal mechanisms of crisis entanglement"@en ;
+    rdfs:comment "Research article in Global Sustainability (Cambridge University Press) on how crises interact and amplify one another; linked twice in the TGS_238 show notes, on coupled, non-linear systems and on coupled risks."@en ;
+    owl:sameAs <https://www.cambridge.org/core/journals/global-sustainability/article/global-polycrisis-the-causal-mechanisms-of-crisis-entanglement/06F0F8F3B993A221971151E3CB054B5E> ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    .
+
+tgs:Work.SeeingLikeAState a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Seeing Like a State"@en ;
+    rdfs:comment "James C. Scott's 1998 book on how states simplify landscapes and societies to make them legible, and why such schemes fail. Indy Johar cites it in TGS_238 on the simplification behind industrial agriculture and machines."@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Seeing_Like_a_State> ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    .
+
+tgs:Work.TheCodeOfCapital a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Code of Capital: How the Law Creates Wealth and Inequality"@en ;
+    rdfs:comment "Book by Katharina Pistor (Princeton University Press, 2019) arguing that capital is created by legally coding assets through property, contract, trust, corporate and bankruptcy law. Indy Johar cites it in TGS_147 for the claim that the coding of capital is rooted in theories of property."@en ;
+    owl:sameAs <https://press.princeton.edu/books/hardcover/9780691178974/the-code-of-capital> ;
+    dct:isReferencedBy tgs:Interview.TGS_147_IndyJohar ;
+    .
+
+tgs:Work.Novacene a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Novacene: The Coming Age of Hyperintelligence"@en ;
+    rdfs:comment "James Lovelock's 2019 book. Indy Johar praises its first third in TGS_147 for narrating the Earth's stored solar energy being spent to give birth to a self-aware planetary consciousness, and returns to Lovelock in TGS_238."@en ;
+    owl:sameAs <https://www.amazon.com/Novacene-Coming-Hyperintelligence-James-Lovelock/dp/024139936X> ;
+    dct:isReferencedBy tgs:Interview.TGS_147_IndyJohar ;
+    .
+
+tgs:Work.TheCalculusOfConsent a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Calculus of Consent: Logical Foundations of Constitutional Democracy"@en ;
+    rdfs:comment "1962 book by James M. Buchanan and Gordon Tullock, a founding text of public choice theory (tgs:Concept.PublicChoiceTheory). Treats political actors as the same self-interested individuals found in markets and focuses on the rules under which collective decisions are made. The source of Frankly_162's rules rung; a viewer suggested it to Nate."@en ;
+    dct:source <https://www.econlib.org/library/Buchanan/buchCv3.html> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    .
+
+tgs:Work.LeveragePointsPlacesToIntervene a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Leverage Points: Places to Intervene in a System"@en ;
+    rdfs:comment "Essay by Donella Meadows (Sustainability Institute, 1999) ranking twelve places to intervene in a complex system, from parameters at the shallow end to paradigms and the power to transcend them at the deep end. Basis of tgs:Concept.LeveragePoints; cited in Frankly_162."@en ;
+    dct:creator tgs:Human.DonellaMeadows ;
+    dct:source <https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    .
+
+tgs:Work.NationalIncome1929To1932 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "National Income, 1929-1932"@en ;
+    rdfs:comment "Simon Kuznets's 1934 report to the US Senate, which established the national income accounts from which GDP became the central measure of economic success. It contains the warning, quoted in Frankly_162, that the welfare of a nation can scarcely be inferred from a measurement of national income -- the designer flagging the metric's misuse in advance."@en ;
+    dct:source <https://fraser.stlouisfed.org/files/docs/publications/natincome_1934/19340104_nationalinc.pdf> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    .
+
+tgs:Work.HierarchyInTheForest a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hierarchy in the Forest: The Evolution of Egalitarian Behavior"@en ;
+    rdfs:comment "1999 book by anthropologist Christopher Boehm (Harvard University Press) arguing that egalitarian hunter-gatherer bands were maintained by a reverse dominance hierarchy, in which the group collectively restrained would-be dominants. Basis of tgs:Concept.ReverseDominanceHierarchy; cited in Frankly_162's show notes."@en ;
+    dct:source <https://www.hup.harvard.edu/books/9780674006911> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    .
+
+tgs:Work.TacklingClimateChangeWithMachineLearning a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Tackling Climate Change with Machine Learning"@en ;
+    rdfs:comment "Survey paper by David Rolnick and colleagues, published in ACM Computing Surveys (2022), cataloguing ways machine learning could help reduce emissions and adapt to climate change. Cited by Daniel Schmachtenberger in TGS_132 as the most comprehensive statement of AI's claimed climate benefits, which he then assesses as mostly marginal efficiency gains."@en ;
+    dct:source <https://dl.acm.org/doi/10.1145/3485128> ;
+    dct:isReferencedBy tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    .
+
+tgs:Work.DevelopmentInProgress a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Development in Progress"@en ;
+    rdfs:comment "Consilience Project paper in two parts -- Part I, 'Seeing the Bigger Picture,' and Part II, 'Progress as Holistic Betterment' -- arguing that the prevailing idea of progress is 'immature' and 'developmentally incomplete' because it ignores or downplays the side effects of technologies, with leaded gasoline and Haber-Bosch fertilizer as worked examples, and that those harms grow with technological power and scale. A mature progress would 'systematically identify and internalize its externalities' before deployment, so that changes remain good once all perspectives and effects are considered: 'Real progress would require internalizing externalities, binding social traps, and rethinking our approach to problem-solving, advancement, and technology more generally.' Its proposals include pre-release testing and risk assessment, broader metrics of progress (health, ecosystems, well-being), redesigned social media (bridging content, slower infinite scroll, downranking AI-altered content), regenerative agriculture, and caution with powerful technologies framed as pro-humanity rather than anti-progress. 'It isn't possible to practice real, authentic progress in the presence of the fake, immature version.' The subject of TGS_126 (before publication; Nate had read a draft) and linked in TGS_132's show notes as the 'Paper on Naive Progress.' Modeled in this graph as tgs:Concept.NaiveProgress and tgs:Concept.AuthenticProgress; its three moves correspond to tgs:Concept.YellowTeaming and tgs:Concept.HolisticExternalityAnalysis (internalizing externalities), tgs:Concept.MultipolarTrap and tgs:Concept.RestraintByDesign (binding social traps), and tgs:Concept.ProblemSolvingAsRacket (rethinking problem-solving)."@en ;
+    dct:issued "2024-07-16"^^xsd:date ;
+    dct:abstract "The concept of progress is at the heart of humanity's story."@en ;
+    skos:scopeNote "Enriched 2026-10-18 from the published page, confirmed by MJSullivan, who supplied the date shown at the top of the article (Jul 16, 2024) with its standfirst. The page shows no author credits; TGS_126 says it was multi-authored by Daniel Schmachtenberger's team. Publication falls after TGS_126 (recorded 2024-05-05, issued 2024-06-05), which therefore does not list it in dct:references, and one day before TGS_132 (issued 2024-07-17), whose dct:references to it is chronologically valid. Yellow teaming, the Sabbath and the Pacific Northwest fishing rules discussed in TGS_126 do not appear in the published text."@en ;
+    dct:publisher tgs:Organization.ConsilienceProject ;
+    dct:source <https://consilienceproject.org/development-in-progress/> ;
+    dct:isReferencedBy tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    .
+
+tgs:Work.WhereArgumentsComeFrom a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Where Arguments Come From"@en ;
+    rdfs:comment "Consilience Project paper on how arguments circulate in public life: not by natural selection of good ideas but because whoever has marketing and research budgets upregulates the ideas that serve them (the 'think tank industrial complex'). Cited by Daniel Schmachtenberger in TGS_132 to explain why the 'AI will help the climate' story dominates."@en ;
+    dct:publisher tgs:Organization.ConsilienceProject ;
+    dct:source <https://consilienceproject.org/where-arguments-come-from/> ;
+    dct:isReferencedBy tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    .
+
+tgs:Work.TechnologyIsNotValuesNeutral a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Technology Is Not Values Neutral: Ending the Reign of Nihilistic Design"@en ;
+    rdfs:comment "Consilience Project paper arguing that technologies encode values: competitive advantage makes them obligate and their use reshapes human behavior and minds. Explained by Daniel Schmachtenberger in TGS_71, whose show notes link it twice. Basis of tgs:Concept.TechnologyIsNotValuesNeutral."@en ;
+    dct:publisher tgs:Organization.ConsilienceProject ;
+    dct:source <https://consilienceproject.org/technology-is-not-values-neutral-ending-the-reign-of-nihilistic-design-2/> ;
+    dct:isReferencedBy tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.TheOverspentAmerican a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Overspent American: Why We Want What We Don't Need"@en ;
+    rdfs:comment "1998 book by sociologist Juliet Schor on consumer aspiration and spending. Cited by Nate in TGS_50 (as a friend's book, 'like 30 years ago') for the finding that people, whatever they earn, want to earn more the following year -- in support of Daniel's advice not to create an embedded growth obligation on one's own earnings."@en ;
+    dct:source <https://www.harpercollins.com/products/the-overspent-american-juliet-b-schor?variant=32154061406242> ;
+    dct:isReferencedBy tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
+    .
+
+tgs:Work.Nonzero a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Nonzero: The Logic of Human Destiny"@en ;
+    rdfs:comment "2000 book by journalist Robert Wright (not to be confused with tgs:Persona.RonaldWright) arguing that cultural and biological evolution tend toward ever more non-zero-sum, cooperative interaction at ever larger scales. Cited by Daniel Schmachtenberger in TGS_42, who accepts the in-group trend but adds that it was zero- or negative-sum between groups and negative-sum to nature (tgs:Concept.PositiveSumInGroupNegativeSumToNature)."@en ;
+    dct:issued "2000"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    .
+
+tgs:Work.DietForANewAmerica a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Diet for a New America"@en ;
+    rdfs:comment "1987 book by John Robbins on the health, ethical and environmental costs of industrial animal agriculture. Daniel Schmachtenberger says in TGS_31 that he read it the day after looking into a cattle truck bound for slaughter as a child, the day he stopped eating animals; his concern later widened from factory farms to systemic risk."@en ;
+    dct:issued "1987"^^xsd:gYear ;
+    dct:source <https://www.amazon.com/Diet-New-America-Choices-Happiness/dp/193207354X> ;
+    dct:isReferencedBy tgs:Interview.TGS_31_SensemakingUncertaintyPurpose ;
+    .
+
+tgs:Work.TragedyOfTheCommons1968 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Tragedy of the Commons"@en ;
+    rdfs:comment "Garrett Hardin's 1968 essay in Science (vol. 162), arguing that freely accessible shared resources are overexploited unless use is restrained, and that some problems have no technical solution. Linked in the TGS_50 show notes at Daniel Schmachtenberger's discussion of why harms get externalized. Basis of tgs:Concept.TragedyOfTheCommons."@en ;
+    dct:creator tgs:Human.GarrettHardin ;
+    dct:issued "1968"^^xsd:gYear ;
+    dct:source <https://www.jstor.org/stable/1724745> ;
+    dct:isReferencedBy tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
+    .
+
+tgs:Work.SilentSpring a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Silent Spring"@en ;
+    rdfs:comment "Rachel Carson's 1962 book documenting the ecological harm of synthetic pesticides, especially DDT, widely credited with launching the modern environmental movement. Cited by Daniel Schmachtenberger in TGS_126 as the record of 'better living through chemistry' -- narrow technological success with vast externalities."@en ;
+    dct:creator tgs:Human.RachelCarson ;
+    dct:issued "1962"^^xsd:gYear ;
+    dct:source <http://www.rachelcarson.org/SilentSpring.aspx> ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.WarIsARacket a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "War Is a Racket"@en ;
+    rdfs:comment "1935 speech and short book by retired US Marine Corps Major General Smedley Butler, arguing that war is 'possibly the oldest, easily the most profitable, surely the most vicious' racket, conducted for the benefit of a few at the expense of many. Daniel Schmachtenberger reads its opening in TGS_126 to define a racket as manufacturing a demand and then selling the supply (tgs:Concept.ProblemSolvingAsRacket)."@en ;
+    dct:issued "1935"^^xsd:gYear ;
+    dct:source <https://en.wikipedia.org/wiki/War_Is_a_Racket> ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.TheoryOfGamesAndEconomicBehavior a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Theory of Games and Economic Behavior"@en ;
+    rdfs:comment "1944 book by John von Neumann and Oskar Morgenstern that founded modern game theory and applied it to economics. Daniel Schmachtenberger cites it in TGS_126 (as von Neumann's book on economics and game theory) for the moment game theory became the most scientifically congruent answer to what a good choice is (tgs:Concept.GameTheoryFillsTheOughtGap). The show notes link a Stanford page on von Neumann and game theory."@en ;
+    dct:issued "1944"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.HowToMisleadWithFacts a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "How to Mislead with Facts"@en ;
+    rdfs:comment "Consilience Project paper on how true facts are used to support specious conclusions: cherry-picking, decontextualizing and framing. Daniel Schmachtenberger cites it in TGS_126 when describing how progress narratives are built (tgs:Concept.ProgressNarrativeAsApologism)."@en ;
+    dct:publisher tgs:Organization.ConsilienceProject ;
+    dct:source <https://consilienceproject.org/how-to-mislead-the-facts/> ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.HospicingModernity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hospicing Modernity: Facing Humanity's Wrongs and the Implications for Social Activism"@en ;
+    rdfs:comment "2021 book by Vanessa Machado de Oliveira (Vanessa Andreotti). In TGS_126 Daniel Schmachtenberger cites 'her book' for her chief's definition of colonialism: not fundamentally taking land or abusing people, which are epiphenomena, but believing there are separable things. Her own TGS conversation is tgs:Interview.TGS_125_VanessaAndreotti."@en ;
+    dct:creator tgs:Human.VanessaAndreotti ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    .
+
+tgs:Work.TheDayAfter1983 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Day After"@en ;
+    rdfs:comment "1983 American television film directed by Nicholas Meyer, broadcast by ABC on 20 November 1983, depicting nuclear war and its aftermath in Kansas and Missouri; watched by roughly 100 million Americans on its first airing. In Frankly_81 Nate cites it as a cultural intervention that catalyzed the nuclear-disarmament movement and moved President Reagan, and argues no single broadcast could reach whole nations at once in today's fractured media (tgs:Concept.SharedBroadcastPerturbation)."@en ;
+    dct:issued "1983-11-20"^^xsd:date ;
+    dct:source <https://en.wikipedia.org/wiki/The_Day_After> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
     .

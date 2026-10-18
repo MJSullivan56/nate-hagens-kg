@@ -181,6 +181,45 @@ thinkr:EpisodeType.AnimatedVideo a thinkr:EpisodeType, owl:NamedIndividual ;
 
 
 #############################################
+# AnalyticalLensType (ADDED 2026-10-18)
+#############################################
+
+thinkr:AnalyticalLensType a owl:Class, thinkr:Category ;
+    rdfs:comment "Enumerated lenses through which a thinkr:Concept explains the human predicament, used by thinkr:hasAnalyticalLens. Introduced for the Schmachtenberger enrichment to make the game-theoretic foundation of Daniel Schmachtenberger's work and Nate Hagens's biophysical and practical/personal approach comparable in queries."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( thinkr:AnalyticalLensType.GameTheoretic thinkr:AnalyticalLensType.Biophysical thinkr:AnalyticalLensType.PsychologicalInner thinkr:AnalyticalLensType.Institutional thinkr:AnalyticalLensType.PracticalPersonal ) ] ;
+    skos:prefLabel "Analytical Lens Type"@en .
+
+thinkr:AnalyticalLensType.GameTheoretic a thinkr:AnalyticalLensType, owl:NamedIndividual ;
+    skos:prefLabel "Game-Theoretic"@en ;
+    skos:definition "Explains outcomes through incentives, competition and coordination among agents: multipolar traps, arms races, first-mover races, returns on agency. The characteristic lens of Daniel Schmachtenberger."@en .
+
+thinkr:AnalyticalLensType.Biophysical a thinkr:AnalyticalLensType, owl:NamedIndividual ;
+    skos:prefLabel "Biophysical"@en ;
+    skos:definition "Explains outcomes through energy, materials, thermodynamics and ecology: EROI, the carbon pulse, maximum power, planetary limits. The characteristic lens of Nate Hagens's systems synthesis."@en .
+
+thinkr:AnalyticalLensType.PsychologicalInner a thinkr:AnalyticalLensType, owl:NamedIndividual ;
+    skos:prefLabel "Psychological / Inner"@en ;
+    skos:definition "Explains outcomes through minds, values, perception and inner development: reward circuits, certainty, wholeness, meaning, wisdom."@en .
+
+thinkr:AnalyticalLensType.Institutional a thinkr:AnalyticalLensType, owl:NamedIndividual ;
+    skos:prefLabel "Institutional"@en ;
+    skos:definition "Explains or redesigns outcomes through governance, law, finance, markets and policy: growth obligations in money, tax design, global governance, response frameworks."@en .
+
+thinkr:AnalyticalLensType.PracticalPersonal a thinkr:AnalyticalLensType, owl:NamedIndividual ;
+    skos:prefLabel "Practical / Personal"@en ;
+    skos:definition "What individuals and communities can actually do: simplify first, re-aim status, find meaning with fewer resources, stay grounded. The characteristic emphasis of Nate Hagens's pragmatic approach."@en .
+
+[] a owl:AllDifferent ;
+   owl:distinctMembers (
+        thinkr:AnalyticalLensType.GameTheoretic
+        thinkr:AnalyticalLensType.Biophysical
+        thinkr:AnalyticalLensType.PsychologicalInner
+        thinkr:AnalyticalLensType.Institutional
+        thinkr:AnalyticalLensType.PracticalPersonal ) .
+
+
+#############################################
 # ProfessionalRole
 #############################################
 

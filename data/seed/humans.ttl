@@ -269,6 +269,9 @@ tgs:Human.DanielSchmachtenberger a thinkr:Human, owl:NamedIndividual ;
     rdfs:comment "Social philosopher and systems thinker known for work on the 'metacrisis,' sensemaking, and civilization design. Founding member of The Consilience Project (2021). Founder of Civilization Research Institute (2024). Also co-founder of Neurohacker Collective (2015, commercial nootropic/wellness supplement company, later Qualia Life Sciences) — noted factually as a distinct commercial venture, not modeled as a School (not a school of thought). Studied at Body Mind College (San Diego) and Maharishi International University (counseling, psychology, mathematics) — largely self-taught since. NO owl:sameAs to DBpedia: verified 2026-07-11, no genuine ENGLISH Wikipedia page exists (only a Swedish-language article and non-canonical mirror sites like Wikitia/EverybodyWiki, both carrying '[citation needed]' tags throughout suggesting even they are uncertain of their own content) — DBpedia URIs are specifically derived from English Wikipedia, so none applies. A genuine Wikidata entry DOES exist independently (multilingual, linked from the Swedish article) — see crosswalknotes.ttl. Independently reconfirmed 2026-09-08: still no real English Wikipedia page, matching this prior finding exactly. Extensively confirmed repeat TGS guest — 'half a dozen times' per one source; specific episodes found include Ep 5 'Bend Not Break Part 1: Energy Blindness', Ep 126 'A Vision for Betterment', and Ep 132 'The Wide Boundary Impacts of AI'."@en ;
     thinkr:memberOf tgs:Organization.ConsilienceProject ;
     owl:sameAs <http://www.wikidata.org/entity/Q110189381> ;
+    foaf:homepage <https://civilizationemerging.com> ;
+    rdfs:seeAlso <https://civilizationemerging.com/media-library/> ;
+    skos:scopeNote "rdfs:seeAlso points to the media library on his own site (added 2026-10-18 at MJSullivan's suggestion): about 75 podcast, interview and talk appearances, the fullest public index of his conversations outside TGS. foaf:homepage added the same day, matching the convention for personal sites elsewhere in humans.ttl; the existing owl:sameAs to the same site is left as is."@en ;
     .
 
 # hasPersonEntityType MOVED to tgs:Persona.DanielSchmachtenberger
@@ -2046,3 +2049,77 @@ tgs:Human.JeanPierreDeCaussade a thinkr:Human, owl:NamedIndividual ;
     rdfs:comment "French Jesuit priest and spiritual writer (1675-1751) to whom tgs:Work.SacramentOfThePresentMoment is attributed. Nate refers to him in Frankly_143 as an eighteenth-century priest whose name he could not recall; the show notes name him."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Jean_Pierre_de_Caussade> ;
     .
+
+tgs:Human.AndrewHolecek a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Andrew Holecek"@en ;
+    rdfs:label "Andrew Holecek (human)"@en ;
+    owl:sameAs <https://www.andrewholecek.com/about/> ;
+    rdfs:comment "Interdisciplinary scholar-practitioner in Tibetan Buddhism and other nondual wisdom traditions, who completed the traditional Tibetan Buddhist three-year retreat and has practiced dark retreat for about thirty years. Involved in scientific research on dark retreat with the University of Wisconsin-Madison and the Institute for Advanced Consciousness Studies (Resident Contemplative Scholar); research consultant to Northwestern University's cognitive neuroscience program; member of the American Academy of Sleep Medicine and author of scientific papers on lucid dreaming; former host of the Edge of Mind podcast. Author of several books, most recently Total Eclipse of the Mind (2026). Guest on TGS_221."@en ;
+    .
+
+tgs:Human.BalazsMatics a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Balázs Matics"@en ;
+    rdfs:label "Balázs Matics (human)"@en ;
+    rdfs:comment "Author of the Substack blog The Honest Sorcerer, on energy, economics, industrial materials and the future of civilization; wrote anonymously until his first public interview, TGS_209 (recorded 2025-12-18). Industrial product engineer by training, based in Hungary, with two decades of experience in manufacturing, supply chain and project management at multinational corporations and a two-year post-graduate leadership program in supply chain and logistics. Father of two sons."@en ;
+    .
+
+tgs:Human.KellyErhart a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Kelly Erhart"@en ;
+    rdfs:label "Kelly Erhart (human)"@en ;
+    rdfs:comment "Climate philanthropist and repeat climate founder; Director of Partnerships at Outlier Projects (and, per Nate's introduction, Gigascale Capital). Co-founded the ocean alkalinity enhancement nonprofit Vesta, which she led for five years and still advises, after an earlier waterless-toilet startup. Grew up between central Florida and rural eastern Montana; 29 when interviewed in TGS_204 (recorded 2025-09-26). Named to the Forbes 30 Under 30 for Energy and Green Tech in 2026."@en ;
+    thinkr:memberOf tgs:Organization.OutlierProjects .
+
+tgs:Human.RosaVasquezEspinoza a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Rosa Vásquez Espinoza"@en ;
+    rdfs:label "Rosa Vásquez Espinoza (human)"@en ;
+    rdfs:comment "Peruvian chemical biologist with Andean-Amazonian Indigenous roots, National Geographic Explorer, award-winning artist and author of The Spirit of the Rainforest (2025). Born and raised in Lima; her grandmother is an Andean traditional healer. Moved to the US at 18 on a full scholarship, earned a dual degree in molecular biology and biochemistry and a PhD in chemical biology. Founder of Amazon Research Internacional; the first microbial explorer of the Amazon's Boiling River; led the first chemical analysis of stingless bees and their honey in Peru; International Ambassador for the Asháninka people, with whom she co-authored the first scientific paper. Based partly in the UK when interviewed in TGS_201 (recorded 2025-10-22)."@en ;
+    owl:sameAs <https://www.rosavespinoza.com/bio> ;
+    thinkr:memberOf tgs:Organization.AmazonResearchInternacional .
+
+tgs:Human.TedParson a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Edward A. (Ted) Parson"@en ;
+    rdfs:label "Ted Parson (human)"@en ;
+    rdfs:comment "Dan and Rae Emmett Professor of Environmental Law and Faculty Director of the Emmett Institute on Climate Change and the Environment, UCLA. Studies international environmental law and policy, the governance of disruptive technologies including geoengineering and artificial intelligence, and the political economy of regulation. Books include Protecting the Ozone Layer: Science and Strategy (2003, Sprout Award), The Science and Politics of Global Climate Change (with Andrew Dessler) and A Subtle Balance: Evidence, Expertise, and Democracy in Public Policy and Governance, 1970-2010. Has worked or consulted for the White House Office of Science and Technology Policy, the US Congress's Office of Technology Assessment, Canada's Privy Council Office and IIASA. Has studied solar geoengineering for about 25 years; guest on TGS_200 (recorded 2025-09-25)."@en ;
+    owl:sameAs <https://law.ucla.edu/faculty/faculty-profiles/edward-a-parson> ;
+    thinkr:memberOf tgs:Organization.EmmettInstitute .
+
+tgs:Human.RutgerBregman a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Rutger Bregman"@en ;
+    rdfs:label "Rutger Bregman (human)"@en ;
+    rdfs:comment "Dutch historian and author. Considered an academic career in history, then worked as a journalist at De Volkskrant and for ten years at De Correspondent. Author of Utopia for Realists (2017 in English), Humankind: A Hopeful History (2020), both Sunday Times and New York Times bestsellers translated into 46 languages, and Moral Ambition (2025). Co-founded the School for Moral Ambition in 2024. Went viral in 2019 for telling billionaires at Davos to pay their taxes. Living in the United States and the father of two young children when interviewed in TGS_195 (recorded 2025-07-08)."@en ;
+    owl:sameAs <https://rutgerbregman.com/about> ;
+    thinkr:memberOf tgs:Organization.SchoolForMoralAmbition .
+
+tgs:Human.SunilAmrith a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sunil Amrith"@en ;
+    rdfs:label "Sunil Amrith (human)"@en ;
+    rdfs:comment "Renu and Anand Dhawan Professor of History at Yale University, Professor at the Yale School of the Environment, and Henry R. Luce Director of Yale's Whitney and Betty MacMillan Center for International and Area Studies. PhD, University of Cambridge. Historian of migration, public health and environmental history, focusing on the movements of people and ecological processes connecting South and Southeast Asia, expanded to global environmental history. Author of The Burning Earth (2024), Unruly Waters (2018) and Crossing the Bay of Bengal (2013), among other books. Born in Nairobi to a South Indian family and raised in Singapore; father of two children (11 and 7 at the time of TGS_192, recorded 2025-08-14). Writing a book on repair."@en ;
+    owl:sameAs <https://history.yale.edu/people/sunil-amrith> ;
+    thinkr:memberOf tgs:AcademicInstitution.YaleUniversity .
+
+tgs:Human.OliverMilman a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Oliver Milman"@en ;
+    rdfs:label "Oliver Milman (human)"@en ;
+    rdfs:comment "British journalist and environment correspondent at The Guardian, covering topics from electric cars to bumblebees to pollution in the Gulf of Mexico. Author of The Insect Crisis (Atlantic, 2022), shortlisted for the Wainwright Prize for Conservation Writing. Father of two young children; in New York City when interviewed in TGS_189 (recorded 2025-06-25)."@en ;
+    owl:sameAs <https://olivermilman.com/about/> ;
+    thinkr:memberOf tgs:Organization.TheGuardian .
+
+tgs:Human.WesCarter a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Wes Carter"@en ;
+    rdfs:label "Wes Carter (human)"@en ;
+    rdfs:comment "President and third-generation leader of Atlantic Packaging, which he joined out of college about 25 years before TGS_186, and founder of A New Earth Project (January 2020). Grew up on the North Carolina coast as a surfer and fisherman, an Eagle Scout, and worked in the outdoor industry in Park City, Utah; based in Charleston, South Carolina. Nearly 47 when interviewed (recorded 2025-05-28)."@en ;
+    thinkr:memberOf tgs:Organization.AtlanticPackaging, tgs:Organization.ANewEarthProject .
+
+tgs:Human.RodSchoonover a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Rod Schoonover"@en ;
+    rdfs:label "Rod Schoonover (human)"@en ;
+    rdfs:comment "CEO and founder of the Ecological Futures Group; adjunct professor at Georgetown University; Senior Associate Fellow at the Stockholm International Peace Research Institute (SIPRI) and Senior Associate at the Center for Strategic and International Studies. Served a decade in the US intelligence community, as Director of Environment and Natural Resources at the National Intelligence Council (Office of the Director of National Intelligence) and as Senior Scientist and Senior Analyst in the State Department's Bureau of Intelligence and Research, resigning in 2019. Joined government in 2009 as a AAAS Diplomacy Fellow after being a tenured professor of chemistry and biochemistry at Cal Poly San Luis Obispo; PhD in theoretical chemical physics (complex systems), University of Michigan. Guest on TGS_183 (recorded 2025-05-06)."@en ;
+    owl:sameAs <https://gufaculty360.georgetown.edu/s/contact/0031Q00001wwig3QAA/rod-schoonover> ;
+    thinkr:memberOf tgs:Organization.EcologicalFuturesGroup, tgs:AcademicInstitution.GeorgetownUniversity .
+
+tgs:Human.IndyJohar a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Indy Johar"@en ;
+    rdfs:label "Indy Johar (human)"@en ;
+    rdfs:comment "Architect by training; co-founder of Dark Matter Labs, where he is building Expanding Civilizational Optionality (xCO), co-founder of Project 00 and of the RIBA award-winning architecture and urban practice Architecture 00; founding director of Open Systems Lab; helped seed WikiHouse (open-source housing) and Opendesk (open-source furniture) and build the Impact Hub network; has taught at the University of Bath, TU Berlin, UCL, Princeton, Harvard, MIT and the New School; Professor of Practice at RMIT University; non-executive director of the WikiHouse Foundation and BLOXHUB; a Vision Keeper at the Collaborative for Systemic Climate Action. Writes on Substack. Guest in TGS_147 and TGS_238 (recorded 2026-09-23 in New York City during Climate Week)."@en ;
+    owl:sameAs <https://longnow.org/people/indy-johar/> ;
+    thinkr:memberOf tgs:Organization.DarkMatterLabs, tgs:Organization.Project00, tgs:AcademicInstitution.RMITUniversity .

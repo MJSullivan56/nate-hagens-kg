@@ -144,3 +144,176 @@ thinkr:LinkNote a owl:Class ;
     rdfs:comment "Metadata resource attached to a single cross-link triple (rationale, confidence). See data/seed/links.ttl for the pattern. Migrate to RDF-star once you're comfortable — Oxigraph supports it — to attach this directly to the triple instead of via a side resource."@en ;
     skos:prefLabel "Link Note"@en .
 
+tgs:LinkNote.MaximizingReturnsOnPower_MaximumPowerPrinciple a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.MaximizingReturnsOnPower ;
+    thinkr:aboutObject tgs:Concept.MaximumPowerPrinciple ;
+    thinkr:hasEvidence tgs:Evidence.MaximizingReturnsOnPower_MaximumPowerPrinciple ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MaximizingReturnsOnPower thinkr:complements tgs:Concept.MaximumPowerPrinciple. The deepest single bridge: Nate's maximum power principle is stated in energy (organisms and ecosystems self-organize to maximize power), and Daniel nests it inside a wider game-theoretic power -- agents using agency to gain more agency, with energy one means among many. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.MultipolarTrap_Superorganism a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.MultipolarTrap ;
+    thinkr:aboutObject tgs:Concept.Superorganism ;
+    thinkr:hasEvidence tgs:Evidence.MultipolarTrap_Superorganism ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MultipolarTrap thinkr:complements tgs:Concept.Superorganism. The same dynamic seen through two lenses. Nate's superorganism is the emergent, energy-driven behavior of eight billion people that no one steers; Daniel's multipolar trap is the coordination failure that keeps any single actor from stepping out of it. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.EmbeddedGrowthObligation_GrowthImperative a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.EmbeddedGrowthObligation ;
+    thinkr:aboutObject tgs:Concept.GrowthImperative ;
+    thinkr:hasEvidence tgs:Evidence.EmbeddedGrowthObligation_GrowthImperative ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.EmbeddedGrowthObligation thinkr:complements tgs:Concept.GrowthImperative. Daniel's term for the financial system's need to grow exponentially, game-theoretic in framing, pairs with Nate's growth imperative, which he grounds biophysically and in debt-based money creation. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.GeneralizedJevonsParadox_JevonsDividend a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.GeneralizedJevonsParadox ;
+    thinkr:aboutObject tgs:Concept.JevonsDividend ;
+    thinkr:hasEvidence tgs:Evidence.GeneralizedJevonsParadox_JevonsDividend ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GeneralizedJevonsParadox thinkr:complements tgs:Concept.JevonsDividend. Daniel's diagnosis and Nate's remedy. Daniel generalizes the rebound effect to every widely used input and says efficiency only reduces total use under a binding system; Nate's Jevons paradox dividend is a concrete binding rule that diverts efficiency gains outside the growth economy. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.GameTheoreticVersusRealValue_PriceCostAndValue a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.GameTheoreticVersusRealValue ;
+    thinkr:aboutObject tgs:Concept.PriceCostAndValue ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoreticVersusRealValue_PriceCostAndValue ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GameTheoreticVersusRealValue thinkr:complements tgs:Concept.PriceCostAndValue. Both separate what the economy counts from what matters. Daniel explains the gap game-theoretically (unpriced goods like the atmosphere lose to whatever gives competitive advantage); Nate's price, cost and value distinction names the same gap in practical terms that people can use in their own choices. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HyperAgents_TheLastCanToKick a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HyperAgents ;
+    thinkr:aboutObject tgs:Concept.TheLastCanToKick ;
+    thinkr:hasEvidence tgs:Evidence.HyperAgents_TheLastCanToKick ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HyperAgents thinkr:complements tgs:Concept.TheLastCanToKick. Two answers in the same episode to what drives the superorganism and what could redirect it. Daniel's hyper-agents maximize returns on agency and set the incentives everyone else lives in; Nate's last can to kick is learning to get meaning, love and status with fewer resources -- a cultural and personal lever that changes what agency is spent pursuing. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.OneMarshmallowRewardCircuits_SupernormalStimuli a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.OneMarshmallowRewardCircuits ;
+    thinkr:aboutObject tgs:Concept.SupernormalStimuli ;
+    thinkr:hasEvidence tgs:Evidence.OneMarshmallowRewardCircuits_SupernormalStimuli ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.OneMarshmallowRewardCircuits thinkr:complements tgs:Concept.SupernormalStimuli. Nearly the same idea: rewards that hijack evolved circuitry. Nate's supernormal stimuli stress the ancestral mismatch; Daniel's one-marshmallow circuits (he says 'hyper-normal stimulus') stress the market incentive that produces them and the deeper nutrient that is missing. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.EcologyOfTheoriesOfChange_TheoryOfChange a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.EcologyOfTheoriesOfChange ;
+    thinkr:aboutObject tgs:Concept.TheoryOfChange ;
+    thinkr:hasEvidence tgs:Evidence.EcologyOfTheoriesOfChange_TheoryOfChange ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.EcologyOfTheoriesOfChange thinkr:complements tgs:Concept.TheoryOfChange. Daniel's 'there is not a theory of change, there's an ecology of theories of change' sets Nate's own theory of change -- a scout team shifting initial conditions -- inside a wider field of complementary efforts. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.RestraintByDesign_JevonsDividend a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.RestraintByDesign ;
+    thinkr:aboutObject tgs:Concept.JevonsDividend ;
+    thinkr:hasEvidence tgs:Evidence.RestraintByDesign_JevonsDividend ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.RestraintByDesign thinkr:complements tgs:Concept.JevonsDividend. Daniel's historical cases of restraint built into culture and law (the Pacific Northwest fishing rule, the Sabbath, the potlatch) are working precedents for Nate's proposed rule diverting efficiency gains out of the growth economy. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.CorporationAsObligateSociopath_CorporationsAsMisalignedAI a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.CorporationAsObligateSociopath ;
+    thinkr:aboutObject tgs:Concept.CorporationsAsMisalignedAI ;
+    thinkr:hasEvidence tgs:Evidence.CorporationAsObligateSociopath_CorporationsAsMisalignedAI ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.CorporationAsObligateSociopath thinkr:complements tgs:Concept.CorporationsAsMisalignedAI. Both treat the corporation as a non-human agent whose goals diverge from human and biospheric good: Daniel through its built-in dark-triad traits and legal duty to maximize returns, Nate through the alignment framing he uses for AI. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.MaximizingReturnsOnPower_PowerVersusLife a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.MaximizingReturnsOnPower ;
+    thinkr:aboutObject tgs:Concept.PowerVersusLife ;
+    thinkr:hasEvidence tgs:Evidence.MaximizingReturnsOnPower_PowerVersusLife ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MaximizingReturnsOnPower thinkr:complements tgs:Concept.PowerVersusLife. Daniel's game-theoretic account of why power compounds (agents using agency to gain agency through every available technology) pairs with Nate's practical framing of what that does to life and of the personal response, wide-boundary sovereignty. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.DiscretePhaseShift_ImaginalCells a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.DiscretePhaseShift ;
+    thinkr:aboutObject tgs:Concept.ImaginalCells ;
+    thinkr:hasEvidence tgs:Evidence.DiscretePhaseShift_ImaginalCells ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.DiscretePhaseShift thinkr:complements tgs:Concept.ImaginalCells. Both use metamorphosis: Daniel for a civilizational phase shift that forecasts miss, Nate for the personal changes that make someone ready for a post-carbon-pulse world. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.PowerSeekingAndComplicity_TraitsOutcompeteValues a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.PowerSeekingAndComplicity ;
+    thinkr:aboutObject tgs:Concept.TraitsOutcompeteValues ;
+    thinkr:hasEvidence tgs:Evidence.PowerSeekingAndComplicity_TraitsOutcompeteValues ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PowerSeekingAndComplicity thinkr:complements tgs:Concept.TraitsOutcompeteValues. Daniel explains how a power-competitive system selects dark-triad leaders and complicit followers; Nate explains why good values alone lose to those traits and asks how many supporters a light-triad person needs. Both point to the small-group checks of ancestral life. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.MoneyAsMaximumOptionality_ThreeTiersOfWealth a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.MoneyAsMaximumOptionality ;
+    thinkr:aboutObject tgs:Concept.ThreeTiersOfWealth ;
+    thinkr:hasEvidence tgs:Evidence.MoneyAsMaximumOptionality_ThreeTiersOfWealth ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MoneyAsMaximumOptionality thinkr:complements tgs:Concept.ThreeTiersOfWealth. Daniel explains money game-theoretically as a unit of agency and maximum optionality; Nate places the same fungible claim as tertiary wealth atop biological primary and secondary wealth, explaining why it alone escapes negative feedback. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.GameTheoreticVersusRealValue_TransmutingWealthIntoIncome a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.GameTheoreticVersusRealValue ;
+    thinkr:aboutObject tgs:Concept.TransmutingWealthIntoIncome ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoreticVersusRealValue_TransmutingWealthIntoIncome ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GameTheoreticVersusRealValue thinkr:complements tgs:Concept.TransmutingWealthIntoIncome. Daniel explains why unpriced goods lose to whatever gives competitive advantage; Nate describes the result as a civilizational drawdown of wealth counted as income, and names its reversal, a regenerative culture. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.OneMarshmallowRewardCircuits_RichInSocialCapital a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.OneMarshmallowRewardCircuits ;
+    thinkr:aboutObject tgs:Concept.RichInSocialCapital ;
+    thinkr:hasEvidence tgs:Evidence.OneMarshmallowRewardCircuits_RichInSocialCapital ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.OneMarshmallowRewardCircuits thinkr:complements tgs:Concept.RichInSocialCapital. Daniel's account of pseudosatisfiers explains why Nate's craving fell away in a socially rich, energy-poor setting and returned at home; Nate's India experience is the lived case. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.ThreeByThreeResponseGrid_SolutionSpaceCube a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ThreeByThreeResponseGrid ;
+    thinkr:aboutObject tgs:Concept.SolutionSpaceCube ;
+    thinkr:hasEvidence tgs:Evidence.ThreeByThreeResponseGrid_SolutionSpaceCube ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ThreeByThreeResponseGrid thinkr:complements tgs:Concept.SolutionSpaceCube. Same layers and same three time horizons; Daniel's third axis is the kind of agent (hyper-agents, egregores, institutions), Nate's is scale, plus the responder's own circumstances and values. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.ImpossibleToHard_NamedSolutionsDrawCounterResponse a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ImpossibleToHard ;
+    thinkr:aboutObject tgs:Concept.NamedSolutionsDrawCounterResponse ;
+    thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_NamedSolutionsDrawCounterResponse ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.NamedSolutionsDrawCounterResponse. Both hold that solutions to the metacrisis are not fixed answers because the system adapts to them: Daniel frames the response as orienting questions with many partial, continually updated answers; Nate concludes that effective work often has to stay out of public view. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.FragmentedConsciousness_ShadowOfTheSuperorganism a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.FragmentedConsciousness ;
+    thinkr:aboutObject tgs:Concept.ShadowOfTheSuperorganism ;
+    thinkr:hasEvidence tgs:Evidence.FragmentedConsciousness_ShadowOfTheSuperorganism ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.FragmentedConsciousness thinkr:complements tgs:Concept.ShadowOfTheSuperorganism. Daniel names perceiving the world as separable parts as the root of the problems; Nate describes the lived result -- fracture, polarization and frayed nervous systems beneath material abundance -- and his own embodied turn toward 'everything is connected.' calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.MaximizingReturnsOnPower_MetabolicHierarchyOfTheSuperorganism a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.MaximizingReturnsOnPower ;
+    thinkr:aboutObject tgs:Concept.MetabolicHierarchyOfTheSuperorganism ;
+    thinkr:hasEvidence tgs:Evidence.MaximizingReturnsOnPower_MetabolicHierarchyOfTheSuperorganism ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MaximizingReturnsOnPower thinkr:complements tgs:Concept.MetabolicHierarchyOfTheSuperorganism. Daniel gives the mechanism: agency used to increase agency, with AI as the likely successor to the market. Nate gives the resulting order of priorities, with AI and the military at the top and citizens and the environment at the bottom. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.ImpossibleToHard_AggregateProbability a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ImpossibleToHard ;
+    thinkr:aboutObject tgs:Concept.AggregateProbability ;
+    thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_AggregateProbability ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.AggregateProbability. Both judge single-issue solutions by the full set of conditions they must meet. Daniel uses those conditions as design criteria, which make a problem harder but possible; Nate uses them as odds, which point to a world of less. The tension is real and useful: one says what a solution must satisfy, the other how likely it is to. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HyperAgents_EducatingHyperAgents a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HyperAgents ;
+    thinkr:aboutObject tgs:Concept.EducatingHyperAgents ;
+    thinkr:hasEvidence tgs:Evidence.HyperAgents_EducatingHyperAgents ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HyperAgents thinkr:complements tgs:Concept.EducatingHyperAgents. Daniel explains who shapes the landscape everyone else lives in and names two hard paths to change it; Nate's film dramatizes both, the trader whose values widen and the scientist who schools influential individuals. The two use 'hyper-agent' differently, which the LinkNote records rather than resolves. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.SensemakingPrerequisiteOfOpenSociety ;
+    thinkr:aboutObject tgs:Concept.SharedBroadcastPerturbation ;
+    thinkr:hasEvidence tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.SensemakingPrerequisiteOfOpenSociety thinkr:complements tgs:Concept.SharedBroadcastPerturbation. Daniel states the requirement: an open society needs everyone to make sense well. Nate gives a historical case of a society briefly sensing together, through one broadcast, and says fractured, AI-generated media has closed that route. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.YellowTeaming_UnintendedConsequences a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.YellowTeaming ;
+    thinkr:aboutObject tgs:Concept.UnintendedConsequences ;
+    thinkr:hasEvidence tgs:Evidence.YellowTeaming_UnintendedConsequences ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.YellowTeaming thinkr:complements tgs:Concept.UnintendedConsequences. Daniel gives a design method: before building, ask where the thing might mess other things up if it succeeds. Nate gives the cases after the fact and the habit of looking two or three steps ahead. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.PrematureCertainty_CulturalAntibodies a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.PrematureCertainty ;
+    thinkr:aboutObject tgs:Concept.CulturalAntibodies ;
+    thinkr:hasEvidence tgs:Evidence.PrematureCertainty_CulturalAntibodies ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PrematureCertainty thinkr:complements tgs:Concept.CulturalAntibodies. Daniel explains why confident catastrophic predictions are tempting and unreliable; Nate describes the cultural cost when they fail, a public that stops listening to the real science. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.GameTheoreticVersusRealValue_HavesAndHaveNots a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.GameTheoreticVersusRealValue ;
+    thinkr:aboutObject tgs:Concept.HavesAndHaveNots ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoreticVersusRealValue_HavesAndHaveNots ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GameTheoreticVersusRealValue thinkr:complements tgs:Concept.HavesAndHaveNots. Daniel explains why money diverges from real value at the scale of a civilization; Nate takes the same gap to the scale of a life, listing what a person can have or lack that money does not measure. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.PowerSeekingAndComplicity_EducatingHyperAgents a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.PowerSeekingAndComplicity ;
+    thinkr:aboutObject tgs:Concept.EducatingHyperAgents ;
+    thinkr:hasEvidence tgs:Evidence.PowerSeekingAndComplicity_EducatingHyperAgents ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PowerSeekingAndComplicity thinkr:complements tgs:Concept.EducatingHyperAgents. Nate's hope is to change the minds of the few with outsized ability to change the system; Daniel explains why that is hard, since a system born of power competition selects dark-triad people for those positions. Nate names the same overlap himself in Frankly_53 and calls it 'a puzzle.' calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HyperAgents_TheFifteenHundred a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HyperAgents ;
+    thinkr:aboutObject tgs:Concept.TheFifteenHundred ;
+    thinkr:hasEvidence tgs:Evidence.HyperAgents_TheFifteenHundred ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HyperAgents thinkr:complements tgs:Concept.TheFifteenHundred. Both name a small number of people with outsized influence who shape the landscape for everyone else. Daniel explains them structurally, as power-law outliers maximizing returns on agency; Nate explains them inwardly, as people cut off from their feeling centers, and hopes their consciousness can be raised. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HeartWillMind_HealingBeforeEngagement a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HeartWillMind ;
+    thinkr:aboutObject tgs:Concept.HealingBeforeEngagement ;
+    thinkr:hasEvidence tgs:Evidence.HeartWillMind_HealingBeforeEngagement ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HeartWillMind thinkr:complements tgs:Concept.HealingBeforeEngagement. Both say knowledge alone does not make agents of change. Daniel names the three capacities that must come together; Nate names an order for building them: the body and nervous system first, then community, then the systems synthesis. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .

@@ -40,3 +40,15 @@ tgs:AcademicInstitution.HarvardUniversity a thinkr:AcademicInstitution, owl:Name
     skos:prefLabel "Harvard University"@en ;
     rdfs:comment "BOOTSTRAPPED 2026-07-15 — Gaya Herrington's own MSc Sustainability Studies alma mater AND, per her own bio site (gayaherrington.com/about, WebFetch-verified 2026-07-15), a current Adjunct Professor appointment where she teaches a semester course, 'Economic transformation for post-growth flourishing.' Both facts about the same institution — see tgs:Relationship.GayaHerrington_HarvardUniversity for the current teaching relationship specifically (the degree itself stays prose-only on tgs:Human.GayaHerrington, matching this project's degree-history-stays-prose precedent)."@en ;
     .
+
+tgs:AcademicInstitution.YaleUniversity a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "Yale University"@en ;
+    rdfs:comment "Including the Yale School of the Environment and the Whitney and Betty MacMillan Center for International and Area Studies, per tgs:Human.SunilAmrith's bio (TGS_192)."@en .
+
+tgs:AcademicInstitution.GeorgetownUniversity a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "Georgetown University"@en ;
+    rdfs:comment "Where tgs:Human.RodSchoonover is an adjunct professor, teaching climate and climate change and an introduction to ecological security (TGS_183)."@en .
+
+tgs:AcademicInstitution.RMITUniversity a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "RMIT University"@en ;
+    rdfs:comment "University in Melbourne, Australia, where tgs:Human.IndyJohar is Professor of Practice, linked to its Planetary Civics Inquiry (TGS_238 show notes)."@en .

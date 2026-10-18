@@ -55,6 +55,21 @@ thinkr:contrastsWith a owl:ObjectProperty ;
     skos:scopeNote "Narrower than thinkr:relatesTo: specifically a useful tension or disagreement, not any relation — does not imply influence in either direction."@en ;
     skos:prefLabel "contrasts with"@en .
 
+thinkr:hasAnalyticalLens a owl:ObjectProperty ;
+    rdfs:domain thinkr:Concept ;
+    rdfs:range thinkr:AnalyticalLensType ;
+    rdfs:comment "The analytical lens (or lenses) through which a Concept explains the human predicament: game-theoretic, biophysical, psychological/inner, institutional, or practical/personal. A Concept may carry more than one. ADDED 2026-10-18 for the Schmachtenberger enrichment, so that Daniel Schmachtenberger's game-theoretic concepts and Nate Hagens's biophysical and practical ones can be queried and compared side by side."@en ;
+    skos:scopeNote "Not functional: many concepts genuinely sit on two lenses (e.g. tgs:Concept.Superorganism is both biophysical and game-theoretic). Applied first to the concepts discussed in Daniel's TGS episodes and the Nate concepts they bridge to; the rest of the graph is untagged, which means 'not yet assessed', not 'no lens'."@en ;
+    skos:prefLabel "has analytical lens"@en .
+
+thinkr:complements a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf thinkr:relatesTo ;
+    rdfs:domain thinkr:Concept ;
+    rdfs:range thinkr:Concept ;
+    rdfs:comment "Two Concepts that describe the same dynamic through different analytical lenses (thinkr:hasAnalyticalLens), so that each fills in what the other leaves out -- for example a game-theoretic diagnosis and a practical or biophysical response. ADDED 2026-10-18 for the Schmachtenberger-Hagens bridges; each asserted pair carries a thinkr:LinkNote with Evidence explaining the bridge."@en ;
+    skos:scopeNote "Narrower than thinkr:relatesTo, and distinct from thinkr:contrastsWith (a tension) and thinkr:echoesIdeaOf (independent convergence by a Persona): complements claims the two concepts fit together across lenses. Symmetric, so it is asserted once per pair."@en ;
+    skos:prefLabel "complements"@en .
+
 thinkr:definedIn a owl:ObjectProperty ;
     rdfs:domain thinkr:Concept ;
     rdfs:range thinkr:Work ;

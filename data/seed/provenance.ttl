@@ -2279,6 +2279,27 @@ tgs:RevisionEvent.TGS_147_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_147_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_147_IndyJohar ;
+    thinkr:revisionDate "2026-10-15"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the stub: added definition, host introduction, discussion summary, dates, subject, transcript and replay links, 13 discussed concepts (7 newly minted: WhatWeDesignDesignsUsBack, InstitutionalDarkMatter, PreemptivePeace, ReAgentificationOfTheWorld, LifeEnnoblingEconomics, CustodianshipOverOwnership, FreedomToBeRadicallyHuman), 8 references (2 newly minted Works) and back-links on all of them; kept the existing back-link from TGS_238. Extended Concept.FutureOfBeingHuman with its TGS_147 origin, dated the TGS_147 interaction in Relationship.NateHagens_IndyJohar, and added the fuller guest bio to Human.IndyJohar."@en ;
+    .
+
+tgs:RevisionEvent.EpisodeIRIPrefixFix_2026_10_15 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.TGS_205_NateHagens, tgs:Monologue.TGS_187_EarthDay2025, tgs:AnimatedVideo.TGS_182_TheSystemsScience ;
+    thinkr:revisionDate "2026-10-15"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Renamed three episode IRIs so their prefix matches their episode type, at MJSullivan's suggestion: tgs:Interview.TGS_205_NateHagens to tgs:Monologue.TGS_205_NateHagens and tgs:Interview.TGS_187_EarthDay2025 to tgs:Monologue.TGS_187_EarthDay2025 (solo Nate episodes in the main feed), and tgs:Interview.TGS_182_TheSystemsScience to tgs:AnimatedVideo.TGS_182_TheSystemsScience. All references, back-links, revision events and series memberships updated; scopeNotes that said the IRI kept its Interview. prefix now record the rename. After this, every episode IRI prefix matches its thinkr:hasEpisodeType."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_159_SubstackEssay a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_159_TheRealWork ;
+    thinkr:revisionDate "2026-10-15"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Linked the companion Substack essay (dct:source, following the existing pattern on 14 Franklys) and recorded in the scopeNote what appears only in the spoken episode and only in the essay, after MJSullivan supplied both texts."@en ;
+    .
+
 tgs:RevisionEvent.TGS_148_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_148_RichardGephardt ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
@@ -2901,10 +2922,17 @@ tgs:RevisionEvent.TGS_199_Initial a thinkr:RevisionEvent ;
     .
 
 tgs:RevisionEvent.TGS_182_Stub a thinkr:RevisionEvent ;
-    thinkr:affects tgs:Interview.TGS_182_TheSystemsScience ;
+    thinkr:affects tgs:AnimatedVideo.TGS_182_TheSystemsScience ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_182_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:AnimatedVideo.TGS_182_TheSystemsScience ;
+    thinkr:revisionDate "2026-10-14"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Built from the episode description and web page, replacing the 2026-09-12 minimal stub: the episode re-releases the existing animated film, so the episode type changed from Interview to AnimatedVideo; added title, definition, dates, subjects, host, film URL, 4 discussed concepts and 2 references (the animated series and Frankly_97), with back-links on both."@en ;
     .
 
 tgs:RevisionEvent.TGS_183_Stub a thinkr:RevisionEvent ;
@@ -2914,6 +2942,13 @@ tgs:RevisionEvent.TGS_183_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_183_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_183_RodSchoonover ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub (keeping its back-link from TGS_189): added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 9 discussed concepts (3 newly minted: ActorlessThreats, EcologicalSecurity, RewritingTheRulesOfTheSuperorganism), 6 references (3 newly minted Works, 1 newly minted Organization), and back-links on all of them. Minted Human.RodSchoonover, Persona.RodSchoonover, Relationship.NateHagens_RodSchoonover and AcademicInstitution.GeorgetownUniversity."@en ;
+    .
+
 tgs:RevisionEvent.TGS_186_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_186_WesCarter ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
@@ -2921,11 +2956,25 @@ tgs:RevisionEvent.TGS_186_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_186_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_186_WesCarter ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 7 discussed concepts (4 newly minted: CostConvenienceComfort, LimitsOfPlasticRecycling, ExtendedProducerResponsibility, NatureBasedPackaging), 14 references (3 newly minted Organizations), and back-links on all of them. Minted Human.WesCarter, Persona.WesCarter and Relationship.NateHagens_WesCarter."@en ;
+    .
+
 tgs:RevisionEvent.TGS_187_Stub a thinkr:RevisionEvent ;
-    thinkr:affects tgs:Interview.TGS_187_EarthDay2025 ;
+    thinkr:affects tgs:Monologue.TGS_187_EarthDay2025 ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_187_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.TGS_187_EarthDay2025 ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: changed the episode type from Interview to Monologue (a solo Nate presentation) and added the host, title, definition, opening as host introduction, discussion summary, dates, subjects, transcript and replay links, 15 discussed concepts (4 newly minted: WideBoundarySovereignty, BarbellEmpathy, DiningCar, Sobriety), 13 references (1 newly minted Work), and back-links on all of them. Also noted TGS_187 in the scope note of Concept.MaximizeImpactNotMinimizeFootprint."@en ;
     .
 
 tgs:RevisionEvent.TGS_189_Stub a thinkr:RevisionEvent ;
@@ -2935,11 +2984,25 @@ tgs:RevisionEvent.TGS_189_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_189_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_189_OliverMilman ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subject, guest, transcript and replay links, 5 discussed concepts (4 newly minted: InsectDecline, PollinatorDependence, ShiftingBaselineSyndrome, InactionPlanForNature), 6 references (2 newly minted Works, 1 newly minted Organization), and back-links on all of them. Minted Human.OliverMilman, Persona.OliverMilman and Relationship.NateHagens_OliverMilman."@en ;
+    .
+
 tgs:RevisionEvent.TGS_192_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_192_SunilAmrith ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_192_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_192_SunilAmrith ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 7 discussed concepts (4 newly minted: ClimateMigration, MigrationAsHumanNorm, HoloceneClimateStability, WarAndTheClimateCrisis), 9 references (3 newly minted Works), and back-links on all of them. Minted Human.SunilAmrith, Persona.SunilAmrith, Relationship.NateHagens_SunilAmrith and AcademicInstitution.YaleUniversity."@en ;
     .
 
 tgs:RevisionEvent.TGS_195_Stub a thinkr:RevisionEvent ;
@@ -2949,11 +3012,25 @@ tgs:RevisionEvent.TGS_195_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_195_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_195_RutgerBregman ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 7 discussed concepts (4 newly minted: MoralAmbition, RedefiningSuccess, MoralCircleExpansion, MaximizeImpactNotMinimizeFootprint), 7 references (4 newly minted Works, 2 newly minted Organizations), and back-links on all of them. Minted Human.RutgerBregman, Persona.RutgerBregman and Relationship.NateHagens_RutgerBregman."@en ;
+    .
+
 tgs:RevisionEvent.TGS_200_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_200_TedParson ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest/title, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_200_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_200_TedParson ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 9 discussed concepts (3 newly minted: TerminationShock, MitigationDeterrence, SolarGeoengineeringGovernance), 8 references (4 newly minted Works, 1 newly minted Organization), and back-links on all of them. Minted Human.TedParson, Persona.TedParson and Relationship.NateHagens_TedParson. Also updated TGS_204 and Concept.SolarRadiationModification: TGS_204 now references the two Parson papers its show notes link, and its scope note no longer lists Parson as unbuilt."@en ;
     .
 
 #############################################
@@ -3125,6 +3202,13 @@ tgs:RevisionEvent.TGS_201_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_201_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_201_RosaVasquezEspinoza ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subject, guest, transcript and replay links, 7 discussed concepts (5 newly minted: TwoWaysOfKnowing, StinglessBees, ConservationThroughLivelihoods, IndustrialEraEducation, Zoopharmacognosy), 5 references (1 newly minted Work, 1 newly minted Organization), and back-links on all of them. Minted Human.RosaVasquezEspinoza, Persona.RosaVasquezEspinoza and Relationship.NateHagens_RosaVasquezEspinoza."@en ;
+    .
+
 tgs:RevisionEvent.TGS_204_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_204_KellyErhart ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
@@ -3132,11 +3216,25 @@ tgs:RevisionEvent.TGS_204_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_204_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_204_KellyErhart ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subject, guest, transcript and replay links, 18 discussed concepts (9 newly minted: ClimateDashboard, WarmingInducedEmissions, ClimateTippingPoints, CarbonDioxideRemoval, OceanAlkalinityEnhancement, SuperPollutants, PlanetaryAlbedoDecline, GlacierStabilization, SolarRadiationModification), 17 references (2 newly minted Works, 2 newly minted Organizations), and back-links on all of them. Minted Human.KellyErhart, Persona.KellyErhart and Relationship.NateHagens_KellyErhart."@en ;
+    .
+
 tgs:RevisionEvent.TGS_205_Stub a thinkr:RevisionEvent ;
-    thinkr:affects tgs:Interview.TGS_205_NateHagens ;
+    thinkr:affects tgs:Monologue.TGS_205_NateHagens ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed. Directly linked to Nate's own already-existing real Persona."@en ;
+    .
+
+tgs:RevisionEvent.TGS_205_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.TGS_205_NateHagens ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subject, transcript and replay links, 10 discussed concepts (2 newly minted: EpistemicCommons, RealityBasedHope), 6 references, and back-links on all of them. Changed the episode type from Interview to Monologue and replaced hasGuest Persona.NateHagens with hasHost, since this is a solo listener-question episode."@en ;
     .
 
 tgs:RevisionEvent.TGS_209_Stub a thinkr:RevisionEvent ;
@@ -3146,11 +3244,25 @@ tgs:RevisionEvent.TGS_209_Stub a thinkr:RevisionEvent ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
     .
 
+tgs:RevisionEvent.TGS_209_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_209_BalazsMatics ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subjects, guest, transcript and replay links, 13 discussed concepts (3 newly minted: DieselPoweredCivilization, TechnologyJengaTower, CollapseFromThePeriphery), 10 references (1 newly minted Work), and back-links on all of them. Minted Human.BalazsMatics, Persona.BalazsMatics and Relationship.NateHagens_BalazsMatics."@en ;
+    .
+
 tgs:RevisionEvent.TGS_221_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_221_AndrewHolecek ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.StubCreated ;
     thinkr:revisionNote "Real, genuine minimal stub -- number, guest name, and canonical URL confirmed via this session's own site inventory; no transcript or show notes processed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_221_Enrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_221_AndrewHolecek ;
+    thinkr:revisionDate "2026-10-13"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 minimal stub: added title, definition, host introduction, discussion summary, dates, subject, guest, transcript and replay links, 9 discussed concepts (3 newly minted: DarkRetreat, DarknessDeficitDisorder, Enantiodromia), 9 references (1 newly minted Work), and back-links on all of them; added the missing back-link from Frankly_144, which already referenced this episode. Minted Human.AndrewHolecek, Persona.AndrewHolecek and Relationship.NateHagens_AndrewHolecek."@en ;
     .
 
 #############################################
@@ -3210,6 +3322,160 @@ tgs:RevisionEvent.TGS_236_Initial a thinkr:RevisionEvent ;
     thinkr:revisionDate "2026-10-13"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built from the official show notes and transcript. Minted 5 concepts (ClimateSensitivity, AerosolMasking, ZeroEmissionsCommitment, EarthEnergyImbalance, ClimateAsANormalProblem), 4 Works, and Relationship.NateHagens_ZekeHausfather, resolving the last unresolved IRI in the graph. Back-links on all 12 references. Corrected Human.ZekeHausfather's comment: Berkeley Earth is one of 14 independent groups producing global temperature records (per the transcript), not 'one of five', and the 2027 projection is about 1.8°C on air but 1.71°C in the show notes' fact-check."@en ;
+    .
+
+tgs:RevisionEvent.TGS_238_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_238_IndyJohar ;
+    thinkr:revisionDate "2026-10-15"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built from the official show notes and transcript the day after release. Minted 7 concepts (CivilizationalOptionality, CoupledSystemicRisks, CivilizationalSharpeRatio, SpaceOfTheNecessary, ContinuityValueOfProvision, CodedCapital, FutureOfBeingHuman), 5 Works, Organization.DarkMatterLabs and Organization.Project00, AcademicInstitution.RMITUniversity, and Human, Persona and Relationship entries for Indy Johar. Back-links on all 16 references. Updated the TGS_147 stub with its official title (from the TGS_238 show notes) and its guest, Persona.IndyJohar."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_162_Initial a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    thinkr:revisionDate "2026-10-16"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built from the official transcript and show notes the day it was published. Minted 8 concepts (SevenRungsOfARunawaySystem, ReAimingTheStatusDrive, CulturalScoreboard, PublicChoiceTheory, RentSeeking, RationalIgnorance, LeveragePoints, ReverseDominanceHierarchy) and 4 Works (TheCalculusOfConsent, LeveragePointsPlacesToIntervene, NationalIncome1929To1932, HierarchyInTheForest). Back-links on all 17 references. The canonical URL follows the site's slug pattern and should be confirmed."@en ;
+    .
+
+tgs:RevisionEvent.TGS_132_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (first step of the Schmachtenberger enrichment). Minted 7 concepts (ThreeCirclesOfAIEnvironmentalImpact, BindingTheJevonsParadox, InfrastructureSocialStructureSuperstructure, MaximizingReturnsOnPower, OmniLose, PrecautionaryPrinciple, CorrelationOfForceAndMeans), 3 Works (TacklingClimateChangeWithMachineLearning, DevelopmentInProgress, WhereArgumentsComeFrom) and Organization.CivilizationResearchInstitute. Added dct:isPartOf from ConsilienceProject to the Institute (previously stated only in its definition), skos:altLabel 'Moloch' on MultipolarTrap (linked in this episode's show notes), the missing back-links from TGS_126 and to TGS_184 (which already referenced this episode), and the reference to TGS_71 confirmed by the show notes. First use of dct:publisher on a Work."@en ;
+    .
+
+tgs:RevisionEvent.TGS_71_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_71_DanielSchmachtenberger ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub (second step of the Schmachtenberger enrichment). Minted 8 concepts (ThirdAttractor, IntelligenceBoundByWisdom, NarrowGoalAchieving, NaiveProgress, TechnologyIsNotValuesNeutral, AIAsMetacrisisAccelerant, OpportunityRiskAsymmetry, RiskSingularity) and Work.TechnologyIsNotValuesNeutral. Back-links on all 11 references. Also added dct:references from TGS_126 to this episode and corrected the stale IRI in TGS_126's scopeNote (tgs:Interview.TGS_71_ArtificialIntelligenceAndTheSuperorganism, which never existed), and added discusses NaiveProgress to TGS_126."@en ;
+    .
+
+tgs:RevisionEvent.TGS_50_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (third step of the Schmachtenberger enrichment). Minted 5 concepts (ThreeByThreeResponseGrid, HolisticExternalityAnalysis, EcologyOfTheoriesOfChange, HighTouchGrounding, EmbeddedGrowthObligation) and Work.TheOverspentAmerican. Back-links on all 8 references. Updated tgs:Concept.InfrastructureSocialStructureSuperstructure's scopeNote with the origin Daniel gives here (Marvin Harris's cultural materialism, drawing on Marx), correcting the TGS_132 note that he names no origin, and added to tgs:Concept.PredicamentNotProblem's scopeNote Daniel's citation of Richard Haass."@en ;
+    .
+
+tgs:RevisionEvent.TGS_42_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (fourth step of the Schmachtenberger enrichment). Minted 6 concepts (RecursiveAbstraction, PositiveSumInGroupNegativeSumToNature, LocalizedSyntropySystemicEntropy, GlobalGovernanceWithoutGlobalGovernment, GameTheoreticVersusRealValue, IAmBecauseWeAre) and Work.Nonzero. Back-links on all 10 references. Corrected the claim that TGS_71 is where Daniel first names the third attractor (tgs:Concept.ThirdAttractor scopeNote; TGS_71 definition and scopeNote): he names it here, at about 1:18. Updated tgs:Concept.ThreeByThreeResponseGrid (Part 4 now built; the third axis of hyper-agents, egregores and institutions), tgs:Concept.EmbeddedGrowthObligation (compounding interest as the financial system's 'own physics') and tgs:Concept.InfrastructureSocialStructureSuperstructure (Daniel's use of it here for group selection)."@en ;
+    .
+
+tgs:RevisionEvent.TGS_31_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_31_SensemakingUncertaintyPurpose ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (fifth step of the Schmachtenberger enrichment; kept the existing rdfs:comment and YouTube replay). Minted 7 concepts (OneMarshmallowRewardCircuits, PrematureCertainty, SensemakingPrerequisiteOfOpenSociety, FragmentedConsciousness, DiscretePhaseShift, PostTragic, HeartWillMind) and Work.DietForANewAmerica. Back-links on all 8 references. Pointed tgs:Concept.IntelligenceBoundByWisdom and the TGS_50 scopeNote to the new tgs:Concept.FragmentedConsciousness, and noted on tgs:Concept.InfrastructureSocialStructureSuperstructure that Part 3 previews the framework."@en ;
+    .
+
+tgs:RevisionEvent.TGS_20_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_20_MaximumPowerHyperAgents ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (sixth step of the Schmachtenberger enrichment; kept the existing YouTube replay). Minted 7 concepts (HyperAgents, MoneyAsMaximumOptionality, GeneralizedJevonsParadox, AtomsEnergyBits, AxiologicalDesign, TheLastCanToKick, ImpossibleToHard); no new works. Back-links on all 6 references. Recorded TGS_20 as the earliest TGS source for ideas previously minted from later episodes: tgs:Concept.MultipolarTrap (Daniel's full construction), tgs:Concept.OpportunityRiskAsymmetry, tgs:Concept.TechnologyIsNotValuesNeutral (the plow story), tgs:Concept.MaximizingReturnsOnPower ('returns on agency'), tgs:Concept.HeartWillMind (head, heart, will), tgs:Concept.ThreeByThreeResponseGrid (Nate's horizons), tgs:Concept.InfrastructureSocialStructureSuperstructure (resolving 'Part 2 or 4'), and tgs:Concept.EmbeddedGrowthObligation; added a scopeNote to tgs:Concept.MaximumPowerPrinciple."@en ;
+    .
+
+tgs:RevisionEvent.TGS_5_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Relationship.NateHagens_DanielSchmachtenberger ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the modeled-only entry (seventh and last step of the Bend Not Break enrichment; kept the existing rdfs:comment). Minted 6 concepts (ExosomaticEnergy, CostOfExtractionPricing, TwoCategoriesOfTechnology, JevonsDividend, AdvancePolicy, Untax); no new works. Back-links on all 5 references. Recorded TGS_5 as the earliest source on tgs:Concept.InfrastructureSocialStructureSuperstructure (Nate introduces Marvin Harris), tgs:Concept.MaximumPowerPrinciple (Nate explains it to Daniel) and tgs:Concept.EmbeddedGrowthObligation. Updated tgs:Relationship.NateHagens_DanielSchmachtenberger: added the missing TGS_71 appearance, filled publication dates for TGS_5, TGS_50, TGS_126 and TGS_132, and replaced the scopeNote's count with the verified set of eight TGS interviews plus the RR_10 panel."@en ;
+    .
+
+tgs:RevisionEvent.SchmachtenbergerLensEnrichment a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Concept.TragedyOfTheCommons, tgs:Concept.MultipolarTrap, tgs:Concept.Untax, tgs:Concept.InfrastructureSocialStructureSuperstructure ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Schema and content enrichment after the Bend Not Break builds. Added thinkr:hasAnalyticalLens (tgs-core) with the enumeration thinkr:AnalyticalLensType (GameTheoretic, Biophysical, PsychologicalInner, Institutional, PracticalPersonal; enumerations.ttl), and tagged 72 concepts -- those discussed in Daniel Schmachtenberger's episodes plus the Nate concepts they bridge to. Added thinkr:complements (symmetric sub-property of thinkr:relatesTo) and eight Schmachtenberger-Hagens bridges, each with a LinkNote and a Candidate Evidence awaiting review (calculatedConfidence to be derived by scripts/compute_confidence.py). Minted tgs:Concept.TragedyOfTheCommons and tgs:Work.TragedyOfTheCommons1968 (MJSullivan's observation on Untax), linked from MultipolarTrap, Untax, TGS_20 and TGS_50. Credited tgs:Persona.MarvinHarris on InfrastructureSocialStructureSuperstructure, correcting 'not built' notes on TGS_5 and TGS_50. Added thinkr:hasHostIntroduction to TGS_5, 20, 31, 42, 50, 71 and 132 (generic show teaser removed, as elsewhere)."@en ;
+    .
+
+tgs:RevisionEvent.TGS_126_Rebuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_126_AVisionForBetterment ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Rebuilt from the complete transcript and show notes supplied by MJSullivan, superseding the 2026-08-13 build (its chronology findings kept in the scopeNote). Minted 8 concepts (AuthenticProgress, ProgressNarrativeAsApologism, RestraintByDesign, YellowTeaming, PowerSeekingAndComplicity, CorporationAsObligateSociopath, GameTheoryFillsTheOughtGap, ProblemSolvingAsRacket) and 5 works (SilentSpring, WarIsARacket, TheoryOfGamesAndEconomicBehavior, HowToMisleadWithFacts, HospicingModernity). Replaced dct:references to a Persona and a Human with works and episodes; back-links on all 14 references. Expanded discusses from 3 to 30 concepts. Added scopeNotes from TGS_126 to NaiveProgress, HyperAgents, IAmBecauseWeAre, TechnologyIsNotValuesNeutral, RecursiveAbstraction, TragedyOfTheCommons, FragmentedConsciousness and PrecautionaryPrinciple; lens tags on the new concepts; and two new thinkr:complements bridges with LinkNotes (RestraintByDesign-JevonsDividend, CorporationAsObligateSociopath-CorporationsAsMisalignedAI)."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_82_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_82_PowerVsLife ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub; built as Nate's practical and personal counterpart to the Schmachtenberger episodes. Minted tgs:Concept.PowerVersusLife and tgs:Concept.ImaginalCells, with lens tags and two thinkr:complements bridges (MaximizingReturnsOnPower-PowerVersusLife, DiscretePhaseShift-ImaginalCells). Back-links on all 6 references. Recorded Frankly_82 as the earliest source of tgs:Concept.WideBoundarySovereignty's nine categories and of tgs:Concept.RocksInTheRiver, tgs:Concept.BarbellEmpathy, tgs:Concept.DiningCar and tgs:Concept.MaximizeImpactNotMinimizeFootprint, and as an early form of tgs:Concept.SevenRungsOfARunawaySystem."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_85_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_85_TheLightTriad ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, completing the 2026-08-13 modeled entry (definition kept); built as Nate's counterpart to the dark-triad material in TGS_126. Minted tgs:Concept.TraitsOutcompeteValues with lens tags and a thinkr:complements bridge to tgs:Concept.PowerSeekingAndComplicity. Added a scopeNote to tgs:Concept.LightTriad. Back-link on its one reference."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_86_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_86_WhatIsWealth ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub; built as Nate's counterpart to Daniel's account of money and value. Minted tgs:Concept.ThreeTiersOfWealth, tgs:Concept.TransmutingWealthIntoIncome and tgs:Concept.CollectiveActionProblem, with lens tags and two thinkr:complements bridges (MoneyAsMaximumOptionality-ThreeTiersOfWealth, GameTheoreticVersusRealValue-TransmutingWealthIntoIncome). Added scopeNotes to tgs:Concept.TragedyOfTheCommons ('every fleet is someone's foreign fleet') and tgs:Concept.StrawSiphonSieve (the dollar as 'the mother of all straws'). Back-link on its one reference."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_54_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_54_ReflectionsFromIndia ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from an unpunctuated hand-prepared transcript and the official show notes, replacing the 2026-09-12 stub; built because Nate retells this trip to Daniel Schmachtenberger in TGS_126. Minted tgs:Concept.RichInSocialCapital with lens tags and a thinkr:complements bridge to tgs:Concept.OneMarshmallowRewardCircuits. Back-links on all 4 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_67_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_67_TheSolutionsThatCanBeNamedAreNotTheSolutions ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub; built as Nate's counterpart to Daniel's response frameworks. Minted tgs:Concept.SolutionSpaceCube and tgs:Concept.NamedSolutionsDrawCounterResponse, with lens tags and two thinkr:complements bridges (ThreeByThreeResponseGrid-SolutionSpaceCube, ImpossibleToHard-NamedSolutionsDrawCounterResponse). Added scopeNotes to tgs:Concept.ThreeByThreeResponseGrid and tgs:Concept.AdvancePolicy. Back-links on all 4 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_73_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub; built as Nate's inner counterpart to Daniel Schmachtenberger's diagnosis of fragmented consciousness. Minted tgs:Concept.ShadowOfTheSuperorganism with lens tags and a thinkr:complements bridge to tgs:Concept.FragmentedConsciousness. Added Nate's extension of Marvin Harris's model (a nervous-system circle and a connection sphere) to tgs:Concept.InfrastructureSocialStructureSuperstructure. Back-links on all 6 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_79_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_79_TheBiggestTakeawaysFromTheLogicOfTheSuperorganism ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub; kept its back-link from TGS_187. Minted tgs:Concept.MetabolicHierarchyOfTheSuperorganism, tgs:Concept.AggregateProbability and tgs:Concept.SocialLimitsToGrowthBeforePhysical, with lens tags and thinkr:complements bridges from tgs:Concept.MaximizingReturnsOnPower and tgs:Concept.ImpossibleToHard. Added earliest-in-graph notes to tgs:Concept.FiveHorsemenOf2020s and tgs:Concept.NamedSolutionsDrawCounterResponse. Back-links on all 5 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_81_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.EducatingHyperAgents, tgs:Concept.SuperorganismFreeZones, tgs:Concept.SharedBroadcastPerturbation and tgs:Concept.ThingsOfValueThroughTheBottlenecks, with lens tags and thinkr:complements bridges from tgs:Concept.HyperAgents and tgs:Concept.SensemakingPrerequisiteOfOpenSociety; minted tgs:Work.TheDayAfter1983. Back-links on all 7 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_91_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_91_UnintendedConsequences ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.UnintendedConsequences and tgs:Concept.CulturalAntibodies, with lens tags and thinkr:complements bridges from tgs:Concept.YellowTeaming and tgs:Concept.PrematureCertainty. Back-links on all 3 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_53_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_53_TheHavesAndTheHaveNots, tgs:Interview.TGS_126_AVisionForBetterment ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's hand-scraped transcript and the episode page's show notes, replacing the 2026-09-12 stub. Identified Frankly_53 as the dark-triad Frankly cited in TGS_126 (replay ID confirmed from the episode page): added it to TGS_126's dct:references with a back-link and corrected TGS_126's and tgs:Concept.PowerSeekingAndComplicity's scopeNotes. Minted tgs:Concept.HavesAndHaveNots with lens tags; thinkr:complements bridges from tgs:Concept.GameTheoreticVersusRealValue and from tgs:Concept.PowerSeekingAndComplicity to tgs:Concept.EducatingHyperAgents. Earliest-source notes on tgs:Concept.DarkTriad (new scopeNote), tgs:Concept.RichInSocialCapital, tgs:Concept.GhostOfDopaminePast and tgs:Concept.EducatingHyperAgents. Back-link on its 1 reference."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_55_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_55_7KeyInterventionsForTheFuture ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's hand-scraped transcript and the episode page's show notes, replacing the 2026-09-12 stub; replay ID confirmed from the episode page. Minted tgs:Concept.SevenKeyInterventions, tgs:Concept.TheFifteenHundred and tgs:Concept.HealingBeforeEngagement, with lens tags and thinkr:complements bridges from tgs:Concept.HyperAgents and tgs:Concept.HeartWillMind. Earliest-in-graph notes on tgs:Concept.GoldilocksTechnology, tgs:Concept.FiveHorsemenOf2020s, tgs:Concept.EducatingHyperAgents and tgs:Concept.PostTragic. Back-links on all 3 references."@en ;
     .
 
 tgs:RevisionEvent.TGS_227_Stub a thinkr:RevisionEvent ;

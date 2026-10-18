@@ -154,3 +154,177 @@ tgs:Evidence.LimitsToGrowth_GayaHerrington a thinkr:Evidence,
     dcterms:description "Herrington's own peer-reviewed paper, 'Update to limits to growth: Comparing the World3 model with empirical data' (Journal of Industrial Ecology, 2021, DOI 10.1111/jiec.13084 — see tgs:Work.UpdateToLimitsToGrowth2021), directly re-tests the original 1972 Limits to Growth study's World3 model against real-world 2020-era data, finding current trends track most closely with the study's own 'Business as Usual 2' and 'Comprehensive Technology' scenarios. A direct empirical continuation of the named study itself, not an inferred thematic parallel. Verified via WebSearch 2026-07-15. Flagged Candidate, not Curated: real and strong, but not yet human-reviewed per design decision #1."@en ;
     dcterms:source <https://doi.org/10.1111/jiec.13084> ;
     prov:generatedAtTime "2021"^^xsd:gYear .
+
+tgs:Evidence.MaximizingReturnsOnPower_MaximumPowerPrinciple a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_132 Daniel names 'maximizing returns on power' as the beating heart of the superorganism; in TGS_20 he restates the maximum power principle for markets (any positive energy or financial return will be exploited) and extends it to agents maximizing returns on agency, right after Nate defines it in energy terms. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.MultipolarTrap_Superorganism a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_42 Daniel says his 'generator functions of catastrophic risk' and Nate's superorganism are 'the same thing using different lenses' and calls the multipolar trap a property of the superorganism; in TGS_20 Nate, hearing the buffalo-hunting example, says 'we can't help but be part of the superorganism even though we understand that we don't like it.' Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.EmbeddedGrowthObligation_GrowthImperative a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel opens his minimal summary of Nate's work with the embedded growth obligation, and Nate answers by explaining bank money creation, in which interest is not created along with the principal; in TGS_5 Daniel first uses the term with Nate. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.GeneralizedJevonsParadox_JevonsDividend a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_5 Nate proposes the dividend and Daniel replies that it is 'so fucking consequential if people get it,' because it implies a post-growth system; in TGS_20 Daniel states the generalized paradox and says 'you need that through a binding system.' Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.GameTheoreticVersusRealValue_PriceCostAndValue a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "Daniel's formulation is in TGS_42 ('game theoretical value and real value have a major delta'); Nate's three-way distinction is in Frankly_104. Proposed as a bridge, not cited by either speaker as the other's idea. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.HyperAgents_TheLastCanToKick a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "Both come from TGS_20, where Nate also asks for 'wider boundary hyper agents' and Daniel lists widening hyper-agents' values or empowering people with wide values as the two paths. Related on Nate's side: tgs:Concept.ReAimingTheStatusDrive (Frankly_162). Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.OneMarshmallowRewardCircuits_SupernormalStimuli a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "Daniel's account is in TGS_31; the TGS_31 show notes link the Reality Blind page on supernormal stimuli at that point in the conversation. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.EcologyOfTheoriesOfChange_TheoryOfChange a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_50 Nate echoes it with a 'scout team of Consilience Jedi'; in TGS_5 Nate first describes the scout team that simplifies first and beats the rush. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.RestraintByDesign_JevonsDividend a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_126, when Daniel describes the Pacific Northwest rule to fish fewer hours with better hooks, Nate responds: 'So it was like an embedded anti Jevons paradox rule,' and later asks whether the superorganism needs 'a modern day equivalent of a Sabbath.' Nate's own dividend proposal is in TGS_5. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.CorporationAsObligateSociopath_CorporationsAsMisalignedAI a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_126 (2024) Nate asks whether a corporation is 'an institutional equivalent of a human dark triad trait,' and Daniel calls it a cybernetic 'obligate sociopath'; in Frankly_159 (2026) Nate calls corporations 'soulless, mindless, immortal automatons' and humanity's original alignment problem. Proposed as a bridge; neither source cites the other. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.MaximizingReturnsOnPower_PowerVersusLife a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In Frankly_82 (January 2025) Nate describes power riding surpluses from grain to fossil fuels, money and now AI and military power, ever faster; in TGS_132 (July 2024) Daniel names 'maximizing returns on power' through every available technology as the heart of the superorganism. Neither cites the other here; proposed as a bridge. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.DiscretePhaseShift_ImaginalCells a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel cites 'the caterpillar to the chrysalis to the butterfly' among developmental phases that end in discrete phase shifts; in Frankly_82 Nate uses imaginal cells, which self-organize into the butterfly, for personal change. Proposed as a bridge; neither cites the other. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.PowerSeekingAndComplicity_TraitsOutcompeteValues a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_126 (2024) Daniel describes a tribe that could tell an aggressive outlier 'you need to chill out or you're going to get banished,' until fear and complicity take over; in Frankly_85 (2025) Nate says that in groups of 150 or fewer dark-triad individuals 'could be observed and cordoned off,' and that a lone light-triad person will be manipulated unless surrounded by others. Proposed as a bridge; neither cites the other. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.MoneyAsMaximumOptionality_ThreeTiersOfWealth a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel says 'the thing everybody wants the most is the thing that has absolutely no intrinsic value, but the maximum optionality for every source of value'; in Frankly_86 Nate calls the US dollar 'the ultimate claim on tertiary power' because 'you can turn it into anything immediately.' Proposed as a bridge; neither cites the other. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.GameTheoreticVersusRealValue_TransmutingWealthIntoIncome a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_42 Daniel says 'none of us pay for the atmosphere' and that 'game theoretical value and real value have a major delta'; in Frankly_86 Nate lists cold oxygenated oceans and Ecuador's birds as priceless but unpriced, 'we are going to miss these things after they're gone.' Proposed as a bridge; neither cites the other. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.OneMarshmallowRewardCircuits_RichInSocialCapital a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_126 (May 2024) Nate tells Daniel that after six weeks in India 'my addiction impulses were much lower,' then 'I got sucked right back into the vortex'; Daniel replies that 'the reward circuits that you were experiencing... came from intimate communion with other people... someone's not craving the other thing because the reward circuits are full.' Nate's own account of the trip is Frankly_54 (February 2024). This bridge is explicit in the source conversation. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.ThreeByThreeResponseGrid_SolutionSpaceCube a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In Frankly_67 (July 2024) Nate lays out superstructure, 'the structure or what Daniel Schmachtenberger and I have started to refer to as the social structure,' and infrastructure against scale and three time horizons; in TGS_50 (December 2022) Daniel lays out culture, political economy and technology against triage, transition and long-term horizons, after Nate proposed the horizons in TGS_20. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.ImpossibleToHard_NamedSolutionsDrawCounterResponse a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel says 'whenever you figure out a thing, it'll be gamed, because there will still be an incentive to game it,' so solving multipolar traps is an orienting question, not an answer forever; in Frankly_67 Nate says publicized strategies trigger an 'adaptive counter response' and 'the real solutions to the metacrisis will not be televised.' Proposed as a bridge; neither cites the other on this point. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.FragmentedConsciousness_ShadowOfTheSuperorganism a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel, following Bohm, says the deepest cause of the world's problems is 'not perceiving from wholeness first'; in Frankly_73 Nate says his only scientific explanation for a shift in himself is 'a deepening of my recognition and embodied perception that everything is connected,' and describes the society beneath the carbon pulse as 'divided... polarized... fractured.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.MaximizingReturnsOnPower_MetabolicHierarchyOfTheSuperorganism a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_132 Daniel names 'maximizing returns on power' -- 'people using agency to increase their agency' -- as the heart of the superorganism and says AI may succeed the market as its vehicle; in Frankly_79 Nate says 'the things that are important are downregulated to the things that are related to power,' ranks AI first and the military second, and calls their fusion 'a winner take all dynamic.' Frankly_79 (December 2024) predates TGS_132; proposed as a bridge, neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.ImpossibleToHard_AggregateProbability a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel says solutions that ignore part of the design criteria only looked easy and were bound to fail -- 'we move from impossible to hard when we start to understand it better'; in Frankly_79 Nate says many single-issue efforts are dead ends because 'we have to look at the aggregate probability of all the things that have to go right.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.HyperAgents_EducatingHyperAgents a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel lists two hard paths for wider-boundary hyper-agents: widen the values of hyper-agents, or increase the agency of people with wide values; in Frankly_81 Nate's film has a currency trader who becomes the richest person on Earth and then changes her values, and a scientist who founds schools 'to breathe life into the creation of hyperagents' because 'education and inspiration of individuals does' work. Nate uses the TGS_20 term but does not cite Daniel here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel says that for an open society 'everybody has to do a good job of sense-making'; in Frankly_81 Nate says one broadcast, The Day After, once moved a nation, that today's media is 'fractionated, polarized' and AI-generated, and that 'the superorganism of the 1970s could have functioned cognitively, at least to some degree.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.YellowTeaming_UnintendedConsequences a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_126 Daniel describes yellow teaming: 'if it succeeds, where might it mess other things up?'; in Frankly_91 Nate describes 'when we think we're doing something, and the end result ends up being quite something else' and resolves to 'look one or two or three steps ahead.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.PrematureCertainty_CulturalAntibodies a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel says premature certainty afflicts doomers as much as optimists and that catastrophic predictions have a poor historical record; in Frankly_91 Nate says doomsayers predicting things 'in the next five years' that 'didn't happen,' lumped with naive solutions, led the culture to 'develop antibodies to these discussions.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.GameTheoreticVersusRealValue_HavesAndHaveNots a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_42 Daniel says 'game theoretical value and real value have a major delta,' so money flows not to what we value; in Frankly_53 Nate lists social wealth, skills, health, attention, voice and purpose as things people have or lack that 'can't be measured by money,' and concludes 'money isn't everything after basic needs are met.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.PowerSeekingAndComplicity_EducatingHyperAgents a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In Frankly_53 Nate says 'we're going to need to change the consciousness or the mindset of the top few thousand people riding high on the superorganism,' but 'many of the people that have the outsized ability to change our future for the better are in the dark triad demographic'; in TGS_126 Daniel, after Nate cites his own figure that about 10 percent of people are dark-triad, says leaders at the top of power-law distributions are 'less empathetic, more driven' and change the system to keep winning. Nate cites Frankly_53 in TGS_126. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.HyperAgents_TheFifteenHundred a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel describes hyper-agents at the top of a power-law distribution who 'create the topologies' in which everyone else forms values; in Frankly_55 Nate describes 'the 1500,' a global elite 'pulling the superorganism forward,' turning digital and AI claims into social power and accumulating it 'as if a hungry ghost.' Nate does not cite Daniel here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.HeartWillMind_HealingBeforeEngagement a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel says effective response needs heart, will and mind together, and that mind and heart without will gives 'really smart, caring academics who feel broken and hopeless'; in Frankly_55 Nate says many treat the predicament as 'a mental video game' that changes nothing, and that healthy, behaviorally balanced people in community, then the knowledge integrated post-tragically, is what 'empowers people to be agents of change.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .

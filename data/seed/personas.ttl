@@ -182,7 +182,9 @@ tgs:Persona.WendellBerry a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.WilliamCatton a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.WilliamCatton ;
     skos:prefLabel "William R. Catton Jr."@en ;
-    rdfs:label "William R. Catton Jr. (persona)"@en .
+    rdfs:label "William R. Catton Jr. (persona)"@en ;
+    dct:isReferencedBy tgs:Interview.TGS_209_BalazsMatics ;
+    .
 
 tgs:Persona.WilliamStanleyJevons a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.WilliamStanleyJevons ;
@@ -553,7 +555,9 @@ tgs:Persona.VanessaAndreotti a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_VanessaAndreotti ;
     skos:prefLabel "Vanessa Andreotti"@en ;
     rdfs:label "Vanessa Andreotti (persona)"@en ;
-    skos:scopeNote "Real prior solo TGS appearance (episode #125, 'Hospicing Modernity and Rehabilitating Humanity') confirmed via independent web search (https://www.thegreatsimplification.com/episode/125-vanessa-andreotti) and independently corroborated via RR-10's own real linked show notes (a YouTube link to the same appearance: https://youtu.be/h5kQ7_IZ8YI) — not yet built as an Episode individual in this pass."@en .
+    skos:scopeNote "Real prior solo TGS appearance (episode #125, 'Hospicing Modernity and Rehabilitating Humanity') confirmed via independent web search (https://www.thegreatsimplification.com/episode/125-vanessa-andreotti) and independently corroborated via RR-10's own real linked show notes (a YouTube link to the same appearance: https://youtu.be/h5kQ7_IZ8YI) — not yet built as an Episode individual in this pass."@en ;
+    dct:isReferencedBy tgs:Monologue.TGS_205_NateHagens ;
+    .
 
 tgs:Persona.WilliamRees a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.WilliamRees ;
@@ -967,6 +971,7 @@ tgs:Persona.JoannaMacy a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Joanna Macy"@en ;
     rdfs:label "Joanna Macy (persona)"@en ;
     skos:scopeNote "Minimal provenance-only mint, 2026-08-24, matching the tgs:Persona.EOWilson pattern — no episode appearance, no thinkr:Relationship to Nate Hagens. Minted specifically to anchor tgs:Concept.GreatTurning's real originator (cited directly by Bill Plotkin in TGS_146: 'I borrowed this advice from my friend and teacher, Joanna Macy'), not to be confused with a full guest bootstrap. Already flagged as a deferred citation candidate twice elsewhere in this graph (Frankly_142's own scopeNote; TGS_146's guest list) — those citations describe her as recently deceased, in her mid-nineties at the time of the TGS_146 conversation; not asserted here pending a dedicated pass, matching this graph's minimal-mint discipline."@en ;
+    dct:isReferencedBy tgs:Interview.TGS_204_KellyErhart ;
     .
 
 # added 2026-08-25
@@ -1375,6 +1380,7 @@ tgs:Persona.CharlesEisenstein a thinkr:Persona, owl:NamedIndividual ;
     skos:prefLabel "Charles Eisenstein"@en ;
     rdfs:label "Charles Eisenstein (persona)"@en ;
     skos:scopeNote "Personal tag as a judgment call: this is his real first TGS appearance, yet Nate's own real, direct words are 'great to see you again' at close, not a first-meeting greeting — combined with 'we have a lot of mutual friends' and a closing 'my friend,' this reads as real, concrete evidence of prior in-person contact, not merely warm vocative language alone, meeting this graph's tightened evidentiary bar (wwns-methodology.md §8)."@en ;
+    dct:isReferencedBy tgs:Interview.TGS_186_WesCarter ;
     .
 
 tgs:Persona.AntonioNobre a thinkr:Persona, owl:NamedIndividual ;
@@ -1798,3 +1804,91 @@ tgs:Persona.ThichNhatHanh a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ThichNhatHanh ;
     skos:prefLabel "Thích Nhất Hạnh"@en ;
     rdfs:label "Thích Nhất Hạnh (persona)"@en .
+
+tgs:Persona.AndrewHolecek a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.AndrewHolecek ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_AndrewHolecek ;
+    skos:prefLabel "Andrew Holecek"@en ;
+    rdfs:label "Andrew Holecek (persona)"@en ;
+    .
+
+tgs:Persona.BalazsMatics a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BalazsMatics ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BalazsMatics ;
+    skos:prefLabel "Balázs Matics (The Honest Sorcerer)"@en ;
+    rdfs:label "Balázs Matics (persona)"@en ;
+    .
+
+tgs:Persona.KellyErhart a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KellyErhart ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KellyErhart ;
+    skos:prefLabel "Kelly Erhart"@en ;
+    rdfs:label "Kelly Erhart (persona)"@en ;
+    .
+
+tgs:Persona.RosaVasquezEspinoza a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RosaVasquezEspinoza ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RosaVasquezEspinoza ;
+    skos:prefLabel "Rosa Vásquez Espinoza"@en ;
+    rdfs:label "Rosa Vásquez Espinoza (persona)"@en ;
+    .
+
+tgs:Persona.TedParson a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.TedParson ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_TedParson ;
+    skos:prefLabel "Ted Parson"@en ;
+    rdfs:label "Ted Parson (persona)"@en ;
+    .
+
+tgs:Persona.RutgerBregman a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RutgerBregman ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RutgerBregman ;
+    skos:prefLabel "Rutger Bregman"@en ;
+    rdfs:label "Rutger Bregman (persona)"@en ;
+    .
+
+tgs:Persona.SunilAmrith a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.SunilAmrith ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SunilAmrith ;
+    skos:prefLabel "Sunil Amrith"@en ;
+    rdfs:label "Sunil Amrith (persona)"@en ;
+    .
+
+tgs:Persona.OliverMilman a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.OliverMilman ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_OliverMilman ;
+    skos:prefLabel "Oliver Milman"@en ;
+    rdfs:label "Oliver Milman (persona)"@en ;
+    .
+
+tgs:Persona.WesCarter a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.WesCarter ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_WesCarter ;
+    skos:prefLabel "Wes Carter"@en ;
+    rdfs:label "Wes Carter (persona)"@en ;
+    .
+
+tgs:Persona.RodSchoonover a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RodSchoonover ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RodSchoonover ;
+    skos:prefLabel "Rod Schoonover"@en ;
+    rdfs:label "Rod Schoonover (persona)"@en ;
+    .
+
+tgs:Persona.IndyJohar a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.IndyJohar ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IndyJohar ;
+    skos:prefLabel "Indy Johar"@en ;
+    rdfs:label "Indy Johar (persona)"@en ;
+    .

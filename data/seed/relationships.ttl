@@ -105,7 +105,7 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
     thinkr:hasObject tgs:Persona.DanielSchmachtenberger ;
     thinkr:hasRelationshipType thinkr:RelationshipType.Personal, thinkr:RelationshipType.Professional ;
     skos:prefLabel "Nate Hagens' personal and professional relationship with Daniel Schmachtenberger"@en ;
-    skos:scopeNote "One source describes 'half a dozen' appearances; 7 specific episodes are individually confirmed/modeled as of 2026-07-14 (the Bend Not Break 5-part series plus episodes 126 and 132) — likely the complete set, not yet independently verified as exhaustive. RelationshipType.Personal ADDED 2026-08-13 — direct evidence from RR-10's own transcript: Nate's own words, 'I've been to his house too,' plus the episode's own framing of all 4 guests as 'friends of mine.'"@en ;
+    skos:scopeNote "As of 2026-10-18 the graph has nine appearances, all built from transcripts: eight TGS interviews -- the five-part Bend Not Break series (TGS_5, TGS_20, TGS_31, TGS_42, TGS_50, 2022), TGS_71 (2023), TGS_126 and TGS_132 (2024) -- plus the RR_10 panel. Interview dates are publication dates; the RR_10 date is its recording date (published 2024-07-28). Not independently verified as exhaustive; the TGS_71 appearance was missing until 2026-10-18. In TGS_5 Nate says they met about two years earlier, through friends urging them to talk, and that their first phone call ran three hours. RelationshipType.Personal ADDED 2026-08-13 — direct evidence from RR-10's own transcript: Nate's own words, 'I've been to his house too,' plus the episode's own framing of all 4 guests as 'friends of mine.'"@en ;
     thinkr:hasInteraction
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
@@ -116,7 +116,7 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_5_BendNotBreakPart1 ;
-          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+          dcterms:date "2022-01-26"^^xsd:date ],
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
@@ -136,17 +136,22 @@ tgs:Relationship.NateHagens_DanielSchmachtenberger a thinkr:Relationship, owl:Na
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_50_CriteriaCategoriesResponse ;
-          skos:scopeNote "No exact air date independently confirmed as of 2026-07-14."@en ],
+          dcterms:date "2022-12-19"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_71_DanielSchmachtenberger ;
+          dcterms:date "2023-05-17"^^xsd:date ],
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_126_AVisionForBetterment ;
-          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ],
+          dcterms:date "2024-06-05"^^xsd:date ],
         [ a thinkr:PodcastAppearance ;
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
-          skos:scopeNote "URL and date not independently verified as of 2026-07-14."@en ] .
+          dcterms:date "2024-07-17"^^xsd:date ] .
 
 # --- Nate's academic relationships genuinely need MULTIPLE RelationshipType
 # values at once — real, not a hypothetical stress test. Teaching Reality
@@ -2683,4 +2688,163 @@ tgs:Relationship.NateHagens_ZekeHausfather a thinkr:Relationship, owl:NamedIndiv
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_236_ZekeHausfather ;
           dcterms:date "2026-09-30"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_AndrewHolecek a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.AndrewHolecek ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Andrew Holecek"@en ;
+    skos:scopeNote "Professional relationship: their first conversation, arranged through a mutual friend who 'knows a lot about your work and a lot about my work'; Nate says Holecek likely does not know much about his work, though Holecek says the Consumption Pyramid Frankly drew him to it. Declared 2026-10-13 alongside the full TGS_221 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_221_AndrewHolecek ;
+          dcterms:date "2026-05-27"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_BalazsMatics a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.BalazsMatics ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Balázs Matics"@en ;
+    skos:scopeNote "Professional relationship: their first recorded conversation and Matics's first non-anonymous interview; Nate had followed The Honest Sorcerer for some time, and Matics follows the podcast and Nate's Franklys. Declared 2026-10-13 alongside the full TGS_209 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_209_BalazsMatics ;
+          dcterms:date "2026-02-04"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_KellyErhart a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.KellyErhart ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Kelly Erhart"@en ;
+    skos:scopeNote "Professional relationship with a personal side: they met about a month before the recording at a party, where they talked for three hours; Nate calls her 'my friend', says he knows her community firsthand, and she follows the podcast. Declared 2026-10-13 alongside the full TGS_204 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_204_KellyErhart ;
+          dcterms:date "2025-12-10"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_RosaVasquezEspinoza a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RosaVasquezEspinoza ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Rosa Vásquez Espinoza"@en ;
+    skos:scopeNote "Professional relationship: Nate came across a LinkedIn post of hers a few months before the recording, reached out, and they had an introductory call; he calls this one of the staff's favorite episodes, invites her back and closes with 'to be continued, my friend'. Declared 2026-10-13 alongside the full TGS_201 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_201_RosaVasquezEspinoza ;
+          dcterms:date "2025-11-19"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_TedParson a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.TedParson ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Ted Parson"@en ;
+    skos:scopeNote "Professional relationship: they met about a month before the recording at a dinner with a mutual friend, and had at least one earlier conversation on the topic. Declared 2026-10-13 alongside the full TGS_200 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_200_TedParson ;
+          dcterms:date "2025-11-12"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_RutgerBregman a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RutgerBregman ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Rutger Bregman"@en ;
+    skos:scopeNote "Professional relationship: Bregman's first TGS appearance in this graph; Nate assumes he does not watch the podcast much. Declared 2026-10-13 alongside the full TGS_195 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_195_RutgerBregman ;
+          dcterms:date "2025-10-01"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_SunilAmrith a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SunilAmrith ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Sunil Amrith"@en ;
+    skos:scopeNote "Professional relationship: Amrith's first TGS appearance in this graph, and the show's first episode on human migration. Declared 2026-10-13 alongside the full TGS_192 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_192_SunilAmrith ;
+          dcterms:date "2025-08-27"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_OliverMilman a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.OliverMilman ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Oliver Milman"@en ;
+    skos:scopeNote "Professional relationship: Milman's first TGS appearance in this graph; Nate had followed his reporting and says they joked during the soundcheck. Declared 2026-10-13 alongside the full TGS_189 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_189_OliverMilman ;
+          dcterms:date "2025-08-06"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_WesCarter a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.WesCarter ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Wes Carter"@en ;
+    skos:scopeNote "Professional relationship with a personal side: they had talked a few months earlier ('good to see you again'), and Nate says their shared view of the transition as spiritual is 'why we're friends'. Declared 2026-10-13 alongside the full TGS_186 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_186_WesCarter ;
+          dcterms:date "2025-07-23"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_RodSchoonover a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RodSchoonover ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Rod Schoonover"@en ;
+    skos:scopeNote "Professional relationship: they had met in person before the recording, when they discussed risks beyond climate. Nate cites Schoonover again in TGS_189 when calling insect decline a national security issue. Declared 2026-10-13 alongside the full TGS_183 build."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_183_RodSchoonover ;
+          dcterms:date "2025-06-18"^^xsd:date ] ;
+    .
+
+tgs:Relationship.NateHagens_IndyJohar a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.IndyJohar ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Indy Johar"@en ;
+    skos:scopeNote "Professional relationship: they met at an Emerge conference in Austin a year or two before TGS_147, their first conversation on the show; they spoke again by Zoom (per TGS_238) before the second appearance. Nate invited Johar back at the end of TGS_147 and calls TGS_238 one of the best conversations he has had on the platform. Declared 2026-10-15 alongside the TGS_238 build; the TGS_147 interaction was dated when that episode was built the same day."@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_147_IndyJohar ;
+          dcterms:date "2024-10-23"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_238_IndyJohar ;
+          dcterms:date "2026-10-14"^^xsd:date ] ;
     .

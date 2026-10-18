@@ -59,6 +59,7 @@ tgs:Organization.BiomeTrust a thinkr:Organization, owl:NamedIndividual ;
 
 tgs:Organization.ConsilienceProject a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "The Consilience Project"@en ;
+    dcterms:isPartOf tgs:Organization.CivilizationResearchInstitute ;
     skos:definition "Non-profit media organization (founded 2021, a publication of the Civilization Research Institute) publishing research on public sensemaking, governance design, and global risk mitigation — addressing the erosion of shared epistemics and 'information commons.' Founding member: tgs:Human.DanielSchmachtenberger. NOT separately verified for DBpedia/Wikidata as of 2026-07-11 — flagged honestly rather than guessed; revisit if this becomes independently relevant."@en ;
     .
 
@@ -285,4 +286,101 @@ tgs:Organization.PlanetLabs a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Planet Labs"@en ;
     skos:definition "Real, direct Earth-imaging and geospatial data company (formally Planet Labs PBC, a Public Benefit Corporation), headquartered in San Francisco, co-founded in 2010 by Will Marshall (already built) with Chris Boshuizen and Robbie Schingler. Operates the world's largest constellation of Earth-observing satellites, imaging the entire planet's landmass daily, with a real, direct stated mission (written into its own PBC charter) to make global change visible, accessible, and actionable in service of a more sustainable and secure world."@en ;
     owl:sameAs <https://www.planet.com/> ;
+    .
+
+tgs:Organization.OutlierProjects a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Outlier Projects"@en ;
+    skos:definition "A climate philanthropy that funds research on frontier climate risks: better forecasting of catastrophic and tail-end risks, and tools that could help stabilize climate systems at the necessary speed and scale (in TGS_204, glacier forecasting and stabilization, methane, and sunlight reflection research). Kelly Erhart is its Director of Partnerships; she works for Mike Schroepfer, an early donor to Vesta."@en ;
+    dcterms:source <https://www.outlierprojects.org/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_204_KellyErhart ;
+    .
+
+tgs:Organization.Vesta a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Vesta (Project Vesta)"@en ;
+    skos:definition "A nonprofit co-founded by Kelly Erhart that pioneered coastal enhanced weathering, now generally called ocean alkalinity enhancement, spreading olivine on coastlines to draw down carbon dioxide, and that delivered the first field trials of the approach. Erhart led it for five years before joining Outlier Projects, and remains an advisor."@en ;
+    dcterms:source <http://vesta.earth> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_204_KellyErhart ;
+    .
+
+tgs:Organization.AmazonResearchInternacional a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Amazon Research Internacional"@en ;
+    skos:definition "Nonprofit founded by Rosa Vásquez Espinoza to conserve Amazonian biodiversity, ecosystems and Indigenous knowledge by joining Indigenous knowledge with modern science, and to build Indigenous-led entrepreneurship from the research. Its projects described in TGS_201 include mapping wild stingless-bee hives, the campaign behind Satipo's recognition of stingless bees' rights, Indigenous-led camera trapping in Asháninka territory, research on toxic frogs and animal self-medication, and early work with Ese Ejja women in Bolivia."@en ;
+    dcterms:source <https://www.amazonresearch.org/about> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_201_RosaVasquezEspinoza ;
+    .
+
+tgs:Organization.EmmettInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Emmett Institute on Climate Change and the Environment"@en ;
+    skos:definition "Climate and environmental law research center at the UCLA School of Law, whose faculty director is Ted Parson (TGS_200); its colleagues have worked with Los Angeles city and county governments on lightening surfaces to reduce the urban heat island effect, and it publishes the Legal Planet blog."@en ;
+    dcterms:source <https://law.ucla.edu/academics/centers/emmett-institute-climate-change-environment> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_200_TedParson ;
+    .
+
+tgs:Organization.SchoolForMoralAmbition a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "The School for Moral Ambition"@en ;
+    skos:definition "Nonprofit co-founded in 2024 by Rutger Bregman to build a movement of people who take on the world's most pressing problems. Its Moral Ambition Circles are free, self-organized groups of five to eight that work through what moral ambition could mean for them and end with a pledge; its selective fellowships pay talented professionals to quit their jobs and work on causes chosen by prioritization researchers using the 'sizable, solvable, sorely neglected' test: in TGS_195 (recorded July 2025), fighting big tobacco in Europe, a global billionaires tax, and food-system reform, including lobbying in Brussels for alternative proteins. About 17,000 members in over 100 countries at the time."@en ;
+    dcterms:source <https://www.moralambition.org/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Organization.GivingWhatWeCan a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Giving What We Can"@en ;
+    skos:definition "Organization that promotes a pledge to give at least 10% of one's income to highly effective charities, with an online record of donations; Rutger Bregman (TGS_195) took the pledge and describes tracking his giving as a 'moral portfolio'."@en ;
+    dcterms:source <https://www.givingwhatwecan.org/about-us> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_195_RutgerBregman ;
+    .
+
+tgs:Organization.TheGuardian a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "The Guardian"@en ;
+    skos:definition "British daily newspaper, for which Oliver Milman (TGS_189) is environment correspondent."@en ;
+    dcterms:source <https://www.theguardian.com/profile/oliver-milman> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_189_OliverMilman ;
+    .
+
+tgs:Organization.AtlanticPackaging a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Atlantic Packaging"@en ;
+    skos:definition "Family-owned packaging company, about 80 years old, described as the largest privately held and most technical packaging company in North America, serving consumer-products brands, retailers, e-commerce and industrial customers. Led by its third generation, president Wes Carter (TGS_186), it shifted from a value proposition of packaging efficiency to a sustainability program built on nature-based materials, recycling partnerships with customers, and health as an organizing principle, including an extensive employee wellness program."@en ;
+    dcterms:source <https://www.atlanticpkg.com/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_186_WesCarter ;
+    .
+
+tgs:Organization.ANewEarthProject a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "A New Earth Project"@en ;
+    skos:definition "Initiative launched by Wes Carter in January 2020, a collaboration between outdoor enthusiasts and global packaging suppliers with the mission of ridding the world's oceans, lakes and rivers of plastic pollution, working with athletes and musicians to build demand for sustainable packaging (TGS_186)."@en ;
+    dcterms:source <https://anewearthproject.com/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_186_WesCarter ;
+    .
+
+tgs:Organization.NewEarthVentures a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "New Earth Ventures"@en ;
+    skos:definition "Venture firm launched by Atlantic Packaging around 2024 to help startups scale nature-based packaging materials, such as seaweed-based plastics and a compostable shrimp-shell cooler foam (TGS_186)."@en ;
+    dcterms:source <https://newearthventures.vc/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_186_WesCarter ;
+    .
+
+tgs:Organization.EcologicalFuturesGroup a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Ecological Futures Group"@en ;
+    skos:definition "Organization founded and led by Rod Schoonover that examines the national security and societal dimensions of global ecological change (TGS_183)."@en ;
+    dcterms:source <https://ecologicalfutures.com/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_183_RodSchoonover ;
+    .
+
+tgs:Organization.DarkMatterLabs a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Dark Matter Labs"@en ;
+    skos:definition "Field laboratory co-founded by Indy Johar, focused on building the institutional infrastructure for radical civic societies, cities, regions and towns. Its initiative Expanding Civilizational Optionality (xCO), discussed in TGS_238, combines a capital platform, an option foundry and learning and organizing infrastructure; other initiatives linked in the show notes include Madrid 2050 degrees, Extraction Zero, bioregioning and the Planetary Civics Inquiry."@en ;
+    dcterms:source <https://darkmatterlabs.org/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_238_IndyJohar, tgs:Interview.TGS_147_IndyJohar ;
+    .
+
+tgs:Organization.Project00 a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Project 00"@en ;
+    skos:definition "Architecture and design practice co-founded by Indy Johar (TGS_147, TGS_238)."@en ;
+    dcterms:source <https://www.project00.cc/> ;
+    .
+
+tgs:Organization.CivilizationResearchInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Civilization Research Institute"@en ;
+    skos:definition "Non-profit research organization with which Daniel Schmachtenberger works; The Consilience Project is its public-facing publication (tgs:Organization.ConsilienceProject). TGS_132's show description directs listeners to a document of AI resources and research compiled by the Institute."@en ;
+    dcterms:source <https://civilizationresearchinstitute.org/> ;
+    skos:scopeNote "Minted 2026-10-18 for TGS_132, under the scope rule for ecosystem organizations: an organization enters the graph only when a TGS source mentions it or it is a guest's institutional home. Its founders, staff and programs are not modeled; the website was not consulted for this entry."@en ;
     .
