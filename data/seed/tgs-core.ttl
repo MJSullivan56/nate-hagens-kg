@@ -70,6 +70,12 @@ thinkr:complements a owl:ObjectProperty, owl:SymmetricProperty ;
     skos:scopeNote "Narrower than thinkr:relatesTo, and distinct from thinkr:contrastsWith (a tension) and thinkr:echoesIdeaOf (independent convergence by a Persona): complements claims the two concepts fit together across lenses. Symmetric, so it is asserted once per pair."@en ;
     skos:prefLabel "complements"@en .
 
+thinkr:extendedDefinition a owl:AnnotationProperty ;
+    rdfs:subPropertyOf skos:note ;
+    rdfs:comment "A fuller account of a concept that keeps detail the short skos:definition leaves out: worked examples, figures, which episode states what, and attribution. ADDED 2026-10-19 when the 80 most-discussed concepts were given short, glossary-style definitions; the earlier long definition was moved here wherever it carried information the short one does not."@en ;
+    skos:scopeNote "skos:definition holds the short, plain-language definition used for glossary exports; thinkr:extendedDefinition holds the long form. Provenance and editorial notes stay in skos:scopeNote."@en ;
+    skos:prefLabel "extended definition"@en .
+
 thinkr:definedIn a owl:ObjectProperty ;
     rdfs:domain thinkr:Concept ;
     rdfs:range thinkr:Work ;
@@ -694,3 +700,69 @@ thinkr:hasDiscussionSummary a owl:DatatypeProperty ;
     rdfs:range rdf:langString ;
     rdfs:comment "A prose summary of how the episode's participants actually related to each other's positions — genuine agreement, productive clarification, or real disagreement — as distinct from what topics came up (thinkr:discusses) or what the episode is generally about (skos:definition). Most valuable for thinkr:EpisodeType.PanelDiscussion episodes with multiple guests, where a reader can't tell from the topic list alone whether the guests actually converged, talked past each other, or genuinely disagreed — but not restricted to PanelDiscussion only, since a solo Interview can also feature real host/guest tension worth the same treatment. Written from the actual transcript, not inferred from the show notes or description alone."@en ;
     skos:prefLabel "has discussion summary"@en .
+
+#############################################
+# ADDED 2026-10-19 — outside practice taxonomy and on-the-ground initiatives
+# (first source: Bioregioning Earth). See initiatives.ttl.
+#############################################
+
+thinkr:PracticeCluster a owl:Class ;
+    rdfs:comment "A top-level grouping in an outside practice taxonomy, such as a Bioregioning Earth cluster (Ecosystem Regeneration, Community Governance and so on)."@en ;
+    skos:prefLabel "Practice Cluster"@en .
+
+thinkr:PracticeTerm a owl:Class ;
+    rdfs:comment "An activity term from an outside practice taxonomy (for example Watershed Repair or Collective Ownership Models), used to tag thinkr:Initiative individuals. Linked to the cluster it sits in by skos:broader and to this graph's thinkr:InterventionSubdomain individuals by skos:relatedMatch, which marks a working crosswalk, not an equivalence."@en ;
+    skos:prefLabel "Practice Term"@en .
+
+thinkr:Initiative a owl:Class ;
+    rdfs:comment "A named, on-the-ground project documented by an outside source: something people are doing now, as opposed to a concept or a work. Intended as a source of real-world examples, e.g. for WWNS calls to action."@en ;
+    skos:prefLabel "Initiative"@en .
+
+thinkr:carriedOutBy a owl:ObjectProperty ;
+    rdfs:domain thinkr:Initiative ;
+    rdfs:range thinkr:Organization ;
+    skos:prefLabel "carried out by"@en .
+
+thinkr:hasPracticeTerm a owl:ObjectProperty ;
+    rdfs:domain thinkr:Initiative ;
+    rdfs:range thinkr:PracticeTerm ;
+    rdfs:comment "The activity tags the source gives this initiative. Intervention subdomains are derived through these terms' skos:relatedMatch links rather than asserted on the initiative."@en ;
+    skos:prefLabel "has practice term"@en .
+
+thinkr:listedInPracticeCluster a owl:ObjectProperty ;
+    rdfs:domain thinkr:Initiative ;
+    rdfs:range thinkr:PracticeCluster ;
+    rdfs:comment "A cluster page on which the source lists this initiative. An initiative can appear on several."@en ;
+    skos:prefLabel "listed in practice cluster"@en .
+
+thinkr:placeName a owl:DatatypeProperty ;
+    rdfs:comment "Free-text place where an organization or initiative works, at the level of detail the source supports. A plain literal, not a gazetteer link."@en ;
+    skos:prefLabel "place name"@en .
+
+#############################################
+# ADDED 2026-10-19 — documenting opposition to TGS / Third Attractor
+# premises, for vetting papers in WWNS. Every thinkr:challenges triple
+# needs a LinkNote carrying thinkr:hasOppositionType and a cited Evidence;
+# organizations and people are linked only through their own public
+# statements or documented conduct, never by inference.
+#############################################
+
+thinkr:OppositionType a owl:Class ;
+    rdfs:comment "How a school, organization, person or work stands against a TGS premise: a competing paradigm argued in good faith, a friendly critique from people who share the premise of limits but differ on cause or remedy, or organized doubt (documented manufacture of uncertainty)."@en ;
+    skos:prefLabel "Opposition Type"@en .
+
+thinkr:challenges a owl:ObjectProperty ;
+    rdfs:subPropertyOf thinkr:contrastsWith ;
+    rdfs:comment "The subject publicly argues against the object's central claim. Narrower than thinkr:contrastsWith. Every assertion must be backed by a thinkr:LinkNote with thinkr:hasOppositionType and a thinkr:Evidence citing the subject's own words or documented conduct."@en ;
+    skos:prefLabel "challenges"@en .
+
+thinkr:hasOppositionType a owl:ObjectProperty ;
+    rdfs:domain thinkr:LinkNote ;
+    rdfs:range thinkr:OppositionType ;
+    skos:prefLabel "has opposition type"@en .
+
+thinkr:citesEpisode a owl:ObjectProperty ;
+    rdfs:domain thinkr:Evidence ;
+    rdfs:range thinkr:Episode ;
+    rdfs:comment "The episode(s) whose content this Evidence rests on. Added 2026-10-19 at MJSullivan's request so that the episode behind a piece of evidence is an explicit, queryable link rather than a mention in its description. Distinct from thinkr:aboutSource, which points to an external publication with a reliability rating."@en ;
+    skos:prefLabel "cites episode"@en .

@@ -2123,3 +2123,39 @@ tgs:Human.IndyJohar a thinkr:Human, owl:NamedIndividual ;
     rdfs:comment "Architect by training; co-founder of Dark Matter Labs, where he is building Expanding Civilizational Optionality (xCO), co-founder of Project 00 and of the RIBA award-winning architecture and urban practice Architecture 00; founding director of Open Systems Lab; helped seed WikiHouse (open-source housing) and Opendesk (open-source furniture) and build the Impact Hub network; has taught at the University of Bath, TU Berlin, UCL, Princeton, Harvard, MIT and the New School; Professor of Practice at RMIT University; non-executive director of the WikiHouse Foundation and BLOXHUB; a Vision Keeper at the Collaborative for Systemic Climate Action. Writes on Substack. Guest in TGS_147 and TGS_238 (recorded 2026-09-23 in New York City during Climate Week)."@en ;
     owl:sameAs <https://longnow.org/people/indy-johar/> ;
     thinkr:memberOf tgs:Organization.DarkMatterLabs, tgs:Organization.Project00, tgs:AcademicInstitution.RMITUniversity .
+
+tgs:Human.AndrewFanning a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Andrew Fanning"@en ;
+    rdfs:label "Andrew Fanning (human)"@en ;
+    rdfs:comment "Ecological economist; Research and Data Lead at Doughnut Economics Action Lab and visiting research fellow at the University of Leeds. Co-author with Kate Raworth of Doughnut 3.0 (tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025) and lead author of 'The social shortfall and ecological overshoot of nations' (Nature Sustainability, 2022)."@en ;
+    .
+
+tgs:Human.MarcAndreessen a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Marc Andreessen"@en ;
+    rdfs:label "Marc Andreessen (human)"@en ;
+    rdfs:comment "American software engineer and venture capitalist; co-creator of the Mosaic web browser, co-founder of Netscape and of the venture firm Andreessen Horowitz (a16z). Author of tgs:Work.TechnoOptimistManifesto."@en ;
+    thinkr:memberOf tgs:SchoolOfThought.TechnoOptimism ;
+    skos:scopeNote "Added 2026-10-19. memberOf rests on his own authorship of the manifesto, not on his investments."@en ;
+    .
+
+tgs:Human.JulianSimon a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Julian Simon"@en ;
+    rdfs:label "Julian Simon (human)"@en ;
+    rdfs:comment "American economist (1932-1998), professor of business administration at the University of Maryland and senior fellow at the Cato Institute. Author of tgs:Work.TheUltimateResource; won the 1980-1990 Simon-Ehrlich wager on metal prices against tgs:Human.PaulEhrlich."@en ;
+    thinkr:memberOf tgs:SchoolOfThought.Cornucopianism ;
+    .
+
+tgs:Human.NaomiOreskes a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Naomi Oreskes"@en ;
+    rdfs:label "Naomi Oreskes (human)"@en ;
+    rdfs:comment "American historian of science, Henry Charles Lea Professor of the History of Science at Harvard. Co-author of tgs:Work.MerchantsOfDoubt and of tgs:Work.AssessingExxonMobilsGlobalWarmingProjections; a principal documenter of organized climate doubt."@en ;
+    .
+
+tgs:Human.RianeEisler a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Riane Eisler"@en ;
+    rdfs:label "Riane Eisler (human)"@en ;
+    owl:sameAs <http://dbpedia.org/resource/Riane_Eisler> ;
+    rdfs:comment "Systems scientist, macro-historian, futurist and attorney (b. 1931, Vienna; a child refugee from the Holocaust who grew up in Cuba). President of the Center for Partnership Systems and editor-in-chief of the Interdisciplinary Journal of Partnership Studies (University of Minnesota). Author of The Chalice and the Blade (1987; 57 US printings and 27 foreign editions), The Real Wealth of Nations (2007) and Nurturing Our Humanity (2019, with Douglas P. Fry). Originator of the domination-partnership lens (tgs:Concept.DominationPartnershipContinuum). Guest on TGS_116."@en ;
+    thinkr:memberOf tgs:Organization.CenterForPartnershipSystems ;
+    dct:source <https://rianeeisler.com/> ;
+    .

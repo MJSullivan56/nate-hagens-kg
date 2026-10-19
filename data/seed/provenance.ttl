@@ -3519,6 +3519,61 @@ tgs:RevisionEvent.Frankly_84_FullBuild a thinkr:RevisionEvent ;
     thinkr:revisionNote "Full build from MJSullivan's transcript and description, with dates and the submission link from the episode page, replacing the 2026-09-12 stub. No concepts minted, no references."@en ;
     .
 
+tgs:RevisionEvent.Frankly_78_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_78_ABriefClarificationOnHumanBehavior ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.ThreeTimelinesOfResponse and tgs:Concept.ProsocialityUnderTheSuperorganism, with lens tags and thinkr:complements bridges from tgs:Concept.ThreeByThreeResponseGrid and tgs:Concept.GameTheoryFillsTheOughtGap. Note added to tgs:Concept.DarkTriad. Back-links on both references."@en ;
+    .
+
+tgs:RevisionEvent.TGSGlossary_GapPass a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.TGSGlossary ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Gap pass against @DoutorSabonetes's TGS Glossary (minted as tgs:Work.TGSGlossary). Minted tgs:Concept.WideBoundary, tgs:Concept.WileECoyoteMoment, tgs:Concept.MusicalChairsMoment, tgs:Concept.OvertonWindow and tgs:Concept.DissipativeStructures, with definitions drawn from Nate's own built episodes and lens tags, and a thinkr:complements bridge from tgs:Concept.HolisticExternalityAnalysis to tgs:Concept.WideBoundary. Added skos:altLabel values from the glossary: 'Human labour equivalents' (tgs:Concept.EnergySlaves), 'Moloch trap' (tgs:Concept.MultipolarTrap), 'Financial claims on biophysical reality' (tgs:Concept.MoneyAsClaimOnEnergy), 'Ecological overshoot' (tgs:Concept.Overshoot). Loss aversion is queued until Frankly_25 is built."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_25_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_25_LossAversion ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's transcript and the episode page's show notes, replacing the 2026-09-12 stub; replay ID from the episode page. Minted tgs:Concept.LossAversion, the last gap queued from the TGS Glossary pass, with a PsychologicalInner lens tag. Earliest-source note on tgs:Concept.RichInSocialCapital. Back-link on its 1 reference."@en ;
+    .
+
+tgs:RevisionEvent.ShortDefinitions_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Replaced skos:definition on the 81 concepts discussed in three or more episodes with short, plain-language, glossary-style definitions, reviewed by MJSullivan and first exported as the TGS glossary for the Hylo community. Added thinkr:extendedDefinition (an annotation property, subproperty of skos:note) and moved the earlier long definition there for 64 concepts where it carried detail the short one does not; for 16 the old definition was a near-duplicate and was dropped (CrudeOil, EnergySlaves, CarbonPulse, EnergyBlindness, GrowthImperative, GreatSimplification, DiscountRatesAndPresentBias, TheoryOfChange, Metacrisis, Wetware, JevonsParadox, Superorganism, ComplexityCollapse, MoneyAsClaimOnEnergy, BiophysicalGauntlet, LimitsToGrowth). tgs:Concept.MoreThanHumanPredicament, which had no definition, received one; its open question about overlap with tgs:Concept.HumanPredicament remains. tgs:Concept.FiveHorsemenOf2020s and tgs:Concept.FourHorsemenOfThe2020s share one merged definition pending a decision to merge them."@en ;
+    .
+
+tgs:RevisionEvent.HorsemenMerge_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Concept.FourHorsemenOfThe2020s, tgs:Concept.FiveHorsemenOf2020s ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Merged the duplicate tgs:Concept.FiveHorsemenOf2020s into tgs:Concept.FourHorsemenOfThe2020s at MJSullivan's direction, after he confirmed they are one concept counted two ways. 'Five Horsemen of the 2020s' became an exact-match thinkr:AlternateTerm and 'The Four Horsemen' a skos:altLabel; the extended definition, scope note and subject were carried over; all episode thinkr:discusses links and prose IRIs in concepts and episodes were repointed; lens tags added. The old IRI is kept as an owl:deprecated stub with dcterms:isReplacedBy, untyped, so it still resolves. Earlier revision notes that name the old IRI are left as historical record."@en ;
+    .
+
+tgs:RevisionEvent.FourHorsemenOfTheApocalypse_Minted a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Concept.FourHorsemenOfTheApocalypse, tgs:Concept.FourHorsemenOfThe2020s ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Minted tgs:Concept.FourHorsemenOfTheApocalypse (Revelation 6:1-8) as the canonical source of Nate's framework, and linked tgs:Concept.FourHorsemenOfThe2020s to it with thinkr:relatesTo. Chosen over renaming the 2020s concept, which would have conflated Nate's converging crises with the biblical riders."@en ;
+    .
+
+tgs:RevisionEvent.TGSBooksList_Import a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.TGSBooksList ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Imported the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList) from the PDF MJSullivan printed of the page: 238 books after merging a duplicate and skipping one untitled entry. Minted 200 new tgs:Work individuals (title, year, ISBN-13 as dct:identifier urn:isbn where given, dct:creator where the author is already a tgs:Human, author names otherwise in rdfs:comment); matched 38 to existing Works and added 32 missing ISBNs to them. Added 238 dct:references links from the listed TGS episodes and Reality Roundtables, with back-links; skipped two that would cite a book published after the episode (The Anxious Generation, 2024, under TGS_59; The Story of CO2 Is the Story of Everything, 2025, under TGS_103). Episode assignments come from the list, not show notes, and are flagged as unconfirmed in each new Work's comment. Over-short IRIs were lengthened (e.g. tgs:Work.LimitsWhyMalthusWasWrong, tgs:Work.GaiaANewLookAtLifeOnEarth)."@en ;
+    .
+
+tgs:RevisionEvent.BioregioningEarthOntology_Added a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.BioregioningEarthOntology ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added the Bioregioning Earth web taxonomy as tgs:Work.BioregioningEarthOntology at MJSullivan's request, with dct:relation links to the nine closest intervention subdomains, tgs:Concept.RightsOfNature, tgs:Concept.TwoWaysOfKnowing and tgs:Work.BioregionalFinancingFacilities, and a cluster-to-subdomain crosswalk in its scopeNote."@en ;
+    .
+
 tgs:RevisionEvent.TGS_227_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_227_SalMercogliano ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
@@ -3545,4 +3600,67 @@ tgs:RevisionEvent.Frankly_106_DuplicateResolution a thinkr:RevisionEvent ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;
     thinkr:revisionKind thinkr:RevisionKindType.Correction ;
     thinkr:revisionNote "Real, genuine pre-existing duplicate discovered during the TGS/RR/Frankly merge: this episode had been independently, fully built twice in the original episodes.ttl under two slightly different real IRI names (this one, and the now-retired Frankly_106_TenThingsWorthMoreThanGold) -- predates all of this session's batch-pilot work; not something the merge process itself created, only what it caught. Resolved by keeping the more complete of the two (this one carries a real, formal dct:references property the other only had in prose) and discarding the other entirely."@en ;
+    .
+
+tgs:RevisionEvent.EvolvingDoughnut2025_Added a thinkr:RevisionEvent ;
+    thinkr:affects tgs:SchoolOfThought.DoughnutEconomics, tgs:Work.TheEvolvingDoughnut2025, tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025, thinkr:IndicatorCategory ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Brought Doughnut Economics up to Doughnut 3.0 from MJSullivan's upload of Raworth's 'The Evolving Doughnut' (DEAL, October 2025). Minted four Works (Doughnut 1.0 Oxfam paper 2012, Doughnut 2.0 Lancet Planetary Health article 2017, Doughnut 3.0 Nature article 2025, and the explainer itself) and tgs:Human.AndrewFanning; added the version history and 3.0 dimension names to tgs:SchoolOfThought.DoughnutEconomics; attached the 3.0 dimension names as CloseMatch alternate terms on seven IndicatorCategory individuals whose California labels differ. Global 2021-22 indicator values not recorded; the 42 Indicators stay California's."@en ;
+    .
+
+tgs:RevisionEvent.WorldInTransition2026_Added a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.WorldInTransition2026, tgs:Organization.EarthkindCollective ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added the Earthkind Collective report 'World in Transition: Strategic Responses to the Metacrisis' (2026) and its author organization, from a PDF MJSullivan downloaded via Hylo. dct:references to the 17 existing works it cites or recommends, with back-links; dct:relation to Metacrisis, MultipolarTrap and LeveragePoints."@en ;
+    .
+
+tgs:RevisionEvent.BioregioningEarthInitiatives_Import a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.BioregioningEarthOntology, thinkr:Initiative, thinkr:PracticeTerm, thinkr:PracticeCluster ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Imported all ten Bioregioning Earth cluster pages from PDFs MJSullivan printed (five first, the other five the same day), for use as real-world examples in WWNS. New schema: thinkr:Initiative, thinkr:PracticeTerm, thinkr:PracticeCluster, thinkr:carriedOutBy, thinkr:hasPracticeTerm, thinkr:listedInPracticeCluster, thinkr:placeName. New data (initiatives.ttl): 10 clusters, 69 practice terms, 221 initiatives; 52 organizations added to organizations.ttl. The site's 'Finance Assesments' is labeled 'Finance Assessments'. The practice-term to InterventionSubdomain crosswalk (skos:relatedMatch) is Claude's draft; 9 terms have no match. Organization places are given only where the page text or well-known facts support them; three are left blank (ASPROCIG, Landschaftspflegeverein, Mira River Guardians). An earlier web-reader pass had paired several examples with the wrong organization; the PDF text was parsed directly and is correct."@en ;
+    .
+
+tgs:RevisionEvent.OrganismEarthTranscript_Linked a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Series.GreatSimplificationAnimatedSeries ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Linked the Organism.earth library's transcript of the 2022 animated film to tgs:Series.GreatSimplificationAnimatedSeries (rdfs:seeAlso plus a note), at MJSullivan's request. The page is a transcript of a work already in the graph, so no new Work was minted. The site's authors list was noted as a possible future source of thinkers but could not be fetched."@en ;
+    .
+
+tgs:RevisionEvent.OrganismEarthLibrary_Added a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.OrganismEarthLibrary ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added the Organism.earth library as a reference work, from MJSullivan's PDF of its author list (352 names). MJSullivan's framing: a resource for later, not a list to copy. No people were added. A match of the list against the graph found 23 authors already present and 10 TGS guests; Riane Eisler (TGS 116) is a guest with no Human yet because that episode is still a stub."@en ;
+    .
+
+tgs:RevisionEvent.OppositionModeling_Added a thinkr:RevisionEvent ;
+    thinkr:affects thinkr:OppositionType, thinkr:challenges, tgs:SchoolOfThought.TechnoOptimism ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added opposition modeling at MJSullivan's request, for vetting papers in WWNS, after reviewing a Gemini summary of opposing movements. New: thinkr:OppositionType (CompetingParadigm, FriendlyCritique, OrganizedDoubt), thinkr:challenges, thinkr:hasOppositionType; six schools (EffectiveAccelerationism, Ecomodernism, Cornucopianism, NeoclassicalGrowthEconomics, Ecosocialism, OrganizedClimateDoubt); five works; three humans (Andreessen, Simon, Oreskes); ExxonMobil; six challenges links each with LinkNote and Candidate Evidence. Deliberately not added from the Gemini text: Musk, Thiel, Luckey and Verdon (investment is not a stated position; add only with their own public statements), AEI and Cato (its citations did not support the funding claims), and degrowth or ecosocialism as opposition (friendly critics; their critique awaits a citable source)."@en ;
+    .
+
+tgs:RevisionEvent.RedTeamBridges_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:affects thinkr:PolarityType ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "First red-team pass, at MJSullivan's request, over the 36 Schmachtenberger-Hagens complements bridges, looking in the graph's own episode records for evidence against each. Added 2 Contests (SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation, PowerSeekingAndComplicity_EducatingHyperAgents) and 3 of a new polarity, thinkr:PolarityType.Qualifies (MaximizingReturnsOnPower_MaximumPowerPrinciple, ImpossibleToHard_AggregateProbability, ImpossibleToHard_WhatCantWontMightHappen). Qualifies was added because Contests is all-or-nothing: one Curated Contests makes a link Disputed, which overstates a difference in emphasis. The other 31 bridges: no counter-evidence found in the graph's records. All new evidence is Candidate, so no calculatedConfidence changes until review; scripts/compute_confidence.py should ignore Qualifies as it ignores Mentions. Evidence IRIs name the LinkNote plus the source episode (e.g. tgs:Evidence.PowerSeekingAndComplicity_EducatingHyperAgents_Frankly_85), never the polarity, at MJSullivan's direction: polarity is a reviewable judgment that can change, the source cannot."@en ;
+    .
+
+tgs:RevisionEvent.EvidenceCitesEpisode_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:affects thinkr:Evidence ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Minted thinkr:citesEpisode (Evidence to Episode) at MJSullivan's request and backfilled it on every Evidence whose description names an episode (TGS_n, Frankly_n or RR_n): 44 Evidence individuals, 85 links, all resolved to existing episode IRIs with no ambiguity. The 23 Evidence individuals without one cite books, papers or historical figures, not episodes. New Evidence should set citesEpisode whenever its description names an episode."@en ;
+    .
+
+tgs:RevisionEvent.TGS_116_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_116_RianeEisler, tgs:Human.RianeEisler ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built TGS_116 (Riane Eisler) from the transcript and show notes MJSullivan supplied, replacing the 2026-09-12 stub; closes the gap found when matching the Organism.earth author list (a TGS guest with no Human). New: Human, Persona and Relationship for Eisler; tgs:Organization.CenterForPartnershipSystems; six concepts (DominationPartnershipContinuum, FourCornerstonesOfPartnership, ChaliceAndBladePower, CaringEconomics, DenialLearnedInDominationFamilies, Pragmatopia); one convergence LinkNote (ChaliceAndBladePower with Nate's PowerVersusLife). Her three books now carry dct:creator and show-notes confirmation; MultilevelSelection gains her critique; TGS_56 gains a back-link."@en ;
     .

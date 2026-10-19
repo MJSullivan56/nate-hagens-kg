@@ -83,11 +83,13 @@ tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
     skos:altLabel "Donut Economics"@en ;
     skos:prefLabel "Doughnut Economics"@en ;
-    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
+    skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book, and quantified over time as Doughnut 3.0 in 2025), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
     owl:sameAs <http://dbpedia.org/resource/Doughnut_(economic_model)> ;
     thinkr:convergesWith tgs:Concept.Overshoot ;
     thinkr:influencedBy tgs:Persona.KateRaworth ;
     skos:scopeNote "NO favorsFacet asserted yet (2026-08-13) — genuinely harder than the others because its own core claim spans TWO axes at once (a social floor AND an ecological ceiling), not one dimension's single facet the way GreenGrowth/GreatSimplification are. Doesn't map cleanly onto the Economic dimension alone (which only tracks Contraction/Growth x Overshoot/WithinLimits) since Doughnut Economics is equally concerned with distributional/social-floor questions that this graph currently tracks on the separate PowerAndDistribution dimension (CivicIdeal, BroadGains). Might eventually need TWO favorsFacet assertions across different dimensions rather than one — worth thinking through properly rather than forcing a single-facet answer."@en ;
+    rdfs:comment "Three published versions: Doughnut 1.0 (tgs:Work.SafeAndJustSpaceForHumanity2012), Doughnut 2.0 (tgs:Work.ADoughnutForTheAnthropocene2017 and the book tgs:Work.DoughnutEconomics) and Doughnut 3.0 (tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025, with Andrew Fanning), all explained in tgs:Work.TheEvolvingDoughnut2025. Doughnut 3.0 social dimensions: food, health, education, income and work, water and sanitation, energy, connectivity, housing, equality, social cohesion, political voice, peace and justice. Ecological dimensions: climate change, ocean acidification, chemical pollution, nutrient pollution, air pollution, freshwater disruption, land conversion, biodiversity breakdown, ozone layer depletion. This graph's thinkr:IndicatorCategory individuals use the California Doughnut Report's labels; each carries the matching Doughnut 3.0 name as a close-match alternate term."@en ;
+    rdfs:seeAlso tgs:Work.TheEvolvingDoughnut2025, tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025 ;
     .
 
 
@@ -133,9 +135,61 @@ tgs:SchoolOfThought.TechnoOptimism a thinkr:SchoolOfThought,
     skos:definition "The belief that technological progress and human ingenuity can resolve ecological and resource constraints without requiring a fundamental reduction in material consumption — spanning positions from general faith in innovation to explicit projects like space mining and off-world colonization. A direct, named target of critique across multiple TGS episodes (RR-24's own official description centers the whole episode on it: 'Techno-optimists... dream of a future where we mine, travel to, and colonize other planets... all in the hopes of bypassing the problems we now face on Earth'), and thematically opposed by Concept.EnergyBlindness throughout this graph's own already-built material."@en ;
     dcterms:source <https://link.springer.com/article/10.1007/s13347-022-00555-x> ;
     thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    thinkr:challenges tgs:SchoolOfThought.DegrowthMovement ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.BroadMatch ;
         skos:prefLabel "Hopium"@en ;
         skos:scopeNote "Raised by MJSullivan, citing a Reddit r/ANRime discussion (site blocked from direct fetch here; the post text was pasted directly instead). That primary source reveals real, meaningful register variation this note should reflect rather than flatten: in that fandom community's own internal usage, 'hopium' denotes hope grounded in some real (if inconclusive) evidence — explicitly contrasted with 'copium,' described there as genuinely baseless self-delusion ('lying to yourself'), with 'doomium' as hopium's opposite and 'reach' covering strained, unlikely theories. This is a softer, more neutral sense than the general internet-slang usage independently confirmed via Collins Dictionary, Merriam-Webster's slang entry, and crypto-culture sources (CoinGecko, etc.), which frame 'hopium' as itself unrealistic or baseless — the dominant sense in broader/tech-adjacent discourse, and the one this graph's own connection to techno-optimism actually rests on (critics invoking 'hopium' against techno-optimist claims are typically using this harsher, more common sense, not the community-specific neutral one). BroadMatch remains the right type either way: both senses are broader than techno-optimism specifically, one domain-specific instance among many the term can apply to."@en ] ;
     skos:scopeNote "favorsFacet added 2026-08-13, linking into the 256-Scenario matrix per MJSullivan's explicit request. GreenGrowth (Economic dimension, X=4/Growth Y=4/WithinLimits) is the precise structural match for techno-optimism's own core promise: continued growth, decoupled from resource constraints via technology. The tension this surfaces is real and worth keeping visible: GreenGrowth's own scopeNote already records that Hagens himself considers it 'the least realistic option on this Dimension,' calling continued material growth and biosphere healing 'two forces that pull against each other too hard to hold together at a global scale.' This property doesn't resolve that disagreement — it makes it queryable: the SchoolOfThought that argues FOR this facet, and the Concept's own author's independent assessment that it's the least likely one, now sit on the same graph, connected through the same facet, rather than as two disconnected prose observations."@en ;
+    .
+
+tgs:SchoolOfThought.EffectiveAccelerationism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Effective Accelerationism"@en ;
+    skos:altLabel "e/acc"@en ;
+    skos:definition "A Silicon Valley movement, named around 2022, holding that technological and economic acceleration (above all AI) should be pursued as fast as possible and that attempts to slow it, for safety or sustainability, are mistaken. A narrower, more combative strand of techno-optimism."@en ;
+    skos:broader tgs:SchoolOfThought.TechnoOptimism ;
+    thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    rdfs:seeAlso tgs:Work.TechnoOptimistManifesto ;
+    skos:scopeNote "Added 2026-10-19. GreenGrowth is the world it promises, not one the graph judges reachable; see tgs:SchoolOfThought.TechnoOptimism's scopeNote on that tension."@en ;
+    .
+
+tgs:SchoolOfThought.Ecomodernism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Ecomodernism"@en ;
+    skos:definition "Environmental position, set out in An Ecomodernist Manifesto (2015) and associated with the Breakthrough Institute, that human wellbeing can be decoupled from environmental impact by intensifying agriculture, energy and settlement (including nuclear power) so that nature can be spared. The intellectual home of the decoupling argument TGS disputes."@en ;
+    thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    dcterms:source tgs:Work.AnEcomodernistManifesto ;
+    thinkr:challenges tgs:Concept.LimitsToGrowth ;
+    .
+
+tgs:SchoolOfThought.Cornucopianism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Cornucopianism"@en ;
+    skos:definition "The view that human ingenuity makes natural resources effectively unlimited, so scarcity is temporary and population growth is a net good. Its best-known statement is Julian Simon's The Ultimate Resource (1981); Simon won his 1980-1990 wager with Paul Ehrlich that five metal prices would fall."@en ;
+    thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    dcterms:source tgs:Work.TheUltimateResource ;
+    thinkr:challenges tgs:Concept.LimitsToGrowth ;
+    skos:scopeNote "Added 2026-10-19. The Simon-Ehrlich wager is the usual cornucopian rebuttal to tgs:Human.PaulEhrlich; critics note the result depended on the decade chosen."@en ;
+    .
+
+tgs:SchoolOfThought.NeoclassicalGrowthEconomics a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Neoclassical Growth Economics"@en ;
+    skos:altLabel "Mainstream economics"@en ;
+    skos:definition "The dominant school of economics, which models growth as driven by capital, labour and technology, treats natural resources as substitutable inputs priced by markets, and assigns energy a minor role (roughly its cost share of GDP). The paradigm behind most policy and central banking, and the main target of Nate's economic critique."@en ;
+    thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
+    thinkr:challenges tgs:Concept.LimitsToGrowth ;
+    thinkr:contrastsWith tgs:Concept.TenCoreMythsOfBusinessSchools, tgs:Concept.EnergyBlindness ;
+    skos:scopeNote "Added 2026-10-19. Nate's reply is tgs:Concept.TenCoreMythsOfBusinessSchools (Frankly_99), and tgs:Concept.EnergyBlindness names the blind spot he sees in it."@en ;
+    .
+
+tgs:SchoolOfThought.Ecosocialism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Ecosocialism"@en ;
+    skos:definition "Tradition that locates the root of ecological crisis in capitalism's drive to accumulate, and calls for democratic, planned transformation of the economy. Shares TGS's premise of limits; differs on diagnosis and remedy."@en ;
+    skos:scopeNote "Added 2026-10-19 as a friendly critic, not an opponent. Its likely critique of TGS, that the superorganism framing takes capitalism and power out of the story, is NOT asserted as thinkr:challenges until a citable source is found; the sources offered so far (a YouTube video and a Reddit thread) are not enough. The same applies to tgs:SchoolOfThought.DegrowthMovement."@en ;
+    .
+
+tgs:SchoolOfThought.OrganizedClimateDoubt a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:prefLabel "Organized Climate Doubt"@en ;
+    skos:altLabel "Climate denial industry"@en ;
+    skos:definition "Coordinated campaigns, largely funded by fossil-fuel interests and allied think tanks, to manufacture public doubt about climate science and delay policy. Documented by historians (Oreskes and Conway, Merchants of Doubt) and by the companies' own internal records. Not a school of thought in the scholarly sense: modeled here so documented actors and the papers they promote can be linked to it."@en ;
+    dcterms:source tgs:Work.MerchantsOfDoubt ;
+    thinkr:challenges tgs:Concept.ClimateSensitivity ;
     .

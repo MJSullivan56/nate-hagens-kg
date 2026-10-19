@@ -328,7 +328,7 @@ tgs:Persona.NateHagens a thinkr:Persona, owl:NamedIndividual ;
         tgs:Relationship.NateHagens_VanessaAndreotti,
         tgs:Relationship.NateHagens_WilliamRees,
         tgs:Relationship.NateHagens_ZachWeiss,
-        tgs:Relationship.NateHagens_ZakStein ;
+        tgs:Relationship.NateHagens_ZakStein, tgs:Relationship.NateHagens_RianeEisler ;
     skos:prefLabel "Nate Hagens"@en ;
     rdfs:label "Nate Hagens (persona)"@en ;
     foaf:homepage
@@ -1891,4 +1891,13 @@ tgs:Persona.IndyJohar a thinkr:Persona, owl:NamedIndividual ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_IndyJohar ;
     skos:prefLabel "Indy Johar"@en ;
     rdfs:label "Indy Johar (persona)"@en ;
+    .
+
+tgs:Persona.RianeEisler a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RianeEisler ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RianeEisler ;
+    skos:prefLabel "Riane Eisler"@en ;
+    rdfs:label "Riane Eisler (persona)"@en ;
+    skos:scopeNote "Kept Professional-only: a first conversation. Nate says he had not heard of her until a few months earlier though they share friends (among them her co-author Teddie Potter), and he closes with thanks for her lifetime of work, without friend language."@en ;
     .

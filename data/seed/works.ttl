@@ -48,7 +48,9 @@ tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
     dct:creator tgs:Human.IainMcGilchrist ;
     owl:sameAs <http://dbpedia.org/resource/The_Matter_with_Things> ;
-    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis, tgs:Interview.TGS_129_JonathanRowson, tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+    dct:identifier "urn:isbn:9781914568060" ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 #############################################
@@ -70,6 +72,8 @@ tgs:Work.FiveInsightsForAvoidingGlobalCollapse a thinkr:Work, owl:NamedIndividua
     skos:prefLabel "Five Insights for Avoiding Global Collapse"@en ;
     rdfs:comment "Book by Gaya Herrington, containing an exclusive research update based on 2022 data extending her original World3 empirical re-test (see tgs:Work.UpdateToLimitsToGrowth2021). Confirmed via WebFetch of her own bio site (gayaherrington.com/about) 2026-07-15 — exact publisher/ISBN/year not yet independently verified, flagged honestly rather than guessed, same discipline as tgs:Work.RealityBlind's DJ White note."@en ;
     dct:creator tgs:Human.GayaHerrington ;
+    dct:identifier "urn:isbn:9783036537221" ;
+    dct:isReferencedBy tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth ;
     .
 
 #############################################
@@ -105,11 +109,12 @@ tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/> ;
-    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_238_IndyJohar, tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_50_CriteriaCategoriesResponse, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_86_WhatIsWealth, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf ;
+    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_238_IndyJohar, tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_50_CriteriaCategoriesResponse, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_86_WhatIsWealth, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_25_LossAversion, tgs:Interview.TGS_93_JorisVanDerSchot ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
         skos:prefLabel "Reality Blind"@en ;
         skos:scopeNote "Short-form title, used in casual reference (e.g. this graph's own dct:references usage) versus the full formal title." ] ;
+    dct:identifier "urn:isbn:9798701116281" ;
     .
 
 #############################################
@@ -121,6 +126,8 @@ tgs:Work.Combining a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Combining"@en ;
     rdfs:comment "Author: Nora Bateson. Published September 2023 by Triarchy Press, 386pp. A poetic, relational exploration of the ecology of communication and interdependency — introduces/elaborates 'Aphanipoiesis' (the unseen ways life comes together) and connects to her earlier-coined 'Warm Data.'"@en ;
     dct:source <https://www.triarchypress.net/combining.html> ;
+    dct:identifier "urn:isbn:9781913743857" ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication ;
     .
 
 tgs:Work.Belly a thinkr:Work, owl:NamedIndividual ;
@@ -142,7 +149,7 @@ tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/view/388478403/i/> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
+    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions, tgs:Interview.TGS_146_BillPlotkin ;
     .
 
 #############################################
@@ -163,6 +170,7 @@ tgs:Work.BioregionalFinancingFacilities a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.SamanthaPower ;
     dct:issued "2024"^^xsd:gYear ;
     dct:source <https://drive.google.com/file/d/1yznJ324biVX_RyVcTKNB96vNMqFbYUI3/view> ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 #############################################
@@ -254,6 +262,7 @@ tgs:Work.TaoOfPhysics a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.FritjofCapra ;
     dct:issued "1975"^^xsd:gYear ;
     owl:sameAs <https://www.fritjofcapra.net/about/> ;
+    dct:identifier "urn:isbn:9781570625190" ;
     .
 
 # added 2026-08-25
@@ -264,6 +273,8 @@ tgs:Work.MaterialWorld a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.EdConway ;
     dct:issued "2023"^^xsd:gYear ;
     owl:sameAs <http://dbpedia.org/resource/Material_World_(book)> ;
+    dct:identifier "urn:isbn:9780593534342" ;
+    dct:isReferencedBy tgs:Interview.TGS_127_EdConway ;
     .
 
 # added 2026-08-29
@@ -317,6 +328,7 @@ tgs:Work.BrokenMoney2023 a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.LynAlden ;
     dct:source <https://www.lynalden.com/broken-money/> ;
     dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9798988666301" ;
     .
 
 tgs:Work.ZombiesInWesternCulture a thinkr:Work, owl:NamedIndividual ;
@@ -352,6 +364,7 @@ tgs:Work.LeMondeSansFin a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Graphic novel by Jean-Marc Jancovici and illustrator Christophe Blain (not yet built in this graph), 2022. Real, exceptional commercial success: the best-selling book in France in 2022, over 500,000 copies — a striking figure for a book about energy and climate."@en ;
     dct:creator tgs:Human.JeanMarcJancovici ;
     dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9782205088168" ;
     .
 
 tgs:Work.GoliathsCurse a thinkr:Work, owl:NamedIndividual ;
@@ -361,6 +374,7 @@ tgs:Work.GoliathsCurse a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.penguin.co.uk/books/321192/goliaths-curse-by-kemp-luke/9780241741238> ;
     dct:issued "2025"^^xsd:gYear ;
     dct:isReferencedBy tgs:Interview.TGS_209_BalazsMatics ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.Disorder2022 a thinkr:Work, owl:NamedIndividual ;
@@ -369,6 +383,8 @@ tgs:Work.Disorder2022 a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.HelenThompson ;
     dct:source <https://global.oup.com/academic/product/disorder-9780198864981?cc=us&lang=en&> ;
     dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780198864981" ;
+    dct:isReferencedBy tgs:Interview.TGS_91_LukeGromen, tgs:Interview.TGS_99_JeremyGrantham ;
     .
 
 tgs:Work.OilAndTheWesternEconomicCrisis a thinkr:Work, owl:NamedIndividual ;
@@ -376,6 +392,8 @@ tgs:Work.OilAndTheWesternEconomicCrisis a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Helen Thompson, Springer, 2017. Her own real, direct account: at the time of publication, 'most people thought, well, why is she writing about that' — energy-aware political economy was not yet a widely legible frame; that changed substantially after Disorder's 2022 release."@en ;
     dct:creator tgs:Human.HelenThompson ;
     dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9783319525082" ;
+    dct:isReferencedBy tgs:Interview.TGS_99_JeremyGrantham ;
     .
 
 tgs:Work.TheStoryOfCO2 a thinkr:Work, owl:NamedIndividual ;
@@ -383,12 +401,15 @@ tgs:Work.TheStoryOfCO2 a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Peter Brannen, Ecco, August 2025. Reframes CO2 from industrial pollutant to the substance fundamental to Earth's habitability itself — the 'control knob' for planetary temperature and ocean chemistry, and the ultimate source of all carbon-based life. Grew directly out of research for his earlier book, tgs:Work.TheEndsOfTheWorld: while auditing geochemistry courses, Brannen found most mass extinctions are linked to runaway CO2 injections or declines, not the asteroid-impact narrative most people assume."@en ;
     dct:creator tgs:Human.PeterBrannen ;
     dct:issued "2025"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780063036987" ;
     .
 
 tgs:Work.TheEndsOfTheWorld a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Ends of the World: Volcanic Apocalypses, Lethal Oceans, and Our Quest to Understand Earth's Past Mass Extinctions"@en ;
     rdfs:comment "Peter Brannen, Ecco. Covers Earth's five major mass extinctions. Featured in Greta Thunberg's The Climate Book and the Best American Science and Nature Writing series. Subject of Brannen's real first TGS appearance, TGS_103."@en ;
     dct:creator tgs:Human.PeterBrannen ;
+    dct:identifier "urn:isbn:9780062364821" ;
+    dct:isReferencedBy tgs:Interview.TGS_103_PeterBrannen ;
     .
 
 tgs:Work.TrueHuman a thinkr:Work, owl:NamedIndividual ;
@@ -411,6 +432,7 @@ tgs:Work.BitterHarvest a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Lisi Krall, SUNY Press. Traces the formation and evolution of the economic Superorganism from the cultivation of annual grains through to global capitalism, arguing capitalism is the direct legacy of the agricultural revolution rather than a distinct later rupture."@en ;
     dct:creator tgs:Human.LisiKrall ;
     dct:source <https://sunypress.edu/Books/B/Bitter-Harvest> ;
+    dct:identifier "urn:isbn:9781438489919" ;
     .
 
 tgs:Work.ForTheCommonGood a thinkr:Work, owl:NamedIndividual ;
@@ -418,12 +440,16 @@ tgs:Work.ForTheCommonGood a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Herman Daly (with theologian John B. Cobb Jr.), Beacon Press, 1989. Real, direct personal significance: alongside tgs:Work.ValuingTheEarth, one of the two Daly books Nate read that directly caused him to leave his Wall Street career."@en ;
     dct:creator tgs:Human.HermanDaly ;
     dct:issued "1989"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780807047026" ;
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton ;
     .
 
 tgs:Work.ValuingTheEarth a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Valuing the Earth: Economics, Ecology, Ethics"@en ;
     rdfs:comment "Herman Daly and Kenneth Townsend (eds.), MIT Press. Real, direct personal significance: the book Nate's own words credit as the main thing that propelled him to leave his Wall Street career roughly a year after reading it."@en ;
     dct:creator tgs:Human.HermanDaly ;
+    dct:identifier "urn:isbn:9780262540681" ;
+    dct:isReferencedBy tgs:Interview.TGS_45_JonErickson ;
     .
 
 tgs:Work.TheMythOfTheMachine a thinkr:Work, owl:NamedIndividual ;
@@ -451,6 +477,7 @@ tgs:Work.HistoryForTomorrow a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "History for Tomorrow: Inspiration from the Past for the Future of Humanity"@en ;
     rdfs:comment "Roman Krznaric. Draws on historical precedent for societies that navigated existential crises, arguing history offers real, concrete inspiration for governance, community organization, and economic redesign rather than serving only as cautionary tales."@en ;
     dct:creator tgs:Human.RomanKrznaric ;
+    dct:identifier "urn:isbn:9780753559659" ;
     .
 
 tgs:Work.ThePopulationBomb a thinkr:Work, owl:NamedIndividual ;
@@ -458,6 +485,8 @@ tgs:Work.ThePopulationBomb a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Paul Ehrlich, 1968. Real, foundational and widely-debated book on the risks of unchecked human population growth. Real, direct personal significance to this graph: Nate's own father read it."@en ;
     dct:creator tgs:Human.PaulEhrlich ;
     dct:issued "1968"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781568495873" ;
+    dct:isReferencedBy tgs:Interview.TGS_52_GiorgosKallis ;
     .
 
 tgs:Work.TheRighteousMind a thinkr:Work, owl:NamedIndividual ;
@@ -465,7 +494,8 @@ tgs:Work.TheRighteousMind a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Jonathan Haidt, 2012. New York Times bestseller examining the intuitive foundations of morality and how moral reasoning varies across cultural and political divisions."@en ;
     dct:creator tgs:Human.JonathanHaidt ;
     dct:issued "2012"^^xsd:gYear ;
-    dct:isReferencedBy tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    dct:isReferencedBy tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_67_EdwardChancellor, tgs:Interview.TGS_60_NinaSimons ;
+    dct:identifier "urn:isbn:9780307455772" ;
     .
 
 tgs:Work.PratiquementDurable a thinkr:Work, owl:NamedIndividual ;
@@ -508,6 +538,8 @@ tgs:Work.Ishmael a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Daniel Quinn, 1992. A telepathic gorilla teaches a human student the real, distinctive 'Takers and Leavers' framework — civilizations that believe the world was made for humans to master and exploit ('Takers') versus cultures that see humans as one part of a larger living community ('Leavers'). Real, direct personal significance to this graph: Nate first dismissed the book after five pages, then read it cover to cover on September 11, 2001, when the markets were closed."@en ;
     dct:creator tgs:Human.DanielQuinn ;
     dct:issued "1992"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780553375404" ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
     .
 
 tgs:Work.TheAscentOfHumanity a thinkr:Work, owl:NamedIndividual ;
@@ -529,6 +561,7 @@ tgs:Work.TheMoreBeautifulWorld a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Charles Eisenstein, 2013."@en ;
     dct:creator tgs:Human.CharlesEisenstein ;
     dct:issued "2013"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.ClimateANewStory a thinkr:Work, owl:NamedIndividual ;
@@ -543,6 +576,9 @@ tgs:Work.BraidingSweetgrass a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Robin Wall Kimmerer, 2013. On the interdependence of people and the plant world, drawing on both Indigenous knowledge and Western botanical science. Won the 2014 Sigurd F. Olson Nature Writing Award; sold over 2 million copies worldwide within a decade of publication."@en ;
     dct:creator tgs:Human.RobinWallKimmerer ;
     dct:issued "2013"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781571313355" ;
+    dct:isReferencedBy tgs:Interview.TGS_58_OliviaLazard ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.IfAnyoneBuildsItEveryoneDies a thinkr:Work, owl:NamedIndividual ;
@@ -565,6 +601,7 @@ tgs:Work.TheNordicSecret a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Tomas Björkman and Lene Rachel Andersen, 2017. Explores the real, historical Nordic Bildung educational tradition — folk high schools and adult-development retreat centers — as a possible model for cultivating civic maturity at scale."@en ;
     dct:creator tgs:Human.TomasBjorkman ;
     dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9789188589101" ;
     .
 
 tgs:Work.TheWorldWeCreate a thinkr:Work, owl:NamedIndividual ;
@@ -572,6 +609,7 @@ tgs:Work.TheWorldWeCreate a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Tomas Björkman, 2019."@en ;
     dct:creator tgs:Human.TomasBjorkman ;
     dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781912892488" ;
     .
 
 tgs:Work.DieWise a thinkr:Work, owl:NamedIndividual ;
@@ -604,6 +642,8 @@ tgs:Work.DenialOfDeath a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Denial of Death"@en ;
     rdfs:comment "Ernest Becker. Won the 1974 Pulitzer Prize. Real, foundational text for Terror Management Theory, arguing much of human culture and behavior functions as a defense against the awareness of mortality."@en ;
     dct:creator tgs:Human.ErnestBecker ;
+    dct:identifier "urn:isbn:9780684832401" ;
+    dct:isReferencedBy tgs:Interview.TGS_136_CoreyBradshaw ;
     .
 
 tgs:Work.NewEconomyForTheBrazilianAmazon a thinkr:Work, owl:NamedIndividual ;
@@ -635,6 +675,7 @@ tgs:Work.EnergyAndHumanAmbitions a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Thomas Murphy. Real, free, open-access textbook applying physics directly to questions of energy, growth, and the long-term viability of human ambitions on a finite planet."@en ;
     dct:creator tgs:Human.ThomasMurphy ;
     dct:source <https://escholarship.org/uc/item/9js5291m> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse ;
     .
 
 tgs:Work.HowToFallInLoveWithTheFuture a thinkr:Work, owl:NamedIndividual ;
@@ -665,6 +706,7 @@ tgs:Work.TheEndOfNature a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The End of Nature"@en ;
     rdfs:comment "Bill McKibben, 1989. Real, widely-regarded first book written for a general audience specifically about climate change, translated into 24 languages. Nate directly credits reading this real book, in TGS_102's own real [INTRO], as one of the specific things that caused him to leave Wall Street and go study ecological economics."@en ;
     dct:creator tgs:Human.BillMcKibben ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
     .
 
 tgs:Work.TheDebunkingHandbook a thinkr:Work, owl:NamedIndividual ;
@@ -683,6 +725,8 @@ tgs:Work.SmallIsBeautiful a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Small Is Beautiful: A Study of Economics As If People Mattered"@en ;
     rdfs:comment "E.F. Schumacher, 1973. Real, foundational text arguing for human-scale, decentralized, 'appropriate' technology over indiscriminate bigness — ranked by The Times Literary Supplement among the 100 most influential books published since World War II (1995). Directly develops Schumacher's own real concept of Buddhist economics, formed while working as an economic consultant in Burma in 1955."@en ;
     dct:creator tgs:Human.EFSchumacher ;
+    dct:identifier "urn:isbn:9780060916305" ;
+    dct:isReferencedBy tgs:Interview.TGS_97_ChuckWatson ;
     .
 
 tgs:Work.ArtificialSuperintelligenceAFuturisticApproach a thinkr:Work, owl:NamedIndividual ;
@@ -701,6 +745,7 @@ tgs:Work.BraveNewWar a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Brave New War: The Next Stage of Terrorism and the End of Globalization"@en ;
     rdfs:comment "John Robb, 2007. Real, direct introduction of the concept of 'open-source warfare' and 'global guerrillas' — decentralized, networked non-state actors using globalization's own interconnected systems (pipelines, power grids, financial markets) against it via small, cheap, disproportionately damaging attacks. Featured in a real, direct New York Times column by David Brooks."@en ;
     dct:creator tgs:Human.JohnRobb ;
+    dct:identifier "urn:isbn:9780471780793" ;
     .
 
 tgs:Work.TheSpaceOfPossibleMindDesigns a thinkr:Work, owl:NamedIndividual ;
@@ -764,7 +809,8 @@ tgs:Work.AShortHistoryOfProgress a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2004"^^xsd:gYear ;
     dct:source <https://archive.org/details/shorthistoryofpr0000wrig/mode/2up> ;
     owl:sameAs <https://en.wikipedia.org/wiki/A_Short_History_of_Progress> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement ;
+    dct:isReferencedBy tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement, tgs:Interview.TGS_117_GeoffreyWest ;
+    dct:identifier "urn:isbn:9780786715473" ;
     .
 
 tgs:Work.AmericanMania a thinkr:Work, owl:NamedIndividual ;
@@ -783,6 +829,7 @@ tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism a thinkr:Work, owl:NamedInd
     dct:issued "2020"^^xsd:gYear ;
     dct:source <https://www.sciencedirect.com/science/article/pii/S0921800919310067> ;
     dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Interview.TGS_195_RutgerBregman, tgs:Monologue.TGS_187_EarthDay2025, tgs:Interview.TGS_186_WesCarter, tgs:Interview.TGS_183_RodSchoonover, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Monologue.Frankly_85_TheLightTriad, tgs:Monologue.Frankly_54_ReflectionsFromIndia, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.TinyHabits a thinkr:Work, owl:NamedIndividual ;
@@ -800,7 +847,9 @@ tgs:Work.TheCollapseOfComplexSocieties a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.JosephTainter ;
     dct:issued "1988"^^xsd:gYear ;
     owl:sameAs <https://en.wikipedia.org/wiki/The_Collapse_of_Complex_Societies> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics ;
+    dct:isReferencedBy tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_100_NateHagens ;
+    dct:identifier "urn:isbn:9780521386739" ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.BullshitJobs a thinkr:Work, owl:NamedIndividual ;
@@ -1002,7 +1051,9 @@ tgs:Work.TheMinistryForTheFuture a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Ministry for the Future"@en ;
     rdfs:comment "2020 climate novel by Kim Stanley Robinson (Orbit Books), the subject of his TGS_66 appearance. In TGS_204 Kelly Erhart cites its glaciologist character who pumps meltwater from beneath Antarctic glaciers to slow them, as an example of a glacier-stabilization intervention."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/The_Ministry_for_the_Future> ;
-    dct:isReferencedBy tgs:Interview.TGS_204_KellyErhart, tgs:Interview.TGS_200_TedParson, tgs:Monologue.Frankly_54_ReflectionsFromIndia ;
+    dct:isReferencedBy tgs:Interview.TGS_204_KellyErhart, tgs:Interview.TGS_200_TedParson, tgs:Monologue.Frankly_54_ReflectionsFromIndia, tgs:Interview.TGS_55_EricaThompson, tgs:Interview.TGS_66_KimStanleyRobinson ;
+    dct:identifier "urn:isbn:9780316300131" ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.AFewRulesForPredictingTheFuture a thinkr:Work, owl:NamedIndividual ;
@@ -1180,13 +1231,15 @@ tgs:Work.GlobalPolycrisisCausalMechanisms a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Research article in Global Sustainability (Cambridge University Press) on how crises interact and amplify one another; linked twice in the TGS_238 show notes, on coupled, non-linear systems and on coupled risks."@en ;
     owl:sameAs <https://www.cambridge.org/core/journals/global-sustainability/article/global-polycrisis-the-causal-mechanisms-of-crisis-entanglement/06F0F8F3B993A221971151E3CB054B5E> ;
     dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.SeeingLikeAState a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Seeing Like a State"@en ;
     rdfs:comment "James C. Scott's 1998 book on how states simplify landscapes and societies to make them legible, and why such schemes fail. Indy Johar cites it in TGS_238 on the simplification behind industrial agriculture and machines."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Seeing_Like_a_State> ;
-    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar ;
+    dct:isReferencedBy tgs:Interview.TGS_238_IndyJohar, tgs:Interview.TGS_106_AlexaFirmenich ;
+    dct:identifier "urn:isbn:9780300078152" ;
     .
 
 tgs:Work.TheCodeOfCapital a thinkr:Work, owl:NamedIndividual ;
@@ -1216,6 +1269,7 @@ tgs:Work.LeveragePointsPlacesToIntervene a thinkr:Work, owl:NamedIndividual ;
     dct:creator tgs:Human.DonellaMeadows ;
     dct:source <https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/> ;
     dct:isReferencedBy tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.NationalIncome1929To1932 a thinkr:Work, owl:NamedIndividual ;
@@ -1319,6 +1373,7 @@ tgs:Work.TheoryOfGamesAndEconomicBehavior a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "1944 book by John von Neumann and Oskar Morgenstern that founded modern game theory and applied it to economics. Daniel Schmachtenberger cites it in TGS_126 (as von Neumann's book on economics and game theory) for the moment game theory became the most scientifically congruent answer to what a good choice is (tgs:Concept.GameTheoryFillsTheOughtGap). The show notes link a Stanford page on von Neumann and game theory."@en ;
     dct:issued "1944"^^xsd:gYear ;
     dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    dct:identifier "urn:isbn:9780691130613" ;
     .
 
 tgs:Work.HowToMisleadWithFacts a thinkr:Work, owl:NamedIndividual ;
@@ -1334,7 +1389,9 @@ tgs:Work.HospicingModernity a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2021 book by Vanessa Machado de Oliveira (Vanessa Andreotti). In TGS_126 Daniel Schmachtenberger cites 'her book' for her chief's definition of colonialism: not fundamentally taking land or abusing people, which are epiphenomena, but believing there are separable things. Her own TGS conversation is tgs:Interview.TGS_125_VanessaAndreotti."@en ;
     dct:creator tgs:Human.VanessaAndreotti ;
     dct:issued "2021"^^xsd:gYear ;
-    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment, tgs:Interview.TGS_146_BillPlotkin, tgs:Interview.TGS_125_VanessaAndreotti, tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    dct:identifier "urn:isbn:9781623176242" ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
 tgs:Work.TheDayAfter1983 a thinkr:Work, owl:NamedIndividual ;
@@ -1361,5 +1418,1956 @@ tgs:Work.LimitsToGrowth1972 a thinkr:Work, owl:NamedIndividual ;
     dct:issued "1972"^^xsd:gYear ;
     dct:source <https://www.library.dartmouth.edu/digital/digital-collections/limits-growth> ;
     rdfs:seeAlso <https://collections.dartmouth.edu/xcdas-derivative/meadows/pdf/meadows_ltg-001.pdf> ;
-    dct:isReferencedBy tgs:Work.UpdateToLimitsToGrowth2021 ;
+    dct:isReferencedBy tgs:Work.UpdateToLimitsToGrowth2021, tgs:Interview.TGS_97_ChuckWatson ;
+    dct:identifier "urn:isbn:9781931498586" ;
+    .
+
+tgs:Work.TGSGlossary a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "I have so many questions! A Glossary of the many terms used in The Great Simplification Podcast"@en ;
+    skos:altLabel "TGS Glossary"@en ;
+    rdfs:comment "Community glossary by the listener @DoutorSabonetes, kept as a Google Doc; supplied to the graph by MJSullivan as a PDF on 2026-10-19. Nineteen finished entries -- Bottleneck (ecology), Carbon Pulse, degrading energy gradients, Dunbar's number, ecological overshoot, energy blindness, the Jevons paradox, the maximum power principle, the multipolar trap, the 'musical chairs moment,' the Overton window, shifting baseline syndrome, smorgasbord, social capital, supernormal stimuli, the superorganism, techno-optimism, the tragedy of the commons and the 'Wile E. Coyote moment' -- and a to-do list of sixteen more, among them financial claims on biophysical reality, the 4/5 horsemen, the wide-boundary lens (Frankly 65), the Mordor economy (Frankly 23), the human predicament, human labour equivalents, Goldilocks technology, loss aversion and Bend Not Break. Most definitions are drawn from general sources (Wikipedia, dictionaries, explainers); only the energy-blindness entry quotes Nate (Frankly #3)."@en ;
+    dct:source <https://docs.google.com/document/d/1aW9ogreq_GtoTLf-QA4JjEl1RS91CUtmGLIYGW8KYtM/edit?tab=t.0> ;
+    skos:scopeNote "Used 2026-10-19 as a coverage checklist, not as a definitional source: its terms were compared with the graph's concepts, the gaps (wide boundary, the Wile E. Coyote moment, the musical chairs moment, the Overton window, energy gradients and dissipative structures, loss aversion) were minted or queued with definitions taken from Nate's own episodes, and four of its phrasings were added as skos:altLabel values. The author is known only by the handle, so no dct:creator is asserted; no publication date is given."@en ;
+    .
+
+tgs:Work.TGSBooksList a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Great Simplification: Books referenced in the Podcast"@en ;
+    rdfs:comment "Community-compiled web page listing about 240 books referenced in The Great Simplification, each with author, year, ISBN-13 where known, a Bookshop.org link and the episode numbers (TGS main episodes and Reality Roundtables) in which it was featured. Compiler not named on the page. Supplied to the graph by MJSullivan on 2026-10-19 as a link and a printed PDF; the HTML copy is truncated after about 170 entries, so the PDF was the source for this build."@en ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    skos:scopeNote "Used 2026-10-19 to mint missing book Works and to add dct:references from the listed episodes. The list is secondary: its episode assignments are unconfirmed leads (a few look off by one), so each minted Work says so in rdfs:comment. Typos in the list were corrected (Tyranny, Heisenberg, Rahmstorf, Schmookler, Lyubomirsky, Hartmann, The Best Congress Money Can Buy); an untitled Kim Stanley Robinson entry was skipped."@en ;
+    .
+
+tgs:Work.CultureAndCommitment a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Culture and Commitment : a Study of the generation Gap"@en ;
+    rdfs:comment "Book by Margaret Mead (1970). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 129; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1970"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_129_JonathanRowson ;
+    .
+
+tgs:Work.ZenAndTheArtOfMotorcycleMaintenance a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values"@en ;
+    rdfs:comment "Book by Robert M. Pirsig (1974). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 129; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1974"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780060589462" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_129_JonathanRowson ;
+    .
+
+tgs:Work.Metabolical a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Metabolical: The Lure and the Lies of Processed Food, Nutrition, and Modern Medicine"@en ;
+    rdfs:comment "Book by Robert H. Lustig (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 69; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.RobertLustig ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780063027732" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_69_RobertLustig ;
+    .
+
+tgs:Work.TechnicsAndCivilization a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Technics and Civilization"@en ;
+    rdfs:comment "Book by Lewis Mumford (1934). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 106; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.LewisMumford ;
+    dct:issued "1934"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780156882545" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_106_AlexaFirmenich ;
+    .
+
+tgs:Work.ManAndTheNaturalWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Man and the Natural World: Changing Attitudes in England 1500-1800"@en ;
+    rdfs:comment "Book by Keith Thomas (1983). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1983"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780195111224" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.TheNewSystemsReader a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The New Systems Reader"@en ;
+    rdfs:comment "Book by James Gustave Speth (2020). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 3; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780367313395" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_3_UnlearningEconomics ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.TheHiddenHalfOfNature a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Hidden Half of Nature: The Microbial Roots of Life and Health"@en ;
+    rdfs:comment "Book by David R. Montgomery (2015). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 79; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780393353372" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_79_AnneBikleAndDavidMontgomery ;
+    .
+
+tgs:Work.TheParableOfTheTribes a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Parable of the Tribes"@en ;
+    rdfs:comment "Book by Andrew Bard Schmookler (1984). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1984"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780520048744" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    .
+
+tgs:Work.CanWePleaseGiveThePoliceDepartmentToTheGrandmothers a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Can We Please Give the Police Department to the Grandmothers?"@en ;
+    rdfs:comment "Book by Junauda Petrus (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 9; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780593462331" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_9_TheNextGenerationsDilemma ;
+    .
+
+tgs:Work.Biophilia a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Biophilia"@en ;
+    rdfs:comment "Book by Edward O. Wilson (1984). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 106; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1984"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780674074422" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_106_AlexaFirmenich ;
+    .
+
+tgs:Work.TheLastButterflies a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Last Butterflies: A Scientist's Quest to Save a Rare and Vanishing Creature"@en ;
+    rdfs:comment "Book by Nick Haddad (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 90; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780691165004" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_90_NickHaddad ;
+    .
+
+tgs:Work.MoneyAndTheMechanismOfExchange a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Money and the Mechanism of Exchange"@en ;
+    rdfs:comment "Book by William Stanley Jevons (1875). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 113; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.WilliamStanleyJevons ;
+    dct:issued "1875"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780824052447" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_113_LynAlden ;
+    .
+
+tgs:Work.HeavensFlame a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Heavens Flame: A Guidebook to Solar Cookers"@en ;
+    rdfs:comment "Book by Joseph Radabaugh (1991). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 119; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1991"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780962958809" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_119_LutherKrueger ;
+    .
+
+tgs:Work.UltraProcessedPeople a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Ultra-Processed People: The Science Behind Food That Isn't Food"@en ;
+    rdfs:comment "Book by Chris van Tulleken (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 104; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781324036722" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_104_JaneMuncke ;
+    .
+
+tgs:Work.Factfulness a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think"@en ;
+    rdfs:comment "Book by Hans Rosling (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 81; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781473637467" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_81_RogerPielke ;
+    .
+
+tgs:Work.HumanPurposeAndTranshumanPotential a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Human Purpose and Transhuman Potential: A Cosmic Vision of Our Future Evolution"@en ;
+    rdfs:comment "Book by Ted Chu (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 132; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2013"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781579830236" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_132_WideBoundaryImpactsOfAI ;
+    .
+
+tgs:Work.ASmallFarmFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Small Farm Future: Making the Case for a Society Built Around Local Economies, Self-Provisioning, Agricultural Diversity, and a Shared Earth"@en ;
+    rdfs:comment "Book by Chris Smaje (2020). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 5; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.ChrisSmaje ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781603589024" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.TheMovesThatMatter a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Moves That Matter: A Chess Grandmaster on the Game of Life"@en ;
+    rdfs:comment "Book by Jonathan Rowson (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 129; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781635573329" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_129_JonathanRowson ;
+    .
+
+tgs:Work.HopeInTheDark a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hope in the Dark: The Untold History of People Power"@en ;
+    rdfs:comment "Book by Rebecca Solnit (2004). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 106; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2004"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781841956602" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_106_AlexaFirmenich ;
+    .
+
+tgs:Work.WildLaw a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Wild Law: A Manifesto for Earth Justice"@en ;
+    rdfs:comment "Book by Cormac Cullinan (2002). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 121; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2002"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781903998359" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_121_PellaThiel ;
+    .
+
+tgs:Work.ChipWar a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Chip War: The Fight for the World's Most Critical Technology"@en ;
+    rdfs:comment "Book by Chris Miller (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 127; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781982172008" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_127_EdConway ;
+    .
+
+tgs:Work.OnTyranny a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "On Tyranny"@en ;
+    rdfs:comment "Book by Timothy Snyder (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.ClimateAndWeatherAt3DegreesMore a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Climate and Weather at 3 Degrees More"@en ;
+    rdfs:comment "Book by Stefan Rahmstorf (2024). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 141; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.StefanRahmstorf ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_141_StefanRahmstorf ;
+    .
+
+tgs:Work.CheckYourFinancialPrivilege a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Check Your Financial Privilege"@en ;
+    rdfs:comment "Book by Alex Gladstein (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9798985728927" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.TheDawnOfEverything a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Dawn of Everything: A New History of Humanity"@en ;
+    rdfs:comment "Book by David Graeber (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DavidGraeber ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780374157357" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.ConsciousCapitalismFieldGuide a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Conscious Capitalism Field Guide: Tools for Transforming Your Organization"@en ;
+    rdfs:comment "Book by Raj Sisodia (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.GaiaANewLookAtLifeOnEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Gaia: A New Look at Life on Earth"@en ;
+    rdfs:comment "Book by James E. Lovelock (1979). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 57; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1979"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780198784883" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth ;
+    .
+
+tgs:Work.PermacultureADesignersManual a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Permaculture: A Designers' Manual"@en ;
+    rdfs:comment "Book by Bill Mollison (1988). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 64; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1988"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_64_AndrewMillison ;
+    .
+
+tgs:Work.NatureCultureAndTheSacred a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Nature, Culture and the Sacred: A Woman Listens For Leadership"@en ;
+    rdfs:comment "Book by Nina Simons (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 60; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781734757170" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_60_NinaSimons ;
+    .
+
+tgs:Work.TheAnxiousGeneration a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Anxious Generation: How the Great Rewiring of Childhood Caused an Epidemic of Mental Illness"@en ;
+    rdfs:comment "Book by Jonathan Haidt (2024). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 59; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JonathanHaidt ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780593655030" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    .
+
+tgs:Work.TheRaggedTrouseredPhilanthropists a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Ragged Trousered Philanthropists"@en ;
+    rdfs:comment "Book by Robert Tressell (1914). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1914"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780586090367" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.LaudatoSi a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Laudato Si': On the Care of Our Common Home"@en ;
+    rdfs:comment "Book by Pope Francis (2015). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    .
+
+tgs:Work.BloodAndRuins a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Blood and Ruins: The Great Imperial War, 1931-1945"@en ;
+    rdfs:comment "Book by Richard Overy (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.TheTragedyOfIndustrialCivilization a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Tragedy of Industrial Civilization: Envisioning a Political Future"@en ;
+    rdfs:comment "Book by William Ophuls (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.AnAgriculturalTestament a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "An Agricultural Testament"@en ;
+    rdfs:comment "Book by Albert Howard (1940). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1940"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780878577224" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.StayingAlive a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Staying Alive: Women, Ecology and Development"@en ;
+    rdfs:comment "Book by Vandana Shiva (1988). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "1988"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780862328238" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.TheBestCongressMoneyCanBuy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Best Congress Money Can Buy"@en ;
+    rdfs:comment "Book by Philip M. Stern (1988). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 43; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1988"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780394566283" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_43_BetsyTaylor ;
+    .
+
+tgs:Work.WhatWeOweTheFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "What We Owe the Future"@en ;
+    rdfs:comment "Book by William MacAskill (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 36; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781541618626" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_36_DouglasRushkoff ;
+    .
+
+tgs:Work.TheMuqaddimah a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Muqaddimah: An Introduction to History"@en ;
+    rdfs:comment "Book by Ibn Khaldun (1377). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1377"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.TheBiofuelDelusion a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Biofuel Delusion: The Fallacy of Large Scale Agro-Biofuels Production"@en ;
+    rdfs:comment "Book by Mario Giampietro (2009). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 107; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2009"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_107_MarioGiampietro ;
+    .
+
+tgs:Work.BraveNewWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Brave New World"@en ;
+    rdfs:comment "Book by Aldous Huxley (1932). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 7; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1932"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780060929879" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_7_PovertyBlind ;
+    .
+
+tgs:Work.NurturingOurHumanity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Nurturing Our Humanity: How Domination and Partnership Shape Our Brains, Lives, and Future"@en ;
+    rdfs:comment "Book by Riane Eisler and Douglas P. Fry (Oxford University Press, 2019). Its last chapter sets out the four cornerstones of change (tgs:Concept.FourCornerstonesOfPartnership). Confirmed by the TGS_116 show notes (06:31); first listed in the community list tgs:Work.TGSBooksList."@en ;
+    dct:creator tgs:Human.RianeEisler ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780190935726" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_116_RianeEisler ;
+    .
+
+tgs:Work.WhatMoneyCanTBuy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "What Money Can't Buy: The Moral Limits of Markets"@en ;
+    rdfs:comment "Book by Michael J. Sandel (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 106; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780374203030" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_106_AlexaFirmenich ;
+    .
+
+tgs:Work.ConversationsWithGod a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Conversations with God"@en ;
+    rdfs:comment "Book by Neale Donald Walsch (1995). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1995"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780399142789" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.DirtTheErosionOfCivilizations a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Dirt: The Erosion of Civilizations"@en ;
+    rdfs:comment "Book by David R. Montgomery (2007). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 79; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2007"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780520248700" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_79_AnneBikleAndDavidMontgomery ;
+    .
+
+tgs:Work.NuclearWar a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Nuclear War: A Scenario"@en ;
+    rdfs:comment "Book by Annie Jacobsen (2024). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 140; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780593476093" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_140_JeffreySachs ;
+    .
+
+tgs:Work.CowsPigsWarsAndWitches a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Cows, Pigs, Wars, and Witches: The Riddles of Culture"@en ;
+    rdfs:comment "Book by Marvin Harris (1974). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 1; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.MarvinHarris ;
+    dct:issued "1974"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780679724681" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_1_ElectricVehicles ;
+    .
+
+tgs:Work.DynamicEconomicSystems a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Dynamic Economic Systems: Post-Keynesian Approach"@en ;
+    rdfs:comment "Book by John M. Blatt (1983). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 3; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1983"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780710802736" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_3_UnlearningEconomics ;
+    .
+
+tgs:Work.WhyZebrasDonTGetUlcers a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Why Zebras Don't Get Ulcers"@en ;
+    rdfs:comment "Book by Robert M. Sapolsky (1993). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 88; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1993"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780805073690" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_88_RobertSapolsky ;
+    .
+
+tgs:Work.TheViolenceOfTheGreenRevolution a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Violence of the Green Revolution: Third World Agriculture, Ecology and Politics"@en ;
+    rdfs:comment "Book by Vandana Shiva (1991). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 6, TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "1991"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780862329655" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems, tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.EducationInATimeBetweenWorlds a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Education in a Time Between Worlds: Essays on the Future of Schools, Technology, and Society"@en ;
+    rdfs:comment "Book by Zachary Stein (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 122; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780986282676" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_122_ZakStein ;
+    .
+
+tgs:Work.TheLastHoursOfAncientSunlight a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Last Hours of Ancient Sunlight: The Fate of the World and What We Can Do Before It's Too Late"@en ;
+    rdfs:comment "Book by Thom Hartmann (1998). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1998"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781400051571" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.CapitalAndImperialism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Capital and Imperialism: Theory, History, and the Present"@en ;
+    rdfs:comment "Book by Utsa Patnaik (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781583678909" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.OwningOurFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Owning Our Future: The Emerging Ownership Revolution"@en ;
+    rdfs:comment "Book by Marjorie Kelly (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 77; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781605093109" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_77_KateRaworth ;
+    .
+
+tgs:Work.AtWorkInTheRuins a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "At Work in the Ruins: Finding Our Place in the Time of Science, Climate Change, Pandemics and All the Other Emergencies"@en ;
+    rdfs:comment "Book by Dougald Hine (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 5; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DougaldHine ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781645021841" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    .
+
+tgs:Work.DoughnutEconomics a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist"@en ;
+    rdfs:comment "Book by Kate Raworth (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 77; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.KateRaworth ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781847941381" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_77_KateRaworth ;
+    dct:isReferencedBy tgs:Work.TheEvolvingDoughnut2025 ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.535Not1 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "535 Not 1"@en ;
+    rdfs:comment "Book by Dick Gephardt (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 148; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781667849652" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt ;
+    .
+
+tgs:Work.APeopleSHistoryOfTheUnitedStates a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A People's History of the United States"@en ;
+    rdfs:comment "Book by Howard Zinn (2015). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780062397348" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.The4ReturnsFrameworkInPractice a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The 4 Returns Framework in Practice"@en ;
+    rdfs:comment "Book by Willem Ferwerda (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.EatPoopDie a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Eat, Poop, Die: How Animals Make Our World"@en ;
+    rdfs:comment "Book by Joe Roman (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 131; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780316372923" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_131_JoeRoman ;
+    .
+
+tgs:Work.RetroSuburbia a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "RetroSuburbia"@en ;
+    rdfs:comment "Book by David Holmgren (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 97; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780994392879" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_97_ChuckWatson ;
+    .
+
+tgs:Work.HiddenRepression a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hidden Repression: How the IMF and World Bank Sell Exploitation as Development"@en ;
+    rdfs:comment "Book by an author not given in the list (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9798987636398" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.TheSocialConquestOfEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Social Conquest of Earth"@en ;
+    rdfs:comment "Book by Edward O. Wilson (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 53; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780871404138" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_53_WilliamRees ;
+    .
+
+tgs:Work.EvolutionForEveryone a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Evolution for Everyone: How Darwin's Theory Can Change the Way We Think About Our Lives"@en ;
+    rdfs:comment "Book by David Sloan Wilson (2007). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DavidSloanWilson ;
+    dct:issued "2007"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780385340212" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.WhyNationsFail a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Why Nations Fail: The Origins of Power, Prosperity, and Poverty"@en ;
+    rdfs:comment "Book by Daron Acemoğlu (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780307719218" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.EverybodyMatters a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Everybody Matters: The Extraordinary Power of Caring for Your People Like Family"@en ;
+    rdfs:comment "Book by Bob Chapman (2015). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780698190993" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.TheCoddlingOfTheAmericanMind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Coddling of the American Mind: How Good Intentions and Bad Ideas Are Setting up a Generation for Failure"@en ;
+    rdfs:comment "Book by Jonathan Haidt (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 67, TGS episode 59; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JonathanHaidt ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780735224902" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_67_EdwardChancellor, tgs:Interview.TGS_59_JonathanHaidt ;
+    .
+
+tgs:Work.TheTropicalPermacultureGuidebook a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Tropical Permaculture Guidebook: Permaculture and People"@en ;
+    rdfs:comment "Book by Permatil (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 64; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780648166931" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_64_AndrewMillison ;
+    .
+
+tgs:Work.TheAthenaDoctrine a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Athena Doctrine: How Women (and the Men Who Think Like Them) Will Rule the Future"@en ;
+    rdfs:comment "Book by John Gerzema (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 60; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2013"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_60_NinaSimons ;
+    .
+
+tgs:Work.TheHeroSJourney a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Hero's Journey: Joseph Campbell on His Life and Work"@en ;
+    rdfs:comment "Book by Joseph Campbell (1990). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 59; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JosephCampbell ;
+    dct:issued "1990"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781577314042" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt ;
+    .
+
+tgs:Work.TheSuperorganism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Superorganism: The Beauty, Elegance, and Strangeness of Insect Societies"@en ;
+    rdfs:comment "Book by Bert Hölldobler (2008). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2008"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780393067040" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.JourneyOfTheUniverse a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Journey of the Universe"@en ;
+    rdfs:comment "Book by Brian Swimme (2011). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2011"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780300171907" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    .
+
+tgs:Work.ADistantMirror a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Distant Mirror: The Calamitous 14th Century"@en ;
+    rdfs:comment "Book by Barbara W. Tuchman (1978). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1978"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780345349576" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.EnergyAndEquity a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Energy and Equity"@en ;
+    rdfs:comment "Book by Ivan Illich (1973). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.IvanIllich ;
+    dct:issued "1973"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780060803278" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.EarthDemocracy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Earth Democracy: Justice, Sustainability, and Peace"@en ;
+    rdfs:comment "Book by Vandana Shiva (2005). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "2005"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780896087453" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.FrancisBacon a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Francis Bacon: An Account of his Life and Works. Biography"@en ;
+    rdfs:comment "Book by Edwin A. Abbott (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2013"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9783863473228" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.IsInflationEnding a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Is Inflation Ending: Are You Ready?"@en ;
+    rdfs:comment "Book by A. Gary Shilling (1983). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 34; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1983"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780070568792" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_34_KirilSokoloff ;
+    .
+
+tgs:Work.EnergyStorageAndCivilization a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Energy Storage and Civilization: A Systems Approach"@en ;
+    rdfs:comment "Book by Graham Palmer. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 87; not yet confirmed against the episode's own show notes."@en ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_87_GrahamPalmer ;
+    .
+
+tgs:Work.TheBlocksizeWar a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Blocksize War: The battle for control over Bitcoin’s protocol rules"@en ;
+    rdfs:comment "Book by Jonathan Bier (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.UnderAGreenSky a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Under a Green Sky: Global Warming, the Mass Extinctions of the Past, and What They Can Tell Us About Our Future"@en ;
+    rdfs:comment "Book by Peter D. Ward (2008). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 124; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.PeterWard ;
+    dct:issued "2008"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780061137914" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_124_LevkeCaesar ;
+    .
+
+tgs:Work.WhyWeDie a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Why We Die: The New Science of Aging and the Quest for Immortality"@en ;
+    rdfs:comment "Book by Venki Ramakrishnan (2024). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 117; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780063113275" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_117_GeoffreyWest ;
+    .
+
+tgs:Work.ASandCountyAlmanacAndSketchesHereAndThere a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Sand County Almanac and Sketches Here and There"@en ;
+    rdfs:comment "Book by Aldo Leopold (1949). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 102; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1949"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780195007770" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben ;
+    .
+
+tgs:Work.TheSelfishGene a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Selfish Gene"@en ;
+    rdfs:comment "Book by Richard Dawkins (1976). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 88; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1976"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780199291151" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_88_RobertSapolsky ;
+    .
+
+tgs:Work.TheFoundationTrilogy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Foundation Trilogy"@en ;
+    rdfs:comment "Book by Isaac Asimov (1953). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1953"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780380508563" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.CreatingRegenerativeCities a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Creating Regenerative Cities"@en ;
+    rdfs:comment "Book by Herbert Girardet (2014). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2014"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780415724463" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.ConsilienceTheUnityOfKnowledge a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Consilience: The Unity of Knowledge"@en ;
+    rdfs:comment "Book by Edward O. Wilson (1998). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 3, TGS episode 59, TGS episode 45; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1998"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780679768678" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_3_UnlearningEconomics, tgs:Interview.TGS_59_JonathanHaidt, tgs:Interview.TGS_45_JonErickson ;
+    .
+
+tgs:Work.DeschoolingSociety a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Deschooling Society"@en ;
+    rdfs:comment "Book by Ivan Illich (1971). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 122; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.IvanIllich ;
+    dct:issued "1971"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780714508795" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_122_ZakStein ;
+    .
+
+tgs:Work.AskingAboutPrices a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Asking About Prices: A New Approach to Understanding Price Stickiness"@en ;
+    rdfs:comment "Book by Alan S. Blinder (1998). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 3; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.AlanBlinder ;
+    dct:issued "1998"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780871541215" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_3_UnlearningEconomics ;
+    .
+
+tgs:Work.TheSystemsViewOfLife a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Systems View of Life: A Unifying Vision"@en ;
+    rdfs:comment "Book by Fritjof Capra (2014). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 138; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.FritjofCapra ;
+    dct:issued "2014"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781107011366" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.TheRealWealthOfNations a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Real Wealth of Nations: Creating A Caring Economics"@en ;
+    rdfs:comment "Book by Riane Eisler (2007) on a caring economics beyond both capitalism and socialism (tgs:Concept.CaringEconomics). Confirmed by the TGS_116 show notes (33:27); first listed in the community list tgs:Work.TGSBooksList."@en ;
+    dct:creator tgs:Human.RianeEisler ;
+    dct:issued "2007"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781576753880" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_116_RianeEisler ;
+    .
+
+tgs:Work.Behave a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Behave: The Biology of Humans at Our Best and Worst"@en ;
+    rdfs:comment "Book by Robert M. Sapolsky (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 88; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781594205071" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_88_RobertSapolsky ;
+    .
+
+tgs:Work.WildMind a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Wild Mind"@en ;
+    rdfs:comment "Book by Bill Plotkin (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.BillPlotkin ;
+    dct:issued "2013"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781608681785" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    .
+
+tgs:Work.TheBigBookOfMakerSkills a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Big Book of Maker Skills: Tools and Techniques for Building Great Tech Projects"@en ;
+    rdfs:comment "Book by Chris Hackett (2014). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 119; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2014"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781681881614" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_119_LutherKrueger ;
+    .
+
+tgs:Work.DebunkingEconomics a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Debunking Economics: The Naked Emperor Dethroned?"@en ;
+    rdfs:comment "Book by Steve Keen (2001). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 118; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.SteveKeen ;
+    dct:issued "2001"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781848139923" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_118_MichaelEvery ;
+    .
+
+tgs:Work.ClimatCrises a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Climat, crises: Le plan de transformation de l'économie française"@en ;
+    rdfs:comment "Book by The Shift Project (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 84; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9782738154279" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_84_JeanMarcJancovici ;
+    .
+
+tgs:Work.PostCapitalistPhilanthropy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Post Capitalist Philanthropy"@en ;
+    rdfs:comment "Book by Alnoor Ladha, Lynn Murphy (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9798986531007" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.DispatchesFromATimeBetweenWorlds a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Dispatches from a Time Between Worlds: Crisis and Emergence in Metamodernity"@en ;
+    rdfs:comment "Book by Jonathan Rowson (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 129; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781914568046" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_129_JonathanRowson ;
+    .
+
+tgs:Work.SayingNOToAFarmFreeFuture a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Saying NO to a Farm-Free Future: The Case For an Ecological Food System and Against Manufactured Foods"@en ;
+    rdfs:comment "Book by Chris Smaje (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 5; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.ChrisSmaje ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781915294166" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    .
+
+tgs:Work.TheFutureEaters a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Future Eaters: An Ecological History of the Australasian Lands and People"@en ;
+    rdfs:comment "Book by Tim Flannery (1994). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 53; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1994"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780802139436" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_53_WilliamRees ;
+    .
+
+tgs:Work.DarwinSCathedral a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Darwin's Cathedral: Evolution, Religion, and the Nature of Society"@en ;
+    rdfs:comment "Book by David Sloan Wilson (2002). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DavidSloanWilson ;
+    dct:issued "2002"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780226901350" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.TheSecretOfOurSuccess a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating Our Species, and Making Us Smarter"@en ;
+    rdfs:comment "Book by Joseph Henrich (2015). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780691166858" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.TheNeighborhoodProject a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Neighborhood Project: Using Evolution to Improve My City, One Block at a Time"@en ;
+    rdfs:comment "Book by David Sloan Wilson (2011). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DavidSloanWilson ;
+    dct:issued "2011"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780316037679" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.EarthForAll a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Earth for All: A Survival Guide for Humanity"@en ;
+    rdfs:comment "Book by Sandrine Dixson-Decleve (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 57; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780865719866" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth ;
+    .
+
+tgs:Work.WealthVirtualWealthAndDebt a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Wealth, Virtual Wealth and Debt: The Solution of the Economic Paradox"@en ;
+    rdfs:comment "Book by Frederick Soddy (1987). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 67; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1987"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_67_EdwardChancellor ;
+    .
+
+tgs:Work.GunsGermsAndSteel a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Guns, Germs, and Steel: The Fates of Human Societies"@en ;
+    rdfs:comment "Book by Jared Diamond (1997). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 62; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1997"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780739467350" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_62_JodiArchambault ;
+    .
+
+tgs:Work.Moonrise a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Moonrise: The Power of Women Leading from the Heart"@en ;
+    rdfs:comment "Book by Terry Tempest Williams (2010). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 60; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2010"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781594773525" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_60_NinaSimons ;
+    .
+
+tgs:Work.GalileoSDream a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Galileo's Dream"@en ;
+    rdfs:comment "Book by Kim Stanley Robinson (2009). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2009"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780007260317" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.HalfEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Half-Earth: Our Planet's Fight for Life"@en ;
+    rdfs:comment "Book by Edward O. Wilson (2016). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2016"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781631490828" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.TheUniverseStory a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Universe Story: From the Primordial Flaring Forth to the Ecozoic Era--A Celebration of the Unfolding of the Cosmos"@en ;
+    rdfs:comment "Book by Brian Swimme (1992). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1992"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780062508355" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.EcologyAndThePoliticsOfScarcityRevisited a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Ecology and the Politics of Scarcity Revisited: The Unraveling of the American Dream"@en ;
+    rdfs:comment "Book by William Ophuls (1992). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1992"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780716723134" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.DoomThePoliticsOfCatastrophe a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Doom: The Politics of Catastrophe"@en ;
+    rdfs:comment "Book by Niall Ferguson (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.CitizensAChronicleOfTheFrenchRevolution a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Citizens: A Chronicle of the French Revolution"@en ;
+    rdfs:comment "Book by Simon Schama (1989). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1989"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780679726104" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.SoilNotOil a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Soil Not Oil: Environmental Justice in an Age of Climate Crisis"@en ;
+    rdfs:comment "Book by Vandana Shiva (2008). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "2008"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780896087828" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.TheProgressIllusion a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Progress Illusion: Reclaiming Our Future from the Fairytale of Economics"@en ;
+    rdfs:comment "Book by Jon D. Erickson (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 45; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JonErickson ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781642832525" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_45_JonErickson ;
+    .
+
+tgs:Work.NetworksAndNetwars a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Networks and Netwars: The Future of Terror, Crime, and Militancy"@en ;
+    rdfs:comment "Book by John Arquilla (1999). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 41; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1999"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_41_MartyKearns ;
+    .
+
+tgs:Work.HubbertSPeak a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hubbert's Peak: The Impending World Oil Shortage"@en ;
+    rdfs:comment "Book by Kenneth S. Deffeyes (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 34; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780691116259" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_34_KirilSokoloff ;
+    .
+
+tgs:Work.ImmoderateGreatness a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Immoderate Greatness: Why Civilizations Fail"@en ;
+    rdfs:comment "Book by William Ophuls (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 85, TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.TheRainbowSerpent a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Rainbow Serpent"@en ;
+    rdfs:comment "Book by Dick Roughsey (1976). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1976"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.CitiesInEvolution a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Cities in Evolution: An Introduction to the Town Planning Movement and to the Study of Civics"@en ;
+    rdfs:comment "Book by Patrick Geddes (1915). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1915"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780061315534" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.Salt a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Salt"@en ;
+    rdfs:comment "Book by Mark Kurlansky (2002). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 127; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2002"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780142001615" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_127_EdConway ;
+    .
+
+tgs:Work.TheArroganceOfHumanism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Arrogance of Humanism"@en ;
+    rdfs:comment "Book by David W. Ehrenfeld (1978). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 2; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1978"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780195028904" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_2_DeeperEcology ;
+    .
+
+tgs:Work.TheWebOfLife a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Web of Life: A New Scientific Understanding of Living Systems"@en ;
+    rdfs:comment "Book by Fritjof Capra (1996). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 138; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.FritjofCapra ;
+    dct:issued "1996"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780385476768" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra ;
+    .
+
+tgs:Work.1984 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "1984"@en ;
+    rdfs:comment "Book by George Orwell (1949). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 7; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1949"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780452284234" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_7_PovertyBlind ;
+    .
+
+tgs:Work.Determined a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Determined: A Science of Life without Free Will"@en ;
+    rdfs:comment "Book by Robert M. Sapolsky (2023). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 88; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780525560975" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_88_RobertSapolsky ;
+    .
+
+tgs:Work.SnowballEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Snowball Earth: The Story of the Great Global Catastrophe That Spawned Life as We Know It"@en ;
+    rdfs:comment "Book by Gabrielle Walker (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 95; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780609609736" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_95_SirDavidKing ;
+    .
+
+tgs:Work.PerfectOrder a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Perfect Order: Recognizing Complexity in Bali"@en ;
+    rdfs:comment "Book by J. Stephen Lansing (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2006"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780691027272" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.AfricaSLastColonialCurrency a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Africa's Last Colonial Currency: The CFA Franc Story"@en ;
+    rdfs:comment "Book by an author not given in the list (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780745341798" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.BeyondGrowth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Beyond Growth: The Economics of Sustainable Development"@en ;
+    rdfs:comment "Book by Herman E. Daly (1996). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 77; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.HermanDaly ;
+    dct:issued "1996"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780807047095" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_77_KateRaworth ;
+    .
+
+tgs:Work.Permaculture1 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Permaculture 1: A Perennial Agriculture for Human Settlements"@en ;
+    rdfs:comment "Book by Bill Mollison (1978). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 96; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1978"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780908228034" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_96_DavidHolmgren ;
+    .
+
+tgs:Work.ResourceAccountingForSustainabilityAssessment a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Resource Accounting for Sustainability Assessment: The Nexus between Energy, Food, Water and Land Use"@en ;
+    rdfs:comment "Book by Mario Giampietro (2014). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 107; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2014"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781317962069" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_107_MarioGiampietro ;
+    .
+
+tgs:Work.TheTelomereEffect a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Telomere Effect: A Revolutionary Approach to Living Younger, Healthier, Longer"@en ;
+    rdfs:comment "Book by Elizabeth Blackburn (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 69; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781455587964" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_69_RobertLustig ;
+    .
+
+tgs:Work.Soulcraft a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Soulcraft"@en ;
+    rdfs:comment "Book by Bill Plotkin (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.BillPlotkin ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781577314226" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    .
+
+tgs:Work.ScaleTheUniversalLawsOfGrowth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Scale: The Universal Laws of Growth, Innovation, Sustainability, and the Pace of Life in Organisms, Cities, Economies, and Companies"@en ;
+    rdfs:comment "Book by Geoffrey B. West (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 117; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.GeoffreyWest ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781594205583" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_117_GeoffreyWest ;
+    .
+
+tgs:Work.TheJourneyOfSoulInitiation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Journey of Soul Initiation"@en ;
+    rdfs:comment "Book by Bill Plotkin (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.BillPlotkin ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781608687015" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    .
+
+tgs:Work.TheBiggestEstateOnEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Biggest Estate on Earth: How Aborigines Made Australia"@en ;
+    rdfs:comment "Book by Bill Gammage. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 87; not yet confirmed against the episode's own show notes."@en ;
+    dct:identifier "urn:isbn:9781742377483" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_87_GrahamPalmer ;
+    .
+
+tgs:Work.Whale a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Whale"@en ;
+    rdfs:comment "Book by Joe Roman (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 131; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2006"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781861892461" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_131_JoeRoman ;
+    .
+
+tgs:Work.DebtTheFirst5000Years a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Debt: The First 5,000 Years"@en ;
+    rdfs:comment "Book by David Graeber (2011). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 72; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DavidGraeber ;
+    dct:issued "2011"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781933633862" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_72_AlexGladstein ;
+    .
+
+tgs:Work.Love20 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Love 2.0"@en ;
+    rdfs:comment "Book by Sonja Lyubomirsky. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 144; not yet confirmed against the episode's own show notes."@en ;
+    dct:identifier "urn:isbn:9780142180471" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_144_ErikFernholm ;
+    .
+
+tgs:Work.PhysicsAndPhilosophy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Physics and Philosophy: The Revolution in Modern Science"@en ;
+    rdfs:comment "Book by Werner Heisenberg (1958). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 138; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1958"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780061209192" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra ;
+    .
+
+tgs:Work.TheSummit a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Summit"@en ;
+    rdfs:comment "Book by Edmund Conway (2016). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 127; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2016"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781605989655" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_127_EdConway ;
+    .
+
+tgs:Work.Minimalism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Minimalism: Live a Meaningful Life"@en ;
+    rdfs:comment "Book by Joshua Fields Millburn (2011). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 89; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2011"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780615648224" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_89_SianSutherland ;
+    .
+
+tgs:Work.TheNewFlatEarthSociety a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The New Flat Earth Society"@en ;
+    rdfs:comment "Article by Albert Bartlett (1996). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 53; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1996"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_53_WilliamRees ;
+    .
+
+tgs:Work.TheManInTheGrayFlannelSuit a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Man in the Gray Flannel Suit"@en ;
+    rdfs:comment "Book by Sloan Wilson (1954). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1954"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781568582467" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.TheWEIRDestPeopleInTheWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The WEIRDest People in the World: How the West Became Psychologically Peculiar and Particularly Prosperous"@en ;
+    rdfs:comment "Book by Joseph Henrich (2020). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780374710453" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.MakingDemocracyWork a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Making Democracy Work: Civic Traditions in Modern Italy"@en ;
+    rdfs:comment "Book by Robert D. Putnam (1992). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1992"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780691037387" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.AHistoryOfInterestRates a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A History of Interest Rates"@en ;
+    rdfs:comment "Book by Sidney Homer (1977). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 67; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1977"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780471732839" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_67_EdwardChancellor ;
+    .
+
+tgs:Work.AdolfHitler a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Adolf Hitler: My Part in His Downfall"@en ;
+    rdfs:comment "Book by Spike Milligan (1971). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 61; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1971"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780140035209" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_61_GarethRoberts ;
+    .
+
+tgs:Work.TheHappinessHypothesis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Happiness Hypothesis: Finding Modern Truth in Ancient Wisdom"@en ;
+    rdfs:comment "Book by Jonathan Haidt (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 59; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JonathanHaidt ;
+    dct:issued "2006"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780465028023" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt ;
+    .
+
+tgs:Work.TheHighSierra a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The High Sierra: A Love Story"@en ;
+    rdfs:comment "Book by Kim Stanley Robinson (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780316593014" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.CryOfTheEarthCryOfThePoor a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Cry of the Earth, Cry of the Poor"@en ;
+    rdfs:comment "Book by Leonardo Boff (1997). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1997"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781570751363" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    .
+
+tgs:Work.TheCreation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Creation: An Appeal to Save Life on Earth"@en ;
+    rdfs:comment "Book by Edward O. Wilson (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2006"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780393062175" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    .
+
+tgs:Work.PlatoSRevenge a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Plato's Revenge: Politics in the Age of Ecology"@en ;
+    rdfs:comment "Book by William Ophuls (2011). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2011"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780262015905" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.HowTheWorldReallyWorks a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "How the World Really Works: A Scientist's Guide to Our Past, Present and Future"@en ;
+    rdfs:comment "Book by Vaclav Smil (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47, TGS episode 34; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780241454404" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls, tgs:Interview.TGS_34_KirilSokoloff ;
+    .
+
+tgs:Work.ApologiesToTheGrandchildren a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Apologies to the Grandchildren: Reflections on Our Ecological Predicament, Its Deeper Causes, and Its Political Consequences"@en ;
+    rdfs:comment "Book by William Ophuls (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.HealthPerAcre a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Health per Acre"@en ;
+    rdfs:comment "Book by Vandana Shiva (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.BuryTheChains a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bury the Chains: Prophets and Rebels in the Fight to Free an Empire's Slaves"@en ;
+    rdfs:comment "Book by Adam Hochschild (2005). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 41; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2005"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780618619078" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_41_MartyKearns ;
+    .
+
+tgs:Work.TheLessonsOfHistory a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Lessons of History"@en ;
+    rdfs:comment "Book by Will Durant (1968). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 34; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1968"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781567310245" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_34_KirilSokoloff ;
+    .
+
+tgs:Work.TheRightfulPlaceOfScience a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Rightful Place of Science: Disasters and Climate Change"@en ;
+    rdfs:comment "Book by Roger Pielke. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 81; not yet confirmed against the episode's own show notes."@en ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_81_RogerPielke ;
+    .
+
+tgs:Work.Biomimicry a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Biomimicry: Innovation Inspired by Nature"@en ;
+    rdfs:comment "Book by Janine M. Benyus (1997). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 135; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1997"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780060533229" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_135_JanineBenyus ;
+    .
+
+tgs:Work.TheChaliceAndTheBlade a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Chalice and the Blade: Our History, Our Future"@en ;
+    rdfs:comment "Book by Riane Eisler (1987), now in its 57th US printing and 27 foreign editions; source of the partnership-domination lens and the chalice and blade as two kinds of power (tgs:Concept.ChaliceAndBladePower). Confirmed by the TGS_116 show notes (15:08); first listed in the community list tgs:Work.TGSBooksList."@en ;
+    dct:creator tgs:Human.RianeEisler ;
+    dct:issued "1987"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780062502896" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_116_RianeEisler ;
+    .
+
+tgs:Work.CollapseHowSocietiesChooseToFailOrSucceed a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Collapse: How Societies Choose to Fail or Succeed"@en ;
+    rdfs:comment "Book by Jared Diamond (2004). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 78; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2004"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780143036555" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_78_InigoCapellanPerez ;
+    .
+
+tgs:Work.TheSeaAroundUs a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Sea Around Us"@en ;
+    rdfs:comment "Book by Rachel Carson (1951). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 4; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.RachelCarson ;
+    dct:issued "1951"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780195069976" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_4_TitanicOceans ;
+    .
+
+tgs:Work.AgainstTheGrain a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Against the Grain: A Deep History of the Earliest States"@en ;
+    rdfs:comment "Book by James C. Scott (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 106, TGS episode 87; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780300182910" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_106_AlexaFirmenich, tgs:Interview.TGS_87_GrahamPalmer ;
+    .
+
+tgs:Work.TheDeepHotBiosphere a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Deep Hot Biosphere: The Myth of Fossil Fuels"@en ;
+    rdfs:comment "Book by Thomas Gold (1998). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 83; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1998"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780387952536" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_83_Doomberg ;
+    .
+
+tgs:Work.TheUninhabitableEarth a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Uninhabitable Earth: Life After Warming"@en ;
+    rdfs:comment "Book by David Wallace-Wells (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 81; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780525576709" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_81_RogerPielke ;
+    .
+
+tgs:Work.PermaculturePrinciplesAndPathways a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Permaculture: Principles and Pathways beyond Sustainability"@en ;
+    rdfs:comment "Book by David Holmgren (2002). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 96; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2002"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780646418445" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_96_DavidHolmgren ;
+    .
+
+tgs:Work.TheFutureOfHumanNature a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Future of Human Nature"@en ;
+    rdfs:comment "Book by Jürgen Habermas (2001). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 122; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2001"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780745629872" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_122_ZakStein ;
+    .
+
+tgs:Work.SavingTheAppearances a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Saving the Appearances: A Study in Idolatry"@en ;
+    rdfs:comment "Book by Owen Barfield (1957). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 139; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1957"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780819562050" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl ;
+    .
+
+tgs:Work.CookingWithTheSun a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Cooking With the Sun: How to Build and Use Solar Cookers"@en ;
+    rdfs:comment "Book by Beth Halacy (1992). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 119; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1992"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780962906923" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_119_LutherKrueger ;
+    .
+
+tgs:Work.WhatYourFoodAte a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "What Your Food Ate: How to Heal Our Land and Reclaim Our Health"@en ;
+    rdfs:comment "Book by David R. Montgomery (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 79; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781324004530" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_79_AnneBikleAndDavidMontgomery ;
+    .
+
+tgs:Work.RadicalKabbalah a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Radical Kabbalah"@en ;
+    rdfs:comment "Book by Marc Gafni (2012). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in Reality Roundtable 10; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781467522748" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication ;
+    .
+
+tgs:Work.NatureAndTheHumanSoul a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Nature and the Human Soul"@en ;
+    rdfs:comment "Book by Bill Plotkin (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.BillPlotkin ;
+    dct:issued "2006"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781577315513" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
+    .
+
+tgs:Work.ThinkingInSystems a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Thinking In Systems: A Primer"@en ;
+    rdfs:comment "Book by Donella H. Meadows (2008). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 77, TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.DonellaMeadows ;
+    dct:issued "2008"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781603580557" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_77_KateRaworth, tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.TheGoodAncestor a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Good Ancestor"@en ;
+    rdfs:comment "Book by Roman Krznaric (2020). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.RomanKrznaric ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781615197309" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.CarpeDiemRegained a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Carpe Diem regained"@en ;
+    rdfs:comment "Book by Roman Krznaric (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.RomanKrznaric ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781783523580" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.LookToTheMountains a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Look to the Mountains"@en ;
+    rdfs:comment "Book by Greg Cajete (1994). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1994"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781882308651" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin ;
+    .
+
+tgs:Work.TheFlip a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Flip: Epiphanies of Mind and the Future of Knowledge"@en ;
+    rdfs:comment "Book by Jeffrey J. Kripal (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 129; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781942658528" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_129_JonathanRowson ;
+    .
+
+tgs:Work.Naturlagen a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Naturlagen: Om naturens rättigheter och människans möjligheter"@en ;
+    rdfs:comment "Book by Pella Thiel (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 121; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.PellaThiel ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9789179652029" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_121_PellaThiel ;
+    .
+
+tgs:Work.FindingTheMotherTree a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Finding The Mother Tree"@en ;
+    rdfs:comment "Book by Suzanne Simard (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 143; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_143_SuzanneSimard ;
+    .
+
+tgs:Work.TheDeclineAndFallOfTheRomanEmpire a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Decline and Fall of the Roman Empire"@en ;
+    rdfs:comment "Book by Edward Gibbon (1776). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 142; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1776"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780307700766" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric ;
+    .
+
+tgs:Work.TheTurningPoint a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Turning Point: Science, Society, and the Rising Culture"@en ;
+    rdfs:comment "Book by Fritjof Capra (1982). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 138; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.FritjofCapra ;
+    dct:issued "1982"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780553345728" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra ;
+    .
+
+tgs:Work.FirstPrinciplesAndFirstValues a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "First Principles and First Values: Forty-Two Propositions on CosmoErotic Humanism, the Meta-Crisis, and the World to Come"@en ;
+    rdfs:comment "Book by David J. Temple (2024). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 122; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9798989588916" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_122_ZakStein ;
+    .
+
+tgs:Work.ThePrize a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Prize: The Epic Quest for Oil, Money, and Power"@en ;
+    rdfs:comment "Book by Daniel Yergin (1991). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 83; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1991"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780671799328" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_83_Doomberg ;
+    .
+
+tgs:Work.LimitsWhyMalthusWasWrong a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Limits: Why Malthus Was Wrong and Why Environmentalists Should Care"@en ;
+    rdfs:comment "Book by Giorgos Kallis (2019). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 52; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781503611559" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_52_GiorgosKallis ;
+    .
+
+tgs:Work.EscapeFromModelLand a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Escape from Model Land: How Mathematical Models Can Lead Us Astray and What We Can Do About It"@en ;
+    rdfs:comment "Book by Erica Thompson (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 55; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781668611869" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_55_EricaThompson ;
+    .
+
+tgs:Work.ASummerPlace a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Summer Place"@en ;
+    rdfs:comment "Book by Sloan Wilson (1958). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1958"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9785557019361" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.FirmsOfEndearment a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Firms of Endearment: How World-Class Companies Profit from Passion and Purpose"@en ;
+    rdfs:comment "Book by Raj Sisodia (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780131873728" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.HitRefresh a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Hit Refresh: The Quest to Rediscover Microsoft's Soul and Imagine a Better Future for Everyone"@en ;
+    rdfs:comment "Book by Satya Nadella (2017). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 56; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780062652508" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson ;
+    .
+
+tgs:Work.ThePriceOfTime a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Price of Time"@en ;
+    rdfs:comment "Book by Edward Chancellor (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 67; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780241569160" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_67_EdwardChancellor ;
+    .
+
+tgs:Work.DevilTakeTheHindmost a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Devil Take the Hindmost: A History of Financial Speculation"@en ;
+    rdfs:comment "Book by Edward Chancellor (1996). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 67; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1996"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780452281806" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_67_EdwardChancellor ;
+    .
+
+tgs:Work.MussoliniHisPartInMyDownfall a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Mussolini: His Part In My Downfall"@en ;
+    rdfs:comment "Book by Spike Milligan (1978). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 61; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1978"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780140051964" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_61_GarethRoberts ;
+    .
+
+tgs:Work.ThreeStoriesAboutCapitalism a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Three Stories about Capitalism: The moral psychology of economic life"@en ;
+    rdfs:comment "Book by Jonathan Haidt. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 59; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.JonathanHaidt ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt ;
+    .
+
+tgs:Work.FreddyAndTheBaseballTeamFromMars a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Freddy and the Baseball Team from Mars"@en ;
+    rdfs:comment "Book by Walter Rollin Brooks (1955). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 66; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1955"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780879519421" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_66_KimStanleyRobinson ;
+    .
+
+tgs:Work.TheGreatDerangement a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Great Derangement: Climate Change and the Unthinkable"@en ;
+    rdfs:comment "Book by Amitav Ghosh (2016). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 40; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2016"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780226323039" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_40_MaryEvelynTucker ;
+    .
+
+tgs:Work.ElectrifyingTheTitanic a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Electrifying the Titanic: The Shipwreck of Industrial Civilisation"@en ;
+    rdfs:comment "Book by William Ophuls (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 47; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2021"^^xsd:gYear ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_47_PatrickOphuls ;
+    .
+
+tgs:Work.OnenessVSThe1 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Oneness VS. The 1%"@en ;
+    rdfs:comment "Book by Vandana Shiva (2018). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:creator tgs:Human.VandanaShiva ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9789385606182" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.WhatIsLifeWithMindAndMatterAndAutobiographicalSketches a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "What Is Life? with Mind and Matter and Autobiographical Sketches"@en ;
+    rdfs:comment "Book by Erwin Schrödinger (1944). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 46; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1944"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780521427081" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_46_VandanaShiva ;
+    .
+
+tgs:Work.TheGreatTransformation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Great Transformation: The Political and Economic Origins of Our Time"@en ;
+    rdfs:comment "Book by Karl Polanyi (1944). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 45; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1944"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780807056431" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_45_JonErickson ;
+    .
+
+tgs:Work.SurvivalOfTheRichest a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Survival of the Richest: Escape Fantasies of the Tech Billionaires"@en ;
+    rdfs:comment "Book by Douglas Rushkoff (2022). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 36; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9780393881066" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_36_DouglasRushkoff ;
+    .
+
+tgs:Work.StoryOfCivilization a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Story of Civilization"@en ;
+    rdfs:comment "Book by Will Durant (1975). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 34; not yet confirmed against the episode's own show notes."@en ;
+    dct:issued "1975"^^xsd:gYear ;
+    dct:identifier "urn:isbn:9781567310238" ;
+    dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
+    dct:isReferencedBy tgs:Interview.TGS_34_KirilSokoloff ;
+    .
+
+tgs:Work.BioregioningEarthOntology a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bioregioning Earth: Ontology"@en ;
+    skos:altLabel "Bioregioning Earth ontology"@en ;
+    rdfs:comment "A browsable web taxonomy from Bioregioning Earth of 'concepts, patterns, and frameworks for bioregional practice', linking each tag to organizations and case studies from bioregional initiatives around the world (Regenerate Cascadia, Regen Sydney, Reconnecting Northland, ReGenerOsa Collective, the Northeast Bioregioning Collective and others). Its tags are grouped in ten clusters: Ecosystem Regeneration, Agro-Bioeconomy, Services and Infrastructure, Community Governance, Legal Stewardship, Ways of Knowing, Mapping and Indicators, Hubs and Centers, Systemic Finance and Alternative Finance. Despite the name it is not a formal OWL/RDF ontology: no namespace, properties or downloadable files are published, and no author, date or license is stated."@en ;
+    dct:source <https://bioregioning.earth/ontology/> ;
+    dct:relation tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.BiodiversityDefense,
+        tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance,
+        tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.ReconnectionToPlace,
+        tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.LocalExchangeSystems,
+        tgs:InterventionSubdomain.FinanceAndCreditRedesign, tgs:Concept.RightsOfNature, tgs:Concept.TwoWaysOfKnowing,
+        tgs:Work.BioregionalFinancingFacilities ;
+    skos:scopeNote "Added 2026-10-19 at MJSullivan's request as an outside resource to link to. Rough crosswalk from its clusters to this graph's intervention subdomains (dct:relation, not an equivalence): Ecosystem Regeneration to SoilAndWaterRegeneration and BiodiversityDefense; Agro-Bioeconomy to FoodAndWaterSystems; Community Governance to SubsidiarityAndLocalGovernance and DeliberativeDemocracy; Legal Stewardship to tgs:Concept.RightsOfNature (one of its tags); Ways of Knowing to ReconnectionToPlace and tgs:Concept.TwoWaysOfKnowing (a case study cites Two-Eyed Seeing); Systemic and Alternative Finance to FinanceAndCreditRedesign, LocalExchangeSystems and CommonsBasedOwnership, and to tgs:Work.BioregionalFinancingFacilities. Its Mapping and Indicators cluster, with a Doughnut Assessment tag, parallels this graph's Doughnut indicators. A candidate source for the archetype-by-facet matrix work in the backlog. Bioregionalism in the podcast: tgs:Interview.TGS_139_DanielChristianWahl ('Bioregional Futures')."@en ;
+    rdfs:comment "All ten of its cluster pages (Agro-Bioeconomy, Alternative Finance, Community Governance, Ecosystem Regeneration, Hubs & Centers, Legal Stewardship, Mapping & Indicators, Services & Infrastructure, Systemic Finance, Ways of Knowing) are imported in initiatives.ttl: 10 thinkr:PracticeCluster, 69 thinkr:PracticeTerm and 221 thinkr:Initiative, carried out by 52 organizations. Alternative Finance lists terms but no initiatives."@en ;
+    .
+
+tgs:Work.SafeAndJustSpaceForHumanity2012 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Safe and Just Space for Humanity: Can We Live within the Doughnut?"@en ;
+    rdfs:comment "Oxfam International discussion paper by Kate Raworth (2012), released for the Rio+20 conference. Doughnut 1.0: the first published Doughnut, with 11 social dimensions (12 indicators) inside the nine planetary boundaries (seven quantified)."@en ;
+    dct:creator tgs:Human.KateRaworth ;
+    dct:publisher "Oxfam International" ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Work.TheEvolvingDoughnut2025 ;
+    .
+
+tgs:Work.ADoughnutForTheAnthropocene2017 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "A Doughnut for the Anthropocene: Humanity's Compass in the 21st Century"@en ;
+    rdfs:comment "Article by Kate Raworth in Lancet Planetary Health 1(2), 2017. Doughnut 2.0, published alongside the book tgs:Work.DoughnutEconomics: 12 social dimensions (20 indicators) aligned with the UN Sustainable Development Goals, and nine ecological dimensions (seven quantified with eight indicators)."@en ;
+    dct:creator tgs:Human.KateRaworth ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier <https://doi.org/10.1016/S2542-5196(17)30028-1> ;
+    dct:relation tgs:Work.DoughnutEconomics ;
+    dct:isReferencedBy tgs:Work.TheEvolvingDoughnut2025 ;
+    .
+
+tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Doughnut of Social and Planetary Boundaries Monitors a World Out of Balance"@en ;
+    rdfs:comment "Article by Andrew L. Fanning and Kate Raworth in Nature 646 (2025). Doughnut 3.0: the first time series of the global Doughnut (2000-2022), with 12 social dimensions (22 indicators) and all nine ecological dimensions quantified (13 indicators, using the 2023 planetary boundaries update by Richardson et al.). The quantitative basis for the yearly-updated interactive Doughnut at doughnuteconomics.org/doughnut."@en ;
+    dct:creator tgs:Human.AndrewFanning, tgs:Human.KateRaworth ;
+    dct:issued "2025"^^xsd:gYear ;
+    dct:identifier <https://doi.org/10.1038/s41586-025-09385-1> ;
+    dct:source <https://ideas.repec.org/a/nat/nature/v646y2025i8083d10.1038_s41586-025-09385-1.html> ;
+    dct:relation tgs:Work.ADoughnutForTheAnthropocene2017 ;
+    dct:isReferencedBy tgs:Work.TheEvolvingDoughnut2025 ;
+    .
+
+tgs:Work.TheEvolvingDoughnut2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Evolving Doughnut"@en ;
+    rdfs:comment "Explainer by Kate Raworth, Doughnut Economics Action Lab (DEAL), October 2025. Traces the Doughnut from its inspirations (Daly's empty and full world, Environmental Space, Barbara Ward's inner and outer limits and the 1974 Cocoyoc Declaration, the 2009 planetary boundaries) through Doughnut 1.0 (2012), 2.0 (2017) and 3.0 (2025), and explains the 3.0 renamings: networks to connectivity, gender equality to equality, social equity to social cohesion, biogeochemical flows to nutrient pollution, biosphere integrity to biodiversity breakdown, land-system change to land conversion, freshwater use to freshwater disruption, and aerosol loading to air pollution. Its tables give global shortfall and overshoot for 2000-01 against 2021-22: for example atmospheric CO2 at 416 ppm, 94% beyond its boundary, and hazardous chemical pollution more than thirty times its boundary. Supplied by MJSullivan as the DEAL PDF."@en ;
+    dct:creator tgs:Human.KateRaworth ;
+    dct:publisher "Doughnut Economics Action Lab" ;
+    dct:issued "2025-10"^^xsd:gYearMonth ;
+    dct:identifier <https://doi.org/10.64981/XGRX2738> ;
+    dct:source <https://doughnuteconomics.org/tools/the-evolving-doughnut> ;
+    dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:references tgs:Work.SafeAndJustSpaceForHumanity2012, tgs:Work.ADoughnutForTheAnthropocene2017, tgs:Work.DoughnutEconomics, tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025 ;
+    dct:relation tgs:Concept.PlanetaryBoundaries ;
+    .
+
+tgs:Work.WorldInTransition2026 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "World in Transition: Strategic Responses to the Metacrisis"@en ;
+    rdfs:comment "92-page strategy report by a working group of the Earthkind Collective, completed summer 2026 and aimed at funders and practitioners. It distinguishes polycrisis (crises entangled so their interactions cause harms worse than the sum, after Lawrence et al. 2024, tgs:Work.GlobalPolycrisisCausalMechanisms) from metacrisis (a crisis beneath the crises, in worldview, meaning-making, legitimacy and collective sensemaking). It then sets out plural, place-rooted future visions; a Capacities Framework of five domains (Knowing, Meaning, Organizing, Stewarding, Provisioning); leverage points built on Meadows (tgs:Work.LeveragePointsPlacesToIntervene), favouring deep levers such as paradigms, how knowledge is produced, humanity's relationship with the living world and incentive redesign; a Vision Compendium of fiction and non-fiction; and a literature review that contrasts Western systems-design framings with Indigenous and decolonial ones. It cites Schmachtenberger (2021) for the incentive trap of multipolar, game-theoretic competition, and Hagens (2023) 'Economics for the Future: Beyond the Superorganism'. Found by MJSullivan through a Hylo link to earthkindcollective.org."@en ;
+    dct:creator tgs:Organization.EarthkindCollective ;
+    dct:issued "2026"^^xsd:gYear ;
+    dct:source <https://www.earthkindcollective.org> ;
+    dct:references tgs:Work.ASmallFarmFuture, tgs:Work.BioregionalFinancingFacilities, tgs:Work.BraidingSweetgrass, tgs:Work.DoughnutEconomics, tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism, tgs:Work.GlobalPolycrisisCausalMechanisms, tgs:Work.GoliathsCurse, tgs:Work.HospicingModernity, tgs:Work.LeveragePointsPlacesToIntervene, tgs:Work.NatureAndTheHumanSoul, tgs:Work.TheCollapseOfComplexSocieties, tgs:Work.TheMatterWithThings, tgs:Work.TheMinistryForTheFuture, tgs:Work.TheMoreBeautifulWorld, tgs:Work.TheNewSystemsReader, tgs:Work.TheSystemsViewOfLife, tgs:Work.TheUniverseStory ;
+    dct:relation tgs:Concept.Metacrisis, tgs:Concept.MultipolarTrap, tgs:Concept.LeveragePoints ;
+    skos:scopeNote "Linked as an outside resource at MJSullivan's request, 2026-10-19. The dct:references list holds only the works this graph already had and that the report cites or lists in its Vision Compendium. Its Capacities Framework and leverage-point table are not modeled as concepts."@en ;
+    .
+
+tgs:Work.OrganismEarthLibrary a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Library (Organism.earth)"@en ;
+    rdfs:comment "Online library of transcripts and texts by about 350 thinkers, from Aristotle and Marcus Aurelius to systems thinkers (Bateson, Meadows, Prigogine, Capra) and current figures. Hosts a transcript of tgs:Series.GreatSimplificationAnimatedSeries. Kept as a reference for finding thinkers and texts later, not as a list to import: as of 2026-10-19, 24 of its authors are people in this graph (Riane Eisler added with TGS_116) and 10 have been TGS guests."@en ;
+    dct:source <https://www.organism.earth/library/authors> ;
+    .
+
+tgs:Work.TechnoOptimistManifesto a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Techno-Optimist Manifesto"@en ;
+    rdfs:comment "Essay by Marc Andreessen published by Andreessen Horowitz (a16z), October 16, 2023. Argues that technology and markets are the source of all material progress and that growth should be unlimited. Its 'The Enemy' section names, among others, degrowth, sustainability, ESG, tech ethics and risk management."@en ;
+    dct:creator tgs:Human.MarcAndreessen ;
+    dct:issued "2023-10-16"^^xsd:date ;
+    dct:source <https://a16z.com/the-techno-optimist-manifesto/> ;
+    .
+
+tgs:Work.AnEcomodernistManifesto a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "An Ecomodernist Manifesto"@en ;
+    rdfs:comment "Statement by eighteen authors (John Asafu-Adjaye and others, associated with the Breakthrough Institute), April 2015. Argues that intensifying farming, energy production, forestry and settlement so they use less land is the key to decoupling human development from environmental impact."@en ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:source <http://www.ecomodernism.org/> ;
+    .
+
+tgs:Work.TheUltimateResource a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Ultimate Resource"@en ;
+    rdfs:comment "Book by Julian L. Simon (Princeton University Press, 1981; revised as The Ultimate Resource 2, 1996). Argues that human ingenuity is the ultimate resource, so natural resources are not finite in any meaningful economic sense. The founding text of modern cornucopianism."@en ;
+    dct:creator tgs:Human.JulianSimon ;
+    dct:issued "1981"^^xsd:gYear ;
+    .
+
+tgs:Work.MerchantsOfDoubt a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming"@en ;
+    rdfs:comment "Book by historians Naomi Oreskes and Erik M. Conway (Bloomsbury, 2010). Documents how a small network of scientists and think tanks applied the tobacco industry's doubt-manufacturing playbook to acid rain, ozone depletion and climate change. The reference text for the graph's OrganizedDoubt opposition type."@en ;
+    dct:creator tgs:Human.NaomiOreskes ;
+    dct:issued "2010"^^xsd:gYear ;
+    .
+
+tgs:Work.AssessingExxonMobilsGlobalWarmingProjections a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Assessing ExxonMobil's Global Warming Projections"@en ;
+    rdfs:comment "Article by Geoffrey Supran, Stefan Rahmstorf and Naomi Oreskes in Science 379 (January 2023). Finds that the global-warming projections ExxonMobil's own scientists made between 1977 and 2003 were accurate and skillful, while the company's public communications cast doubt on climate science."@en ;
+    dct:creator tgs:Human.NaomiOreskes ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:identifier <https://doi.org/10.1126/science.abk0063> ;
     .

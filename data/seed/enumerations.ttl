@@ -63,12 +63,18 @@ thinkr:ConfidenceType.Disputed a thinkr:ConfidenceType,
 thinkr:PolarityType a owl:Class, thinkr:Category ;
     rdfs:comment "Whether a piece of evidence supports, contests, or merely mentions a LinkNote's claim. Independent of source reliability — polarity is about the evidence's stance, reliability is about the source's trustworthiness."@en ;
     owl:equivalentClass [ a owl:Class ;
-            owl:oneOf ( thinkr:PolarityType.Supports thinkr:PolarityType.Contests thinkr:PolarityType.Mentions ) ] ;
+            owl:oneOf ( thinkr:PolarityType.Supports thinkr:PolarityType.Contests thinkr:PolarityType.Qualifies thinkr:PolarityType.Mentions ) ] ;
     skos:prefLabel "Polarity Type"@en .
 
 thinkr:PolarityType.Contests a thinkr:PolarityType,
         owl:NamedIndividual ;
+    skos:definition "Argues that the LinkNote's claim is wrong, or that the two linked items diverge where the claim says they fit. A Curated Contests from a Reputable-or-better source makes calculatedConfidence Disputed."@en ;
     skos:prefLabel "Contests"@en .
+
+thinkr:PolarityType.Qualifies a thinkr:PolarityType,
+        owl:NamedIndividual ;
+    skos:definition "Accepts the claim but limits it: the link holds, with a real difference in emphasis, scope or conclusion worth showing a reader. Added 2026-10-19 after the first red-team pass found tensions too strong to ignore and too weak to call Disputed. Stored for context; never affects calculatedConfidence."@en ;
+    skos:prefLabel "Qualifies"@en .
 
 thinkr:PolarityType.Mentions a thinkr:PolarityType,
         owl:NamedIndividual ;
@@ -328,6 +334,7 @@ thinkr:InteractionRole.Guest a thinkr:InteractionRole, owl:NamedIndividual ;
    owl:distinctMembers ( 
         thinkr:PolarityType.Supports 
         thinkr:PolarityType.Contests
+        thinkr:PolarityType.Qualifies
         thinkr:PolarityType.Mentions ) .
 
 [] a owl:AllDifferent ;
@@ -337,3 +344,14 @@ thinkr:InteractionRole.Guest a thinkr:InteractionRole, owl:NamedIndividual ;
         thinkr:ReliabilityType.Unverified 
         thinkr:ReliabilityType.Unreliable ) .
 
+thinkr:OppositionType.CompetingParadigm a thinkr:OppositionType, owl:NamedIndividual ;
+    skos:prefLabel "Competing paradigm"@en ;
+    skos:definition "Good-faith disagreement from a rival worldview, such as neoclassical growth economics, ecomodernism or techno-optimism. Argue with it on the evidence."@en .
+
+thinkr:OppositionType.FriendlyCritique a thinkr:OppositionType, owl:NamedIndividual ;
+    skos:prefLabel "Friendly critique"@en ;
+    skos:definition "Disagreement from people who share the premise of biophysical limits but differ on cause or remedy, such as degrowth or ecosocialist critiques of the superorganism framing. Allies, not opponents."@en .
+
+thinkr:OppositionType.OrganizedDoubt a thinkr:OppositionType, owl:NamedIndividual ;
+    skos:prefLabel "Organized doubt"@en ;
+    skos:definition "Documented, deliberate manufacture of uncertainty to delay action, as described in Merchants of Doubt. Use only with documentary evidence of the conduct, not because a position is unwelcome."@en .

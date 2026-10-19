@@ -384,3 +384,385 @@ tgs:Organization.CivilizationResearchInstitute a thinkr:Organization, owl:NamedI
     dcterms:source <https://civilizationresearchinstitute.org/> ;
     skos:scopeNote "Minted 2026-10-18 for TGS_132, under the scope rule for ecosystem organizations: an organization enters the graph only when a TGS source mentions it or it is a guest's institutional home. Its founders, staff and programs are not modeled; the website was not consulted for this entry."@en ;
     .
+
+tgs:Organization.EarthkindCollective a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Earthkind Collective"@en ;
+    skos:definition "Collaborative community of funders and practitioners responding to interconnected global challenges. It runs a venture studio for aligned ventures, a member community and a strategic coordination hub, and describes itself as discreet by design. Author of tgs:Work.WorldInTransition2026."@en ;
+    dcterms:source <https://www.earthkindcollective.org> ;
+    .
+
+tgs:Organization.7GenerationGTB a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "7-Generation GTB"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Greater Toronto Bioregion, Canada" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ASPROCIG a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ASPROCIG"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AbundanceProject a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Abundance Project"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "South Africa" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AccionSerrana a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Acción Serrana"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 7 initiative(s) in this graph."@en ;
+    thinkr:placeName "Argentina" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AlVelAl a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "AlVelAl"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 9 initiative(s) in this graph."@en ;
+    thinkr:placeName "Altiplano of Andalusia and Murcia, Spain" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AliancaMarITerraDiMallorca a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Aliança Mar i Terra di Mallorca"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Mallorca, Spain" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AllianceForScotlandsRainforest a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Alliance for Scotland's Rainforest"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Scotland, UK" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AmazonSacredHeadwatersAlliance a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Amazon Sacred Headwaters Alliance"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Ecuador and Peru" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.AtelierLUMA a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Atelier LUMA"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Arles, France" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BayDeltaTrust a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bay Delta Trust"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "California, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BioregionalLearningCentreSouthDevon a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bioregional Learning Centre South Devon"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Devon, England, UK" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BioregionalWeavingAllianceIreland a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bioregional Weaving Alliance Ireland"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Ireland" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BioregioningTayside a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bioregioning Tayside"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Tayside, Scotland, UK" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BlueRidgeFoodshedFund a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Blue Ridge Foodshed Fund"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Western North Carolina, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BlueprintForImpact a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Blueprint for Impact"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Appalachia, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BosqueFractal a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bosque Fractal"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Colombia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.BurrenbeoTrust a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Burrenbeo Trust"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "The Burren, Ireland" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.CEDPO a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "CEDPO"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Osa region, Costa Rica" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.CarolinianCanada a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Carolinian Canada"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Southern Ontario, Canada" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ColombiaRegenerativa a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Colombia Regenerativa"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Colombia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ComunidadIndigenaJoseLuisCaniulef a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Comunidad Indígena José Luis Caniulef"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Chile" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.CostaRicaRegenerativa a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Costa Rica Regenerativa"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Costa Rica" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.CurridabatSweetCity a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Curridabat Sweet City"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Curridabat, Costa Rica" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.DiamanteBaruBioregionalConsortium a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Diamante Barú Bioregional Consortium"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Costa Rica" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ETHZurich a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ETH Zurich"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 1 initiative(s) in this graph."@en ;
+    thinkr:placeName "Switzerland (fieldwork in the River Ericht catchment, Scotland)" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.EnlivenedCooperative a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Enlivened Cooperative"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 2 initiative(s) in this graph."@en ;
+    thinkr:placeName "Hawaiʻi, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.FindhornWatershedInitiative a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Findhorn Watershed Initiative"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Scotland, UK" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ForeverSabah a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Forever Sabah"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Sabah, Malaysia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.HudsonEstuaryResilienceEffort a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Hudson Estuary Resilience Effort"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Hudson Valley, New York, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.HuwaKaruInterculturalReserve a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Huwa Karu Intercultural Reserve"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Huni Kuin territory, western Amazon" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.Inabita a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Inabità"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Italy" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.KoalisiEkonomiMembumi a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Koalisi Ekonomi Membumi"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Indonesia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.KogayonAssociation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Kogayon Association"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Romania" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.Landschaftspflegeverein a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Landschaftspflegeverein"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.MIKIAKenya a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "MIKIA Kenya"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Kenya" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.MiraRiverGuardians a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Mira River Guardians"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.NilaVenaOrganizingTeam a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Nila Vena Organizing Team"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 2 initiative(s) in this graph."@en ;
+    thinkr:placeName "Kvichak watershed, Alaska, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.NortheastBioregioningCollective a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Northeast Bioregioning Collective"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Northeastern USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.PanamaRestorationLab a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Panama Restoration Lab"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "Panama" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ReGenerOsaCollective a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ReGenerOsa Collective"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Osa Peninsula, Costa Rica" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ReVillageGreenValley a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ReVillage Green Valley"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Graton, Sonoma County, California, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ReconnectingNorthland a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Reconnecting Northland"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Northland, New Zealand" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.RegenFoundation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Regen Foundation"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 1 initiative(s) in this graph."@en ;
+    thinkr:placeName "Global; pilot with the Sharamentsa Achuar, Ecuadorian Amazon" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.RegenSydney a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Regen Sydney"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Sydney, Australia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.RegenerateCascadia a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Regenerate Cascadia"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "Cascadia (Pacific Northwest, USA and Canada)" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ResilienceEarth a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Resilience Earth"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
+    thinkr:placeName "La Garrotxa, Catalonia, Spain" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.RiverErichtCatchmentRestorationInitiative a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "River Ericht Catchment Restoration Initiative"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 1 initiative(s) in this graph."@en ;
+    thinkr:placeName "Perthshire, Scotland, UK" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.SalmonNation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Salmon Nation"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
+    thinkr:placeName "Pacific Northwest, from Oregon to Alaska" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.SinalDoVale a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Sinal do Vale"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Mata Atlântica, Rio de Janeiro state, Brazil" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.SouthAsiaBioregionalismWorkingGroup a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "South Asia Bioregionalism Working Group"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
+    thinkr:placeName "South Asia" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.SpruceRoot a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Spruce Root"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 7 initiative(s) in this graph."@en ;
+    thinkr:placeName "Southeast Alaska, USA" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.TarunBharatSangh a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Tarun Bharat Sangh"@en ;
+    skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
+    thinkr:placeName "Rajasthan, India" ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Organization.ExxonMobil a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "ExxonMobil"@en ;
+    skos:definition "American multinational oil and gas company. Included as the best-documented case of organized climate doubt: its own scientists' accurate warming projections against its public messaging (tgs:Work.AssessingExxonMobilsGlobalWarmingProjections)."@en ;
+    thinkr:challenges tgs:Concept.ClimateSensitivity ;
+    owl:sameAs <http://dbpedia.org/resource/ExxonMobil> ;
+    .
+
+tgs:Organization.CenterForPartnershipSystems a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Center for Partnership Systems"@en ;
+    skos:altLabel "Center for Partnership Studies"@en ;
+    skos:definition "Non-profit, led by Riane Eisler, that develops practical applications of her partnership research -- in education, economics (caring economics) and a partnership self-assessment toolkit -- and is associated with the Interdisciplinary Journal of Partnership Studies."@en ;
+    dcterms:source <http://www.centerforpartnership.org/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_116_RianeEisler ;
+    .

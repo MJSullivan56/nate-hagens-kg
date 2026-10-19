@@ -2848,3 +2848,16 @@ tgs:Relationship.NateHagens_IndyJohar a thinkr:Relationship, owl:NamedIndividual
           thinkr:episode tgs:Interview.TGS_238_IndyJohar ;
           dcterms:date "2026-10-14"^^xsd:date ] ;
     .
+
+tgs:Relationship.NateHagens_RianeEisler a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RianeEisler ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Riane Eisler"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_116_RianeEisler ;
+          dcterms:date "2024-03-07"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: Nate's intro ('I had never heard of her until a few months ago. We have multiple friends in common') and his close ('thank you for your time and for your lifetime of work'), with her reply 'I look forward to more.' No friend language from either side."@en .

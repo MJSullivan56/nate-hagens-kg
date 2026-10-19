@@ -148,7 +148,8 @@ tgs:LinkNote.MaximizingReturnsOnPower_MaximumPowerPrinciple a thinkr:LinkNote, o
     thinkr:aboutSubject tgs:Concept.MaximizingReturnsOnPower ;
     thinkr:aboutObject tgs:Concept.MaximumPowerPrinciple ;
     thinkr:hasEvidence tgs:Evidence.MaximizingReturnsOnPower_MaximumPowerPrinciple ;
-    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MaximizingReturnsOnPower thinkr:complements tgs:Concept.MaximumPowerPrinciple. The deepest single bridge: Nate's maximum power principle is stated in energy (organisms and ecosystems self-organize to maximize power), and Daniel nests it inside a wider game-theoretic power -- agents using agency to gain more agency, with energy one means among many. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MaximizingReturnsOnPower thinkr:complements tgs:Concept.MaximumPowerPrinciple. The deepest single bridge: Nate's maximum power principle is stated in energy (organisms and ecosystems self-organize to maximize power), and Daniel nests it inside a wider game-theoretic power -- agents using agency to gain more agency, with energy one means among many. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en ;
+    thinkr:hasEvidence tgs:Evidence.MaximizingReturnsOnPower_MaximumPowerPrinciple_TGS_132 .
 
 tgs:LinkNote.MultipolarTrap_Superorganism a thinkr:LinkNote, owl:NamedIndividual ;
     thinkr:aboutSubject tgs:Concept.MultipolarTrap ;
@@ -268,7 +269,8 @@ tgs:LinkNote.ImpossibleToHard_AggregateProbability a thinkr:LinkNote, owl:NamedI
     thinkr:aboutSubject tgs:Concept.ImpossibleToHard ;
     thinkr:aboutObject tgs:Concept.AggregateProbability ;
     thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_AggregateProbability ;
-    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.AggregateProbability. Both judge single-issue solutions by the full set of conditions they must meet. Daniel uses those conditions as design criteria, which make a problem harder but possible; Nate uses them as odds, which point to a world of less. The tension is real and useful: one says what a solution must satisfy, the other how likely it is to. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.AggregateProbability. Both judge single-issue solutions by the full set of conditions they must meet. Daniel uses those conditions as design criteria, which make a problem harder but possible; Nate uses them as odds, which point to a world of less. The tension is real and useful: one says what a solution must satisfy, the other how likely it is to. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en ;
+    thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_AggregateProbability_Frankly_79 .
 
 tgs:LinkNote.HyperAgents_EducatingHyperAgents a thinkr:LinkNote, owl:NamedIndividual ;
     thinkr:aboutSubject tgs:Concept.HyperAgents ;
@@ -280,7 +282,8 @@ tgs:LinkNote.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation a 
     thinkr:aboutSubject tgs:Concept.SensemakingPrerequisiteOfOpenSociety ;
     thinkr:aboutObject tgs:Concept.SharedBroadcastPerturbation ;
     thinkr:hasEvidence tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation ;
-    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.SensemakingPrerequisiteOfOpenSociety thinkr:complements tgs:Concept.SharedBroadcastPerturbation. Daniel states the requirement: an open society needs everyone to make sense well. Nate gives a historical case of a society briefly sensing together, through one broadcast, and says fractured, AI-generated media has closed that route. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.SensemakingPrerequisiteOfOpenSociety thinkr:complements tgs:Concept.SharedBroadcastPerturbation. Daniel states the requirement: an open society needs everyone to make sense well. Nate gives a historical case of a society briefly sensing together, through one broadcast, and says fractured, AI-generated media has closed that route. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en ;
+    thinkr:hasEvidence tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation_Frankly_81 .
 
 tgs:LinkNote.YellowTeaming_UnintendedConsequences a thinkr:LinkNote, owl:NamedIndividual ;
     thinkr:aboutSubject tgs:Concept.YellowTeaming ;
@@ -304,7 +307,8 @@ tgs:LinkNote.PowerSeekingAndComplicity_EducatingHyperAgents a thinkr:LinkNote, o
     thinkr:aboutSubject tgs:Concept.PowerSeekingAndComplicity ;
     thinkr:aboutObject tgs:Concept.EducatingHyperAgents ;
     thinkr:hasEvidence tgs:Evidence.PowerSeekingAndComplicity_EducatingHyperAgents ;
-    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PowerSeekingAndComplicity thinkr:complements tgs:Concept.EducatingHyperAgents. Nate's hope is to change the minds of the few with outsized ability to change the system; Daniel explains why that is hard, since a system born of power competition selects dark-triad people for those positions. Nate names the same overlap himself in Frankly_53 and calls it 'a puzzle.' calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PowerSeekingAndComplicity thinkr:complements tgs:Concept.EducatingHyperAgents. Nate's hope is to change the minds of the few with outsized ability to change the system; Daniel explains why that is hard, since a system born of power competition selects dark-triad people for those positions. Nate names the same overlap himself in Frankly_53 and calls it 'a puzzle.' calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en ;
+    thinkr:hasEvidence tgs:Evidence.PowerSeekingAndComplicity_EducatingHyperAgents_Frankly_85 .
 
 tgs:LinkNote.HyperAgents_TheFifteenHundred a thinkr:LinkNote, owl:NamedIndividual ;
     thinkr:aboutSubject tgs:Concept.HyperAgents ;
@@ -340,4 +344,71 @@ tgs:LinkNote.ImpossibleToHard_WhatCantWontMightHappen a thinkr:LinkNote, owl:Nam
     thinkr:aboutSubject tgs:Concept.ImpossibleToHard ;
     thinkr:aboutObject tgs:Concept.WhatCantWontMightHappen ;
     thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_WhatCantWontMightHappen ;
-    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.WhatCantWontMightHappen. Both start by ruling out solutions that only look easy. Daniel stresses what remains -- hard, not impossible, once the design criteria are right; Nate supplies a sorting method and points attention to what might happen. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.WhatCantWontMightHappen. Both start by ruling out solutions that only look easy. Daniel stresses what remains -- hard, not impossible, once the design criteria are right; Nate supplies a sorting method and points attention to what might happen. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en ;
+    thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_WhatCantWontMightHappen_Frankly_90 .
+
+tgs:LinkNote.ThreeByThreeResponseGrid_ThreeTimelinesOfResponse a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ThreeByThreeResponseGrid ;
+    thinkr:aboutObject tgs:Concept.ThreeTimelinesOfResponse ;
+    thinkr:hasEvidence tgs:Evidence.ThreeByThreeResponseGrid_ThreeTimelinesOfResponse ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-19) on the triple tgs:Concept.ThreeByThreeResponseGrid thinkr:complements tgs:Concept.ThreeTimelinesOfResponse. Both divide response into three horizons. Daniel's are kinds of action -- triage, transition within existing systems, new systems -- crossed with culture, political economy and technology. Nate's are periods of the Great Simplification -- now, the bend-versus-break moment, a later stable state -- each with a different capacity for prosocial action. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.GameTheoryFillsTheOughtGap_ProsocialityUnderTheSuperorganism a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.GameTheoryFillsTheOughtGap ;
+    thinkr:aboutObject tgs:Concept.ProsocialityUnderTheSuperorganism ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoryFillsTheOughtGap_ProsocialityUnderTheSuperorganism ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-19) on the triple tgs:Concept.GameTheoryFillsTheOughtGap thinkr:complements tgs:Concept.ProsocialityUnderTheSuperorganism. Both reject the picture of humans as narrow self-maximizers. Daniel traces how win-lose game theory became the institutional definition of a good choice; Nate shows the evolved, reciprocal human nature that the resulting structure suppresses, and expects it to return. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HolisticExternalityAnalysis_WideBoundary a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HolisticExternalityAnalysis ;
+    thinkr:aboutObject tgs:Concept.WideBoundary ;
+    thinkr:hasEvidence tgs:Evidence.HolisticExternalityAnalysis_WideBoundary ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-19) on the triple tgs:Concept.HolisticExternalityAnalysis thinkr:complements tgs:Concept.WideBoundary. Both widen the frame before acting: Daniel as a design method -- map incentives, trace upstream and downstream effects -- and Nate as a habitual lens, 'and then what?', applied across energy, money and ecology. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.TechnoOptimism_DegrowthMovement a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.TechnoOptimism ;
+    thinkr:aboutObject tgs:SchoolOfThought.DegrowthMovement ;
+    thinkr:hasEvidence tgs:Evidence.TechnoOptimism_DegrowthMovement ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.TechnoOptimism thinkr:challenges tgs:SchoolOfThought.DegrowthMovement. Techno-optimism names degrowth as an enemy outright. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.Ecomodernism_LimitsToGrowth a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.Ecomodernism ;
+    thinkr:aboutObject tgs:Concept.LimitsToGrowth ;
+    thinkr:hasEvidence tgs:Evidence.Ecomodernism_LimitsToGrowth ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.Ecomodernism thinkr:challenges tgs:Concept.LimitsToGrowth. Rival paradigm: decoupling instead of limits. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.Cornucopianism_LimitsToGrowth a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.Cornucopianism ;
+    thinkr:aboutObject tgs:Concept.LimitsToGrowth ;
+    thinkr:hasEvidence tgs:Evidence.Cornucopianism_LimitsToGrowth ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.Cornucopianism thinkr:challenges tgs:Concept.LimitsToGrowth. Classic rival to the limits thesis. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.NeoclassicalGrowthEconomics_LimitsToGrowth a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.NeoclassicalGrowthEconomics ;
+    thinkr:aboutObject tgs:Concept.LimitsToGrowth ;
+    thinkr:hasEvidence tgs:Evidence.NeoclassicalGrowthEconomics_LimitsToGrowth ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.NeoclassicalGrowthEconomics thinkr:challenges tgs:Concept.LimitsToGrowth. Mainstream rejection of limits via substitution. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.OrganizedClimateDoubt_ClimateSensitivity a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.OrganizedClimateDoubt ;
+    thinkr:aboutObject tgs:Concept.ClimateSensitivity ;
+    thinkr:hasEvidence tgs:Evidence.OrganizedClimateDoubt_ClimateSensitivity ;
+    thinkr:hasOppositionType thinkr:OppositionType.OrganizedDoubt ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.OrganizedClimateDoubt thinkr:challenges tgs:Concept.ClimateSensitivity. Documented manufacture of doubt. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.ExxonMobil_ClimateSensitivity a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Organization.ExxonMobil ;
+    thinkr:aboutObject tgs:Concept.ClimateSensitivity ;
+    thinkr:hasEvidence tgs:Evidence.ExxonMobil_ClimateSensitivity ;
+    thinkr:hasOppositionType thinkr:OppositionType.OrganizedDoubt ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:Organization.ExxonMobil thinkr:challenges tgs:Concept.ClimateSensitivity. Company-level documented case. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.ChaliceAndBladePower_PowerVersusLife a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ChaliceAndBladePower ;
+    thinkr:aboutObject tgs:Concept.PowerVersusLife ;
+    thinkr:hasEvidence tgs:Evidence.ChaliceAndBladePower_PowerVersusLife_TGS_116 ;
+    skos:scopeNote "Eisler-Hagens convergence (added 2026-10-19) on the triple tgs:Concept.ChaliceAndBladePower thinkr:convergesWith tgs:Concept.PowerVersusLife. Both set power over life against life itself as the central contest of the age. Eisler's frame is relational (family, gender, the definition of power); Nate's is energetic (power riding successive surpluses). Frankly_82 comes ten months after TGS_116, and Nate does not cite her there, so no influence is claimed. Stays Candidate until MJSullivan reviews it."@en .
