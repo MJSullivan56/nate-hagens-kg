@@ -272,7 +272,7 @@ tgs:Interview.TGS_12_DennisMeadows a thinkr:Episode, owl:NamedIndividual ;
     thinkr:discusses tgs:Concept.LimitsToGrowth ;
     thinkr:hasDiscussionSummary "A genuinely no-nonsense conversation throughout, matching Nate's own framing of Meadows as 'hard-hitting with no fluff.' Meadows is careful and precise about what Limits to Growth actually claimed — of the roughly eight times the word 'prediction' appears in the original book, every instance but one explicitly disclaims it, arguing instead for a durable conceptual framework over any specific forecast, since 'most of the so-called facts I would teach my students would turn out to be false or obsolete within a decade or two.' The episode's most personally valuable moment is a real, direct coping strategy Meadows learned from Paul Ehrlich (whose own real TGS episode, #9, is directly confirmed via this episode's own show notes): maintaining a separate, unthreatening 'sphere of activity' entirely apart from one's difficult professional work — butterflies for Ehrlich, community gardening for Meadows himself, both real, concrete practices rather than abstract advice. Asked what worries him most, Meadows gives a real, somewhat unexpected answer — not ecological collapse directly, but violence itself, 'the use of force... to enforce an opinion,' citing both domestic gun proliferation and, with real prescience, Putin's troop buildup on the Ukrainian border days before the invasion actually began. His real, direct stance on hope is unusually firm and philosophically distinct from most guests' closing answers: 'hope is not a strategy for achieving change... spend your time playing the cards you're dealt rather than wishing you had a different set,' a piece of advice he attributes directly to his own mother."@en ;
     skos:scopeNote "Real, pre-existing personal history confirmed directly in the transcript: Nate and Meadows had previously met roughly 12 years prior at a real Association for Peak Oil conference in Vienna — this is a real reunion, not a first meeting, though no explicit 'friend' language is exchanged (kept as Professional-only on the Relationship, consistent with this graph's evidentiary bar). Real, further citable material found but NOT built in this pass: Paul Ehrlich's real TGS episode #9, directly confirmed via this episode's own show notes — a valuable, previously-deferred figure (referenced across multiple other episodes in this graph) now has a real, citable episode number. A 'Rex Weyler' citation in this episode's own show notes uses a distinct URL pattern (episode/rex-weyler) from Weyler's already-confirmed Reality Roundtable appearances (RR-2, RR-6) — not resolved in this pass, flagged honestly as possibly a redirect rather than a genuinely separate solo episode."@en ;
-    dct:isReferencedBy tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    dct:isReferencedBy tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_89_ThinkingAndFeeling ;
     .
 
 tgs:Interview.TGS_13_JamieWheal a thinkr:Episode, owl:NamedIndividual ;
@@ -460,7 +460,7 @@ tgs:Interview.TGS_22_AzaRaskin a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.AzaRaskin ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/22-aza-raskin> ;
-    dct:isReferencedBy tgs:Monologue.TGS_187_EarthDay2025 ;
+    dct:isReferencedBy tgs:Monologue.TGS_187_EarthDay2025, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
     thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS22_AzaRaskin.mp3> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/06/TGS22_AzaRaskin.docx1_.pdf> ;
     thinkr:discusses tgs:Concept.Superorganism ;
@@ -947,7 +947,7 @@ tgs:Interview.TGS_51_DJWhite a thinkr:Episode, owl:NamedIndividual ;
     thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.DJWhite ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/51-dj-white> ;
-    dct:isReferencedBy tgs:Monologue.TGS_187_EarthDay2025, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_67_TheSolutionsThatCanBeNamedAreNotTheSolutions, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    dct:isReferencedBy tgs:Monologue.TGS_187_EarthDay2025, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_67_TheSolutionsThatCanBeNamedAreNotTheSolutions, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
     thinkr:hasReplay <http://traffic.libsyn.com/forcedn/thegreatsimplification/TGS51_DJWhite_1.mp3> ;
     thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2022/12/TGS51DJWhiteTranscript.docx.pdf> ;
     thinkr:discusses tgs:Concept.Superorganism ;

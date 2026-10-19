@@ -63,6 +63,7 @@ tgs:Work.UpdateToLimitsToGrowth2021 a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.GayaHerrington ;
     dct:source <https://doi.org/10.1111/jiec.13084> ;
+    dct:references tgs:Work.LimitsToGrowth1972 ;
     .
 
 tgs:Work.FiveInsightsForAvoidingGlobalCollapse a thinkr:Work, owl:NamedIndividual ;
@@ -141,7 +142,7 @@ tgs:Work.BottlenecksOf21stCentury a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Co-authored by Nate Hagens and DJ White — the second of their real, confirmed co-authored books (see tgs:Work.RealityBlind for the first; a third remains unidentified despite Nate's own direct reference to 'three books' in the RR-24 transcript). Hosted on the same reader platform as Reality Blind, under a different work ID. Cited directly in this graph via real show-notes links for at least 3 distinct concepts across built episodes: the Maximum Power Principle, Peak Oil, and Energetic Remoteness — functioning as a real, load-bearing source text in this graph's own citation network, not just a title mention."@en ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/view/388478403/i/> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    dct:isReferencedBy tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
     .
 
 #############################################
@@ -1342,4 +1343,23 @@ tgs:Work.TheDayAfter1983 a thinkr:Work, owl:NamedIndividual ;
     dct:issued "1983-11-20"^^xsd:date ;
     dct:source <https://en.wikipedia.org/wiki/The_Day_After> ;
     dct:isReferencedBy tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    .
+
+tgs:Work.GlobalWarmingInThePipeline2023 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Global warming in the pipeline"@en ;
+    rdfs:comment "James E. Hansen and co-authors, including Leon Simons, Oxford Open Climate Change 3(1), kgad008 (2023). Argues that climate sensitivity is higher than commonly estimated, that declining aerosol pollution has been unmasking warming, and that substantial further warming is already 'in the pipeline.' Linked in the show notes of Frankly_51, where Nate cites Hansen and Simons for an expected half-degree jump in 2024 (tgs:Concept.AerosolMasking)."@en ;
+    dct:creator tgs:Human.JamesHansen ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:source <https://academic.oup.com/oocc/article/3/1/kgad008/7335889> ;
+    dct:isReferencedBy tgs:Monologue.Frankly_51_SystemicThemesFor2024 ;
+    .
+
+tgs:Work.LimitsToGrowth1972 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Limits to Growth"@en ;
+    rdfs:comment "Donella H. Meadows, Dennis L. Meadows, Jørgen Randers and William W. Behrens III, The Limits to Growth: A Report for the Club of Rome's Project on the Predicament of Mankind (Potomac Associates, 1972). The World3 system-dynamics study of population, industrial output, food, pollution and non-renewable resources, whose standard run projects overshoot and decline in the 21st century. Dartmouth Libraries' digital edition, funded by the Donella Meadows Institute and published with the authors' permission under CC BY-NC, is scanned from a fifth printing of the first-edition paperback; HTML, TEI, PDF, ePub and MOBI versions are offered. Randers and Behrens are not yet in the graph. Re-tested against empirical data in tgs:Work.UpdateToLimitsToGrowth2021."@en ;
+    dct:creator tgs:Human.DonellaMeadows, tgs:Human.DennisMeadows ;
+    dct:issued "1972"^^xsd:gYear ;
+    dct:source <https://www.library.dartmouth.edu/digital/digital-collections/limits-growth> ;
+    rdfs:seeAlso <https://collections.dartmouth.edu/xcdas-derivative/meadows/pdf/meadows_ltg-001.pdf> ;
+    dct:isReferencedBy tgs:Work.UpdateToLimitsToGrowth2021 ;
     .

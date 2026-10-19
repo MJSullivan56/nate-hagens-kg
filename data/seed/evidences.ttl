@@ -328,3 +328,27 @@ tgs:Evidence.HeartWillMind_HealingBeforeEngagement a thinkr:Evidence, owl:NamedI
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;
     dcterms:description "In TGS_31 Daniel says effective response needs heart, will and mind together, and that mind and heart without will gives 'really smart, caring academics who feel broken and hopeless'; in Frankly_55 Nate says many treat the predicament as 'a mental video game' that changes nothing, and that healthy, behaviorally balanced people in community, then the knowledge integrated post-tragically, is what 'empowers people to be agents of change.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
     prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.FragmentedConsciousness_VerticalBehavioralStack a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel, following Bohm, says the fundamental cause of the world's problems is a fragmented consciousness that does not perceive from wholeness first; in Frankly_52 Nate says 'humans get fragmented,' which leads to consumption and to left-brain dominance, 'breaking down the world into parts instead of looking at it holistically,' and proposes balancing the stack from the bottom up. Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.OneMarshmallowRewardCircuits_DopamineHijackedCulture a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel says that in evolutionary settings rewards came only with evolutionarily relevant work and the deeper nourishment bound to them, and that markets profit by delivering the reward without them; in Frankly_52 Nate says the culture 'has created dopamine as a proxy for these other things,' so that even yoga and social sharing are 'hijacked by dopamine.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.HeartWillMind_IntegratingThinkingAndFeeling a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_31 Daniel says effective response needs heart, will and mind together and that any two without the third fail; in Frankly_89 Nate says he would want neither a community 'really smart about the metacrisis' but 'completely in their heads' nor one 'fully embodied' with 'no skills at all,' and that 'we need to make the Venn diagram between these two modalities with a larger overlap.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .
+
+tgs:Evidence.ImpossibleToHard_WhatCantWontMightHappen a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "In TGS_20 Daniel says solutions that ignore part of the design criteria only looked easy and that 'we move from impossible to hard when we start to understand it better'; in Frankly_90 Nate separates what can't happen and what won't happen from what might, and says 'most of the things in our public discourse about the future are in the what can't happen and what won't happen category, when we need to be focusing on the what might happen category.' Proposed as a bridge; neither cites the other here. Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
+    prov:generatedAtTime "2026-10-18"^^xsd:date .

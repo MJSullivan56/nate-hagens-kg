@@ -3478,6 +3478,47 @@ tgs:RevisionEvent.Frankly_55_FullBuild a thinkr:RevisionEvent ;
     thinkr:revisionNote "Full build from MJSullivan's hand-scraped transcript and the episode page's show notes, replacing the 2026-09-12 stub; replay ID confirmed from the episode page. Minted tgs:Concept.SevenKeyInterventions, tgs:Concept.TheFifteenHundred and tgs:Concept.HealingBeforeEngagement, with lens tags and thinkr:complements bridges from tgs:Concept.HyperAgents and tgs:Concept.HeartWillMind. Earliest-in-graph notes on tgs:Concept.GoldilocksTechnology, tgs:Concept.FiveHorsemenOf2020s, tgs:Concept.EducatingHyperAgents and tgs:Concept.PostTragic. Back-links on all 3 references."@en ;
     .
 
+tgs:RevisionEvent.Frankly_51_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_51_SystemicThemesFor2024 ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's hand-scraped transcript and the episode page's show notes, replacing the 2026-09-12 stub; replay ID taken from the episode page. Minted tgs:Concept.AggregateCognitiveDissonance (with lens tags) and tgs:Work.GlobalWarmingInThePipeline2023. Earliest-in-graph notes on tgs:Concept.CulturalAntibodies, tgs:Concept.HavesAndHaveNots, tgs:Concept.SupernormalStimuli and tgs:Concept.AerosolMasking. No Schmachtenberger bridge proposed. Back-links on both references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_52_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_52_TheBehavioralStack ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's hand-scraped transcript and the episode page's show notes, replacing the 2026-09-12 stub; kept its three back-links (Frankly_55, 73, 82); replay ID from Nate's Substack post. Minted tgs:Concept.VerticalBehavioralStack and tgs:Concept.DopamineHijackedCulture, with lens tags and thinkr:complements bridges from tgs:Concept.FragmentedConsciousness and tgs:Concept.OneMarshmallowRewardCircuits. Earliest-in-graph notes on tgs:Concept.RocksInTheRiver, tgs:Concept.HealingBeforeEngagement and tgs:Concept.SevenRungsOfARunawaySystem. No dct:references."@en ;
+    .
+
+tgs:RevisionEvent.LimitsToGrowth1972_Work a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.LimitsToGrowth1972, tgs:Concept.LimitsToGrowth, tgs:Work.UpdateToLimitsToGrowth2021 ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Minted tgs:Work.LimitsToGrowth1972 from the Dartmouth Libraries digital edition MJSullivan supplied (page and PDF). First use of thinkr:definedIn in the graph: tgs:Concept.LimitsToGrowth thinkr:definedIn tgs:Work.LimitsToGrowth1972, with a Biophysical lens tag. tgs:Work.UpdateToLimitsToGrowth2021 now dct:references the 1972 work, with a back-link."@en ;
+    .
+
+tgs:RevisionEvent.DefinedInPass_2026_10_18 a thinkr:RevisionEvent ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "thinkr:definedIn pass over the 165 works, reviewed by MJSullivan (judgment-call pairs skipped). Added thinkr:definedIn for 24 concept-work pairs where the work is the idea's origin text (thinkr:definedIn tgs:Work.LimitsToGrowth1972 was added just before), added an analytical lens to the 17 of them that had none (Intellectology left untagged, since no lens fits), and minted tgs:Concept.GameTheory, tgs:Concept.NonZeroSumness and tgs:Concept.ProgressTrap with their origin works. tgs:Concept.GameTheoryFillsTheOughtGap and tgs:Concept.PositiveSumInGroupNegativeSumToNature now relatesTo the new concepts. Caveats kept with two pairs: the idea of energy additions is older than York and Bell (2019), whose paper names it; Boehm's 'reverse dominance hierarchy' dates from a 1993 paper that Hierarchy in the Forest (1999) develops. Rejected pairs (work cited but not the origin) stay as dcterms:source or prose; the Indicator links to the California Doughnut report stay dcterms:source. A work's lens is derived by query through thinkr:definedIn, not asserted on the work."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_89_90_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_89_ThinkingAndFeeling, tgs:Monologue.Frankly_90_NetZeroAndOtherDelusions ;
+    thinkr:revisionDate "2026-10-18"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full builds of Frankly_89 and Frankly_90 from the official transcripts and show notes, replacing the 2026-09-12 stubs (Frankly_90's back-link from Frankly_91 kept). Minted tgs:Concept.IntegratingThinkingAndFeeling and tgs:Concept.WhatCantWontMightHappen, with lens tags and thinkr:complements bridges from tgs:Concept.HeartWillMind and tgs:Concept.ImpossibleToHard. Notes added to tgs:Concept.AggregateProbability, tgs:Concept.EnergyAdditionsNotTransitions and tgs:Concept.ThingsOfValueThroughTheBottlenecks. Back-links on all 8 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_84_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_84_ShareYourStory ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from MJSullivan's transcript and description, with dates and the submission link from the episode page, replacing the 2026-09-12 stub. No concepts minted, no references."@en ;
+    .
+
 tgs:RevisionEvent.TGS_227_Stub a thinkr:RevisionEvent ;
     thinkr:affects tgs:Interview.TGS_227_SalMercogliano ;
     thinkr:revisionDate "2026-09-12"^^xsd:date ;

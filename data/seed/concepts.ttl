@@ -36,7 +36,9 @@ tgs:Concept.ComplexityCollapse a thinkr:Concept,
     dcterms:subject tgs:Subject.OvershootAndLimits ;
     skos:definition "The idea that societies invest in increasing complexity (institutions, specialization, infrastructure) to solve problems, but complexity carries rising energy/resource costs with diminishing returns — eventually making collapse (a rapid loss of complexity) a rational, if painful, adaptive response rather than an aberration."@en ;
     skos:prefLabel "Complexity and Collapse"@en ;
-    thinkr:influencedBy tgs:Persona.JosephTainter .
+    thinkr:influencedBy tgs:Persona.JosephTainter ;
+    thinkr:definedIn tgs:Work.TheCollapseOfComplexSocieties ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional .
 
 tgs:Concept.DiscountRatesAndPresentBias a thinkr:Concept,
         owl:NamedIndividual ;
@@ -131,7 +133,9 @@ tgs:Concept.LimitsToGrowth a thinkr:Concept,
     skos:definition "Reference to the 1972 Club of Rome-commissioned study modeling interactions between population, industrialization, pollution, food production, and resource depletion, projecting overshoot-and-decline dynamics on multi-decade timescales — a direct intellectual predecessor to Hagens' framework."@en ;
     skos:prefLabel "Limits to Growth"@en ;
     thinkr:influencedBy tgs:Persona.DennisMeadows, tgs:Persona.DonellaMeadows ;
-    thinkr:relatesTo tgs:Persona.GayaHerrington .
+    thinkr:relatesTo tgs:Persona.GayaHerrington ;
+    thinkr:definedIn tgs:Work.LimitsToGrowth1972 ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical .
 
 tgs:Concept.Metacrisis a thinkr:Concept,
         owl:NamedIndividual ;
@@ -297,7 +301,9 @@ tgs:Concept.TheSenecaEffect a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:prefLabel "The Seneca Effect"@en ;
     skos:definition "The observation that complex systems tend to grow slowly but collapse rapidly — named after the Roman philosopher Seneca's own observation that fortune grows slowly but ruin is swift. Developed by Ugo Bardi as a general model for why decline, once it starts, tends to be much faster than the growth that preceded it."@en ;
-    thinkr:influencedBy tgs:Persona.UgoBardi .
+    thinkr:influencedBy tgs:Persona.UgoBardi ;
+    thinkr:definedIn tgs:Work.TheSenecaEffect ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical .
 
 tgs:Concept.LandscapeOfPossibleFutures a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
     dcterms:source <https://www.thegreatsimplification.com> ;
@@ -522,6 +528,8 @@ tgs:Concept.DefaultModeNetwork a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "The brain-region network active during self-referential processing, theory of mind, mind-wandering, and mental time travel — anti-correlated with the task-positive network (TPN), which handles direct engaged attention. Chronic DMN dominance is measurably linked to reduced hippocampal grey matter, higher anxiety/depression, and diminished sensory processing."@en ;
     dcterms:subject tgs:Subject.SystemsScience ;
     skos:scopeNote "Only the graph's second real citation of DMN research — tgs:Interview.TGS_191_TaylorGuthrie is the first, explicitly named in Frankly_143's own transcript as 'the only prior TGS coverage.' The Task Positive Network (TPN), DMN's real anti-correlated partner, is deliberately folded into this definition rather than minted separately this pass."@en ;
+    thinkr:definedIn tgs:Work.ADefaultModeOfBrainFunction ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.FutureCapture a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
@@ -652,7 +660,7 @@ tgs:Concept.SupernormalStimuli a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:definition "Nate's own real, recurring teaching concept: a modern invention or artifact that hijacks ancestral, evolved brain circuitry in a deleterious, maladaptive way relative to the environment that circuitry originally evolved for — vastly exceeding, in scale or intensity, anything the ancestral environment could have produced. Nate's own real, established example is money itself, particularly the US dollar; in a real, direct extension made during a conversation with Chuck Watson, he proposes nuclear weapons as an even larger supernormal stimulus, given their real, many-orders-of-magnitude greater destructive scale relative to any weapon available in humanity's tribal past."@en ;
     skos:prefLabel "Supernormal Stimuli"@en ;
-    skos:scopeNote "Real, foundational concept underlying Nate's own recurring teaching material, directly extended from money to nuclear weapons during TGS_4's real, chronologically third conversation with Chuck Watson (TGS_17)."@en ;
+    skos:scopeNote "Real, foundational concept underlying Nate's own recurring teaching material, directly extended from money to nuclear weapons during TGS_4's real, chronologically third conversation with Chuck Watson (TGS_17). In Frankly_51 (December 2023) Nate's example is fans in the box seats at a football game watching their phones instead of the game, and he expects AI to 'exponentially increase that.'"@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
@@ -788,6 +796,7 @@ tgs:Concept.Intellectology a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Intellectology"@en ;
     skos:definition "Real, formal field of study proposed by Roman Yampolskiy (already built), first named in his own 2015 paper tgs:Work.TheSpaceOfPossibleMindDesigns (already built): the deliberately human-decentered study of the full, real space of possible minds — biological, artificial, uploaded, or otherwise — treating all minds as instances of software and examining formal properties of that space (its real, proven infinitude, and the size and representational complexity individual minds can take), rather than starting from human cognition as the default reference point. Directly, explicitly named by Nate in TGS_233 (already built) during his real, direct conversation with Yampolskiy."@en ;
     skos:scopeNote "Real, independently corroborated field, not a one-off coinage: directly built upon by other researchers (Ziesche and Yampolskiy's own 2016 'Artificial Fun' paper explicitly frames itself as contributing to 'the field of intellectology'), and expanded by Yampolskiy himself in a real, later 2023 treatment, 'Taxonomies of Intelligence: A Comprehensive Guide to the Universe of Minds.' Real, direct intellectual lineage: builds explicitly on Aaron Sloman's 1984 paper 'The Structure of the Space of Possible Minds,' extending Sloman's own real, original call for an interdisciplinary description of mind-space into a formally named field with its own open problems."@en ;
+    thinkr:definedIn tgs:Work.TheSpaceOfPossibleMindDesigns ;
     .
 
 tgs:Concept.WhatWouldChangeMyMind a thinkr:Concept, owl:NamedIndividual ;
@@ -863,7 +872,7 @@ tgs:Concept.RocksInTheRiver a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:prefLabel "Rocks in the River"@en ;
     skos:definition "Nate's own real, direct metaphor, originating in Frankly-88 ('Snow, the Singularity, and Rocks in the River') and independently confirmed by RR-26's own real citation of it months later: rather than trying to reform the current system directly, cultivate a small, real number of psychologically prepared, grounded individuals within communities who can act as stabilizing anchors -- literal rocks -- slowing the current as broader systems destabilize around them, allowing new capacity to accumulate in their lee the way sediment gathers behind a real rock in a real river. Directly recurs in Frankly-130 as Nate's own closing description of where the platform's actual, real work is now shifting -- local coordination and ecological preparedness, not further wide-boundary commentary."@en ;
-    skos:scopeNote "Added 2026-10-18: Nate already uses the image in Frankly_82 (January 2025), two months before Frankly-88, as a practice of local resilience -- 'consider being a rock in the river': having roots so as not to be swept away when things get tougher, being able to help others, 'and if there's enough of you might be able to redirect the water itself.' Frankly-88 is where it becomes a titled theme."@en ;
+    skos:scopeNote "Added 2026-10-18: Nate already uses the image in Frankly_82 (January 2025), two months before Frankly-88, as a practice of local resilience -- 'consider being a rock in the river': having roots so as not to be swept away when things get tougher, being able to help others, 'and if there's enough of you might be able to redirect the water itself.' Frankly-88 is where it becomes a titled theme. Earliest in the graph: Frankly_52 (January 2024) closes, 'we need more humans acting as rocks in the river as anchors towards this cultural change' (tgs:Concept.VerticalBehavioralStack)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
@@ -971,7 +980,9 @@ tgs:Concept.EnergyAdditionsNotTransitions a thinkr:Concept, owl:NamedIndividual 
     dcterms:subject tgs:Subject.EnergySystems ;
     skos:prefLabel "Energy Additions, Not Transitions"@en ;
     skos:definition "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en ;
-    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237."@en ;
+    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237. Nate's phrasing in Frankly_90 (April 2025): 'there has been no green revolution, only a green addition.'"@en ;
+    thinkr:definedIn tgs:Work.EnergyTransitionsOrAdditions ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
     .
 
 tgs:Concept.EnergyGrowthRateDependence a thinkr:Concept, owl:NamedIndividual ;
@@ -1010,6 +1021,8 @@ tgs:Concept.LogicOfSeparation a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "Samantha Sweetwater's framing (TGS_202; developed in tgs:Work.TrueHuman) of what underlies the metacrisis: a world structured according to 'the logic of separation,' the idea that anything can be separated from anything else -- ultimately a species separating itself from the Gaian processes that made it. She maps it across five domains: (1) an evolutionary age -- a neutral, Gaian epoch in which a species complex enough to tell stories and build technology differentiates a sense of self from the biosphere, punctuated by agriculture, fiat currency and religions that export the divine from place, and culminating in the Anthropocene, with Thomas Berry's Ecozoic or the Symbiocene as what might follow; (2) stories that reify separation, such as Manifest Destiny or humans at the top of an evolutionary pyramid; (3) structures that reify it, such as houses whose walls don't breathe, monocropping, or reducing climate to a single carbon metric; (4) game-theoretic separation -- a growth-dependent, GDP-measured economy whose incentives require people to cut themselves off from what they feel; and (5) ideologies of dominion, particularly patriarchy and racism, which organize power in ways that block a sense of shared belonging. Its opposites are interdependence (a fact of flows of matter, energy and communication) and interbeing (Thich Nhat Hanh's term for the felt, interior recognition of shared reality)."@en ;
     thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
     skos:scopeNote "Sweetwater credits Daniel Schmachtenberger's TGS discussion of the age of separation (TGS_20) for mapping the historical sequence; the five-domain structure is hers. She notes the five domains are not equally charged: the first she treats as neutral, the fifth as 'the edgy zone.' Related: tgs:Concept.Metacrisis."@en ;
+    thinkr:definedIn tgs:Work.TrueHuman ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.PowerOfLifeVsPowerOverLife a thinkr:Concept, owl:NamedIndividual ;
@@ -1018,6 +1031,8 @@ tgs:Concept.PowerOfLifeVsPowerOverLife a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "A distinction central to Samantha Sweetwater's tgs:Work.TrueHuman, discussed in TGS_202. Power over life is oriented to narrow goals and discrete objectives -- instrumentalizing work, generating profit, gaining optionality -- without caring for the costs it externalizes, whether physical, mental, emotional or ecological. The power of life is already present everywhere: breathing, a plant exhaling, the pulse of blood, cognition, a mutually meaningful conversation. Her question for each person is how to participate in processes that bind power over life so that the power of life 'wins the game' -- citing Daniel Schmachtenberger's argument that, with existential technology, an unbound power-over-life game becomes omni-lose. Practical forms she offers include withdrawing attention from power games and multiplying non-transactional acts of reciprocity."@en ;
     thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
     skos:scopeNote "Nate says he ends many of his recent presentations with a chessboard image (factories versus trees) captioned 'power versus life?', and in TGS_202 he maps the distinction onto his own framing: the economic superorganism (tgs:Concept.Superorganism), the maximum power principle (tgs:Concept.MaximumPowerPrinciple) and the outsized influence of dark-triad personalities (tgs:Concept.DarkTriad; Frankly_108). Sweetwater agrees that binding dark-triad influence is one domain of the question. Close to, but distinct from, Nate's own tgs:Concept.InServiceOfLife."@en ;
+    thinkr:definedIn tgs:Work.TrueHuman ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
 tgs:Concept.KinshipJourney a thinkr:Concept, owl:NamedIndividual ;
@@ -1025,6 +1040,8 @@ tgs:Concept.KinshipJourney a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "The Kinship Journey"@en ;
     skos:definition "Samantha Sweetwater's term (TGS_202; tgs:Work.TrueHuman) for what she describes as an epochal shift in the primary narrative of personal development, away from the hero's journey (tgs:Concept.HerosJourney). The hero's journey begins when you realize you need to understand yourself; the kinship journey begins when you realize that disconnection is the problem -- which she links to crises of addiction and loneliness, climate anxiety, political distress, and executives realizing their value chains are 'participating in the end of the world.' It is the recognition that a life cannot be meaningful unless you find how you are part of the ecology, in service to something larger than yourself. She frames it as a counter to hyper-individualism, noting that most indigenous societies valued individual sovereignty without treating it as the only thing that mattered."@en ;
     skos:scopeNote "Sweetwater credits Dan Siegel's description of a shift in personal development from 'me' to 'we' ('MWe'; not built in this graph). In TGS_202 Nate challenges it with multilevel selection (David Sloan Wilson and E.O. Wilson: selfish individuals beat cooperators within groups, cooperative groups beat selfish ones); her answer is that insecurity underlies the emergence of fascism, and that security lies more in the 'we' than in the 'me.'"@en ;
+    thinkr:definedIn tgs:Work.TrueHuman ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.HerosJourney a thinkr:Concept, owl:NamedIndividual ;
@@ -1035,6 +1052,8 @@ tgs:Concept.HerosJourney a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://www.jcf.org/learn/joseph-campbell-heros-journey>, <https://en.wikipedia.org/wiki/Hero%27s_journey> ;
     skos:scopeNote "Minted 2026-10-10 because Samantha Sweetwater names it in TGS_202 as the dominant narrative of personal development that her tgs:Concept.KinshipJourney is meant to succeed. Her one-line characterization there -- the hero's journey 'begins when you realize that you need to understand yourself' -- is her reading of it as a story of individual self-development; Campbell's own first stage is the call to adventure. Noted criticisms: folklorists such as Alan Dundes and Barre Toelken argue Campbell selected stories that fit the model; others call it Eurocentric and masculine-centered, prompting alternatives such as Maureen Murdock's The Heroine's Journey (1990). Source work: tgs:Work.TheHeroWithAThousandFaces."@en ;
     thinkr:influencedBy tgs:Persona.JosephCampbell ;
+    thinkr:definedIn tgs:Work.TheHeroWithAThousandFaces ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.WalrusMovementBlindspots a thinkr:Concept, owl:NamedIndividual ;
@@ -1202,6 +1221,8 @@ tgs:Concept.EpigeneticLandscape a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://journals.biologists.com/dev/article/152/14/dev204617/368764/From-genes-to-patterns-five-key-dynamical-systems> ;
     thinkr:influencedBy tgs:Persona.ConradWaddington ;
     skos:scopeNote "Minted 2026-10-13 as the external concept behind tgs:Concept.LandscapeOfPossibleFutures, which is Nate's reframing of it for societies."@en ;
+    thinkr:definedIn tgs:Work.TheStrategyOfTheGenes ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
     .
 
 tgs:Concept.AlternativeStableStates a thinkr:Concept, owl:NamedIndividual ;
@@ -1219,6 +1240,8 @@ tgs:Concept.EscalationTrap a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://escalationtrap.substack.com/> ;
     thinkr:influencedBy tgs:Persona.RobertPape ;
     skos:scopeNote "Minted 2026-10-13 for TGS_235. Pape names his running Substack analysis after it (tgs:Work.EscalationTrapSubstack). Related: tgs:Concept.SecondPrecisionRevolution (the means by which Iran gained power in stage two), tgs:Concept.PunishmentStrategy (why escalation by punishment deepens the trap)."@en ;
+    thinkr:definedIn tgs:Work.EscalationTrapSubstack ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic ;
     .
 
 tgs:Concept.SecondPrecisionRevolution a thinkr:Concept, owl:NamedIndividual ;
@@ -1237,6 +1260,8 @@ tgs:Concept.PunishmentStrategy a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://cpost.uchicago.edu/publications/bombing_to_win_air_power_and_coercion_in_war> ;
     thinkr:influencedBy tgs:Persona.RobertPape ;
     skos:scopeNote "Minted 2026-10-13 for TGS_235. Nate's on-air gloss, '5D reverse spite,' links it to tgs:Concept.RelativeFitnessSpiteFramework: the punisher harms itself most over time. Pape's related 1997 article tgs:Work.WhyEconomicSanctionsDoNotWork applies the same logic to sanctions."@en ;
+    thinkr:definedIn tgs:Work.BombingToWin ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic ;
     .
 
 tgs:Concept.OffshoreBalancing a thinkr:Concept, owl:NamedIndividual ;
@@ -1260,7 +1285,7 @@ tgs:Concept.AerosolMasking a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Aerosol Masking (and Unmasking)"@en ;
     skos:definition "The cooling effect of air pollution, chiefly sulfur dioxide, which reflects sunlight directly and seeds bright low clouds, hiding part of the warming greenhouse gases have already caused; cleaning up the pollution 'unmasks' that warming. In TGS_236 Zeke Hausfather says aerosols have masked roughly a third of historical warming (the IPCC best estimate is about 0.5°C, range 0.22-0.96°C), that global SO2 emissions are down about 40%, China's 75% and shipping's about 80% after the 2020 IMO low-sulfur fuel rule, and that in his estimate nearly all the recent acceleration in warming, from about 0.2 to about 0.3°C per decade, comes from these cuts. Shipping's cuts matter more than their share because ships pollute otherwise clean marine air. Because high-sensitivity models need high masking to match observations, the size of the effect is tied to how much future warming to expect. He still prefers clean air, given millions of premature deaths a year from air pollution."@en ;
     dcterms:source <https://www.carbonbrief.org/explainer-how-human-caused-aerosols-are-masking-global-warming> ;
-    skos:scopeNote "Minted 2026-10-13 for TGS_236. The same topic was the focus of Nate's earlier conversation with Leon Simons (tgs:Interview.TGS_105_LeonSimons), referenced from TGS_236, which had no concept for it. Related: tgs:Concept.EarthEnergyImbalance, tgs:Concept.ClimateSensitivity."@en ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_236. The same topic was the focus of Nate's earlier conversation with Leon Simons (tgs:Interview.TGS_105_LeonSimons), referenced from TGS_236, which had no concept for it. Related: tgs:Concept.EarthEnergyImbalance, tgs:Concept.ClimateSensitivity. In Frankly_51 (December 2023), citing James Hansen and Leon Simons (tgs:Work.GlobalWarmingInThePipeline2023), Nate expects El Niño plus reduced aerosol masking to add about half a degree, so that by summer 2024 'we might for a month or so see 2 degrees Celsius'; as far as this graph records, monthly anomalies in 2024 peaked well below that."@en ;
     .
 
 tgs:Concept.ZeroEmissionsCommitment a thinkr:Concept, owl:NamedIndividual ;
@@ -1322,6 +1347,8 @@ tgs:Concept.DividedBrain a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://channelmcgilchrist.com/hemisphere-theory/> ;
     thinkr:influencedBy tgs:Persona.IainMcGilchrist ;
     skos:scopeNote "Minted 2026-10-13 for TGS_217, though it is the core of all three McGilchrist episodes (tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Interview.TGS_165_WisdomOverPower) and is cited in Frankly_161; no concept for it existed before. Related: tgs:Concept.Presence, tgs:Concept.LogicOfSeparation."@en ;
+    thinkr:definedIn tgs:Work.TheMasterAndHisEmissary, tgs:Work.TheMatterWithThings ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.SoftFeudalism a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
@@ -1610,6 +1637,8 @@ tgs:Concept.MoralAmbition a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://www.moralambition.org/principles> ;
     thinkr:influencedBy tgs:Persona.RutgerBregman ;
     skos:scopeNote "Minted 2026-10-13 for TGS_195. Related: tgs:Concept.RedefiningSuccess, tgs:Concept.MoralCircleExpansion, tgs:Concept.MaximizeImpactNotMinimizeFootprint, tgs:PersonalIntervention.CoordinateSmallGroup (his advice to find a small group and meet in person)."@en ;
+    thinkr:definedIn tgs:Work.MoralAmbition ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
 tgs:Concept.RedefiningSuccess a thinkr:Concept, owl:NamedIndividual ;
@@ -1816,6 +1845,8 @@ tgs:Concept.CivilizationalOptionality a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://longnow.org/ideas/civilizational-optionality-indy-johar-long-now/>, <https://optionality.darkmatterlabs.org/> ;
     thinkr:influencedBy tgs:Persona.IndyJohar ;
     skos:scopeNote "Minted 2026-10-15 for TGS_238. The 350 million dollar figure is from the show notes (xCO's 'ask'), not stated on air. Related: tgs:Concept.CoupledSystemicRisks, tgs:Concept.CivilizationalSharpeRatio, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.RobustActions, tgs:Concept.LandscapeOfPossibleFutures."@en ;
+    thinkr:definedIn tgs:Work.CivilizationalOptionalityEssay ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
     .
 
 tgs:Concept.CoupledSystemicRisks a thinkr:Concept, owl:NamedIndividual ;
@@ -1933,7 +1964,7 @@ tgs:Concept.SevenRungsOfARunawaySystem a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Seven Rungs of a Runaway System (the Behavioral Ladder)"@en ;
     skos:definition "Nate's own named framework (Frankly_162), which he calls a political-science-informed behavioral ladder, explaining how the economic superorganism keeps its metabolism without anyone intending harm. From top to bottom: (7) BIOLOGY -- the hidden rung, ancient reward circuits, relative status, steep future discounting and the use of all available energy, the only rung that cannot be changed; (6) WORLDVIEW -- stories held so deeply they do not feel like stories, where energy blindness lives; (5) VALUES AND STATUS SIGNALS -- the cultural scoreboard humans copy; (4) RULES AND INSTITUTIONS -- value judgments frozen into law, such as fiduciary duty; (3) INCENTIVES -- the gradients rules create, where concentrated interests out-organize diffuse ones, talent migrates to rent-seeking, and election clocks discount the future; (2) INFORMATION -- what gets measured gets managed, filtered on the supply side and rationally ignored on the demand side; (1) EVENTS AND BEHAVIOR -- the daily news, where nearly all attention lives. Two arrows run alongside: leverage for change rises going up, speed of change rises going down, so attention is saturated exactly where leverage is smallest. Nate's diagnostic question for any project or argument: which rung is it operating on and trying to change?"@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/162-7-rungs-of-a-runaway-system> ;
-    skos:scopeNote "Minted 2026-10-16 for Frankly_162. In the episode the rungs are presented top-down as six, with biology added at the end as 'the missing rung'; the numbering here is this graph's. Each rung is illustrated with a gallon of gasoline. Related: tgs:Concept.LeveragePoints (Meadows, whose ordering it rhymes with), tgs:Concept.SevenDialsOfInstitutionalPsychopathy (Frankly_157, which sits mostly on the rules and incentives rungs), tgs:Concept.RewritingTheRulesOfTheSuperorganism (Schoonover, TGS_183, a parallel argument for changing the rules of interaction) and tgs:Concept.ReAimingTheStatusDrive (the episode's conclusion). An early form appears in Frankly_82 (January 2025), where Nate mentions 'a little visualization showing the hierarchy of things that contribute to decisions in our society,' with AI and geopolitics at the top and the well-being of citizens and the environment at the bottom."@en ;
+    skos:scopeNote "Minted 2026-10-16 for Frankly_162. In the episode the rungs are presented top-down as six, with biology added at the end as 'the missing rung'; the numbering here is this graph's. Each rung is illustrated with a gallon of gasoline. Related: tgs:Concept.LeveragePoints (Meadows, whose ordering it rhymes with), tgs:Concept.SevenDialsOfInstitutionalPsychopathy (Frankly_157, which sits mostly on the rules and incentives rungs), tgs:Concept.RewritingTheRulesOfTheSuperorganism (Schoonover, TGS_183, a parallel argument for changing the rules of interaction) and tgs:Concept.ReAimingTheStatusDrive (the episode's conclusion). An early form appears in Frankly_82 (January 2025), where Nate mentions 'a little visualization showing the hierarchy of things that contribute to decisions in our society,' with AI and geopolitics at the top and the well-being of citizens and the environment at the bottom. Not to be confused with Nate's earlier seven-layer bodily model, tgs:Concept.VerticalBehavioralStack (Frankly_52), which also ranks lower layers as more powerful than cognition."@en ;
     .
 
 tgs:Concept.ReAimingTheStatusDrive a thinkr:Concept, owl:NamedIndividual ;
@@ -1959,6 +1990,8 @@ tgs:Concept.PublicChoiceTheory a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "The school of political economy founded by James Buchanan and Gordon Tullock in The Calculus of Consent (1962), as Nate draws on it in Frankly_162. Its core assumption, behavioral symmetry, is that the person at the ballot box, the person at the government desk and the person at the grocery-store register are the same creature: nobody grows a halo on entering public office. So when markets fail, government -- made of the same people facing their own versions of the same pressures -- fails too, in its own predictable ways, and nobody stands outside the system whose job is to fix it. Buchanan's point, for which he received the 1986 Nobel Prize, is that durable change means changing the rules of the game rather than swapping the players, since new players inherit the old rules. Nate calls this his big insight from the research: it reaches the superorganism argument from individual incentives rather than from emergence."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/162-7-rungs-of-a-runaway-system> ;
     skos:scopeNote "Minted 2026-10-16 for Frankly_162, after a viewer comment on Frankly_153 suggested Buchanan and Tullock. Its offshoots used in the same episode are minted separately: tgs:Concept.RentSeeking and tgs:Concept.RationalIgnorance. Related: tgs:Concept.RewritingTheRulesOfTheSuperorganism (Schoonover, TGS_183), which reaches 'change the rules' from complex-systems science."@en ;
+    thinkr:definedIn tgs:Work.TheCalculusOfConsent ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Institutional ;
     .
 
 tgs:Concept.RentSeeking a thinkr:Concept, owl:NamedIndividual ;
@@ -1984,6 +2017,8 @@ tgs:Concept.LeveragePoints a thinkr:Concept, owl:NamedIndividual ;
     dcterms:source <https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/> ;
     thinkr:influencedBy tgs:Persona.DonellaMeadows ;
     skos:scopeNote "Minted 2026-10-16 for Frankly_162, the first episode built here that names Meadows's leverage points directly. Source essay: tgs:Work.LeveragePointsPlacesToIntervene."@en ;
+    thinkr:definedIn tgs:Work.LeveragePointsPlacesToIntervene ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
     .
 
 tgs:Concept.ReverseDominanceHierarchy a thinkr:Concept, owl:NamedIndividual ;
@@ -1992,6 +2027,8 @@ tgs:Concept.ReverseDominanceHierarchy a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "Anthropologist Christopher Boehm's finding that humans carry, alongside the drive to climb in status, an anti-dominance instinct: the coalition behavior by which our ancestors kept would-be alphas in check for hundreds of thousands of years, keeping hunter-gatherer bands egalitarian. Nate (Frankly_162) uses it as the key caveat to his biology rung: biology is set, but how it manifests is not; both programs are in everyone, and which one is expressed is decided on the lower rungs of the ladder. This is what makes re-aiming the status drive (tgs:Concept.ReAimingTheStatusDrive) possible."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/162-7-rungs-of-a-runaway-system> ;
     skos:scopeNote "Minted 2026-10-16 for Frankly_162. Nate says he learned of Boehm from TGS viewers. Source book: tgs:Work.HierarchyInTheForest. Related: tgs:Concept.DarkTriad, tgs:Concept.SevenDialsOfInstitutionalPsychopathy."@en ;
+    thinkr:definedIn tgs:Work.HierarchyInTheForest ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
 tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact a thinkr:Concept, owl:NamedIndividual ;
@@ -2116,6 +2153,7 @@ tgs:Concept.TechnologyIsNotValuesNeutral a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Organization.ConsilienceProject, tgs:Persona.DanielSchmachtenberger ;
     skos:scopeNote "Minted 2026-10-18 for TGS_71, whose show notes link the paper twice (the plow passage and Daniel's citation of it). Daniel first tells the plow story on TGS in Bend Not Break Part 2 (TGS_20), while the paper was in press, crediting Ken Wilber's Sex, Ecology, Spirit; there he calls tech 'values affective' rather than neutral, net positive or net negative, adds further cultural outputs that historians attribute to the plow (patriarchy and male gods, surplus and private property, formal marriage, class systems), the printing press's role in the Reformation and democracy, and the design response, tgs:Concept.AxiologicalDesign. Source paper: tgs:Work.TechnologyIsNotValuesNeutral. Related: tgs:Concept.MultipolarTrap, tgs:Concept.NaiveProgress. In TGS_126 Daniel adds that a tool changes attention before it changes behavior: walking in a forest with a camera, a gun or an axe changes what one perceives, so 'the externalities of tech are not only physical, they're psychosocial'; and that domestication, dominion religions and slavery arose together."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.PsychologicalInner ;
+    thinkr:definedIn tgs:Work.TechnologyIsNotValuesNeutral ;
     .
 
 tgs:Concept.AIAsMetacrisisAccelerant a thinkr:Concept, owl:NamedIndividual ;
@@ -2220,6 +2258,7 @@ tgs:Concept.PositiveSumInGroupNegativeSumToNature a thinkr:Concept, owl:NamedInd
     thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
     skos:scopeNote "Minted 2026-10-18 for TGS_42. A correction to the optimistic progress narrative (the show notes also link a critique of the Pinker and Rosling 'new optimists'); see tgs:Concept.NaiveProgress (TGS_71). Source work: tgs:Work.Nonzero. Related: tgs:Concept.MultipolarTrap, tgs:Concept.RecursiveAbstraction, tgs:Concept.LocalizedSyntropySystemicEntropy."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Biophysical ;
+    thinkr:relatesTo tgs:Concept.NonZeroSumness ;
     .
 
 tgs:Concept.LocalizedSyntropySystemicEntropy a thinkr:Concept, owl:NamedIndividual ;
@@ -2277,6 +2316,7 @@ tgs:Concept.OneMarshmallowRewardCircuits a thinkr:Concept, owl:NamedIndividual ;
     thinkr:complements tgs:Concept.SupernormalStimuli ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     thinkr:complements tgs:Concept.RichInSocialCapital ;
+    thinkr:complements tgs:Concept.DopamineHijackedCulture ;
     .
 
 tgs:Concept.PrematureCertainty a thinkr:Concept, owl:NamedIndividual ;
@@ -2311,6 +2351,8 @@ tgs:Concept.FragmentedConsciousness a thinkr:Concept, owl:NamedIndividual ;
     skos:scopeNote "Minted 2026-10-18 for TGS_31; Daniel returns to Bohm and Krishnamurti in TGS_50, where fragmented consciousness is what 'could not steward exponential power.' Bohm's book: tgs:Work.WholenessAndTheImplicateOrder. Daniel pairs it with Bhagavad Gita 2.48 ('established in yoga, perform action') and 'seek ye first the kingdom' as older encodings of acting from wholeness. Nate's response: perhaps growing the number of people who perceive themselves as part of the whole matters more than refining the metanarrative. Related: tgs:Concept.IntelligenceBoundByWisdom (TGS_71), tgs:Concept.HolisticExternalityAnalysis, tgs:Concept.IAmBecauseWeAre. In TGS_126 Daniel cites Vanessa Andreotti's chief (tgs:Work.HospicingModernity): the core of colonialism is not taking land or abusing people, which are epiphenomena, but believing there are separable things; he adds that English is mostly nouns, while Whitehead's process philosophy treats a tree as a verb, a live process."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     thinkr:complements tgs:Concept.ShadowOfTheSuperorganism ;
+    thinkr:complements tgs:Concept.VerticalBehavioralStack ;
+    thinkr:definedIn tgs:Work.WholenessAndTheImplicateOrder ;
     .
 
 tgs:Concept.DiscretePhaseShift a thinkr:Concept, owl:NamedIndividual ;
@@ -2343,6 +2385,7 @@ tgs:Concept.HeartWillMind a thinkr:Concept, owl:NamedIndividual ;
     skos:scopeNote "Minted 2026-10-18 for TGS_31, but Daniel first lays it out in Part 2 (TGS_20) as 'head-heart-will' -- will or agency, heart or values, mind or strategic insight -- from watching caring activists lose as a child; there the third failure (narrow values with will and mind) is the hyper-agent (tgs:Concept.HyperAgents), and all three with wide values are 'a minimum necessary requirement for people that can help turn the ship around.' In TGS_31 Daniel adds, quoting Bertrand Russell with uncertain attribution, that one studies philosophy less for its immediate use than for what it does to you, so the frameworks help even with 'the local PTA issue.' Related: tgs:Concept.PostTragic, tgs:Concept.EcologyOfTheoriesOfChange (TGS_50), tgs:Concept.HighTouchGrounding (TGS_50)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
     thinkr:complements tgs:Concept.HealingBeforeEngagement ;
+    thinkr:complements tgs:Concept.IntegratingThinkingAndFeeling ;
     .
 
 tgs:Concept.HyperAgents a thinkr:Concept, owl:NamedIndividual ;
@@ -2422,6 +2465,7 @@ tgs:Concept.ImpossibleToHard a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     thinkr:complements tgs:Concept.NamedSolutionsDrawCounterResponse ;
     thinkr:complements tgs:Concept.AggregateProbability ;
+    thinkr:complements tgs:Concept.WhatCantWontMightHappen ;
     .
 
 tgs:Concept.ExosomaticEnergy a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
@@ -2453,6 +2497,7 @@ tgs:Concept.TwoCategoriesOfTechnology a thinkr:Concept, thinkr:HagensConcept, ow
     thinkr:influencedBy tgs:Persona.NateHagens ;
     skos:scopeNote "Minted 2026-10-18 for TGS_5; the show notes link the Reality Blind page on two categories of technology. Related: tgs:Concept.JevonsParadox, tgs:Concept.GeneralizedJevonsParadox (Daniel's extension, TGS_20), tgs:Concept.JevonsDividend, tgs:Concept.EnergyBlindness."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    thinkr:definedIn tgs:Work.RealityBlind ;
     .
 
 tgs:Concept.JevonsDividend a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
@@ -2494,6 +2539,7 @@ tgs:Concept.TragedyOfTheCommons a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Persona.GarrettHardin ;
     skos:scopeNote "Minted 2026-10-18, after MJSullivan noted that the objection to tgs:Concept.Untax in TGS_5 (whoever taxes non-renewable inputs alone falls behind) is a tragedy of the commons. The global atmosphere and non-renewable stocks are the commons; Daniel's version adds a power dimension Hardin's does not stress -- the restrained party loses ground to rivals economically and militarily, which is the arms-race side of the same trap. Named in TGS_20 and TGS_50 (whose show notes link Hardin's paper); Elinor Ostrom's work on commons governance is the classic counterpoint. Related: tgs:Concept.MultipolarTrap (the general case), tgs:Concept.GlobalGovernanceWithoutGlobalGovernment (the binding Daniel calls for), tgs:Concept.EpistemicCommons. In TGS_126 Daniel cites a Consilience paper on perverse asymmetries describing the same gradient: the benefit of cutting one tree is large and obvious to me, my share of the harm tiny, yet everyone doing it ensures the harm. In Frankly_86 Nate names it as one of three kinds of collective action problem (tgs:Concept.CollectiveActionProblem) and quotes his and DJ White's Reality Blind on fisheries: fishers see themselves as good stewards and blame foreign fleets, 'but every fleet is someone's foreign fleet' -- the same dynamic, he says, as ever more financial claims on a finite biophysical reality."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic ;
+    thinkr:definedIn tgs:Work.TragedyOfTheCommons1968 ;
     .
 
 tgs:Concept.AuthenticProgress a thinkr:Concept, owl:NamedIndividual ;
@@ -2505,6 +2551,7 @@ tgs:Concept.AuthenticProgress a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Persona.DanielSchmachtenberger, tgs:Organization.ConsilienceProject ;
     skos:scopeNote "Minted 2026-10-18 for TGS_126. The counterpart of tgs:Concept.NaiveProgress (TGS_71). Practices Daniel names toward it: ask whether something is a problem at all and remove its causes (tgs:Concept.ProblemSolvingAsRacket), yellow team before scaling (tgs:Concept.YellowTeaming), shift the burden of proof to safety (tgs:Concept.PrecautionaryPrinciple), and begin with a culture of tgs:Concept.IAmBecauseWeAre. The show notes link a Noema essay on 'the disappearing art of maintenance.' Related: tgs:Concept.GameTheoreticVersusRealValue, tgs:Concept.TheLastCanToKick (Nate's version of finding fulfillment with fewer resources)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    thinkr:definedIn tgs:Work.DevelopmentInProgress ;
     .
 
 tgs:Concept.ProgressNarrativeAsApologism a thinkr:Concept, owl:NamedIndividual ;
@@ -2571,6 +2618,7 @@ tgs:Concept.GameTheoryFillsTheOughtGap a thinkr:Concept, owl:NamedIndividual ;
     thinkr:influencedBy tgs:Persona.DanielSchmachtenberger ;
     skos:scopeNote "Minted 2026-10-18 for TGS_126. The clearest statement in the graph of why Daniel treats game theory as both a description of the world and its pathology: the game-theoretic lens (thinkr:AnalyticalLensType.GameTheoretic) explains outcomes because institutions adopted it as their definition of a good choice. Daniel notes that the Greek, Vedic, Taoist and indigenous traditions did not divide subject from object this way. Related: tgs:Concept.IntelligenceBoundByWisdom, tgs:Concept.GameTheoreticVersusRealValue, tgs:Concept.FragmentedConsciousness, tgs:Work.TheoryOfGamesAndEconomicBehavior, tgs:Work.TheMasterAndHisEmissary."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.PsychologicalInner ;
+    thinkr:relatesTo tgs:Concept.GameTheory ;
     .
 
 tgs:Concept.ProblemSolvingAsRacket a thinkr:Concept, owl:NamedIndividual ;
@@ -2706,7 +2754,7 @@ tgs:Concept.AggregateProbability a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "Nate Hagens's test (Frankly_79) for single-issue efforts -- 100 percent renewables, sustainable food systems, global peace -- which each make the future better when considered alone. Viewed from a systems synthesis, many are dead ends, because every threshold that must be met has to be met together: is it physically possible, politically possible, possible under debt, war and the other horsemen, and will the major powers hold together for ten years? 'We have the capacity to build a 1,000-foot statue made out of cheese,' but what are the odds all the conditions for it are met? He prefers to reason from what is likely given that aggregate, which points to 'a world of less pretty much no matter what.' The same logic applies to how many humans will take on this conversation."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/79-the-biggest-takeaways-from-the-logic-of-the-superorganism> ;
     thinkr:influencedBy tgs:Persona.NateHagens ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_79. Typed thinkr:Concept rather than thinkr:HagensConcept: the phrase is Nate's, but the reasoning is standard probability. The show notes link the law of total probability; what Nate describes, many independent conditions all having to hold, is closer to the multiplication rule for a joint probability, under which the odds fall quickly as conditions are added. Builds on Nate's probabilistic stance (tgs:Monologue.Frankly_29_RealityProbabilityAndPerception). Daniel Schmachtenberger reaches a similar verdict on easy solutions from design criteria rather than odds (tgs:Concept.ImpossibleToHard, TGS_20), and concludes that no single theory of change suffices (tgs:Concept.EcologyOfTheoriesOfChange, TGS_50). Related: tgs:Concept.FiveHorsemenOf2020s, tgs:Concept.GreatSimplification."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_79. Typed thinkr:Concept rather than thinkr:HagensConcept: the phrase is Nate's, but the reasoning is standard probability. The show notes link the law of total probability; what Nate describes, many independent conditions all having to hold, is closer to the multiplication rule for a joint probability, under which the odds fall quickly as conditions are added. Builds on Nate's probabilistic stance (tgs:Monologue.Frankly_29_RealityProbabilityAndPerception). Daniel Schmachtenberger reaches a similar verdict on easy solutions from design criteria rather than odds (tgs:Concept.ImpossibleToHard, TGS_20), and concludes that no single theory of change suffices (tgs:Concept.EcologyOfTheoriesOfChange, TGS_50). Related: tgs:Concept.FiveHorsemenOf2020s, tgs:Concept.GreatSimplification. Frankly_90 (April 2025) makes the multiplication explicit -- 'you have to multiply all these probabilities' -- with a 500-foot cheese mouse and net zero by 2050, notes that the hurdles are not fully independent, and adds Bayesian updating of priors (tgs:Concept.WhatCantWontMightHappen)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
@@ -2757,8 +2805,9 @@ tgs:Concept.ThingsOfValueThroughTheBottlenecks a thinkr:Concept, thinkr:HagensCo
     skos:definition "The aim Nate Hagens and DJ White set out in their book The Bottlenecks of the 21st Century, restated in Frankly_81 as the darkest theme for his time-travel film: once the traveler sees that humans in large numbers, plus water, energy surplus and time, make the metabolic hierarchy of the economic superorganism inevitable -- and its peak, decline and shrinkage inevitable too -- he stops trying to prevent it and instead builds 'arks of humanity and biodiversity' that look two or three steps ahead, past climate change and the superorganism's spending of its energy bounty, to what humans and the world could be hundreds or thousands of years on. The work is to give a shot in the arm to 'those values, those morals, those species, those ecosystems, those technologies that would matter in the long run' and propel them through the coming bottlenecks."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/81-time-travel-and-the-superorganism> ;
     thinkr:influencedBy tgs:Persona.NateHagens, tgs:Persona.DJWhite ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_81, the earliest-built episode in the graph to state it; the book is tgs:Work.BottlenecksOf21stCentury, which later Franklys also cite. Related: tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MetabolicHierarchyOfTheSuperorganism (Frankly_79), tgs:Concept.InServiceOfLife."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_81, the earliest-built episode in the graph to state it; the book is tgs:Work.BottlenecksOf21stCentury, which later Franklys also cite. Related: tgs:Concept.GreatSimplification, tgs:Concept.Superorganism, tgs:Concept.MetabolicHierarchyOfTheSuperorganism (Frankly_79), tgs:Concept.InServiceOfLife. In Frankly_90 (April 2025) Nate adds the image of the bottle's walls: what can't and won't happen lie outside them, what might happen inside, and the walls narrow as energy grows scarcer and costlier (tgs:Concept.WhatCantWontMightHappen)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Biophysical ;
+    thinkr:definedIn tgs:Work.BottlenecksOf21stCentury ;
     .
 
 tgs:Concept.UnintendedConsequences a thinkr:Concept, owl:NamedIndividual ;
@@ -2777,7 +2826,7 @@ tgs:Concept.CulturalAntibodies a thinkr:Concept, thinkr:HagensConcept, owl:Named
     skos:definition "Nate Hagens's term (Frankly_91) for a culture's learned resistance to a topic because of how it was presented and packaged. Over 15 years, climate change was framed by doomsayers whose five-year predictions did not happen, and its legitimate, scary science -- which unfolds over decades and centuries -- was lumped together with solutions he calls 'systemically and biophysically naive,' from net zero to 'eat bugs and own nothing and be happy.' So 'our culture, especially in the United States, developed antibodies to these discussions': simplistic responses spread virally while the science keeps showing a perilous long-term situation, and 'we don't care and we're not doing anything about it. It's not because it isn't real, it's because how it was presented and packaged.' Peak oil met the same fate when shale and debt extended the plateau."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/91-unintended-consequences> ;
     thinkr:influencedBy tgs:Persona.NateHagens ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_91. A specific case of tgs:Concept.UnintendedConsequences. Daniel Schmachtenberger's corresponding warning is tgs:Concept.PrematureCertainty (TGS_31): catastrophic predictions, like hopeful ones, have a poor historical record, and certainty without understanding afflicts doomers too. Related: tgs:Concept.PeakOil, tgs:Concept.NamedSolutionsDrawCounterResponse (Frankly_67), tgs:Concept.SharedBroadcastPerturbation (Frankly_81)."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_91. A specific case of tgs:Concept.UnintendedConsequences. Daniel Schmachtenberger's corresponding warning is tgs:Concept.PrematureCertainty (TGS_31): catastrophic predictions, like hopeful ones, have a poor historical record, and certainty without understanding afflicts doomers too. Related: tgs:Concept.PeakOil, tgs:Concept.NamedSolutionsDrawCounterResponse (Frankly_67), tgs:Concept.SharedBroadcastPerturbation (Frankly_81). The image first appears in the graph in Frankly_51 (December 2023), where a 2 °C summer 'kicks in antibodies' in people who built their identity and reputation around it not happening (tgs:Concept.AggregateCognitiveDissonance)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
     .
 
@@ -2788,7 +2837,7 @@ tgs:Concept.HavesAndHaveNots a thinkr:Concept, thinkr:HagensConcept, owl:NamedIn
     skos:definition "Nate Hagens's reframing (Frankly_53) of the haves and the have-nots as many axes rather than one. Money and income are one -- US mean income per capita far above the median -- and so is time: today's average person uses many times the goods and services of 200 years ago, and the people of a century hence may have far less. The others: social wealth (the monetarily poor can be socially rich, and the rich isolated); skills that work with the hands and the land; physical and mental health; the attention span to go deep, which the ghost of dopamine past erodes; a voice in one's outcomes; purpose and meaning; a pro-social outlook, which the roughly 10 percent with dark-triad traits lack; and the outsized ability to change the system, held by the top few thousand people riding high on the superorganism. 'Money isn't everything after basic needs are met. Many of you might not have much money but you might be very rich in other areas, and vice versa.'"@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/53-the-haves-and-the-have-nots> ;
     thinkr:influencedBy tgs:Persona.NateHagens ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_53, whose title it is. Nate develops the social axis the following week (tgs:Concept.RichInSocialCapital, Frankly_54) and the wealth hierarchy later (tgs:Concept.ThreeTiersOfWealth, Frankly_86). Daniel Schmachtenberger's corresponding distinction is between game-theoretic and real value (tgs:Concept.GameTheoreticVersusRealValue, TGS_42): money tracks what wins, not what we value. Related: tgs:Concept.LayersOfInvisibleWealth, tgs:Concept.DarkTriad, tgs:Concept.EducatingHyperAgents."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_53, whose title it is. Nate develops the social axis the following week (tgs:Concept.RichInSocialCapital, Frankly_54) and the wealth hierarchy later (tgs:Concept.ThreeTiersOfWealth, Frankly_86). Daniel Schmachtenberger's corresponding distinction is between game-theoretic and real value (tgs:Concept.GameTheoreticVersusRealValue, TGS_42): money tracks what wins, not what we value. Related: tgs:Concept.LayersOfInvisibleWealth, tgs:Concept.DarkTriad, tgs:Concept.EducatingHyperAgents. Frankly_51 (December 2023) previews it as 'a stretching of the haves versus the have-nots' and promises 'another Frankly... on how we define haves and have-nots because there's a lot of things that we have that are not measurable in monetary or bank account terms.'"@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
@@ -2820,6 +2869,88 @@ tgs:Concept.HealingBeforeEngagement a thinkr:Concept, thinkr:HagensConcept, owl:
     skos:definition "What Nate Hagens calls 'a big change in my thinking, a big change' (Frankly_55): people need to be nourished, rested, exercised and in equilibrium as a priority before they engage with the metacrisis and the human predicament. Many treat news of oil depletion, climate, financial overshoot and geopolitics as 'a mental video game that's dopamine and cortisol' that changes neither how they live nor how they relate to their community, because the behavioral stack is out of balance and cognition is captured by limbic, enteric and reptilian systems. So 'we need to heal from the root upwards' -- nutrition, sleep, exercise, meditation, music, chanting, singing, and a friend's 'libraries of healing' where people are healed by being together. He had naively assumed that telling people the urgent predicament would make them respond; now he thinks healthy, behaviorally balanced individuals in community must come first, then the systems synthesis, integrated post-tragically with others for support, which 'empowers people to be agents of change.' Governments, philanthropists and communities should divert far more resources to healing the people around us."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/55-7-key-interventions-for-the-future> ;
     thinkr:influencedBy tgs:Persona.NateHagens ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_55, where it follows his own reset in India and his top 2024 priority of health. The behavioral stack is tgs:Monologue.Frankly_52_TheBehavioralStack; the inner costs are named later in tgs:Concept.ShadowOfTheSuperorganism (Frankly_73). Daniel Schmachtenberger's corresponding requirement is heart, will and mind together (tgs:Concept.HeartWillMind, TGS_31), and his stages of tragic and post-tragic (tgs:Concept.PostTragic) are the frame Nate uses here. Related: tgs:Concept.RichInSocialCapital, tgs:Concept.GhostOfDopaminePast."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_55, where it follows his own reset in India and his top 2024 priority of health. The behavioral stack is tgs:Monologue.Frankly_52_TheBehavioralStack; the inner costs are named later in tgs:Concept.ShadowOfTheSuperorganism (Frankly_73). Daniel Schmachtenberger's corresponding requirement is heart, will and mind together (tgs:Concept.HeartWillMind, TGS_31), and his stages of tragic and post-tragic (tgs:Concept.PostTragic) are the frame Nate uses here. Related: tgs:Concept.RichInSocialCapital, tgs:Concept.GhostOfDopaminePast. The seed is in Frankly_52 (January 2024), recorded before his reset: 'healing of our emotional states is as or more important than educating humans about more facts' (tgs:Concept.VerticalBehavioralStack)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.AggregateCognitiveDissonance a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Aggregate Cognitive Dissonance"@en ;
+    skos:definition "Nate Hagens's expectation (Frankly_51) that cognitive dissonance 'with humans in aggregate is going to increase' as the futures people attached their identities, reputations, hopes and beliefs to -- continued growth, AI, the absence of climate change -- not only fail to arrive but turn into their opposite. Faced with that, people 'adopt strange behavioral, vocal stories' rather than revise their beliefs, and he sees the pattern in many areas of the culture. An event such as a month at 2 °C of warming 'kicks in antibodies' in those who built identities around it not happening; he wonders what people who call climate change a hoax will say then."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/51-systemic-themes-for-2024> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_51. Typed thinkr:Concept rather than thinkr:HagensConcept: cognitive dissonance is Leon Festinger's theory (1957; the show notes link a general explainer); Nate's contribution is applying it to whole societies whose expected futures fail. Its cultural result is tgs:Concept.CulturalAntibodies (Frankly_91). Daniel Schmachtenberger's tgs:Concept.PrematureCertainty (TGS_31) describes the certainty that sets people up for it. Related: tgs:Concept.TerrorManagementTheory, tgs:Concept.HavesAndHaveNots."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.VerticalBehavioralStack a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Vertical Behavioral Stack"@en ;
+    skos:altLabel "The behavioral stack"@en ;
+    skos:definition "Nate Hagens's model (Frankly_52) of the human being as an evolutionary stack of seven layers -- microbiome, cells, organs, the enteric system, the reptilian system, the limbic system and cognition -- read as a behavioral stack. Each of the top four has a binary state: the enteric system, governing the homeostasis of daily routines, is stable or unstable; the reptilian system, sympathetic and parasympathetic, is at ease or in dis-ease (fight, flight or freeze); the limbic system, around the hippocampus and amygdala, is satisfied or dissatisfied and, if dissatisfied, seeks stimulation, consumption or status; cognition, our beliefs, stories and facts, is serene or confused and agitated. We assume cognition is the elephant in control; in reality it is 'the tiny little rider on the elephant,' and each lower layer has more power over behavior. So a person who is not stable, at ease and satisfied can only know about the predicament rather than know it, and more facts bring confusion or dopamine rather than change. Groups of people who are 'vertically stacked' -- stable, satisfied, 'we over me' -- could have outsized impact."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/52-the-behavioral-stack> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_52, whose title it is, and which Nate contrasts with the horizontal 'parts' of Dick Schwartz's Internal Family Systems (tgs:Persona.RichardSchwartz). The elephant and rider is Jonathan Haidt's image. Later uses: 'an imbalance in the behavioral stack' in Frankly_55 (tgs:Concept.HealingBeforeEngagement) and the Frankly_73 show notes. Not to be confused with tgs:Concept.SevenRungsOfARunawaySystem (Frankly_162), a seven-level ladder of the superorganism rather than of the body. Daniel Schmachtenberger's corresponding diagnosis is tgs:Concept.FragmentedConsciousness (TGS_31). Related: tgs:Concept.Wetware, tgs:Concept.DopamineHijackedCulture, tgs:Concept.DividedBrain."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.DopamineHijackedCulture a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Dopamine-Hijacked Culture"@en ;
+    skos:definition "Nate Hagens's claim (Frankly_52) that modern culture has let dopamine stand in for every other reward. He describes four neurotransmitter poles: dopamine and endorphin for doing -- goal-seeking, another podcast, more money, a marathon, a new product -- and serotonin and oxytocin for being. Almost everything the culture offers has made dopamine a proxy for the others, and even activities that were originally healthy have been hijacked: yoga becomes the cool outfit and flexing for attractive classmates, and sharing on social media becomes high-grading how we appear. 'Our entire culture has, in a positive feedback sort of way, become more and more dopamine hijacked,' leaving people on a seeking treadmill. His coach's counter is a 'quiver full of arrows' of alternative activities -- walking in nature, cooking with friends, singing, chanting -- to turn to when seeking."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/52-the-behavioral-stack> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_52; the show notes link explainers on dopamine, endorphins, oxytocin and serotonin. The mechanism Nate later names is tgs:Concept.GhostOfDopaminePast (Frankly_103); the stimuli are tgs:Concept.SupernormalStimuli. Daniel Schmachtenberger's corresponding account is tgs:Concept.OneMarshmallowRewardCircuits (TGS_31): the market supplies the reward without the work or the deeper nutrient. Related: tgs:Work.DopamineNation, tgs:Concept.VerticalBehavioralStack, tgs:Concept.RichInSocialCapital."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.GameTheory a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.BehavioralEconomicsAndCognition ;
+    skos:prefLabel "Game Theory"@en ;
+    skos:definition "The mathematical study of strategic interaction, in which each agent's best choice depends on what the others choose. Founded as a discipline by John von Neumann and Oskar Morgenstern in Theory of Games and Economic Behavior (1944), which formalized games, strategies, payoffs and expected utility and solved two-person zero-sum games by the minimax theorem; later extended to non-cooperative equilibria (John Nash), repeated games and evolutionary games. In this graph it is the formal background to the multipolar trap, the tragedy of the commons and Daniel Schmachtenberger's account of game-theoretic value."@en ;
+    thinkr:definedIn tgs:Work.TheoryOfGamesAndEconomicBehavior ;
+    thinkr:relatesTo tgs:Concept.MultipolarTrap, tgs:Concept.TragedyOfTheCommons, tgs:Concept.GameTheoreticVersusRealValue ;
+    skos:scopeNote "Minted 2026-10-18 in the definedIn pass, because the graph had concepts built on game theory but no concept for game theory itself. Daniel Schmachtenberger's tgs:Concept.GameTheoryFillsTheOughtGap (TGS_126) cites the 1944 book; it now relatesTo this concept. Typed thinkr:Concept, not thinkr:HagensConcept."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic ;
+    .
+
+tgs:Concept.NonZeroSumness a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Non-Zero-Sumness"@en ;
+    skos:altLabel "Non-zero-sum dynamics"@en ;
+    skos:definition "Robert Wright's thesis in Nonzero: The Logic of Human Destiny (2000) that biological and cultural evolution have a direction: over time they produce more, and more complex, non-zero-sum interactions -- relationships in which players can win or lose together rather than one gaining what the other loses -- and that this growth of mutual interdependence drives rising social complexity, from bands to chiefdoms to states to a globalized world."@en ;
+    thinkr:definedIn tgs:Work.Nonzero ;
+    thinkr:relatesTo tgs:Concept.GameTheory ;
+    skos:scopeNote "Minted 2026-10-18 in the definedIn pass. Daniel Schmachtenberger's tgs:Concept.PositiveSumInGroupNegativeSumToNature (TGS_42) cites Wright and adds the catch: cooperation that is positive-sum within a group can be negative-sum toward out-groups and nature; it now relatesTo this concept. Typed thinkr:Concept, not thinkr:HagensConcept."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic ;
+    .
+
+tgs:Concept.ProgressTrap a thinkr:Concept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.OvershootAndLimits, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Progress Trap"@en ;
+    skos:definition "Ronald Wright's term in A Short History of Progress (2004, his CBC Massey Lectures): a success that, pushed past a certain scale, brings disaster -- as when Paleolithic hunters perfected their methods until they killed off the big game they depended on. Wright reads the collapses of Sumer, Rome, the Maya and Easter Island as progress traps and treats civilization itself, roughly 10,000 years old, as an experiment that may be one, unless it becomes environmentally sustainable."@en ;
+    thinkr:definedIn tgs:Work.AShortHistoryOfProgress ;
+    thinkr:relatesTo tgs:Concept.Overshoot, tgs:Concept.NaiveProgress ;
+    skos:scopeNote "Minted 2026-10-18 in the definedIn pass; the book is cited in tgs:Monologue.Frankly_105_KeyBlindspotsOfTheWalrusMovement. Related to Daniel Schmachtenberger's critique of naive progress (tgs:Concept.NaiveProgress) and to tgs:Concept.ComplexityCollapse. Typed thinkr:Concept, not thinkr:HagensConcept."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.IntegratingThinkingAndFeeling a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Integrating Thinking and Feeling"@en ;
+    skos:definition "Nate Hagens's call (Frankly_89) to enlarge the overlap between paired modalities that the culture treats as dichotomies: subjective and objective, thinking and feeling, left brain and right brain, masculine and feminine, narrow and wide boundary, analytical and embodied -- 'we can't be on one side of each of those equations.' He tests it with two imagined communities: one that knows every aspect of the metacrisis but lives in its head, nervous systems dysregulated and without joy, music, laughter or love; and one fully embodied, dancing and meditating, with no knowledge of the metacrisis and no skills to grow food or improvise energy and water systems. He would want neither, but finds groups increasingly of one kind or the other, so 'we need to make the Venn diagram between these two modalities with a larger overlap.' A friend's warning frames it: when only the problems are seen, 'all the solutions are fear based, and anger based, and control, and power.' His own next steps, he says, will come from feeling as well as analysis."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/89-thinking-and-feeling> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_89, whose title it names. The left and right brain pairing follows Iain McGilchrist (tgs:Concept.DividedBrain). Continues tgs:Concept.HealingBeforeEngagement (Frankly_55) and tgs:Concept.VerticalBehavioralStack (Frankly_52). Daniel Schmachtenberger's corresponding claim is that heart, will and mind must come together (tgs:Concept.HeartWillMind, TGS_31)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.WhatCantWontMightHappen a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    dcterms:subject tgs:Subject.SystemsScience ;
+    skos:prefLabel "What Can't, Won't and Might Happen"@en ;
+    skos:definition "Nate Hagens's three categories for judging claims about the future (Frankly_90), needed because humans think in words and can make impossible things sound plausible. What can't happen is ruled out by physical law (physics, chemistry, thermodynamics: a one-by-two-foot block of wood cannot yield a four-foot carving) or by path dependence (after the extinction of tree frogs there will be no tree frogs). What won't happen is technically possible but effectively impossible once the probabilities of all its necessary steps are multiplied -- a 500-foot cheese statue of a mouse, or net zero by 2050 at today's scale (tgs:Concept.AggregateProbability). What might happen is where attention belongs. In the frame of the bottlenecks of the 21st century, what can't and won't happen lie outside the walls of the bottle and what might happen lies inside, and as energy grows scarcer and costlier the walls narrow. Most public discourse, he says, is about the first two categories."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/90-net-zero-and-other-delusions> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_90, whose subtitle it is; Frankly_91 says he plans to make it a series. Builds on tgs:Concept.AggregateProbability (Frankly_79) and tgs:Concept.ThingsOfValueThroughTheBottlenecks. Daniel Schmachtenberger's corresponding move is from impossible to hard (tgs:Concept.ImpossibleToHard, TGS_20): getting the constraints right rules out the easy solutions and shows which hard ones remain."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PracticalPersonal ;
     .

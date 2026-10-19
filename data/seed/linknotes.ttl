@@ -317,3 +317,27 @@ tgs:LinkNote.HeartWillMind_HealingBeforeEngagement a thinkr:LinkNote, owl:NamedI
     thinkr:aboutObject tgs:Concept.HealingBeforeEngagement ;
     thinkr:hasEvidence tgs:Evidence.HeartWillMind_HealingBeforeEngagement ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HeartWillMind thinkr:complements tgs:Concept.HealingBeforeEngagement. Both say knowledge alone does not make agents of change. Daniel names the three capacities that must come together; Nate names an order for building them: the body and nervous system first, then community, then the systems synthesis. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.FragmentedConsciousness_VerticalBehavioralStack a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.FragmentedConsciousness ;
+    thinkr:aboutObject tgs:Concept.VerticalBehavioralStack ;
+    thinkr:hasEvidence tgs:Evidence.FragmentedConsciousness_VerticalBehavioralStack ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.FragmentedConsciousness thinkr:complements tgs:Concept.VerticalBehavioralStack. Daniel, after Bohm, locates the root of the world's problems in a consciousness that perceives parts before wholes; Nate locates fragmentation in the body and daily life and offers a practical, bottom-up way to re-integrate it. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.OneMarshmallowRewardCircuits_DopamineHijackedCulture a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.OneMarshmallowRewardCircuits ;
+    thinkr:aboutObject tgs:Concept.DopamineHijackedCulture ;
+    thinkr:hasEvidence tgs:Evidence.OneMarshmallowRewardCircuits_DopamineHijackedCulture ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.OneMarshmallowRewardCircuits thinkr:complements tgs:Concept.DopamineHijackedCulture. Daniel explains the economics: a market profits by supplying reward without the evolutionarily relevant work or deeper nourishment. Nate describes what that feels like from inside, a culture in which even healthy activities have been turned into dopamine, and a personal practice for turning back toward being. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.HeartWillMind_IntegratingThinkingAndFeeling a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.HeartWillMind ;
+    thinkr:aboutObject tgs:Concept.IntegratingThinkingAndFeeling ;
+    thinkr:hasEvidence tgs:Evidence.HeartWillMind_IntegratingThinkingAndFeeling ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.HeartWillMind thinkr:complements tgs:Concept.IntegratingThinkingAndFeeling. Both describe failure when capacities are split: Daniel by naming which two-of-three combinations fail, Nate by imagining a community of only minds and a community of only bodies, and asking for the overlap. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.ImpossibleToHard_WhatCantWontMightHappen a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:Concept.ImpossibleToHard ;
+    thinkr:aboutObject tgs:Concept.WhatCantWontMightHappen ;
+    thinkr:hasEvidence tgs:Evidence.ImpossibleToHard_WhatCantWontMightHappen ;
+    skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.ImpossibleToHard thinkr:complements tgs:Concept.WhatCantWontMightHappen. Both start by ruling out solutions that only look easy. Daniel stresses what remains -- hard, not impossible, once the design criteria are right; Nate supplies a sorting method and points attention to what might happen. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
