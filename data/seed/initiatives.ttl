@@ -2728,3 +2728,47 @@ tgs:ConceptScheme.BioregioningEarth a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:PracticeCluster.SystemicFinance,
         tgs:PracticeCluster.WaysOfKnowing ;
     .
+
+# Cross-scheme mappings, Bioregioning Earth -> One Earth Solutions (added 2026-10-20; Claude's first-pass draft,
+# accepted by MJSullivan for later enrichment). broadMatch: the One Earth term is broader; narrowMatch: narrower.
+# Deliberately unmatched: Species Control, Interspecies Mutualism, Disaster Relief, Coaches and Leaders.
+tgs:PracticeTerm.RenewableEnergy skos:closeMatch tgs:PracticeCluster.OneEarth_EnergyTransition .
+tgs:PracticeTerm.TransportationTransitions skos:closeMatch tgs:PracticeTerm.OneEarth_RenewableTransport .
+tgs:PracticeTerm.ConstructionAndHousing skos:closeMatch tgs:PracticeTerm.OneEarth_BuiltEnvironment .
+tgs:PracticeTerm.RegenerativeAgriculture skos:closeMatch tgs:PracticeCluster.OneEarth_RegenerativeAgriculture .
+tgs:PracticeTerm.RegenerativeGrazing skos:closeMatch tgs:PracticeTerm.OneEarth_SustainableGrazing .
+tgs:PracticeTerm.RegionalSourcing skos:closeMatch tgs:PracticeTerm.OneEarth_BioregionalSourcing .
+tgs:PracticeTerm.HabitatConnectivity skos:closeMatch tgs:PracticeTerm.OneEarth_WildlifeConnectivity .
+tgs:PracticeTerm.ClothingAndProductManufacturing skos:narrowMatch tgs:PracticeTerm.OneEarth_CircularFibersheds .
+tgs:PracticeTerm.WatershedRepair skos:narrowMatch tgs:PracticeTerm.OneEarth_WetlandRestoration .
+tgs:PracticeTerm.WatershedRepair skos:narrowMatch tgs:PracticeTerm.OneEarth_RiversAndStreams .
+tgs:PracticeTerm.VegetationPlanting skos:narrowMatch tgs:PracticeTerm.OneEarth_Reforestation .
+tgs:PracticeTerm.SeedsAndNurseries skos:relatedMatch tgs:PracticeTerm.OneEarth_SeedDiversity .
+tgs:PracticeTerm.MaterialsTransformation skos:relatedMatch tgs:PracticeTerm.OneEarth_RecycleAndReuse .
+tgs:PracticeTerm.MaterialsTransformation skos:relatedMatch tgs:PracticeTerm.OneEarth_FoodUpcycling .
+tgs:PracticeTerm.FarmerSupport skos:relatedMatch tgs:PracticeTerm.OneEarth_SmallholderFarming .
+tgs:PracticeTerm.WaterManagement skos:relatedMatch tgs:PracticeTerm.OneEarth_WaterStewardship .
+tgs:PracticeTerm.WaterManagement skos:relatedMatch tgs:PracticeTerm.OneEarth_DrylandIrrigation .
+tgs:PracticeTerm.CollectiveOwnershipModels skos:relatedMatch tgs:PracticeTerm.OneEarth_IndigenousTenure .
+tgs:PracticeTerm.TraditionalEcologicalKnowledge skos:relatedMatch tgs:PracticeTerm.OneEarth_IndigenousTenure .
+tgs:PracticeTerm.HealthAndSocialCare skos:relatedMatch tgs:PracticeTerm.OneEarth_PublicHealth .
+tgs:PracticeTerm.TrainingAndEmploymentPathways skos:relatedMatch tgs:PracticeTerm.OneEarth_SustainableLivelihoods .
+tgs:PracticeTerm.GrantsPrograms skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.InvestmentVehicles skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.ResultBasedMechanisms skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.StructuringAndCapitalization skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.PortfolioDevelopment skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.FinanceAssessments skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.VentureCultivation skos:broadMatch tgs:PracticeTerm.OneEarth_FinanceAndIncentives .
+tgs:PracticeTerm.RightsOfNature skos:broadMatch tgs:PracticeTerm.OneEarth_LegalEmpowerment .
+tgs:PracticeTerm.AgreementsAndLegalInstruments skos:broadMatch tgs:PracticeTerm.OneEarth_LegalEmpowerment .
+tgs:PracticeTerm.PoliticalAdvocacy skos:broadMatch tgs:PracticeTerm.OneEarth_PolicyAndGovernance .
+tgs:PracticeTerm.CitizenOrCommunityScience skos:broadMatch tgs:PracticeTerm.OneEarth_ScienceAndIntelligence .
+tgs:PracticeTerm.EcologicalMonitoring skos:broadMatch tgs:PracticeTerm.OneEarth_ScienceAndIntelligence .
+tgs:PracticeTerm.FormalScientificProcess skos:broadMatch tgs:PracticeTerm.OneEarth_ScienceAndIntelligence .
+tgs:PracticeTerm.LearningPrograms skos:broadMatch tgs:PracticeTerm.OneEarth_EducationAndCulture .
+tgs:PracticeTerm.PeerLearning skos:broadMatch tgs:PracticeTerm.OneEarth_EducationAndCulture .
+tgs:PracticeTerm.ArtAndStorytelling skos:broadMatch tgs:PracticeTerm.OneEarth_EducationAndCulture .
+tgs:PracticeTerm.NetworkWeaving skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
+tgs:PracticeTerm.ParticipatoryStrategies skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
+tgs:PracticeTerm.CongressingAndEvents skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
