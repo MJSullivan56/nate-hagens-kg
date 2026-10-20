@@ -977,7 +977,7 @@ tgs:LinkNote.Overshoot_DoughnutEconomics a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:SchoolOfThought.DoughnutEconomics ;
     thinkr:aboutSubject tgs:Concept.Overshoot ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Curated ;
     thinkr:hasEvidence tgs:Evidence.Overshoot_DoughnutEconomics .
 
 tgs:LinkNote.Overshoot_WilliamCatton a thinkr:LinkNote,
@@ -8264,6 +8264,11 @@ tgs:Subject.Geopolitics a thinkr:Subject,
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Geopolitics"@en .
 
+thinkr:ConfidenceType.Candidate a thinkr:ConfidenceType,
+        owl:NamedIndividual ;
+    skos:definition "On thinkr:Evidence: LLM-proposed or otherwise unreviewed. On thinkr:LinkNote's calculatedConfidence: no qualifying Curated+Supports evidence exists yet — the default/floor state."@en ;
+    skos:prefLabel "Candidate"@en .
+
 thinkr:Subject a owl:Class ;
     rdfs:comment "A topic/subject-classification term — NOT the same as thinkr:Concept, which represents a specific idea/claim within a thinker's framework (e.g. 'Overshoot'). Subject is a classification bucket used to organize Concepts and other individuals (e.g. 'Energy Systems'). Explicitly typed both thinkr:Subject AND skos:Concept on every individual, not relying on subclass inference — this project's query tooling doesn't assume a reasoner is running. Used with real SKOS machinery: skos:ConceptScheme, skos:broader, skos:narrower, skos:inScheme, plus the external dct:subject property (not redefined here) to tag other individuals with their relevant Subject(s)."@en ;
     rdfs:subClassOf skos:Concept ;
@@ -8282,11 +8287,6 @@ tgs:Persona.NoraBateson a thinkr:Persona,
 thinkr:Category a owl:Class ;
     rdfs:comment "A special class whose instances are enumerated and curated, used to further categorize instances of OTHER classes for more specificity — not a domain entity itself. Formalized 2026-07-11 per MJSullivan's exact definition, marking a pattern that was already implicit in ConfidenceType/ReliabilityType/PolarityType and just-built PersonEntityType. Classes are marked as Category via 'a thinkr:Category' (OWL punning — a class doubling as an instance of this meta-class), not rdfs:subClassOf, since Category-ness is a property of the CLASS itself, not something its own individuals (e.g. ConfidenceType.Curated) inherit. NOTE: thinkr:NamedEntityType is deliberately NOT marked Category — it has zero direct instances of its own (only its subclass PersonEntityType does), so it doesn't meet 'has enumerated curated instances' literally. It's an organizing abstraction, not a Category proper."@en ;
     skos:prefLabel "Category"@en .
-
-thinkr:ConfidenceType.Candidate a thinkr:ConfidenceType,
-        owl:NamedIndividual ;
-    skos:definition "On thinkr:Evidence: LLM-proposed or otherwise unreviewed. On thinkr:LinkNote's calculatedConfidence: no qualifying Curated+Supports evidence exists yet — the default/floor state."@en ;
-    skos:prefLabel "Candidate"@en .
 
 thinkr:NamedEntity a owl:Class ;
     rdfs:comment "Superclass for anything that can be surfaced via the NER pipeline (extraction/index_named_entities.py) and formally modeled in the graph. thinkr:Human is currently the only subclass — deliberately left room for others (e.g. an Organization class) to join later without redesigning this. Plain owl:Class, not SKOS — added 2026-07-11 at MJSullivan's direction, correcting an earlier proposal to use SKOS for the same purpose."@en ;
