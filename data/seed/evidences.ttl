@@ -487,3 +487,17 @@ tgs:Evidence.ChaliceAndBladePower_PowerVersusLife_TGS_116 a thinkr:Evidence, owl
     thinkr:citesEpisode tgs:Interview.TGS_116_RianeEisler, tgs:Monologue.Frankly_82_PowerVsLife ;
     dcterms:description "In TGS_116 Eisler says the blade is power as 'the power to control, the power to really take life,' the chalice 'the power not to take life, but to give life,' and that 'the battle for our future... is between these two configurations'; Nate adds that AI 'fits into your domination dynamic' and she agrees. In Frankly_82 Nate calls 'a battle between life and power' 'a central point of this podcast.' Drafted by Claude from the transcripts; awaiting MJSullivan's review before promotion to Curated."@en ;
     prov:generatedAtTime "2026-10-19"^^xsd:date .
+
+tgs:Evidence.TechnoOptimism_LimitsToGrowth a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "The Techno-Optimist Manifesto (Andreessen, a16z, October 16, 2023) names, in its list of what society has been 'subjected to' in 'a mass demoralization campaign... against technology and against life', both 'degrowth' and 'the limits of growth'. Verbatim list as quoted by Hart-Landsberg in Monthly Review 78:3 (2026). Drafted by Claude; awaiting MJSullivan's review before promotion to Curated."@en ;
+    dcterms:source <https://a16z.com/the-techno-optimist-manifesto/> ;
+    prov:generatedAtTime "2026-10-19"^^xsd:date .
+
+tgs:Evidence.TechnoOptimism_PrecautionaryPrinciple a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    dcterms:description "The Techno-Optimist Manifesto (Andreessen, a16z, October 16, 2023) names, in its list of what society has been 'subjected to' in 'a mass demoralization campaign... against technology and against life', both 'Precautionary Principle' and 'existential risk'. Verbatim list as quoted by Hart-Landsberg in Monthly Review 78:3 (2026). Drafted by Claude; awaiting MJSullivan's review before promotion to Curated."@en ;
+    dcterms:source <https://a16z.com/the-techno-optimist-manifesto/> ;
+    prov:generatedAtTime "2026-10-19"^^xsd:date .

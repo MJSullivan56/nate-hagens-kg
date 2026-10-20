@@ -45,11 +45,14 @@
 #############################################
 
 thinkr:EarthSystemComponent a owl:Class ;
-    rdfs:subClassOf thinkr:Concept ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "A real, macro-scale, physical component of Earth's climate/ecological system (e.g. the AMOC, an ice sheet, a major biome), discussed within Hagens' TGS framework — he cites it as evidence, typically via expert guests who study it directly, rather than originating or reframing the idea himself. FOLDED under thinkr:Concept 2026-08-13 (was initially built as a fully separate sibling class the same day) — per MJSullivan's explicit direction, once thinkr:Concept itself was revised into an explicit umbrella (see thinkr:Concept's own rdfs:comment and the new thinkr:HagensConcept subclass). Deliberately NOT a thinkr:HagensConcept — AMOC and its siblings are exactly the kind of externally-originated, adopted-not-authored content that subclass exists to exclude."@en ;
     skos:prefLabel "Earth System Component"@en .
 
-tgs:EarthSystemComponent.AMOC a thinkr:EarthSystemComponent, thinkr:Concept, owl:NamedIndividual ;
+tgs:EarthSystemComponent.AMOC a thinkr:EarthSystemComponent, owl:NamedIndividual ;
+    skos:altLabel "AMOC"@en ;
+    skos:inScheme tgs:ConceptScheme.EarthSystemComponents ;
+    skos:topConceptOf tgs:ConceptScheme.EarthSystemComponents ;
     dcterms:subject tgs:Subject.EcologyAndEnvironment ;
     skos:prefLabel "Atlantic Meridional Overturning Circulation"@en ;
     skos:definition "The major ocean current system that transports warm water northward and cold water southward through the Atlantic, regulating temperature between the Northern and Southern Hemispheres — estimated to have slowed by roughly 15% over recent decades, with real scientific concern (per the tgs:Work.GlobalTippingPointsReport2025 and multiple TGS episodes) about a potential collapse and its cascading effects on regional/global climate systems."@en ;
@@ -58,3 +61,11 @@ tgs:EarthSystemComponent.AMOC a thinkr:EarthSystemComponent, thinkr:Concept, owl
         skos:prefLabel "AMOC"@en ;
         skos:scopeNote "Following the same standing convention as tgs:Concept.EnergyReturnOnInvestment: full expanded form is canonical (prefLabel + IRI), the abbreviation goes into the AlternateTerm." ] ;
     skos:scopeNote "Confirmed via real search 2026-08-13 (thegreatsimplification.com/episode/124-levke-caesar, and TGS_207's own cross-reference to both TGS_124 and TGS_105) — real thinkr:discusses link now built 2026-08-13, but via a third, different episode than either of those two: tgs:PanelDiscussion.RR_4_TitanicOceans, where physical oceanographer Antonio Turiel gives a real, detailed technical explanation of AMOC mechanics (salinity-driven sinking, wind-stress mixing) directly in the transcript — not the TGS_124/TGS_105 pairing originally anticipated here. TGS_124 and TGS_105 themselves remain real, still-deferred candidates for the same treatment once bootstrapped as Episode individuals; this note's original point stands for them, just no longer describes AMOC's only path to a real discusses link."@en .
+
+tgs:ConceptScheme.EarthSystemComponents a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "Earth System Components"@en ;
+    skos:definition "Real, physical components of Earth's climate and ecological system that TGS episodes discuss as evidence (e.g. the AMOC). Third-party science, not TGS concepts."@en ;
+    dcterms:source tgs:Interview.TGS_124_LevkeCaesar ;
+    skos:hasTopConcept
+        tgs:EarthSystemComponent.AMOC ;
+    .

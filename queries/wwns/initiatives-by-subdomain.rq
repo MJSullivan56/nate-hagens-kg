@@ -1,0 +1,19 @@
+# Real-world initiatives for a WWNS article, by Six Fronts subdomain.
+# Change the VALUES line to the subdomain(s) the article covers.
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?initiative ?orgLabel ?place (GROUP_CONCAT(DISTINCT ?termLabel; SEPARATOR=", ") AS ?practices) ?excerpt
+WHERE {
+  VALUES ?subdomain { tgs:InterventionSubdomain.FoodAndWaterSystems }
+  ?term skos:relatedMatch ?subdomain ; skos:prefLabel ?termLabel .
+  ?i a thinkr:Initiative ; thinkr:hasPracticeTerm ?term ;
+     skos:prefLabel ?initiative ; thinkr:carriedOutBy ?org ;
+     dcterms:description ?excerpt .
+  ?org skos:prefLabel ?orgLabel .
+  OPTIONAL { ?org thinkr:placeName ?place }
+}
+GROUP BY ?initiative ?orgLabel ?place ?excerpt
+ORDER BY ?orgLabel ?initiative

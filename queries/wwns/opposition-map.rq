@@ -1,0 +1,13 @@
+# Who challenges which TGS premise, how, and on what evidence.
+PREFIX thinkr:  <http://example.org/thinkr#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?challenger ?target ?type ?evidence ?confidence
+WHERE {
+  ?ln a thinkr:LinkNote ; thinkr:hasOppositionType ?t ;
+      thinkr:aboutSubject ?s ; thinkr:aboutObject ?o ; thinkr:hasEvidence ?e .
+  ?s skos:prefLabel ?challenger . ?o skos:prefLabel ?target . ?t skos:prefLabel ?type .
+  ?e dcterms:description ?evidence ; thinkr:confidence ?c .
+  BIND(STRAFTER(STR(?c), "ConfidenceType.") AS ?confidence)
+}
+ORDER BY ?type ?challenger

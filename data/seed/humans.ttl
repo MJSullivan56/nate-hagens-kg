@@ -2159,3 +2159,11 @@ tgs:Human.RianeEisler a thinkr:Human, owl:NamedIndividual ;
     thinkr:memberOf tgs:Organization.CenterForPartnershipSystems ;
     dct:source <https://rianeeisler.com/> ;
     .
+
+tgs:Human.EraldKolasi a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Erald Kolasi"@en ;
+    rdfs:label "Erald Kolasi (human)"@en ;
+    rdfs:comment "Physicist (PhD, George Mason University, 2016) writing on energy and political economy in Monthly Review; author of The Physics of Capitalism. Author of tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis."@en ;
+    thinkr:memberOf tgs:SchoolOfThought.Ecosocialism ;
+    skos:scopeNote "Added 2026-10-19. memberOf rests on his own published argument for an 'ecological, and socialist civilization'."@en ;
+    .

@@ -55,6 +55,7 @@ tgs:Subject.Geopolitics a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Geopolitics"@en ;
     .
 
@@ -86,6 +87,7 @@ tgs:Subject.EcologyAndEnvironment a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Ecology and Environment"@en ;
     .
 
@@ -93,6 +95,7 @@ tgs:Subject.EconomicsAndMonetary a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Economics and Monetary"@en ;
     .
 
@@ -100,6 +103,7 @@ tgs:Subject.EnergySystems a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Energy Systems"@en ;
     .
 
@@ -107,6 +111,7 @@ tgs:Subject.SystemsScience a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Systems Science"@en ;
     .
 
@@ -114,6 +119,7 @@ tgs:Subject.HumanBehavior a thinkr:Subject,
         owl:NamedIndividual,
         skos:Concept ;
     skos:inScheme tgs:ConceptScheme.TGSSiteSubjects ;
+    skos:topConceptOf tgs:ConceptScheme.TGSSiteSubjects ;
     skos:prefLabel "Human Behavior"@en ;
     .
 
@@ -128,5 +134,6 @@ tgs:ConceptScheme.TGSSiteSubjects a owl:NamedIndividual,
     dcterms:source <https://www.thegreatsimplification.com/podcast/frankly> ;
     rdfs:comment "The 6 top-level subject tags used by thegreatsimplification.com's own content filter."@en ;
     skos:prefLabel "TGS Official Site Subjects"@en ;
+    skos:hasTopConcept tgs:Subject.EcologyAndEnvironment, tgs:Subject.EconomicsAndMonetary, tgs:Subject.EnergySystems, tgs:Subject.Geopolitics, tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
     .
 

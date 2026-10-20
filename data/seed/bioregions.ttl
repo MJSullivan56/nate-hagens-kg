@@ -1,0 +1,2064 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-10-20 — One Earth's Bioregions 2023 framework (tgs:Work.OneEarthBioregions2023),
+# by Karl Burkart and One Earth, licensed CC BY-NC 4.0; attribution: One Earth.
+# Hierarchy (skos:broader): Bioregion (185, skos:notation = One Earth code, e.g. NA24)
+#   -> BioregionalSubrealm (53) -> BioregionalRealm (One Earth's 14 realm divisions)
+#   -> BiogeographicRealm (the 8 classic realms).
+# Codes and names: One Earth's bioregion list page. Bioregion-to-subrealm membership:
+# the datahub.io 'bioregions-2023' CSV. Subrealm names and subrealm-to-realm grouping:
+# One Earth's 2023 framework page, which differs from the CSV's realm column for the
+# Persian, Tibetan, Mongolian and East Asian desert subrealms (the page's grouping is
+# used; it reproduces the page's per-realm bioregion counts exactly). The 844
+# component ecoregions (Dinerstein et al. 2017) are not imported.
+#############################################
+
+tgs:BiogeographicRealm.Nearctic a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Nearctic"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Neotropic a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Neotropic"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Palearctic a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Palearctic"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Afrotropic a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Afrotropic"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Indomalayan a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indomalayan"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Australasian a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Australasian"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Oceanian a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Oceanian"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BiogeographicRealm.Antarctic a thinkr:BiogeographicRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Antarctic"@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.SubarcticAmerica a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Subarctic America"@en ;
+    skos:definition "One Earth realm division (Northern Nearctic), with 4 subrealm(s) and 9 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Nearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Greenland a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greenland Subrealm"@en ;
+    skos:scopeNote "One Earth names this subrealm 'Greenland', the same as its single bioregion; 'Subrealm' is appended here so each preferred label is unique within the scheme, as SKOS recommends."@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.CanadianTundra a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Canadian Tundra Subrealm"@en ;
+    skos:scopeNote "One Earth names this subrealm 'Canadian Tundra', the same as its single bioregion; 'Subrealm' is appended here so each preferred label is unique within the scheme, as SKOS recommends."@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Alaska a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Alaska"@en ; skos:scopeNote "The datahub.io CSV puts NA3 North Alaskan Tundra in a separate subrealm, Alaskan Tundra; it is folded into Alaska here to match the 2023 page, which lists four Subarctic America subrealms and 53 in all."@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.CanadianBorealForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Canadian Boreal Forests"@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.NorthernAmerica a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern America"@en ;
+    skos:definition "One Earth realm division (Greater Nearctic), with 6 subrealm(s) and 22 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Nearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.NorthPacificCoast a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Pacific Coast"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AmericanWest a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "American West"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.GreatPlains a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Great Plains"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.NortheastAmericanForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northeast American Forests"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast US Savannas & Forests"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.MexicanDrylands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mexican Drylands"@en ;
+    skos:broader tgs:BioregionalRealm.NorthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.CentralAmericaAndCaribbean a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central America & Caribbean"@en ;
+    skos:definition "One Earth realm division (Northern Neotropic), with 2 subrealm(s) and 6 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Neotropic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.CentralAmerica a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central America"@en ;
+    skos:broader tgs:BioregionalRealm.CentralAmericaAndCaribbean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Caribbean a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Caribbean"@en ;
+    skos:broader tgs:BioregionalRealm.CentralAmericaAndCaribbean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.SouthernAmerica a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern America"@en ;
+    skos:definition "One Earth realm division (Greater Neotropic), with 5 subrealm(s) and 23 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Neotropic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.UpperSouthAmerica a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Upper South America"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Amazonia a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Amazonia"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Brazil Cerrado & Atlantic Coast"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SouthAmericanGrasslands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South American Grasslands"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Andes Mountains & Pacific Coast"@en ; skos:altLabel "Andes & Pacific Coast"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.SubarcticEurasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Subarctic Eurasia"@en ;
+    skos:definition "One Earth realm division (Northern Palearctic), with 4 subrealm(s) and 8 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Palearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.PalearcticTundra a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Palearctic Tundra"@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Scandinavia & Western Boreal Forests"@en ; skos:altLabel "Scandinavia & West Boreal Forests"@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SiberiaAndEasternBorealForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Siberia & Eastern Boreal Forests"@en ; skos:altLabel "Siberia & East Boreal Forests"@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SeaOfOkhotskAndBeringTundraTaiga a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sea of Okhotsk & Bering Tundra/Taiga"@en ; skos:altLabel "Sea of Okhotsk & Bering Tundra-Taiga"@en ;
+    skos:broader tgs:BioregionalRealm.SubarcticEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.WesternEurasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Western Eurasia"@en ;
+    skos:definition "One Earth realm division (Western Palearctic), with 5 subrealm(s) and 13 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Palearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Mediterranean a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mediterranean"@en ;
+    skos:broader tgs:BioregionalRealm.WesternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.BlackSeaForestsAndSteppe a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Black Sea Forests & Steppe"@en ;
+    skos:broader tgs:BioregionalRealm.WesternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.EuropeanMountainForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "European Mountain Forests"@en ;
+    skos:broader tgs:BioregionalRealm.WesternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.GreaterEuropeanForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater European Forests"@en ; skos:altLabel "Greater European Mixed Forests"@en ;
+    skos:broader tgs:BioregionalRealm.WesternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AngloCelticIsles a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Anglo-Celtic Isles"@en ;
+    skos:broader tgs:BioregionalRealm.WesternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.CentralEurasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Eurasia"@en ;
+    skos:definition "One Earth realm division (Central Palearctic), with 5 subrealm(s) and 11 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Palearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.KazakhSteppesAndHemiborealForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Kazakh Steppes & Hemiboreal Forests"@en ;
+    skos:broader tgs:BioregionalRealm.CentralEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.CaspianSeaAndCentralAsianDeserts a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Caspian Sea & Central Asian Deserts"@en ;
+    skos:broader tgs:BioregionalRealm.CentralEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.TienShanMountains a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Tien Shan Mountains"@en ;
+    skos:broader tgs:BioregionalRealm.CentralEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.PersianDesertsAndForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Persian Deserts & Forests"@en ;
+    skos:broader tgs:BioregionalRealm.CentralEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AltaiSayanMountains a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Altai-Sayan Mountains"@en ;
+    skos:broader tgs:BioregionalRealm.CentralEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.EasternEurasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Eastern Eurasia"@en ;
+    skos:definition "One Earth realm division (Eastern Palearctic), with 6 subrealm(s) and 16 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Palearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.JapaneseIslands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Japanese Islands"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.NortheastAsianForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northeast Asian Forests"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.MongolianGrasslands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mongolian Grasslands"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.CentralEastAsianForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central East Asian Forests"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.TibetanPlateau a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Tibetan Plateau"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.EastAsianDeserts a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East Asian Deserts"@en ;
+    skos:broader tgs:BioregionalRealm.EasternEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.SouthernEurasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Eurasia"@en ;
+    skos:definition "One Earth realm division (Southern Palearctic), with 2 subrealm(s) and 5 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Palearctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.NorthAfrica a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Africa"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.GreaterArabianPeninsula a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Arabian Peninsula"@en ;
+    skos:broader tgs:BioregionalRealm.SouthernEurasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.Afrotropics a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Afrotropics"@en ;
+    skos:definition "One Earth realm division (Afrotropic realm), with 6 subrealm(s) and 24 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Afrotropic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Madagascar & East African Coast"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SouthernAfrotropics a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Afrotropics"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SubEquatorialAfrotropics a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sub-Equatorial Afrotropics"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.EquatorialAfrotropics a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Equatorial Afrotropics"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SubSaharanAfrotropics a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sub-Saharan Afrotropics"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.HornOfAfrica a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Horn of Africa"@en ;
+    skos:broader tgs:BioregionalRealm.Afrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.Indomalaya a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indomalaya"@en ;
+    skos:definition "One Earth realm division (Indomalayan realm), with 3 subrealm(s) and 18 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Indomalayan ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.IndianSubcontinent a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indian Subcontinent"@en ;
+    skos:broader tgs:BioregionalRealm.Indomalaya ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.SoutheastAsianForests a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast Asian Forests"@en ;
+    skos:broader tgs:BioregionalRealm.Indomalaya ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Malaysia & Western Indonesia"@en ;
+    skos:broader tgs:BioregionalRealm.Indomalaya ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.Australasia a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Australasia"@en ;
+    skos:definition "One Earth realm division (Australasian realm), with 3 subrealm(s) and 16 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Australasian ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Australasian Islands & Eastern Indonesia"@en ;
+    skos:broader tgs:BioregionalRealm.Australasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.Australia a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Australia"@en ;
+    skos:broader tgs:BioregionalRealm.Australasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.NewZealand a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "New Zealand Subrealm"@en ;
+    skos:scopeNote "One Earth names this subrealm 'New Zealand', the same as its single bioregion; 'Subrealm' is appended here so each preferred label is unique within the scheme, as SKOS recommends."@en ;
+    skos:broader tgs:BioregionalRealm.Australasia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.Oceania a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Oceania"@en ;
+    skos:definition "One Earth realm division (Oceanian realm), with 1 subrealm(s) and 11 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Oceanian ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.OceanicIslands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Oceanic Islands"@en ;
+    skos:broader tgs:BioregionalRealm.Oceania ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalRealm.Antarctica a thinkr:BioregionalRealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Antarctica"@en ;
+    skos:definition "One Earth realm division (Antarctic realm; only coastal areas are of conservation interest), with 1 subrealm(s) and 3 bioregions."@en ;
+    skos:broader tgs:BiogeographicRealm.Antarctic ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:BioregionalSubrealm.AntarcticContinentAndIslands a thinkr:BioregionalSubrealm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Antarctic Continent & Islands"@en ;
+    skos:broader tgs:BioregionalRealm.Antarctica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AN1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Continental Antarctica"@en ;
+    skos:notation "AN1" ;
+    skos:broader tgs:BioregionalSubrealm.AntarcticContinentAndIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AN2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Antarctic Peninsula & Scotia Sea"@en ;
+    skos:notation "AN2" ;
+    skos:broader tgs:BioregionalSubrealm.AntarcticContinentAndIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AN3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Subantarctic Indian Ocean Islands"@en ;
+    skos:notation "AN3" ;
+    skos:broader tgs:BioregionalSubrealm.AntarcticContinentAndIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Tristan Volcanic Islands"@en ;
+    skos:notation "AT1" ;
+    skos:broader tgs:BioregionalSubrealm.SouthernAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South African Cape Shrublands & Mountain Forests"@en ;
+    skos:notation "AT2" ;
+    skos:broader tgs:BioregionalSubrealm.SouthernAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Amsterdam-Saint Paul Islands"@en ;
+    skos:notation "AT3" ;
+    skos:broader tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mascarene Tropical Forest Islands"@en ;
+    skos:notation "AT4" ;
+    skos:broader tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Seychelles & Comoros Tropical Islands"@en ;
+    skos:notation "AT5" ;
+    skos:broader tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Madagascar Island"@en ;
+    skos:notation "AT6" ;
+    skos:broader tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East African Coastal Forests"@en ;
+    skos:notation "AT7" ;
+    skos:broader tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast African Subtropical Grasslands"@en ;
+    skos:notation "AT8" ;
+    skos:broader tgs:BioregionalSubrealm.SouthernAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Karoo & Kalahari Drylands"@en ;
+    skos:notation "AT9" ;
+    skos:broader tgs:BioregionalSubrealm.SouthernAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southwest African Coastal Drylands"@en ;
+    skos:notation "AT10" ;
+    skos:broader tgs:BioregionalSubrealm.SouthernAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater African Subequatorial Savannas & Mixed Woodlands"@en ;
+    skos:notation "AT11" ;
+    skos:broader tgs:BioregionalSubrealm.SubEquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Victoria Basin & Albertine Rift Forests"@en ;
+    skos:notation "AT12" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South Congolian Forest-Savannas & Coastal Scarp"@en ;
+    skos:notation "AT13" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Congolian Tropical Forests"@en ;
+    skos:notation "AT14" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Congolian Lowland Forests"@en ;
+    skos:notation "AT15" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mandara Mountain & North Congolian Forest-Savannas"@en ;
+    skos:notation "AT16" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT17 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Gulf of Guinea Coastal Forests & Mangroves"@en ;
+    skos:notation "AT17" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT18 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "St. Helena & Ascension Islands"@en ;
+    skos:notation "AT18" ;
+    skos:broader tgs:BioregionalSubrealm.SubEquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT19 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "West African Coastal Forests & Savanna"@en ;
+    skos:notation "AT19" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT20 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "West Sudanian Savanna"@en ;
+    skos:notation "AT20" ;
+    skos:broader tgs:BioregionalSubrealm.SubSaharanAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT21 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Lake Turkana-Sudd Grasslands, Bushlands & Forests"@en ;
+    skos:notation "AT21" ;
+    skos:broader tgs:BioregionalSubrealm.HornOfAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT22 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South Red Sea & Gulf of Aden Coastal Drylands"@en ;
+    skos:notation "AT22" ;
+    skos:broader tgs:BioregionalSubrealm.HornOfAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT23 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sahel Acacia Savannas"@en ;
+    skos:notation "AT23" ;
+    skos:broader tgs:BioregionalSubrealm.SubSaharanAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AT24 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Cape Verde Islands"@en ;
+    skos:notation "AT24" ;
+    skos:broader tgs:BioregionalSubrealm.EquatorialAfrotropics ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "New Zealand"@en ;
+    skos:notation "AU1" ;
+    skos:broader tgs:BioregionalSubrealm.NewZealand ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Lord Howe & Norfolk Islands"@en ;
+    skos:notation "AU2" ;
+    skos:broader tgs:BioregionalSubrealm.NewZealand ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East Australian Temperate Forests & Mountain Shrublands"@en ;
+    skos:notation "AU3" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East Australian Mediterranean Woodlands & Temperate Savannas"@en ;
+    skos:notation "AU4" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South Australian Mediterranean Forests, Woodlands & Scrub"@en ;
+    skos:notation "AU5" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "West Australian Dry Coastal Shrublands"@en ;
+    skos:notation "AU6" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Australian Interior Desert & Shrublands"@en ;
+    skos:notation "AU7" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Australian Tropical Savannas"@en ;
+    skos:notation "AU8" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Queensland Tropical Rainforests & Savannas"@en ;
+    skos:notation "AU9" ;
+    skos:broader tgs:BioregionalSubrealm.Australia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Coral Sea & New Caledonia Islands"@en ;
+    skos:notation "AU10" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Vanuatu Islands"@en ;
+    skos:notation "AU11" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Solomon Islands"@en ;
+    skos:notation "AU12" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "New Guinea & Surrounding Islands"@en ;
+    skos:notation "AU13" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sulawesi & Maluku Islands"@en ;
+    skos:notation "AU14" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast Indonesian Dry Forest Islands"@en ;
+    skos:notation "AU15" ;
+    skos:broader tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.AU16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Subantarctic Antipodes Islands"@en ;
+    skos:notation "AU16" ;
+    skos:broader tgs:BioregionalSubrealm.NewZealand ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Indian Ocean Islands"@en ;
+    skos:notation "IM1" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indian Tropical Coastal Forests"@en ;
+    skos:notation "IM2" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indian Dry Deciduous Forests"@en ;
+    skos:notation "IM3" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Indomalayan Deserts & Scrub Forest"@en ;
+    skos:notation "IM4" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Himalayan Mixed Forests & Grasslands"@en ;
+    skos:notation "IM5" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Indian Tropical Forests & Sundarbans"@en ;
+    skos:notation "IM6" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern Deccan & Odisha Tropical Forests"@en ;
+    skos:notation "IM7" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Deccan-Sri Lankan Forests & Drylands"@en ;
+    skos:notation "IM8" ;
+    skos:broader tgs:BioregionalSubrealm.IndianSubcontinent ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Myanmar Coastal Rainforests & Andaman Sea Islands"@en ;
+    skos:notation "IM9" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Arakan Mountains & Northern Triangle Forests"@en ;
+    skos:notation "IM10" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Irrawaddy & North Indochina Mixed Forests"@en ;
+    skos:notation "IM11" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Indochina Mixed Forests & Peatlands"@en ;
+    skos:notation "IM12" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South China Subtropical Evergreen & Monsoon Forests"@en ;
+    skos:notation "IM13" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Nansei Islands Subtropical Evergreen Forests"@en ;
+    skos:notation "IM14" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Philippines & Sulu Sea Tropical Forests"@en ;
+    skos:notation "IM15" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Borneo Tropical Forests & Sundaland Heath Forests"@en ;
+    skos:notation "IM16" ;
+    skos:broader tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM17 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Javan-Bali Tropical Rainforests"@en ;
+    skos:notation "IM17" ;
+    skos:broader tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.IM18 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Peninsular Malaysian & Sumatran Tropical Rainforests"@en ;
+    skos:notation "IM18" ;
+    skos:broader tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greenland"@en ;
+    skos:notation "NA1" ;
+    skos:broader tgs:BioregionalSubrealm.Greenland ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Canadian Tundra"@en ;
+    skos:notation "NA2" ;
+    skos:broader tgs:BioregionalSubrealm.CanadianTundra ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "North Alaskan Tundra"@en ;
+    skos:notation "NA3" ;
+    skos:broader tgs:BioregionalSubrealm.Alaska ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Alaska Taiga & Tundra"@en ;
+    skos:notation "NA4" ;
+    skos:broader tgs:BioregionalSubrealm.Alaska ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Far Northern Pacific Coast"@en ;
+    skos:notation "NA5" ;
+    skos:broader tgs:BioregionalSubrealm.Alaska ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Yukon"@en ;
+    skos:notation "NA6" ;
+    skos:broader tgs:BioregionalSubrealm.CanadianBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northwest Canadian Taiga, Lakes, & Wetlands"@en ;
+    skos:notation "NA7" ;
+    skos:broader tgs:BioregionalSubrealm.CanadianBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mid-Canada Boreal Plains & Foothill Forests"@en ;
+    skos:notation "NA8" ;
+    skos:broader tgs:BioregionalSubrealm.CanadianBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Canadian Shield & Coastal Taiga-Forests"@en ;
+    skos:notation "NA9" ;
+    skos:broader tgs:BioregionalSubrealm.CanadianBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northeastern American Mixed Forests"@en ;
+    skos:notation "NA10" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAmericanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern Great Lakes Forests"@en ;
+    skos:notation "NA11" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAmericanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern Prairie & Aspen Forests"@en ;
+    skos:notation "NA12" ;
+    skos:broader tgs:BioregionalSubrealm.GreatPlains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Rockies & Mountain Forests"@en ;
+    skos:notation "NA13" ;
+    skos:broader tgs:BioregionalSubrealm.AmericanWest ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northwest Intermountain Conifer Forests"@en ;
+    skos:notation "NA14" ;
+    skos:broader tgs:BioregionalSubrealm.AmericanWest ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Pacific Northwest Coastal Forests"@en ;
+    skos:notation "NA15" ;
+    skos:broader tgs:BioregionalSubrealm.NorthPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Cascades Mountain Forests & Valleys"@en ;
+    skos:notation "NA16" ;
+    skos:broader tgs:BioregionalSubrealm.NorthPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA17 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Columbia Plateau & Blue Mountains"@en ;
+    skos:notation "NA17" ;
+    skos:broader tgs:BioregionalSubrealm.AmericanWest ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA18 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Great Basin & Columbia Steppe"@en ;
+    skos:notation "NA18" ;
+    skos:broader tgs:BioregionalSubrealm.AmericanWest ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA19 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Colorado Plateau & Mountain Forests"@en ;
+    skos:notation "NA19" ;
+    skos:broader tgs:BioregionalSubrealm.AmericanWest ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA20 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Prairie Mixed Grasslands"@en ;
+    skos:notation "NA20" ;
+    skos:broader tgs:BioregionalSubrealm.GreatPlains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA21 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Midwestern Tallgrass Prairie & Forest Transition"@en ;
+    skos:notation "NA21" ;
+    skos:broader tgs:BioregionalSubrealm.GreatPlains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA22 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Ozarks Mixed Forests"@en ;
+    skos:notation "NA22" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA23 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Interior Plateau & Southern Great Lakes Forests"@en ;
+    skos:notation "NA23" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAmericanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA24 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Appalachia & Allegheny Interior Forests"@en ;
+    skos:notation "NA24" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAmericanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA25 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast Savannas & Riparian Forests"@en ;
+    skos:notation "NA25" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA26 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Bermuda"@en ;
+    skos:notation "NA26" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA27 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Western Gulf Coastal Grasslands"@en ;
+    skos:notation "NA27" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA28 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Mixed Forests & Blackland Prairies"@en ;
+    skos:notation "NA28" ;
+    skos:broader tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA29 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sierra Madre Forests & Mexican Drylands"@en ;
+    skos:notation "NA29" ;
+    skos:broader tgs:BioregionalSubrealm.MexicanDrylands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA30 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Baja California & Southern Deserts"@en ;
+    skos:notation "NA30" ;
+    skos:broader tgs:BioregionalSubrealm.MexicanDrylands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NA31 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater California"@en ;
+    skos:notation "NA31" ;
+    skos:broader tgs:BioregionalSubrealm.NorthPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Chilean Mixed Forests"@en ;
+    skos:notation "NT1" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Patagonia Steppe & Low Mountains"@en ;
+    skos:notation "NT2" ;
+    skos:broader tgs:BioregionalSubrealm.SouthAmericanGrasslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Rio de la Plata Grasslands"@en ;
+    skos:notation "NT3" ;
+    skos:broader tgs:BioregionalSubrealm.SouthAmericanGrasslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Chaco Grasslands"@en ;
+    skos:notation "NT4" ;
+    skos:broader tgs:BioregionalSubrealm.SouthAmericanGrasslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Andean Mountain Grasslands"@en ;
+    skos:notation "NT5" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Chilean Matorral Shrublands & Savanna"@en ;
+    skos:notation "NT6" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Juan Fernández & Desventuradas Islands"@en ;
+    skos:notation "NT7" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South American Coastal Deserts"@en ;
+    skos:notation "NT8" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Galápagos Islands"@en ;
+    skos:notation "NT9" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Ecuadorean Dry Coastal Forests & Flooded Grasslands"@en ;
+    skos:notation "NT10" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Andean Mountain Forests & Valleys"@en ;
+    skos:notation "NT11" ;
+    skos:broader tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Pantanal Flooded Grasslands & Dry Forests"@en ;
+    skos:notation "NT12" ;
+    skos:broader tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Cerrado Savannas"@en ;
+    skos:notation "NT13" ;
+    skos:broader tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Brazilian Atlantic Moist Forests"@en ;
+    skos:notation "NT14" ;
+    skos:broader tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Brazilian Atlantic Dry Forests"@en ;
+    skos:notation "NT15" ;
+    skos:broader tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Amazon River Estuary"@en ;
+    skos:notation "NT16" ;
+    skos:broader tgs:BioregionalSubrealm.Amazonia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT17 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Amazonian Forests"@en ;
+    skos:notation "NT17" ;
+    skos:broader tgs:BioregionalSubrealm.Amazonia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT18 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Western Amazonian Forests & Plains"@en ;
+    skos:notation "NT18" ;
+    skos:broader tgs:BioregionalSubrealm.Amazonia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT19 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Amazonian Forests"@en ;
+    skos:notation "NT19" ;
+    skos:broader tgs:BioregionalSubrealm.Amazonia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT20 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern Amazonian Forests"@en ;
+    skos:notation "NT20" ;
+    skos:broader tgs:BioregionalSubrealm.Amazonia ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT21 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Guianan Forests & Savanna"@en ;
+    skos:notation "NT21" ;
+    skos:broader tgs:BioregionalSubrealm.UpperSouthAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT22 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Llanos & Dry Forests"@en ;
+    skos:notation "NT22" ;
+    skos:broader tgs:BioregionalSubrealm.UpperSouthAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT23 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Venezuelan Coast"@en ;
+    skos:notation "NT23" ;
+    skos:broader tgs:BioregionalSubrealm.UpperSouthAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT24 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central American Isthmian & Colombian Coastal Forests"@en ;
+    skos:notation "NT24" ;
+    skos:broader tgs:BioregionalSubrealm.CentralAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT25 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central American Mixed Forests"@en ;
+    skos:notation "NT25" ;
+    skos:broader tgs:BioregionalSubrealm.CentralAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT26 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Caribbean Islands"@en ;
+    skos:notation "NT26" ;
+    skos:broader tgs:BioregionalSubrealm.Caribbean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT27 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Yucatan & Veracruz Mixed Forests"@en ;
+    skos:notation "NT27" ;
+    skos:broader tgs:BioregionalSubrealm.CentralAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT28 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mexican Dry & Coniferous Forests"@en ;
+    skos:notation "NT28" ;
+    skos:broader tgs:BioregionalSubrealm.CentralAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.NT29 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mexican Subtropical Islands"@en ;
+    skos:notation "NT29" ;
+    skos:broader tgs:BioregionalSubrealm.CentralAmerica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Salas y Gómez & Easter Islands"@en ;
+    skos:notation "OC1" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Marquesas Tropical Islands"@en ;
+    skos:notation "OC2" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southeast Polynesian Islands"@en ;
+    skos:notation "OC3" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Polynesian Islands"@en ;
+    skos:notation "OC4" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Samoa & West Polynesian Tropical Islands"@en ;
+    skos:notation "OC5" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Fiji & Tongan Tropical Islands"@en ;
+    skos:notation "OC6" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East Micronesian Islands"@en ;
+    skos:notation "OC7" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Palau & Caroline Tropical Islands"@en ;
+    skos:notation "OC8" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Guam & Marianas Dry Tropical Islands"@en ;
+    skos:notation "OC9" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Ogasawara Subtropical Islands"@en ;
+    skos:notation "OC10" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.OC11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Hawai'i Tropical Islands"@en ;
+    skos:notation "OC11" ;
+    skos:broader tgs:BioregionalSubrealm.OceanicIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA1 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Russian Arctic Desert Islands"@en ;
+    skos:notation "PA1" ;
+    skos:broader tgs:BioregionalSubrealm.PalearcticTundra ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA2 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Iceland"@en ;
+    skos:notation "PA2" ;
+    skos:broader tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA3 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Scandinavian Birch & Coastal Conifer Forests"@en ;
+    skos:notation "PA3" ;
+    skos:broader tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA4 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Eurasian Tundra"@en ;
+    skos:notation "PA4" ;
+    skos:broader tgs:BioregionalSubrealm.PalearcticTundra ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA5 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "East Eurasian Coastal Tundra"@en ;
+    skos:notation "PA5" ;
+    skos:broader tgs:BioregionalSubrealm.SeaOfOkhotskAndBeringTundraTaiga ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA6 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sea of Okhotsk Coastal Taiga, Meadows & Tundra"@en ;
+    skos:notation "PA6" ;
+    skos:broader tgs:BioregionalSubrealm.SeaOfOkhotskAndBeringTundraTaiga ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA7 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Siberian Boreal Forests & Mountain Tundra"@en ;
+    skos:notation "PA7" ;
+    skos:broader tgs:BioregionalSubrealm.SiberiaAndEasternBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA8 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Ural Mountains & West Eurasian Taiga Forests"@en ;
+    skos:notation "PA8" ;
+    skos:broader tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA9 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Great Britain, Ireland & Faroe Islands"@en ;
+    skos:notation "PA9" ;
+    skos:broader tgs:BioregionalSubrealm.AngloCelticIsles ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA10 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "West European Coastal Mixed Forests"@en ;
+    skos:notation "PA10" ;
+    skos:broader tgs:BioregionalSubrealm.GreaterEuropeanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA11 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Baltic Sea & Sarmatic Mixed Forests"@en ;
+    skos:notation "PA11" ;
+    skos:broader tgs:BioregionalSubrealm.GreaterEuropeanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA12 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "European Interior Mixed Forests"@en ;
+    skos:notation "PA12" ;
+    skos:broader tgs:BioregionalSubrealm.GreaterEuropeanForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA13 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Alps & Po Basin Mixed Forests"@en ;
+    skos:notation "PA13" ;
+    skos:broader tgs:BioregionalSubrealm.EuropeanMountainForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA14 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Carpathian Mountain & Plains Mixed Forests"@en ;
+    skos:notation "PA14" ;
+    skos:broader tgs:BioregionalSubrealm.EuropeanMountainForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA15 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Dinaric Mountains & Balkan Mixed Forests"@en ;
+    skos:notation "PA15" ;
+    skos:broader tgs:BioregionalSubrealm.EuropeanMountainForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA16 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Pontic Steppe Grasslands"@en ;
+    skos:notation "PA16" ;
+    skos:broader tgs:BioregionalSubrealm.BlackSeaForestsAndSteppe ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA17 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Black Sea, Caucasus-Anatolian Mixed Forests & Steppe"@en ;
+    skos:notation "PA17" ;
+    skos:broader tgs:BioregionalSubrealm.BlackSeaForestsAndSteppe ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA18 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Aegean Sea & East Mediterranean Mixed Forests"@en ;
+    skos:notation "PA18" ;
+    skos:broader tgs:BioregionalSubrealm.Mediterranean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA19 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Adriatic Sea & Central Mediterranean Mixed Forests"@en ;
+    skos:notation "PA19" ;
+    skos:broader tgs:BioregionalSubrealm.Mediterranean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA20 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Balearic Sea & West Mediterranean Mixed Forests"@en ;
+    skos:notation "PA20" ;
+    skos:broader tgs:BioregionalSubrealm.Mediterranean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA21 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Azores Forest Islands"@en ;
+    skos:notation "PA21" ;
+    skos:broader tgs:BioregionalSubrealm.Mediterranean ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA22 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Madeira Evergreen Island"@en ;
+    skos:notation "PA22" ;
+    skos:broader tgs:BioregionalSubrealm.NorthAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA23 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South Mediterranean Mixed Woodlands & Forests"@en ;
+    skos:notation "PA23" ;
+    skos:broader tgs:BioregionalSubrealm.NorthAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA24 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Northern Sahara Deserts, Savannas & Marshes"@en ;
+    skos:notation "PA24" ;
+    skos:broader tgs:BioregionalSubrealm.NorthAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA25 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Southern Sahara Deserts & Mountain Woodlands"@en ;
+    skos:notation "PA25" ;
+    skos:broader tgs:BioregionalSubrealm.NorthAfrica ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA26 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Red Sea, Arabian Deserts & Salt Marshes"@en ;
+    skos:notation "PA26" ;
+    skos:broader tgs:BioregionalSubrealm.GreaterArabianPeninsula ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA27 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Zagros Mountain Forests & East Anatolian Steppe"@en ;
+    skos:notation "PA27" ;
+    skos:broader tgs:BioregionalSubrealm.PersianDesertsAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA28 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "South Caspian Coastal & Mountain Mixed Forests"@en ;
+    skos:notation "PA28" ;
+    skos:broader tgs:BioregionalSubrealm.PersianDesertsAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA29 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Persian Deserts & Mountain Woodlands"@en ;
+    skos:notation "PA29" ;
+    skos:broader tgs:BioregionalSubrealm.PersianDesertsAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA30 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Afghan-Balochistan Drylands, Mountain Meadows & Conifer Forests"@en ;
+    skos:notation "PA30" ;
+    skos:broader tgs:BioregionalSubrealm.PersianDesertsAndForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA31 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Tian Shan-Pamir Grasslands, Mountain Steppe & Conifer Forests"@en ;
+    skos:notation "PA31" ;
+    skos:broader tgs:BioregionalSubrealm.TienShanMountains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA32 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Central Asian Deserts & Riparian Woodlands"@en ;
+    skos:notation "PA32" ;
+    skos:broader tgs:BioregionalSubrealm.CaspianSeaAndCentralAsianDeserts ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA33 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Caspian Sea, Coastal Deserts & Kopet Dagh Mountain Woodlands"@en ;
+    skos:notation "PA33" ;
+    skos:broader tgs:BioregionalSubrealm.CaspianSeaAndCentralAsianDeserts ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA34 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Kazakh Forest Steppe & Grasslands"@en ;
+    skos:notation "PA34" ;
+    skos:broader tgs:BioregionalSubrealm.KazakhSteppesAndHemiborealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA35 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Siberian Hemiboreal Forests & Steppe"@en ;
+    skos:notation "PA35" ;
+    skos:broader tgs:BioregionalSubrealm.KazakhSteppesAndHemiborealForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA36 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sayan Mountain Conifer Forests, Alpine Meadows & Steppe"@en ;
+    skos:notation "PA36" ;
+    skos:broader tgs:BioregionalSubrealm.AltaiSayanMountains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA37 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Altai Mountains & Ermin Valley"@en ;
+    skos:notation "PA37" ;
+    skos:broader tgs:BioregionalSubrealm.AltaiSayanMountains ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA38 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Junggar Semi-Desert & Ermin Valley Steppe"@en ;
+    skos:notation "PA38" ;
+    skos:broader tgs:BioregionalSubrealm.EastAsianDeserts ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA39 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Taklimakan Desert & Lowland Deciduous Forests"@en ;
+    skos:notation "PA39" ;
+    skos:broader tgs:BioregionalSubrealm.EastAsianDeserts ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA40 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Tibetan Plateau Alpine Meadows & Shrublands"@en ;
+    skos:notation "PA40" ;
+    skos:broader tgs:BioregionalSubrealm.TibetanPlateau ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA41 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Himalayan-Pamir Alpine Shrub & Meadows"@en ;
+    skos:notation "PA41" ;
+    skos:broader tgs:BioregionalSubrealm.TibetanPlateau ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA42 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Ordos Plateau Steppe & Mountain Conifer Forests"@en ;
+    skos:notation "PA42" ;
+    skos:broader tgs:BioregionalSubrealm.MongolianGrasslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA43 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Greater Gobi Desert"@en ;
+    skos:notation "PA43" ;
+    skos:broader tgs:BioregionalSubrealm.EastAsianDeserts ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA44 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Mongolian Grasslands, Alpine Meadows & Forest Steppe"@en ;
+    skos:notation "PA44" ;
+    skos:broader tgs:BioregionalSubrealm.MongolianGrasslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA45 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Dzhagdy Mountain Conifer Forests"@en ;
+    skos:notation "PA45" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA46 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Manchuria-Ussuri Mixed Forests & Meadow Steppes"@en ;
+    skos:notation "PA46" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA47 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Japan Forest Islands"@en ;
+    skos:notation "PA47" ;
+    skos:broader tgs:BioregionalSubrealm.JapaneseIslands ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA48 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Korean Peninsula Mixed Forests"@en ;
+    skos:notation "PA48" ;
+    skos:broader tgs:BioregionalSubrealm.NortheastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA49 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Loess Plateau & Huang He Plain Mixed Forests"@en ;
+    skos:notation "PA49" ;
+    skos:broader tgs:BioregionalSubrealm.CentralEastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA50 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Chang Jiang Plain Evergreen Forests"@en ;
+    skos:notation "PA50" ;
+    skos:broader tgs:BioregionalSubrealm.CentralEastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA51 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Sichuan Basin & Central Mountain Forests"@en ;
+    skos:notation "PA51" ;
+    skos:broader tgs:BioregionalSubrealm.CentralEastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA52 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Guizhou & Yunnan Subtropical Forest Plateaus"@en ;
+    skos:notation "PA52" ;
+    skos:broader tgs:BioregionalSubrealm.CentralEastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:Bioregion.PA53 a thinkr:Bioregion, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthBioregions2023 ;
+    skos:prefLabel "Hengduan Mountain Conifer Forests"@en ;
+    skos:notation "PA53" ;
+    skos:broader tgs:BioregionalSubrealm.CentralEastAsianForests ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    .
+
+tgs:ConceptScheme.OneEarthBioregions2023 a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "One Earth Bioregions 2023"@en ;
+    skos:definition "One Earth's hierarchy of 8 biogeographic realms, 14 realm divisions, 53 subrealms and 185 bioregions."@en ;
+    dcterms:source tgs:Work.OneEarthBioregions2023 ;
+    dcterms:creator "Karl Burkart, One Earth" ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
+    skos:scopeNote "Attribution: One Earth (oneearth.org). Data licensed CC BY-NC 4.0."@en ;
+    skos:hasTopConcept
+        tgs:BiogeographicRealm.Afrotropic,
+        tgs:BiogeographicRealm.Antarctic,
+        tgs:BiogeographicRealm.Australasian,
+        tgs:BiogeographicRealm.Indomalayan,
+        tgs:BiogeographicRealm.Nearctic,
+        tgs:BiogeographicRealm.Neotropic,
+        tgs:BiogeographicRealm.Oceanian,
+        tgs:BiogeographicRealm.Palearctic ;
+    .

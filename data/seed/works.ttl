@@ -3337,10 +3337,11 @@ tgs:Work.OrganismEarthLibrary a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.TechnoOptimistManifesto a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Techno-Optimist Manifesto"@en ;
-    rdfs:comment "Essay by Marc Andreessen published by Andreessen Horowitz (a16z), October 16, 2023. Argues that technology and markets are the source of all material progress and that growth should be unlimited. Its 'The Enemy' section names, among others, degrowth, sustainability, ESG, tech ethics and risk management."@en ;
+    rdfs:comment "Essay by Marc Andreessen published by Andreessen Horowitz (a16z), October 16, 2023. Argues that technology and markets are the source of all material progress and that growth should be unlimited. Its 'The Enemy' section says society 'has been subjected to a mass demoralization campaign for six decades -- against technology and against life -- under varying names like \"existential risk,\" \"sustainability,\" \"ESG,\" \"Sustainable Development Goals,\" \"social responsibility,\" \"stakeholder capitalism,\" \"Precautionary Principle,\" \"trust and safety,\" \"tech ethics,\" \"risk management,\" \"degrowth,\" \"the limits of growth.\"' (verbatim list as quoted in tgs:Work.TechBillionairesTheAIThreatAndResistance)."@en ;
     dct:creator tgs:Human.MarcAndreessen ;
     dct:issued "2023-10-16"^^xsd:date ;
     dct:source <https://a16z.com/the-techno-optimist-manifesto/> ;
+    dct:isReferencedBy tgs:Work.TechBillionairesTheAIThreatAndResistance ;
     .
 
 tgs:Work.AnEcomodernistManifesto a thinkr:Work, owl:NamedIndividual ;
@@ -3370,4 +3371,80 @@ tgs:Work.AssessingExxonMobilsGlobalWarmingProjections a thinkr:Work, owl:NamedIn
     dct:creator tgs:Human.NaomiOreskes ;
     dct:issued "2023"^^xsd:gYear ;
     dct:identifier <https://doi.org/10.1126/science.abk0063> ;
+    .
+
+tgs:Work.SustainabilityScientistsCritiqueOfNeoclassicalEconomics a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Sustainability Scientists' Critique of Neoclassical Economics"@en ;
+    rdfs:comment "Peer-reviewed review by Mark Diesendorf and Thomas Wiedmann (UNSW Sydney) in Global Sustainability (Cambridge University Press), 2024. Tests ten key hypotheses and four claims of neoclassical economics against basic scientific standards and finds every one fails at least one (contradicted by observation, or internally inconsistent); notes that GDP growth tracks growth in material and energy use; recommends a mixed economy that puts ecological sustainability and social justice ahead of efficiency, with managed degrowth. Independent, peer-reviewed support for Nate's critique of mainstream economics (tgs:Concept.TenCoreMythsOfBusinessSchools), from outside the TGS circle."@en ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:source <https://www.cambridge.org/core/product/AF8F51932270DA84A2D4D946EDEB4EA1> ;
+    dct:relation tgs:SchoolOfThought.NeoclassicalGrowthEconomics, tgs:Concept.TenCoreMythsOfBusinessSchools, tgs:SchoolOfThought.DegrowthMovement ;
+    .
+
+tgs:Work.TheNerdReich a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Nerd Reich: Silicon Valley Fascism and the War on Democracy"@en ;
+    rdfs:comment "Book by journalist Gil Durán (Simon & Schuster, August 18, 2026), a New York Times bestseller. Drawing on their own speeches, writings and interviews, it traces how a network of Silicon Valley billionaires and venture capitalists (Peter Thiel, Elon Musk, Marc Andreessen, Balaji Srinivasan among them) has spent about three decades building an ideology and political machinery to replace democratic governance with corporate rule ('digital feudalism'), starting from tgs:Work.TheSovereignIndividual (1997). Journalism by a critic: evidence of documented conduct, not the subjects' own statement of position. Its subject is power and democracy rather than ecological limits."@en ;
+    dct:issued "2026-08-18"^^xsd:date ;
+    dct:source <https://www.simonandschuster.co.uk/books/The-Nerd-Reich/Gil-Duran/9781398555921> ;
+    dct:relation tgs:Work.TheSovereignIndividual, tgs:Concept.PowerVersusLife, tgs:ScenarioFacet.ACapturedDemocracy, tgs:ScenarioFacet.ForcedFeudalism ;
+    .
+
+tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Energy, Economic Growth, and Ecological Crisis"@en ;
+    rdfs:comment "Article by physicist Erald Kolasi in Monthly Review 71, no. 2 (June 2019). Argues that 'economic activities cannot be decoupled from energy use, for that would be like asking economics to step completely outside the laws of physics'; that GDP-energy decoupling claims rest on primary-energy accounting that ignores conversions and energy quality; that thermodynamics limits substitution (quoting Solow 1974, 'the world can, in effect, get along without natural resources'); and that renewables cannot sustain indefinite growth on a finite surface. Its remedy is political: 'a full-blown social, political, and economic confrontation against capitalism' -- wealth taxes, socializing large parts of the economy, a pay ratio cap of ten to one, and organizing around 'sustainable human development' rather than growth. It does not mention Hagens or the superorganism, and agrees with TGS on the biophysical diagnosis; it differs on the remedy (class politics rather than preparing for simplification)."@en ;
+    dct:creator tgs:Human.EraldKolasi ;
+    dct:issued "2019-06"^^xsd:gYearMonth ;
+    dct:source <https://monthlyreview.org/articles/energy-economic-growth-and-ecological-crisis/> ;
+    dct:relation tgs:Concept.EnergyBlindness, tgs:Concept.LimitsToGrowth, tgs:SchoolOfThought.NeoclassicalGrowthEconomics, tgs:SchoolOfThought.Ecosocialism ;
+    .
+
+tgs:Work.TechBillionairesTheAIThreatAndResistance a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Tech Billionaires, the AI Threat, and Resistance"@en ;
+    rdfs:comment "Article by economist Martin Hart-Landsberg in Monthly Review 78, no. 3 (July-August 2026). Maps the Silicon Valley network (the 'PayPal Mafia' of Thiel, Musk and David Sacks; Andreessen Horowitz; Palmer Luckey of Anduril; the heads of OpenAI, Anthropic, Amazon and Meta) and its ideologies, which it groups under transhumanism (Singularitarianism, Effective Altruism, Effective Accelerationism -- the last holding that AGI 'should not be slowed by concerns over existing social and ecological problems'). Documents ties to the Trump administration (Thiel and Andreessen backing JD Vance; Sacks as White House AI and crypto czar; Palantir's $10 billion Defense contract), argues the AI investment boom is a likely bubble, and describes resistance from unions and the anti-data-center movement, whose main concern is data centers' energy use and the coal plants kept open for it. It quotes the Techno-Optimist Manifesto's list of enemies verbatim, including 'Precautionary Principle', 'degrowth' and 'the limits of growth'. A critic's secondary source: use for documented conduct and as verification of quoted primary sources, not as the subjects' own positions."@en ;
+    dct:issued "2026-07"^^xsd:gYearMonth ;
+    dct:source <https://monthlyreview.org/> ;
+    dct:references tgs:Work.TechnoOptimistManifesto ;
+    dct:relation tgs:SchoolOfThought.EffectiveAccelerationism, tgs:SchoolOfThought.TechnoOptimism, tgs:Concept.PowerVersusLife ;
+    .
+
+tgs:Work.GoverningTheCommons a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Governing the Commons: The Evolution of Institutions for Collective Action"@en ;
+    rdfs:comment "Book by Elinor Ostrom (Cambridge University Press, 1990). From field studies of long-lived commons -- Swiss alpine meadows (Torbel), Japanese village forests, Spanish huerta and Philippine zanjera irrigation, Turkish and other inshore fisheries -- it shows that communities often govern shared resources sustainably for centuries without either privatization or central state control, and distills the conditions under which they succeed into eight design principles (tgs:Concept.OstromDesignPrinciples). The empirical counterpoint to tgs:Work.TragedyOfTheCommons1968."@en ;
+    dct:creator tgs:Human.ElinorOstrom ;
+    dct:issued "1990"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Work.BeyondMarketsAndStates, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths ;
+    .
+
+tgs:Work.BeyondMarketsAndStates a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Beyond Markets and States: Polycentric Governance of Complex Economic Systems"@en ;
+    rdfs:comment "Elinor Ostrom's Nobel Prize lecture (December 8, 2009), published in the American Economic Review 100(3), 2010. Summarizes her research program: that the two-way choice between market and state misses a third, empirically common option -- self-organized, polycentric governance by resource users -- and restates the design principles. Ostrom shared the 2009 economics prize with Oliver Williamson, the first woman to win it."@en ;
+    dct:creator tgs:Human.ElinorOstrom ;
+    dct:issued "2010"^^xsd:gYear ;
+    dct:references tgs:Work.GoverningTheCommons ;
+    .
+
+tgs:Work.OneEarthSolutions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "One Earth Solutions"@en ;
+    rdfs:comment "Online catalogue of 76 climate and biodiversity solutions run by the non-profit One Earth, in three pillars -- Energy Transition (23), Nature Conservation (24) and Regenerative Agriculture (29) -- each split into four sub-pillars, with seven Levers of Change (how solutions get implemented) and seven Intersectional Themes (equity, health, water and others). A taxonomy of solution types, complementing tgs:Work.BioregioningEarthOntology, which catalogues named on-the-ground initiatives. Imported in solutions.ttl. Read the energy pillar through the TGS lens: renewables are important but not enough by themselves."@en ;
+    dct:source <https://www.oneearth.org/solutions/> ;
+    dct:relation tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Work.OneEarthBioregions2023 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bioregions 2023 (One Earth)"@en ;
+    rdfs:comment "One Earth's map of the world's bioregions, by Karl Burkart with input from field scientists, conservation experts and geographers: 14 biomes, 8 biogeographic realms in 14 realm divisions, 53 subrealms (52 habitable plus Antarctica), and 185 bioregions (30 of them small islands), built from the 844 terrestrial ecoregions of tgs:Work.EcoregionBasedApproachToProtectingHalf by intersecting biomes with large geological features and climate zones. Bioregions average about 715,000 square km of land; marine areas extend to EEZ boundaries, and the high seas are excluded. Data licensed CC BY-NC 4.0 with attribution to One Earth. Imported in bioregions.ttl."@en ;
+    dct:creator "Karl Burkart, One Earth" ;
+    dct:issued "2023"^^xsd:gYear ;
+    dct:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
+    dct:source <https://www.oneearth.org/bioregions-2023/>, <https://oneearth.org/bioregion-list>, <https://datahub.io/climate-and-environment/bioregions-2023> ;
+    dct:references tgs:Work.EcoregionBasedApproachToProtectingHalf ;
+    dct:relation tgs:Work.OneEarthSolutions, tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:Work.EcoregionBasedApproachToProtectingHalf a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "An Ecoregion-Based Approach to Protecting Half the Terrestrial Realm"@en ;
+    rdfs:comment "Article by Eric Dinerstein and colleagues in BioScience 67(6), 2017. Maps the world's 846 terrestrial ecoregions (844 used by One Earth) in 14 biomes and 8 realms, and assesses how far each is from the goal of protecting half of nature. The building blocks of tgs:Work.OneEarthBioregions2023."@en ;
+    dct:issued "2017"^^xsd:gYear ;
+    dct:identifier <https://doi.org/10.1093/biosci/bix014> ;
+    dct:isReferencedBy tgs:Work.OneEarthBioregions2023 ;
     .

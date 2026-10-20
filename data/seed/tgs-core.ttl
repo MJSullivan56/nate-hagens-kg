@@ -390,7 +390,7 @@ thinkr:AlternateTerm a owl:Class ;
     skos:prefLabel "Alternate Term"@en .
 
 thinkr:hasAlternateTerm a owl:ObjectProperty ;
-    rdfs:domain thinkr:Concept ;
+    rdfs:domain skos:Concept ;
     rdfs:range thinkr:AlternateTerm ;
     skos:scopeNote "Domain deliberately Concept-only for now — Persona (real people going by different names) or Organization may need this too eventually, but not built ahead of real demonstrated need, same discipline as the has*Relationship family's original Persona-only scoping."@en ;
     skos:prefLabel "has alternate term"@en .
@@ -664,10 +664,12 @@ thinkr:diagonallyDisjointWith a owl:ObjectProperty, owl:SymmetricProperty ;
 #############################################
 
 thinkr:InterventionFront a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "One of Hagens' 6 broad fronts of intervention from Frankly_132's 'first public draft' action framework — Infrastructure & Physical Stock/Flow, Poverty & Displacement, Ecological Interventions, Civic Resilience & Governance, Culture & Meaning, and Economic Transition. Explicitly framed by Hagens as interdependent, not a menu to pick from, and each operating at multiple real scales (community/local, regional, national, global)."@en ;
     skos:prefLabel "Intervention Front"@en .
 
 thinkr:InterventionSubdomain a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "A named sub-area within one of the 6 thinkr:InterventionFront individuals — e.g. 'Energy systems' within Infrastructure, or 'Dignity infrastructure and mutual aid' within Poverty & Displacement. Linked to its parent Front via thinkr:hasSubdomain."@en ;
     skos:prefLabel "Intervention Subdomain"@en .
 
@@ -707,10 +709,12 @@ thinkr:hasDiscussionSummary a owl:DatatypeProperty ;
 #############################################
 
 thinkr:PracticeCluster a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "A top-level grouping in an outside practice taxonomy, such as a Bioregioning Earth cluster (Ecosystem Regeneration, Community Governance and so on)."@en ;
     skos:prefLabel "Practice Cluster"@en .
 
 thinkr:PracticeTerm a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "An activity term from an outside practice taxonomy (for example Watershed Repair or Collective Ownership Models), used to tag thinkr:Initiative individuals. Linked to the cluster it sits in by skos:broader and to this graph's thinkr:InterventionSubdomain individuals by skos:relatedMatch, which marks a working crosswalk, not an equivalence."@en ;
     skos:prefLabel "Practice Term"@en .
 
@@ -766,3 +770,32 @@ thinkr:citesEpisode a owl:ObjectProperty ;
     rdfs:range thinkr:Episode ;
     rdfs:comment "The episode(s) whose content this Evidence rests on. Added 2026-10-19 at MJSullivan's request so that the episode behind a piece of evidence is an explicit, queryable link rather than a mention in its description. Distinct from thinkr:aboutSource, which points to an external publication with a reliability rating."@en ;
     skos:prefLabel "cites episode"@en .
+
+#############################################
+# ADDED 2026-10-20 — bioregional geography (One Earth Bioregions 2023). See bioregions.ttl.
+#############################################
+
+thinkr:BiogeographicRealm a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "One of the eight classic biogeographical realms (Nearctic, Neotropic, Palearctic, Afrotropic, Indomalayan, Australasian, Oceanian, Antarctic)."@en ;
+    skos:prefLabel "Biogeographic Realm"@en .
+
+thinkr:BioregionalRealm a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "One of One Earth's fourteen realm divisions, subdividing the eight biogeographic realms (e.g. Northern America within the Nearctic). skos:broader points to its thinkr:BiogeographicRealm."@en ;
+    skos:prefLabel "Bioregional Realm"@en .
+
+thinkr:BioregionalSubrealm a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "One of One Earth's 53 subrealms: a cluster of related bioregions within a realm (e.g. Northeast American Forests). skos:broader points to its thinkr:BioregionalRealm."@en ;
+    skos:prefLabel "Bioregional Subrealm"@en .
+
+thinkr:Bioregion a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "One of One Earth's 185 bioregions: a region of related ecoregions, mostly within one biome, bounded by realm, major geology and climate. skos:notation holds One Earth's code (e.g. NA24); skos:broader points to its thinkr:BioregionalSubrealm. See tgs:Concept.Bioregion for the idea itself."@en ;
+    skos:prefLabel "Bioregion"@en .
+
+thinkr:inBioregion a owl:ObjectProperty ;
+    rdfs:range thinkr:Bioregion ;
+    rdfs:comment "The bioregion where an organization, initiative or other entity is based or works. Domain left open on purpose."@en ;
+    skos:prefLabel "in bioregion"@en .

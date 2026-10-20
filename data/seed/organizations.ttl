@@ -430,6 +430,7 @@ tgs:Organization.AliancaMarITerraDiMallorca a thinkr:Organization, owl:NamedIndi
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
     thinkr:placeName "Mallorca, Spain" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA20 ;
     .
 
 tgs:Organization.AllianceForScotlandsRainforest a thinkr:Organization, owl:NamedIndividual ;
@@ -437,6 +438,7 @@ tgs:Organization.AllianceForScotlandsRainforest a thinkr:Organization, owl:Named
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
     thinkr:placeName "Scotland, UK" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.AmazonSacredHeadwatersAlliance a thinkr:Organization, owl:NamedIndividual ;
@@ -465,6 +467,7 @@ tgs:Organization.BioregionalLearningCentreSouthDevon a thinkr:Organization, owl:
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
     thinkr:placeName "Devon, England, UK" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.BioregionalWeavingAllianceIreland a thinkr:Organization, owl:NamedIndividual ;
@@ -472,6 +475,7 @@ tgs:Organization.BioregionalWeavingAllianceIreland a thinkr:Organization, owl:Na
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
     thinkr:placeName "Ireland" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.BioregioningTayside a thinkr:Organization, owl:NamedIndividual ;
@@ -479,6 +483,7 @@ tgs:Organization.BioregioningTayside a thinkr:Organization, owl:NamedIndividual 
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
     thinkr:placeName "Tayside, Scotland, UK" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.BlueRidgeFoodshedFund a thinkr:Organization, owl:NamedIndividual ;
@@ -486,6 +491,7 @@ tgs:Organization.BlueRidgeFoodshedFund a thinkr:Organization, owl:NamedIndividua
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "Western North Carolina, USA" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.NA24 ;
     .
 
 tgs:Organization.BlueprintForImpact a thinkr:Organization, owl:NamedIndividual ;
@@ -507,6 +513,7 @@ tgs:Organization.BurrenbeoTrust a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "The Burren, Ireland" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.CEDPO a thinkr:Organization, owl:NamedIndividual ;
@@ -570,6 +577,7 @@ tgs:Organization.EnlivenedCooperative a thinkr:Organization, owl:NamedIndividual
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 2 initiative(s) in this graph."@en ;
     thinkr:placeName "Hawaiʻi, USA" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.OC11 ;
     .
 
 tgs:Organization.FindhornWatershedInitiative a thinkr:Organization, owl:NamedIndividual ;
@@ -577,6 +585,7 @@ tgs:Organization.FindhornWatershedInitiative a thinkr:Organization, owl:NamedInd
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 5 initiative(s) in this graph."@en ;
     thinkr:placeName "Scotland, UK" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.ForeverSabah a thinkr:Organization, owl:NamedIndividual ;
@@ -584,6 +593,7 @@ tgs:Organization.ForeverSabah a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "Sabah, Malaysia" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.IM16 ;
     .
 
 tgs:Organization.HudsonEstuaryResilienceEffort a thinkr:Organization, owl:NamedIndividual ;
@@ -619,6 +629,7 @@ tgs:Organization.KogayonAssociation a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 4 initiative(s) in this graph."@en ;
     thinkr:placeName "Romania" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA14 ;
     .
 
 tgs:Organization.Landschaftspflegeverein a thinkr:Organization, owl:NamedIndividual ;
@@ -659,6 +670,7 @@ tgs:Organization.PanamaRestorationLab a thinkr:Organization, owl:NamedIndividual
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 3 initiative(s) in this graph."@en ;
     thinkr:placeName "Panama" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.NT24 ;
     .
 
 tgs:Organization.ReGenerOsaCollective a thinkr:Organization, owl:NamedIndividual ;
@@ -673,6 +685,7 @@ tgs:Organization.ReVillageGreenValley a thinkr:Organization, owl:NamedIndividual
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "Graton, Sonoma County, California, USA" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.NA31 ;
     .
 
 tgs:Organization.ReconnectingNorthland a thinkr:Organization, owl:NamedIndividual ;
@@ -680,6 +693,7 @@ tgs:Organization.ReconnectingNorthland a thinkr:Organization, owl:NamedIndividua
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "Northland, New Zealand" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.AU1 ;
     .
 
 tgs:Organization.RegenFoundation a thinkr:Organization, owl:NamedIndividual ;
@@ -715,6 +729,7 @@ tgs:Organization.RiverErichtCatchmentRestorationInitiative a thinkr:Organization
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 1 initiative(s) in this graph."@en ;
     thinkr:placeName "Perthshire, Scotland, UK" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.PA9 ;
     .
 
 tgs:Organization.SalmonNation a thinkr:Organization, owl:NamedIndividual ;
@@ -729,6 +744,7 @@ tgs:Organization.SinalDoVale a thinkr:Organization, owl:NamedIndividual ;
     skos:definition "Organization documented on Bioregioning Earth (tgs:Work.BioregioningEarthOntology), with 6 initiative(s) in this graph."@en ;
     thinkr:placeName "Mata Atlântica, Rio de Janeiro state, Brazil" ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    thinkr:inBioregion tgs:Bioregion.NT14 ;
     .
 
 tgs:Organization.SouthAsiaBioregionalismWorkingGroup a thinkr:Organization, owl:NamedIndividual ;

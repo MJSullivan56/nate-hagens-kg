@@ -1,0 +1,928 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-10-20 — One Earth's solutions taxonomy (tgs:Work.OneEarthSolutions),
+# at MJSullivan's request, as a source of solution types for WWNS.
+# Same classes as initiatives.ttl: the three pillars plus Levers of Change and
+# Intersectional Themes are thinkr:PracticeCluster; sub-pillars and the 76
+# solutions are thinkr:PracticeTerm, linked by skos:broader (solution ->
+# sub-pillar -> pillar). Six Fronts crosswalk (skos:relatedMatch) is set
+# mostly at sub-pillar level; query with skos:broader* to reach solutions.
+# Definitions are short paraphrases of One Earth's own descriptions.
+# IRIs carry a OneEarth_ prefix to keep them apart from Bioregioning terms.
+#############################################
+
+tgs:PracticeCluster.OneEarth_EnergyTransition a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Energy Transition"@en ;
+    skos:definition "Shifting energy systems away from fossil fuels toward clean, renewable power for everyone, using technology that is already available and cheaper than polluting alternatives."@en ;
+    skos:scopeNote "TGS reading (MJSullivan's and Nate's view): renewables are important but not enough by themselves; Nate's aggregate-probability test (tgs:Concept.AggregateProbability, Frankly_79) names '100 percent renewables' among single-issue efforts that look good alone. Quote this pillar in WWNS as part of using less, not only cleaner."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RenewablePower a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Renewable Power"@en ;
+    skos:definition "Electricity from clean sources that regenerate faster than they are used."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_EnergyTransition ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SolarPhotovoltaic a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Solar Photovoltaic"@en ;
+    skos:definition "Panels that convert sunlight directly into electric current."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SolarThermoelectric a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Solar Thermoelectric"@en ;
+    skos:definition "Mirrors or lenses concentrate sunlight to heat a fluid that drives a turbine."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GeothermalPower a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Geothermal Power"@en ;
+    skos:definition "Underground heat, usually near volcanic areas, turned into steam for electricity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_OnshoreWind a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Onshore Wind"@en ;
+    skos:definition "Land-based turbines converting wind into electricity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_OffshoreWind a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Offshore Wind"@en ;
+    skos:definition "Seabed-anchored turbines using stronger ocean winds."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_WaveEnergy a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Wave Energy"@en ;
+    skos:definition "Ocean wave motion converted into electricity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableHydropower a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Hydropower"@en ;
+    skos:definition "Smaller dams that generate power while protecting aquatic life and fish migration."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableBiomassPower a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Biomass Power"@en ;
+    skos:definition "Electricity from waste biomass rather than harvested trees."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GreenHydrogenPower a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Green Hydrogen Power"@en ;
+    skos:definition "Hydrogen made by splitting water with renewable electricity, stored and used in fuel cells."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewablePower ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RenewableHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Renewable Heat"@en ;
+    skos:definition "Heating water, buildings and industry with clean, regenerating sources."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_EnergyTransition ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SolarHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Solar Heat"@en ;
+    skos:definition "The sun's heat captured for space or water heating."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableBiomassHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Biomass Heat"@en ;
+    skos:definition "Controlled burning of waste biomass for heat without depleting forests or farmland."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GeothermalHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Geothermal Heat"@en ;
+    skos:definition "Underground heat drawn for homes and industry."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GreenHydrogenHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Green Hydrogen Heat"@en ;
+    skos:definition "Clean hydrogen burned for high-temperature heat or used in fuel cells."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_DistrictHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "District Heat"@en ;
+    skos:definition "Insulated pipe networks distributing renewable heat to homes and industry."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ElectricHeat a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Electric Heat"@en ;
+    skos:definition "Heat pumps, heaters and induction powered by renewable electricity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableHeat ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RenewableTransport a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Renewable Transport"@en ;
+    skos:definition "Vehicles powered by renewable electricity or portable carbon-neutral fuels."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_EnergyTransition ;
+    skos:relatedMatch tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.EnergySystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GreenHydrogenFuel a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Green Hydrogen Fuel"@en ;
+    skos:definition "Renewably produced hydrogen used on demand in fuel cells."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableTransport ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableEFuel a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable E-fuel"@en ;
+    skos:definition "Synthetic fuels made with renewable power for existing aircraft and ships."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableTransport ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableBiofuel a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Biofuel"@en ;
+    skos:definition "Liquid fuels from non-food sources such as algae and waste."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableTransport ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ElectricTransport a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Electric Transport"@en ;
+    skos:definition "Trains, buses, cars and bikes on renewable electricity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RenewableTransport ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_EnergyEfficiency a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Energy Efficiency"@en ;
+    skos:definition "Reducing total energy demand through behavior and technology without lowering living standards."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_EnergyTransition ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:Concept.JevonsParadox ;
+    skos:scopeNote "Efficiency without a binding limit tends to raise total use (tgs:Concept.JevonsParadox, tgs:Concept.GeneralizedJevonsParadox); the pillar's 'without lowering living standards' assumes the rebound can be avoided."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_BuiltEnvironment a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Built Environment"@en ;
+    skos:definition "Buildings, cities and infrastructure designed to need less energy and materials."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EnergyEfficiency ;
+    skos:relatedMatch tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_TransportationEfficiency a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Transportation Efficiency"@en ;
+    skos:definition "Shifting travel toward rail, buses, bikes and remote work."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EnergyEfficiency ;
+    skos:relatedMatch tgs:InterventionSubdomain.TransportationAndLogistics, tgs:Concept.JevonsParadox ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_TransmissionAndStorage a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Transmission and Storage"@en ;
+    skos:definition "Smart grids, meters, demand response and batteries to cut losses."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EnergyEfficiency ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_IndustriesAndServices a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Industries and Services"@en ;
+    skos:definition "Upgrades that cut energy use and emissions in manufacturing."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EnergyEfficiency ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeCluster.OneEarth_NatureConservation a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Nature Conservation"@en ;
+    skos:definition "Protecting natural environments to reverse biodiversity loss and stabilize the climate, aiming to protect, restore and connect 50% of Earth's lands and oceans."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_LandConservation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Land Conservation"@en ;
+    skos:definition "Long-term protection and Indigenous governance of land ecosystems across all biomes."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_NatureConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.ProtectingEcologicalGains, tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ProtectedLands a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Protected Lands"@en ;
+    skos:definition "Areas already protected by governments, including IUCN categories and OECMs."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RaritySites a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Rarity Sites"@en ;
+    skos:definition "Unprotected areas with rare, threatened or range-restricted species needing immediate protection."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_LandHabitats a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Land Habitats"@en ;
+    skos:definition "Unprotected land with plant and animal communities vital to healthy ecosystems."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MammalAssemblages a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Mammal Assemblages"@en ;
+    skos:definition "Unprotected landscapes where large mammals gather seasonally."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_IntactWilderness a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Intact Wilderness"@en ;
+    skos:definition "Large, undisturbed, unprotected forests, shrublands and grasslands."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ClimateRefugia a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Climate Refugia"@en ;
+    skos:definition "Unprotected areas that store large amounts of carbon."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_IndigenousTenure a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Indigenous Tenure"@en ;
+    skos:definition "Lands used by Indigenous Peoples or local communities and legally recognized."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.LandAndHousingReform ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_UrbanBiodiversity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Urban Biodiversity"@en ;
+    skos:definition "Restoring nature in cities: trees, microforests, pollinator meadows, river restoration."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_LandConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.ReconnectionToPlace ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_OceanConservation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Ocean Conservation"@en ;
+    skos:definition "Long-term protection and sustainable management of marine areas and species."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_NatureConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ProtectedSeas a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Protected Seas"@en ;
+    skos:definition "Marine protected areas with official limits on human activity."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_OceanConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MarineHabitats a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Marine Habitats"@en ;
+    skos:definition "Unprotected ocean areas with life vital to marine ecosystems."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_OceanConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableFisheries a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Fisheries"@en ;
+    skos:definition "Fishing at rates that let stocks replenish naturally."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_OceanConservation ;
+    skos:relatedMatch tgs:Concept.OstromDesignPrinciples ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MarineCarbonSinks a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Marine Carbon Sinks"@en ;
+    skos:definition "Ocean systems that absorb and store carbon dioxide."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_OceanConservation ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_EcosystemRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Ecosystem Restoration"@en ;
+    skos:definition "Helping degraded ecosystems and their natural processes recover."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_NatureConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Reforestation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Reforestation"@en ;
+    skos:definition "Planting native trees on damaged land."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ForestRecovery a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Forest Recovery"@en ;
+    skos:definition "Restoring logged or degraded forests by natural or assisted regeneration."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableForestry a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Forestry"@en ;
+    skos:definition "Selective logging instead of clear-cutting."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GrasslandRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Grassland Restoration"@en ;
+    skos:definition "Managing and planting native species to restore grasslands."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_WetlandRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Wetland Restoration"@en ;
+    skos:definition "Restoring marshes, bogs, seagrass and kelp forests."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MangroveRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Mangrove Restoration"@en ;
+    skos:definition "Reviving coastal mangroves to store carbon and protect shorelines."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_CoastalRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Coastal Restoration"@en ;
+    skos:definition "Rehabilitating coastal ecosystems, including bleached corals."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SpeciesRewilding a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Species Rewilding"@en ;
+    skos:definition "Reintroducing animals to habitats they were removed from."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_EcosystemRestoration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_WildlifeConnectivity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Wildlife Connectivity"@en ;
+    skos:definition "Ecological corridors that let species move between habitats."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_NatureConservation ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_LandCorridors a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Land Corridors"@en ;
+    skos:definition "Landscapes linking wildlife areas."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_WildlifeConnectivity ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_BuffersAndGreenways a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Buffers and Greenways"@en ;
+    skos:definition "Land separating farms or development from protected and wildlife areas."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_WildlifeConnectivity ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RiversAndStreams a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Rivers and Streams"@en ;
+    skos:definition "Riverside land supporting river-dependent species and stabilizing banks."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_WildlifeConnectivity ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MarineCorridors a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Marine Corridors"@en ;
+    skos:definition "Ocean migration routes free from human interference."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_WildlifeConnectivity ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeCluster.OneEarth_RegenerativeAgriculture a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Regenerative Agriculture"@en ;
+    skos:definition "Transforming food and farming to restore soil and store carbon while cutting waste and emissions."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RegenerativeCroplands a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Regenerative Croplands"@en ;
+    skos:definition "Farm practices that increase carbon storage, resilience and yields while reducing inputs."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_FarmAfforestation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Farm Afforestation"@en ;
+    skos:definition "Windbreaks, orchards or alley cropping integrated into farmland."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_CroplandRestoration a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Cropland Restoration"@en ;
+    skos:definition "Returning degraded or abandoned farmland to productive use."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SoilManagement a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Soil Management"@en ;
+    skos:definition "Cover crops, erosion control, inoculants and soil improvers."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableBiochar a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Biochar"@en ;
+    skos:definition "Charcoal from sustainably sourced biomass that enriches soil and stores carbon."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableFertilizers a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Fertilizers"@en ;
+    skos:definition "Organic fertilizers such as compost, manure and vermiculture."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_NaturalPestControl a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Natural Pest Control"@en ;
+    skos:definition "Ecological pest management instead of synthetic chemicals."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableRiceFarming a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Rice Farming"@en ;
+    skos:definition "Water management and lower inputs that cut methane."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Agritecture a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Agritecture"@en ;
+    skos:definition "Farming built into structures: vertical farms, greenhouses, green roofs."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_CropOptimization a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Crop Optimization"@en ;
+    skos:definition "Using AI and data to site crops."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_DrylandIrrigation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Dryland Irrigation"@en ;
+    skos:definition "Irrigating rainfed cropland to raise yields without expanding farmland or overdrawing water."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Agroforestry a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Agroforestry"@en ;
+    skos:definition "Trees, crops and sometimes livestock in complementary systems."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Polyculture a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Polyculture"@en ;
+    skos:definition "Multiple complementary crops in the same area."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_PerennialSuperfoods a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Perennial Superfoods"@en ;
+    skos:definition "Nutrient-rich perennials that reduce erosion."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SeedDiversity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Seed Diversity"@en ;
+    skos:definition "Restoring heirloom crops or breeding resilient strains."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SmallholderFarming a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Smallholder Farming"@en ;
+    skos:definition "Small family or community farms supporting food security with low footprints."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_RegenerativeCroplands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableRangelands a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Rangelands"@en ;
+    skos:definition "Shifting diets, managing pasture and ending deforestation to ease pressure on grazing lands."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Silvopasture a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Silvopasture"@en ;
+    skos:definition "Trees deliberately integrated with grazing livestock."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_SustainableRangelands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableGrazing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Grazing"@en ;
+    skos:definition "Controlled grazing that mimics wild herbivores and improves soil."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_SustainableRangelands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_HealthyFeed a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Healthy Feed"@en ;
+    skos:definition "Balanced livestock nutrition that reduces antibiotics and methane."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_SustainableRangelands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MeatFreeProteins a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Meat-free Proteins"@en ;
+    skos:definition "Plant-based proteins from pulses, seaweed and other sources."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_SustainableRangelands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_PlanetarianDiet a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Planetarian Diet"@en ;
+    skos:definition "EAT-Lancet-based diet with less red meat, more vegetables and less waste."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_SustainableRangelands ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_FoodWasteReduction a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Food Waste Reduction"@en ;
+    skos:definition "Cutting food waste so resources are used efficiently and nutrients cycle back."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_StorageAndLogistics a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Storage and Logistics"@en ;
+    skos:definition "Solar-powered refrigeration and cold storage that reduce crop losses."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_BioregionalSourcing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Bioregional Sourcing"@en ;
+    skos:definition "Buying food from local farms and regional ecosystems."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    skos:relatedMatch tgs:InterventionSubdomain.LocalExchangeSystems ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_FoodUpcycling a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Food Upcycling"@en ;
+    skos:definition "Turning byproducts, surplus and imperfect food into new food."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_UrbanGardening a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Urban Gardening"@en ;
+    skos:definition "Growing food in lawns, rooftops, balconies and community gardens."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    skos:relatedMatch tgs:InterventionSubdomain.ReconnectionToPlace ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_MealPlanning a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Meal Planning"@en ;
+    skos:definition "Organizing meals to save money, improve health and reduce waste."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_Composting a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Composting"@en ;
+    skos:definition "Decomposing organic waste into fertilizer and soil amendment."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_CircularFibersheds a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Circular Fibersheds"@en ;
+    skos:definition "Replacing fossil-based fabrics with regeneratively grown textiles and reusing clothing."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
+    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableFiberAndPulp a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Fiber and Pulp"@en ;
+    skos:definition "Responsibly sourced natural fibers such as linen, wool, hemp and jute."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_CircularFibersheds ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GreenTextiles a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Green Textiles"@en ;
+    skos:definition "Fiber processing and dyeing with fewer harmful chemicals."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_CircularFibersheds ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_RecycleAndReuse a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Recycle and Reuse"@en ;
+    skos:definition "Slow fashion, repair, secondhand clothing and fiber recycling."@en ;
+    skos:broader tgs:PracticeTerm.OneEarth_CircularFibersheds ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeCluster.OneEarth_LeversOfChange a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Levers of Change"@en ;
+    skos:definition "How solutions move from idea to implementation."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_FinanceAndIncentives a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Finance and Incentives"@en ;
+    skos:definition "Directing money toward solutions and changing what the economy rewards."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_PolicyAndGovernance a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Policy and Governance"@en ;
+    skos:definition "Changing the rules and public decisions that shape land, energy, food and water."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_ScienceAndIntelligence a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Science and Intelligence"@en ;
+    skos:definition "Research, modeling and data to guide solutions with evidence."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_TechnologyAndProducts a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Technology and Products"@en ;
+    skos:definition "Practical tools, software and equipment that enable solutions."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_LegalEmpowerment a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Legal Empowerment"@en ;
+    skos:definition "Law and rights-based strategies to stop harm and hold actors accountable."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_CommunityAction a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Community Action"@en ;
+    skos:definition "Organizing people and building local power to act together."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_EducationAndCulture a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Education and Culture"@en ;
+    skos:definition "Helping people understand the crisis, the solutions and their connection to nature."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_LeversOfChange ;
+    skos:relatedMatch tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.NarrativeSovereignty ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeCluster.OneEarth_IntersectionalThemes a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:topConceptOf tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Intersectional Themes"@en ;
+    skos:definition "Priorities solutions must support to be just, durable and worth scaling."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_GenderEquity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Gender Equity"@en ;
+    skos:definition "People of all genders having the rights, resources and power to shape solutions."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:Concept.DominationPartnershipContinuum ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SocialJustice a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Social Justice"@en ;
+    skos:definition "Reducing harm and centering the communities most affected by pollution and climate disasters."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.DignityInfrastructure ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_YouthLeadership a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Youth Leadership"@en ;
+    skos:definition "Giving young people education, platforms and decision-making power."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.EducationRedesign ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_SustainableLivelihoods a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Sustainable Livelihoods"@en ;
+    skos:definition "Dignified work that protects both people and climate."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_PublicHealth a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Public Health"@en ;
+    skos:definition "Clean air, water, food and housing as both climate and health solutions."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.CareEconomy ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_WaterStewardship a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Water Stewardship"@en ;
+    skos:definition "Treating water as a shared source of life and protecting freshwater systems."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:PracticeTerm.OneEarth_BiologicalDiversity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.OneEarthSolutions ;
+    skos:prefLabel "Biological Diversity"@en ;
+    skos:definition "Protecting and restoring the living systems that make Earth habitable."@en ;
+    skos:broader tgs:PracticeCluster.OneEarth_IntersectionalThemes ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    .
+
+tgs:ConceptScheme.OneEarthSolutions a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "One Earth Solutions"@en ;
+    skos:definition "One Earth's taxonomy of 76 climate and biodiversity solutions in three pillars and twelve sub-pillars, with seven levers of change and seven intersectional themes. Mapped to the Six Fronts by skos:relatedMatch."@en ;
+    dcterms:source tgs:Work.OneEarthSolutions ;
+    dcterms:creator "One Earth" ;
+    skos:hasTopConcept
+        tgs:PracticeCluster.OneEarth_EnergyTransition,
+        tgs:PracticeCluster.OneEarth_IntersectionalThemes,
+        tgs:PracticeCluster.OneEarth_LeversOfChange,
+        tgs:PracticeCluster.OneEarth_NatureConservation,
+        tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
+    .

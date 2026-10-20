@@ -21,15 +21,30 @@
 #############################################
 
 thinkr:DoughnutHalf a owl:Class, thinkr:Category ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "One of the 2 halves of the Doughnut Economics model — the Social Foundation (inner ring, minimum standards of human wellbeing) and the Ecological Ceiling (outer ring, maximum sustainable pressure on Earth's life-support systems). Each has multiple thinkr:IndicatorCategory members."@en ;
     skos:prefLabel "Doughnut Half"@en .
 
 tgs:DoughnutHalf.SocialFoundation a thinkr:DoughnutHalf, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:topConceptOf tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     skos:prefLabel "Social Foundation"@en ;
     skos:definition "The inner ring of the Doughnut model — tracks the minimum standards of human wellbeing; a shortfall occurs when a metric drops below the threshold necessary for human rights and dignity."@en .
 
 tgs:DoughnutHalf.EcologicalCeiling a thinkr:DoughnutHalf, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:topConceptOf tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     skos:prefLabel "Ecological Ceiling"@en ;
     skos:definition "The outer ring of the Doughnut model — outlines the maximum sustainable pressure humanity can exert on Earth's life-support systems; exceeding these limits leads to ecosystem overshoot and environmental degradation."@en .
+
+tgs:ConceptScheme.CaliforniaDoughnutIndicators a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "California Doughnut Indicators"@en ;
+    skos:definition "The Doughnut's two halves, the 21 indicator categories and 42 indicators of the California Doughnut Snapshot and Report."@en ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    skos:hasTopConcept
+        tgs:DoughnutHalf.EcologicalCeiling,
+        tgs:DoughnutHalf.SocialFoundation ;
+    .

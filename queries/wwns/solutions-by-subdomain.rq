@@ -1,0 +1,17 @@
+# One Earth solution types for a WWNS article, by Six Fronts subdomain.
+# A solution matches if it, or its sub-pillar, is relatedMatch'ed to the subdomain.
+PREFIX tgs:     <http://example.org/tgs#>
+PREFIX thinkr:  <http://example.org/thinkr#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?pillar ?subPillar ?solution ?definition
+WHERE {
+  VALUES ?subdomain { tgs:InterventionSubdomain.FoodAndWaterSystems }
+  ?t a thinkr:PracticeTerm ; dcterms:source tgs:Work.OneEarthSolutions ;
+     skos:prefLabel ?solution ; skos:definition ?definition ;
+     skos:broader* ?m .
+  ?m skos:relatedMatch ?subdomain .
+  ?t skos:broader ?sp . ?sp a thinkr:PracticeTerm ; skos:prefLabel ?subPillar .   # solutions only, not sub-pillars or levers
+  OPTIONAL { ?sp skos:broader ?p . ?p skos:prefLabel ?pillar }
+}
+ORDER BY ?pillar ?subPillar ?solution

@@ -22,7 +22,7 @@
 #############################################
 
 thinkr:SchoolOfThought a owl:Class ;
-    rdfs:subClassOf thinkr:NamedEntity ;
+    rdfs:subClassOf thinkr:NamedEntity, skos:Concept ;
     rdfs:comment "A philosophical, religious, or intellectual tradition/movement/discipline (e.g. Stoicism, Systems Ecology, Behavioral Economics) — no legal existence, no staff, distinct from thinkr:Organization."@en ;
     skos:prefLabel "School of Thought"@en ;
     .
@@ -33,6 +33,8 @@ thinkr:SchoolOfThought a owl:Class ;
 
 tgs:SchoolOfThought.BehavioralEconomics a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "The field studying how real (rather than idealized-rational) human psychology affects economic decisions. Relevant here as the disciplinary framing behind Discount Rates / Present Bias and Human 'Wetware' — Hagens draws on this field's empirical findings to argue markets systematically misprice long-term ecological risk."@en ;
     skos:prefLabel "Behavioral Economics"@en ;
     owl:sameAs <http://dbpedia.org/resource/Behavioral_economics> ;
@@ -41,6 +43,8 @@ tgs:SchoolOfThought.BehavioralEconomics a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.CivilRightsMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "The mid-20th-century U.S. movement for racial equality under law. Relevant here specifically as the context for MLK's later economic-justice organizing (Poor People's Campaign), used as a real-world contrast case for the Growth Imperative concept — not cited for its core civil-rights aims, which are a separate matter from TGS's scope."@en ;
     skos:prefLabel "U.S. Civil Rights Movement"@en ;
     owl:sameAs <http://dbpedia.org/resource/Civil_rights_movement> ;
@@ -49,6 +53,8 @@ tgs:SchoolOfThought.CivilRightsMovement a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.DegrowthMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "A political, economic, and social movement critiquing GDP growth as a policy goal and advocating planned reduction of material/energy throughput in wealthy economies. Relevant here as an adjacent (not identical) framework to Hagens' Growth Imperative critique — worth distinguishing rather than conflating, since Hagens' emphasis on biophysical limits and degrowth's emphasis on distributive justice/policy overlap but aren't the same argument."@en ;
     skos:prefLabel "Degrowth"@en ;
     owl:sameAs <http://dbpedia.org/resource/Degrowth> ;
@@ -58,6 +64,8 @@ tgs:SchoolOfThought.DegrowthMovement a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "The loosely-organized, decades-long community of analysts, forecasters, geologists, and commentators studying and publicizing oil depletion dynamics (ASPO, peakoil.com-era forums, etc.) — distinct from tgs:Concept.PeakOil, which is the underlying theory/phenomenon itself. Note on scope: this community is genuinely heterogeneous in rigor and ideology, ranging from serious petroleum-geology analysis to more speculative 'doomer' content, and has no single unifying institution. Included despite that heterogeneity because the core theoretical work (Hubbert Peak Theory) has had multi-decade real-world influence and is a direct formative input to Hagens' own analytical background — he worked professionally in this space before founding The Great Simplification."@en ;
     skos:prefLabel "Peak Oil (movement/community)"@en ;
     skos:scopeNote "NO favorsFacet asserted yet (2026-08-13) — the obvious candidate is the same tgs:Concept.GreatSimplification facet DegrowthMovement now points to (energy contraction forcing exactly this kind of economic trajectory), but asserting that here would be redundant without first finding something genuinely DISTINCT this community argues for — e.g. a specific EarthSystems or Geopolitical-dimension prediction unique to peak-oil analysis (energy-scarcity-driven conflict, resource nationalism) rather than just restating Degrowth's own economic claim from a different angle. Worth revisiting once real source material (an episode, a cited peak-oil-community text) makes that distinct claim explicit."@en ;
@@ -65,6 +73,8 @@ tgs:SchoolOfThought.PeakOilMovement a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "Ancient Greco-Roman philosophical school. Relevant here specifically for its emphasis on distinguishing what is/isn't within one's control and valuing present right action — the philosophical antecedent cited for the Discount Rates / Present Bias concept."@en ;
     skos:prefLabel "Stoicism"@en ;
     owl:sameAs <http://dbpedia.org/resource/Stoicism> ;
@@ -73,6 +83,8 @@ tgs:SchoolOfThought.Stoicism a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:definition "The branch of ecology studying ecosystems as integrated systems, applying concepts like carrying capacity and feedback loops. Relevant here as the disciplinary origin of Overshoot, Ecological Overshoot, and related concepts Hagens draws on directly (Catton, Meadows)."@en ;
     skos:prefLabel "Systems Ecology"@en ;
     owl:sameAs <http://dbpedia.org/resource/Systems_ecology> ;
@@ -81,6 +93,8 @@ tgs:SchoolOfThought.SystemsEcology a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought, 
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:altLabel "Donut Economics"@en ;
     skos:prefLabel "Doughnut Economics"@en ;
     skos:definition "Economic framework developed by Oxford economist Kate Raworth (first published 2012, elaborated in her 2017 book, and quantified over time as Doughnut 3.0 in 2025), visualizing sustainable development as a doughnut shape between a 'social foundation' (inner ring — no one falling short on life's essentials) and an 'ecological ceiling' (outer ring — planetary boundaries that must not be overshot, building on Rockstrom et al.'s planetary boundaries framework). Applied regionally by CalDEC (California Doughnut Economics Coalition) — see tgs:Work.CaliforniaDoughnutReport2025. Independently arrived at 'overshoot' as a core technical term, paralleling tgs:Concept.Overshoot without direct lineage from Hagens' work — see the convergesWith link and its LinkNote for the specific evidence."@en ;
@@ -104,6 +118,8 @@ tgs:SchoolOfThought.DoughnutEconomics a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.PlanetaryBoundaries a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Planetary Boundaries"@en ;
     skos:definition "Scientific framework (first published 2009, periodically updated since) identifying 9 processes that regulate Earth's stability and resilience, each with a proposed boundary defining a 'safe operating space for humanity' — as of the most recent update, a majority of the 9 are considered transgressed. Led by Johan Rockström, originating at and maintained by the Stockholm Resilience Centre (Rockström's founding institution) in ongoing collaboration with the Potsdam Institute for Climate Impact Research (which he also directs). Directly cited as a foundational influence in this graph's own SchoolOfThought.DoughnutEconomics entry ('ecological ceiling... building on Rockstrom et al.'s planetary boundaries framework')."@en ;
     owl:sameAs <http://dbpedia.org/resource/Planetary_boundaries> ;
@@ -117,6 +133,8 @@ tgs:SchoolOfThought.PlanetaryBoundaries a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.WarmData a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Warm Data"@en ;
     skos:definition "A methodology developed by Nora Bateson (~2012 onward), defined as transcontextual information about the interrelationships that integrate a complex living system — contrasted with 'cold' data that isolates variables from their relational context. Operationalized through the 'Warm Data Lab' workshop format, which the International Bateson Institute has since certified over 600 hosts to run internationally."@en ;
     dcterms:source <https://www.warmdata.life/international-bateson-institute> ;
@@ -131,11 +149,13 @@ tgs:SchoolOfThought.WarmData a thinkr:SchoolOfThought,
 
 tgs:SchoolOfThought.TechnoOptimism a thinkr:SchoolOfThought,
         owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Techno-optimism"@en ;
     skos:definition "The belief that technological progress and human ingenuity can resolve ecological and resource constraints without requiring a fundamental reduction in material consumption — spanning positions from general faith in innovation to explicit projects like space mining and off-world colonization. A direct, named target of critique across multiple TGS episodes (RR-24's own official description centers the whole episode on it: 'Techno-optimists... dream of a future where we mine, travel to, and colonize other planets... all in the hopes of bypassing the problems we now face on Earth'), and thematically opposed by Concept.EnergyBlindness throughout this graph's own already-built material."@en ;
     dcterms:source <https://link.springer.com/article/10.1007/s13347-022-00555-x> ;
     thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
-    thinkr:challenges tgs:SchoolOfThought.DegrowthMovement ;
+    thinkr:challenges tgs:SchoolOfThought.DegrowthMovement, tgs:Concept.LimitsToGrowth, tgs:Concept.PrecautionaryPrinciple ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.BroadMatch ;
         skos:prefLabel "Hopium"@en ;
@@ -144,6 +164,7 @@ tgs:SchoolOfThought.TechnoOptimism a thinkr:SchoolOfThought,
     .
 
 tgs:SchoolOfThought.EffectiveAccelerationism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Effective Accelerationism"@en ;
     skos:altLabel "e/acc"@en ;
     skos:definition "A Silicon Valley movement, named around 2022, holding that technological and economic acceleration (above all AI) should be pursued as fast as possible and that attempts to slow it, for safety or sustainability, are mistaken. A narrower, more combative strand of techno-optimism."@en ;
@@ -151,9 +172,12 @@ tgs:SchoolOfThought.EffectiveAccelerationism a thinkr:SchoolOfThought, owl:Named
     thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
     rdfs:seeAlso tgs:Work.TechnoOptimistManifesto ;
     skos:scopeNote "Added 2026-10-19. GreenGrowth is the world it promises, not one the graph judges reachable; see tgs:SchoolOfThought.TechnoOptimism's scopeNote on that tension."@en ;
+    rdfs:seeAlso tgs:Work.TechBillionairesTheAIThreatAndResistance, tgs:Work.TheNerdReich ;
     .
 
 tgs:SchoolOfThought.Ecomodernism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Ecomodernism"@en ;
     skos:definition "Environmental position, set out in An Ecomodernist Manifesto (2015) and associated with the Breakthrough Institute, that human wellbeing can be decoupled from environmental impact by intensifying agriculture, energy and settlement (including nuclear power) so that nature can be spared. The intellectual home of the decoupling argument TGS disputes."@en ;
     thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
@@ -162,6 +186,8 @@ tgs:SchoolOfThought.Ecomodernism a thinkr:SchoolOfThought, owl:NamedIndividual ;
     .
 
 tgs:SchoolOfThought.Cornucopianism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Cornucopianism"@en ;
     skos:definition "The view that human ingenuity makes natural resources effectively unlimited, so scarcity is temporary and population growth is a net good. Its best-known statement is Julian Simon's The Ultimate Resource (1981); Simon won his 1980-1990 wager with Paul Ehrlich that five metal prices would fall."@en ;
     thinkr:favorsFacet tgs:ScenarioFacet.GreenGrowth ;
@@ -171,6 +197,8 @@ tgs:SchoolOfThought.Cornucopianism a thinkr:SchoolOfThought, owl:NamedIndividual
     .
 
 tgs:SchoolOfThought.NeoclassicalGrowthEconomics a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Neoclassical Growth Economics"@en ;
     skos:altLabel "Mainstream economics"@en ;
     skos:definition "The dominant school of economics, which models growth as driven by capital, labour and technology, treats natural resources as substitutable inputs priced by markets, and assigns energy a minor role (roughly its cost share of GDP). The paradigm behind most policy and central banking, and the main target of Nate's economic critique."@en ;
@@ -178,18 +206,50 @@ tgs:SchoolOfThought.NeoclassicalGrowthEconomics a thinkr:SchoolOfThought, owl:Na
     thinkr:challenges tgs:Concept.LimitsToGrowth ;
     thinkr:contrastsWith tgs:Concept.TenCoreMythsOfBusinessSchools, tgs:Concept.EnergyBlindness ;
     skos:scopeNote "Added 2026-10-19. Nate's reply is tgs:Concept.TenCoreMythsOfBusinessSchools (Frankly_99), and tgs:Concept.EnergyBlindness names the blind spot he sees in it."@en ;
+    rdfs:seeAlso tgs:Work.SustainabilityScientistsCritiqueOfNeoclassicalEconomics, tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis ;
     .
 
 tgs:SchoolOfThought.Ecosocialism a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Ecosocialism"@en ;
     skos:definition "Tradition that locates the root of ecological crisis in capitalism's drive to accumulate, and calls for democratic, planned transformation of the economy. Shares TGS's premise of limits; differs on diagnosis and remedy."@en ;
-    skos:scopeNote "Added 2026-10-19 as a friendly critic, not an opponent. Its likely critique of TGS, that the superorganism framing takes capitalism and power out of the story, is NOT asserted as thinkr:challenges until a citable source is found; the sources offered so far (a YouTube video and a Reddit thread) are not enough. The same applies to tgs:SchoolOfThought.DegrowthMovement."@en ;
+    skos:scopeNote "Added 2026-10-19 as a friendly critic, not an opponent. Its likely critique of TGS, that the superorganism framing takes capitalism and power out of the story, is NOT asserted as thinkr:challenges until a citable source is found; the sources offered so far (a YouTube video and a Reddit thread) are not enough. The same applies to tgs:SchoolOfThought.DegrowthMovement. UPDATE 2026-10-19: the first solid source read, tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis (Kolasi, Monthly Review 2019), does not challenge TGS at all: it agrees on the biophysical diagnosis (no decoupling of economy from energy, limits to substitution) and differs only on the remedy, class confrontation with capitalism. So it supports filing ecosocialism as a friendly critic, and still gives no basis for a thinkr:challenges link."@en ;
+    dcterms:source tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis ;
     .
 
 tgs:SchoolOfThought.OrganizedClimateDoubt a thinkr:SchoolOfThought, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.SchoolsOfThought ;
+    skos:topConceptOf tgs:ConceptScheme.SchoolsOfThought ;
     skos:prefLabel "Organized Climate Doubt"@en ;
     skos:altLabel "Climate denial industry"@en ;
     skos:definition "Coordinated campaigns, largely funded by fossil-fuel interests and allied think tanks, to manufacture public doubt about climate science and delay policy. Documented by historians (Oreskes and Conway, Merchants of Doubt) and by the companies' own internal records. Not a school of thought in the scholarly sense: modeled here so documented actors and the papers they promote can be linked to it."@en ;
     dcterms:source tgs:Work.MerchantsOfDoubt ;
     thinkr:challenges tgs:Concept.ClimateSensitivity ;
     .
+
+tgs:ConceptScheme.SchoolsOfThought a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "Schools of Thought"@en ;
+    skos:definition "Intellectual traditions, movements and positions that TGS draws on, contrasts with or opposes, including the opposition camps (see thinkr:OppositionType)."@en ;
+    skos:hasTopConcept
+        tgs:SchoolOfThought.BehavioralEconomics,
+        tgs:SchoolOfThought.CivilRightsMovement,
+        tgs:SchoolOfThought.Cornucopianism,
+        tgs:SchoolOfThought.DegrowthMovement,
+        tgs:SchoolOfThought.DoughnutEconomics,
+        tgs:SchoolOfThought.Ecomodernism,
+        tgs:SchoolOfThought.Ecosocialism,
+        tgs:SchoolOfThought.NeoclassicalGrowthEconomics,
+        tgs:SchoolOfThought.OrganizedClimateDoubt,
+        tgs:SchoolOfThought.PeakOilMovement,
+        tgs:SchoolOfThought.PlanetaryBoundaries,
+        tgs:SchoolOfThought.Stoicism,
+        tgs:SchoolOfThought.SystemsEcology,
+        tgs:SchoolOfThought.TechnoOptimism,
+        tgs:SchoolOfThought.WarmData ;
+    .
+
+# skos:related (same scheme) or skos:relatedMatch (across schemes), materialized 2026-10-20 from thinkr:complements/contrastsWith/convergesWith/relatesTo/challenges
+# where both ends are SKOS concepts (applySkos2.py). Not a subproperty axiom, because those
+# properties also link concepts to Personas, Organizations and ScenarioFacets.
+tgs:SchoolOfThought.DegrowthMovement skos:related tgs:SchoolOfThought.TechnoOptimism .

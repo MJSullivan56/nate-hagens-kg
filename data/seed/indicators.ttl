@@ -23,7 +23,7 @@
 #############################################
 
 thinkr:Indicator a owl:Class ;
-    rdfs:subClassOf thinkr:Concept ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "One of the 42 specific, named metrics within the Doughnut Economics model (e.g. Water Quality, Greenhouse Gas Emissions), each belonging to one thinkr:IndicatorCategory."@en ;
     skos:prefLabel "Doughnut Indicator"@en .
 
@@ -31,13 +31,17 @@ thinkr:Indicator a owl:Class ;
 # Water & Sanitation
 #############################################
 
-tgs:Indicator.WaterQuality a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.WaterQuality a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.WaterAndSanitation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Water Quality"@en ;
     skos:definition "The safety and cleanliness of public drinking water supplies, screening for toxic contaminants or pollutants."@en .
 
-tgs:Indicator.SanitationAccess a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.SanitationAccess a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.WaterAndSanitation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Sanitation Access"@en ;
@@ -47,13 +51,17 @@ tgs:Indicator.SanitationAccess a thinkr:Indicator, thinkr:Concept, owl:NamedIndi
 # Energy
 #############################################
 
-tgs:Indicator.EnergyBurden a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.EnergyBurden a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Energy ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Burden"@en ;
     skos:definition "The percentage of household income spent strictly on electric, gas, and heating utility bills."@en .
 
-tgs:Indicator.EnergyReliability a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.EnergyReliability a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Energy ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Reliability"@en ;
@@ -63,13 +71,17 @@ tgs:Indicator.EnergyReliability a thinkr:Indicator, thinkr:Concept, owl:NamedInd
 # Connectivity & Transportation
 #############################################
 
-tgs:Indicator.InternetAccess a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.InternetAccess a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ConnectivityAndTransportation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Internet Access"@en ;
     skos:definition "The percentage of households with reliable, high-speed broadband connections."@en .
 
-tgs:Indicator.TransitReportCard a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.TransitReportCard a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ConnectivityAndTransportation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Transit Report Card"@en ;
@@ -79,13 +91,17 @@ tgs:Indicator.TransitReportCard a thinkr:Indicator, thinkr:Concept, owl:NamedInd
 # Housing
 #############################################
 
-tgs:Indicator.Homelessness a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.Homelessness a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Housing ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Homelessness"@en ;
     skos:definition "The per-capita rate of individuals experiencing unhoused or transient living situations."@en .
 
-tgs:Indicator.HousingBurden a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.HousingBurden a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Housing ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Housing Burden"@en ;
@@ -95,13 +111,17 @@ tgs:Indicator.HousingBurden a thinkr:Indicator, thinkr:Concept, owl:NamedIndivid
 # Equity
 #############################################
 
-tgs:Indicator.GenderPayGap a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.GenderPayGap a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Equity ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Gender Pay Gap"@en ;
     skos:definition "The statistical difference in median earnings between men and women performing comparable work."@en .
 
-tgs:Indicator.RacialEquityIndex a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.RacialEquityIndex a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Equity ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Racial Equity Index"@en ;
@@ -111,13 +131,17 @@ tgs:Indicator.RacialEquityIndex a thinkr:Indicator, thinkr:Concept, owl:NamedInd
 # Social Cohesion
 #############################################
 
-tgs:Indicator.IncomeInequality a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.IncomeInequality a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.SocialCohesion ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Income Inequality"@en ;
     skos:definition "The structural gap in distribution between the highest and lowest economic earning brackets (e.g. Gini Coefficient)."@en .
 
-tgs:Indicator.ReportNotHappy a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.ReportNotHappy a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.SocialCohesion ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Report Not Happy"@en ;
@@ -128,13 +152,17 @@ tgs:Indicator.ReportNotHappy a thinkr:Indicator, thinkr:Concept, owl:NamedIndivi
 # Food
 #############################################
 
-tgs:Indicator.FoodInsecurity a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.FoodInsecurity a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Food ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Food Insecurity"@en ;
     skos:definition "The percentage of the population lacking consistent, reliable access to enough affordable, nutritious food."@en .
 
-tgs:Indicator.VegetablesPerDay a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.VegetablesPerDay a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Food ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Vegetables Per Day"@en ;
@@ -144,13 +172,17 @@ tgs:Indicator.VegetablesPerDay a thinkr:Indicator, thinkr:Concept, owl:NamedIndi
 # Health
 #############################################
 
-tgs:Indicator.LifeExpectancy a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.LifeExpectancy a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Health ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Life Expectancy"@en ;
     skos:definition "The average number of years a newborn resident is expected to live based on current mortality rates."@en .
 
-tgs:Indicator.HealthcareAffordability a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.HealthcareAffordability a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Health ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Healthcare Affordability"@en ;
@@ -160,13 +192,17 @@ tgs:Indicator.HealthcareAffordability a thinkr:Indicator, thinkr:Concept, owl:Na
 # Education
 #############################################
 
-tgs:Indicator.LiteracyRate a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.LiteracyRate a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Education ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Literacy Rate"@en ;
     skos:definition "The percentage of the adult population demonstrating functional reading and writing capabilities."@en .
 
-tgs:Indicator.StudentLoanDebt a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.StudentLoanDebt a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.Education ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Student Loan Debt"@en ;
@@ -176,13 +212,17 @@ tgs:Indicator.StudentLoanDebt a thinkr:Indicator, thinkr:Concept, owl:NamedIndiv
 # Income & Work
 #############################################
 
-tgs:Indicator.Poverty a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.Poverty a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.IncomeAndWork ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
     skos:prefLabel "Poverty"@en ;
     skos:definition "The percentage of residents living below the state or federal minimum economic self-sufficiency standard."@en .
 
-tgs:Indicator.Unemployment a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.Unemployment a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.IncomeAndWork ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
     skos:prefLabel "Unemployment"@en ;
@@ -192,13 +232,17 @@ tgs:Indicator.Unemployment a thinkr:Indicator, thinkr:Concept, owl:NamedIndividu
 # Peace & Justice
 #############################################
 
-tgs:Indicator.ViolentCrime a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.ViolentCrime a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.PeaceAndJustice ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Violent Crime"@en ;
     skos:definition "The rate of homicide, assault, robbery, and sexual offenses committed per capita."@en .
 
-tgs:Indicator.PoliceScorecard a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.PoliceScorecard a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.PeaceAndJustice ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Police Scorecard"@en ;
@@ -208,13 +252,17 @@ tgs:Indicator.PoliceScorecard a thinkr:Indicator, thinkr:Concept, owl:NamedIndiv
 # Political Voice
 #############################################
 
-tgs:Indicator.VoterTurnout a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.VoterTurnout a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.PoliticalVoice ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Voter Turnout"@en ;
     skos:definition "The percentage of eligible voters who cast a ballot during major election cycles."@en .
 
-tgs:Indicator.RegisteredVoters a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.RegisteredVoters a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.PoliticalVoice ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Registered Voters"@en ;
@@ -224,13 +272,17 @@ tgs:Indicator.RegisteredVoters a thinkr:Indicator, thinkr:Concept, owl:NamedIndi
 # Nitrogen & Phosphorus
 #############################################
 
-tgs:Indicator.EutrophicationPotential a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.EutrophicationPotential a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Eutrophication Potential"@en ;
     skos:definition "The risk of severe oxygen depletion in water bodies caused by nutrient enrichment (algal blooms)."@en .
 
-tgs:Indicator.NitrogenLeached a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.NitrogenLeached a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Nitrogen Leached"@en ;
@@ -240,13 +292,17 @@ tgs:Indicator.NitrogenLeached a thinkr:Indicator, thinkr:Concept, owl:NamedIndiv
 # Ozone Depletion
 #############################################
 
-tgs:Indicator.OzoneDepletingSubstances a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.OzoneDepletingSubstances a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.OzoneDepletion ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone-Depleting Substances"@en ;
     skos:definition "The volume of regulated synthetic industrial chemicals (like CFCs) released into the air."@en .
 
-tgs:Indicator.OzoneLayer a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.OzoneLayer a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.OzoneDepletion ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone Layer"@en ;
@@ -256,13 +312,17 @@ tgs:Indicator.OzoneLayer a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual
 # Biodiversity Loss
 #############################################
 
-tgs:Indicator.UnprotectedArea a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.UnprotectedArea a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.BiodiversityLoss ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "Unprotected Area"@en ;
     skos:definition "The percentage of ecologically critical habitats lacking legal conservation safeguards against development."@en .
 
-tgs:Indicator.AtRiskSpecies a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.AtRiskSpecies a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.BiodiversityLoss ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "At-Risk Species"@en ;
@@ -272,13 +332,17 @@ tgs:Indicator.AtRiskSpecies a thinkr:Indicator, thinkr:Concept, owl:NamedIndivid
 # Land-Use Change
 #############################################
 
-tgs:Indicator.ForestCover a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.ForestCover a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.LandUseChange ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Forest Cover"@en ;
     skos:definition "The total land area blanketed by natural, undisturbed tree canopies."@en .
 
-tgs:Indicator.EcologicalFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.EcologicalFootprint a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.LandUseChange ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Ecological Footprint"@en ;
@@ -288,13 +352,17 @@ tgs:Indicator.EcologicalFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedI
 # Freshwater Use
 #############################################
 
-tgs:Indicator.GroundWater a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.GroundWater a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.FreshwaterUse ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
     skos:prefLabel "Ground Water"@en ;
     skos:definition "The extraction rate versus the recharge rate of underground aquifers."@en .
 
-tgs:Indicator.WaterFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.WaterFootprint a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.FreshwaterUse ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
     skos:prefLabel "Water Footprint"@en ;
@@ -304,13 +372,17 @@ tgs:Indicator.WaterFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedIndivi
 # Climate Change
 #############################################
 
-tgs:Indicator.GreenhouseGasEmissions a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.GreenhouseGasEmissions a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ClimateChange ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Greenhouse Gas Emissions"@en ;
     skos:definition "The net volume of carbon dioxide, methane, and related gases released by human activity."@en .
 
-tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ClimateChange ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Non-Renewable Electricity"@en ;
@@ -320,13 +392,17 @@ tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, thinkr:Concept, owl:Na
 # Ocean Acidification
 #############################################
 
-tgs:Indicator.OceanPH a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.OceanPH a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.OceanAcidification ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
     skos:prefLabel "Ocean pH"@en ;
     skos:definition "The declining scale of marine water alkalinity, which threatens shell-building organisms and coral reefs."@en .
 
-tgs:Indicator.SO2EqFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.SO2EqFootprint a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.OceanAcidification ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
     skos:prefLabel "SO2-Eq Footprint"@en ;
@@ -336,13 +412,17 @@ tgs:Indicator.SO2EqFootprint a thinkr:Indicator, thinkr:Concept, owl:NamedIndivi
 # Chemical Pollution
 #############################################
 
-tgs:Indicator.Landfill a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.Landfill a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ChemicalPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
     skos:prefLabel "Landfill"@en ;
     skos:definition "The physical volume of solid municipal and industrial waste dumped into land disposal sites."@en .
 
-tgs:Indicator.ToxicReleases a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.ToxicReleases a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.ChemicalPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
     skos:prefLabel "Toxic Releases"@en ;
@@ -352,13 +432,17 @@ tgs:Indicator.ToxicReleases a thinkr:Indicator, thinkr:Concept, owl:NamedIndivid
 # Air Pollution
 #############################################
 
-tgs:Indicator.O3Pollution a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.O3Pollution a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.AirPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
     skos:prefLabel "O3 (Ozone) Pollution"@en ;
     skos:definition "Ground-level smog concentration, which acts as a respiratory irritant formed by vehicular and industrial emissions."@en .
 
-tgs:Indicator.ParticulateMatter a thinkr:Indicator, thinkr:Concept, owl:NamedIndividual ;
+tgs:Indicator.ParticulateMatter a thinkr:Indicator, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:IndicatorCategory.AirPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
     skos:prefLabel "Particulate Matter"@en ;

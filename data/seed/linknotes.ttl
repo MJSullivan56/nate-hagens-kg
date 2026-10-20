@@ -412,3 +412,17 @@ tgs:LinkNote.ChaliceAndBladePower_PowerVersusLife a thinkr:LinkNote, owl:NamedIn
     thinkr:aboutObject tgs:Concept.PowerVersusLife ;
     thinkr:hasEvidence tgs:Evidence.ChaliceAndBladePower_PowerVersusLife_TGS_116 ;
     skos:scopeNote "Eisler-Hagens convergence (added 2026-10-19) on the triple tgs:Concept.ChaliceAndBladePower thinkr:convergesWith tgs:Concept.PowerVersusLife. Both set power over life against life itself as the central contest of the age. Eisler's frame is relational (family, gender, the definition of power); Nate's is energetic (power riding successive surpluses). Frankly_82 comes ten months after TGS_116, and Nate does not cite her there, so no influence is claimed. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.TechnoOptimism_LimitsToGrowth a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.TechnoOptimism ;
+    thinkr:aboutObject tgs:Concept.LimitsToGrowth ;
+    thinkr:hasEvidence tgs:Evidence.TechnoOptimism_LimitsToGrowth ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.TechnoOptimism thinkr:challenges tgs:Concept.LimitsToGrowth. Techno-optimism names the limits thesis itself as an enemy. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.TechnoOptimism_PrecautionaryPrinciple a thinkr:LinkNote, owl:NamedIndividual ;
+    thinkr:aboutSubject tgs:SchoolOfThought.TechnoOptimism ;
+    thinkr:aboutObject tgs:Concept.PrecautionaryPrinciple ;
+    thinkr:hasEvidence tgs:Evidence.TechnoOptimism_PrecautionaryPrinciple ;
+    thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
+    skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.TechnoOptimism thinkr:challenges tgs:Concept.PrecautionaryPrinciple. Techno-optimism names precaution as an enemy, the opposite of Daniel Schmachtenberger's call to bind power with restraint (tgs:Concept.RestraintByDesign). Stays Candidate until MJSullivan reviews it."@en .

@@ -1,0 +1,20 @@
+# Context for a WWNS article about one bioregion: where it sits in One Earth's
+# hierarchy, its sibling bioregions, and organizations/initiatives working there.
+# Change the code in VALUES (e.g. "NA24" = Appalachia & Allegheny Interior Forests).
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+SELECT ?bioregion ?subrealm ?realm ?bigRealm
+       (GROUP_CONCAT(DISTINCT COALESCE(?sibName,""); SEPARATOR="; ") AS ?siblings)
+       (GROUP_CONCAT(DISTINCT COALESCE(?orgName,""); SEPARATOR="; ") AS ?organizations)
+       (GROUP_CONCAT(DISTINCT COALESCE(?initName,""); SEPARATOR="; ") AS ?initiatives)
+WHERE {
+  VALUES ?code { "NA24" }
+  ?b a thinkr:Bioregion ; skos:notation ?code ; skos:prefLabel ?bioregion ; skos:broader ?s .
+  ?s skos:prefLabel ?subrealm ; skos:broader ?r .
+  ?r skos:prefLabel ?realm ; skos:broader ?br . ?br skos:prefLabel ?bigRealm .
+  OPTIONAL { ?sib skos:broader ?s ; skos:prefLabel ?sibName . FILTER(?sib != ?b) }
+  OPTIONAL { ?org thinkr:inBioregion ?b ; skos:prefLabel ?orgName .
+             OPTIONAL { ?i thinkr:carriedOutBy ?org ; skos:prefLabel ?initName } }
+}
+GROUP BY ?bioregion ?subrealm ?realm ?bigRealm

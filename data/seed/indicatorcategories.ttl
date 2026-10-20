@@ -21,7 +21,7 @@
 #############################################
 
 thinkr:IndicatorCategory a owl:Class ;
-    rdfs:subClassOf thinkr:Concept ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:comment "One of the 21 named categories within the Doughnut Economics model (e.g. Water & Sanitation, Climate Change), each belonging to one thinkr:DoughnutHalf and containing 2 thinkr:Indicator members."@en ;
     skos:scopeNote "Labels follow the California Doughnut Report (tgs:Work.CaliforniaDoughnutReport2025), a regional downscaling. The global Doughnut 3.0 (tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025) has the same 12 + 9 dimensions; where its names differ, the 3.0 name is attached as a CloseMatch alternate term. The 42 thinkr:Indicator individuals are California's, not the global 22 social and 13 ecological indicators."@en ;
     skos:prefLabel "Doughnut Category"@en .
@@ -30,19 +30,25 @@ thinkr:IndicatorCategory a owl:Class ;
 # Social Foundation (12)
 #############################################
 
-tgs:IndicatorCategory.WaterAndSanitation a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.WaterAndSanitation a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Water & Sanitation"@en ;
     skos:definition "Measures access to clean, affordable, and safe infrastructure for hydration and hygiene."@en .
 
-tgs:IndicatorCategory.Energy a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Energy a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Energy"@en ;
     skos:definition "Assesses the accessibility, cost, and reliability of the electrical grid and power resources."@en .
 
-tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Connectivity & Transportation"@en ;
@@ -52,13 +58,17 @@ tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, 
         skos:prefLabel "Connectivity"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.Housing a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Housing a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Housing"@en ;
     skos:definition "Evaluates residential security, stability, and affordability."@en .
 
-tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Equity"@en ;
@@ -68,43 +78,57 @@ tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, thinkr:Concept, owl:Nam
         skos:prefLabel "Equality"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.SocialCohesion a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.SocialCohesion a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Social Cohesion"@en ;
     skos:definition "Assesses community relationships, financial divides, and collective psychological wellbeing."@en .
 
-tgs:IndicatorCategory.Food a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Food a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Food"@en ;
     skos:definition "Tracks nutritional health and physical access to sustaining diets."@en .
 
-tgs:IndicatorCategory.Health a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Health a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Health"@en ;
     skos:definition "Monitors physical longevity and medical system entry barriers."@en .
 
-tgs:IndicatorCategory.Education a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.Education a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Education"@en ;
     skos:definition "Measures academic achievement and the financial consequences of seeking it."@en .
 
-tgs:IndicatorCategory.IncomeAndWork a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.IncomeAndWork a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Income & Work"@en ;
     skos:definition "Evaluates baseline financial security and formal employment opportunities."@en .
 
-tgs:IndicatorCategory.PeaceAndJustice a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.PeaceAndJustice a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Peace & Justice"@en ;
     skos:definition "Assesses community safety, systemic violence, and institutional accountability."@en .
 
-tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.SocialFoundation ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Political Voice"@en ;
@@ -114,7 +138,9 @@ tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, thinkr:Concept,
 # Ecological Ceiling (9)
 #############################################
 
-tgs:IndicatorCategory.NitrogenAndPhosphorus a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.NitrogenAndPhosphorus a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Nitrogen & Phosphorus"@en ;
@@ -124,7 +150,9 @@ tgs:IndicatorCategory.NitrogenAndPhosphorus a thinkr:IndicatorCategory, thinkr:C
         skos:prefLabel "Nutrient pollution"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.OzoneDepletion a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.OzoneDepletion a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Ozone Depletion"@en ;
@@ -134,7 +162,9 @@ tgs:IndicatorCategory.OzoneDepletion a thinkr:IndicatorCategory, thinkr:Concept,
         skos:prefLabel "Ozone layer depletion"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.BiodiversityLoss a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.BiodiversityLoss a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Biodiversity Loss"@en ;
@@ -144,7 +174,9 @@ tgs:IndicatorCategory.BiodiversityLoss a thinkr:IndicatorCategory, thinkr:Concep
         skos:prefLabel "Biodiversity breakdown"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.LandUseChange a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.LandUseChange a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Land-Use Change"@en ;
@@ -155,7 +187,9 @@ tgs:IndicatorCategory.LandUseChange a thinkr:IndicatorCategory, thinkr:Concept, 
         skos:prefLabel "Land conversion"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.FreshwaterUse a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.FreshwaterUse a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Freshwater Use"@en ;
@@ -165,26 +199,34 @@ tgs:IndicatorCategory.FreshwaterUse a thinkr:IndicatorCategory, thinkr:Concept, 
         skos:prefLabel "Freshwater disruption"@en ;
         skos:scopeNote "Doughnut 3.0 name for this dimension, from tgs:Work.TheEvolvingDoughnut2025 and tgs:Work.DoughnutOfSocialAndPlanetaryBoundaries2025. A close match rather than an exact one: the global Doughnut and the California report measure the dimension with different indicators. Added 2026-10-19."@en ] .
 
-tgs:IndicatorCategory.ClimateChange a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.ClimateChange a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Climate Change"@en ;
     skos:definition "Tracks the heating of Earth's atmosphere via greenhouse gas accumulation."@en .
 
-tgs:IndicatorCategory.OceanAcidification a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.OceanAcidification a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Ocean Acidification"@en ;
     skos:definition "Measures chemical shifts in marine environments caused by absorbing human carbon output."@en ;
     skos:scopeNote "Same markdown-heading-level note as Land-Use Change above — modeled as a normal Ecological Ceiling category, not a 3rd tier."@en .
 
-tgs:IndicatorCategory.ChemicalPollution a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.ChemicalPollution a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Chemical Pollution"@en ;
     skos:definition "Monitors the accumulation of synthetic, toxic, and non-biodegradable waste in the environment."@en .
 
-tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, thinkr:Concept, owl:NamedIndividual ;
+tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
+    skos:broader tgs:DoughnutHalf.EcologicalCeiling ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Air Pollution"@en ;

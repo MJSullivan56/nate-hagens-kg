@@ -30,66 +30,87 @@
 #############################################
 
 tgs:PracticeCluster.AgroBioeconomy a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Agro-Bioeconomy"@en ;
     skos:definition "A bioregional economy is less a sector than a metabolism: how calories, materials, and attention move through a landscape, and how much of what is produced stays near enough to nourish soils, workers, and local culture. The tension here is familiar—between throughput and care, between commodity logic and the limits of place. T he organizations in this cluster experiment with economies that nourish the land rather than treating it as an open pit for inputs and outputs. Their work implies a question that is both practical and ethical: what would it take for provisioning to feel like continuity rather than extraction—so that livelihoods deepen attachment to place instead of burning through it?"@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.AlternativeFinance a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Alternative Finance"@en ;
     skos:definition "Not all exchange needs to pass through the same narrow set of institutions. Sometimes the point is to keep value circulating among people who already share risk in a watershed or a neighborhood—to make credit visible as trust, and to slow the drain of wealth toward centers that will never feel the consequences of extraction. These experiments sit beside conventional finance; they do not replace it so much as they widen the moral imagination of what “the economy” can be. The hardest part is rarely the instrument itself. It is the culture around it—who can issue, who owes whom, and what prevents a new tool from reproducing old hierarchies in fresh packaging."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.CommunityGovernance a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Community Governance"@en ;
     skos:definition "Collective life is not discovered; it is practiced. Governance is the name we give to how a group holds disagreement, distributes attention, and keeps promises about land, water, or money over years that outlast any single leader. The patterns here are less about org charts than about habits: how people meet, how decisions are slowed down or sped up, and how repair happens when harm has already occurred. What threads through these case studies is the question of legitimacy—who can speak, who must be heard, and how a bioregion can steer without pretending its conflicts have disappeared."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.EcosystemRegeneration a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Ecosystem Regeneration"@en ;
     skos:definition "Most landscapes did not degrade overnight; they were worn down by decisions that made sense one season at a time. Regeneration asks for the opposite kind of patience—work that outlasts funding cycles and political terms, and that treats repair as a relationship rather than a one-off intervention. The practices gathered here share that horizon: they assume that soil, water, and non-human life have agency worth listening to, and that human flourishing is inseparable from the conditions of the whole watershed or biome. What holds together under this heading is not a single technique but a shared refusal to treat nature as backdrop. The through-line is stewardship that can be handed down—learning that accumulates in bodies and communities, not only in reports—and a willingness to stay with the messy, slow work of making damaged places viable again."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.HubsAndCenters a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Hubs & Centers"@en ;
     skos:definition "Bioregional work is scattered by default: different organizations, jurisdictions, and rhythms. Something has to hold the middle—places where strangers become collaborators, where abstract commitments become something you can walk through, and where someone without a PhD can still pick up a tool, a seed, or a curriculum. Without anchors like that, even good projects drift back into isolation. This pattern is about density and invitation: a few sites where trust accretes faster than it dissipates, and where the work of regeneration becomes visible enough to be imitated."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.LegalStewardship a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Legal Stewardship"@en ;
     skos:definition "Law is one of the few ways societies remember their intentions across long spans of time. Used well, it can turn care into something durable—boundaries that protect more than property lines, agreements that outlive a single campaign, and recognition that rivers or forests might hold standing of their own. Used poorly, it can lock the past in place. This pattern is about aligning formal instruments with the shape of land and water as they actually are—so that stewardship is not only a moral claim but something communities can defend, adapt, and pass on."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.MappingAndIndicators a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Mapping & Indicators"@en ;
     skos:definition "You cannot tend what you refuse to see. Yet “seeing” is never innocent—every map and every metric is a bet about what matters enough to measure, and who will use the picture to argue for what. This cluster lives in that tension: making complexity legible without flattening it, and turning visibility into shared orientation rather than a weapon for surveillance. The work is as much about narrative as about numbers. When communities can hold several kinds of description of the same place without forcing them to agree too soon, they gain room to negotiate a future that no single dashboard could capture alone."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.ServicesAndInfrastructure a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Services & Infrastructure"@en ;
     skos:definition "Regeneration is carried by people whose daily lives depend on shared systems—often owned or designed far from where consequences land. When those systems are brittle or exclusive, transition becomes a privilege instead of a commons. This cluster is about the conditions that make participation possible, so that when floods, heat, or economic shocks arrive, communities are not left to improvise alone. The stories here are not about hardware for its own sake. They are about how the systems that shape daily life can be redesigned so dignity and repair are built in—so that infrastructure reads as a form of mutual care at the scale of a neighborhood or region."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.SystemicFinance a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Systemic Finance"@en ;
     skos:definition "Money and ecosystems run on different clocks. Finance likes to price risk, exit, and return; ecologies ask for continuity, redundancy, and time for feedback loops to close. The friction between those tempos is where bioregional finance lives—trying to assemble capital that does not abandon a place the moment a spreadsheet turns, and governance that keeps communities inside the loop when investors arrive. The work here is not “more projects” in isolation but a coherent question: how can the whole arc of money flowing into and out of a place be arranged so that repair is fundable at landscape scale, without letting the definition of success be captured entirely from afar?"@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeCluster.WaysOfKnowing a thinkr:PracticeCluster, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
+    skos:topConceptOf tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Ways of Knowing"@en ;
     skos:definition "Every bioregion is known in more than one way at once: through measurement and story, through memory and prophecy, through the body and through the spreadsheet. Trouble often starts when only one of those ways is given authority, and when the others are treated as ornament or obstruction. This pattern is about holding multiple epistemologies in the same room without forcing them into a single vocabulary. The stakes are not academic. Who gets to decide what counts as evidence shapes what gets funded, protected, or erased. The practices here treat learning as something that happens in relation— with land, with peers, with audiences—rather than as a pipeline that only moves from expert to “public.”"@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeTerm.4Returns a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "4 Returns"@en ;
     skos:definition "A landscape restoration framework developed by Commonland, which emphasizes four types of returns—Inspiration, Social, Natural, and Financial— and a five-step process for holistic regeneration."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -98,6 +119,7 @@ tgs:PracticeTerm.4Returns a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.AgreementsAndLegalInstruments a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Agreements and Legal Instruments"@en ;
     skos:definition "Documents and instruments—such as easements, covenants, trusts, and MOUs—that formalize shared rules, commitments, or legal recognition across actors and jurisdictions."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
@@ -106,6 +128,7 @@ tgs:PracticeTerm.AgreementsAndLegalInstruments a thinkr:PracticeTerm, owl:NamedI
     .
 
 tgs:PracticeTerm.ArtAndStorytelling a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Art and Storytelling"@en ;
     skos:definition "Using creative mediums—like film, illustration, writing, or performance—to explore the identity of a place and communicate the values of bioregional regeneration."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -114,6 +137,7 @@ tgs:PracticeTerm.ArtAndStorytelling a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.CitizenOrCommunityScience a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Citizen or Community Science"@en ;
     skos:definition "Involving residents in data collection and observation to deepen local ecological literacy and democratize scientific knowledge."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -122,6 +146,7 @@ tgs:PracticeTerm.CitizenOrCommunityScience a thinkr:PracticeTerm, owl:NamedIndiv
     .
 
 tgs:PracticeTerm.ClothingAndProductManufacturing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Clothing and Product Manufacturing"@en ;
     skos:definition "Making, repairing, and recycling textiles and products with attention to ecological materials, circular design, local manufacturing capacity, and fair labor conditions."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -129,6 +154,7 @@ tgs:PracticeTerm.ClothingAndProductManufacturing a thinkr:PracticeTerm, owl:Name
     .
 
 tgs:PracticeTerm.CoachesAndLeaders a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Coaches and Leaders"@en ;
     skos:definition "Individuals and roles that accompany communities and organizations through transition, holding space, mentoring, and enabling distributed leadership."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -136,6 +162,7 @@ tgs:PracticeTerm.CoachesAndLeaders a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.CollectiveOwnershipModels a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Collective Ownership Models"@en ;
     skos:definition "Initiatives that create or steward shared ownership or stewardship of land, resources, or infrastructure to support equity, continuity, and collective benefit."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
@@ -144,14 +171,16 @@ tgs:PracticeTerm.CollectiveOwnershipModels a thinkr:PracticeTerm, owl:NamedIndiv
     .
 
 tgs:PracticeTerm.CommonsGovernanceProtocols a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Commons Governance Protocols"@en ;
     skos:definition "Establishing practices and protocols for the shared stewardship of resources—such as land, water, and data—as commons."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
-    skos:relatedMatch tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    skos:relatedMatch tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:Concept.OstromDesignPrinciples ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeTerm.CommunityFoodAccess a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Community Food Access"@en ;
     skos:definition "Programs and models that ensure communities can reliably access healthy, culturally meaningful food."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -160,6 +189,7 @@ tgs:PracticeTerm.CommunityFoodAccess a thinkr:PracticeTerm, owl:NamedIndividual 
     .
 
 tgs:PracticeTerm.CommunityReconciliation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Community Reconciliation"@en ;
     skos:definition "Processes that surface historic harms, foster forgiveness, and rebuild trust so communities can act together across divisions."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -168,6 +198,7 @@ tgs:PracticeTerm.CommunityReconciliation a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.CongressingAndEvents a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Congressing and Events"@en ;
     skos:definition "Organizing gatherings where bioregional actors come together to share updates, deepen relationships, make decisions, and co-create future directions."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -176,6 +207,7 @@ tgs:PracticeTerm.CongressingAndEvents a thinkr:PracticeTerm, owl:NamedIndividual
     .
 
 tgs:PracticeTerm.ConstructionAndHousing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Construction and Housing"@en ;
     skos:definition "Redesigning the built environment through regenerative building practices, locally appropriate materials, and equitable access to housing."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -184,6 +216,7 @@ tgs:PracticeTerm.ConstructionAndHousing a thinkr:PracticeTerm, owl:NamedIndividu
     .
 
 tgs:PracticeTerm.CulturalHubOrLearningCenter a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Cultural Hub or Learning Center"@en ;
     skos:definition "Regional centers that convene diverse stakeholders to support education, capacity building, and collaborative strategy. These hubs serve as connective tissue across communities and ecosystems, hosting sensemaking processes that align local projects with larger bioregional goals."@en ;
     skos:broader tgs:PracticeCluster.HubsAndCenters ;
@@ -192,6 +225,7 @@ tgs:PracticeTerm.CulturalHubOrLearningCenter a thinkr:PracticeTerm, owl:NamedInd
     .
 
 tgs:PracticeTerm.CulturalAndSpiritualPractices a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Cultural and Spiritual Practices"@en ;
     skos:definition "Rituals, ceremonies, and contemplative traditions that foster connection to place, ancestors, and the sacred dimensions of regeneration."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -200,6 +234,7 @@ tgs:PracticeTerm.CulturalAndSpiritualPractices a thinkr:PracticeTerm, owl:NamedI
     .
 
 tgs:PracticeTerm.DecisionMakingProcesses a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Decision Making Processes"@en ;
     skos:definition "The methods a group uses to make choices together—such as consensus, consent, or voting— including how proposals are created, discussed, and resolved."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -208,6 +243,7 @@ tgs:PracticeTerm.DecisionMakingProcesses a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.DemonstratorSite a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Demonstrator Site"@en ;
     skos:definition "Site-based projects that function as living laboratories, showcasing practical applications of regenerative and bioregional approaches."@en ;
     skos:broader tgs:PracticeCluster.HubsAndCenters ;
@@ -215,6 +251,7 @@ tgs:PracticeTerm.DemonstratorSite a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.DisasterRelief a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Disaster Relief"@en ;
     skos:definition "Emergency preparedness, relief, and regenerative recovery after floods, fires, storms, and other shocks—centering affected communities, repairing ecosystems, and rebuilding social and physical systems for greater long-term resilience."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -223,14 +260,17 @@ tgs:PracticeTerm.DisasterRelief a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.DoughnutAssessment a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Doughnut Assessment"@en ;
     skos:definition "A framework based on planetary boundaries and social foundations, used to evaluate whether a community or region is thriving within ecological limits and social justice thresholds."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
-    skos:relatedMatch tgs:InterventionSubdomain.PostGrowthInstitutions, tgs:SchoolOfThought.DoughnutEconomics ;
+    skos:relatedMatch tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    rdfs:seeAlso tgs:SchoolOfThought.DoughnutEconomics ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
     .
 
 tgs:PracticeTerm.EcologicalMonitoring a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Ecological Monitoring"@en ;
     skos:definition "Tracking key environmental indicators like biodiversity, water quality, or soil health to assess ecosystem conditions and guide stewardship."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -239,6 +279,7 @@ tgs:PracticeTerm.EcologicalMonitoring a thinkr:PracticeTerm, owl:NamedIndividual
     .
 
 tgs:PracticeTerm.FarmerSupport a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Farmer Support"@en ;
     skos:definition "Advisory and peer-to-peer support structures that help producers experiment, de-risk transitions, and build viable regenerative enterprises."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -247,6 +288,7 @@ tgs:PracticeTerm.FarmerSupport a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.FinanceAssessments a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Finance Assessments"@en ;
     skos:definition "Landscape-level financial and 4-Returns assessments that surface needs, opportunities, and readiness for different kinds of capital."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -255,6 +297,7 @@ tgs:PracticeTerm.FinanceAssessments a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.FormalScientificProcess a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Formal Scientific Process"@en ;
     skos:definition "Expert-led research and monitoring processes that provide data and insights to inform ecological management, planning, and policy."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -262,6 +305,7 @@ tgs:PracticeTerm.FormalScientificProcess a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.GeographicAndEcologicalMapping a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Geographic and Ecological Mapping"@en ;
     skos:definition "Mapping the physical features of a place—such as watersheds, biomes, soils, and climate zones—to understand ecological patterns and inform stewardship."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -270,6 +314,7 @@ tgs:PracticeTerm.GeographicAndEcologicalMapping a thinkr:PracticeTerm, owl:Named
     .
 
 tgs:PracticeTerm.GovernanceBodies a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Governance Bodies"@en ;
     skos:definition "Formal or informal groups responsible for guiding, stewarding, or coordinating collective action, holding shared vision, and maintaining accountability."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -278,6 +323,7 @@ tgs:PracticeTerm.GovernanceBodies a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.GovernanceDesign a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Governance Design"@en ;
     skos:definition "The process of deciding how decisions will be made for a group, project, or territory—including participation, mechanisms, and accountability."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -286,6 +332,7 @@ tgs:PracticeTerm.GovernanceDesign a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.GrantsPrograms a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Grants Programs"@en ;
     skos:definition "Philanthropic or public grant programs that de-risk experimentation, build capacity, and fund connective tissue in bioregional finance ecosystems."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -294,6 +341,7 @@ tgs:PracticeTerm.GrantsPrograms a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.HabitatConnectivity a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Habitat Connectivity"@en ;
     skos:definition "Biodiversity corridors and connected habitat networks; portfolios that stitch projects into coherent wholes across farms, forests, and settlements."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -302,6 +350,7 @@ tgs:PracticeTerm.HabitatConnectivity a thinkr:PracticeTerm, owl:NamedIndividual 
     .
 
 tgs:PracticeTerm.HealthAndSocialCare a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Health and Social Care"@en ;
     skos:definition "Services that strengthen wellbeing, resilience, and inclusion—physical, mental, and social—as the human foundation for regeneration."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -310,6 +359,7 @@ tgs:PracticeTerm.HealthAndSocialCare a thinkr:PracticeTerm, owl:NamedIndividual 
     .
 
 tgs:PracticeTerm.ImmersiveJourneys a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Immersive Journeys"@en ;
     skos:definition "Immersive experiences across landscapes that help participants connect with place, share practices, and build relationships through travel and exploration."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -318,6 +368,7 @@ tgs:PracticeTerm.ImmersiveJourneys a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.InterspeciesMutualism a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Interspecies Mutualism"@en ;
     skos:definition "Practices that rebuild reciprocal relationships among species (for example, pollinator habitat, keystone species support, and shelter for fauna)."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -326,6 +377,7 @@ tgs:PracticeTerm.InterspeciesMutualism a thinkr:PracticeTerm, owl:NamedIndividua
     .
 
 tgs:PracticeTerm.InvestmentVehicles a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Investment Vehicles"@en ;
     skos:definition "Funds, special purpose vehicles, and other instruments that pool capital, share risk, and channel investment into regenerative projects and enterprises."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -334,6 +386,7 @@ tgs:PracticeTerm.InvestmentVehicles a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.KnowledgeArtefacts a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Knowledge Artefacts"@en ;
     skos:definition "Tangible outputs—like databases, toolkits, media, and curricula—that distill and share insights from regenerative practice in accessible formats."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -342,6 +395,7 @@ tgs:PracticeTerm.KnowledgeArtefacts a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.LearningPrograms a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Learning Programs"@en ;
     skos:definition "Structured educational offerings—such as courses, fellowships, and schools—that deepen regenerative literacy and leadership over time."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -350,6 +404,7 @@ tgs:PracticeTerm.LearningPrograms a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.LocalCurrencies a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Local Currencies"@en ;
     skos:definition "Alternative currency systems that support local trade, retain value within the bioregion, and reflect place-based values."@en ;
     skos:broader tgs:PracticeCluster.AlternativeFinance ;
@@ -358,6 +413,7 @@ tgs:PracticeTerm.LocalCurrencies a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.MaterialsTransformation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Materials Transformation"@en ;
     skos:definition "Transforming local biomass and “waste” streams into materials and products; repair, reuse, and low-toxicity production loops that shorten supply chains and reduce extraction."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -365,6 +421,7 @@ tgs:PracticeTerm.MaterialsTransformation a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.MoreThanHumanKnowledge a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "More than Human Knowledge"@en ;
     skos:definition "Practices that center non-human intelligence and ways of knowing—such as listening to plants, animals, and ecosystems—to inform regenerative decision-making and deepen interspecies relationships."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -373,6 +430,7 @@ tgs:PracticeTerm.MoreThanHumanKnowledge a thinkr:PracticeTerm, owl:NamedIndividu
     .
 
 tgs:PracticeTerm.MutualCreditOrExchange a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Mutual Credit or Exchange"@en ;
     skos:definition "Alternative systems where value is exchanged without conventional currency. Communities issue credit among members, fostering trust-based trade, local resilience, and circular economies."@en ;
     skos:broader tgs:PracticeCluster.AlternativeFinance ;
@@ -381,6 +439,7 @@ tgs:PracticeTerm.MutualCreditOrExchange a thinkr:PracticeTerm, owl:NamedIndividu
     .
 
 tgs:PracticeTerm.NetworkWeaving a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Network Weaving"@en ;
     skos:definition "Creating and sustaining relationships among individuals, organizations, and communities to enable shared learning, action, and coordination at the bioregional scale."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -389,6 +448,7 @@ tgs:PracticeTerm.NetworkWeaving a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.ParticipatoryStrategies a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Participatory Strategies"@en ;
     skos:definition "Developing shared long-term visions, goals, and action plans that guide regeneration efforts across a bioregion."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -397,6 +457,7 @@ tgs:PracticeTerm.ParticipatoryStrategies a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.PeerLearning a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Peer Learning"@en ;
     skos:definition "Horizontal learning models where knowledge flows between participants, helping to learn, improve, and align their practices through ongoing dialogue and collaboration."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -405,6 +466,7 @@ tgs:PracticeTerm.PeerLearning a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.PoliticalAdvocacy a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Political Advocacy"@en ;
     skos:definition "Engagement with policy and political systems to influence decisions, secure rights, redirect public investment, and scale regenerative practices aligned with bioregional goals."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
@@ -412,6 +474,7 @@ tgs:PracticeTerm.PoliticalAdvocacy a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.PortfolioDevelopment a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Portfolio Development"@en ;
     skos:definition "Designing place-based portfolios of projects and enterprises that, together, can absorb funding while delivering ecological, social, and economic returns."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -420,6 +483,7 @@ tgs:PracticeTerm.PortfolioDevelopment a thinkr:PracticeTerm, owl:NamedIndividual
     .
 
 tgs:PracticeTerm.RegenerativeAgriculture a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Regenerative Agriculture"@en ;
     skos:definition "Initiatives that shift farming, grazing, and agroforestry systems toward soil health, biodiversity, water retention, and long-term community nourishment."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -428,6 +492,7 @@ tgs:PracticeTerm.RegenerativeAgriculture a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.RegenerativeGrazing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Regenerative Grazing"@en ;
     skos:definition "Regenerative grazing and grassland management practices that rebuild soil, increase biodiversity, and improve water and carbon cycles in open systems."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -436,6 +501,7 @@ tgs:PracticeTerm.RegenerativeGrazing a thinkr:PracticeTerm, owl:NamedIndividual 
     .
 
 tgs:PracticeTerm.RegionalSourcing a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Regional Sourcing"@en ;
     skos:definition "Shed mapping and regional sourcing strategies that align production, demand, and ecological limits across a bioregion."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -444,6 +510,7 @@ tgs:PracticeTerm.RegionalSourcing a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.RenewableEnergy a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Renewable Energy"@en ;
     skos:definition "Efforts advancing renewable energy, energy justice, and local control over energy systems in response to climate and economic crises."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -452,6 +519,7 @@ tgs:PracticeTerm.RenewableEnergy a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.ResourceHub a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Resource Hub"@en ;
     skos:definition "Localized access points for tools, materials, and knowledge that empower everyday ecological action. Embedded in trusted community spaces like libraries or makerspaces, these hubs distribute seeds, guides, tools, and curricula tailored to place."@en ;
     skos:broader tgs:PracticeCluster.HubsAndCenters ;
@@ -460,6 +528,7 @@ tgs:PracticeTerm.ResourceHub a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.ResultBasedMechanisms a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Result Based Mechanisms"@en ;
     skos:definition "Financial mechanisms that compensate land stewards and projects based on measurable ecological outcomes—such as carbon sequestration, water purification, biodiversity conservation, or other ecosystem services. Includes payment for ecosystem services schemes, green bonds, and other instruments that link funding to verified regenerative results."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -468,6 +537,7 @@ tgs:PracticeTerm.ResultBasedMechanisms a thinkr:PracticeTerm, owl:NamedIndividua
     .
 
 tgs:PracticeTerm.RightsOfNature a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Rights of Nature"@en ;
     skos:definition "Charters, ordinances, and legal frameworks that recognize ecosystems as rights-bearing entities and define duties of care and enforcement pathways."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
@@ -476,6 +546,7 @@ tgs:PracticeTerm.RightsOfNature a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.SeedsAndNurseries a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Seeds and Nurseries"@en ;
     skos:definition "Seed collection, local provenance nurseries, propagation, and germination systems that supply diverse native species for restoration."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -484,6 +555,7 @@ tgs:PracticeTerm.SeedsAndNurseries a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.SocialOrNetworkMapping a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Social or Network Mapping"@en ;
     skos:definition "Visualizing relationships among people, groups, and institutions to uncover collaboration patterns, gaps in connection, and opportunities for network weaving."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -492,6 +564,7 @@ tgs:PracticeTerm.SocialOrNetworkMapping a thinkr:PracticeTerm, owl:NamedIndividu
     .
 
 tgs:PracticeTerm.SocioeconomicIndicators a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Socioeconomic Indicators"@en ;
     skos:definition "Metrics that assess community wellbeing, equity, and social resilience—including income, housing, education, and food access."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -500,6 +573,7 @@ tgs:PracticeTerm.SocioeconomicIndicators a thinkr:PracticeTerm, owl:NamedIndivid
     .
 
 tgs:PracticeTerm.SpeciesControl a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Species Control"@en ;
     skos:definition "Targeted management of overabundant, invasive, or domesticated species to reduce pressure on native ecosystems and allow regeneration to take root."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -508,6 +582,7 @@ tgs:PracticeTerm.SpeciesControl a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.StoryingPlace a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Storying Place"@en ;
     skos:definition "A process developed by the Regenesis Institute that engages communities in re-narrating the identity of their place as a foundation for regenerative development."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -516,6 +591,7 @@ tgs:PracticeTerm.StoryingPlace a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.StructuringAndCapitalization a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Structuring and Capitalization"@en ;
     skos:definition "Finance design and capital stack structuring—how grants, loans, guarantees, and equity are blended to match project needs and risk profiles—and the governance rules that determine who decides, on what basis, and with what accountability."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -524,6 +600,7 @@ tgs:PracticeTerm.StructuringAndCapitalization a thinkr:PracticeTerm, owl:NamedIn
     .
 
 tgs:PracticeTerm.SystemsAndResourceMapping a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Systems and Resource Mapping"@en ;
     skos:definition "Mapping the relationships between ecological, social, and economic systems, including community assets and challenges. Helps identify existing capacities, unmet needs, root causes, feedback loops, and leverage points for regenerative intervention."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -531,6 +608,7 @@ tgs:PracticeTerm.SystemsAndResourceMapping a thinkr:PracticeTerm, owl:NamedIndiv
     .
 
 tgs:PracticeTerm.TerritorialMonitoring a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Territorial Monitoring"@en ;
     skos:definition "The active tracking of land and resource use within a territory—often by local or Indigenous communities—to detect illegal activities like logging, mining, or encroachment, and to uphold land rights and stewardship agreements."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
@@ -539,6 +617,7 @@ tgs:PracticeTerm.TerritorialMonitoring a thinkr:PracticeTerm, owl:NamedIndividua
     .
 
 tgs:PracticeTerm.TerritorialZoning a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Territorial Zoning"@en ;
     skos:definition "Designating areas within a bioregion for specific ecological, cultural, or economic uses—such as biodiversity corridors, agricultural zones, sacred sites, or settlement areas—to support coordinated stewardship and governance. This process often draws from traditional knowledge, ecological assessment, and community input."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
@@ -547,6 +626,7 @@ tgs:PracticeTerm.TerritorialZoning a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.TheoryU a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Theory U"@en ;
     skos:definition "A systems-change methodology created by Otto Scharmer that helps groups co-sense and co- shape the future by moving through deep listening, reflection, and co-creation."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
@@ -554,6 +634,7 @@ tgs:PracticeTerm.TheoryU a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.TraditionalEcologicalKnowledge a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Traditional Ecological Knowledge"@en ;
     skos:definition "Initiatives that revitalize, apply, or uphold Indigenous and place-based knowledge systems as essential tools for ecological regeneration, cultural continuity, and bioregional stewardship."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
@@ -562,6 +643,7 @@ tgs:PracticeTerm.TraditionalEcologicalKnowledge a thinkr:PracticeTerm, owl:Named
     .
 
 tgs:PracticeTerm.TrainingAndEmploymentPathways a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Training and Employment Pathways"@en ;
     skos:definition "Training, apprenticeships, and institutional support that open pathways into regenerative work and civic leadership."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -570,6 +652,7 @@ tgs:PracticeTerm.TrainingAndEmploymentPathways a thinkr:PracticeTerm, owl:NamedI
     .
 
 tgs:PracticeTerm.TransportationTransitions a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Transportation Transitions"@en ;
     skos:definition "Mobility systems that reduce emissions, improve access, and strengthen resilience, from active transport to low-carbon regional connectivity."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -578,6 +661,7 @@ tgs:PracticeTerm.TransportationTransitions a thinkr:PracticeTerm, owl:NamedIndiv
     .
 
 tgs:PracticeTerm.UniversalBasicIncome a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Universal Basic Income"@en ;
     skos:definition "Regular unconditional or broadly unconditional cash transfers that secure a baseline livelihood, widen economic agency in place, and complement local and regenerative economies—treating a floor of means as shared infrastructure rather than charity tied to narrow eligibility."@en ;
     skos:broader tgs:PracticeCluster.AlternativeFinance ;
@@ -586,6 +670,7 @@ tgs:PracticeTerm.UniversalBasicIncome a thinkr:PracticeTerm, owl:NamedIndividual
     .
 
 tgs:PracticeTerm.ValueChainDevelopment a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Value Chain Development"@en ;
     skos:definition "Building regenerative supply chains that increase local value addition, support ethical labor, and connect producers to markets aligned with bioregional goals."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
@@ -594,6 +679,7 @@ tgs:PracticeTerm.ValueChainDevelopment a thinkr:PracticeTerm, owl:NamedIndividua
     .
 
 tgs:PracticeTerm.VegetationPlanting a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Vegetation Planting"@en ;
     skos:definition "Establishing native trees, shrubs, and groundcovers in patterns that restore structure, function, and climate resilience in degraded landscapes."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -602,6 +688,7 @@ tgs:PracticeTerm.VegetationPlanting a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.VentureCultivation a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Venture Cultivation"@en ;
     skos:definition "Programs and organizations that develop investable, place-rooted enterprises and prepare them for funding—through cohort-based support, training, mentorship, storytelling, and ecosystem-building. These may include venture studios that create aligned regenerative projects to drive systems change and generate dealflow."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
@@ -609,6 +696,7 @@ tgs:PracticeTerm.VentureCultivation a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.VisitorExperiences a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Visitor Experiences"@en ;
     skos:definition "Tourism, hospitality, and visitor programs that invite people into deeper relationship with place, support local economies, and reduce pressures created by conventional, extractive tourism models."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
@@ -617,6 +705,7 @@ tgs:PracticeTerm.VisitorExperiences a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.WaterManagement a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Water Management"@en ;
     skos:definition "Local water stewardship including harvesting, storage, routing, usage limits and quality protection that supports both communities and ecosystems."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -625,6 +714,7 @@ tgs:PracticeTerm.WaterManagement a thinkr:PracticeTerm, owl:NamedIndividual ;
     .
 
 tgs:PracticeTerm.WatershedRepair a thinkr:PracticeTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.BioregioningEarth ;
     skos:prefLabel "Watershed Repair"@en ;
     skos:definition "Slowing runoff and increasing infiltration; catchment-scale planning; riparian, wetland, and coastal water-system restoration."@en ;
     skos:broader tgs:PracticeCluster.EcosystemRegeneration ;
@@ -2619,4 +2709,22 @@ tgs:Initiative.WatershedRestorationAndRiverRevival a thinkr:Initiative, owl:Name
     thinkr:listedInPracticeCluster tgs:PracticeCluster.EcosystemRegeneration ;
     dcterms:description "TBS works with communities to bring back water abundance, revive river watersheds, and support sustainable development."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    .
+
+tgs:ConceptScheme.BioregioningEarth a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "Bioregioning Earth Ontology"@en ;
+    skos:definition "Activity taxonomy of Bioregioning Earth: ten practice clusters and their 69 practice terms, used to tag on-the-ground initiatives. Mapped to the Six Fronts by skos:relatedMatch."@en ;
+    dcterms:source tgs:Work.BioregioningEarthOntology ;
+    dcterms:creator "Bioregioning Earth" ;
+    skos:hasTopConcept
+        tgs:PracticeCluster.AgroBioeconomy,
+        tgs:PracticeCluster.AlternativeFinance,
+        tgs:PracticeCluster.CommunityGovernance,
+        tgs:PracticeCluster.EcosystemRegeneration,
+        tgs:PracticeCluster.HubsAndCenters,
+        tgs:PracticeCluster.LegalStewardship,
+        tgs:PracticeCluster.MappingAndIndicators,
+        tgs:PracticeCluster.ServicesAndInfrastructure,
+        tgs:PracticeCluster.SystemicFinance,
+        tgs:PracticeCluster.WaysOfKnowing ;
     .

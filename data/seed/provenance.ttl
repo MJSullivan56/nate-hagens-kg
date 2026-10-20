@@ -3664,3 +3664,45 @@ tgs:RevisionEvent.TGS_116_FullBuild a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Built TGS_116 (Riane Eisler) from the transcript and show notes MJSullivan supplied, replacing the 2026-09-12 stub; closes the gap found when matching the Organism.earth author list (a TGS guest with no Human). New: Human, Persona and Relationship for Eisler; tgs:Organization.CenterForPartnershipSystems; six concepts (DominationPartnershipContinuum, FourCornerstonesOfPartnership, ChaliceAndBladePower, CaringEconomics, DenialLearnedInDominationFamilies, Pragmatopia); one convergence LinkNote (ChaliceAndBladePower with Nate's PowerVersusLife). Her three books now carry dct:creator and show-notes confirmation; MultilevelSelection gains her critique; TGS_56 gains a back-link."@en ;
     .
+
+tgs:RevisionEvent.OppositionSources_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:SchoolOfThought.TechnoOptimism, tgs:SchoolOfThought.Ecosocialism, tgs:SchoolOfThought.NeoclassicalGrowthEconomics ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Second pass on opposition sources, at MJSullivan's request, after reviewing a second Gemini list. Added four works: Diesendorf and Wiedmann 2024 (peer-reviewed critique OF neoclassical economics, on TGS's side despite Gemini's framing), Duran's The Nerd Reich (2026; critic's account of the tech-billionaire network, linked to tgs:Work.TheSovereignIndividual), and two Monthly Review articles MJSullivan supplied as PDFs: Kolasi 2019 (ecosocialist; agrees with TGS on the biophysical diagnosis, differs on remedy, so no challenges link) and Hart-Landsberg 2026 (tech billionaires and AI). Hart-Landsberg's verbatim quote of the Techno-Optimist Manifesto's enemy list confirmed that it names 'the limits of growth' and the 'Precautionary Principle', so tgs:SchoolOfThought.TechnoOptimism now also challenges tgs:Concept.LimitsToGrowth and tgs:Concept.PrecautionaryPrinciple. Rejected from Gemini's list: Zero to One and Reentry (Gemini's glosses not supported by the books' subjects) and an unverifiable Knowledge International Journal paper."@en ;
+    .
+
+tgs:RevisionEvent.OstromCommons_2026_10_19 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Concept.TragedyOfTheCommons, tgs:Concept.OstromDesignPrinciples ;
+    thinkr:revisionDate "2026-10-19"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "At MJSullivan's request, added Elinor Ostrom's work as the counterpoint to Hardin's tragedy of the commons: tgs:Concept.OstromDesignPrinciples (contrastsWith tgs:Concept.TragedyOfTheCommons), tgs:Work.GoverningTheCommons (1990) and tgs:Work.BeyondMarketsAndStates (Nobel lecture, 2009/2010). Prompted by a secondary explainer (Collison, ideasthesia, February 2026), cited in the concept's scopeNote only. Framed as a qualification rather than a refutation: Hardin's model holds for ungoverned open access, which Hardin himself later accepted. Frankly_108, which discusses Ostrom's monitoring and sanctioning research, now discusses the concept and references the book; the Bioregioning practice term Commons Governance Protocols now relatedMatches it."@en ;
+    .
+
+tgs:RevisionEvent.OneEarthSolutions_Import a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.OneEarthSolutions ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Imported One Earth's solutions taxonomy at MJSullivan's request (solutions.ttl): 5 PracticeClusters (3 pillars, Levers of Change, Intersectional Themes), 12 sub-pillars, 76 solutions, 7 levers and 7 themes as PracticeTerms, with a Six Fronts crosswalk (skos:relatedMatch) set mostly at sub-pillar level. Definitions are Claude's paraphrases of One Earth's page. The energy pillar carries MJSullivan's and Nate's caveat that renewables are important but not enough by themselves; Energy Efficiency carries a Jevons caveat. The import gives first coverage to several Six Fronts subdomains Bioregioning Earth left empty (Transportation and Logistics, Plastic and Chemical Hazards, Non-Climate Planetary Boundaries, Anti-Corruption Infrastructure)."@en ;
+    .
+
+tgs:RevisionEvent.OneEarthBioregions2023_Import a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.OneEarthBioregions2023, thinkr:Bioregion ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Imported One Earth's Bioregions 2023 framework at MJSullivan's request, with attribution (CC BY-NC 4.0, One Earth / Karl Burkart): bioregions.ttl holds 8 BiogeographicRealms, 14 BioregionalRealms, 53 BioregionalSubrealms and 185 Bioregions (codes as skos:notation). New classes and thinkr:inBioregion in tgs-core; tgs:Concept.Bioregion; the 2017 Dinerstein ecoregions paper as the source layer. Sources reconciled: names from One Earth's bioregion list, membership from the datahub CSV, subrealm names and realm grouping from the 2023 page (the CSV's realm column disagrees for four Palearctic subrealms; the page's grouping reproduces its stated counts exactly; the CSV's separate 'Alaskan Tundra' subrealm folded into Alaska). Sixteen Bioregioning Earth organizations whose places clearly fall in one bioregion were given thinkr:inBioregion (Claude's assignments from their placeName, for review); multi-bioregion or uncertain ones were left out."@en ;
+    .
+
+tgs:RevisionEvent.SKOSSchemes_2026_10_20 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.BioregioningEarth, tgs:ConceptScheme.OneEarthSolutions, tgs:ConceptScheme.OneEarthBioregions2023, tgs:ConceptScheme.SixFrontsOfIntervention ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "At MJSullivan's request, brought the imported taxonomies up to SKOS best practice for sharing: four skos:ConceptScheme individuals (Bioregioning Earth, One Earth Solutions, One Earth Bioregions 2023, and Nate's Six Fronts of Intervention), skos:inScheme on every member, skos:hasTopConcept / skos:topConceptOf on the roots, and the eight taxonomy classes made rdfs:subClassOf skos:Concept, following the precedent of the subject schemes in subjects.ttl. The Six Fronts subdomains gain explicit skos:broader to their front (alongside thinkr:hasSubdomain) so plain SKOS tools see the hierarchy. One mapping that pointed at a SchoolOfThought (Doughnut Assessment) became rdfs:seeAlso, so skos:relatedMatch links concepts only. Also: the six TGS site subjects now carry skos:topConceptOf / skos:hasTopConcept; three One Earth subrealms that share their single bioregion's name (New Zealand, Greenland, Canadian Tundra) get 'Subrealm' appended to their prefLabel so labels are unique in the scheme. Left as designed: the MJSullivan-derived subtopics' skos:broader into the site-subjects scheme (a deliberate cross-scheme extension). Applied by applySkos.py, which should be re-run after regenerating any of these files."@en ;
+    .
+
+tgs:RevisionEvent.SKOSSchemes2_2026_10_20 a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.TGSConcepts, tgs:ConceptScheme.CaliforniaDoughnutIndicators, tgs:ConceptScheme.EarthSystemComponents, tgs:ConceptScheme.SchoolsOfThought ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Second SKOS pass, at MJSullivan's direction, so the whole graph can be shared as SKOS. Four more schemes: TGS Concepts (flat; every member a top concept), California Doughnut Indicators (2 halves > 21 categories > 42 indicators, via new skos:broader from hasDoughnutHalf / hasIndicatorCategory), Earth System Components, and Schools of Thought. At MJSullivan's correction, third-party classes stop being TGS concepts: thinkr:EarthSystemComponent, thinkr:IndicatorCategory and thinkr:Indicator are now rdfs:subClassOf skos:Concept instead of thinkr:Concept, and their members lose explicit thinkr:Concept typing (matching the EarthSystemComponent class's own original rationale); thinkr:SchoolOfThought and thinkr:DoughnutHalf also become skos:Concept subclasses; thinkr:hasAlternateTerm's domain widened from thinkr:Concept to skos:Concept. Browsing collections: Nate's own concepts (thinkr:HagensConcept), one per TGS site subject, one per analytical lens. skos:related (within a scheme; skos:relatedMatch for the 10 pairs that cross schemes) materialized for concept-to-concept pairs of complements/contrastsWith/convergesWith/relatesTo/challenges (not as a subproperty axiom, since those properties also reach Personas, Organizations and ScenarioFacets). Plain skos:altLabel added from the 8 ExactMatch and Abbreviation alternate terms (applyAlt.py). Concept.CrudeOil's cross-scheme skos:broader to Subject.EnergySystems dropped (its dcterms:subject already says the same)."@en ;
+    .
