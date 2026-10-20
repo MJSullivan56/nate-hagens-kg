@@ -42,9 +42,9 @@ checks, confidence-value enumeration validity, or anything
 compute_confidence.py is responsible for. This script has ONE job.
 
 Usage:
-    python scripts/validate_class_purity.py
-    python scripts/validate_class_purity.py --seed-dir data/seed
-    python scripts/validate_class_purity.py --check-scratch-empty
+    python scripts/validate/validate_class_purity.py
+    python scripts/validate/validate_class_purity.py --seed-dir data/seed
+    python scripts/validate/validate_class_purity.py --check-scratch-empty
 
 Exit code 0 if clean, 1 if any violation found (or if
 --check-scratch-empty was passed and scratch.ttl has content) — safe to

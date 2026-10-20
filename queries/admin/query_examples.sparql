@@ -17,7 +17,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 # 2. Every person linked to a given concept, with rationale + calculated confidence
 # (this is the core "explain the connection" query for the UI). Evidence model:
-# LinkNote.calculatedConfidence is DERIVED (see scripts/compute_confidence.py) —
+# LinkNote.calculatedConfidence is DERIVED (see scripts/derive/compute_confidence.py) —
 # the raw per-Evidence rationale/confidence is one level deeper, via thinkr:hasEvidence.
 SELECT ?personLabel ?relation ?rationale ?evidenceConfidence ?calculatedConfidence WHERE {
   tgs:Concept.Overshoot ?relation ?person .

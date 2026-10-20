@@ -24,9 +24,9 @@ part of any regular workflow. Extend by dropping additional
 that whole directory, no registration step needed.
 
 Usage:
-    python3 scripts/check_completeness.py
-    python3 scripts/check_completeness.py --data-dir data/seed --shapes-dir data/shacl_shapes
-    python3 scripts/check_completeness.py --output reports/completeness/custom-name.md
+    python3 scripts/validate/check_completeness.py
+    python3 scripts/validate/check_completeness.py --data-dir data/seed --shapes-dir data/shacl_shapes
+    python3 scripts/validate/check_completeness.py --output reports/completeness/custom-name.md
 
 Requires: pyshacl, rdflib  (pip install pyshacl --break-system-packages)
 """

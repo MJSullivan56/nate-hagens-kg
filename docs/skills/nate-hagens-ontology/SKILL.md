@@ -427,4 +427,4 @@ infrastructure for no real benefit over the existing merge script.
    dramatically faster than manual bisection (confirmed the hard way:
    an hour of bisection vs. five minutes once the explanation panel
    was actually used).
-4. Run `scripts/validate_class_purity.py` — expect exit code 0.
+4. Run `scripts/validate/validate_class_purity.py` — expect exit code 0.

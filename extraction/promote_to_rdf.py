@@ -97,7 +97,7 @@ def promote_links(con, g, label_to_uri, confidence, dry_run):
         # Evidence model (as of the ConfidenceLevel/Evidence/Source refactor):
         # thinkr:confidence now lives on Evidence, not directly on LinkNote.
         # calculatedConfidence is DERIVED — this script does NOT set it.
-        # Run scripts/compute_confidence.py after promoting to populate it.
+        # Run scripts/derive/compute_confidence.py after promoting to populate it.
         confidence_level = THINKR[f"ConfidenceLevel.{confidence.capitalize()}"]
         ev_uri = TGS[f"Evidence.{slugify(subj_label)}{slugify(obj_label)}"]
         g.add((ev_uri, RDF.type, THINKR.Evidence))
@@ -147,7 +147,7 @@ def main():
 
     con.close()
     if not args.dry_run and len(links_g) > 0:
-        print("\nReminder: run `python scripts/compute_confidence.py` now to populate")
+        print("\nReminder: run `python scripts/derive/compute_confidence.py` now to populate")
         print("calculatedConfidence for any newly-promoted LinkNotes — this script")
         print("only creates Evidence, it never sets calculatedConfidence directly.")
 

@@ -44,8 +44,8 @@ Reputable tier for this calculation — see thinkr:aboutSource's rdfs:comment
 in the schema for why.
 
 Usage:
-    python scripts/compute_confidence.py            # apply and write back
-    python scripts/compute_confidence.py --dry-run  # preview only
+    python scripts/derive/compute_confidence.py            # apply and write back
+    python scripts/derive/compute_confidence.py --dry-run  # preview only
 """
 
 import argparse

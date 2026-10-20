@@ -1,0 +1,22 @@
+# Bioregioning Earth initiatives that practice a given One Earth solution type.
+# Works at any level: a pillar, sub-pillar, solution or lever. A mapping made on
+# a broader One Earth term (e.g. the Regenerative Agriculture pillar) also
+# applies to the solutions under it. Change the VALUES line.
+PREFIX tgs:    <http://example.org/tgs#>
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?viaOneEarth ?viaBioregioning ?initiative ?organization ?place ?bioregion
+WHERE {
+  VALUES ?solution { tgs:PracticeTerm.OneEarth_BioregionalSourcing }
+  ?solution skos:broader* ?oe .
+  ?oe skos:prefLabel ?viaOneEarth .
+  # FILTER(?oe = ?solution)   # uncomment for direct matches only (skip pillar/sub-pillar-level ones)
+  ?be (skos:closeMatch|skos:relatedMatch|skos:broadMatch|skos:narrowMatch) ?oe ;
+      skos:inScheme tgs:ConceptScheme.BioregioningEarth ; skos:prefLabel ?viaBioregioning .
+  ?i thinkr:hasPracticeTerm ?be ; skos:prefLabel ?initiative ; thinkr:carriedOutBy ?org .
+  ?org skos:prefLabel ?organization .
+  OPTIONAL { ?org thinkr:placeName ?place }
+  OPTIONAL { ?org thinkr:inBioregion ?b . ?b skos:prefLabel ?bioregion }
+}
+ORDER BY ?organization ?initiative

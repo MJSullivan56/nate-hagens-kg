@@ -30,6 +30,6 @@ for f in ../data/seed/*.ttl; do
 done
 
 echo "Done. Query it with:"
-echo "  oxigraph query --location ${STORE_PATH} --query-file ../scripts/query_examples.sparql"
+echo "  oxigraph query --location ${STORE_PATH} --query-file ../queries/admin/query_examples.sparql"
 echo "Or serve it over HTTP with:"
 echo "  oxigraph serve --location ${STORE_PATH} --bind 127.0.0.1:7878"

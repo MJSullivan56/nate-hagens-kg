@@ -78,7 +78,7 @@ jobs:
 
               calc = list(g.objects(note, THINKR.calculatedConfidence))
               if not calc:
-                  errors.append(f"{note} missing tgs:calculatedConfidence (run scripts/compute_confidence.py)")
+                  errors.append(f"{note} missing tgs:calculatedConfidence (run scripts/derive/compute_confidence.py)")
               else:
                   for v in calc:
                       if v not in VALID_LINKNOTE_CONFIDENCE:

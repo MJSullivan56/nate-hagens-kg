@@ -248,7 +248,7 @@ Real technical dependencies this would trigger, not yet actioned:
   `tgs_store` loading saga a few sessions back). Needs either a
   recursive glob (`**/*.ttl` with `globstar` enabled) or an explicit
   second loop over the subfolder.
-- `scripts/validate_class_purity.py`'s `Path.glob("*.ttl")` has the
+- `scripts/validate/validate_class_purity.py`'s `Path.glob("*.ttl")` has the
   same non-recursive limitation — would need `rglob` instead, or an
   explicit walk, to keep checking files inside the new subfolder.
 - Whether `alternatetermtypes.ttl` belongs in this new folder too (it's
@@ -1012,7 +1012,7 @@ strictly (episodes.ttl alone would become 5 separate files); (3) fix
 the tool, not the data — add a precise, exact-match allowlist.
 
 Decided: option 3. KNOWN_MULTI_CLASS_FILES in
-scripts/validate_class_purity.py now maps each of these 3 filenames to
+scripts/validate/validate_class_purity.py now maps each of these 3 filenames to
 its OWN real, exact expected class set — deliberately NOT a blanket
 "this file is exempt" flag. If an allowlisted file's actual classes
 ever stop matching its expected set exactly (a new, unexpected class

@@ -79,8 +79,8 @@ data/generated/           — output of the promote_to_rdf.py workflow (gitignor
 docs/                     — cross-cutting design/handoff docs, distinct
                              from folder-local READMEs — see docs/README.md
 scripts/load_oxigraph.sh  — load everything into a local Oxigraph store
-scripts/query_examples.sparql — example queries against the store
-scripts/compute_confidence.py — derives LinkNote calculatedConfidence from
+queries/admin/query_examples.sparql — example queries against the store
+scripts/derive/compute_confidence.py — derives LinkNote calculatedConfidence from
                              its Evidence set — never hand-set this value
 extraction/README.md      — the built, working transcript/entity-triage
                              pipeline PLUS the still-aspirational LLM

@@ -461,7 +461,7 @@ structural changes:
   into the new per-class files by a scripted, triple-count-verified
   repartition (673 → 678 after adding the new ontology/import
   declarations themselves).
-- `scripts/compute_confidence.py` is the derivation engine for
+- `scripts/derive/compute_confidence.py` is the derivation engine for
   `calculatedConfidence` — re-run it after ANY Evidence edit, never
   hand-set that property
 
@@ -487,7 +487,7 @@ Unverified/Unreliable) and `tgs:PolarityType` (Supports/Contests/Mentions)
 enumerations, `ConfidenceType` expanded to 4 values (added Corroborated,
 Disputed). `tgs:confidence` moved from LinkNote to Evidence (has THIS piece
 of evidence been reviewed?); new `tgs:calculatedConfidence` on LinkNote is
-DERIVED via `scripts/compute_confidence.py` — never hand-set. Aggregation
+DERIVED via `scripts/derive/compute_confidence.py` — never hand-set. Aggregation
 rule implemented exactly as designed (see that script's docstring): only
 Curated evidence counts; Unreliable-tier sources excluded regardless of
 polarity (the eugenics-publication case); superseded evidence
@@ -1102,8 +1102,8 @@ make load-oxigraph    # load everything into a local Oxigraph store
 make init-db           # set up the DuckDB review-queue tables
 make promote-dry       # preview what promote_to_rdf.py would write
 make promote            # write approved staging rows into data/generated/
-python scripts/compute_confidence.py --dry-run  # preview calculatedConfidence
-python scripts/compute_confidence.py             # apply it — run after ANY Evidence edit
+python scripts/derive/compute_confidence.py --dry-run  # preview calculatedConfidence
+python scripts/derive/compute_confidence.py             # apply it — run after ANY Evidence edit
 ```
 
 ## Working agreement

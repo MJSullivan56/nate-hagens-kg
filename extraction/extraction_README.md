@@ -95,18 +95,18 @@ LLM to propose plausible `thinkr:echoesIdeaOf`/`thinkr:influencedBy`/
 The `thinkr:LinkNote` itself (`data/seed/linknotes.ttl`'s pattern) gets
 `thinkr:hasEvidence` pointing at that Evidence — its own
 `thinkr:calculatedConfidence` is NEVER hand-set, only ever derived by
-`scripts/compute_confidence.py`. Never auto-promote a candidate to
+`scripts/derive/compute_confidence.py`. Never auto-promote a candidate to
 Curated — that review step is where the actual intellectual value of
 this project lives; skipping it turns the graph into forced
 trivia-style parallels instead of a curated argument.
 
 ### Step 5 — Review queue
-Use `scripts/query_examples.sparql` to pull every Candidate-confidence
+Use `queries/admin/query_examples.sparql` to pull every Candidate-confidence
 Evidence and go through it manually (or with a second LLM pass
 specifically prompted to be skeptical/adversarial toward the first
 pass's proposals — "is this a real connection or just surface
 pattern-matching?"). Change `thinkr:confidence` to `Curated` only after
-actual human review, then re-run `scripts/compute_confidence.py` to
+actual human review, then re-run `scripts/derive/compute_confidence.py` to
 propagate the change into `calculatedConfidence`.
 
 ### Step 6 — Re-ingest

@@ -14,7 +14,7 @@ AcademicInstitution, SchoolOfThought) never gets one, since has*Relationship's
 domain is thinkr:Persona only. Symmetric: both the subject's and the object's
 Persona get it, when both are Personas.
 
-Unlike scripts/compute_confidence.py, this script does NOT reserialize files via
+Unlike scripts/derive/compute_confidence.py, this script does NOT reserialize files via
 rdflib's Graph.serialize() — that round-trip strips every hand-authored section
 comment and skos:scopeNote (confirmed happening to linknotes.ttl on 2026-07-15
 when compute_confidence.py ran). Instead it does targeted, literal-safe text

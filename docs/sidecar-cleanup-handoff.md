@@ -181,11 +181,11 @@ VS Code extension (open GitHub issues on context not following the
 active file), so each project stays in its own window rather than a
 shared workspace.
 
-**Validation**: `scripts/compute_confidence.py` derives
+**Validation**: `scripts/derive/compute_confidence.py` derives
 `LinkNote.calculatedConfidence` from `Evidence` sets — never
 hand-asserted, matches UWOM's `validate_repo.py` discipline of a
 scripted, re-runnable check rather than manual verification.
-`scripts/validate_class_purity.py` (NEW 2026-07-14) confirms every
+`scripts/validate/validate_class_purity.py` (NEW 2026-07-14) confirms every
 `data/seed/*.ttl` file holds instances of exactly one class and that
 `scratch.ttl` is empty — a real, narrow, permanent check, but NOT a
 SHACL validator and not a substitute for one: it catches file-placement
@@ -424,7 +424,7 @@ CLAUDE.md backlog item, not silently dropped.
 
 **Triple count**: 2,023 (session start) -> 2,201 (data/seed/, after all 6
 parts). Validated throughout via `make validate`,
-`scripts/validate_class_purity.py --check-scratch-empty` (2 pre-existing
+`scripts/validate/validate_class_purity.py --check-scratch-empty` (2 pre-existing
 violations, both unrelated to this session's work), and repeated live
 Oxigraph queries after every reload — never trusted a script's own
 "success" message without independently re-querying, per the lesson Part
@@ -940,7 +940,7 @@ occurrence of each renamed IRI) across the 3 owning files
   schema design, `LinkNote`/`Evidence`/`CrosswalkNote` are never
   themselves the object of any other class's property, but checked
   directly rather than assumed).
-- `scripts/validate_class_purity.py --check-scratch-empty`: clean except
+- `scripts/validate/validate_class_purity.py --check-scratch-empty`: clean except
   the same 2 already-known, already-flagged violations
   (`episodes.ttl`/Series, `subjects.ttl`/ConceptScheme) — untouched,
   unworsened.
@@ -1093,7 +1093,7 @@ Same deferred status as Berman's ASPO-USA. What DID surface:
   general-web-search bootstrap.
 
 **Real, unplanned infrastructure bug found and fixed:**
-`scripts/compute_confidence.py` still referenced the PRE-RENAME
+`scripts/derive/compute_confidence.py` still referenced the PRE-RENAME
 vocabulary (`ConfidenceLevel.*`, `ReliabilityTier.*`, `EvidencePolarity.*`)
 from before this project's `ConfidenceType`/`ReliabilityType`/
 `PolarityType` renames — exactly the "text-based rename never touches
@@ -1118,7 +1118,7 @@ rule), not optional cleanup layered on top of the pilot.
 1,990 triples in `data/seed/*.ttl` before this session's edits (already
 including the still-uncommitted Monahan enrichments from earlier this
 week); 2,022 after this pilot's edits + a real `compute_confidence.py`
-run (+32). `scripts/validate_class_purity.py --check-scratch-empty`
+run (+32). `scripts/validate/validate_class_purity.py --check-scratch-empty`
 clean except for the 2 already-known, already-flagged, untouched
 violations (`episodes.ttl`'s Series mixing, `subjects.ttl`'s ConceptScheme
 mixing) — nothing from this session made either worse.
@@ -1240,7 +1240,7 @@ directory at the time, not just the individually-touched files.
 `Relationship` individuals confirmed resolving `hasSubject`/`hasObject`
 correctly; `Relationship.NateHagens_MatthewMonahan`'s `hasRelationshipType`
 confirmed returning both `Personal` and `Professional`.
-`scripts/validate_class_purity.py --check-scratch-empty` run clean —
+`scripts/validate/validate_class_purity.py --check-scratch-empty` run clean —
 only the 2 already-known, already-flagged violations (`episodes.ttl`
 Series, `subjects.ttl` ConceptScheme), `scratch.ttl` correctly empty
 throughout (everything found was confident/verified enough to write
@@ -1311,7 +1311,7 @@ is still in flight, not invisible until promoted) — the violation isn't
 designated legitimate home, forcing it into whatever file's already
 open."
 
-**`scripts/validate_class_purity.py` built alongside it** — confirms
+**`scripts/validate/validate_class_purity.py` built alongside it** — confirms
 every `data/seed/*.ttl` file's named subjects belong to exactly one
 class, and (via `--check-scratch-empty`) that `scratch.ttl` has no real
 content beyond its own header. Tested against the actual repo state,

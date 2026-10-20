@@ -381,10 +381,10 @@ Export sequence:
 2. **Run `python scripts/compute_relationships.py`** (unmodified, no
    `--dry-run`) to derive and write every Persona's `has*Relationship`
    properties from the `Relationship` individuals just exported.
-3. **Run `python scripts/compute_confidence.py`** (unmodified, no
+3. **Run `python scripts/derive/compute_confidence.py`** (unmodified, no
    `--dry-run`) to derive and write `calculatedConfidence` on every
    `LinkNote` from its `Evidence`.
-4. **Run `python scripts/validate_class_purity.py`** as a final gate —
+4. **Run `python scripts/validate/validate_class_purity.py`** as a final gate —
    exit code 0 required before considering the export done. If it fails,
    STOP and report which file(s) violated it; don't try to auto-fix a
    class-purity violation without review, since the real 2 incidents that
