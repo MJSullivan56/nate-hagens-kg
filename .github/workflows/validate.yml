@@ -4,9 +4,13 @@ on:
   push:
     paths:
       - '**.ttl'
+      - 'scripts/derive/**'
+      - '.github/workflows/**'
   pull_request:
     paths:
       - '**.ttl'
+      - 'scripts/derive/**'
+      - '.github/workflows/**'
 
 jobs:
   validate-turtle:
@@ -106,3 +110,9 @@ jobs:
               sys.exit(1)
           print("All LinkNotes have valid Evidence and calculatedConfidence; all Evidence is well-formed.")
           EOF
+
+      - name: Inverse and symmetric links present
+        run: python scripts/derive/compute_inverses.py --check
+
+      - name: Sub-property closure up to date
+        run: python scripts/derive/materialize_superproperties.py --check
