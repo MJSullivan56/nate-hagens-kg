@@ -1258,9 +1258,10 @@ tgs:Concept.EnergyAdditionsNotTransitions a thinkr:Concept, owl:NamedIndividual 
     skos:prefLabel "Energy Additions, Not Transitions"@en ;
     skos:definition "There has never been a true energy transition: each new source has been added on top of the old ones rather than replacing them -- 'no green revolution, only a green addition.'"@en ;
     thinkr:extendedDefinition "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en ;
-    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237. Nate's phrasing in Frankly_90 (April 2025): 'there has been no green revolution, only a green addition.'"@en ;
+    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237. Nate's phrasing in Frankly_90 (April 2025): 'there has been no green revolution, only a green addition.' Confirmed earlier and more fully in TGS_162 (Jean-Baptiste Fressoz, released February 2025): Nate calls 'there's only been an energy addition' 'a phrase that I commonly use', and Fressoz's history (tgs:Work.MoreAndMoreAndMore) goes further, from addition to symbiosis (tgs:Concept.EnergySymbiosis)."@en ;
     thinkr:definedIn tgs:Work.EnergyTransitionsOrAdditions ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    thinkr:influencedBy tgs:Persona.JeanBaptisteFressoz ;
     .
 
 tgs:Concept.EnergyGrowthRateDependence a thinkr:Concept, owl:NamedIndividual ;
@@ -4245,6 +4246,42 @@ tgs:Concept.SevenGenerationsThinking a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.EnergySymbiosis a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Energy symbiosis"@en ;
+    skos:definition "Jean-Baptiste Fressoz's thesis that energy sources and materials do not succeed one another but grow together, each depending on the others: coal mining consumed ever more timber for pit props (Britain used more wood for pit props around 1900 than it burned as firewood in the 18th century); oil depends on coal through steel (pipes, engines) and on cement (roads); a 1930s Ford took seven tons of coal to build, and a Chinese car still takes two to three; and in China, much new solar and wind capacity has been built together with coal plants to share grid connections. Wood use has doubled since the 1960s and wood energy is now about twice nuclear energy."@en ;
+    dcterms:source tgs:Work.MoreAndMoreAndMore ;
+    thinkr:influencedBy tgs:Persona.JeanBaptisteFressoz ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_162. Nate's own framing is energy additions (tgs:Concept.EnergyAdditionsNotTransitions); Fressoz answers 'it's more than an addition, it's a symbiosis'. It extends to all raw materials: very few have ever declined in absolute use (asbestos, by prohibition, and sheep's wool are the exceptions he finds), and car headlights alone now burn more oil than the whole economy of 1900 used for kerosene lighting. Related: tgs:Concept.Superorganism, Olivia Lazard's rematerialization (TGS_58)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.EnergyTransitionNarrative a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The energy transition narrative"@en ;
+    skos:definition "Jean-Baptiste Fressoz's history of the idea of an 'energy transition': a phrase borrowed from nuclear physics (an electron's change of state) and taken up by atomic scientists in the 1950s and 1960s, who imagined fossil fuels as a brief episode before breeder reactors -- the timescale of M. King Hubbert's famous graph, which Fressoz identifies as the origin of the carbon-pulse picture. Experts long knew energies added up and did not speak of transitions until the 1970s. For Fressoz the phrase is 'a slogan, not a serious scientific word': what solar panels and electric motors actually do is lower the carbon intensity of the economy, continuing an old history of technological progress, and Schumpeter's creative destruction, carried into climate economics, does not describe materials."@en ;
+    dcterms:source tgs:Work.MoreAndMoreAndMore ;
+    thinkr:influencedBy tgs:Persona.JeanBaptisteFressoz ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_162. Fressoz notes that the US Atomic Energy Commission raised climate change as early as 1953, and that the industrial elites who took the 1970s energy crisis seriously (Jimmy Carter's 1977 address; European Commission vice-president Sicco Mansholt after reading The Limits to Growth) have not taken climate change or biodiversity loss as seriously. His examples of the narrative in politics: John Kerry calling the energy transition a new industrial revolution. Related: tgs:Concept.EnergyAdditionsNotTransitions, tgs:Concept.CarbonPulse, tgs:Concept.EnergyBlindness."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.CarbonAllocationByUse a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Allocating carbon by use"@en ;
+    skos:definition "Jean-Baptiste Fressoz's argument that carbon should not be demonized but allocated: with little CO2 left to emit, the question should be where emissions do the most good -- cement for a needed bridge or a water network in a poor city rather than another Manhattan skyscraper -- whereas markets put it where the most money can be made. He faults climate economics for promising the same world decarbonized by green innovation instead of discussing the quantity and distribution of what is produced."@en ;
+    dcterms:source tgs:Work.MoreAndMoreAndMore ;
+    thinkr:influencedBy tgs:Persona.JeanBaptisteFressoz ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_162. Fressoz links the absence of this discussion to capitalism; Nate answers that the deeper driver is the maximum power principle (tgs:Concept.MaximumPowerPrinciple), and Fressoz agrees the problem is deeper than capitalism. Fressoz supports putting degrowth at the center of economics (tgs:SchoolOfThought.DegrowthMovement) without claiming it solves the problem. Compare the allocation step of tgs:Concept.ContextBasedSustainability."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4275,6 +4312,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.BioticPump,
         tgs:Concept.BrokenApprenticeship,
         tgs:Concept.CantillonEffect,
+        tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CarbonDioxideRemoval,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CaringEconomics,
@@ -4355,6 +4393,8 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EnergyGrowthRateDependence,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
+        tgs:Concept.EnergySymbiosis,
+        tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.Enoughness,
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.EpistemicCommons,
@@ -4771,6 +4811,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.BiophysicalPyramid,
         tgs:Concept.BrokenApprenticeship,
         tgs:Concept.CantillonEffect,
+        tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CaringEconomics,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.CivilizationalSharpeRatio,
@@ -4787,6 +4828,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyGDPCoupling,
+        tgs:Concept.EnergySymbiosis,
         tgs:Concept.Enoughness,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourHorsemenOfThe2020s,
@@ -4830,6 +4872,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.EnergySystems ;
     skos:member tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.BiophysicalGauntlet,
+        tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CrudeOil,
@@ -4843,6 +4886,8 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EnergyGrowthRateDependence,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
+        tgs:Concept.EnergySymbiosis,
+        tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourPillarsOfCivilization,
         tgs:Concept.GeneralizedJevonsParadox,
@@ -4940,6 +4985,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmpathyHandicap,
         tgs:Concept.Enantiodromia,
+        tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.Enoughness,
         tgs:Concept.EpistemicCommons,
         tgs:Concept.ExosomaticEnergy,
@@ -5205,6 +5251,8 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
+        tgs:Concept.EnergySymbiosis,
+        tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourHorsemenOfThe2020s,
@@ -5301,6 +5349,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
+        tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CivilizationalOptionality,
@@ -5318,6 +5367,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EducatingHyperAgents,
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
+        tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GiftEconomy,
@@ -5633,6 +5683,12 @@ tgs:Concept.GiftEconomy skos:related tgs:Concept.Enoughness .
 tgs:Concept.RestorationAndRestoryation skos:related tgs:Concept.AgeOfRemembering .
 tgs:Concept.SuccessAsLongTermPersistence skos:related tgs:Concept.RobustnessVsPerformance .
 tgs:Concept.SevenGenerationsThinking skos:related tgs:Concept.HonorableHarvest .
+tgs:Concept.EnergySymbiosis skos:related tgs:Concept.EnergyAdditionsNotTransitions .
+tgs:Concept.EnergySymbiosis skos:related tgs:Concept.Superorganism .
+tgs:Concept.EnergyTransitionNarrative skos:related tgs:Concept.EnergyAdditionsNotTransitions .
+tgs:Concept.EnergyTransitionNarrative skos:related tgs:Concept.CarbonPulse .
+tgs:Concept.CarbonAllocationByUse skos:related tgs:Concept.ContextBasedSustainability .
+tgs:Concept.CarbonAllocationByUse skos:related tgs:Concept.MaximumPowerPrinciple .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5645,7 +5701,7 @@ tgs:Concept.AggregateProbability
     thinkr:complements tgs:Concept.ImpossibleToHard .
 
 tgs:Concept.CarbonPulse
-    skos:related tgs:Concept.EnergyGDPCoupling, tgs:Concept.PhantomCarryingCapacity .
+    skos:related tgs:Concept.EnergyGDPCoupling, tgs:Concept.EnergyTransitionNarrative, tgs:Concept.PhantomCarryingCapacity .
 
 tgs:Concept.CarryingCapacity
     skos:related tgs:Concept.ContextBasedSustainability, tgs:Concept.PhantomCarryingCapacity .
@@ -5655,6 +5711,9 @@ tgs:Concept.CollapseResponseContinuum
 
 tgs:Concept.ConstructiveJournalism
     skos:related tgs:Concept.AttentionEconomy .
+
+tgs:Concept.ContextBasedSustainability
+    skos:related tgs:Concept.CarbonAllocationByUse .
 
 tgs:Concept.CorporationsAsMisalignedAI
     thinkr:complements tgs:Concept.CorporationAsObligateSociopath ;
@@ -5686,6 +5745,9 @@ tgs:Concept.EducatingHyperAgents
 
 tgs:Concept.Effectivism
     skos:related tgs:Concept.BattlesOfOurTime, tgs:Concept.EarnedHope .
+
+tgs:Concept.EnergyAdditionsNotTransitions
+    skos:related tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
 
 tgs:Concept.EnergyBlindness
     skos:related tgs:Concept.EnergyGDPCoupling .
@@ -5779,7 +5841,7 @@ tgs:Concept.LossAversion
 
 tgs:Concept.MaximumPowerPrinciple
     thinkr:complements tgs:Concept.MaximizingReturnsOnPower ;
-    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.MaximizingReturnsOnPower .
+    skos:related tgs:Concept.CarbonAllocationByUse, tgs:Concept.DissipativeStructures, tgs:Concept.MaximizingReturnsOnPower .
 
 tgs:Concept.MetabolicHierarchyOfTheSuperorganism
     thinkr:complements tgs:Concept.MaximizingReturnsOnPower ;
@@ -5875,7 +5937,7 @@ tgs:Concept.SupernormalStimuli
 
 tgs:Concept.Superorganism
     thinkr:complements tgs:Concept.MultipolarTrap ;
-    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.MultipolarTrap .
+    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.EnergySymbiosis, tgs:Concept.MultipolarTrap .
 
 tgs:Concept.SupplyChainFragility
     skos:related tgs:Concept.JevonsParadox .

@@ -3573,6 +3573,24 @@ tgs:Work.TheServiceberry a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://robinwallkimmerer.com/book/the-serviceberry/>, <https://emergencemagazine.org/essay/the-serviceberry/> ;
     .
 
+tgs:Work.MoreAndMoreAndMore a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "More and More and More: An All-Consuming History of Energy"@en ;
+    skos:altLabel "Sans transition: une nouvelle histoire de l'energie"@fr ;
+    rdfs:comment "Jean-Baptiste Fressoz, Allen Lane (Penguin), 2024; French original Sans transition (Seuil, 2024). A history of energy and materials together, arguing that no energy source has ever replaced another: wood, coal, oil and their materials (steel, cement) grew in symbiosis, so 'energy transition' is a slogan rather than a historical category. Its second part traces where the idea of an energy transition came from, in the nuclear milieu of the 1950s and 1960s."@en ;
+    dct:creator tgs:Human.JeanBaptisteFressoz ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:source <https://www.penguin.co.uk/books/464145/more-and-more-and-more-by-fressoz-jean-baptiste/9780241718896> ;
+    .
+
+tgs:Work.TheShockOfTheAnthropocene a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Shock of the Anthropocene: The Earth, History and Us"@en ;
+    skos:altLabel "L'Evenement Anthropocene"@fr ;
+    rdfs:comment "Christophe Bonneuil and Jean-Baptiste Fressoz, Verso, 2016; French original L'Evenement Anthropocene (Seuil, 2013). Argues the Anthropocene is a historical and political phenomenon -- shaped by imperialism, capitalism and war, with the most damaging technologies (pesticides, fertilizers, aviation) often military in origin, and with Britain and the US emitting half of all CO2 until about 1970 -- rather than the story of the human species as such. In TGS_162 Fressoz says he is no longer entirely convinced by it."@en ;
+    dct:creator tgs:Human.JeanBaptisteFressoz ;
+    dct:issued "2016"^^xsd:gYear ;
+    dct:source <https://www.versobooks.com/products/136-the-shock-of-the-anthropocene> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3682,8 +3700,14 @@ tgs:Work.LeMondeSansFin
 tgs:Work.LePlanDeTransformation
     dct:isReferencedBy tgs:Interview.TGS_84_JeanMarcJancovici .
 
+tgs:Work.LimitsToGrowth1972
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
+
 tgs:Work.Matrimony
     dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
+
+tgs:Work.MoreAndMoreAndMore
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Work.NewEconomyForTheBrazilianAmazon
     dct:isReferencedBy tgs:Interview.TGS_151_AndreGuimaraes .
@@ -3747,6 +3771,9 @@ tgs:Work.TheRighteousMind
 
 tgs:Work.TheServiceberry
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+
+tgs:Work.TheShockOfTheAnthropocene
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Work.TheSpaceOfPossibleMindDesigns
     dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .

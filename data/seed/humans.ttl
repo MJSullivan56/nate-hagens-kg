@@ -2229,6 +2229,14 @@ tgs:Human.ShalandaBaker a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://papers.ssrn.com/abstract=3362355> ;
     .
 
+tgs:Human.JeanBaptisteFressoz a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Jean-Baptiste Fressoz"@en ;
+    rdfs:label "Jean-Baptiste Fressoz (human)"@en ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Jean-Baptiste_Fressoz> ;
+    rdfs:comment "French historian of science, technology and the environment (born 1977), working on energy, technological risk and the Anthropocene. Positions as given by three sources: the TGS_162 show notes, historian and researcher at the Centre Alexandre-Koyre of the Ecole des hautes etudes en sciences sociales (EHESS), Paris; Nate's introduction, senior researcher at the French National Center for Scientific Research (CNRS) and professor at the Ecole nationale des ponts et chaussees; French Wikipedia, CNRS researcher and member of the EHESS Centre de recherches historiques. Author of Happy Apocalypse: A History of Technological Risk (L'Apocalypse joyeuse, 2012), co-author with Christophe Bonneuil of tgs:Work.TheShockOfTheAnthropocene, co-author with Fabien Locher of Chaos in the Heavens: The Forgotten History of Climate Change (Les Revoltes du ciel, 2020), and author of tgs:Work.MoreAndMoreAndMore (Sans transition, 2024). Teaches the history of the environment, technology and energy; planning a book on the 'modernization of the human muscle' (shovels, wheelbarrows, ball bearings, factory handling) in the same symbiosis framework."@en ;
+    dct:source <https://www.versobooks.com/blogs/authors/fressoz-jean-baptiste> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -2250,6 +2258,9 @@ tgs:Human.AudreyTang
 
 tgs:Human.AzaRaskin
     dct:isReferencedBy tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted .
+
+tgs:Human.ChrisKeefer
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Human.DJWhite
     dct:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
@@ -2304,6 +2315,9 @@ tgs:Human.JuliaCarabiasLillo
 
 tgs:Human.KatharineHayhoe
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.MKingHubbert
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Human.NoraBateson
     dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .

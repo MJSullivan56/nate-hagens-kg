@@ -55,6 +55,8 @@ tgs:Concept.BioticPump thinkr:relatesTo tgs:Persona.AnastassiaMakarieva,
         tgs:Persona.VictorGorshkov ;
     skos:note "Real theory co-developed by Anastassia Makarieva and the late Victor Gorshkov: forests actively drive atmospheric moisture transport and rainfall patterns over land, rather than being passive recipients of rain — condensation over dense forest canopy lowers air pressure, pulling moist ocean air inland. Challenges conventional climate models to treat vegetation as a dynamic driver of atmospheric processes, not a fixed background feature."@en .
 
+tgs:Concept.CarbonAllocationByUse thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
+
 tgs:Concept.CaringEconomics thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "In TGS_116 Eisler says economics is about what we value and what we measure. Smith challenged the mercantilist control of kings and Marx challenged the bourgeoisie, but both came from early industrial times and both kept the 'hidden system of gendered values': for both, nature was there to be exploited, and care for children, the old and the sick was to be done for free by women in male-controlled households (as late as Marx's day, in many jurisdictions only a husband could sue for injury to his wife, for loss of her services). An Australian study found care work would be about 50 percent of reported GDP if counted. Economists call high-quality human capital the key to a post-industrial economy, yet neuroscience shows it depends on the care and education children receive early. The Nordic nations show caring policies are compatible with, and help, a competitive market economy."@en .
 
@@ -157,11 +159,16 @@ tgs:Concept.Effectivism thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.EliteOverproduction thinkr:relatesTo tgs:Persona.PeterTurchin .
 
-tgs:Concept.EnergyAdditionsNotTransitions skos:note "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en .
+tgs:Concept.EnergyAdditionsNotTransitions thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz ;
+    skos:note "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en .
 
 tgs:Concept.EnergyGDPCoupling thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.EnergyReturnOnInvestment skos:note "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en .
+
+tgs:Concept.EnergySymbiosis thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
+
+tgs:Concept.EnergyTransitionNarrative thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
 
 tgs:Concept.Enoughness thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
@@ -654,7 +661,9 @@ tgs:Interview.TGS_160_BirgitteBischoff dct:source <https://www.thegreatsimplific
 
 tgs:Interview.TGS_161_ScottTinker dct:source <https://www.thegreatsimplification.com/episode/161-scott-tinker> .
 
-tgs:Interview.TGS_162_JeanBaptisteFressoz dct:source <https://www.thegreatsimplification.com/episode/162-jean-baptiste-fressoz> .
+tgs:Interview.TGS_162_JeanBaptisteFressoz dct:contributor tgs:Persona.JeanBaptisteFressoz ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/162-jean-baptiste-fressoz> .
 
 tgs:Interview.TGS_163_DougaldHine dct:contributor tgs:Persona.DougaldHine ;
     dct:creator tgs:Persona.NateHagens ;
@@ -2340,6 +2349,8 @@ tgs:ScenarioFacet.TheGreatSimplification thinkr:logicallyDisjointWith tgs:Scenar
 
 tgs:Persona.IainMcGilchrist thinkr:hasNamedEntityType thinkr:PersonEntityType.Contributor,
         thinkr:PersonEntityType.Guest .
+
+tgs:Persona.JeanBaptisteFressoz thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.JoshFarley thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

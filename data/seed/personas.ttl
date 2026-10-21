@@ -1929,6 +1929,15 @@ tgs:Persona.RobinWallKimmerer a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "Professional only: Nate says they are meeting in person for the first time ('we just met today'), after years in which she was one of the show's most requested guests."@en ;
     .
 
+tgs:Persona.JeanBaptisteFressoz a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JeanBaptisteFressoz ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JeanBaptisteFressoz ;
+    skos:prefLabel "Jean-Baptiste Fressoz"@en ;
+    rdfs:label "Jean-Baptiste Fressoz (persona)"@en ;
+    skos:scopeNote "Professional only: their first conversation. Nate says he only recently discovered Fressoz's work through their mutual friend Chris Keefer (tgs:Human.ChrisKeefer); Fressoz says he has seen Nate's animated film."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

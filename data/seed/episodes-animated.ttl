@@ -99,6 +99,9 @@ tgs:AnimatedVideo.Part4TheGreatSimplification a thinkr:Episode, owl:NamedIndivid
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
 
+tgs:AnimatedVideo.Part1EnergyBlind
+    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
+
 tgs:AnimatedVideo.Part2TheHumanSuperorganism
     dct:isReferencedBy tgs:Monologue.Frankly_123_TheConsumptionPyramid .
 

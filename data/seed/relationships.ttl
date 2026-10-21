@@ -2900,3 +2900,16 @@ tgs:Relationship.NateHagens_RobinWallKimmerer a thinkr:Relationship, owl:NamedIn
           thinkr:episode tgs:Interview.TGS_239_RobinWallKimmerer ;
           dcterms:date "2026-09-24"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'finally, we're able to meet in person' and 'we just met today'. Recorded in person in New York City, the day after Nate recorded TGS_238 with Indy Johar."@en .
+
+tgs:Relationship.NateHagens_JeanBaptisteFressoz a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JeanBaptisteFressoz ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Jean-Baptiste Fressoz"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_162_JeanBaptisteFressoz ;
+          dcterms:date "2024-11-06"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'I'm really surprised that I've only recently discovered your work, because of our mutual friend Chris Keefer'; Nate closes hoping for 'more conversations' and invites him back if he writes his book on the human muscle."@en .
