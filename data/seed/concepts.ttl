@@ -1258,7 +1258,7 @@ tgs:Concept.EnergyAdditionsNotTransitions a thinkr:Concept, owl:NamedIndividual 
     skos:prefLabel "Energy Additions, Not Transitions"@en ;
     skos:definition "There has never been a true energy transition: each new source has been added on top of the old ones rather than replacing them -- 'no green revolution, only a green addition.'"@en ;
     thinkr:extendedDefinition "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en ;
-    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237. Nate's phrasing in Frankly_90 (April 2025): 'there has been no green revolution, only a green addition.' Confirmed earlier and more fully in TGS_162 (Jean-Baptiste Fressoz, released February 2025): Nate calls 'there's only been an energy addition' 'a phrase that I commonly use', and Fressoz's history (tgs:Work.MoreAndMoreAndMore) goes further, from addition to symbiosis (tgs:Concept.EnergySymbiosis)."@en ;
+    skos:scopeNote "Modeled from TGS-237, where Art states it and the show notes cite York and Bell as an 'Episode Foundation.' Whether Nate or other guests use the 'additions' framing in other episodes is not verified here -- check before treating this as specific to TGS-237. Nate's phrasing in Frankly_90 (April 2025): 'there has been no green revolution, only a green addition.' Found earlier in two episodes released a week apart: TGS_161 (Scott Tinker, 29 January 2025), where Nate says the energy transition 'so far has not been an energy transition. It's been an energy addition'; and TGS_162 (Jean-Baptiste Fressoz, 5 February 2025), where Nate calls it 'a phrase that I commonly use' and Fressoz's history (tgs:Work.MoreAndMoreAndMore) goes further, from addition to symbiosis (tgs:Concept.EnergySymbiosis). Tinker offers a contrasting framing, a transition from dense to more dense fuels (tgs:Concept.DenseToMoreDenseTransition)."@en ;
     thinkr:definedIn tgs:Work.EnergyTransitionsOrAdditions ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
     thinkr:influencedBy tgs:Persona.JeanBaptisteFressoz ;
@@ -4282,6 +4282,66 @@ tgs:Concept.CarbonAllocationByUse a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.NaturalDeclineRate a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Natural decline rate"@en ;
+    skos:definition "The rate at which output from existing oil and gas wells falls once they are producing, because extraction releases the reservoir pressure that drives fluids to the surface: about 10 to 15% a year worldwide, so that without continual new drilling and investment, production would fall by around 90% within 20 to 30 years. Shale wells decline much faster than conventional ones -- peaking and falling within two or three years, with a long tail -- so shale output needs ever more wells."@en ;
+    dcterms:source <https://corporate.exxonmobil.com/-/media/global/files/global-outlook/2024/global-outlook-executive-summary.pdf> ;
+    thinkr:influencedBy tgs:Persona.ScottTinker ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_161. Nate cites ExxonMobil's 2024 Global Outlook, whose supply chart implies about a 15% annual decline from existing fields; Tinker explains the physics (pressure release, porosity and permeability; shale nanopores, 200 across a human hair) and says production must be replaced every year, which he calls neither 'it's over' nor 'unlimited'. Related: tgs:Concept.PeakOil."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.ResourcesVersusReserves a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Resources versus reserves"@en ;
+    skos:definition "The distinction between a resource -- the total oil or gas in the ground, which geologists estimate reasonably well -- and reserves, the part that can be produced with today's technology at today's price. Because technology improves and prices move, reserves rise and fall ('reserve growth'), so a static count of reserves understates future supply, while the resource sets the ultimate bound."@en ;
+    dcterms:source <https://www.norskpetroleum.no/en/petroleum-resources/resource-classification/> ;
+    thinkr:influencedBy tgs:Persona.ScottTinker ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_161. Scott Tinker's framing for why peak oil keeps being pushed back: technology, pulled by demand, turns resource into reserves (US shale has yielded perhaps 5 to 10% of the oil in its source rocks so far, and the source rocks of the Middle East and Russia are untapped). Nate's reply: there is a huge resource (even oil shale, with 'the energy density of a baked potato'), but the prices needed to develop it would break today's cultural and financial arrangements, which is why he measures energy costs in energy terms (tgs:Work.TowardsAnAppliedNetEnergyFramework, tgs:Concept.EnergyReturnOnInvestment)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.EnergyPoverty a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Energy poverty"@en ;
+    skos:definition "Lacking affordable, reliable energy consistently -- distinct from having no energy at all. Scott Tinker estimates that about 1 billion people have no energy access, while some 4 to 5 billion more have insecure access that comes and goes; in about a quarter of the world's countries, average energy use per person is less than his refrigerator's. Energy access correlates tightly with economic well-being."@en ;
+    dcterms:source <https://ourworldindata.org/energy-access> ;
+    thinkr:influencedBy tgs:Persona.ScottTinker ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_161. Tinker's argument: energy underpins healthy economies, and it is healthy economies that invest in clean land, air and water, so energy poverty and environmental protection must be solved together. Nate agrees ethically that billions should rise but doubts systemically that they will, and expects average energy use per person to fall. The Switch Energy Alliance's student competition, which studies energy poverty, saw Nigerian teams miss deadlines because of seven-hour power cuts."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.DenseToMoreDenseTransition a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "From dense to more dense"@en ;
+    skos:definition "Scott Tinker's thesis that the real energy transition runs from less dense to more dense fuels -- hay and wood to coal, oil, methane, hydrogen and uranium -- by energy per unit weight, so a single uranium fuel pellet holds the energy to drive a car from New York to Los Angeles and back to Dallas. By surface power density (watts per square meter), solar and wind are near the bottom, needing far more materials to collect a unit of energy; moving to them is 'going from dense to less dense, backwards in time of physics'."@en ;
+    dcterms:source <https://drexel.edu/~/media/Files/greatworks/pdf_sum10/WK8_Layton_EnergyDensities.ashx> ;
+    thinkr:influencedBy tgs:Persona.ScottTinker ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_161. A view Nate partly shares and partly contests: he agrees we would go from dense to more dense if geopolitics and finance hold together, but expects average energy use per person to fall, and doubts nuclear can scale because of cost. Tinker adds that solar and wind collection systems are not renewable, since they are mined and wear out in 10 to 15 years, and that an electric car uses far more metal than a combustion car. Contrast tgs:Concept.EnergyAdditionsNotTransitions and tgs:Concept.EnergySymbiosis."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.RadicalMiddle a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Radical middle"@en ;
+    skos:definition "Scott Tinker's term for the position he urges on young people and experts: rejecting binary framings -- natural gas against solar and wind, coal against nuclear, 'climate change is real, so the answer is solar, wind and batteries' -- in favor of trade-offs, compromises and common ground, argued in a way that is 'not just completely factual, but factually complete' about the pros and cons of every source."@en ;
+    dcterms:source <https://switchon.org> ;
+    thinkr:influencedBy tgs:Persona.ScottTinker ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_161. In his closing advice he asks listeners to speak in classrooms, scout troops and church groups, and young people to 'join that radical middle' despite fear of online attack. He frames youth climate fear as imposed by powerful voices and wrong; Nate attributes much youth distress to social media, with climate a part."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4357,6 +4417,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DeepEcology,
         tgs:Concept.DefaultModeNetwork,
         tgs:Concept.DenialLearnedInDominationFamilies,
+        tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DieselPoweredCivilization,
         tgs:Concept.DiningCar,
         tgs:Concept.DiscountRatesAndPresentBias,
@@ -4391,6 +4452,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
+        tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
         tgs:Concept.EnergySymbiosis,
@@ -4499,6 +4561,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.NamedSolutionsDrawCounterResponse,
         tgs:Concept.NarrativeAsActiveInference,
         tgs:Concept.NarrowGoalAchieving,
+        tgs:Concept.NaturalDeclineRate,
         tgs:Concept.NatureBasedPackaging,
         tgs:Concept.NonDuality,
         tgs:Concept.NonZeroSumness,
@@ -4543,6 +4606,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.PurityVsEffectiveness,
         tgs:Concept.QuadraticFunding,
         tgs:Concept.RadicalHospitality,
+        tgs:Concept.RadicalMiddle,
         tgs:Concept.RationalIgnorance,
         tgs:Concept.ReAgentificationOfTheWorld,
         tgs:Concept.ReAimingTheStatusDrive,
@@ -4555,6 +4619,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.RegenerativeFinance,
         tgs:Concept.RelativeFitnessSpiteFramework,
         tgs:Concept.RentSeeking,
+        tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.ReverseDominanceHierarchy,
@@ -4828,6 +4893,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyGDPCoupling,
+        tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergySymbiosis,
         tgs:Concept.Enoughness,
         tgs:Concept.ExtendedProducerResponsibility,
@@ -4876,6 +4942,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CarbonPulse,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CrudeOil,
+        tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DieselPoweredCivilization,
         tgs:Concept.DispatchablePower,
         tgs:Concept.DissipativeStructures,
@@ -4884,6 +4951,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
+        tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
         tgs:Concept.EnergySymbiosis,
@@ -4893,11 +4961,14 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GoldilocksTechnology,
         tgs:Concept.JevonsParadox,
+        tgs:Concept.NaturalDeclineRate,
         tgs:Concept.PeakOil,
         tgs:Concept.PerpetualMulligans,
         tgs:Concept.PhantomCarryingCapacity,
+        tgs:Concept.RadicalMiddle,
         tgs:Concept.Rebuildables,
         tgs:Concept.RedQueenEffect,
+        tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.SevenAIMacroRisks,
         tgs:Concept.Sobriety,
         tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact,
@@ -5076,6 +5147,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PurityVsEffectiveness,
         tgs:Concept.QuadraticFunding,
         tgs:Concept.RadicalHospitality,
+        tgs:Concept.RadicalMiddle,
         tgs:Concept.RationalIgnorance,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RealityBasedHope,
@@ -5245,10 +5317,12 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CarryingCapacity,
         tgs:Concept.ComplexityCollapse,
         tgs:Concept.CostOfExtractionPricing,
+        tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
+        tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
         tgs:Concept.EnergySymbiosis,
@@ -5271,6 +5345,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Metacrisis,
         tgs:Concept.MultilevelSelection,
         tgs:Concept.MusicalChairsMoment,
+        tgs:Concept.NaturalDeclineRate,
         tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.PlanetaryBoundaries,
         tgs:Concept.PositiveSumInGroupNegativeSumToNature,
@@ -5280,6 +5355,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RealityParty,
         tgs:Concept.Rebuildables,
         tgs:Concept.RecursiveAbstraction,
+        tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.Rewilding,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.StrawSiphonSieve,
@@ -5367,6 +5443,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EducatingHyperAgents,
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
+        tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
@@ -5388,7 +5465,9 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ProblemSolvingAsRacket,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
         tgs:Concept.PublicChoiceTheory,
+        tgs:Concept.RadicalMiddle,
         tgs:Concept.RealityParty,
+        tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenGenerationsThinking,
@@ -5441,6 +5520,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PowerOfLifeVsPowerOverLife,
         tgs:Concept.PowerVersusLife,
         tgs:Concept.PriceCostAndValue,
+        tgs:Concept.RadicalMiddle,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.RestraintByDesign,
@@ -5689,6 +5769,11 @@ tgs:Concept.EnergyTransitionNarrative skos:related tgs:Concept.EnergyAdditionsNo
 tgs:Concept.EnergyTransitionNarrative skos:related tgs:Concept.CarbonPulse .
 tgs:Concept.CarbonAllocationByUse skos:related tgs:Concept.ContextBasedSustainability .
 tgs:Concept.CarbonAllocationByUse skos:related tgs:Concept.MaximumPowerPrinciple .
+tgs:Concept.NaturalDeclineRate skos:related tgs:Concept.PeakOil .
+tgs:Concept.ResourcesVersusReserves skos:related tgs:Concept.PeakOil .
+tgs:Concept.ResourcesVersusReserves skos:related tgs:Concept.NaturalDeclineRate .
+tgs:Concept.DenseToMoreDenseTransition skos:related tgs:Concept.EnergyAdditionsNotTransitions .
+tgs:Concept.EnergyPoverty skos:related tgs:Concept.HavesAndHaveNots .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5747,7 +5832,7 @@ tgs:Concept.Effectivism
     skos:related tgs:Concept.BattlesOfOurTime, tgs:Concept.EarnedHope .
 
 tgs:Concept.EnergyAdditionsNotTransitions
-    skos:related tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
+    skos:related tgs:Concept.DenseToMoreDenseTransition, tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
 
 tgs:Concept.EnergyBlindness
     skos:related tgs:Concept.EnergyGDPCoupling .
@@ -5780,7 +5865,7 @@ tgs:Concept.GrowthImperative
 
 tgs:Concept.HavesAndHaveNots
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
-    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+    skos:related tgs:Concept.EnergyPoverty, tgs:Concept.GameTheoreticVersusRealValue .
 
 tgs:Concept.HealingBeforeEngagement
     thinkr:complements tgs:Concept.HeartWillMind .
@@ -5860,6 +5945,9 @@ tgs:Concept.NamedSolutionsDrawCounterResponse
     thinkr:complements tgs:Concept.ImpossibleToHard ;
     skos:related tgs:Concept.ImpossibleToHard .
 
+tgs:Concept.NaturalDeclineRate
+    skos:related tgs:Concept.ResourcesVersusReserves .
+
 tgs:Concept.NonZeroSumness
     skos:related tgs:Concept.GameTheory .
 
@@ -5871,6 +5959,9 @@ tgs:Concept.OstromDesignPrinciples
 
 tgs:Concept.Overshoot
     skos:related tgs:Concept.CarryingCapacity .
+
+tgs:Concept.PeakOil
+    skos:related tgs:Concept.NaturalDeclineRate, tgs:Concept.ResourcesVersusReserves .
 
 tgs:Concept.PersonalAgency
     skos:related tgs:Concept.LearnedHelplessness .

@@ -2913,3 +2913,16 @@ tgs:Relationship.NateHagens_JeanBaptisteFressoz a thinkr:Relationship, owl:Named
           thinkr:episode tgs:Interview.TGS_162_JeanBaptisteFressoz ;
           dcterms:date "2024-11-06"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'I'm really surprised that I've only recently discovered your work, because of our mutual friend Chris Keefer'; Nate closes hoping for 'more conversations' and invites him back if he writes his book on the human muscle."@en .
+
+tgs:Relationship.NateHagens_ScottTinker a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ScottTinker ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Scott Tinker"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_161_ScottTinker ;
+          dcterms:date "2024-10-30"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'even though we've recently just been introduced to each other'; Tinker closes 'I'm available to people and to you, Nate, and look forward to carrying this dialogue forward.'"@en .

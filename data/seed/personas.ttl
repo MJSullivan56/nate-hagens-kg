@@ -1938,6 +1938,15 @@ tgs:Persona.JeanBaptisteFressoz a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "Professional only: their first conversation. Nate says he only recently discovered Fressoz's work through their mutual friend Chris Keefer (tgs:Human.ChrisKeefer); Fressoz says he has seen Nate's animated film."@en ;
     .
 
+tgs:Persona.ScottTinker a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ScottTinker ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ScottTinker ;
+    skos:prefLabel "Scott Tinker"@en ;
+    rdfs:label "Scott Tinker (persona)"@en ;
+    skos:scopeNote "Professional only: they had 'recently just been introduced'. Nate says he spoke to six or seven people who know Tinker while preparing, all of whom praised his intellect and integrity but said his optimism sometimes bleeds into his analysis; the episode is framed as a conversation between people who disagree on several points."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

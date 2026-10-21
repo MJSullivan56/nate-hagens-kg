@@ -120,6 +120,8 @@ tgs:Concept.DefaultModeNetwork skos:note "The brain-region network active during
 
 tgs:Concept.DenialLearnedInDominationFamilies thinkr:relatesTo tgs:Persona.RianeEisler .
 
+tgs:Concept.DenseToMoreDenseTransition thinkr:relatesTo tgs:Persona.ScottTinker .
+
 tgs:Concept.DieselPoweredCivilization thinkr:relatesTo tgs:Persona.ArtBerman,
         tgs:Persona.BalazsMatics .
 
@@ -163,6 +165,8 @@ tgs:Concept.EnergyAdditionsNotTransitions thinkr:relatesTo tgs:Persona.JeanBapti
     skos:note "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en .
 
 tgs:Concept.EnergyGDPCoupling thinkr:relatesTo tgs:Persona.NateHagens .
+
+tgs:Concept.EnergyPoverty thinkr:relatesTo tgs:Persona.ScottTinker .
 
 tgs:Concept.EnergyReturnOnInvestment skos:note "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en .
 
@@ -279,6 +283,8 @@ tgs:Concept.NaiveProgress thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.NarrowGoalAchieving thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
+tgs:Concept.NaturalDeclineRate thinkr:relatesTo tgs:Persona.ScottTinker .
+
 tgs:Concept.NatureBasedPackaging thinkr:relatesTo tgs:Persona.WesCarter .
 
 tgs:Concept.OceanAlkalinityEnhancement thinkr:relatesTo tgs:Persona.KellyErhart .
@@ -328,6 +334,8 @@ tgs:Concept.ProgressNarrativeAsApologism thinkr:relatesTo tgs:Persona.DanielSchm
 
 tgs:Concept.PunishmentStrategy thinkr:relatesTo tgs:Persona.RobertPape .
 
+tgs:Concept.RadicalMiddle thinkr:relatesTo tgs:Persona.ScottTinker .
+
 tgs:Concept.ReAgentificationOfTheWorld thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.RealityParty thinkr:relatesTo tgs:Persona.NateHagens .
@@ -343,6 +351,8 @@ tgs:Concept.RedefiningSuccess thinkr:relatesTo tgs:Persona.RutgerBregman .
 tgs:Concept.RegenerativeFinance thinkr:relatesTo tgs:Persona.MatthewMonahan .
 
 tgs:Concept.RelativeFitnessSpiteFramework skos:note "Nate's own real, structured four-quadrant behavioral framework, grounded in the evolutionary distinction between relative fitness (reproductive success measured against competitors, the real evolutionary currency) and absolute fitness (raw offspring count or physical condition alone). The four quadrants: selfishness (cost to a competitor, benefit to self), cooperation (mutual benefit), altruism (cost to self, benefit to a genetically unrelated other — rare in nature, though reciprocal altruism is common in humans), and spite (a real, direct cost to oneself, provided it imposes a greater cost on a competitor)."@en .
+
+tgs:Concept.ResourcesVersusReserves thinkr:relatesTo tgs:Persona.ScottTinker .
 
 tgs:Concept.RestorationAndRestoryation thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
@@ -659,7 +669,9 @@ tgs:Interview.TGS_15_DanielPauly dct:contributor tgs:Persona.DanielPauly ;
 
 tgs:Interview.TGS_160_BirgitteBischoff dct:source <https://www.thegreatsimplification.com/episode/160-birgitte-bischoff> .
 
-tgs:Interview.TGS_161_ScottTinker dct:source <https://www.thegreatsimplification.com/episode/161-scott-tinker> .
+tgs:Interview.TGS_161_ScottTinker dct:contributor tgs:Persona.ScottTinker ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/161-scott-tinker> .
 
 tgs:Interview.TGS_162_JeanBaptisteFressoz dct:contributor tgs:Persona.JeanBaptisteFressoz ;
     dct:creator tgs:Persona.NateHagens ;
@@ -2355,6 +2367,8 @@ tgs:Persona.JeanBaptisteFressoz thinkr:hasNamedEntityType thinkr:PersonEntityTyp
 tgs:Persona.JoshFarley thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.KellyErhart thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.ScottTinker thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.RianeEisler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

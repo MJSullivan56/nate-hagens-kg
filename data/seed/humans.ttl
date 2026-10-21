@@ -2237,6 +2237,15 @@ tgs:Human.JeanBaptisteFressoz a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://www.versobooks.com/blogs/authors/fressoz-jean-baptiste> ;
     .
 
+tgs:Human.ScottTinker a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Scott Tinker"@en ;
+    skos:altLabel "Scott W. Tinker"@en ;
+    rdfs:label "Scott Tinker (human)"@en ;
+    rdfs:comment "American geologist and energy educator who brings industry, government, academia and NGOs together on energy, environment and the economy. After a 17-year career in the energy industry (exploring for oil and gas in the 1980s), he spent 24 years as an endowed professor at the University of Texas at Austin and director of its 250-person Bureau of Economic Geology, serving as State Geologist of Texas; Nate also introduces him as having headed the American Association of Petroleum Geologists. CEO of Tinker Energy Associates; chairman and CEO of the nonprofit Switch Energy Alliance. Co-producer with director Harry Lynch of, and featured in, the documentaries Switch and Switch On; host of the PBS energy and climate point-counterpoint show Energy Switch. His father worked with M. King Hubbert at Shell's research lab. Describes himself as a skeptic, not a cynic, and an optimist in the 'radical middle'."@en ;
+    thinkr:memberOf tgs:Organization.SwitchEnergyAlliance, tgs:Organization.BureauOfEconomicGeology ;
+    dct:source <https://www.beg.utexas.edu/people/scott-tinker> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -2246,6 +2255,9 @@ tgs:Human.AlanBlinder
 
 tgs:Human.AlfredRusselWallace
     dct:isReferencedBy tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax .
+
+tgs:Human.Aristotle
+    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
 tgs:Human.ArtBerman
     dct:isReferencedBy tgs:Monologue.Frankly_141_WideBoundaryNews, tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk .
@@ -2317,7 +2329,7 @@ tgs:Human.KatharineHayhoe
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
 
 tgs:Human.MKingHubbert
-    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
+    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker, tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Human.NoraBateson
     dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .

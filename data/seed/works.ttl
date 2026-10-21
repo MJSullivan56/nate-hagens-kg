@@ -3591,6 +3591,29 @@ tgs:Work.TheShockOfTheAnthropocene a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.versobooks.com/products/136-the-shock-of-the-anthropocene> ;
     .
 
+tgs:Work.SwitchFilm a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Switch"@en ;
+    rdfs:comment "Documentary film (2012) directed by Harry Lynch, co-produced with and featuring Scott Tinker, touring energy production worldwide to explain how the world's energy mix might change."@en ;
+    dct:creator tgs:Human.ScottTinker ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:source <https://www.youtube.com/watch?v=RvaE0PFna84> ;
+    .
+
+tgs:Work.SwitchOnFilm a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Switch On"@en ;
+    rdfs:comment "Documentary film by Harry Lynch and Scott Tinker, the sequel to tgs:Work.SwitchFilm, following energy poverty around the world -- from people with no access to energy to the billions whose access is unreliable."@en ;
+    dct:creator tgs:Human.ScottTinker ;
+    dct:source <https://www.youtube.com/watch?v=xk75bD-C3H4> ;
+    .
+
+tgs:Work.TowardsAnAppliedNetEnergyFramework a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Towards an Applied Net Energy Framework"@en ;
+    rdfs:comment "Nate Hagens' PhD dissertation (2010), measuring the cost of energy in energy, water and other natural-resource terms rather than money. Nate cites it in TGS_161 as the reason he distrusts money prices for energy while debt and money printing grow."@en ;
+    dct:creator tgs:Human.NateHagens ;
+    dct:issued "2010"^^xsd:gYear ;
+    dct:source <http://www.thegreatsimplification.com/s/Nate_Hagens_Dissertation_Final_8_31_2010.pdf> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3736,6 +3759,12 @@ tgs:Work.ScenarioThinkingHistoricalEvolution
 tgs:Work.ShortingTheGrid
     dct:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
 
+tgs:Work.SwitchFilm
+    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+
+tgs:Work.SwitchOnFilm
+    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+
 tgs:Work.TaoOfPhysics
     dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra .
 
@@ -3798,6 +3827,9 @@ tgs:Work.ThermalPowerAndClimateChange
 
 tgs:Work.ThinkingLikeAMountain
     dct:isReferencedBy tgs:PanelDiscussion.RR_17_MovingFromApathyToAction .
+
+tgs:Work.TowardsAnAppliedNetEnergyFramework
+    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
 tgs:Work.TrueHuman
     dct:isReferencedBy tgs:Interview.TGS_112_SamanthaSweetwater .

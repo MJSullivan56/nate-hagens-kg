@@ -830,12 +830,27 @@ tgs:Organization.CitizenPotawatomiNation a thinkr:Organization, owl:NamedIndivid
     dcterms:source <https://www.potawatomi.org/> ;
     .
 
+tgs:Organization.SwitchEnergyAlliance a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Switch Energy Alliance"@en ;
+    skos:definition "Educational nonprofit chaired by Scott Tinker that offers free energy-literacy material -- the documentary films Switch and Switch On, the PBS talk show Energy Switch, classroom resources -- and runs an annual international student case competition on energy poverty in paired countries."@en ;
+    dcterms:source <https://switchon.org> ;
+    .
+
+tgs:Organization.BureauOfEconomicGeology a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Bureau of Economic Geology"@en ;
+    skos:definition "Research unit of the University of Texas at Austin, the oldest research unit at the university, which also serves as the State Geological Survey of Texas; Scott Tinker directed its staff of about 250 for 24 years."@en ;
+    dcterms:source <https://www.beg.utexas.edu> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
 
 tgs:Organization.BeyondPlastics
     dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Organization.BureauOfEconomicGeology
+    dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
 tgs:Organization.CenterForHumaneTechnology
     dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
@@ -873,6 +888,9 @@ tgs:Organization.ElectricPowerResearchInstitute
 tgs:Organization.EleutherAI
     dcterms:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
 
+tgs:Organization.ExxonMobil
+    dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+
 tgs:Organization.GlobalGuerrillasReport
     dcterms:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
 
@@ -902,6 +920,9 @@ tgs:Organization.Restor
 
 tgs:Organization.SkepticalScience
     dcterms:isReferencedBy tgs:Interview.TGS_212_JohnCook .
+
+tgs:Organization.SwitchEnergyAlliance
+    dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
 tgs:Organization.ThirdAct
     dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
