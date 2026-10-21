@@ -3630,6 +3630,22 @@ tgs:Work.FundamentalPrinciplesOfTheRedCross a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.icrc.org/sites/default/files/topic/file_plus_list/4046-the_fundamental_principles_of_the_international_red_cross_and_red_crescent_movement.pdf> ;
     .
 
+tgs:Work.ExcretaMatters a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Excreta Matters"@en ;
+    rdfs:comment "The Centre for Science and Environment's seventh State of India's Environment report (2012), on the water and wastewater of 71 Indian cities: why sewerage networks built for a few cannot clean India's rivers, and the case for affordable, decentralized sanitation and wastewater reuse. Linked in the TGS_159 show notes for Sunita Narain's argument that the right to sanitation is the right to environment."@en ;
+    dct:publisher tgs:Organization.CentreForScienceAndEnvironment ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:source <https://cdn.cseindia.org/userfiles/excreta_matters13.pdf> ;
+    .
+
+tgs:Work.TheRiseOfTheNeoLocals a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Rise of the Neo-Locals: A Generational Reversal of Globalization"@en ;
+    rdfs:comment "Book by Sunita Narain, published by the Centre for Science and Environment, on deglobalization -- geopolitical wars and the changing scenario of globalization -- and on what new world should replace it. In TGS_159 she calls herself 'a child of deglobalization' who saw globalization happen without being sure whom it benefited, and names the topic as the one she would explore on a return visit."@en ;
+    dct:creator tgs:Human.SunitaNarain ;
+    dct:publisher tgs:Organization.CentreForScienceAndEnvironment ;
+    dct:source <https://csestore.cse.org.in/usd/the-rise-of-the-neo-locals-a-generational-reversal-of-globalization.html> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3697,11 +3713,17 @@ tgs:Work.DopamineNation
 tgs:Work.DrillingDown
     dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek .
 
+tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism
+    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+
 tgs:Work.EndTimes
     dct:isReferencedBy tgs:Interview.TGS_164_PeterTurchin .
 
 tgs:Work.EnergyAndHumanAmbitions
     dct:isReferencedBy tgs:Interview.TGS_18_ThomasMurphy .
+
+tgs:Work.ExcretaMatters
+    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Work.ForTheCommonGood
     dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .
@@ -3819,6 +3841,9 @@ tgs:Work.ThePopulationBomb
 
 tgs:Work.TheRighteousMind
     dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt .
+
+tgs:Work.TheRiseOfTheNeoLocals
+    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Work.TheServiceberry
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .

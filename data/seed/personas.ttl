@@ -1671,9 +1671,10 @@ tgs:Persona.StefanRahmstorf a thinkr:Persona, owl:NamedIndividual ;
 tgs:Persona.SunitaNarain a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.SunitaNarain ;
     thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_SunitaNarain ;
     skos:prefLabel "Sunita Narain"@en ;
     rdfs:label "Sunita Narain (persona)"@en ;
-    skos:scopeNote "Real, direct gap closed (2026-09-12): tgs:Human.SunitaNarain was built earlier this session (from Xiye Bastida's TGS-208 citation) but its own matching Persona was never created -- the same real gap pattern found and fixed for Stefan Rahmstorf in the prior batch, now confirmed as a genuine, recurring issue worth a dedicated future audit. No real relationship evidence exists yet -- her own real TGS episode (TGS-159, minted as a stub in this same batch) has not been built from a transcript, so no thinkr:hasProfessionalRelationship is asserted here; add one once real episode content exists."@en ;
+    skos:scopeNote "Created 2026-09-12 to pair with tgs:Human.SunitaNarain, minted earlier from Xiye Bastida's TGS_208. Professional relationship added 2026-10-21 from her own episode, TGS_159: they had never met before it and share a mutual friend; Nate hopes it is 'the first conversation of many'."@en ;
     .
 
 tgs:Persona.RobertLustig a thinkr:Persona, owl:NamedIndividual ;

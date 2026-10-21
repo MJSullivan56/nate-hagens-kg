@@ -4390,6 +4390,54 @@ tgs:Concept.SelfActivatingVolunteerNetwork a thinkr:Concept, owl:NamedIndividual
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
+tgs:Concept.EnvironmentAsDevelopment a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Environment as development (the politics of inclusion)"@en ;
+    skos:definition "Sunita Narain's position, which she sees as distinguishing the Indian environmental movement from Western environmentalism: environment is not a separate concern beyond development but the question of how to make development sustainable, and development cannot be sustainable unless it is affordable -- that is, inclusive of the majority. Hence 'you cannot neuter politics from environment': the right to sanitation is the right to environment, and clean air in Delhi depends on the right to walk, cycle and take the bus."@en ;
+    dcterms:source <https://www.downtoearth.org.in/climate-change/we-need-politics-of-inclusion> ;
+    thinkr:influencedBy tgs:Persona.SunitaNarain ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_159. Her examples: a sewerage network only a few can afford leaves most excreta untreated, so India's rivers cannot be cleaned; in Delhi only about 20% drive, yet cars take most of the road space and the airshed. She challenges the idea that wealthy countries have solved pollution: they cleaned local air by exporting the harm as climate change. Related: tgs:Concept.LeapfroggingDevelopment, tgs:Concept.CarbonBudgetInequity."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.LeapfroggingDevelopment a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Leapfrogging (business unusual)"@en ;
+    skos:definition "Skipping the capital- and resource-intensive infrastructure that rich countries built when they had more money and less pressure, in favour of decentralized systems that can serve everyone -- as India skipped landlines for mobile phones. Sunita Narain applies it to sanitation (non-sewered systems that collect septic-tank waste by tanker, treat it and reuse it on land), water (harvesting every drop of rain where it falls, recharging groundwater, rebuilding lakes and tanks) and energy: 'business unusual'."@en ;
+    dcterms:source <https://www.cseindia.org/waste-to-worth-managing-india-s-urban-water-crisis-through-wastewater-reuse-12527> ;
+    thinkr:influencedBy tgs:Persona.SunitaNarain ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_159. She notes that the Government of India has made non-sewered sanitation part of its policy and now talks about circularity 'not because it's a buzzword' but because India lacks the luxury of 'wasting land for waste'. India will do things differently 'not to save the world, but to save ourselves'. Nate connects it to the Paani Foundation's water and permaculture work (tgs:Interview.TGS_64_AndrewMillison); she cites natural farming at scale in Andhra Pradesh, adopted because it cuts farmers' costs. Related: tgs:Concept.EnvironmentAsDevelopment."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.CarbonBudgetInequity a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.Geopolitics ;
+    skos:prefLabel "Carbon budget inequity"@en ;
+    skos:definition "The unequal division of the world's remaining carbon budget -- the finite amount of carbon dioxide that can still be emitted into one shared atmosphere while holding warming below a given level. Sunita Narain's figures: at current rates the 1.5 degree budget will be exhausted by the end of this decade, by which time 30% of the world's population, including the United States and China, will have appropriated 70% of it, leaving 70% of people with access to 30%. 'We exist. You can't wish us away': the majority will still develop and emit, so finance for developing differently is the core of climate justice."@en ;
+    dcterms:source <https://oxfamilibrary.openrepository.com/bitstream/handle/10546/621305/bn-carbon-inequality-2030-051121-en.pdf> ;
+    thinkr:influencedBy tgs:Persona.SunitaNarain ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_159. She ties it to COP29 in Baku and its 'means of implementation' (climate finance). The equity argument is long associated with CSE: Anil Agarwal and Sunita Narain's 'Global Warming in an Unequal World' (1991) argued for equal per-capita rights to the atmosphere. Climate change, she says, is 'nature's way of telling us we live in one planet'. Related: tgs:Concept.HavesAndHaveNots, tgs:Concept.EnvironmentAsDevelopment."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.DutyToHope a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Duty to hope"@en ;
+    skos:definition "Sunita Narain's injunction, repeated through TGS_159, that those who work on environment and development have an obligation to create hope -- to show people that there is a way ahead and that it is better than today -- grounded not in a magic wand but in persistence, perseverance and tenacity, learned above all from the world's poor, who keep coping, surviving and working through every extreme weather event."@en ;
+    dcterms:source <https://www.cseindia.org/page/sunita-narain> ;
+    thinkr:influencedBy tgs:Persona.SunitaNarain ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_159. She counts her generation's biggest failure as 'not being able to capture the imagination or the policy space' with a better way ahead. Asked what young people should understand, she answers 'the despair of the poor' and the tenacity of the poor woman who cannot afford fuelwood but is 'still smiling'. Related: tgs:Concept.RealityBasedHope, tgs:Concept.EarnedHope."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4422,6 +4470,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.BundledPreparedness,
         tgs:Concept.CantillonEffect,
         tgs:Concept.CarbonAllocationByUse,
+        tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CarbonDioxideRemoval,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CaringEconomics,
@@ -4479,6 +4528,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.Dread,
         tgs:Concept.DunbarsNumber,
+        tgs:Concept.DutyToHope,
         tgs:Concept.EarlyAnthropoceneHypothesis,
         tgs:Concept.EarnedHope,
         tgs:Concept.EarthEnergyImbalance,
@@ -4507,6 +4557,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EnergySymbiosis,
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.Enoughness,
+        tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.EpistemicCommons,
         tgs:Concept.EscalationTrap,
@@ -4578,6 +4629,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.KleibersLaw,
         tgs:Concept.LandscapeOfPossibleFutures,
         tgs:Concept.LayersOfInvisibleWealth,
+        tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.LearnedHelplessness,
         tgs:Concept.LeveragePoints,
         tgs:Concept.LifeEnnoblingEconomics,
@@ -4845,6 +4897,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.AlternativeStableStates,
         tgs:Concept.Bioregion,
         tgs:Concept.BioticPump,
+        tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CarbonDioxideRemoval,
         tgs:Concept.CarryingCapacity,
         tgs:Concept.ClimateAsANormalProblem,
@@ -4862,6 +4915,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EcologicalAwakening,
         tgs:Concept.EcologicalSecurity,
+        tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourPillarsOfCivilization,
         tgs:Concept.GenesisPlot,
@@ -4874,6 +4928,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.InactionPlanForNature,
         tgs:Concept.InsectDecline,
         tgs:Concept.KinshipWorldview,
+        tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.LimitsOfPlasticRecycling,
         tgs:Concept.LimitsToGrowth,
         tgs:Concept.MitigationDeterrence,
@@ -4948,6 +5003,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergySymbiosis,
         tgs:Concept.Enoughness,
+        tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GameTheoreticVersusRealValue,
@@ -5013,6 +5069,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GoldilocksTechnology,
         tgs:Concept.JevonsParadox,
+        tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.NaturalDeclineRate,
         tgs:Concept.PeakOil,
         tgs:Concept.PerpetualMulligans,
@@ -5031,6 +5088,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Geopolitics"@en ;
     dcterms:subject tgs:Subject.Geopolitics ;
     skos:member tgs:Concept.ActorlessThreats,
+        tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CollapseFromThePeriphery,
         tgs:Concept.CorrelationOfForceAndMeans,
         tgs:Concept.EcologicalSecurity,
@@ -5103,6 +5161,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.Dread,
         tgs:Concept.DunbarsNumber,
+        tgs:Concept.DutyToHope,
         tgs:Concept.EcocentricDevelopmentalWheel,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
@@ -5372,6 +5431,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
     skos:member tgs:Concept.AtomsEnergyBits,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
+        tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CarryingCapacity,
         tgs:Concept.ComplexityCollapse,
@@ -5397,6 +5457,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.JevonsDividend,
         tgs:Concept.JevonsParadox,
         tgs:Concept.KleibersLaw,
+        tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.LimitsToGrowth,
         tgs:Concept.LocalizedSyntropySystemicEntropy,
         tgs:Concept.MaximumPowerPrinciple,
@@ -5487,6 +5548,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Bioregion,
         tgs:Concept.BundledPreparedness,
         tgs:Concept.CarbonAllocationByUse,
+        tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CivilizationalOptionality,
@@ -5506,6 +5568,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyTransitionNarrative,
+        tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GiftEconomy,
@@ -5516,6 +5579,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HumanitarianNeutralityAndAccess,
         tgs:Concept.InfrastructureSocialStructureSuperstructure,
         tgs:Concept.JevonsDividend,
+        tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.LeveragePoints,
         tgs:Concept.MetabolicHierarchyOfTheSuperorganism,
         tgs:Concept.MoneyAsMaximumOptionality,
@@ -5560,6 +5624,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollapseResilience,
         tgs:Concept.DiningCar,
         tgs:Concept.DopamineHijackedCulture,
+        tgs:Concept.DutyToHope,
         tgs:Concept.EarnedHope,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
@@ -5629,6 +5694,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DominationPartnershipContinuum,
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.DunbarsNumber,
+        tgs:Concept.DutyToHope,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.Enoughness,
         tgs:Concept.FragmentedConsciousness,
@@ -5846,6 +5912,11 @@ tgs:Concept.BundledPreparedness skos:related tgs:Concept.Polycrisis .
 tgs:Concept.BundledPreparedness skos:related tgs:Concept.ScenarioThinking .
 tgs:Concept.SelfActivatingVolunteerNetwork skos:related tgs:Concept.DistributedAgency .
 tgs:Concept.HumanitarianNeutralityAndAccess skos:related tgs:Concept.SelfActivatingVolunteerNetwork .
+tgs:Concept.EnvironmentAsDevelopment skos:related tgs:Concept.LeapfroggingDevelopment .
+tgs:Concept.EnvironmentAsDevelopment skos:related tgs:Concept.CarbonBudgetInequity .
+tgs:Concept.CarbonBudgetInequity skos:related tgs:Concept.HavesAndHaveNots .
+tgs:Concept.DutyToHope skos:related tgs:Concept.RealityBasedHope .
+tgs:Concept.DutyToHope skos:related tgs:Concept.EarnedHope .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5856,6 +5927,9 @@ tgs:Concept.AgeOfRemembering
 
 tgs:Concept.AggregateProbability
     thinkr:complements tgs:Concept.ImpossibleToHard .
+
+tgs:Concept.CarbonBudgetInequity
+    skos:related tgs:Concept.EnvironmentAsDevelopment .
 
 tgs:Concept.CarbonPulse
     skos:related tgs:Concept.EnergyGDPCoupling, tgs:Concept.EnergyTransitionNarrative, tgs:Concept.PhantomCarryingCapacity .
@@ -5900,6 +5974,9 @@ tgs:Concept.DominationPartnershipContinuum
 tgs:Concept.DopamineHijackedCulture
     thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits .
 
+tgs:Concept.EarnedHope
+    skos:related tgs:Concept.DutyToHope .
+
 tgs:Concept.EcologicalFootprint
     skos:related tgs:Concept.CarryingCapacity .
 
@@ -5943,7 +6020,7 @@ tgs:Concept.GrowthImperative
 
 tgs:Concept.HavesAndHaveNots
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
-    skos:related tgs:Concept.EnergyPoverty, tgs:Concept.GameTheoreticVersusRealValue .
+    skos:related tgs:Concept.CarbonBudgetInequity, tgs:Concept.EnergyPoverty, tgs:Concept.GameTheoreticVersusRealValue .
 
 tgs:Concept.HealingBeforeEngagement
     thinkr:complements tgs:Concept.HeartWillMind .
@@ -5989,6 +6066,9 @@ tgs:Concept.KinshipJourney
 
 tgs:Concept.KinshipWorldview
     skos:related tgs:Concept.GrammarOfAnimacy .
+
+tgs:Concept.LeapfroggingDevelopment
+    skos:related tgs:Concept.EnvironmentAsDevelopment .
 
 tgs:Concept.LearnedHelplessness
     skos:related tgs:Concept.ConstructiveJournalism .
@@ -6076,7 +6156,7 @@ tgs:Concept.ProsocialityUnderTheSuperorganism
     skos:related tgs:Concept.Effectivism, tgs:Concept.GameTheoryFillsTheOughtGap .
 
 tgs:Concept.RealityBasedHope
-    skos:related tgs:Concept.EarnedHope .
+    skos:related tgs:Concept.DutyToHope, tgs:Concept.EarnedHope .
 
 tgs:Concept.RestraintByDesign
     skos:related tgs:Concept.HonorableHarvest, tgs:Concept.JevonsDividend .

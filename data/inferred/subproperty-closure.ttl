@@ -59,6 +59,8 @@ tgs:Concept.BundledPreparedness thinkr:relatesTo tgs:Persona.BirgitteBischoff .
 
 tgs:Concept.CarbonAllocationByUse thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
 
+tgs:Concept.CarbonBudgetInequity thinkr:relatesTo tgs:Persona.SunitaNarain .
+
 tgs:Concept.CaringEconomics thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "In TGS_116 Eisler says economics is about what we value and what we measure. Smith challenged the mercantilist control of kings and Marx challenged the bourgeoisie, but both came from early industrial times and both kept the 'hidden system of gendered values': for both, nature was there to be exploited, and care for children, the old and the sick was to be done for free by women in male-controlled households (as late as Marx's day, in many jurisdictions only a husband could sue for injury to his wife, for loss of her services). An Australian study found care work would be about 50 percent of reported GDP if counted. Economists call high-quality human capital the key to a post-industrial economy, yet neuroscience shows it depends on the care and education children receive early. The Nordic nations show caring policies are compatible with, and help, a competitive market economy."@en .
 
@@ -142,6 +144,8 @@ tgs:Concept.DominationPartnershipContinuum thinkr:relatesTo tgs:Persona.RianeEis
 tgs:Concept.DunbarsNumber thinkr:relatesTo tgs:Persona.RobinDunbar ;
     skos:note "Robin Dunbar's proposed cognitive limit (roughly 150) on the number of people with whom one can maintain genuinely stable social relationships, derived from a correlation between primate brain/neocortex size and social group size — used in this graph's source material as evidence for prioritizing depth over breadth in relationships."@en .
 
+tgs:Concept.DutyToHope thinkr:relatesTo tgs:Persona.SunitaNarain .
+
 tgs:Concept.EarlyAnthropoceneHypothesis thinkr:relatesTo tgs:Persona.WilliamRuddiman .
 
 tgs:Concept.EarnedHope thinkr:relatesTo tgs:Persona.KristineTompkins .
@@ -177,6 +181,8 @@ tgs:Concept.EnergySymbiosis thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
 tgs:Concept.EnergyTransitionNarrative thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
 
 tgs:Concept.Enoughness thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
+tgs:Concept.EnvironmentAsDevelopment thinkr:relatesTo tgs:Persona.SunitaNarain .
 
 tgs:Concept.EpigeneticLandscape thinkr:relatesTo tgs:Persona.ConradWaddington .
 
@@ -255,6 +261,8 @@ tgs:Concept.KleibersLaw thinkr:relatesTo tgs:Persona.MaxKleiber ;
 
 tgs:Concept.LandscapeOfPossibleFutures thinkr:relatesTo tgs:Persona.ConradWaddington ;
     skos:note "Hagens' own application of the landscape metaphor (valleys, ridges, switchbacks, erosion) to civilizational futures — see tgs:Monologue.Frankly_145_Part3UphillFutures for the full framework. Adapts Conrad Waddington's epigenetic landscape (originally a model of cellular differentiation) to a different domain entirely — a genuine reframing, not a direct reuse, hence HagensConcept despite the explicit external inspiration."@en .
+
+tgs:Concept.LeapfroggingDevelopment thinkr:relatesTo tgs:Persona.SunitaNarain .
 
 tgs:Concept.LeveragePoints thinkr:relatesTo tgs:Persona.DonellaMeadows .
 
@@ -670,6 +678,7 @@ tgs:Interview.TGS_158_JohnVervaeke dct:contributor tgs:Persona.JohnVervaeke ;
     dct:source <https://www.thegreatsimplification.com/episode/158-john-vervaeke> .
 
 tgs:Interview.TGS_159_SunitaNarain dct:contributor tgs:Persona.SunitaNarain ;
+    dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/159-sunita-narain> .
 
 tgs:Interview.TGS_15_DanielPauly dct:contributor tgs:Persona.DanielPauly ;
@@ -2162,8 +2171,6 @@ tgs:Persona.StephenJenkinson thinkr:hasNamedEntityType thinkr:PersonEntityType.G
 
 tgs:Persona.SteveVavrus thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
-tgs:Persona.SunitaNarain thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
 tgs:Persona.TaylorGuthrie thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.ThomasCrowther thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2380,6 +2387,8 @@ tgs:Persona.JeanBaptisteFressoz thinkr:hasNamedEntityType thinkr:PersonEntityTyp
 tgs:Persona.JoshFarley thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.KellyErhart thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.SunitaNarain thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.ScottTinker thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

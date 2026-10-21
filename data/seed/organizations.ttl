@@ -862,6 +862,13 @@ tgs:Organization.CascadeInstitute a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://cascadeinstitute.org> ;
     .
 
+tgs:Organization.CentreForScienceAndEnvironment a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Centre for Science and Environment"@en ;
+    skos:altLabel "CSE"@en ;
+    skos:definition "Public-interest research and advocacy centre in New Delhi, founded in 1980 by Anil Agarwal and led by Sunita Narain, that uses research for change: campaigns on air pollution, community water management and rainwater harvesting, sanitation, pesticides in food and drink, and equity in global climate negotiations. It publishes the magazine Down To Earth and the State of India's Environment reports."@en ;
+    dcterms:source <https://www.cseindia.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -880,6 +887,9 @@ tgs:Organization.CenterForHumaneTechnology
 
 tgs:Organization.CenterForNativePeoplesAndTheEnvironment
     dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+
+tgs:Organization.CentreForScienceAndEnvironment
+    dcterms:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Organization.CitizenPotawatomiNation
     dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .

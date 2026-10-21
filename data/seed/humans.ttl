@@ -1780,7 +1780,9 @@ tgs:Human.SunitaNarain a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Sunita Narain"@en ;
     rdfs:label "Sunita Narain (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Sunita_Narain> ;
-    rdfs:comment "Indian environmentalist and political activist. Director General, Centre for Science and Environment (CSE), New Delhi, since 2011 (with CSE since 1982); editor, Down To Earth magazine. Real, direct advocacy focus on equitable global climate agreements from a Global South perspective. Recipient of the Padma Shri (2005) and the Edinburgh Medal (2020); named one of TIME's 100 Most Influential People (2016). Real, direct Planetary Guardians peer of Xiye Bastida, cited in TGS_208 (already built)."@en ;
+    rdfs:comment "Indian environmentalist and writer who 'uses knowledge for change'. With the Centre for Science and Environment (CSE), New Delhi, since 1982 and now its head (the show notes say Executive Director; Nate introduces her as Director General); treasurer of the Society for Environmental Communications and editor of the magazine Down To Earth. Awarded the Padma Shri (2005) and the Stockholm Water Prize for her work on rainwater harvesting and community water management; chaired the Tiger Task Force (2005) at the Prime Minister's request after the loss of the tigers in Sariska; a member of the Prime Minister's Council on Climate Change and the National Ganga River Basin Authority. Also received the Edinburgh Medal (2020) and was named one of TIME's 100 Most Influential People (2016). Argues from a Global South perspective that environment is inseparable from development and equity. A Planetary Guardians peer of Xiye Bastida, cited in TGS_208."@en ;
+    thinkr:memberOf tgs:Organization.CentreForScienceAndEnvironment ;
+    dct:source <https://www.cseindia.org/page/sunita-narain> ;
     .
 
 tgs:Human.KatharineHayhoe a thinkr:Human, owl:NamedIndividual ;
@@ -2264,6 +2266,9 @@ tgs:Human.AlanBlinder
 
 tgs:Human.AlfredRusselWallace
     dct:isReferencedBy tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax .
+
+tgs:Human.AndrewMillison
+    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Human.Aristotle
     dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .

@@ -2939,3 +2939,16 @@ tgs:Relationship.NateHagens_BirgitteBischoff a thinkr:Relationship, owl:NamedInd
           thinkr:episode tgs:Interview.TGS_160_BirgitteBischoff ;
           dcterms:date "2024-12-18"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'you and I talked once before this conversation'; 'It's no coincidence that our mutual friend introduced us.' Nate offers 'Let me know if I can help', and she would like to return in six months to a year to report on the IFRC's polycrisis work."@en .
+
+tgs:Relationship.NateHagens_SunitaNarain a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.SunitaNarain ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Sunita Narain"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_159_SunitaNarain ;
+          dcterms:date "2024-12-04"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'she and I have never met before this conversation. We have a mutual friend'; 'This is our first conversation.' She offers to send Nate a PDF of her book on the neo-locals, and he invites her back."@en .
