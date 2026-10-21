@@ -4040,6 +4040,79 @@ tgs:Concept.EarnedHope a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
+tgs:Concept.CarryingCapacity a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Carrying capacity"@en ;
+    skos:definition "The largest population, or load of human activity, an environment can support indefinitely without degrading its ability to support it; William Catton's 'maximum permanently supportable load'."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Carrying_capacity>, <https://natehagens.substack.com/p/the-7-fundamental-drivers-of-overshoot> ;
+    thinkr:influencedBy tgs:Persona.WilliamCatton ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4 (Bill Baue's r3.0 deck traces the term from Plato to Catton). The graph used the phrase in several descriptions without a node: Nate defines overshoot as a population exceeding carrying capacity (Frankly_70) and describes stored energy inflating the biosphere's apparent carrying capacity (Frankly_68). Bioregional carrying capacity, in Baue's framing, combines the doughnut's thresholds with fair-share allocations (tgs:Concept.ContextBasedSustainability). Nate uses the term throughout the essay version of Frankly_68 ('The 7 Fundamental Drivers of Overshoot', Substack, 14 March 2025), where a footnote gives his own definition: the maximum population an ecosystem can support. He frames overshoot as growing beyond it, and money creation as untethered from it."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.PhantomCarryingCapacity a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Phantom carrying capacity"@en ;
+    skos:definition "William Catton's term for carrying capacity that exists only while a temporary resource lasts: the part of a population that could not be supported once that resource is gone. Fossil energy is the main example."@en ;
+    dcterms:source tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV ;
+    thinkr:influencedBy tgs:Persona.WilliamCatton ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4. Nate does not use the phrase, but describes the idea in Frankly_68: ancient stored energy has inflated the biosphere's apparent carrying capacity. Related: tgs:Concept.CarryingCapacity, tgs:Concept.Overshoot, tgs:Concept.CarbonPulse. The essay version of Frankly_68 (Substack, 14 March 2025) makes the same point without the term: the cheap fossil energy of the carbon pulse let humanity grow its population and mammalian biomass far beyond what the land alone supports, and as that energy depletes we will contract, perhaps back in line with the planet's carrying capacity."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.ContextBasedSustainability a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Context-based sustainability"@en ;
+    skos:definition "Measuring an organization's or place's impact against what the system can bear: an ecological or social threshold, and that actor's fair share (allocation) of it. A bioregional carrying capacity uses the bioregion as the reference community for the shares."@en ;
+    dcterms:source tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV ;
+    thinkr:influencedBy tgs:Organization.R30 ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4, rated possible. Developed by Mark McElroy (Social Footprints, 2008) and Bill Baue at r3.0 and UNRISD; Baue notes that almost all corporate sustainability reporting omits thresholds. The bridge between the Doughnut and bioregionalism: tgs:ConceptScheme.DevonDoughnut."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.CollapseResponseContinuum a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Collapse Response Continuum"@en ;
+    skos:definition "Six stances people and institutions take toward ecological and social collapse: ignorance, awareness, denial, avoidance (believing it can be averted by working harder within the same paradigms), acceptance, and resilience."@en ;
+    dcterms:source tgs:Work.GiftOfTheTurtleIslandBioregionalCongress ;
+    thinkr:influencedBy tgs:Organization.R30 ;
+    skos:relatedMatch tgs:Concept.GreatSimplification ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4. Bill Baue and Ralph Thurm (r3.0). Nate generally says 'simplification' rather than 'collapse', so the link to tgs:Concept.GreatSimplification is skos:relatedMatch, not an equivalence."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.CollapseResilience a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Collapse resilience"@en ;
+    skos:definition "The last stance on the Collapse Response Continuum: accepting that collapses are under way or coming and building resilience to lessen them, adapt to what follows, and move away from the social patterns that drive collapse, such as competition for power ('de-patterning'), toward prosocial ones ('re-patterning')."@en ;
+    dcterms:source tgs:Work.GiftOfTheTurtleIslandBioregionalCongress ;
+    thinkr:influencedBy tgs:Organization.R30 ;
+    skos:broader tgs:Concept.CollapseResponseContinuum ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4. Baue reads the TIBC11 peacemaking (tgs:Initiative.TurtleIslandBioregionalCongress11) as collapse resilience at small scale. Related, as candidates: tgs:ResponsePhase.BendNotBreak, tgs:Concept.ThreeTimelinesOfResponse, tgs:Concept.ProsocialityUnderTheSuperorganism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.EliteOverproduction a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Elite overproduction"@en ;
+    skos:definition "Peter Turchin's term: a society producing more aspirants for elite positions than it can absorb, so that competition among them destabilizes it; in his historical data the most consistent driver of state breakdown."@en ;
+    dcterms:source tgs:Interview.TGS_164_PeterTurchin ;
+    thinkr:influencedBy tgs:Persona.PeterTurchin ;
+    skos:scopeNote "Minted 2026-10-21 from review sheet 4. Already described in tgs:Human.PeterTurchin and tgs:Interview.TGS_164_PeterTurchin (including Turchin's essay on AI accelerating elite competition) but had no node. Cited in Bill Baue's TIBC11 post as the factor dooming hierarchical civilizations."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.GameTheoretic ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4072,6 +4145,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.CarbonDioxideRemoval,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CaringEconomics,
+        tgs:Concept.CarryingCapacity,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CircleOfTrustLocalism,
         tgs:Concept.CivilizationalOptionality,
@@ -4084,6 +4158,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ClimateTippingPoints,
         tgs:Concept.CodedCapital,
         tgs:Concept.CollapseFromThePeriphery,
+        tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
@@ -4092,6 +4167,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ConfirmationBias,
         tgs:Concept.ConservationThroughLivelihoods,
         tgs:Concept.ConstructiveJournalism,
+        tgs:Concept.ContextBasedSustainability,
         tgs:Concept.ContinuityValueOfProvision,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
@@ -4136,6 +4212,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EightFacesOfAI,
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EightWorldviewLenses,
+        tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EmpathyHandicap,
         tgs:Concept.Enantiodromia,
@@ -4261,6 +4338,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.PerpetualMulligans,
         tgs:Concept.PersonalAgency,
         tgs:Concept.PersonalCompositeFutures,
+        tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.PlanetaryAlbedoDecline,
         tgs:Concept.PlanetaryBoundaries,
         tgs:Concept.PollinatorDependence,
@@ -4467,6 +4545,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.Bioregion,
         tgs:Concept.BioticPump,
         tgs:Concept.CarbonDioxideRemoval,
+        tgs:Concept.CarryingCapacity,
         tgs:Concept.ClimateAsANormalProblem,
         tgs:Concept.ClimateCreditCrunch,
         tgs:Concept.ClimateDashboard,
@@ -4497,6 +4576,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.NatureBasedPackaging,
         tgs:Concept.OceanAlkalinityEnhancement,
         tgs:Concept.Overshoot,
+        tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.PlanetaryAlbedoDecline,
         tgs:Concept.PlanetaryBoundaries,
         tgs:Concept.PollinatorDependence,
@@ -4547,6 +4627,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.ClimateCreditCrunch,
         tgs:Concept.CodedCapital,
         tgs:Concept.CollectiveActionProblem,
+        tgs:Concept.ContextBasedSustainability,
         tgs:Concept.ContinuityValueOfProvision,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
@@ -4617,6 +4698,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.JevonsParadox,
         tgs:Concept.PeakOil,
         tgs:Concept.PerpetualMulligans,
+        tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.Rebuildables,
         tgs:Concept.RedQueenEffect,
         tgs:Concept.SevenAIMacroRisks,
@@ -4632,6 +4714,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollapseFromThePeriphery,
         tgs:Concept.CorrelationOfForceAndMeans,
         tgs:Concept.EcologicalSecurity,
+        tgs:Concept.EliteOverproduction,
         tgs:Concept.EscalationTrap,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.HyperAgents,
@@ -4669,6 +4752,8 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CircleOfTrustLocalism,
         tgs:Concept.ClimateAsANormalProblem,
         tgs:Concept.ClimateMigration,
+        tgs:Concept.CollapseResilience,
+        tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
@@ -4699,6 +4784,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EducatingHyperAgents,
         tgs:Concept.EightFacesOfAI,
         tgs:Concept.EightWorldviewLenses,
+        tgs:Concept.EliteOverproduction,
         tgs:Concept.EmpathyHandicap,
         tgs:Concept.Enantiodromia,
         tgs:Concept.EpistemicCommons,
@@ -4856,12 +4942,16 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AtomsEnergyBits,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.CarryingCapacity,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.ClimateDashboard,
         tgs:Concept.ClimateSensitivity,
         tgs:Concept.ClimateTippingPoints,
         tgs:Concept.CollapseFromThePeriphery,
+        tgs:Concept.CollapseResilience,
+        tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.ComplexSystemsThinking,
+        tgs:Concept.ContextBasedSustainability,
         tgs:Concept.CoupledSystemicRisks,
         tgs:Concept.DefaultModeNetwork,
         tgs:Concept.DiscretePhaseShift,
@@ -4942,6 +5032,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
         tgs:Concept.CarbonPulse,
+        tgs:Concept.CarryingCapacity,
         tgs:Concept.ComplexityCollapse,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.DissipativeStructures,
@@ -4966,6 +5057,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Metacrisis,
         tgs:Concept.MultilevelSelection,
         tgs:Concept.MusicalChairsMoment,
+        tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.PlanetaryBoundaries,
         tgs:Concept.PositiveSumInGroupNegativeSumToNature,
         tgs:Concept.PowerVersusLife,
@@ -4997,6 +5089,7 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
         tgs:Concept.CorrelationOfForceAndMeans,
+        tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EscalationTrap,
         tgs:Concept.GameTheoreticVersusRealValue,
@@ -5044,8 +5137,11 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CivilizationalOptionality,
+        tgs:Concept.CollapseResilience,
+        tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.ComplexityCollapse,
         tgs:Concept.ConstructiveJournalism,
+        tgs:Concept.ContextBasedSustainability,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
         tgs:Concept.CostOfExtractionPricing,
@@ -5053,6 +5149,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DominationPartnershipContinuum,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
+        tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
@@ -5096,6 +5193,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
     skos:member tgs:Concept.AggregateProbability,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.BarbellEmpathy,
+        tgs:Concept.CollapseResilience,
         tgs:Concept.DiningCar,
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.EarnedHope,
@@ -5147,6 +5245,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.ChaliceAndBladePower,
+        tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.ConfirmationBias,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CulturalAntibodies,
@@ -5334,6 +5433,11 @@ tgs:Concept.DeepEcology skos:related tgs:Concept.RightsOfNature .
 tgs:Concept.EarnedHope skos:related tgs:Concept.Effectivism .
 tgs:Concept.EarnedHope skos:related tgs:Concept.RealityBasedHope .
 tgs:Concept.Rewilding skos:related tgs:Concept.DeepEcology .
+tgs:Concept.CarryingCapacity skos:related tgs:Concept.Overshoot .
+tgs:Concept.CarryingCapacity skos:related tgs:Concept.EcologicalFootprint .
+tgs:Concept.PhantomCarryingCapacity skos:related tgs:Concept.CarryingCapacity .
+tgs:Concept.PhantomCarryingCapacity skos:related tgs:Concept.CarbonPulse .
+tgs:Concept.ContextBasedSustainability skos:related tgs:Concept.CarryingCapacity .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5343,7 +5447,13 @@ tgs:Concept.AggregateProbability
     thinkr:complements tgs:Concept.ImpossibleToHard .
 
 tgs:Concept.CarbonPulse
-    skos:related tgs:Concept.EnergyGDPCoupling .
+    skos:related tgs:Concept.EnergyGDPCoupling, tgs:Concept.PhantomCarryingCapacity .
+
+tgs:Concept.CarryingCapacity
+    skos:related tgs:Concept.ContextBasedSustainability, tgs:Concept.PhantomCarryingCapacity .
+
+tgs:Concept.CollapseResponseContinuum
+    skos:narrower tgs:Concept.CollapseResilience .
 
 tgs:Concept.ConstructiveJournalism
     skos:related tgs:Concept.AttentionEconomy .
@@ -5370,6 +5480,9 @@ tgs:Concept.DominationPartnershipContinuum
 tgs:Concept.DopamineHijackedCulture
     thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits .
 
+tgs:Concept.EcologicalFootprint
+    skos:related tgs:Concept.CarryingCapacity .
+
 tgs:Concept.EducatingHyperAgents
     thinkr:complements tgs:Concept.HyperAgents, tgs:Concept.PowerSeekingAndComplicity .
 
@@ -5392,7 +5505,8 @@ tgs:Concept.GameTheoryFillsTheOughtGap
     skos:related tgs:Concept.GameTheory .
 
 tgs:Concept.GreatSimplification
-    dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization .
+    dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
+    skos:relatedMatch tgs:Concept.CollapseResponseContinuum .
 
 tgs:Concept.GrowthImperative
     thinkr:complements tgs:Concept.EmbeddedGrowthObligation ;
@@ -5476,6 +5590,9 @@ tgs:Concept.OneMarshmallowRewardCircuits
 
 tgs:Concept.OstromDesignPrinciples
     skos:relatedMatch tgs:PracticeTerm.CommonsGovernanceProtocols, tgs:PracticeTerm.OneEarth_SustainableFisheries .
+
+tgs:Concept.Overshoot
+    skos:related tgs:Concept.CarryingCapacity .
 
 tgs:Concept.PersonalAgency
     skos:related tgs:Concept.LearnedHelplessness .

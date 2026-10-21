@@ -2782,6 +2782,16 @@ tgs:PracticeTerm.NetworkWeaving skos:broadMatch tgs:PracticeTerm.OneEarth_Commun
 tgs:PracticeTerm.ParticipatoryStrategies skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
 tgs:PracticeTerm.CongressingAndEvents skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
 
+tgs:Initiative.TurtleIslandBioregionalCongress11 a thinkr:Initiative, owl:NamedIndividual ;
+    skos:prefLabel "Eleventh Turtle Island Bioregional Congress (TIBC11)"@en ;
+    skos:altLabel "TIBC11"@en ;
+    thinkr:hasPracticeTerm tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.CommunityReconciliation ;
+    thinkr:listedInPracticeCluster tgs:PracticeCluster.CommunityGovernance ;
+    dcterms:description "A continental bioregional congress of about 300 participants, the first on Turtle Island (North America) since 2009, continuing a series held every few years from 1984. A public rupture over an interspecies practice was worked through in a full-community peacemaking circle."@en ;
+    dcterms:source tgs:Work.GiftOfTheTurtleIslandBioregionalCongress ;
+    skos:scopeNote "Added 2026-10-21 at MJSullivan's request from Bill Baue's account. The organizer, dates and venue are not given in the post, so thinkr:carriedOutBy and a date are left out rather than guessed. Compare tgs:Initiative.BioregionalCongress (Hudson Estuary, October 2025)."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

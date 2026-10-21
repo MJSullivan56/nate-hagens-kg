@@ -56,6 +56,8 @@ tgs:Concept.BioticPump thinkr:relatesTo tgs:Persona.AnastassiaMakarieva,
 tgs:Concept.CaringEconomics thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "In TGS_116 Eisler says economics is about what we value and what we measure. Smith challenged the mercantilist control of kings and Marx challenged the bourgeoisie, but both came from early industrial times and both kept the 'hidden system of gendered values': for both, nature was there to be exploited, and care for children, the old and the sick was to be done for free by women in male-controlled households (as late as Marx's day, in many jurisdictions only a husband could sue for injury to his wife, for loss of her services). An Australian study found care work would be about 50 percent of reported GDP if counted. Economists call high-quality human capital the key to a post-industrial economy, yet neuroscience shows it depends on the care and education children receive early. The Nordic nations show caring policies are compatible with, and help, a competitive market economy."@en .
 
+tgs:Concept.CarryingCapacity thinkr:relatesTo tgs:Persona.WilliamCatton .
+
 tgs:Concept.ChaliceAndBladePower thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "From The Chalice and the Blade (1987), restated in TGS_116. The symbols are often misread as standing for the sexes; Eisler says that misreading itself comes from the rigid gender stereotypes of domination systems. 'The battle for our future is not between right and left... It's between these two configurations.' Her advice to listeners: 'remember that you have power, the power of the chalice' -- the advances against child labor and for human rights came from small, usually unpopular groups."@en .
 
@@ -75,6 +77,10 @@ tgs:Concept.CodedCapital thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.CollapseFromThePeriphery thinkr:relatesTo tgs:Persona.BalazsMatics .
 
+tgs:Concept.CollapseResilience thinkr:relatesTo tgs:Organization.R30 .
+
+tgs:Concept.CollapseResponseContinuum thinkr:relatesTo tgs:Organization.R30 .
+
 tgs:Concept.CollectiveActionProblem thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.Communing thinkr:relatesTo tgs:Persona.NoraBateson .
@@ -84,6 +90,8 @@ tgs:Concept.ComplexSystemsThinking skos:note "The general toolkit of concepts Ha
 tgs:Concept.ComplexityCollapse thinkr:relatesTo tgs:Persona.JosephTainter .
 
 tgs:Concept.ConstructiveJournalism thinkr:relatesTo tgs:Persona.MarenUrner .
+
+tgs:Concept.ContextBasedSustainability thinkr:relatesTo tgs:Organization.R30 .
 
 tgs:Concept.ContinuityValueOfProvision thinkr:relatesTo tgs:Persona.IndyJohar .
 
@@ -144,6 +152,8 @@ tgs:Concept.EcologicalFootprint thinkr:relatesTo tgs:Persona.MathisWackernagel,
 tgs:Concept.EcologicalSecurity thinkr:relatesTo tgs:Persona.RodSchoonover .
 
 tgs:Concept.Effectivism thinkr:relatesTo tgs:Persona.NateHagens .
+
+tgs:Concept.EliteOverproduction thinkr:relatesTo tgs:Persona.PeterTurchin .
 
 tgs:Concept.EnergyAdditionsNotTransitions skos:note "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en .
 
@@ -269,6 +279,8 @@ tgs:Concept.PeakOil thinkr:relatesTo tgs:Persona.MKingHubbert ;
     skos:note "The point at which the maximum rate of petroleum extraction is reached, after which production enters terminal decline — a formative concept in Hagens' background (he worked as a peak oil analyst before founding The Great Simplification) and foundational to his energy-decline framing."@en .
 
 tgs:Concept.PersonalAgency skos:note "The lived experience that some part of one's life, attention, and time is genuinely one's own to choose — distinct from tgs:Concept.DistributedAgency (a collective/systemic pattern about who drives change). Frankly_129's own organizing term, scientifically grounded via learned-helplessness/self-efficacy research (the nervous system learning whether effort produces outcomes). Frankly_142 directly ties it to dread: 'dread is the experience of being acted upon by a future you cannot influence, and agency is the opposite stance.'"@en .
+
+tgs:Concept.PhantomCarryingCapacity thinkr:relatesTo tgs:Persona.WilliamCatton .
 
 tgs:Concept.PlanetaryBoundaries thinkr:relatesTo tgs:Persona.JohanRockstrom ;
     skos:note "Real, foundational scientific framework led by Johan Rockström and colleagues (originally published 2009), identifying nine distinct Earth-system processes with critical thresholds — climate change, biosphere integrity, land-system change, freshwater use, biogeochemical flows, ocean acidification, atmospheric aerosol loading, stratospheric ozone depletion, and novel entities (chemical pollution) — within which humanity and the biosphere can continue to develop safely. As of the framework's own 2023 update, six of nine boundaries have been exceeded."@en .
@@ -2172,8 +2184,6 @@ tgs:Persona.OliverMilman thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest
 
 tgs:Persona.PeterBrannen thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
-tgs:Persona.PeterTurchin thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
 tgs:Persona.SamanthaSweetwater thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.TadPatzek thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2222,6 +2232,8 @@ tgs:Persona.JohanRockstrom thinkr:hasNamedEntityType thinkr:PersonEntityType.Gue
 tgs:Persona.KristineTompkins thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.LukeKemp thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.PeterTurchin thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.RosaVasquezEspinoza thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

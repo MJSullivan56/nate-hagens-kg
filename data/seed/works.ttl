@@ -3509,6 +3509,54 @@ tgs:Work.DevonDoughnutIndicatorCompilation a thinkr:Work, owl:NamedIndividual ;
     dct:relation tgs:Initiative.DevonDoughnutProject ;
     .
 
+tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bioregional Carrying Capacities: Pluriversal MRV"@en ;
+    rdfs:comment "Slide deck by Bill Baue (r3.0) for the OpenCivics Network Assembly, 19 May 2026. MRV is measurement, reporting and verification. Traces carrying capacity from Plato through Catton's Overshoot (1980, including phantom carrying capacity) and Limits to Growth to planetary boundaries and the Doughnut, and argues that a bioregional carrying capacity combines thresholds (the doughnut's rings) with allocations (each actor's fair share, with the bioregion as the reference community). Lists the r3.0 Bioregional Carrying Capacity sessions."@en ;
+    dct:creator tgs:Human.BillBaue ;
+    dct:issued "2026-05-19"^^xsd:date ;
+    dct:references tgs:Work.BioregionalCarryingCapacitySessions, tgs:Work.GoliathsCurse ;
+    .
+
+tgs:Work.BioregionalCarryingCapacitySessions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Bioregional Carrying Capacity Sessions (r3.0)"@en ;
+    rdfs:comment "Public session series convened by r3.0 from December 2024, first within the Design School for Regenerating Earth. Session 5 (14 April 2025): the Devon Doughnut, Isabel Carlisle and Nick Paling. Session 7 (2 July 2025): the California Doughnut Economics Coalition. Open Dialogue 8 (February 2026): 'Limits of Limits', Gaya Herrington and Indy Johar. Other sessions covered municipal carrying capacities, absolute assessment, context-based assessment (Mark McElroy), mapping planetary boundaries, and regenerating carrying capacities bioregionally (Joe Brewer)."@en ;
+    dct:creator tgs:Organization.R30 ;
+    dct:source <https://www.r3-0.org/> ;
+    dct:relation tgs:Work.DevonDoughnutIndicatorCompilation, tgs:Work.CaliforniaDoughnutReport2025, tgs:Human.IsabelCarlisle, tgs:Human.GayaHerrington ;
+    .
+
+tgs:Work.GiftOfTheTurtleIslandBioregionalCongress a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Gift of the Turtle Island Bioregional Congress: Conflict Transformation & Collapse Resilience"@en ;
+    rdfs:comment "Bill Baue's first-person account (Substack, October 2026) of the Eleventh Turtle Island Bioregional Congress, the first continental bioregional congress on Turtle Island since 2009, with about 300 participants. An interspecies practice was criticized in a full session as misappropriation, in a tone many experienced as public shaming; a peacemaking circle run by an Indigenous participant trained by Mohawk Chief Jake Swamp transformed much of the rupture. Baue reads the episode as collapse resilience in practice and introduces the Collapse Response Continuum he developed with Ralph Thurm. Cites Luke Kemp, Peter Turchin, Sherri Mitchell, Shalanda Baker and Walker et al. (2004)."@en ;
+    dct:creator tgs:Human.BillBaue ;
+    dct:issued "2026-10-21"^^xsd:date ;
+    dct:source <https://billbaue182950.substack.com/p/the-gift-of-the-turtle-island-bioregional> ;
+    dct:references tgs:Work.GoliathsCurse, tgs:Work.SacredInstructions, tgs:Work.AntiResilience, tgs:Work.ResilienceAdaptabilityTransformability ;
+    .
+
+tgs:Work.SacredInstructions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Sacred Instructions: Indigenous Wisdom for Living Spirit-Based Change"@en ;
+    rdfs:comment "Sherri Mitchell, North Atlantic Books, 2018. Its chapter on conflict transformation argues that conflict should be transformed rather than resolved, and that doing so requires trust."@en ;
+    dct:creator tgs:Human.SherriMitchell ;
+    dct:issued "2018"^^xsd:gYear ;
+    dct:source <https://www.northatlanticbooks.com/shop/sacred-instructions/> ;
+    .
+
+tgs:Work.AntiResilience a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Anti-Resilience: A Roadmap for Transformational Justice within the Energy System"@en ;
+    rdfs:comment "Shalanda H. Baker, Harvard Civil Rights-Civil Liberties Law Review 54(1), 2019. Coins 'anti-resilience': resisting the call to bounce back into an unjust status quo, and instead exposing and transforming the structural inequality behind a community's vulnerability."@en ;
+    dct:creator tgs:Human.ShalandaBaker ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:source <https://journals.law.harvard.edu/crcl/wp-content/uploads/sites/80/2019/03/Baker.pdf> ;
+    .
+
+tgs:Work.ResilienceAdaptabilityTransformability a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Resilience, Adaptability and Transformability in Social-ecological Systems"@en ;
+    rdfs:comment "Brian Walker, C. S. Holling, Stephen R. Carpenter and Ann Kinzig, Ecology and Society 9(2):5, 2004. Defines resilience as a system's capacity to absorb disturbance and reorganize while keeping essentially the same function, structure, identity and feedbacks, and develops the idea of basins of attraction, including the case where a society must transform into an entirely new stability landscape."@en ;
+    dct:issued "2004"^^xsd:gYear ;
+    dct:source <https://ecologyandsociety.org/vol9/iss2/art5/main.html> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3525,11 +3573,17 @@ tgs:Work.Amazonia4
 tgs:Work.AncientFutures
     dct:isReferencedBy tgs:Interview.TGS_181_HelenaNorbergHodge .
 
+tgs:Work.AntiResilience
+    dct:isReferencedBy tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
+
 tgs:Work.ArtificialSuperintelligenceAFuturisticApproach
     dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
 
 tgs:Work.Belly
     dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.BioregionalCarryingCapacitySessions
+    dct:isReferencedBy tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV .
 
 tgs:Work.BitterHarvest
     dct:isReferencedBy tgs:Interview.TGS_86_LisiKrall .
@@ -3580,7 +3634,7 @@ tgs:Work.FutureCouncilFilm
     dct:isReferencedBy tgs:PanelDiscussion.RR_13_FutureCouncil .
 
 tgs:Work.GoliathsCurse
-    dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp .
+    dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
 
 tgs:Work.HistoryForTomorrow
     dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric .
@@ -3620,6 +3674,12 @@ tgs:Work.PratiquementDurable
 
 tgs:Work.RealityBlind
     dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_100_NateHagens, tgs:Interview.TGS_10_NoraBateson, tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_113_LynAlden, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_196_MeredithAngwin, tgs:Interview.TGS_208_XiyeBastida, tgs:Interview.TGS_34_KirilSokoloff, tgs:Interview.TGS_51_DJWhite, tgs:Interview.TGS_99_JeremyGrantham, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.ResilienceAdaptabilityTransformability
+    dct:isReferencedBy tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
+
+tgs:Work.SacredInstructions
+    dct:isReferencedBy tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
 
 tgs:Work.ScenarioThinkingHistoricalEvolution
     dct:isReferencedBy tgs:Monologue.Frankly_139_Part2FourVariables .

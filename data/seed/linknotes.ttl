@@ -116,7 +116,8 @@ tgs:LinkNote.Disarmer_CommunityReconciliation a thinkr:LinkNote,
     thinkr:aboutObject tgs:PracticeTerm.CommunityReconciliation ;
     thinkr:aboutSubject tgs:Archetype.Disarmer ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
-    thinkr:hasEvidence tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 ;
+    thinkr:hasEvidence tgs:Evidence.Disarmer_CommunityReconciliation_BaueTIBC11,
+        tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 ;
     skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.CommunityReconciliation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Uses the Disarmer in the broader sense first used in WWNS #4, \"What the Oil-Shock Numbers Leave Out\" (2026-10-08, https://medium.com/@jmichaelsullivan/wwns-4-what-the-oil-shock-numbers-leave-out-2ea6c300690f) (defusing local blame and scapegoating), which Nate Hagens set aside in Frankly_58 in favor of nuclear disarmament; see the scopeNote on tgs:Archetype.Disarmer. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.DiscountRatesAndPresentBias_MarcusAurelius a thinkr:LinkNote,
@@ -301,7 +302,8 @@ tgs:LinkNote.Governess_DecisionMakingProcesses a thinkr:LinkNote,
     thinkr:aboutObject tgs:PracticeTerm.DecisionMakingProcesses ;
     thinkr:aboutSubject tgs:Archetype.Governess ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
-    thinkr:hasEvidence tgs:Evidence.Governess_DecisionMakingProcesses_Frankly_58 ;
+    thinkr:hasEvidence tgs:Evidence.Governess_DecisionMakingProcesses_BaueTIBC11,
+        tgs:Evidence.Governess_DecisionMakingProcesses_Frankly_58 ;
     skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeTerm.DecisionMakingProcesses, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.Governess_GovernanceBodies a thinkr:LinkNote,
@@ -628,7 +630,8 @@ tgs:LinkNote.Silvertongue_CommunityReconciliation a thinkr:LinkNote,
     thinkr:aboutObject tgs:PracticeTerm.CommunityReconciliation ;
     thinkr:aboutSubject tgs:Archetype.Silvertongue ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
-    thinkr:hasEvidence tgs:Evidence.Silvertongue_CommunityReconciliation_Frankly_58 ;
+    thinkr:hasEvidence tgs:Evidence.Silvertongue_CommunityReconciliation_BaueTIBC11,
+        tgs:Evidence.Silvertongue_CommunityReconciliation_Frankly_58 ;
     skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Silvertongue dcterms:relation tgs:PracticeTerm.CommunityReconciliation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.Silvertongue_CongressingAndEvents a thinkr:LinkNote,
@@ -727,7 +730,8 @@ tgs:LinkNote.Wellspring_CoachesAndLeaders a thinkr:LinkNote,
     thinkr:aboutObject tgs:PracticeTerm.CoachesAndLeaders ;
     thinkr:aboutSubject tgs:Archetype.Wellspring ;
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
-    thinkr:hasEvidence tgs:Evidence.Wellspring_CoachesAndLeaders_Frankly_58 ;
+    thinkr:hasEvidence tgs:Evidence.Wellspring_CoachesAndLeaders_BaueTIBC11,
+        tgs:Evidence.Wellspring_CoachesAndLeaders_Frankly_58 ;
     skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Wellspring dcterms:relation tgs:PracticeTerm.CoachesAndLeaders, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.Wellspring_PeerLearning a thinkr:LinkNote,

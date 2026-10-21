@@ -29,9 +29,10 @@ tgs:ConceptScheme.DevonDoughnut a skos:ConceptScheme, owl:NamedIndividual ;
     skos:definition "The Devon Doughnut's 22 domains: Doughnut Economics drawn for a bioregion (South Devon, UK) by the Bioregional Learning Centre, with measures for both citizens and policy makers and example pathways for action in every domain."@en ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
     dcterms:creator tgs:Organization.BioregionalLearningCentreSouthDevon ;
-    dcterms:relation tgs:Initiative.DevonDoughnutProject ;
+    dcterms:relation tgs:Initiative.DevonDoughnutProject, tgs:Work.BioregionalCarryingCapacitySessions ;
     rdfs:seeAlso <https://www.devondoughnut.org> ;
     skos:hasTopConcept tgs:DevonDoughnutDomain.EcologicalCeiling, tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:scopeNote "Bill Baue (r3.0) frames a bioregional doughnut as bioregional carrying capacity: the outer ring sets ecological thresholds, the inner ring social ones, and the bioregion is the reference community for allocating fair shares of each (tgs:Concept.ContextBasedSustainability, tgs:Concept.CarryingCapacity). The Devon Doughnut was presented in r3.0's Bioregional Carrying Capacity series, Session 5 (14 April 2025)."@en ;
     .
 
 tgs:DevonDoughnutDomain.EcologicalCeiling a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;

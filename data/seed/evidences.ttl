@@ -718,3 +718,31 @@ tgs:Evidence.Catalyst_NetworkWeaving_Frankly_58 a thinkr:Evidence, owl:NamedIndi
     thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
     dcterms:description "Editorial reading of Nate Hagens's Catalyst archetype (Frankly_58) against the practice 'Network Weaving': Small connecting acts that shift larger outcomes. Drafted by Claude at MJSullivan's request."@en ;
     prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Disarmer_CommunityReconciliation_BaueTIBC11 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:aboutSource tgs:Source.BaueTIBC11Post ;
+    dcterms:description "Bill Baue's account of TIBC11: when a full session turned into what many experienced as public shaming, an Indigenous participant trained in peacemaking by Mohawk Chief Jake Swamp ran a full-community circle the next day that turned shame into regret and separation toward solidarity. A real case of the broader, WWNS #4 sense of the Disarmer (defusing blame before it hardens), carried out through community reconciliation. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Silvertongue_CommunityReconciliation_BaueTIBC11 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:aboutSource tgs:Source.BaueTIBC11Post ;
+    dcterms:description "Bill Baue's account of TIBC11: the peacemaking circle bridged Indigenous and non-Indigenous participants and rival readings of the same event (misappropriation versus misperception), with each person speaking only for themselves. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_DecisionMakingProcesses_BaueTIBC11 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:aboutSource tgs:Source.BaueTIBC11Post ;
+    dcterms:description "Counter-example from Bill Baue's account of TIBC11: his main regret is that the decision to take a grievance to the full congress was never put to explicit consent, which closed off other interpretations and interventions. Shows why the Governess's work on decision processes matters. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Wellspring_CoachesAndLeaders_BaueTIBC11 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:aboutSource tgs:Source.BaueTIBC11Post ;
+    dcterms:description "Reported in Bill Baue's account of TIBC11: Mohawk Chief Jake Swamp, asked how he handles ruptures of trust between Indigenous and non-Indigenous people, answered 'I just love them' -- close to Nate's Wellspring, sustained by 'a really strong, deep-running ethic'. One quote, reported second-hand. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .

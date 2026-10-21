@@ -2203,6 +2203,30 @@ tgs:Human.DougTompkins a thinkr:Human, owl:NamedIndividual ;
     dct:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .
 
+tgs:Human.BillBaue a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Bill Baue"@en ;
+    rdfs:label "Bill Baue (human)"@en ;
+    rdfs:comment "Senior Director at r3.0 and an original instigator of the Science Based Targets initiative; works on context-based sustainability and bioregional carrying capacities. Member of the Organizing Team and Core Facilitation Team of the Eleventh Turtle Island Bioregional Congress (TIBC11). Not a TGS guest, so no Persona."@en ;
+    thinkr:memberOf tgs:Organization.R30 ;
+    dct:source <https://billbaue182950.substack.com/> ;
+    .
+
+tgs:Human.SherriMitchell a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Sherri Mitchell"@en ;
+    skos:altLabel "Weh'na Ha'mu Kwasset"@en ;
+    rdfs:label "Sherri Mitchell (human)"@en ;
+    rdfs:comment "Penobscot attorney, activist and author of Sacred Instructions (2018). Not a TGS guest."@en ;
+    dct:source <https://www.northatlanticbooks.com/shop/sacred-instructions/> ;
+    .
+
+tgs:Human.ShalandaBaker a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Shalanda Baker"@en ;
+    skos:altLabel "Shalanda H. Baker"@en ;
+    rdfs:label "Shalanda Baker (human)"@en ;
+    rdfs:comment "Legal scholar and energy-justice policy maker; author of 'Anti-Resilience' (2019) and Revolutionary Power (2021). Not a TGS guest."@en ;
+    dct:source <https://papers.ssrn.com/abstract=3362355> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

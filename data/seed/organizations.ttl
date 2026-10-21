@@ -804,6 +804,13 @@ tgs:Organization.Patagonia a thinkr:Organization, owl:NamedIndividual ;
     dcterms:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .
 
+tgs:Organization.R30 a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "r3.0"@en ;
+    skos:altLabel "Redesign for Resilience & Regeneration"@en ;
+    skos:definition "Nonprofit platform for redesigning economic and social systems for resilience and regeneration, known for context-based sustainability metrics (measuring impact against thresholds and fair shares). Convened the Bioregional Carrying Capacity session series (2024-2026), where the Devon Doughnut and the California Doughnut were presented."@en ;
+    dcterms:source <https://www.r3-0.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
