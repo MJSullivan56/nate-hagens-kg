@@ -3557,6 +3557,22 @@ tgs:Work.ResilienceAdaptabilityTransformability a thinkr:Work, owl:NamedIndividu
     dct:source <https://ecologyandsociety.org/vol9/iss2/art5/main.html> ;
     .
 
+tgs:Work.GatheringMoss a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Gathering Moss: A Natural and Cultural History of Mosses"@en ;
+    rdfs:comment "Robin Wall Kimmerer, Oregon State University Press, 2003; John Burroughs Medal for natural history writing (2005). Essays braiding bryology with Potawatomi ways of knowing, including the moss lessons on smallness, cooperation and persistence she draws in TGS_239."@en ;
+    dct:creator tgs:Human.RobinWallKimmerer ;
+    dct:issued "2003"^^xsd:gYear ;
+    dct:source <https://robinwallkimmerer.com/book/gathering-moss/> ;
+    .
+
+tgs:Work.TheServiceberry a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Serviceberry: Abundance and Reciprocity in the Natural World"@en ;
+    rdfs:comment "Robin Wall Kimmerer, Scribner, 2024; expanded from her Emergence Magazine essay 'The Serviceberry: An Economy of Abundance' (2020). Asked to write about economics, she took the serviceberry as a model of a gift economy: plants pass on what they make rather than hoard it, so abundance comes from flow, and wealth is how much one has to give away."@en ;
+    dct:creator tgs:Human.RobinWallKimmerer ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:source <https://robinwallkimmerer.com/book/the-serviceberry/>, <https://emergencemagazine.org/essay/the-serviceberry/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3582,6 +3598,9 @@ tgs:Work.ArtificialSuperintelligenceAFuturisticApproach
 tgs:Work.Belly
     dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
 
+tgs:Work.Biomimicry
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+
 tgs:Work.BioregionalCarryingCapacitySessions
     dct:isReferencedBy tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV .
 
@@ -3590,6 +3609,9 @@ tgs:Work.BitterHarvest
 
 tgs:Work.BottlenecksOf21stCentury
     dct:isReferencedBy tgs:Interview.TGS_163_DougaldHine, tgs:Interview.TGS_177_ThomasCrowther, tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_49_SimonMichaux, tgs:Interview.TGS_51_DJWhite, tgs:Monologue.Frankly_110_WhatSlothsTeachUsAboutTheSuperorganism, tgs:Monologue.Frankly_147_HowToPlay5dChess, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse .
+
+tgs:Work.BraidingSweetgrass
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Work.BraveNewWar
     dct:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
@@ -3632,6 +3654,9 @@ tgs:Work.FromWhatIsToWhatIf
 
 tgs:Work.FutureCouncilFilm
     dct:isReferencedBy tgs:PanelDiscussion.RR_13_FutureCouncil .
+
+tgs:Work.GatheringMoss
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Work.GoliathsCurse
     dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
@@ -3719,6 +3744,9 @@ tgs:Work.ThePopulationBomb
 
 tgs:Work.TheRighteousMind
     dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt .
+
+tgs:Work.TheServiceberry
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Work.TheSpaceOfPossibleMindDesigns
     dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .

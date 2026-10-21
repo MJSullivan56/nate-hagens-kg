@@ -57,3 +57,16 @@ tgs:AcademicInstitution.MuensterUniversityOfAppliedSciences a thinkr:AcademicIns
     skos:prefLabel "Münster University of Applied Sciences"@en ;
     skos:altLabel "FH Münster"@en ;
     rdfs:comment "German university of applied sciences where tgs:Human.MarenUrner has been Professor for Sustainable Transformation since September 2024 and heads the Master's program in Sustainable Transformation Design (TGS_174)."@en .
+
+tgs:AcademicInstitution.SUNYCollegeOfEnvironmentalScienceAndForestry a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "SUNY College of Environmental Science and Forestry"@en ;
+    skos:altLabel "SUNY ESF"@en ;
+    rdfs:comment "State University of New York college in Syracuse, New York, where tgs:Human.RobinWallKimmerer earned her BS in botany, has taught for over 30 years as SUNY Distinguished Teaching Professor of Environmental Biology, and founded the Center for Native Peoples and the Environment (TGS_239)."@en .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:AcademicInstitution.SUNYCollegeOfEnvironmentalScienceAndForestry
+    <http://purl.org/dc/terms/hasPart> tgs:Organization.CenterForNativePeoplesAndTheEnvironment .
+# ===== END DERIVED INVERSES =====

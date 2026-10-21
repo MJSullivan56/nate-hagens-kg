@@ -1920,6 +1920,15 @@ tgs:Persona.KristineTompkins a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "Kept Professional-only: they met a couple of weeks before recording, introduced by their mutual friend Randy Hayes of Rainforest Action Network (tgs:Human.RandyHayes); both wish they had met decades earlier and she closes 'We're gonna make up for it.' Nate calls her Kris throughout (transcribed 'Chris')."@en ;
     .
 
+tgs:Persona.RobinWallKimmerer a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.RobinWallKimmerer ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_RobinWallKimmerer ;
+    skos:prefLabel "Robin Wall Kimmerer"@en ;
+    rdfs:label "Robin Wall Kimmerer (persona)"@en ;
+    skos:scopeNote "Professional only: Nate says they are meeting in person for the first time ('we just met today'), after years in which she was one of the show's most requested guests."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

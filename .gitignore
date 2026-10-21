@@ -66,3 +66,6 @@ reports/
 /merged_for_protege.ttl
 /merged_for_protege.owl
 catalog-v001.xml
+
+# LibreOffice lock files
+.~lock.*#

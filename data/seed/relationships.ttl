@@ -2887,3 +2887,16 @@ tgs:Relationship.NateHagens_KristineTompkins a thinkr:Relationship, owl:NamedInd
           thinkr:episode tgs:Interview.TGS_170_KristineTompkins ;
           dcterms:date "2025-01-29"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'we just met a couple weeks ago' and 'we wished we had met over a decade ago'; a mutual friend, Randy Hayes, introduced them. Nate closes 'I wish we would've met 20 years ago,' and she answers 'We're gonna make up for it.'"@en .
+
+tgs:Relationship.NateHagens_RobinWallKimmerer a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.RobinWallKimmerer ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Robin Wall Kimmerer"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_239_RobinWallKimmerer ;
+          dcterms:date "2026-09-24"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'finally, we're able to meet in person' and 'we just met today'. Recorded in person in New York City, the day after Nate recorded TGS_238 with Indy Johar."@en .

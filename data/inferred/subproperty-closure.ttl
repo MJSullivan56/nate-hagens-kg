@@ -28,6 +28,8 @@ tgs:Concept.AdvancePolicy thinkr:relatesTo tgs:Persona.NateHagens,
 
 tgs:Concept.AerosolMasking skos:note "The cooling effect of air pollution, chiefly sulfur dioxide, which reflects sunlight directly and seeds bright low clouds, hiding part of the warming greenhouse gases have already caused; cleaning up the pollution 'unmasks' that warming. In TGS_236 Zeke Hausfather says aerosols have masked roughly a third of historical warming (the IPCC best estimate is about 0.5°C, range 0.22-0.96°C), that global SO2 emissions are down about 40%, China's 75% and shipping's about 80% after the 2020 IMO low-sulfur fuel rule, and that in his estimate nearly all the recent acceleration in warming, from about 0.2 to about 0.3°C per decade, comes from these cuts. Shipping's cuts matter more than their share because ships pollute otherwise clean marine air. Because high-sensitivity models need high masking to match observations, the size of the effect is tied to how much future warming to expect. He still prefers clean air, given millions of premature deaths a year from air pollution."@en .
 
+tgs:Concept.AgeOfRemembering thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
 tgs:Concept.AggregateCognitiveDissonance thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.Amonging thinkr:relatesTo tgs:Persona.NoraBateson .
@@ -161,6 +163,8 @@ tgs:Concept.EnergyGDPCoupling thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.EnergyReturnOnInvestment skos:note "The ratio of energy delivered by an energy source to the energy required to extract/produce it; central to Hagens' argument that the quality, not just quantity, of energy sources matters for what a society can sustain."@en .
 
+tgs:Concept.Enoughness thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
 tgs:Concept.EpigeneticLandscape thinkr:relatesTo tgs:Persona.ConradWaddington .
 
 tgs:Concept.EscalationTrap thinkr:relatesTo tgs:Persona.RobertPape .
@@ -179,11 +183,15 @@ tgs:Concept.FutureOfBeingHuman thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.GhostOfDopaminePast skos:note "Nate's term (Frankly_103) for the way our recent and distant past behavior carves neural pathways that require ever-higher baseline dopamine to feel normal. Because dopamine signals reward prediction error (tgs:Concept.RewardPredictionError), a life of constant high stimulation -- notifications, metrics, games -- raises the expected reward, and quiet, ancestrally normal experiences (a doe and fawn on the road, half an hour on a park bench watching birds, reading a book) no longer register. A hungry ghost of dopamine past produces an over-consumptive 'ghost of dopamine present' and narrows the 'ghost of dopamine future': we can only imagine futures that keep us on the high treadmill. Remedies he offers: dopamine fasting, a pause between trigger and response, lowering the stimulation baseline (grayscale phones), and socializing the dopamine."@en .
 
+tgs:Concept.GiftEconomy thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
 tgs:Concept.GlacierStabilization thinkr:relatesTo tgs:Persona.KellyErhart .
 
 tgs:Concept.GlobalGovernanceWithoutGlobalGovernment thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.GoldilocksTechnology skos:note "Nate's own real, coined term for technology calibrated between two failure modes: not too 'hot' (dopaminergic, resource-intensive gadgets that deepen dependence on non-renewable inputs) and not too 'cold' (a naive retreat to stone-age tooling that ignores real human problem-solving capacity). First laid out as a preliminary checklist in Frankly_69, considering real governance incentives, true-cost pricing of externalities, material and supply-chain constraints, and a technology's actual relationship to the biosphere."@en .
+
+tgs:Concept.GrammarOfAnimacy thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
 tgs:Concept.GreatSimplification thinkr:relatesTo tgs:SchoolOfThought.TechnoOptimism .
 
@@ -197,6 +205,11 @@ tgs:Concept.HerosJourney thinkr:relatesTo tgs:Persona.JosephCampbell .
 tgs:Concept.HighTouchGrounding thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.HoloceneClimateStability thinkr:relatesTo tgs:Persona.NateHagens .
+
+tgs:Concept.HonorableHarvest thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
+tgs:Concept.HumanExceptionalism thinkr:relatesTo tgs:Persona.ChristineWebb,
+        tgs:Persona.RobinWallKimmerer .
 
 tgs:Concept.IAmBecauseWeAre thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
@@ -219,6 +232,8 @@ tgs:Concept.IslandsOfCoherence thinkr:relatesTo tgs:Persona.IlyaPrigogine ;
     skos:note "Ilya Prigogine's real concept, directly and repeatedly paraphrased by Nate across multiple episodes: when a complex system is far from equilibrium, small 'islands of coherence' within it have the capacity to shift the entire system to a higher order. Used throughout this show as a direct argument for the real, disproportionate potential impact of small, genuinely coherent groups or individuals during periods of systemic instability. Real, direct disambiguation added 2026-09-16: NOT the same real concept as tgs:Concept.IslandsOfSanity (Margaret Wheatley's own distinct term, named directly in TGS-234) -- related in spirit, different real originators and frames; kept as two separate Concepts rather than merged."@en .
 
 tgs:Concept.JevonsParadox thinkr:relatesTo tgs:Persona.WilliamStanleyJevons .
+
+tgs:Concept.KinshipWorldview thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
 tgs:Concept.KleibersLaw thinkr:relatesTo tgs:Persona.MaxKleiber ;
     skos:note "Max Kleiber's 1932 empirical finding that an organism's basal metabolic rate scales to roughly the 3/4 power of its body mass, not the 2/3 power a simple surface-area argument would predict — one of the few genuine quantitative laws in biology, still without a fully settled theoretical explanation, and used in this graph's own source material as a real biological analogy for economic/systemic energy-scaling arguments."@en .
@@ -322,6 +337,8 @@ tgs:Concept.RegenerativeFinance thinkr:relatesTo tgs:Persona.MatthewMonahan .
 
 tgs:Concept.RelativeFitnessSpiteFramework skos:note "Nate's own real, structured four-quadrant behavioral framework, grounded in the evolutionary distinction between relative fitness (reproductive success measured against competitors, the real evolutionary currency) and absolute fitness (raw offspring count or physical condition alone). The four quadrants: selfishness (cost to a competitor, benefit to self), cooperation (mutual benefit), altruism (cost to self, benefit to a genetically unrelated other — rare in nature, though reciprocal altruism is common in humans), and spite (a real, direct cost to oneself, provided it imposes a greater cost on a competitor)."@en .
 
+tgs:Concept.RestorationAndRestoryation thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
 tgs:Concept.RewardPredictionError thinkr:relatesTo tgs:Persona.WolframSchultz .
 
 tgs:Concept.Rewilding thinkr:relatesTo tgs:Persona.KristineTompkins .
@@ -343,6 +360,10 @@ tgs:Concept.Schismogenesis thinkr:relatesTo tgs:Persona.GregoryBateson ;
 
 tgs:Concept.SecondPrecisionRevolution thinkr:relatesTo tgs:Persona.RobertPape .
 
+tgs:Concept.SevenFiresProphecy thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
+tgs:Concept.SevenGenerationsThinking thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
+
 tgs:Concept.SevenKeyInterventions thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.ShiftingBaselineSyndrome thinkr:relatesTo tgs:Persona.NateHagens .
@@ -362,6 +383,8 @@ tgs:Concept.SolarRadiationModification thinkr:relatesTo tgs:Persona.TedParson ;
 tgs:Concept.SpaceOfTheNecessary thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.StrawSiphonSieve skos:note "Nate's own real, direct three-part model (Frankly-119, extending Frankly-56's own earlier straw metaphor) for what technology actually does to real wealth -- defined here explicitly as usable energy, organized matter, and the stocks and flows that make life possible, not money, which is only a real, direct claim on that wealth. (1) The straw: technology increases the rate at which stocks of the natural world are drawn down -- his own real, direct food-system example, the Haber-Bosch process, widened the nitrogen straw so dramatically that roughly half the nitrogen in a human body today originates from fossil fuels. (2) The siphon: gains from that faster extraction concentrate via real, structural network effects (capital rewards those who can finance it, data compounds, early advantage reinforces itself) and via real, direct choke points -- narrow gates (ports, app stores, platforms) where the toolmaker becomes the rent-taker without needing to produce more value, just control access to it. (3) The sieve: technology filters long-term wealth away from the rest of life and toward one species, and within that species toward a narrow subset -- humans now consume roughly 40% of Earth's net primary productivity, and the built technosphere now outweighs all living biomass combined. Real, direct closing extension: debt is named directly as a fourth, social form of the same pattern (a straw pulling future resources into the present, a siphon concentrating returns to those who can issue credit), and AI is analyzed as the newest technology running through this same real, direct three-part structure, but in the cognitive rather than physical economy."@en .
+
+tgs:Concept.SuccessAsLongTermPersistence thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
 tgs:Concept.SuperorganismFreeZones thinkr:relatesTo tgs:Persona.NateHagens .
 
@@ -952,6 +975,10 @@ tgs:Interview.TGS_237_ArtBerman dct:contributor tgs:Persona.ArtBerman ;
 tgs:Interview.TGS_238_IndyJohar dct:contributor tgs:Persona.IndyJohar ;
     dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/238-indy-johar> .
+
+tgs:Interview.TGS_239_RobinWallKimmerer dct:contributor tgs:Persona.RobinWallKimmerer ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/239-robin-wall-kimmerer> .
 
 tgs:Interview.TGS_23_TimWatkins dct:source <https://www.thegreatsimplification.com/episode/23-tim-watkins> .
 
@@ -2328,6 +2355,8 @@ tgs:ScenarioFacet.GreenGrowth thinkr:logicallyDisjointWith tgs:ScenarioFacet.Mad
         tgs:ScenarioFacet.TheGreatSimplification .
 
 tgs:Persona.ArtBerman thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.RobinWallKimmerer thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.IndyJohar thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

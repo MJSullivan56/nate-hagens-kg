@@ -811,6 +811,25 @@ tgs:Organization.R30 a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.r3-0.org/> ;
     .
 
+tgs:Organization.CenterForNativePeoplesAndTheEnvironment a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Center for Native Peoples and the Environment"@en ;
+    skos:definition "Center at SUNY College of Environmental Science and Forestry, founded by Robin Wall Kimmerer (now director emeritus), that brings Indigenous knowledge and Western science together in environmental education and research; Kimmerer cites it as one of the rare programs that teach Indigenous ethics within sustainability science."@en ;
+    dcterms:isPartOf tgs:AcademicInstitution.SUNYCollegeOfEnvironmentalScienceAndForestry ;
+    dcterms:source <https://www.esf.edu/nativepeoples/> ;
+    .
+
+tgs:Organization.PlantBabyPlant a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Plant Baby Plant"@en ;
+    skos:definition "Nonprofit founded by Robin Wall Kimmerer (founder and president of the board) and co-founders, named as an answer to 'drill, baby, drill': it encourages people to restore land with the tools of science, engineering and ecology, and to restore their relationship with land through the arts, as the motive force of what Kimmerer calls the Age of Remembering."@en ;
+    dcterms:source <https://plantbabyplant.com/about/> ;
+    .
+
+tgs:Organization.CitizenPotawatomiNation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Citizen Potawatomi Nation"@en ;
+    skos:definition "Federally recognized tribal nation of the Potawatomi people, headquartered in Shawnee, Oklahoma, descended from Potawatomi removed from their Great Lakes homelands in the 1830s (including the 1838 Trail of Death). Robin Wall Kimmerer is an enrolled member."@en ;
+    dcterms:source <https://www.potawatomi.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -820,6 +839,12 @@ tgs:Organization.BeyondPlastics
 
 tgs:Organization.CenterForHumaneTechnology
     dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
+
+tgs:Organization.CenterForNativePeoplesAndTheEnvironment
+    dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+
+tgs:Organization.CitizenPotawatomiNation
+    dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Organization.CivilizationResearchInstitute
     dcterms:hasPart tgs:Organization.ConsilienceProject .
@@ -859,6 +884,9 @@ tgs:Organization.PlanetLabs
 
 tgs:Organization.PlanetaryGuardians
     dcterms:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Organization.PlantBabyPlant
+    dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Organization.PostCarbonInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_24_JasonBradford .

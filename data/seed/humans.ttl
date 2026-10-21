@@ -1493,7 +1493,9 @@ tgs:Human.RobinWallKimmerer a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Robin Wall Kimmerer"@en ;
     rdfs:label "Robin Wall Kimmerer (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Robin_Wall_Kimmerer> ;
-    rdfs:comment "Potawatomi botanist, author, and Director, Center for Native Peoples and the Environment, SUNY College of Environmental Science and Forestry (SUNY-ESF). Enrolled citizen, Citizen Potawatomi Nation. BS, botany, SUNY-ESF; MS and PhD, plant ecology, University of Wisconsin-Madison. Proponent of Traditional Ecological Knowledge (TEK) as a real, distinct 'way of knowing,' and of 'two-eyed seeing' — deliberately combining Western scientific and Indigenous ways of understanding nature, drawn in part from her own family history (her paternal grandfather was sent to the Carlisle Indian Industrial School, a real assimilationist boarding school). Author of Gathering Moss (2003, John Burroughs Medal), tgs:Work.BraidingSweetgrass, and The Serviceberry (2024). 2022 MacArthur Fellow; named to the 2025 TIME 100. Real, direct significance to this graph: cited independently across at least three already-built episodes (Frankly_113, Jason Bradford's TGS_211, Pella Thiel's TGS_121) though she has never been a guest on the show."@en ;
+    rdfs:comment "Plant ecologist, bryologist (mosses, liverworts and hornworts), writer, and enrolled member of the Citizen Potawatomi Nation. SUNY Distinguished Teaching Professor of Environmental Biology at SUNY College of Environmental Science and Forestry (SUNY-ESF), where she has worked for over 30 years and founded the Center for Native Peoples and the Environment, now as director emeritus; founder and president of the nonprofit Plant Baby Plant. BS in botany, SUNY-ESF; MS and PhD in botany, University of Wisconsin. Her research covers moss ecology, ecological restoration, Traditional Ecological Knowledge, and restoring culturally significant plants with Indigenous communities; she seeks to braid Indigenous knowledge with Western science (two-eyed seeing) and to restore not only ecosystems but people's relationships with land. Her grandfather was sent to an assimilationist Indian boarding school (the Carlisle Indian Industrial School). Author of tgs:Work.GatheringMoss (2003, John Burroughs Medal), tgs:Work.BraidingSweetgrass (2013), tgs:Work.TheServiceberry (2024) and the children's book Bud Finds Her Gift. 2022 MacArthur Fellow; 2023 National Humanities Medal; named to the 2025 TIME 100. Cited in at least three episodes (Frankly_113, TGS_211, TGS_121) before her own appearance as a guest in TGS_239, where Nate calls her one of the most requested guests of the past several years."@en ;
+    thinkr:memberOf tgs:Organization.CitizenPotawatomiNation, tgs:Organization.CenterForNativePeoplesAndTheEnvironment, tgs:Organization.PlantBabyPlant, tgs:AcademicInstitution.SUNYCollegeOfEnvironmentalScienceAndForestry ;
+    dct:source <https://robinwallkimmerer.com/about/>, <https://www.esf.edu/faculty/kimmerer/> ;
     .
 
 tgs:Human.AntonioNobre a thinkr:Human, owl:NamedIndividual ;
@@ -2265,7 +2267,7 @@ tgs:Human.DonellaMeadows
     dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
 
 tgs:Human.EOWilson
-    dct:isReferencedBy tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
 
 tgs:Human.EdConway
     dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor .
@@ -2337,7 +2339,7 @@ tgs:Human.SylviaEarle
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
 
 tgs:Human.ThichNhatHanh
-    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Human.TristanHarris
     dct:isReferencedBy tgs:Monologue.Frankly_128_UltraProcessedInformation .

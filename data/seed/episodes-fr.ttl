@@ -3234,7 +3234,7 @@ tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview
     dct:isReferencedBy tgs:Monologue.Frankly_119_TechnologyAndWealth .
 
 tgs:Monologue.Frankly_114_DirectionalAdvice
-    dct:isReferencedBy tgs:Interview.TGS_203_NateSoares .
+    dct:isReferencedBy tgs:Interview.TGS_203_NateSoares, tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Monologue.Frankly_117_BehavioralThermodynamicsPart1
     dct:isReferencedBy tgs:Monologue.Frankly_116_SunkCostAndTheSuperorganism .
@@ -3259,6 +3259,9 @@ tgs:Monologue.Frankly_127_WideBoundaryNews
 
 tgs:Monologue.Frankly_128_UltraProcessedInformation
     dct:isReferencedBy tgs:Interview.TGS_227_SalMercogliano, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+
+tgs:Monologue.Frankly_129_DesperatelySeekingAgency
+    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Monologue.Frankly_130_WideBoundaryNews31026
     dct:isReferencedBy tgs:Monologue.Frankly_131_IranEffectsLocalPreparednessAndEndOfEmpire .
@@ -3366,7 +3369,7 @@ tgs:Monologue.Frankly_94_SocialOvershoot
     dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
 
 tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes
-    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson, tgs:Interview.TGS_230_OlivierHamant, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology .
+    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson, tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology .
 
 tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture
     dct:isReferencedBy tgs:Interview.TGS_115_PatrickKnodel, tgs:Monologue.Frankly_130_WideBoundaryNews31026, tgs:Monologue.Frankly_99_TenCoreMythsOfBusinessSchools .

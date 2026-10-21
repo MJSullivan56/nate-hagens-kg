@@ -4113,12 +4113,145 @@ tgs:Concept.EliteOverproduction a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.GameTheoretic ;
     .
 
+tgs:Concept.HonorableHarvest a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Honorable Harvest"@en ;
+    skos:definition "A code of practical harvesting ethics that Robin Wall Kimmerer finds, in some version, in every Indigenous society she knows: ask permission and abide by the answer; never take the first, so you never take the last; never take more than half; take only what is given; use it respectfully; share what you take; be grateful; and reciprocate the gift. It follows from treating the plants and animals one must eat, as heterotrophs, as relatives and teachers rather than resources."@en ;
+    dcterms:source <https://www.yesmagazine.org/issue/good-health/2015/11/26/the-honorable-harvest-lessons-from-an-indigenous-tradition-of-giving-thanks> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Nate had not heard of it and answers that our economic system is 'effectively running a dishonorable harvest at full speed'. Kimmerer insists such ethics 'don't come with a chromosome': they come from relationships with land and from learning from mistakes (taking too much, then a hungry winter), so anyone can learn them. Nate connects it to wisdom as restraint (tgs:Concept.RestraintByDesign, TGS_126) and to fossil energy as principal treated as interest, which removed the need for restraint."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.SevenFiresProphecy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Seven Fires prophecy"@en ;
+    skos:definition "An Anishinaabe teaching, carried by the Potawatomi, that names seven eras of the people's history; its earlier fires foretold the missionaries, removal from homelands, loss of language and the taking of children. The seventh fire is a time when river water can no longer be drunk, the air is too thick to breathe and plant and animal relatives turn away. All peoples then stand at a fork between a burnt, dead-end path and a green one, and can reach the green path only by walking back along the ancestor path to pick up what was dropped: language, stories, land and more-than-human relatives. What is carried through 'the bottleneck of the great narrowing' lights an eighth fire that burns forever."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Seven_fires_prophecy> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Nate asked about it because Kimmerer had told him before recording that her people had prophecies about a great simplification. He reads it as a microcosm of a species-wide rite of passage and of Bill Plotkin's ecological adulthood (TGS_146), and admits to some shame that when he started the podcast Indigenous wisdom seemed to him an irrelevant distraction. The teaching that only what is picked up and carried makes it through the bottleneck closely parallels Nate's own aim of carrying things of value through the bottlenecks (tgs:Concept.ThingsOfValueThroughTheBottlenecks)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.AgeOfRemembering a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Age of Remembering"@en ;
+    skos:definition "Robin Wall Kimmerer's name for the present moment at the fork in the road of the Seven Fires prophecy: after some 500 years of dismembering the community of life and Indigenous communities, a time both to remember how to live in right relationship with land and to 're-member' -- to become members again of the family of life, taking humans off the top of the pyramid of human exceptionalism and back 'into the arms of our relatives'."@en ;
+    dcterms:source <https://plantbabyplant.com/about/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. She prefers it to names like the Anthropocene or the sixth extinction as a way to navigate the crisis; Plant Baby Plant (tgs:Organization.PlantBabyPlant) calls itself the motive force of the Age of Remembering. Asked whether this remembering can happen at scale before a disruption, she answers 'I don't know', though she sees it rising at the grassroots and in Indigenous communities, not among leaders."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.GrammarOfAnimacy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Grammar of animacy"@en ;
+    skos:definition "Robin Wall Kimmerer's term for the way languages such as Potawatomi, which is verb-based, conjugate verbs as animate or inanimate: a truck passing takes an inanimate verb, a bird singing an animate one, and plants and squirrels the same respectful grammar as family members. English reserves that grammar for human beings and calls every other living being 'it', which places humans atop a pyramid and makes it hard to treat plants as teachers or elders."@en ;
+    dcterms:source <https://orionmagazine.org/article/speaking-of-nature/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Nate notes that several guests, including Victoria Sweet the day before, have discussed English as a noun-based language, and that he only recently learned the idea came from tgs:Work.BraidingSweetgrass. Kimmerer adds that the 'Three Sisters' name is itself a Native kinship term."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.KinshipWorldview a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Kinship worldview"@en ;
+    skos:definition "Seeing other beings as relatives within a web of kin rather than as property beneath humans: the self extends, through permeable boundaries, to the plants that feed us, the minerals in our bones and the forest we live in -- what Robin Wall Kimmerer calls 'the great green we' -- so that self-interest becomes the interest of the whole. Expressed in the phrase 'all my relations', and set against the pyramid of human exceptionalism."@en ;
+    dcterms:source <https://doi.org/10.1890/1051-0761(2000)010[1327:KEIPOT]2.0.CO;2> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. The dcterms:source is Enrique Salmón's 'Kincentric Ecology' (2000), linked in the show notes. Kimmerer offers it as one explanation for why biodiversity declines less on lands stewarded by Indigenous peoples; Nate asks whether lower population density might also explain it, and she agrees many factors contribute. Nate compares it to Thich Nhat Hanh's interbeing and to the Reality Roundtable's 'when does the apple become me' (RR_2). Related but distinct: tgs:Concept.KinshipJourney (Samantha Sweetwater's alternative to the hero's journey)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.HumanExceptionalism a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Human exceptionalism"@en ;
+    skos:definition "The story that humans stand apart from and above the rest of life -- descended from Aristotle's ladder of nature, with humans just below the angels and plants at the bottom -- so that other beings are property, not kin. Robin Wall Kimmerer traces economic extraction, industrialization and colonization to it, and calls it 'laughable' in the Indigenous communities she knows, where humans are 'the younger brothers of creation' who should learn from their more-than-human relatives."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Anthropocentrism>, tgs:Work.TheArrogantApe ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer, tgs:Persona.ChristineWebb ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Christine Webb's TGS_213 and her book The Arrogant Ape: The Myth of Human Exceptionalism (tgs:Work.TheArrogantApe) argue the same from primatology, which had no concept node until now; TGS_213 now discusses it. Kimmerer frames the polycrisis -- biodiversity loss, climate injustice -- as rooted in this story of what it means to be human."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.GiftEconomy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Gift economy"@en ;
+    skos:definition "An economy in which whatever one has in abundance is given away, so that the whole web flourishes: plants, running on the free commons of sunlight, pass their berries, leaves, blossoms and roots on to pollinators, birds, foxes and soil instead of hoarding them, and abundance comes from that unblocked flow. Robin Wall Kimmerer contrasts it with a market economy that encloses the commons, privatizes and hoards, manufactures scarcity and degrades community."@en ;
+    dcterms:source <https://emergencemagazine.org/essay/the-serviceberry/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. From tgs:Work.TheServiceberry, which began when Emergence Magazine asked a botanist to write about economics. Nate's clarification: nature extracts too, but gives back, while humans extract and return only pollution -- 'that's where the break is'. Kimmerer's ask is to 'poke at' the market economy by building reciprocity, and she says people have forgotten that humans can be medicine for the land."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.Enoughness a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Enoughness"@en ;
+    skos:definition "Robin Wall Kimmerer's sense of abundance: not material plenty but enough -- sufficiency for oneself and one's relatives, human and more-than-human -- with wealth measured by how much one has to give away, because 'all flourishing is mutual'. It accepts real physical scarcity ahead: having depleted the planet's abundance, we can ask less of her, and may have all we need though not all we want."@en ;
+    dcterms:source <https://emergencemagazine.org/conversation/practical-reverence/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Nate says that as a biophysical economist he has an aversion to the word abundance, expecting less material abundance on average; Kimmerer agrees and redefines it. A practical counterpart already in the graph: tgs:PersonalIntervention.WriteDownYourEnough."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.RestorationAndRestoryation a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Restoration and re-story-ation"@en ;
+    skos:definition "Robin Wall Kimmerer's pairing: restoring land's structure and function with the tools of science and engineering is doable, but Sisyphean unless the broken relationship between people and land is restored too, and that needs new stories to replace those of human exceptionalism and extractive capitalism -- stories, like the Honorable Harvest, that were deliberately hidden and are rarely taught. Plant Baby Plant puts it into practice: science to restore land, the arts to restore relationship."@en ;
+    dcterms:source <https://atmos.earth/podcast/robin-wall-kimmerer-the-land-loves-you-back/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Her landmark example of restoration at scale is tallgrass prairie, brought back on schoolyards, former army munitions sites and abandoned airports. Related practice terms: tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.StoryingPlace."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.SuccessAsLongTermPersistence a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Success as long-term persistence"@en ;
+    skos:definition "Robin Wall Kimmerer's lesson from mosses: among the first plants on land and little changed since, while more than 99% of all species that ever lived are extinct, mosses mark a kind of success measured by persistence and biodiversity rather than size or energy throughput. They succeed through 'the power of being small' -- cooperating rather than competing, and living within the boundary layer, working within the laws of physics rather than trying to conquer them."@en ;
+    dcterms:source <https://emergencemagazine.org/essay/ancient-green/> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Nate links it to Olivier Hamant's robustness over performance (tgs:Concept.RobustnessVsPerformance, TGS_230) and asks whether mosses simply have a wider niche. Kimmerer closes the episode with the same lesson for humans: be small and cooperative for 'enduring success, not flash-in-the-pan success'. She also notes that mosses in boreal and tundra ecosystems hold more carbon than the forests, much of it as peat."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.SevenGenerationsThinking a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Seven generations thinking"@en ;
+    skos:definition "The Indigenous practice, a hallmark of Haudenosaunee and other governance, of weighing decisions by their effect on future generations, contrasted with the quarterly profits report. Robin Wall Kimmerer's reading is not a mystical forecast seven generations ahead but care for the seven generations one is connected to: from one's great-grandparents to one's great-grandchildren, 'the ones whose faces are still coming toward us'."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Seven_generation_sustainability> ;
+    thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_239. Raised when Nate asks about Indigenous governance; Kimmerer declines to generalize across the 574 Indigenous nations within the United States (575 as of January 2026, per the show notes) but notes that women's leadership is often at the forefront. Nate asks how it pairs with climate models seven generations out; she points to innovative Indigenous work on climate resilience."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:creator "Compiled by MJSullivan from The Great Simplification" ;
     skos:hasTopConcept
+        tgs:Concept.AgeOfRemembering,
         tgs:Concept.AIAsMetacrisisAccelerant,
         tgs:Concept.ActorlessThreats,
         tgs:Concept.AdvancePolicy,
@@ -4222,6 +4355,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EnergyGrowthRateDependence,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
+        tgs:Concept.Enoughness,
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.EpistemicCommons,
         tgs:Concept.EscalationTrap,
@@ -4248,9 +4382,11 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GenesisPlot,
         tgs:Concept.GhostOfDopaminePast,
+        tgs:Concept.GiftEconomy,
         tgs:Concept.GlacierStabilization,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.GoldilocksTechnology,
+        tgs:Concept.GrammarOfAnimacy,
         tgs:Concept.GreatSimplification,
         tgs:Concept.GreatTurning,
         tgs:Concept.GrowthImperative,
@@ -4263,6 +4399,8 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.HighTouchGrounding,
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HoloceneClimateStability,
+        tgs:Concept.HonorableHarvest,
+        tgs:Concept.HumanExceptionalism,
         tgs:Concept.HumanPredicament,
         tgs:Concept.HumanitysIcarusMoment,
         tgs:Concept.HyperAgents,
@@ -4284,6 +4422,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.JevonsDividend,
         tgs:Concept.JevonsParadox,
         tgs:Concept.KinshipJourney,
+        tgs:Concept.KinshipWorldview,
         tgs:Concept.KleibersLaw,
         tgs:Concept.LandscapeOfPossibleFutures,
         tgs:Concept.LayersOfInvisibleWealth,
@@ -4376,6 +4515,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.RegenerativeFinance,
         tgs:Concept.RelativeFitnessSpiteFramework,
         tgs:Concept.RentSeeking,
+        tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RewardPredictionError,
@@ -4393,7 +4533,9 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenAIMacroRisks,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
+        tgs:Concept.SevenFiresProphecy,
         tgs:Concept.SevenFundamentalDriversOfOvershoot,
+        tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SevenKeyQuestionsOnNuclearConflict,
         tgs:Concept.SevenPersonPerspectives,
@@ -4414,6 +4556,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.SpaceOfTheNecessary,
         tgs:Concept.StinglessBees,
         tgs:Concept.StrawSiphonSieve,
+        tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.SuperPollutants,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.Superorganism,
@@ -4541,6 +4684,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
     skos:prefLabel "TGS concepts: Ecology and Environment"@en ;
     dcterms:subject tgs:Subject.EcologyAndEnvironment ;
     skos:member tgs:Concept.AerosolMasking,
+        tgs:Concept.AgeOfRemembering,
         tgs:Concept.AlternativeStableStates,
         tgs:Concept.Bioregion,
         tgs:Concept.BioticPump,
@@ -4564,11 +4708,15 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourPillarsOfCivilization,
         tgs:Concept.GenesisPlot,
+        tgs:Concept.GiftEconomy,
         tgs:Concept.GlacierStabilization,
+        tgs:Concept.GrammarOfAnimacy,
         tgs:Concept.HoloceneClimateStability,
+        tgs:Concept.HonorableHarvest,
         tgs:Concept.InServiceOfLife,
         tgs:Concept.InactionPlanForNature,
         tgs:Concept.InsectDecline,
+        tgs:Concept.KinshipWorldview,
         tgs:Concept.LimitsOfPlasticRecycling,
         tgs:Concept.LimitsToGrowth,
         tgs:Concept.MitigationDeterrence,
@@ -4585,6 +4733,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.PowerVersusLife,
         tgs:Concept.ProgressTrap,
         tgs:Concept.ProtectTheIrreversible,
+        tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.Rewilding,
         tgs:Concept.RightsOfNature,
         tgs:Concept.SevenFundamentalDriversOfOvershoot,
@@ -4592,6 +4741,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.SocialLimitsToGrowthBeforePhysical,
         tgs:Concept.SolarRadiationModification,
         tgs:Concept.StinglessBees,
+        tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.SuperPollutants,
         tgs:Concept.TerminationShock,
         tgs:Concept.TheLastCanToKick,
@@ -4637,10 +4787,12 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyGDPCoupling,
+        tgs:Concept.Enoughness,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GameTheoreticVersusRealValue,
         tgs:Concept.GeneralizedJevonsParadox,
+        tgs:Concept.GiftEconomy,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.JevonsDividend,
@@ -4738,6 +4890,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Human Behavior"@en ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     skos:member tgs:Concept.AdvancePolicy,
+        tgs:Concept.AgeOfRemembering,
         tgs:Concept.AggregateCognitiveDissonance,
         tgs:Concept.AllostaticLoad,
         tgs:Concept.ArrestedHumanDevelopment,
@@ -4787,6 +4940,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmpathyHandicap,
         tgs:Concept.Enantiodromia,
+        tgs:Concept.Enoughness,
         tgs:Concept.EpistemicCommons,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FiveLensChess,
@@ -4804,6 +4958,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GameTheory,
         tgs:Concept.GameTheoryFillsTheOughtGap,
         tgs:Concept.GhostOfDopaminePast,
+        tgs:Concept.GrammarOfAnimacy,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
@@ -4811,6 +4966,8 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HeartWillMind,
         tgs:Concept.HerosJourney,
         tgs:Concept.HighTouchGrounding,
+        tgs:Concept.HonorableHarvest,
+        tgs:Concept.HumanExceptionalism,
         tgs:Concept.HumanitysIcarusMoment,
         tgs:Concept.HyperAgents,
         tgs:Concept.IAmBecauseWeAre,
@@ -4825,6 +4982,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IslandsOfSanity,
         tgs:Concept.JevonsDividend,
         tgs:Concept.KinshipJourney,
+        tgs:Concept.KinshipWorldview,
         tgs:Concept.LayersOfInvisibleWealth,
         tgs:Concept.LearnedHelplessness,
         tgs:Concept.LifeEthic,
@@ -4881,6 +5039,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RegenerativeFinance,
         tgs:Concept.RelativeFitnessSpiteFramework,
         tgs:Concept.RentSeeking,
+        tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RewardPredictionError,
@@ -4890,6 +5049,8 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Schismogenesis,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
+        tgs:Concept.SevenFiresProphecy,
+        tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SevenKeyQuestionsOnNuclearConflict,
         tgs:Concept.SevenPersonPerspectives,
@@ -5002,11 +5163,14 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RobustActions,
         tgs:Concept.RobustnessVsPerformance,
         tgs:Concept.ScenarioThinking,
+        tgs:Concept.SevenFiresProphecy,
+        tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenRungsOfARunawaySystem,
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.ShortfallRisk,
         tgs:Concept.SolutionSpaceCube,
         tgs:Concept.SpaceOfTheNecessary,
+        tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.Superorganism,
         tgs:Concept.SupplyChainFragility,
         tgs:Concept.Symmathesy,
@@ -5045,8 +5209,10 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GeneralizedJevonsParadox,
+        tgs:Concept.GiftEconomy,
         tgs:Concept.GreatSimplification,
         tgs:Concept.GrowthImperative,
+        tgs:Concept.HonorableHarvest,
         tgs:Concept.JevonsDividend,
         tgs:Concept.JevonsParadox,
         tgs:Concept.KleibersLaw,
@@ -5069,6 +5235,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Rewilding,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.StrawSiphonSieve,
+        tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.Superorganism,
         tgs:Concept.TheSenecaEffect,
         tgs:Concept.ThingsOfValueThroughTheBottlenecks,
@@ -5153,9 +5320,11 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
+        tgs:Concept.GiftEconomy,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HolisticExternalityAnalysis,
+        tgs:Concept.HumanExceptionalism,
         tgs:Concept.InfrastructureSocialStructureSuperstructure,
         tgs:Concept.JevonsDividend,
         tgs:Concept.LeveragePoints,
@@ -5172,6 +5341,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RealityParty,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
+        tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.SocialLimitsToGrowthBeforePhysical,
@@ -5200,6 +5370,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
         tgs:Concept.Effectivism,
+        tgs:Concept.Enoughness,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.HavesAndHaveNots,
@@ -5207,6 +5378,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HighTouchGrounding,
+        tgs:Concept.HonorableHarvest,
         tgs:Concept.ImaginalCells,
         tgs:Concept.InServiceOfLife,
         tgs:Concept.IntegratingThinkingAndFeeling,
@@ -5220,10 +5392,12 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PowerVersusLife,
         tgs:Concept.PriceCostAndValue,
         tgs:Concept.ReAimingTheStatusDrive,
+        tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.Rewilding,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RocksInTheRiver,
+        tgs:Concept.SevenFiresProphecy,
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SolutionSpaceCube,
         tgs:Concept.SuperorganismFreeZones,
@@ -5240,6 +5414,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Psychological Inner lens"@en ;
     skos:member tgs:Concept.AggregateCognitiveDissonance,
+        tgs:Concept.AgeOfRemembering,
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
@@ -5259,14 +5434,17 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.DunbarsNumber,
         tgs:Concept.EnergyBlindness,
+        tgs:Concept.Enoughness,
         tgs:Concept.FragmentedConsciousness,
         tgs:Concept.GameTheoreticVersusRealValue,
         tgs:Concept.GameTheoryFillsTheOughtGap,
+        tgs:Concept.GrammarOfAnimacy,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HerosJourney,
+        tgs:Concept.HumanExceptionalism,
         tgs:Concept.IAmBecauseWeAre,
         tgs:Concept.ImaginalCells,
         tgs:Concept.ImpossibleToHard,
@@ -5274,6 +5452,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.IntelligenceBoundByWisdom,
         tgs:Concept.KinshipJourney,
+        tgs:Concept.KinshipWorldview,
         tgs:Concept.LearnedHelplessness,
         tgs:Concept.LightTriad,
         tgs:Concept.LogicOfSeparation,
@@ -5289,9 +5468,11 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ProgressTrap,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
         tgs:Concept.ReAimingTheStatusDrive,
+        tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
+        tgs:Concept.SevenFiresProphecy,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.SupernormalStimuli,
@@ -5438,10 +5619,27 @@ tgs:Concept.CarryingCapacity skos:related tgs:Concept.EcologicalFootprint .
 tgs:Concept.PhantomCarryingCapacity skos:related tgs:Concept.CarryingCapacity .
 tgs:Concept.PhantomCarryingCapacity skos:related tgs:Concept.CarbonPulse .
 tgs:Concept.ContextBasedSustainability skos:related tgs:Concept.CarryingCapacity .
+tgs:Concept.HonorableHarvest skos:related tgs:Concept.RestraintByDesign .
+tgs:Concept.HonorableHarvest skos:related tgs:Concept.GiftEconomy .
+tgs:Concept.HonorableHarvest skos:related tgs:Concept.Enoughness .
+tgs:Concept.SevenFiresProphecy skos:related tgs:Concept.ThingsOfValueThroughTheBottlenecks .
+tgs:Concept.SevenFiresProphecy skos:related tgs:Concept.AgeOfRemembering .
+tgs:Concept.AgeOfRemembering skos:related tgs:Concept.HumanExceptionalism .
+tgs:Concept.GrammarOfAnimacy skos:related tgs:Concept.KinshipWorldview .
+tgs:Concept.KinshipWorldview skos:related tgs:Concept.KinshipJourney .
+tgs:Concept.KinshipWorldview skos:related tgs:Concept.HumanExceptionalism .
+tgs:Concept.KinshipWorldview skos:related tgs:Concept.DeepEcology .
+tgs:Concept.GiftEconomy skos:related tgs:Concept.Enoughness .
+tgs:Concept.RestorationAndRestoryation skos:related tgs:Concept.AgeOfRemembering .
+tgs:Concept.SuccessAsLongTermPersistence skos:related tgs:Concept.RobustnessVsPerformance .
+tgs:Concept.SevenGenerationsThinking skos:related tgs:Concept.HonorableHarvest .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Concept.AgeOfRemembering
+    skos:related tgs:Concept.RestorationAndRestoryation, tgs:Concept.SevenFiresProphecy .
 
 tgs:Concept.AggregateProbability
     thinkr:complements tgs:Concept.ImpossibleToHard .
@@ -5469,7 +5667,7 @@ tgs:Concept.CulturalMitochondria
     skos:related tgs:Concept.BattlesOfOurTime .
 
 tgs:Concept.DeepEcology
-    skos:related tgs:Concept.Rewilding .
+    skos:related tgs:Concept.KinshipWorldview, tgs:Concept.Rewilding .
 
 tgs:Concept.DividedBrain
     skos:related tgs:Concept.BattlesOfOurTime .
@@ -5492,6 +5690,9 @@ tgs:Concept.Effectivism
 tgs:Concept.EnergyBlindness
     skos:related tgs:Concept.EnergyGDPCoupling .
 
+tgs:Concept.Enoughness
+    skos:related tgs:Concept.GiftEconomy, tgs:Concept.HonorableHarvest .
+
 tgs:Concept.FifthLawOfThermodynamics
     skos:related tgs:Concept.DissipativeStructures .
 
@@ -5503,6 +5704,9 @@ tgs:Concept.GameTheory
 
 tgs:Concept.GameTheoryFillsTheOughtGap
     skos:related tgs:Concept.GameTheory .
+
+tgs:Concept.GiftEconomy
+    skos:related tgs:Concept.HonorableHarvest .
 
 tgs:Concept.GreatSimplification
     dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
@@ -5521,6 +5725,12 @@ tgs:Concept.HealingBeforeEngagement
 
 tgs:Concept.HeartWillMind
     skos:related tgs:Concept.HeadHeartAndHands, tgs:Concept.HealingBeforeEngagement .
+
+tgs:Concept.HonorableHarvest
+    skos:related tgs:Concept.SevenGenerationsThinking .
+
+tgs:Concept.HumanExceptionalism
+    skos:related tgs:Concept.AgeOfRemembering, tgs:Concept.KinshipWorldview .
 
 tgs:Concept.HumanPredicament
     skos:related tgs:Concept.RealityParty .
@@ -5548,6 +5758,12 @@ tgs:Concept.JevonsDividend
 
 tgs:Concept.JevonsParadox
     skos:relatedMatch tgs:PracticeTerm.OneEarth_EnergyEfficiency, tgs:PracticeTerm.OneEarth_TransportationEfficiency .
+
+tgs:Concept.KinshipJourney
+    skos:related tgs:Concept.KinshipWorldview .
+
+tgs:Concept.KinshipWorldview
+    skos:related tgs:Concept.GrammarOfAnimacy .
 
 tgs:Concept.LearnedHelplessness
     skos:related tgs:Concept.ConstructiveJournalism .
@@ -5629,7 +5845,7 @@ tgs:Concept.RealityBasedHope
     skos:related tgs:Concept.EarnedHope .
 
 tgs:Concept.RestraintByDesign
-    skos:related tgs:Concept.JevonsDividend .
+    skos:related tgs:Concept.HonorableHarvest, tgs:Concept.JevonsDividend .
 
 tgs:Concept.RichInSocialCapital
     thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits ;
@@ -5638,6 +5854,9 @@ tgs:Concept.RichInSocialCapital
 tgs:Concept.RightsOfNature
     skos:related tgs:Concept.DeepEcology ;
     skos:relatedMatch tgs:PracticeTerm.RightsOfNature .
+
+tgs:Concept.RobustnessVsPerformance
+    skos:related tgs:Concept.SuccessAsLongTermPersistence .
 
 tgs:Concept.ShadowOfTheSuperorganism
     thinkr:complements tgs:Concept.FragmentedConsciousness ;
@@ -5672,6 +5891,9 @@ tgs:Concept.TheLastCanToKick
 tgs:Concept.TheoryOfChange
     thinkr:complements tgs:Concept.EcologyOfTheoriesOfChange ;
     skos:related tgs:Concept.EcologyOfTheoriesOfChange .
+
+tgs:Concept.ThingsOfValueThroughTheBottlenecks
+    skos:related tgs:Concept.SevenFiresProphecy .
 
 tgs:Concept.ThreeByThreeResponseGrid
     skos:related tgs:Concept.SolutionSpaceCube .
