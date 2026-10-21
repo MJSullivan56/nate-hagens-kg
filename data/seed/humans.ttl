@@ -495,6 +495,7 @@ tgs:Human.TomMurphy a thinkr:Human,
     owl:sameAs <https://en.wikipedia.org/wiki/Tom_Murphy_(physicist)> ;
     owl:sameAs <http://dbpedia.org/resource/Tom_Murphy_(physicist)> ;
     rdfs:comment "Professor Emeritus of Physics and Astronomy & Astrophysics, UC San Diego. Led the APOLLO (Apache Point Observatory Lunar Laser-ranging Operation) project testing General Relativity via reflectors left on the Moon by Apollo astronauts. Author of 'Energy and Human Ambitions on a Finite Planet' (2021, UC open-access textbook) and a 2022 Nature Physics paper arguing physical resource exhaustion precedes waste-heat limits in constraining GDP growth. Writes the 'Do the Math' blog since 2011."@en ;
+    dct:isReferencedBy tgs:Interview.TGS_172_LivingTheChange ;
     .
 
 #############################################
@@ -634,6 +635,7 @@ tgs:Human.ShannaSwan a thinkr:Human,
     rdfs:label "Shanna Swan (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Shanna_Swan> ;
     rdfs:comment "Environmental and reproductive epidemiologist; Professor of Environmental Medicine and Public Health, Icahn School of Medicine at Mount Sinai (NYC); Director, Action Science Initiative. Published 200+ scientific papers on environmental chemical exposure and reproductive/neurodevelopmental effects. Co-author, 'Countdown: How Our Modern World Is Threatening Sperm Counts...' (2021). Central figure in the 2026 Netflix documentary 'The Plastic Detox,' running a real 3-month endocrine-disrupting-chemical-reduction intervention with 6 couples facing unexplained infertility. Real prior TGS solo appearance confirmed: Episode #2 ('Sperm and Our Future') — one of the first-ever guests on the podcast."@en ;
+    dct:isReferencedBy tgs:Monologue.Frankly_76_TheBattlesOfOurTime ;
     .
 
 tgs:Human.SianSutherland a thinkr:Human,
@@ -1159,7 +1161,7 @@ tgs:Human.JoannaMacy a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Joanna Macy"@en ;
     rdfs:label "Joanna Macy (human)"@en ;
     owl:sameAs <http://dbpedia.org/resource/Joanna_Macy> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Interview.TGS_172_LivingTheChange ;
     .
 
 # added 2026-08-25
@@ -1685,6 +1687,7 @@ tgs:Human.RandyHayes a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Randy Hayes"@en ;
     rdfs:label "Randy Hayes (human)"@en ;
     rdfs:comment "Founder, Rainforest Action Network (RAN), a real, prominent organization campaigning against tropical deforestation since the 1980s. More recently involved with Foundation Earth and real rewilding advocacy work. Real, direct personal detail: named by Nate Hagens as 'my friend' during a real citation in another episode, though never himself a TGS guest."@en ;
+    dct:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .
 
 tgs:Human.PeteMyers a thinkr:Human, owl:NamedIndividual ;
@@ -2016,7 +2019,7 @@ tgs:Human.ViktorFrankl a thinkr:Human, owl:NamedIndividual ;
     rdfs:label "Viktor Frankl (human)"@en ;
     rdfs:comment "Viktor E. Frankl (1905-1997), Austrian psychiatrist and neurologist, Holocaust survivor and founder of logotherapy; author of tgs:Work.MansSearchForMeaning."@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Viktor_Frankl> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2 ;
+    dct:isReferencedBy tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Interview.TGS_174_MarenUrner ;
     .
 
 tgs:Human.PeterLevine a thinkr:Human, owl:NamedIndividual ;
@@ -2108,7 +2111,9 @@ tgs:Human.WesCarter a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Wes Carter"@en ;
     rdfs:label "Wes Carter (human)"@en ;
     rdfs:comment "President and third-generation leader of Atlantic Packaging, which he joined out of college about 25 years before TGS_186, and founder of A New Earth Project (January 2020). Grew up on the North Carolina coast as a surfer and fisherman, an Eagle Scout, and worked in the outdoor industry in Park City, Utah; based in Charleston, South Carolina. Nearly 47 when interviewed (recorded 2025-05-28)."@en ;
-    thinkr:memberOf tgs:Organization.AtlanticPackaging, tgs:Organization.ANewEarthProject .
+    thinkr:memberOf tgs:Organization.AtlanticPackaging, tgs:Organization.ANewEarthProject ;
+    dct:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
+    .
 
 tgs:Human.RodSchoonover a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Rod Schoonover"@en ;
@@ -2166,4 +2171,34 @@ tgs:Human.EraldKolasi a thinkr:Human, owl:NamedIndividual ;
     rdfs:comment "Physicist (PhD, George Mason University, 2016) writing on energy and political economy in Monthly Review; author of The Physics of Capitalism. Author of tgs:Work.EnergyEconomicGrowthAndEcologicalCrisis."@en ;
     thinkr:memberOf tgs:SchoolOfThought.Ecosocialism ;
     skos:scopeNote "Added 2026-10-19. memberOf rests on his own published argument for an 'ecological, and socialist civilization'."@en ;
+    .
+
+tgs:Human.MarenUrner a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Maren Urner"@en ;
+    rdfs:label "Maren Urner (human)"@en ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Maren_Urner> ;
+    rdfs:comment "German neuroscientist and author (b. 1984, Herford). Studied cognitive science at Osnabrück and McGill and cognitive neuroscience at Radboud University Nijmegen; PhD, University College London (2013). Co-founded Perspective Daily in 2016 with Han Langeslag, the first ad-free online magazine for constructive journalism, and was its editor-in-chief and managing director until March 2019. Professor of media psychology at the Hochschule für Medien, Kommunikation und Wirtschaft in Cologne until August 2024; since September 2024 Professor for Sustainable Transformation at Münster University of Applied Sciences and head of its new Master's program in Sustainable Transformation Design. Columnist for the Frankfurter Rundschau since September 2020. Her three SPIEGEL-bestselling books are Schluss mit dem täglichen Weltuntergang (2019), Raus aus der ewigen Dauerkrise (2021) and Radikal emotional (2024; tgs:Work.RadikalEmotional). Winner of the 2023 BAUM Environmental and Sustainability Award, science category. Sources: TGS_174 show-notes bio; German Wikipedia for birth, education and book details."@en ;
+    thinkr:memberOf tgs:AcademicInstitution.MuensterUniversityOfAppliedSciences ;
+    dct:source <https://maren-urner.com/> ;
+    .
+
+tgs:Human.KristineTompkins a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Kristine Tompkins"@en ;
+    rdfs:label "Kristine Tompkins (human)"@en ;
+    skos:altLabel "Kris Tompkins"@en, "Kristine McDivitt"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kris_Tompkins> ;
+    rdfs:comment "American conservationist (born 1950, née McDivitt; known as Kris); president and co-founder of Tompkins Conservation and former CEO of Patagonia. With her late husband Doug Tompkins she has spent nearly thirty years protecting and restoring wild landscapes and biodiversity -- creating national parks, rewilding species and fostering economic vitality from conservation -- with about 15 million acres of parkland protected in Chile and Argentina through Tompkins Conservation and its partners; the two are considered among the most successful national-park philanthropists in history. In TGS_170 she says she met Yvon Chouinard at 15, worked for him full-time after college and became Patagonia's general manager and then CEO, retired at 43 to move with Doug to a roadless area of southern Chile, and in 2025 marks 52 years with Patagonia; she was nearly 75 when recorded. Sources: TGS_170 show-notes bio and transcript; birth year and maiden name from Wikipedia."@en ;
+    thinkr:memberOf tgs:Organization.TompkinsConservation, tgs:Organization.Patagonia ;
+    dct:source <https://www.tompkinsconservation.org/our-team/> ;
+    .
+
+tgs:Human.DougTompkins a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Doug Tompkins"@en ;
+    skos:altLabel "Douglas Tompkins"@en ;
+    rdfs:label "Doug Tompkins (human)"@en ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Douglas_Tompkins> ;
+    rdfs:comment "Douglas Tompkins (1943-2015), American businessman and conservationist, founder of The North Face and co-founder of Esprit, who with his wife Kristine Tompkins moved to southern Chile in the early 1990s and devoted the rest of his life to buying, protecting and donating land as national parks in Chile and Argentina. He died of severe hypothermia in 2015 after his kayak capsized on General Carrera Lake in southern Chile. TGS_170 quotes him on progress: if we reach the edge of an abyss and turn 180 degrees, a step forward is not a step back into the past but toward the future."@en ;
+    thinkr:memberOf tgs:Organization.TompkinsConservation ;
+    dct:source <https://www.bbc.com/news/world-latin-america-35048806> ;
+    dct:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .

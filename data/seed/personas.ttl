@@ -1901,3 +1901,21 @@ tgs:Persona.RianeEisler a thinkr:Persona, owl:NamedIndividual ;
     rdfs:label "Riane Eisler (persona)"@en ;
     skos:scopeNote "Kept Professional-only: a first conversation. Nate says he had not heard of her until a few months earlier though they share friends (among them her co-author Teddie Potter), and he closes with thanks for her lifetime of work, without friend language."@en ;
     .
+
+tgs:Persona.MarenUrner a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.MarenUrner ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_MarenUrner ;
+    skos:prefLabel "Maren Urner"@en ;
+    rdfs:label "Maren Urner (persona)"@en ;
+    skos:scopeNote "Kept Professional-only: a first conversation. Nate came across her through friends in Berlin the year before and closes by formally inviting her back, possibly for a roundtable; no friend language from either side."@en ;
+    .
+
+tgs:Persona.KristineTompkins a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.KristineTompkins ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_KristineTompkins ;
+    skos:prefLabel "Kristine Tompkins"@en ;
+    rdfs:label "Kristine Tompkins (persona)"@en ;
+    skos:scopeNote "Kept Professional-only: they met a couple of weeks before recording, introduced by their mutual friend Randy Hayes of Rainforest Action Network (tgs:Human.RandyHayes); both wish they had met decades earlier and she closes 'We're gonna make up for it.' Nate calls her Kris throughout (transcribed 'Chris')."@en ;
+    .

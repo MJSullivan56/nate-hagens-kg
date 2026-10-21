@@ -341,7 +341,7 @@ tgs:Organization.AtlanticPackaging a thinkr:Organization, owl:NamedIndividual ;
     skos:prefLabel "Atlantic Packaging"@en ;
     skos:definition "Family-owned packaging company, about 80 years old, described as the largest privately held and most technical packaging company in North America, serving consumer-products brands, retailers, e-commerce and industrial customers. Led by its third generation, president Wes Carter (TGS_186), it shifted from a value proposition of packaging efficiency to a sustainability program built on nature-based materials, recycling partnerships with customers, and health as an organizing principle, including an extensive employee wellness program."@en ;
     dcterms:source <https://www.atlanticpkg.com/> ;
-    dcterms:isReferencedBy tgs:Interview.TGS_186_WesCarter ;
+    dcterms:isReferencedBy tgs:Interview.TGS_186_WesCarter, tgs:Interview.TGS_170_KristineTompkins ;
     .
 
 tgs:Organization.ANewEarthProject a thinkr:Organization, owl:NamedIndividual ;
@@ -781,4 +781,25 @@ tgs:Organization.CenterForPartnershipSystems a thinkr:Organization, owl:NamedInd
     skos:definition "Non-profit, led by Riane Eisler, that develops practical applications of her partnership research -- in education, economics (caring economics) and a partnership self-assessment toolkit -- and is associated with the Interdisciplinary Journal of Partnership Studies."@en ;
     dcterms:source <http://www.centerforpartnership.org/> ;
     dcterms:isReferencedBy tgs:Interview.TGS_116_RianeEisler ;
+    .
+
+tgs:Organization.PerspectiveDaily a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Perspective Daily"@en ;
+    skos:definition "German ad-free online magazine for constructive journalism, founded in 2016 by Maren Urner and Han Langeslag; the first of its kind. Urner was editor-in-chief and managing director until March 2019."@en ;
+    dcterms:source <https://perspective-daily.de/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_174_MarenUrner ;
+    .
+
+tgs:Organization.TompkinsConservation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Tompkins Conservation"@en ;
+    skos:definition "Conservation organization founded by Kristine and Doug Tompkins that, with partners including its legacy groups Rewilding Chile and Rewilding Argentina, has protected about 15 million acres of parkland in Chile and Argentina, donating land to the two governments as national parks and reintroducing missing species such as the jaguar in Argentina's Iberá wetlands."@en ;
+    dcterms:source <https://www.tompkinsconservation.org/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
+    .
+
+tgs:Organization.Patagonia a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Patagonia"@en ;
+    skos:definition "Outdoor clothing company started by climber Yvon Chouinard in the early 1970s, which from the late 1970s treated the company as an asset for changing the world; Kristine Tompkins was its general manager and then CEO."@en ;
+    dcterms:source <https://www.patagonia.com/company-history/> ;
+    dcterms:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .

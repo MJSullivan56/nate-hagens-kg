@@ -718,6 +718,11 @@ thinkr:PracticeTerm a owl:Class ;
     rdfs:comment "An activity term from an outside practice taxonomy (for example Watershed Repair or Collective Ownership Models), used to tag thinkr:Initiative individuals. Linked to the cluster it sits in by skos:broader and to this graph's thinkr:InterventionSubdomain individuals by skos:relatedMatch, which marks a working crosswalk, not an equivalence."@en ;
     skos:prefLabel "Practice Term"@en .
 
+thinkr:GameTheoryTerm a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "A standard term from game theory (a type of game, a named game or a subfield), held in tgs:ConceptScheme.GameTheoryMechanisms as a neutral reference layer. TGS concepts point to these terms with skos:broadMatch or skos:relatedMatch to show which strategic mechanism they share. Third-party vocabulary, not a TGS concept."@en ;
+    skos:prefLabel "Game Theory Term"@en .
+
 thinkr:Initiative a owl:Class ;
     rdfs:comment "A named, on-the-ground project documented by an outside source: something people are doing now, as opposed to a concept or a work. Intended as a source of real-world examples, e.g. for WWNS calls to action."@en ;
     skos:prefLabel "Initiative"@en .

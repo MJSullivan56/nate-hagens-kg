@@ -48,7 +48,7 @@ tgs:Work.TheMatterWithThings a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2021 book by Iain McGilchrist (Perspectiva Press), extending The Master and His Emissary's hemisphere hypothesis into epistemology and metaphysics — 1,500 pages across two volumes."@en ;
     dct:creator tgs:Human.IainMcGilchrist ;
     owl:sameAs <http://dbpedia.org/resource/The_Matter_with_Things> ;
-    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis, tgs:Interview.TGS_129_JonathanRowson, tgs:Interview.TGS_85_WisdomNatureAndTheBrain ;
+    dct:isReferencedBy tgs:Interview.TGS_217_WisdomInAWorldInCrisis, tgs:Interview.TGS_129_JonathanRowson, tgs:Interview.TGS_85_WisdomNatureAndTheBrain, tgs:Monologue.Frankly_70_AskMeAnything ;
     dct:identifier "urn:isbn:9781914568060" ;
     dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
@@ -109,7 +109,7 @@ tgs:Work.RealityBlind a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2021"^^xsd:gYear ;
     dct:creator tgs:Human.NateHagens, tgs:Human.DJWhite ;
     dct:source <https://read.realityblind.world/> ;
-    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_238_IndyJohar, tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_50_CriteriaCategoriesResponse, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_86_WhatIsWealth, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_25_LossAversion, tgs:Interview.TGS_93_JorisVanDerSchot ;
+    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Interview.TGS_202_SamanthaSweetwater, tgs:Monologue.Frankly_104_DucksAndBlueberries, tgs:Monologue.Frankly_103_TheGhostOfDopaminePast, tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_101_WhatIWantToWantForTheFuture, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Monologue.Frankly_151_Part6PlanningUnderUncertainty, tgs:Monologue.Frankly_148_Part4CompositeWorlds, tgs:Monologue.Frankly_138_Part1ChangingTheFuture, tgs:Monologue.Frankly_142_GuideToStayingHumanPart2, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_145_Part3UphillFutures, tgs:Interview.TGS_235_RobertPape, tgs:Interview.TGS_236_ZekeHausfather, tgs:Interview.TGS_185_MythsShapingOurEconomies, tgs:Interview.TGS_226_CanMoneyServeLife, tgs:Interview.TGS_220_AWorldOnThePrecipice, tgs:Interview.TGS_221_AndrewHolecek, tgs:Interview.TGS_209_BalazsMatics, tgs:Interview.TGS_238_IndyJohar, tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_50_CriteriaCategoriesResponse, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_82_PowerVsLife, tgs:Monologue.Frankly_86_WhatIsWealth, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_25_LossAversion, tgs:Interview.TGS_93_JorisVanDerSchot, tgs:Monologue.Frankly_76_TheBattlesOfOurTime, tgs:Monologue.Frankly_70_AskMeAnything, tgs:Monologue.Frankly_66_RealityParty ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.ExactMatch ;
         skos:prefLabel "Reality Blind"@en ;
@@ -762,7 +762,7 @@ tgs:Work.EnergyTransitionsOrAdditions a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Energy transitions or additions? Why a transition from fossil fuels requires more than the growth of renewable energy"@en ;
     rdfs:comment "Richard York and Shannon Elizabeth Bell, Energy Research & Social Science, vol. 51, pp. 40-43, 2019 (available online 16 January 2019). Short peer-reviewed commentary arguing that the growth of renewable energy has so far expanded total energy production rather than displacing fossil fuels -- better described as energy 'additions' than 'transitions' -- and that calling it a transition is misleading and could inhibit meaningful policy to reduce fossil fuel use. Cited in TGS-237's show notes as an 'Episode Foundation' and as support for Art Berman's 'there never has been an energy transition' argument. Author names, journal, volume, pages, and online date verified via WebSearch 2026-10-07. No DOI recorded and no creator Humans modeled (neither author has an entry in this graph); the ScienceDirect link from the show notes is used as the source."@en ;
     dct:source <https://www.sciencedirect.com/science/article/abs/pii/S2214629618312246> ;
-    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman ;
+    dct:isReferencedBy tgs:Interview.TGS_237_ArtBerman, tgs:Interview.TGS_170_KristineTompkins ;
     .
 
 #############################################
@@ -828,7 +828,7 @@ tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism a thinkr:Work, owl:NamedInd
     dct:creator tgs:Human.NateHagens ;
     dct:issued "2020"^^xsd:gYear ;
     dct:source <https://www.sciencedirect.com/science/article/pii/S0921800919310067> ;
-    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Interview.TGS_195_RutgerBregman, tgs:Monologue.TGS_187_EarthDay2025, tgs:Interview.TGS_186_WesCarter, tgs:Interview.TGS_183_RodSchoonover, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Monologue.Frankly_85_TheLightTriad, tgs:Monologue.Frankly_54_ReflectionsFromIndia, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism ;
+    dct:isReferencedBy tgs:Monologue.Frankly_102_ThisWeeksLearnings, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress, tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Interview.TGS_195_RutgerBregman, tgs:Monologue.TGS_187_EarthDay2025, tgs:Interview.TGS_186_WesCarter, tgs:Interview.TGS_183_RodSchoonover, tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_42_ModelingDriversMetacrisis, tgs:Interview.TGS_31_SensemakingUncertaintyPurpose, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_5_BendNotBreakPart1, tgs:Monologue.Frankly_85_TheLightTriad, tgs:Monologue.Frankly_54_ReflectionsFromIndia, tgs:Monologue.Frankly_73_TheSuperorganismAndTheSelf, tgs:Monologue.Frankly_81_TimeTravelAndTheSuperorganism, tgs:Monologue.Frankly_76_TheBattlesOfOurTime, tgs:Monologue.Frankly_70_AskMeAnything, tgs:Interview.TGS_174_MarenUrner ;
     dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
 
@@ -1317,7 +1317,7 @@ tgs:Work.TechnologyIsNotValuesNeutral a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "Consilience Project paper arguing that technologies encode values: competitive advantage makes them obligate and their use reshapes human behavior and minds. Explained by Daniel Schmachtenberger in TGS_71, whose show notes link it twice. Basis of tgs:Concept.TechnologyIsNotValuesNeutral."@en ;
     dct:publisher tgs:Organization.ConsilienceProject ;
     dct:source <https://consilienceproject.org/technology-is-not-values-neutral-ending-the-reign-of-nihilistic-design-2/> ;
-    dct:isReferencedBy tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_126_AVisionForBetterment ;
+    dct:isReferencedBy tgs:Interview.TGS_71_DanielSchmachtenberger, tgs:Interview.TGS_20_MaximumPowerHyperAgents, tgs:Interview.TGS_126_AVisionForBetterment, tgs:Monologue.Frankly_66_RealityParty ;
     .
 
 tgs:Work.TheOverspentAmerican a thinkr:Work, owl:NamedIndividual ;
@@ -1389,7 +1389,7 @@ tgs:Work.HospicingModernity a thinkr:Work, owl:NamedIndividual ;
     rdfs:comment "2021 book by Vanessa Machado de Oliveira (Vanessa Andreotti). In TGS_126 Daniel Schmachtenberger cites 'her book' for her chief's definition of colonialism: not fundamentally taking land or abusing people, which are epiphenomena, but believing there are separable things. Her own TGS conversation is tgs:Interview.TGS_125_VanessaAndreotti."@en ;
     dct:creator tgs:Human.VanessaAndreotti ;
     dct:issued "2021"^^xsd:gYear ;
-    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment, tgs:Interview.TGS_146_BillPlotkin, tgs:Interview.TGS_125_VanessaAndreotti, tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins ;
+    dct:isReferencedBy tgs:Interview.TGS_126_AVisionForBetterment, tgs:Interview.TGS_146_BillPlotkin, tgs:Interview.TGS_125_VanessaAndreotti, tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins, tgs:Interview.TGS_172_LivingTheChange ;
     dct:identifier "urn:isbn:9781623176242" ;
     dct:isReferencedBy tgs:Work.WorldInTransition2026 ;
     .
@@ -3447,4 +3447,48 @@ tgs:Work.EcoregionBasedApproachToProtectingHalf a thinkr:Work, owl:NamedIndividu
     dct:issued "2017"^^xsd:gYear ;
     dct:identifier <https://doi.org/10.1093/biosci/bix014> ;
     dct:isReferencedBy tgs:Work.OneEarthBioregions2023 ;
+    .
+
+#############################################
+# ADDED 2026-10-20 — sources for tgs:ConceptScheme.GameTheoryMechanisms (gametheory.ttl).
+#############################################
+
+tgs:Work.GamesOfStrategy a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Games of Strategy"@en ;
+    rdfs:comment "Undergraduate game-theory textbook by Avinash Dixit, Susan Skeath and David McAdams (5th edition, W. W. Norton). Main source for tgs:ConceptScheme.GameTheoryMechanisms: chapters 8 to 14, 16 and 17 (strategic moves; uncertainty and information; the prisoner's dilemma and repeated games; collective-action games; evolutionary games; brinkmanship; design of incentives; strategy and voting; bargaining). Chapter list checked against a bookseller's table of contents for the 5th edition; ISBN is the international paperback edition's."@en ;
+    dct:identifier "urn:isbn:9780393422207" ;
+    .
+
+tgs:Work.TheStrategyOfConflict a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Strategy of Conflict"@en ;
+    rdfs:comment "Thomas Schelling's 1960 book (Harvard University Press), source of focal points (Schelling points), strategic moves and brinkmanship as 'the threat that leaves something to chance.' Schelling shared the 2005 Nobel prize in economics for this line of work."@en ;
+    dct:issued "1960"^^xsd:gYear ;
+    .
+
+tgs:Work.AltruisticPunishmentInHumans a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Altruistic Punishment in Humans"@en ;
+    rdfs:comment "Ernst Fehr and Simon Gächter, Nature (2002). Public goods experiments in which people pay to punish free-riders with no prospect of future gain, and cooperation collapses without that option: a founding result for strong reciprocity."@en ;
+    dct:issued "2002"^^xsd:gYear ;
+    dct:identifier "doi:10.1038/415137a" ;
+    .
+
+tgs:Work.UltimatumBargainingExperiment1982 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "An Experimental Analysis of Ultimatum Bargaining"@en ;
+    rdfs:comment "Werner Güth, Rolf Schmittberger and Bernd Schwarze, Journal of Economic Behavior and Organization (1982). The first ultimatum-game experiment: responders rejected offers they considered unfair, contrary to the self-interested prediction."@en ;
+    dct:issued "1982"^^xsd:gYear ;
+    .
+
+tgs:Work.TheStagHunt a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Stag Hunt and the Evolution of Social Structure"@en ;
+    rdfs:comment "Brian Skyrms's 2004 book (Cambridge University Press) arguing that the stag hunt, not the prisoner's dilemma, best models the problem of social cooperation: how a group moves from the safe outcome to the cooperative one."@en ;
+    dct:issued "2004"^^xsd:gYear ;
+    .
+
+tgs:Work.RadikalEmotional a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Radikal emotional: Wie Gefühle Politik machen"@en ;
+    skos:altLabel "Radically Emotional: How Feelings Make Politics"@en ;
+    rdfs:comment "Maren Urner's 2024 book (Droemer Knaur, German only), arguing that everything we decide is emotional because it rests on what we value, and calling for an emotional education truer to our biology. She cites it in TGS_174, suggesting listeners use AI to translate it."@en ;
+    dct:creator tgs:Human.MarenUrner ;
+    dct:issued "2024"^^xsd:gYear ;
+    dct:isReferencedBy tgs:Interview.TGS_174_MarenUrner ;
     .

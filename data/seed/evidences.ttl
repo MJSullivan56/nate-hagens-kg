@@ -501,3 +501,234 @@ tgs:Evidence.TechnoOptimism_PrecautionaryPrinciple a thinkr:Evidence, owl:NamedI
     dcterms:description "The Techno-Optimist Manifesto (Andreessen, a16z, October 16, 2023) names, in its list of what society has been 'subjected to' in 'a mass demoralization campaign... against technology and against life', both 'Precautionary Principle' and 'existential risk'. Verbatim list as quoted by Hart-Landsberg in Monthly Review 78:3 (2026). Drafted by Claude; awaiting MJSullivan's review before promotion to Curated."@en ;
     dcterms:source <https://a16z.com/the-techno-optimist-manifesto/> ;
     prov:generatedAtTime "2026-10-19"^^xsd:date .
+
+tgs:Evidence.GameTheoryFillsTheOughtGap_GameTheory_TGS_126 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Qualifies ;
+    thinkr:citesEpisode tgs:Interview.TGS_126_AVisionForBetterment ;
+    dcterms:description "In TGS_126 Daniel Schmachtenberger treats game theory as an accurate description of how modern institutions choose, because they adopted von Neumann and Morgenstern's formal theory as their working answer to 'what is a good choice?' -- and as a pathology for that same reason. He accepts it as description and rejects it as an ethic, so the contrast with tgs:Concept.GameTheory is partial. Drafted by Claude from the graph's episode records; awaiting MJSullivan's review."@en ;
+    prov:generatedAtTime "2026-10-20"^^xsd:date .
+
+tgs:Evidence.GameTheoreticVersusRealValue_GameTheory_TGS_42 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Qualifies ;
+    thinkr:citesEpisode tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    dcterms:description "In TGS_42 Daniel Schmachtenberger says 'game theoretical value and real value have a major delta': the payoffs that win competition leave out what we actually value, such as breathable air. Game theory still describes the competition correctly; what he contests is treating its payoffs as value. The contrast with tgs:Concept.GameTheory is partial. Drafted by Claude from the graph's episode records; awaiting MJSullivan's review."@en ;
+    prov:generatedAtTime "2026-10-20"^^xsd:date .
+
+tgs:Evidence.Wetware_GameTheory_Frankly_78 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Qualifies ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_78_ABriefClarificationOnHumanBehavior ;
+    dcterms:description "Nate Hagens's account of human wetware -- brains and emotions evolved for small Pleistocene bands -- cuts against classical game theory's rational, calculating player (Frankly_78; in Frankly_76 he adds that in elections emotional, subconscious associations beat higher-level thought). It does not reject strategic analysis; it replaces the assumed player with an evolved, emotional one, the move behavioral game theory makes (tgs:GameTheoryTerm.BehavioralGameTheory). The contrast with tgs:Concept.GameTheory is partial. Drafted by Claude from the graph's episode records; awaiting MJSullivan's review."@en ;
+    prov:generatedAtTime "2026-10-20"^^xsd:date .
+
+tgs:Evidence.ProsocialityUnderTheSuperorganism_GameTheory_Frankly_78 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Qualifies ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_78_ABriefClarificationOnHumanBehavior ;
+    dcterms:description "In Frankly_78 Nate Hagens calls Homo economicus, egoistic and narrow, 'a desolate and dismal view' that is untrue: human nature is largely prosocial, held together by strong reciprocity, and the superorganism suppresses it. This contests the self-interest assumption of classical game theory while keeping its structural insight that institutions shape payoffs. The contrast with tgs:Concept.GameTheory is partial. Drafted by Claude from the graph's episode records; awaiting MJSullivan's review."@en ;
+    prov:generatedAtTime "2026-10-20"^^xsd:date .
+
+tgs:Evidence.ThirdAttractor_StagHunt_TGS_42 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Interview.TGS_42_ModelingDriversMetacrisis ;
+    dcterms:description "Editorial reading, not the speaker's. In TGS_42 Daniel Schmachtenberger frames the third attractor as a coordination system that is 'not corruptible or capturable,' which binds multipolar traps: prisoner's-dilemma logic, solved by governance. Read as a stag hunt, the third attractor is instead a second stable outcome that holds once enough actors trust others to move toward it. The reading fits Nate Hagens's Frankly_78 account of cooperation at the bend-versus-break moment (tgs:Concept.ThreeTimelinesOfResponse) better than Daniel's own framing. Drafted by Claude at MJSullivan's request; awaiting his review."@en ;
+    prov:generatedAtTime "2026-10-20"^^xsd:date .
+
+tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Qualifies ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Disarmer archetype (Frankly_58) against the practice 'Community Reconciliation': Defusing local blame and scapegoating before it escalates. Nate set this reading aside in Frankly 58, so the LinkNote marks it as an editorial extension first used in WWNS #4, not Nate’s. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Disarmer archetype (Frankly_58) against the practice 'Political Advocacy': Frankly 159 names nuclear disarmament as one of four categories of real work and calls for \"a huge disarmament campaign, a huge peace campaign\"; matches the matrix supporter framing (publics stood behind past arms-control successes). Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_159 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_159_TheRealWork ;
+    dcterms:description "Nate Hagens in Frankly_159 names nuclear disarmament as one of four categories of underrepresented real work and calls for 'a huge disarmament campaign, a huge peace campaign', which supports the Disarmer's link to political advocacy. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Silvertongue_CommunityReconciliation_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Silvertongue archetype (Frankly_58) against the practice 'Community Reconciliation': Bridging divided factions; reconciliation does it over past harms rather than current disagreements. No caveat needed. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Silvertongue_NetworkWeaving_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Silvertongue archetype (Frankly_58) against the practice 'Network Weaving': Translator and connector between siloed groups at every level. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Silvertongue_CongressingAndEvents_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Silvertongue archetype (Frankly_58) against the practice 'Congressing and Events': Convening across factions is where the translation happens. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Silvertongue_ParticipatoryStrategies_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Silvertongue archetype (Frankly_58) against the practice 'Participatory Strategies': Bringing factions into shared processes. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_CommunityGovernance_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Governess archetype (Frankly_58) against the practice 'CommunityGovernance (cluster)': The whole cluster is \"better collective decision-making\" in practice; it holds Reconciliation too. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_DecisionMakingProcesses_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Governess archetype (Frankly_58) against the practice 'Decision Making Processes': Direct match to Nate’s definition. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_GovernanceDesign_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Governess archetype (Frankly_58) against the practice 'Governance Design': Designing better decision structures. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_CommonsGovernanceProtocols_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Governess archetype (Frankly_58) against the practice 'Commons Governance Protocols': Collective rules for shared resources. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Governess_GovernanceBodies_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Governess archetype (Frankly_58) against the practice 'Governance Bodies': The institutions decisions run through. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Alchemist_SystemicFinance_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Alchemist archetype (Frankly_58) against the practice 'SystemicFinance (cluster)': Re-tying money to the biophysical balance sheet. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Alchemist_AlternativeFinance_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Alchemist archetype (Frankly_58) against the practice 'AlternativeFinance (cluster)': Local currencies and mutual credit as benign pathways for shrinking financial claims. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Alchemist_FinanceAssessments_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Alchemist archetype (Frankly_58) against the practice 'Finance Assessments': Reading what money actually represents in energy and materials. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Alchemist_4Returns_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Alchemist archetype (Frankly_58) against the practice '4 Returns': Accounting beyond financial return (inspiration, social, natural, financial). Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Barber_FinanceAssessments_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Barber archetype (Frankly_58) against the practice 'Finance Assessments': Triage starts with knowing which claims can be honored. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Barber_PortfolioDevelopment_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Barber archetype (Frankly_58) against the practice 'Portfolio Development': Choosing where scarce resources go; weak, could drop. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Effectivist_DemonstratorSite_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Effectivist archetype (Frankly_58) against the practice 'Demonstrator Site': Executed projects rather than signaling. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Effectivist_ResultBasedMechanisms_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Effectivist archetype (Frankly_58) against the practice 'Result Based Mechanisms': Paying for outcomes matches \"cares about end results\"; weak. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Effectivist_VentureCultivation_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Effectivist archetype (Frankly_58) against the practice 'Venture Cultivation': Turning plans into running enterprises. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Muse_ArtAndStorytelling_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Muse archetype (Frankly_58) against the practice 'Art and Storytelling': Inspiration, music, warmth spreading through a community. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Muse_CulturalAndSpiritualPractices_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Muse archetype (Frankly_58) against the practice 'Cultural and Spiritual Practices': Sources of meaning without a specific goal. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Muse_CulturalHubOrLearningCenter_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Muse archetype (Frankly_58) against the practice 'Cultural Hub or Learning Center': A place where that spreads. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Wellspring_CoachesAndLeaders_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Wellspring archetype (Frankly_58) against the practice 'Coaches and Leaders': A steady node others draw support from; better fit than Reconciliation. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Wellspring_PeerLearning_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Wellspring archetype (Frankly_58) against the practice 'Peer Learning': Mutual support among practitioners. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Catalyst_CitizenOrCommunityScience_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Catalyst archetype (Frankly_58) against the practice 'Citizen or Community Science': Ordinary people paying attention and acting, which Nate offers as the Catalyst model. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .
+
+tgs:Evidence.Catalyst_NetworkWeaving_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
+    thinkr:confidence thinkr:ConfidenceType.Candidate ;
+    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
+    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    dcterms:description "Editorial reading of Nate Hagens's Catalyst archetype (Frankly_58) against the practice 'Network Weaving': Small connecting acts that shift larger outcomes. Drafted by Claude at MJSullivan's request."@en ;
+    prov:generatedAtTime "2026-10-21"^^xsd:date .

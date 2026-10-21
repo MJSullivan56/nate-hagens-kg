@@ -52,3 +52,8 @@ tgs:AcademicInstitution.GeorgetownUniversity a thinkr:AcademicInstitution, owl:N
 tgs:AcademicInstitution.RMITUniversity a thinkr:AcademicInstitution, owl:NamedIndividual ;
     skos:prefLabel "RMIT University"@en ;
     rdfs:comment "University in Melbourne, Australia, where tgs:Human.IndyJohar is Professor of Practice, linked to its Planetary Civics Inquiry (TGS_238 show notes)."@en .
+
+tgs:AcademicInstitution.MuensterUniversityOfAppliedSciences a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "Münster University of Applied Sciences"@en ;
+    skos:altLabel "FH Münster"@en ;
+    rdfs:comment "German university of applied sciences where tgs:Human.MarenUrner has been Professor for Sustainable Transformation since September 2024 and heads the Master's program in Sustainable Transformation Design (TGS_174)."@en .

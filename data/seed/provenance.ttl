@@ -3713,3 +3713,66 @@ tgs:RevisionEvent.BioregioningOneEarthCrosswalk_2026_10_20 a thinkr:RevisionEven
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Added 40 direct SKOS mappings from Bioregioning Earth practice terms to One Earth Solutions terms (closeMatch, narrowMatch, relatedMatch, broadMatch; no exactMatch, which is transitive and claims more than either source supports), so WWNS can go from a solution type straight to the initiatives practicing it. Claude's first-pass draft, accepted by MJSullivan as a starting point to enrich later. Deliberately unmatched: Species Control, Interspecies Mutualism, Disaster Relief, Coaches and Leaders."@en ;
     .
+
+tgs:RevisionEvent.Frankly_76_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_76_TheBattlesOfOurTime ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.BattlesOfOurTime and tgs:Concept.Effectivism, added to the TGS Concepts scheme and their collections, with skos:related links. Notes added to tgs:Concept.PowerVersusLife and tgs:Concept.CulturalMitochondria, which this Frankly anticipates. Back-links on all three references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_70_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_70_AskMeAnything ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.EnergyGDPCoupling and tgs:Concept.HeadHeartAndHands, added to the TGS Concepts scheme and their collections, with skos:related links. Note added to tgs:Concept.RealityBasedHope. Back-links on all 14 references."@en ;
+    .
+
+tgs:RevisionEvent.Frankly_66_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Monologue.Frankly_66_RealityParty ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Concept.RealityParty, added to the TGS Concepts scheme and its collections, with skos:related links. Back-links on all five references."@en ;
+    .
+
+tgs:RevisionEvent.GameTheoryMechanisms_Added a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.GameTheoryMechanisms ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added at MJSullivan's request as a neutral, third-party layer for crosswalking game-theoretic concepts by Nate Hagens, Daniel Schmachtenberger and others (gametheory.ttl): 3 branches and 18 terms, structured after Wikipedia's 'Game theory' article, each with skos:closeMatch to its Wikipedia article (all checked) and dcterms:source to Dixit, Skeath and McAdams' Games of Strategy or a primary source. New class thinkr:GameTheoryTerm; five source Works added. The GameTheoretic lens definition no longer calls it Daniel Schmachtenberger's lens alone. A Wikipedia article on the trust game does not exist (the URL redirects to the dictator game), so the trust game was left out. Mapping of TGS concepts to the scheme is a separate, later step."@en ;
+    .
+
+tgs:RevisionEvent.GameTheoryCrosswalk_Mapped a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.GameTheoryMechanisms ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Mapped TGS concepts to the game theory scheme at MJSullivan's request: 26 SKOS mappings (skos:closeMatch, skos:broadMatch, skos:relatedMatch), from a reviewed proposal in which each 'probable' row was checked against the graph's own episode text (3 promoted, 5 dropped) and 3 'possible' editorial rows were dropped. Two rows map Nate Hagens's Frankly_78 concepts to the stag hunt, on his statement that conforming to what others do is the biggest predictor of behavior. Four concepts that question classical game theory's assumptions (GameTheoryFillsTheOughtGap, GameTheoreticVersusRealValue, Wetware, ProsocialityUnderTheSuperorganism) get thinkr:contrastsWith tgs:Concept.GameTheory with Qualifies evidence. tgs:Concept.ThirdAttractor gets an editorial rdfs:seeAlso to the stag hunt, with a Candidate LinkNote marking it as interpretation. skos:narrower inverses added to the scheme."@en ;
+    .
+
+tgs:RevisionEvent.TGS_174_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_174_MarenUrner, tgs:Human.MarenUrner ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Human.MarenUrner, tgs:Persona.MarenUrner and tgs:Relationship.NateHagens_MarenUrner (Professional), tgs:Organization.PerspectiveDaily, tgs:AcademicInstitution.MuensterUniversityOfAppliedSciences and tgs:Work.RadikalEmotional, and four concepts: ConstructiveJournalism, AttentionEconomy, LearnedHelplessness and ConfirmationBias, added to the TGS Concepts scheme and their collections. Note added to tgs:Concept.LossAversion. Back-links on all references. Guest bio from the show notes, supplemented by German Wikipedia."@en ;
+    .
+
+tgs:RevisionEvent.TGS_172_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_172_LivingTheChange ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build of a listener-video compilation from the official transcript and show notes, replacing the 2026-09-12 stub. No new concepts, people or organizations: contributors are private listeners, named only by first name, role and place. Linked to 11 existing concepts the contributors draw on; back-links on all eight references."@en ;
+    .
+
+tgs:RevisionEvent.TGS_170_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_170_KristineTompkins, tgs:Human.KristineTompkins ;
+    thinkr:revisionDate "2026-10-20"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub. Minted tgs:Human.KristineTompkins, tgs:Persona.KristineTompkins and tgs:Relationship.NateHagens_KristineTompkins (Professional), tgs:Human.DougTompkins, tgs:Organization.TompkinsConservation, tgs:Organization.Patagonia, and three concepts: Rewilding, DeepEcology and EarnedHope, added to the TGS Concepts scheme and their collections. Note added to tgs:Concept.RealityBasedHope. Back-links on all references."@en ;
+    .
+
+tgs:RevisionEvent.ArchetypePracticeLinks a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Archetype.Disarmer, tgs:Archetype.Silvertongue, tgs:Archetype.Governess, tgs:Archetype.Alchemist, tgs:Archetype.Barber, tgs:Archetype.Effectivist, tgs:Archetype.Muse, tgs:Archetype.Wellspring, tgs:Archetype.Catalyst ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Linked the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practice terms and clusters at MJSullivan's request, for use in the WWNS series: 27 dcterms:relation links, each with a Candidate LinkNote and Evidence. From a reviewed proposal; MJSullivan kept every row, including those rated 'possible'. One link (Disarmer to Community Reconciliation) uses the broader sense of the Disarmer from WWNS #4 and carries Qualifies evidence marking it as an editorial extension. Disarmer to Political Advocacy also cites Frankly_159."@en ;
+    .

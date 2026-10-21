@@ -2861,3 +2861,29 @@ tgs:Relationship.NateHagens_RianeEisler a thinkr:Relationship, owl:NamedIndividu
           thinkr:episode tgs:Interview.TGS_116_RianeEisler ;
           dcterms:date "2024-03-07"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: Nate's intro ('I had never heard of her until a few months ago. We have multiple friends in common') and his close ('thank you for your time and for your lifetime of work'), with her reply 'I look forward to more.' No friend language from either side."@en .
+
+tgs:Relationship.NateHagens_MarenUrner a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.MarenUrner ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Maren Urner"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_174_MarenUrner ;
+          dcterms:date "2025-03-31"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: Nate opens 'great to finally have you on the program' after delays, says he became interested in her work in Berlin, and closes 'it's been a joy to connect with you,' inviting her back 'in a social contract on camera sort of way.' No friend language."@en .
+
+tgs:Relationship.NateHagens_KristineTompkins a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.KristineTompkins ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Kristine Tompkins"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_170_KristineTompkins ;
+          dcterms:date "2025-01-29"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'we just met a couple weeks ago' and 'we wished we had met over a decade ago'; a mutual friend, Randy Hayes, introduced them. Nate closes 'I wish we would've met 20 years ago,' and she answers 'We're gonna make up for it.'"@en .

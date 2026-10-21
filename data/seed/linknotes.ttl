@@ -8,6 +8,70 @@ tgs: a owl:Ontology ;
     rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en ;
     owl:imports thinkr: .
 
+tgs:LinkNote.Alchemist_4Returns a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.4Returns ;
+    thinkr:aboutSubject tgs:Archetype.Alchemist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Alchemist_4Returns_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Alchemist dcterms:relation tgs:PracticeTerm.4Returns, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Alchemist_AlternativeFinance a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeCluster.AlternativeFinance ;
+    thinkr:aboutSubject tgs:Archetype.Alchemist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Alchemist_AlternativeFinance_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Alchemist dcterms:relation tgs:PracticeCluster.AlternativeFinance, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Alchemist_FinanceAssessments a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.FinanceAssessments ;
+    thinkr:aboutSubject tgs:Archetype.Alchemist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Alchemist_FinanceAssessments_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Alchemist dcterms:relation tgs:PracticeTerm.FinanceAssessments, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Alchemist_SystemicFinance a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeCluster.SystemicFinance ;
+    thinkr:aboutSubject tgs:Archetype.Alchemist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Alchemist_SystemicFinance_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Alchemist dcterms:relation tgs:PracticeCluster.SystemicFinance, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Barber_FinanceAssessments a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.FinanceAssessments ;
+    thinkr:aboutSubject tgs:Archetype.Barber ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Barber_FinanceAssessments_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Barber dcterms:relation tgs:PracticeTerm.FinanceAssessments, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Barber_PortfolioDevelopment a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.PortfolioDevelopment ;
+    thinkr:aboutSubject tgs:Archetype.Barber ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Barber_PortfolioDevelopment_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Barber dcterms:relation tgs:PracticeTerm.PortfolioDevelopment, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Catalyst_CitizenOrCommunityScience a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CitizenOrCommunityScience ;
+    thinkr:aboutSubject tgs:Archetype.Catalyst ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Catalyst_CitizenOrCommunityScience_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Catalyst dcterms:relation tgs:PracticeTerm.CitizenOrCommunityScience, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Catalyst_NetworkWeaving a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.NetworkWeaving ;
+    thinkr:aboutSubject tgs:Archetype.Catalyst ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Catalyst_NetworkWeaving_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Catalyst dcterms:relation tgs:PracticeTerm.NetworkWeaving, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
 tgs:LinkNote.ChaliceAndBladePower_PowerVersusLife a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.PowerVersusLife ;
@@ -47,6 +111,23 @@ tgs:LinkNote.CorporationAsObligateSociopath_CorporationsAsMisalignedAI a thinkr:
     thinkr:hasEvidence tgs:Evidence.CorporationAsObligateSociopath_CorporationsAsMisalignedAI ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.CorporationAsObligateSociopath thinkr:complements tgs:Concept.CorporationsAsMisalignedAI. Both treat the corporation as a non-human agent whose goals diverge from human and biospheric good: Daniel through its built-in dark-triad traits and legal duty to maximize returns, Nate through the alignment framing he uses for AI. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
 
+tgs:LinkNote.Disarmer_CommunityReconciliation a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CommunityReconciliation ;
+    thinkr:aboutSubject tgs:Archetype.Disarmer ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.CommunityReconciliation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Uses the Disarmer in the broader sense first used in WWNS #4, \"What the Oil-Shock Numbers Leave Out\" (2026-10-08, https://medium.com/@jmichaelsullivan/wwns-4-what-the-oil-shock-numbers-leave-out-2ea6c300690f) (defusing local blame and scapegoating), which Nate Hagens set aside in Frankly_58 in favor of nuclear disarmament; see the scopeNote on tgs:Archetype.Disarmer. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Disarmer_PoliticalAdvocacy a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.PoliticalAdvocacy ;
+    thinkr:aboutSubject tgs:Archetype.Disarmer ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_159,
+        tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.PoliticalAdvocacy, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
 tgs:LinkNote.DiscountRatesAndPresentBias_MarcusAurelius a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Persona.MarcusAurelius ;
@@ -78,6 +159,30 @@ tgs:LinkNote.Ecomodernism_LimitsToGrowth a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.Ecomodernism_LimitsToGrowth ;
     thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
     skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.Ecomodernism thinkr:challenges tgs:Concept.LimitsToGrowth. Rival paradigm: decoupling instead of limits. Stays Candidate until MJSullivan reviews it."@en .
+
+tgs:LinkNote.Effectivist_DemonstratorSite a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.DemonstratorSite ;
+    thinkr:aboutSubject tgs:Archetype.Effectivist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Effectivist_DemonstratorSite_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Effectivist dcterms:relation tgs:PracticeTerm.DemonstratorSite, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Effectivist_ResultBasedMechanisms a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.ResultBasedMechanisms ;
+    thinkr:aboutSubject tgs:Archetype.Effectivist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Effectivist_ResultBasedMechanisms_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Effectivist dcterms:relation tgs:PracticeTerm.ResultBasedMechanisms, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Effectivist_VentureCultivation a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.VentureCultivation ;
+    thinkr:aboutSubject tgs:Archetype.Effectivist ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Effectivist_VentureCultivation_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Effectivist dcterms:relation tgs:PracticeTerm.VentureCultivation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.EmbeddedGrowthObligation_GrowthImperative a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -128,6 +233,14 @@ tgs:LinkNote.FragmentedConsciousness_VerticalBehavioralStack a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.FragmentedConsciousness_VerticalBehavioralStack ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.FragmentedConsciousness thinkr:complements tgs:Concept.VerticalBehavioralStack. Daniel, after Bohm, locates the root of the world's problems in a consciousness that perceives parts before wholes; Nate locates fragmentation in the body and daily life and offers a practical, bottom-up way to re-integrate it. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
 
+tgs:LinkNote.GameTheoreticVersusRealValue_GameTheory a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Concept.GameTheory ;
+    thinkr:aboutSubject tgs:Concept.GameTheoreticVersusRealValue ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoreticVersusRealValue_GameTheory_TGS_42 ;
+    skos:scopeNote "Game theory crosswalk (added 2026-10-20) on the triple tgs:Concept.GameTheoreticVersusRealValue thinkr:contrastsWith tgs:Concept.GameTheory. The concept questions classical game theory's assumptions of rational, self-interested players rather than its usefulness. Stays Candidate until MJSullivan reviews it."@en .
+
 tgs:LinkNote.GameTheoreticVersusRealValue_HavesAndHaveNots a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.HavesAndHaveNots ;
@@ -152,6 +265,14 @@ tgs:LinkNote.GameTheoreticVersusRealValue_TransmutingWealthIntoIncome a thinkr:L
     thinkr:hasEvidence tgs:Evidence.GameTheoreticVersusRealValue_TransmutingWealthIntoIncome ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GameTheoreticVersusRealValue thinkr:complements tgs:Concept.TransmutingWealthIntoIncome. Daniel explains why unpriced goods lose to whatever gives competitive advantage; Nate describes the result as a civilizational drawdown of wealth counted as income, and names its reversal, a regenerative culture. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
 
+tgs:LinkNote.GameTheoryFillsTheOughtGap_GameTheory a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Concept.GameTheory ;
+    thinkr:aboutSubject tgs:Concept.GameTheoryFillsTheOughtGap ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.GameTheoryFillsTheOughtGap_GameTheory_TGS_126 ;
+    skos:scopeNote "Game theory crosswalk (added 2026-10-20) on the triple tgs:Concept.GameTheoryFillsTheOughtGap thinkr:contrastsWith tgs:Concept.GameTheory. The concept questions classical game theory's assumptions of rational, self-interested players rather than its usefulness. Stays Candidate until MJSullivan reviews it."@en .
+
 tgs:LinkNote.GameTheoryFillsTheOughtGap_ProsocialityUnderTheSuperorganism a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.ProsocialityUnderTheSuperorganism ;
@@ -167,6 +288,46 @@ tgs:LinkNote.GeneralizedJevonsParadox_JevonsDividend a thinkr:LinkNote,
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
     thinkr:hasEvidence tgs:Evidence.GeneralizedJevonsParadox_JevonsDividend ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.GeneralizedJevonsParadox thinkr:complements tgs:Concept.JevonsDividend. Daniel's diagnosis and Nate's remedy. Daniel generalizes the rebound effect to every widely used input and says efficiency only reduces total use under a binding system; Nate's Jevons paradox dividend is a concrete binding rule that diverts efficiency gains outside the growth economy. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.Governess_CommonsGovernanceProtocols a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CommonsGovernanceProtocols ;
+    thinkr:aboutSubject tgs:Archetype.Governess ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Governess_CommonsGovernanceProtocols_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeTerm.CommonsGovernanceProtocols, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Governess_CommunityGovernance a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeCluster.CommunityGovernance ;
+    thinkr:aboutSubject tgs:Archetype.Governess ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Governess_CommunityGovernance_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeCluster.CommunityGovernance, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Governess_DecisionMakingProcesses a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.DecisionMakingProcesses ;
+    thinkr:aboutSubject tgs:Archetype.Governess ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Governess_DecisionMakingProcesses_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeTerm.DecisionMakingProcesses, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Governess_GovernanceBodies a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.GovernanceBodies ;
+    thinkr:aboutSubject tgs:Archetype.Governess ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Governess_GovernanceBodies_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeTerm.GovernanceBodies, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Governess_GovernanceDesign a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.GovernanceDesign ;
+    thinkr:aboutSubject tgs:Archetype.Governess ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Governess_GovernanceDesign_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Governess dcterms:relation tgs:PracticeTerm.GovernanceDesign, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.HeartWillMind_HealingBeforeEngagement a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -334,6 +495,30 @@ tgs:LinkNote.MultipolarTrap_Superorganism a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.MultipolarTrap_Superorganism ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.MultipolarTrap thinkr:complements tgs:Concept.Superorganism. The same dynamic seen through two lenses. Nate's superorganism is the emergent, energy-driven behavior of eight billion people that no one steers; Daniel's multipolar trap is the coordination failure that keeps any single actor from stepping out of it. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
 
+tgs:LinkNote.Muse_ArtAndStorytelling a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.ArtAndStorytelling ;
+    thinkr:aboutSubject tgs:Archetype.Muse ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Muse_ArtAndStorytelling_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Muse dcterms:relation tgs:PracticeTerm.ArtAndStorytelling, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Muse_CulturalAndSpiritualPractices a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CulturalAndSpiritualPractices ;
+    thinkr:aboutSubject tgs:Archetype.Muse ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Muse_CulturalAndSpiritualPractices_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Muse dcterms:relation tgs:PracticeTerm.CulturalAndSpiritualPractices, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Muse_CulturalHubOrLearningCenter a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CulturalHubOrLearningCenter ;
+    thinkr:aboutSubject tgs:Archetype.Muse ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Muse_CulturalHubOrLearningCenter_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Muse dcterms:relation tgs:PracticeTerm.CulturalHubOrLearningCenter, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
 tgs:LinkNote.NeoclassicalGrowthEconomics_LimitsToGrowth a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.LimitsToGrowth ;
@@ -422,6 +607,14 @@ tgs:LinkNote.PrematureCertainty_CulturalAntibodies a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.PrematureCertainty_CulturalAntibodies ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.PrematureCertainty thinkr:complements tgs:Concept.CulturalAntibodies. Daniel explains why confident catastrophic predictions are tempting and unreliable; Nate describes the cultural cost when they fail, a public that stops listening to the real science. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
 
+tgs:LinkNote.ProsocialityUnderTheSuperorganism_GameTheory a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Concept.GameTheory ;
+    thinkr:aboutSubject tgs:Concept.ProsocialityUnderTheSuperorganism ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.ProsocialityUnderTheSuperorganism_GameTheory_Frankly_78 ;
+    skos:scopeNote "Game theory crosswalk (added 2026-10-20) on the triple tgs:Concept.ProsocialityUnderTheSuperorganism thinkr:contrastsWith tgs:Concept.GameTheory. The concept questions classical game theory's assumptions of rational, self-interested players rather than its usefulness. Stays Candidate until MJSullivan reviews it."@en .
+
 tgs:LinkNote.RestraintByDesign_JevonsDividend a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.JevonsDividend ;
@@ -438,6 +631,38 @@ tgs:LinkNote.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation a 
     thinkr:hasEvidence tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation,
         tgs:Evidence.SensemakingPrerequisiteOfOpenSociety_SharedBroadcastPerturbation_Frankly_81 ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-18) on the triple tgs:Concept.SensemakingPrerequisiteOfOpenSociety thinkr:complements tgs:Concept.SharedBroadcastPerturbation. Daniel states the requirement: an open society needs everyone to make sense well. Nate gives a historical case of a society briefly sensing together, through one broadcast, and says fractured, AI-generated media has closed that route. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.Silvertongue_CommunityReconciliation a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CommunityReconciliation ;
+    thinkr:aboutSubject tgs:Archetype.Silvertongue ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Silvertongue_CommunityReconciliation_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Silvertongue dcterms:relation tgs:PracticeTerm.CommunityReconciliation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Silvertongue_CongressingAndEvents a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CongressingAndEvents ;
+    thinkr:aboutSubject tgs:Archetype.Silvertongue ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Silvertongue_CongressingAndEvents_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Silvertongue dcterms:relation tgs:PracticeTerm.CongressingAndEvents, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Silvertongue_NetworkWeaving a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.NetworkWeaving ;
+    thinkr:aboutSubject tgs:Archetype.Silvertongue ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Silvertongue_NetworkWeaving_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Silvertongue dcterms:relation tgs:PracticeTerm.NetworkWeaving, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'firm' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Silvertongue_ParticipatoryStrategies a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.ParticipatoryStrategies ;
+    thinkr:aboutSubject tgs:Archetype.Silvertongue ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Silvertongue_ParticipatoryStrategies_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Silvertongue dcterms:relation tgs:PracticeTerm.ParticipatoryStrategies, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
 
 tgs:LinkNote.Superorganism_EOWilson a thinkr:LinkNote,
         owl:NamedIndividual ;
@@ -482,6 +707,14 @@ tgs:LinkNote.TechnoOptimism_PrecautionaryPrinciple a thinkr:LinkNote,
     thinkr:hasOppositionType thinkr:OppositionType.CompetingParadigm ;
     skos:scopeNote "Opposition link (added 2026-10-19) on the triple tgs:SchoolOfThought.TechnoOptimism thinkr:challenges tgs:Concept.PrecautionaryPrinciple. Techno-optimism names precaution as an enemy, the opposite of Daniel Schmachtenberger's call to bind power with restraint (tgs:Concept.RestraintByDesign). Stays Candidate until MJSullivan reviews it."@en .
 
+tgs:LinkNote.ThirdAttractor_StagHunt a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:GameTheoryTerm.StagHunt ;
+    thinkr:aboutSubject tgs:Concept.ThirdAttractor ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.ThirdAttractor_StagHunt_TGS_42 ;
+    skos:scopeNote "Editorial link (added 2026-10-20) on the triple tgs:Concept.ThirdAttractor rdfs:seeAlso tgs:GameTheoryTerm.StagHunt. MJSullivan's and Claude's interpretation, not Daniel Schmachtenberger's framing; recorded with rdfs:seeAlso rather than a SKOS mapping so the graph does not assert the match. Stays Candidate until MJSullivan reviews it."@en .
+
 tgs:LinkNote.ThreeByThreeResponseGrid_SolutionSpaceCube a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Concept.SolutionSpaceCube ;
@@ -497,6 +730,30 @@ tgs:LinkNote.ThreeByThreeResponseGrid_ThreeTimelinesOfResponse a thinkr:LinkNote
     thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
     thinkr:hasEvidence tgs:Evidence.ThreeByThreeResponseGrid_ThreeTimelinesOfResponse ;
     skos:scopeNote "Schmachtenberger-Hagens bridge (added 2026-10-19) on the triple tgs:Concept.ThreeByThreeResponseGrid thinkr:complements tgs:Concept.ThreeTimelinesOfResponse. Both divide response into three horizons. Daniel's are kinds of action -- triage, transition within existing systems, new systems -- crossed with culture, political economy and technology. Nate's are periods of the Great Simplification -- now, the bend-versus-break moment, a later stable state -- each with a different capacity for prosocial action. calculatedConfidence not yet set: run scripts/compute_confidence.py (it stays Candidate until the Evidence is reviewed and marked Curated)."@en .
+
+tgs:LinkNote.Wellspring_CoachesAndLeaders a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.CoachesAndLeaders ;
+    thinkr:aboutSubject tgs:Archetype.Wellspring ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Wellspring_CoachesAndLeaders_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Wellspring dcterms:relation tgs:PracticeTerm.CoachesAndLeaders, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Wellspring_PeerLearning a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:PracticeTerm.PeerLearning ;
+    thinkr:aboutSubject tgs:Archetype.Wellspring ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Wellspring_PeerLearning_Frankly_58 ;
+    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Wellspring dcterms:relation tgs:PracticeTerm.PeerLearning, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'possible' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
+
+tgs:LinkNote.Wetware_GameTheory a thinkr:LinkNote,
+        owl:NamedIndividual ;
+    thinkr:aboutObject tgs:Concept.GameTheory ;
+    thinkr:aboutSubject tgs:Concept.Wetware ;
+    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
+    thinkr:hasEvidence tgs:Evidence.Wetware_GameTheory_Frankly_78 ;
+    skos:scopeNote "Game theory crosswalk (added 2026-10-20) on the triple tgs:Concept.Wetware thinkr:contrastsWith tgs:Concept.GameTheory. The concept questions classical game theory's assumptions of rational, self-interested players rather than its usefulness. Stays Candidate until MJSullivan reviews it."@en .
 
 tgs:LinkNote.Wetware_SigmundFreud a thinkr:LinkNote,
         owl:NamedIndividual ;

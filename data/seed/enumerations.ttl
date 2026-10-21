@@ -198,7 +198,7 @@ thinkr:AnalyticalLensType a owl:Class, thinkr:Category ;
 
 thinkr:AnalyticalLensType.GameTheoretic a thinkr:AnalyticalLensType, owl:NamedIndividual ;
     skos:prefLabel "Game-Theoretic"@en ;
-    skos:definition "Explains outcomes through incentives, competition and coordination among agents: multipolar traps, arms races, first-mover races, returns on agency. The characteristic lens of Daniel Schmachtenberger."@en .
+    skos:definition "Explains outcomes through incentives, competition and coordination among agents: multipolar traps, arms races, first-mover races, returns on agency. Daniel Schmachtenberger is its most frequent source in this graph, alongside Garrett Hardin, Elinor Ostrom, Robert Pape, David Sloan Wilson and Nate Hagens himself. The standard terms behind it are in tgs:ConceptScheme.GameTheoryMechanisms."@en .
 
 thinkr:AnalyticalLensType.Biophysical a thinkr:AnalyticalLensType, owl:NamedIndividual ;
     skos:prefLabel "Biophysical"@en ;

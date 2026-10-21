@@ -888,7 +888,7 @@ tgs:Concept.CulturalMitochondria a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Cultural Mitochondria: Ten Qualities That Could Change the Future"@en ;
     skos:definition "Ten personal qualities -- grounding, a post-tragic mindset, co-regulation, restraint, wide-boundary thinking, play and others -- that Nate suggests could seed a more resilient culture, like small, distributed units of energy inside a cell."@en ;
     thinkr:extendedDefinition "Nate's own real, coined framework, laid out in full in Frankly_98, for ten personal traits he speculates could seed a genuinely more resilient and cooperative culture after the economic Superorganism's own eventual splintering — framed directly as 'cultural mitochondria,' small, distributed, largely invisible units of capacity, extending Marvin Harris's own real cultural-materialism pyramid (infrastructure, structure, superstructure, already built) to the real inner world of individuals the original framework left out. Nate's own real, numbered list, given deliberately 'in no particular order' despite the numbering: (0) self-care as a real neurobiological precondition, not indulgence; (1) grounding, staying tethered to body and breath; (2) a post-tragic mindset, metabolizing grief into daily rhythm rather than avoiding it; (3) being networked, decentralized and mycelial rather than hierarchical, 'finding the others'; (4) co-regulation with others via real polyvagal safety, not just individual regulation; (5) systems thinking / wide boundary thinking; (6) restraint, deliberately saying no to consumption and supernormal stimuli; (7) being status-free or status-aware rather than status-driven; (8) genuinely feeling interconnection with the web of life, not just knowing it intellectually; (9) embracing emergence over fixed outcomes, seeding present conditions rather than planning a final result; and (10) play and joy, explicitly named optional yet real and important."@en ;
-    skos:scopeNote "Real, foundational framework, first delivered in full in Frankly_98 (already built). Real, honest quirk worth preserving rather than silently correcting: Nate's own numbering runs zero through ten — eleven real labeled positions — for what he calls 'ten traits,' a genuine inconsistency in his own live delivery, not a transcription error. Real, direct grounding citations confirmed: Francis Weller's own already-built TGS appearance for grief work; Mark Gafni or Zak Stein (Nate himself is uncertain which) for the pre-tragic/post-tragic framing; David Sloan Wilson and E.O. Wilson for multilevel selection theory; and Ilya Prigogine's own real 'islands of coherence' framing (already a formal Concept in this graph), directly quoted in this episode's own real closing line, though the transcript itself mis-renders his name as 'IA Priya Jean.'"@en ;
+    skos:scopeNote "Real, foundational framework, first delivered in full in Frankly_98 (already built). Real, honest quirk worth preserving rather than silently correcting: Nate's own numbering runs zero through ten — eleven real labeled positions — for what he calls 'ten traits,' a genuine inconsistency in his own live delivery, not a transcription error. Real, direct grounding citations confirmed: Francis Weller's own already-built TGS appearance for grief work; Mark Gafni or Zak Stein (Nate himself is uncertain which) for the pre-tragic/post-tragic framing; David Sloan Wilson and E.O. Wilson for multilevel selection theory; and Ilya Prigogine's own real 'islands of coherence' framing (already a formal Concept in this graph), directly quoted in this episode's own real closing line, though the transcript itself mis-renders his name as 'IA Priya Jean.' The image first appears in Frankly_76 (November 2024): beyond power versus life, what is at stake is the superorganism versus the mitochondria of a culture that could live beyond it, passed on as mitochondria pass from mother to child (tgs:Concept.BattlesOfOurTime)."@en ;
     .
 
 tgs:Concept.TenCoreMythsOfBusinessSchools a thinkr:Concept, owl:NamedIndividual ;
@@ -1885,7 +1885,7 @@ tgs:Concept.RealityBasedHope a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Reality-Based Hope"@en ;
     skos:definition "Nate's insistence (TGS_205) that, in discussing the more-than-human predicament, the word 'hope' must be preceded by 'authentic' or 'reality-based,' because many people's hopes are consciously or unconsciously tied to the continuation of modernity, which, in Vanessa Andreotti's phrase, we are now hospicing. Reality-based grounds for hope include that most of what is needed (clean water, healthy children, good education, a reasonable economy, protected ecosystems, basic needs met) is worth doing anyway, that the energy transition can be about our relationship with energy rather than simply a change of fuel, and the growing awareness he hears from listeners."@en ;
     dcterms:source <https://www.thegreatsimplification.com/episode/205-nate-hagens> ;
-    skos:scopeNote "Minted 2026-10-13 for TGS_205. Related: tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Dread."@en ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_205. Related: tgs:Concept.MoreThanHumanPredicament, tgs:Concept.Dread. Earlier, in Frankly_70 (August 2024), Nate said he does not really like the word hope and is more aligned with resolve, meaning, purpose and trust in what may emerge. In TGS_170 (April 2025) Kristine Tompkins makes a related point that Nate endorses: hope has to be earned by doing something (tgs:Concept.EarnedHope)."@en ;
     .
 
 tgs:Concept.ClimateDashboard a thinkr:Concept, owl:NamedIndividual ;
@@ -3295,7 +3295,7 @@ tgs:Concept.PowerVersusLife a thinkr:Concept, thinkr:HagensConcept, owl:NamedInd
     skos:definition "Nate Hagens's framing of 'a central point of this podcast' (Frankly_82): we are alive at a time when there is 'a battle between life and power.' Power has ridden successive surpluses -- grain, then fossil fuels, then paper money, then digital money, and now artificial intelligence and military power -- each faster and larger than the last, while life, meaning human life but also biological and ecological carrying capacity, is diminished in its wake. The response he proposes is not to seek power for oneself, the path of the 'sovereign individual,' but wide-boundary sovereignty in service of life (tgs:Concept.WideBoundarySovereignty, tgs:Concept.InServiceOfLife)."@en ;
     dcterms:source <https://www.thegreatsimplification.com/frankly-original/82-power-vs-life> ;
     thinkr:influencedBy tgs:Persona.NateHagens ;
-    skos:scopeNote "Minted 2026-10-18 for Frankly_82, whose title it is. It echoes the 'life or growth' choice Nate puts to Daniel Schmachtenberger at the end of TGS_42 and the title of tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth. The practical and personal counterpart of Daniel's game-theoretic tgs:Concept.MaximizingReturnsOnPower (TGS_132) and tgs:Concept.HyperAgents (TGS_20): Daniel explains why power compounds; Nate asks what a person aware of it should do instead. Related: tgs:Concept.Superorganism, tgs:Concept.MaximumPowerPrinciple."@en ;
+    skos:scopeNote "Minted 2026-10-18 for Frankly_82, whose title it is. It echoes the 'life or growth' choice Nate puts to Daniel Schmachtenberger at the end of TGS_42 and the title of tgs:Interview.TGS_57_HumanitysSoulLifeOrGrowth. The practical and personal counterpart of Daniel's game-theoretic tgs:Concept.MaximizingReturnsOnPower (TGS_132) and tgs:Concept.HyperAgents (TGS_20): Daniel explains why power compounds; Nate asks what a person aware of it should do instead. Related: tgs:Concept.Superorganism, tgs:Concept.MaximumPowerPrinciple. An earlier statement is in Frankly_76 (November 2024), which names power versus life as the battle of our times that all the other polarities feed into (tgs:Concept.BattlesOfOurTime)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
@@ -3773,7 +3773,7 @@ tgs:Concept.LossAversion a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "The cognitive bias by which people weigh a loss more heavily than an equal gain -- in the research Nate Hagens cites, about twice as strongly. Formalized in Daniel Kahneman and Amos Tversky's prospect theory (1979). Nate gives it an evolutionary explanation: for an animal with enough food, a little extra made no difference, but a loss could mean death. In Frankly_25 he argues it will be one of the main biases of the coming financial and biophysical contraction, when claims exceed what reality can service and people lose what they thought they owned; that the story of the end of growth itself triggers it, by threatening identities built on progress; that on social media identity becomes a supernormal stimulus defended like calories; and that it keeps cultures choosing fixes that ask them to give up nothing. His counters are to measure self-worth by natural, social, built and human capital rather than net worth, and to widen it into a deep-time loss aversion for the species and ecosystems we are losing slowly."@en ;
     dcterms:source <https://read.realityblind.world/view/975731937/82/> ;
     thinkr:relatesTo tgs:Concept.SupernormalStimuli, tgs:Concept.CulturalAntibodies, tgs:Concept.AggregateCognitiveDissonance, tgs:Concept.MusicalChairsMoment ;
-    skos:scopeNote "Minted 2026-10-19 for Frankly_25, whose title it is; the gap was first surfaced by tgs:Work.TGSGlossary. Typed thinkr:Concept, not thinkr:HagensConcept: the bias is Kahneman and Tversky's, and Nate applies it (the dcterms:source is the Reality Blind page on it). Nate's own image for the counter is in tgs:Concept.RichInSocialCapital and tgs:Concept.HavesAndHaveNots."@en ;
+    skos:scopeNote "Minted 2026-10-19 for Frankly_25, whose title it is; the gap was first surfaced by tgs:Work.TGSGlossary. Typed thinkr:Concept, not thinkr:HagensConcept: the bias is Kahneman and Tversky's, and Nate applies it (the dcterms:source is the Reality Blind page on it). Nate's own image for the counter is in tgs:Concept.RichInSocialCapital and tgs:Concept.HavesAndHaveNots. In TGS_174 (April 2025) Nate and Maren Urner use it to explain why news turns negative: a brain tuned to survival clicks on bad news first, so 'what bleeds leads.'"@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
@@ -3893,6 +3893,153 @@ tgs:Concept.Bioregion a thinkr:Concept, owl:NamedIndividual ;
     skos:scopeNote "Minted 2026-10-20 with the import of tgs:Work.OneEarthBioregions2023, whose 185 bioregions are modeled as thinkr:Bioregion individuals (bioregions.ttl). In TGS, bioregionalism is the subject of tgs:Interview.TGS_139_DanielChristianWahl ('Bioregional Futures'). Related: tgs:Work.BioregioningEarthOntology, tgs:InterventionSubdomain.ReconnectionToPlace, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:Concept.CircleOfTrustLocalism."@en ;
     .
 
+tgs:Concept.BattlesOfOurTime a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The Battles of Our Time"@en ;
+    skos:altLabel "Polarities of our time"@en ;
+    skos:definition "Nate Hagens's list (Frankly_76, November 2024) of the tensions of the coming decades, from geopolitics down to the nervous system: a unipolar versus a multipolar world, elites versus the common man, masculine versus feminine traits, individual versus collective, humans versus non-humans, present versus future, dopamine versus the other neurotransmitters, extraction versus regeneration, things versus connections, activism versus effectivism, brainstem versus neocortex, fantasy versus reality, sympathetic versus parasympathetic, and behaviors versus values. The morning after recording he reframed them as polarities to be navigated and harmonized rather than won. All are part of one greater battle, power versus life, and beyond it the superorganism versus the cultural 'mitochondria' that could outlive it."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/76-the-battles-of-our-time> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-20 for Frankly_76, whose title it is. The culture Nate hopes to seed sits on the second side of most pairings: more feminine, more ecological and less mechanistic, more right-brain, and valuing the more-than-human world in its prices and decisions. Related: tgs:Concept.PowerVersusLife (named here as the umbrella battle, two months before Frankly_82 built on it), tgs:Concept.CulturalMitochondria (the mitochondria image, developed in Frankly_98), tgs:Concept.DividedBrain (left versus right brain), tgs:Concept.GhostOfDopaminePast and tgs:Concept.DopamineHijackedCulture, tgs:Concept.MultilevelSelection (cooperation and competition both hardwired), tgs:Concept.Effectivism. Frankly_74 opens with an earlier list of dualities: pro-human versus anti-human, mechanistic versus animistic, natalist versus anti-natalist."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.Effectivism a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Activism Versus Effectivism"@en ;
+    skos:altLabel "Effectivism"@en ;
+    skos:definition "Nate Hagens's contrast (Frankly_76): activism is backward-looking, destructive and blaming; effectivism is creative, forward-looking and planning. Because activism on the issues of the day has not worked, he hopes more people will work on effectivism -- owning who we are as an evolved, clever, hubristic species and planning ahead. His image for where to put the effort: rather than train a thousand sheep, educate and inspire one border collie."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/76-the-battles-of-our-time> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    rdfs:seeAlso tgs:Archetype.Effectivist ;
+    skos:scopeNote "Minted 2026-10-20 for Frankly_76, one of the battles of our time (tgs:Concept.BattlesOfOurTime). The same idea names the Effectivist, one of the nine Bend Not Break archetypes of Frankly_58 (tgs:Archetype.Effectivist), and the title of tgs:Interview.TGS_51_DJWhite ('Ocean Effectivism'). In the same passage Nate said appeals to 'the better angels of our nature' will only ever reach a few percent of people; he retracted that framing two weeks later in Frankly_78 (tgs:Concept.ProsocialityUnderTheSuperorganism)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.EnergyGDPCoupling a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Energy-GDP Coupling"@en ;
+    skos:altLabel "Energy and economic growth"@en ;
+    skos:definition "Nate Hagens's account (Frankly_70) of how tightly economic growth tracks energy. Globally, GDP is essentially 100 percent correlated with material use and 99 percent correlated with energy use, but correlation is not one-for-one: over the past 50-plus years GDP grew about 3.2 percent a year and energy about 2.04 percent, so roughly 70 units of new energy accompany each 100 units of new GDP. Service economies such as the United States and United Kingdom look less coupled because the energy behind their imports is burned elsewhere: the average American uses about 57 barrels of oil equivalent of fossil fuels a year directly, plus about 17 more embodied in imports."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/70-ask-me-anything> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-20 for Frankly_70, answering a listener who had seen EPA figures suggesting US power use had fallen. Electric power is only about 20 percent of global energy use, and US electricity use has flattened rather than fallen. The show notes cite Nature Communications (2020) for the GDP, materials and energy correlations, Our World in Data on energy embodied in imports, and 17 barrels of oil equivalent embodied in imports; Nate says 15 aloud, and the show notes are taken as authoritative. Related: tgs:Concept.EnergyBlindness (the cultural failure to see this dependence), tgs:Concept.CarbonPulse."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.HeadHeartAndHands a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Head, Heart and Hands"@en ;
+    skos:definition "Nate Hagens's description (Frankly_70) of the three things The Great Simplification tries to hold in one conversation. The head is the intellectual framing of the biophysical constraints we face. The heart is the change in consciousness and values: a wider definition of 'we,' the recognition that this is not who we have to be as a species, of what we are doing to the planet, and of the colonial impulse and hierarchical, male-dominated culture. The hands are the practical work that follows; the episode description names the podcast's goal as integrating all three through a generative conversation among many more people. He says the predicament cannot be analysed 'like an accountant or even an ecologist.'"@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/70-ask-me-anything> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-20 for Frankly_70, where Nate names it as the main thing he has learned in two and a half years of the podcast. Daniel Schmachtenberger's comparable triad in TGS_31 is heart, will and mind, where any two without the third fail (tgs:Concept.HeartWillMind). Related: tgs:Concept.DividedBrain (left and right brain, which Nate pairs with the brain and the body in the same answer)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.RealityParty a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The Reality Party"@en ;
+    skos:altLabel "Reality platform"@en ;
+    skos:definition "Nate Hagens's thought experiment (Frankly_66) of a nonpartisan political platform built on shared observations of reality rather than on values. He describes three layers. Preferences most people share across politics: sunsets with loved ones, birdsong, healthy food and clean water, feeling safe, pets, old friends, music, the freedom to choose. Values beneath them, which carry political leanings and are pulling further apart: abortion, fairness, rule of law, fiscal responsibility, immigration, climate, guns, free markets and more. And reality, which 'doesn't care about political affiliation.' His short list of bipartisan observations: things aren't working for most people; the stock market no longer measures well-being; energy underpins the economy, with money and technology sitting on top of it; drilling holes and borrowing on the national credit card are unsustainable; renewables must be rebuilt; the world is turning multipolar; current lifestyles are unsustainable and may change abruptly; humans are animals with a human nature; we are crossing planetary boundaries beyond climate; once basic needs are met most of the best things in life are free; technology is part of the response, not the solution; and we face a predicament, not a problem. The best decisions ahead will be 'country over party.'"@en ;
+    dcterms:source <https://www.thegreatsimplification.com/frankly-original/66-reality-party> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-20 for Frankly_66, recorded two days after the July 2024 attempt on Donald Trump's life. Nate distinguishes observing and describing reality, which is his work, from proposing the policies that might face it, which he hopes more people will coalesce around. He named his university course Reality 101 fourteen years earlier. Related: tgs:Concept.HumanPredicament, tgs:Concept.PredicamentNotProblem, tgs:Concept.PlanetaryBoundaries, tgs:Concept.Rebuildables. In Frankly_75 (October 2024) he returns to the stance as 'apolitical, nonpartisan,' with a four-part filter for judging people that sets left and right aside."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.ConstructiveJournalism a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Constructive Journalism"@en ;
+    skos:altLabel "Solutions journalism"@en ;
+    skos:definition "Journalism that reports problems together with context, responses and possible solutions, so that audiences come away informed and able to act rather than helpless. Maren Urner (TGS_174) argues that neutral reporting does not exist -- choosing what to report always changes the reader's brain -- and that a profit-driven competition for attention has pushed news toward fear and anger, which exploit the brain's survival bias toward bad news. Early research suggests people engage more deeply with constructive reporting and share it more."@en ;
+    dcterms:source <https://www.mediasupport.org/wp-content/uploads/2022/01/A-Handbook-for-Constructive-Journalism-IMS-and-CI-2022.pdf> ;
+    thinkr:influencedBy tgs:Persona.MarenUrner ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_174; the dcterms:source is the constructive journalism handbook the show notes link. Urner co-founded Perspective Daily (tgs:Organization.PerspectiveDaily) in 2016 as the first ad-free online magazine for it, after learning from David Bornstein's Solutions Journalism Network and New York Times Fixes column and from the Dutch De Correspondent (none built). Nate calls his own listener-funded podcast 'a sort of constructive journalism.' Related: tgs:Concept.AttentionEconomy (the incentive it pushes against), tgs:Concept.LearnedHelplessness (the harm it aims to avoid)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.AttentionEconomy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Attention Economy"@en ;
+    skos:definition "An economy in which human attention is the scarce resource that media and platforms compete for and sell, so content is shaped by what captures attention rather than by what informs. Maren Urner (TGS_174) calls attention 'more valuable than anything else on this planet' -- everyone gets the same 24 hours -- and says that in journalism the elephant in the room is money: more clicks mean more revenue, and negative, fear- and anger-driven content gets the most clicks."@en ;
+    dcterms:source <https://www.un.org/sites/un2.un.org/files/attention_economy_feb.pdf> ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_174; the dcterms:source is the UN policy brief the show notes link. Nate frames it as the superorganism having 'eaten media and journalism,' with profit as the main goal and good journalism secondary (tgs:Concept.Superorganism), and calls social media with AI 'the perfect monkey trap for a social primate like us.' Related: tgs:Concept.SupernormalStimuli, tgs:Concept.DopamineHijackedCulture, tgs:Concept.ConstructiveJournalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.LearnedHelplessness a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Learned Helplessness and Self-Efficacy"@en ;
+    skos:altLabel "Learned helplessness"@en, "Self-efficacy"@en ;
+    skos:definition "Learned helplessness is the conviction that nothing one does will change anything; its psychological antidote is self-efficacy, the feeling that one's own action makes a difference, built by seeing even a small action work. Maren Urner (TGS_174) links it to news avoidance: in the Reuters Institute's Digital News Report people say they turn away from news because it is too negative, offers no solutions and leaves them unable to do anything. 'The worst thing you can do to people is make them feel that whatever they do, it doesn't matter. That makes people sick.'"@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Learned_helplessness> ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_174. Standard psychology, not Urner's coinage: learned helplessness is associated with Martin Seligman and self-efficacy with Albert Bandura (neither built). Her examples of self-efficacy: hanging a picture, signing a petition, going to a demonstration, talking to others. Nate sees apathy and checking out as a real risk for the coming decade. Related: tgs:Concept.PersonalAgency, tgs:Concept.ConstructiveJournalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.ConfirmationBias a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.BehavioralEconomicsAndCognition, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Confirmation Bias"@en ;
+    skos:definition "The tendency to seek, notice and believe information that confirms what we already think, and to discount what contradicts it. Maren Urner (TGS_174) calls it 'the father or mother of all the biases' and stresses its social side: we trust information more when it comes from people we already trust, such as our own party."@en ;
+    dcterms:source <https://www.britannica.com/science/confirmation-bias> ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_174; the dcterms:source is the Britannica entry the show notes link. Urner's example: during the COVID pandemic UK politicians had medical staff, not party figures, announce new rules so that supporters of both parties would follow them. In the same passage Nate raises authority bias, now earned by confidence and charisma rather than credentials. Related: tgs:Concept.LossAversion."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.Rewilding a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Rewilding"@en ;
+    skos:definition "Restoring large territories to fully functioning ecosystems, not only protecting the land but bringing back the species that have gone missing, starting from the top predators down. Kristine Tompkins (TGS_170) describes the method: acquire or aggregate large tracts, donate them as national parks, then ask who is missing -- in Argentina's 2-million-acre Iberá wetlands, 27 species from jaguars and pumas to giant anteaters and marsh deer. Without top predators, prey such as capybaras explode and change grasslands and forests; when wolves returned to Yellowstone, elk were pushed back out of the forests and clogged rivers began to recover."@en ;
+    dcterms:source <https://rewilding.org/what-is-rewilding/> ;
+    thinkr:influencedBy tgs:Persona.KristineTompkins ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_170; the dcterms:source is the rewilding page the show notes link. Tompkins Conservation (tgs:Organization.TompkinsConservation) and its partners have protected about 15 million acres in Chile and Argentina; reintroducing jaguars to northern Argentina required the world's first jaguar breeding center, and almost 40 now roam wild. Tompkins says the scale of the work has had to shift to whole continents. Related: tgs:Concept.DeepEcology, tgs:Concept.RightsOfNature."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.DeepEcology a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Deep Ecology"@en ;
+    skos:definition "The philosophy, named by the Norwegian philosopher Arne Naess in the 1970s, whose central idea is that all life has intrinsic value, independent of its usefulness to humans. Kristine Tompkins (TGS_170) calls herself a deep ecologist: 'if you really believe it, then that influences the decisions you make about what your work is every day.' Nate answers that deep ecology brings deep responsibility, which we mostly abdicate."@en ;
+    dcterms:source <https://earth.org/deep-ecology-an-often-misunderstood-theory/> ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_170; the dcterms:source is the article the show notes link, with an open-air-philosophy page on Naess also linked (Naess is not built). Tompkins adds that in recent years she has extended intrinsic value back to humankind as well, after a conversation with Pope Francis. Related: tgs:Concept.Rewilding, tgs:Concept.RightsOfNature, tgs:Concept.MoreThanHumanPredicament; the Reality Roundtable tgs:PanelDiscussion.RR_2_DeeperEcology."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.EarnedHope a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.CommunityAndResponse ;
+    skos:prefLabel "Earned Hope"@en ;
+    skos:definition "Kristine Tompkins's view (TGS_170) that hope must be earned by action. When people ask whether she has hope, she hears 'if you have hope, I'm going to relax a little bit'; but 'one doesn't deserve to have hope unless they're doing something,' and 'the heaviest shovel we raise is to ask someone else if they have hope.' Her alternative to the question 'what can I do?' is another question: what are you really good at? Do that, out your door, this afternoon."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/170-kristine-tompkins> ;
+    thinkr:influencedBy tgs:Persona.KristineTompkins ;
+    skos:scopeNote "Minted 2026-10-20 for TGS_170. Nate agrees, noting that environmental films end with a formulaic note of hope, 'a social filter on what is acceptable to be said.' Tompkins pairs it with abdication: to abdicate dignified lives for the future is 'the most crushing, fatal lack of a decision you will ever make.' Related: tgs:Concept.RealityBasedHope (Nate's later framing, TGS_205), tgs:Concept.LearnedHelplessness (self-efficacy as the antidote), tgs:Concept.Effectivism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -3910,9 +4057,11 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Amonging,
         tgs:Concept.ArrestedHumanDevelopment,
         tgs:Concept.AtomsEnergyBits,
+        tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BarbellEmpathy,
+        tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.BiophysicalGauntlet,
         tgs:Concept.BiophysicalPyramid,
@@ -3940,7 +4089,9 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Communing,
         tgs:Concept.ComplexSystemsThinking,
         tgs:Concept.ComplexityCollapse,
+        tgs:Concept.ConfirmationBias,
         tgs:Concept.ConservationThroughLivelihoods,
+        tgs:Concept.ConstructiveJournalism,
         tgs:Concept.ContinuityValueOfProvision,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
@@ -3956,6 +4107,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DarkRetreat,
         tgs:Concept.DarkTriad,
         tgs:Concept.DarknessDeficitDisorder,
+        tgs:Concept.DeepEcology,
         tgs:Concept.DefaultModeNetwork,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DieselPoweredCivilization,
@@ -3971,6 +4123,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Dread,
         tgs:Concept.DunbarsNumber,
         tgs:Concept.EarlyAnthropoceneHypothesis,
+        tgs:Concept.EarnedHope,
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EcocentricDevelopmentalWheel,
         tgs:Concept.Ecolate,
@@ -3979,6 +4132,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EcologicalSecurity,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
+        tgs:Concept.Effectivism,
         tgs:Concept.EightFacesOfAI,
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EightWorldviewLenses,
@@ -3987,6 +4141,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Enantiodromia,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
+        tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
@@ -4023,6 +4178,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.GreatTurning,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HealingVsDying,
         tgs:Concept.HeartWillMind,
@@ -4054,6 +4210,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.KleibersLaw,
         tgs:Concept.LandscapeOfPossibleFutures,
         tgs:Concept.LayersOfInvisibleWealth,
+        tgs:Concept.LearnedHelplessness,
         tgs:Concept.LeveragePoints,
         tgs:Concept.LifeEnnoblingEconomics,
         tgs:Concept.LifeEthic,
@@ -4133,6 +4290,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ReAgentificationOfTheWorld,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RealityBasedHope,
+        tgs:Concept.RealityParty,
         tgs:Concept.Rebuildables,
         tgs:Concept.RecursiveAbstraction,
         tgs:Concept.RedQueenEffect,
@@ -4143,6 +4301,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.RestraintByDesign,
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RewardPredictionError,
+        tgs:Concept.Rewilding,
         tgs:Concept.RewritingTheRulesOfTheSuperorganism,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RightsOfNature,
@@ -4238,12 +4397,15 @@ tgs:Collection.HagensConcepts a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "Nate Hagens' own concepts"@en ;
     skos:definition "Concepts Nate Hagens originated or reframed (thinkr:HagensConcept), as distinct from others' ideas discussed on the show."@en ;
     skos:member tgs:Concept.AdvancePolicy,
+        tgs:Concept.BattlesOfOurTime,
         tgs:Concept.CarbonPulse,
         tgs:Concept.CivilizationalSharpeRatio,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CulturalAntibodies,
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.EducatingHyperAgents,
+        tgs:Concept.Effectivism,
+        tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FivePathwaysThroughDread,
         tgs:Concept.FivePathwaysToPresence,
@@ -4251,6 +4413,7 @@ tgs:Collection.HagensConcepts a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.FutureCapture,
         tgs:Concept.GreatSimplification,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HealingVsDying,
         tgs:Concept.HumanPredicament,
@@ -4268,6 +4431,7 @@ tgs:Collection.HagensConcepts a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PowerVersusLife,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
         tgs:Concept.ProtectTheIrreversible,
+        tgs:Concept.RealityParty,
         tgs:Concept.Rebuildables,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RobustActions,
@@ -4314,6 +4478,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.CulturalAntibodies,
         tgs:Concept.CustodianshipOverOwnership,
         tgs:Concept.DarknessDeficitDisorder,
+        tgs:Concept.DeepEcology,
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EcologicalAwakening,
         tgs:Concept.EcologicalSecurity,
@@ -4340,6 +4505,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.PowerVersusLife,
         tgs:Concept.ProgressTrap,
         tgs:Concept.ProtectTheIrreversible,
+        tgs:Concept.Rewilding,
         tgs:Concept.RightsOfNature,
         tgs:Concept.SevenFundamentalDriversOfOvershoot,
         tgs:Concept.ShiftingBaselineSyndrome,
@@ -4370,6 +4536,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
     dcterms:subject tgs:Subject.EconomicsAndMonetary ;
     skos:member tgs:Concept.AdvancePolicy,
         tgs:Concept.AtomsEnergyBits,
+        tgs:Concept.AttentionEconomy,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.BiophysicalPyramid,
         tgs:Concept.BrokenApprenticeship,
@@ -4388,6 +4555,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.CustodianshipOverOwnership,
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EmbeddedGrowthObligation,
+        tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GameTheoreticVersusRealValue,
@@ -4438,6 +4606,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
+        tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
@@ -4489,9 +4658,11 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AggregateCognitiveDissonance,
         tgs:Concept.AllostaticLoad,
         tgs:Concept.ArrestedHumanDevelopment,
+        tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BarbellEmpathy,
+        tgs:Concept.BattlesOfOurTime,
         tgs:Concept.Bioregion,
         tgs:Concept.BrokenApprenticeship,
         tgs:Concept.ChaliceAndBladePower,
@@ -4501,7 +4672,9 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
+        tgs:Concept.ConfirmationBias,
         tgs:Concept.ConservationThroughLivelihoods,
+        tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorrelationOfForceAndMeans,
         tgs:Concept.CostConvenienceComfort,
@@ -4511,6 +4684,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DarkRetreat,
         tgs:Concept.DarkTriad,
         tgs:Concept.DarknessDeficitDisorder,
+        tgs:Concept.DeepEcology,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DiningCar,
         tgs:Concept.DiscountRatesAndPresentBias,
@@ -4545,6 +4719,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GameTheoryFillsTheOughtGap,
         tgs:Concept.GhostOfDopaminePast,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HealingVsDying,
         tgs:Concept.HeartWillMind,
@@ -4565,6 +4740,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.JevonsDividend,
         tgs:Concept.KinshipJourney,
         tgs:Concept.LayersOfInvisibleWealth,
+        tgs:Concept.LearnedHelplessness,
         tgs:Concept.LifeEthic,
         tgs:Concept.LightTriad,
         tgs:Concept.LogicOfSeparation,
@@ -4613,6 +4789,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RationalIgnorance,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RealityBasedHope,
+        tgs:Concept.RealityParty,
         tgs:Concept.RecursiveAbstraction,
         tgs:Concept.RedefiningSuccess,
         tgs:Concept.RegenerativeFinance,
@@ -4770,6 +4947,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
+        tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyReturnOnInvestment,
         tgs:Concept.EnergySlaves,
         tgs:Concept.EpigeneticLandscape,
@@ -4793,8 +4971,10 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PowerVersusLife,
         tgs:Concept.PriceCostAndValue,
         tgs:Concept.ProgressTrap,
+        tgs:Concept.RealityParty,
         tgs:Concept.Rebuildables,
         tgs:Concept.RecursiveAbstraction,
+        tgs:Concept.Rewilding,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.StrawSiphonSieve,
         tgs:Concept.Superorganism,
@@ -4856,13 +5036,16 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Institutional lens"@en ;
     skos:member tgs:Concept.AdvancePolicy,
+        tgs:Concept.AttentionEconomy,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.ComplexityCollapse,
+        tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
         tgs:Concept.CostOfExtractionPricing,
@@ -4889,6 +5072,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ProblemSolvingAsRacket,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
         tgs:Concept.PublicChoiceTheory,
+        tgs:Concept.RealityParty,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenKeyInterventions,
@@ -4914,11 +5098,14 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BarbellEmpathy,
         tgs:Concept.DiningCar,
         tgs:Concept.DopamineHijackedCulture,
+        tgs:Concept.EarnedHope,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
+        tgs:Concept.Effectivism,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HighTouchGrounding,
@@ -4926,6 +5113,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.InServiceOfLife,
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.IslandsOfCoherence,
+        tgs:Concept.LearnedHelplessness,
         tgs:Concept.MaximizeImpactNotMinimizeFootprint,
         tgs:Concept.MoralAmbition,
         tgs:Concept.NamedSolutionsDrawCounterResponse,
@@ -4935,6 +5123,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PriceCostAndValue,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RestraintByDesign,
+        tgs:Concept.Rewilding,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RocksInTheRiver,
         tgs:Concept.SevenKeyInterventions,
@@ -4953,11 +5142,16 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Psychological Inner lens"@en ;
     skos:member tgs:Concept.AggregateCognitiveDissonance,
+        tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BattlesOfOurTime,
         tgs:Concept.ChaliceAndBladePower,
+        tgs:Concept.ConfirmationBias,
+        tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CulturalAntibodies,
         tgs:Concept.DarkTriad,
+        tgs:Concept.DeepEcology,
         tgs:Concept.DefaultModeNetwork,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DiscretePhaseShift,
@@ -4970,6 +5164,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GameTheoreticVersusRealValue,
         tgs:Concept.GameTheoryFillsTheOughtGap,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HeadHeartAndHands,
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HerosJourney,
@@ -4980,6 +5175,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.IntelligenceBoundByWisdom,
         tgs:Concept.KinshipJourney,
+        tgs:Concept.LearnedHelplessness,
         tgs:Concept.LightTriad,
         tgs:Concept.LogicOfSeparation,
         tgs:Concept.LossAversion,
@@ -5088,3 +5284,53 @@ tgs:Concept.TenCoreMythsOfBusinessSchools skos:relatedMatch tgs:SchoolOfThought.
 tgs:Concept.ThreeByThreeResponseGrid skos:related tgs:Concept.ThreeTimelinesOfResponse .
 tgs:Concept.UnintendedConsequences skos:related tgs:Concept.WideBoundary .
 tgs:Concept.UnintendedConsequences skos:related tgs:Concept.YellowTeaming .
+tgs:Concept.BattlesOfOurTime skos:related tgs:Concept.CulturalMitochondria .
+tgs:Concept.BattlesOfOurTime skos:related tgs:Concept.DividedBrain .
+tgs:Concept.BattlesOfOurTime skos:related tgs:Concept.Effectivism .
+tgs:Concept.BattlesOfOurTime skos:related tgs:Concept.PowerVersusLife .
+tgs:Concept.Effectivism skos:related tgs:Concept.ProsocialityUnderTheSuperorganism .
+tgs:Concept.EnergyGDPCoupling skos:related tgs:Concept.CarbonPulse .
+tgs:Concept.EnergyGDPCoupling skos:related tgs:Concept.EnergyBlindness .
+tgs:Concept.HeadHeartAndHands skos:related tgs:Concept.HeartWillMind .
+tgs:Concept.RealityParty skos:related tgs:Concept.HumanPredicament .
+tgs:Concept.RealityParty skos:related tgs:Concept.PredicamentNotProblem .
+tgs:Concept.CollectiveActionProblem skos:closeMatch tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:Concept.GlobalGovernanceWithoutGlobalGovernment skos:relatedMatch tgs:GameTheoryTerm.MechanismDesign .
+tgs:Concept.MultilevelSelection skos:broadMatch tgs:GameTheoryTerm.EvolutionaryGameTheory .
+tgs:Concept.MultipolarTrap skos:broadMatch tgs:GameTheoryTerm.PrisonersDilemma .
+tgs:Concept.MultipolarTrap skos:relatedMatch tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:Concept.NonZeroSumness skos:relatedMatch tgs:GameTheoryTerm.ZeroSumGame .
+tgs:Concept.OmniLose skos:relatedMatch tgs:GameTheoryTerm.ZeroSumGame .
+tgs:Concept.OpportunityRiskAsymmetry skos:relatedMatch tgs:GameTheoryTerm.PrisonersDilemma .
+tgs:Concept.OstromDesignPrinciples skos:relatedMatch tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:Concept.OstromDesignPrinciples skos:relatedMatch tgs:GameTheoryTerm.MechanismDesign .
+tgs:Concept.PositiveSumInGroupNegativeSumToNature skos:relatedMatch tgs:GameTheoryTerm.ZeroSumGame .
+tgs:Concept.PowerSeekingAndComplicity skos:broadMatch tgs:GameTheoryTerm.EvolutionaryGameTheory .
+tgs:Concept.ProsocialityUnderTheSuperorganism skos:relatedMatch tgs:GameTheoryTerm.StagHunt .
+tgs:Concept.ProsocialityUnderTheSuperorganism skos:relatedMatch tgs:GameTheoryTerm.StrongReciprocity .
+tgs:Concept.PublicChoiceTheory skos:relatedMatch tgs:GameTheoryTerm.MechanismDesign .
+tgs:Concept.PublicChoiceTheory skos:relatedMatch tgs:GameTheoryTerm.SocialChoiceAndVoting .
+tgs:Concept.PunishmentStrategy skos:broadMatch tgs:GameTheoryTerm.StrategicMoves .
+tgs:Concept.RestraintByDesign skos:relatedMatch tgs:GameTheoryTerm.MechanismDesign .
+tgs:Concept.ReverseDominanceHierarchy skos:relatedMatch tgs:GameTheoryTerm.StrongReciprocity .
+tgs:Concept.SevenKeyQuestionsOnNuclearConflict skos:relatedMatch tgs:GameTheoryTerm.Brinkmanship .
+tgs:Concept.SevenKeyQuestionsOnNuclearConflict skos:relatedMatch tgs:GameTheoryTerm.Chicken .
+tgs:Concept.SocialDilemma skos:closeMatch tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:Concept.TechnologyIsNotValuesNeutral skos:relatedMatch tgs:GameTheoryTerm.PrisonersDilemma .
+tgs:Concept.ThreeTimelinesOfResponse skos:relatedMatch tgs:GameTheoryTerm.StagHunt .
+tgs:Concept.TragedyOfTheCommons skos:broadMatch tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:Concept.TraitsOutcompeteValues skos:broadMatch tgs:GameTheoryTerm.EvolutionaryGameTheory .
+tgs:Concept.GameTheoryFillsTheOughtGap thinkr:contrastsWith tgs:Concept.GameTheory .
+tgs:Concept.GameTheoreticVersusRealValue thinkr:contrastsWith tgs:Concept.GameTheory .
+tgs:Concept.Wetware thinkr:contrastsWith tgs:Concept.GameTheory .
+tgs:Concept.ProsocialityUnderTheSuperorganism thinkr:contrastsWith tgs:Concept.GameTheory .
+tgs:Concept.ThirdAttractor rdfs:seeAlso tgs:GameTheoryTerm.StagHunt .
+tgs:Concept.AttentionEconomy skos:related tgs:Concept.ConstructiveJournalism .
+tgs:Concept.AttentionEconomy skos:related tgs:Concept.SupernormalStimuli .
+tgs:Concept.ConfirmationBias skos:related tgs:Concept.LossAversion .
+tgs:Concept.ConstructiveJournalism skos:related tgs:Concept.LearnedHelplessness .
+tgs:Concept.LearnedHelplessness skos:related tgs:Concept.PersonalAgency .
+tgs:Concept.DeepEcology skos:related tgs:Concept.RightsOfNature .
+tgs:Concept.EarnedHope skos:related tgs:Concept.Effectivism .
+tgs:Concept.EarnedHope skos:related tgs:Concept.RealityBasedHope .
+tgs:Concept.Rewilding skos:related tgs:Concept.DeepEcology .

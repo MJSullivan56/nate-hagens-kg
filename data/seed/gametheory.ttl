@@ -1,0 +1,274 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix thinkr: <http://example.org/thinkr#> .
+
+<http://example.org/tgs#> a owl:Ontology ;
+    owl:imports <http://example.org/thinkr#> ;
+    rdfs:comment "Imports tgs-core for Protege compatibility — editing this file alone will resolve thinkr: classes/properties via the catalog file."@en .
+
+#############################################
+# ADDED 2026-10-20 — Game Theory Mechanisms, a third-party reference scheme
+# (tgs:ConceptScheme.GameTheoryMechanisms), at MJSullivan's request, as the
+# neutral layer through which TGS concepts by Nate Hagens, Daniel
+# Schmachtenberger and others are crosswalked. Not TGS concepts: standard
+# textbook terms. Three branches follow Wikipedia's 'Game theory' article
+# (types of games, named games, subfields); each term links to its Wikipedia
+# article by skos:closeMatch and cites its textbook source by
+# dcterms:source, mainly Dixit, Skeath and McAdams, Games of Strategy (5th
+# ed.), plus Schelling (1960), Fehr and Gächter (2002), Güth et al. (1982)
+# and Skyrms (2004). Definitions are Claude's plain-language paraphrases.
+# TGS concepts point here with skos:broadMatch / skos:relatedMatch.
+#############################################
+
+tgs:GameTheoryTerm.TypesOfGames a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:topConceptOf tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Types of Games"@en ;
+    skos:definition "Properties that classify a game: whether gains and losses sum to zero, whether it is played once or repeatedly, and what each player knows."@en ;
+    .
+
+tgs:GameTheoryTerm.CanonicalGames a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:topConceptOf tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Canonical Games"@en ;
+    skos:definition "Named games used throughout game theory as standard models of recurring strategic situations."@en ;
+    .
+
+tgs:GameTheoryTerm.SubfieldsAndApplications a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:topConceptOf tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Subfields and Applications"@en ;
+    skos:definition "Branches of game theory and the strategic settings they study."@en ;
+    .
+
+tgs:GameTheoryTerm.ZeroSumGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Zero-Sum and Non-Zero-Sum Games"@en ;
+    skos:altLabel "Constant-sum game"@en ;
+    skos:altLabel "Positive-sum game"@en ;
+    skos:definition "In a zero-sum game one player's gain is exactly another's loss; in a non-zero-sum game the players' interests partly coincide, so all can gain or all can lose together."@en ;
+    skos:broader tgs:GameTheoryTerm.TypesOfGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Zero-sum_game> ;
+    dcterms:source tgs:Work.TheoryOfGamesAndEconomicBehavior ;
+    .
+
+tgs:GameTheoryTerm.RepeatedGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Repeated Games"@en ;
+    skos:altLabel "Iterated game"@en ;
+    skos:definition "A game played many times by the same players, so that reputation, reciprocity and the threat of future retaliation can sustain cooperation that would collapse in a single round."@en ;
+    skos:broader tgs:GameTheoryTerm.TypesOfGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Repeated_game> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 10."@en ;
+    .
+
+tgs:GameTheoryTerm.IncompleteInformationGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Games of Incomplete Information"@en ;
+    skos:altLabel "Bayesian game"@en ;
+    skos:altLabel "Signaling game"@en ;
+    skos:definition "Games in which players lack information about one another's payoffs or types, so beliefs, signals and screening shape what each does."@en ;
+    skos:broader tgs:GameTheoryTerm.TypesOfGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Bayesian_game> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 9 (Uncertainty and Information)."@en ;
+    .
+
+tgs:GameTheoryTerm.PrisonersDilemma a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Prisoner's Dilemma"@en ;
+    skos:definition "Two players each do better by defecting whatever the other does, yet both end up worse off than if both had cooperated: the standard model of individual and collective interest in conflict."@en ;
+    skos:broader tgs:GameTheoryTerm.CanonicalGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Prisoner%27s_dilemma> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 10."@en ;
+    .
+
+tgs:GameTheoryTerm.StagHunt a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Stag Hunt"@en ;
+    skos:altLabel "Assurance game"@en ;
+    skos:definition "A coordination game with two stable outcomes: hunting the stag together pays best, but only if enough others do the same, while hunting hare alone is safe but poor. The question is which outcome a group settles into."@en ;
+    skos:broader tgs:GameTheoryTerm.CanonicalGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Stag_hunt> ;
+    dcterms:source tgs:Work.TheStagHunt ;
+    .
+
+tgs:GameTheoryTerm.Chicken a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Chicken"@en ;
+    skos:altLabel "Hawk-dove game"@en ;
+    skos:altLabel "Snowdrift game"@en ;
+    skos:definition "Two players on a collision course each prefer the other to swerve, but if neither does the result is disaster for both: the model behind brinkmanship and mutual deterrence."@en ;
+    skos:broader tgs:GameTheoryTerm.CanonicalGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Chicken_(game)> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 4 and ch. 13."@en ;
+    .
+
+tgs:GameTheoryTerm.UltimatumGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Ultimatum Game"@en ;
+    skos:definition "One player proposes how to split a sum and the other accepts or rejects; rejection leaves both with nothing. Standard theory predicts any offer is accepted, but people routinely reject unfair offers at a cost to themselves."@en ;
+    skos:broader tgs:GameTheoryTerm.CanonicalGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Ultimatum_game> ;
+    dcterms:source tgs:Work.UltimatumBargainingExperiment1982 ;
+    .
+
+tgs:GameTheoryTerm.CollectiveActionGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Collective-Action Games"@en ;
+    skos:altLabel "Social dilemma"@en ;
+    skos:altLabel "Collective action problem"@en ;
+    skos:altLabel "Commons dilemma"@en ;
+    skos:definition "Many-player games in which everyone would be better off cooperating, but each individual gains by free-riding on the others' contributions or overusing a shared resource."@en ;
+    skos:broader tgs:GameTheoryTerm.CanonicalGames ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Collective_action_problem> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 11. Wikipedia treats collective action problem and social dilemma as synonyms."@en ;
+    .
+
+tgs:GameTheoryTerm.PublicGoodsGame a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Public Goods Game"@en ;
+    skos:definition "The standard experiment for collective action: players privately choose how much to contribute to a common pot that is multiplied and shared equally, so each gains by contributing nothing while the group gains most if all contribute."@en ;
+    skos:broader tgs:GameTheoryTerm.CollectiveActionGame ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Public_goods_game> ;
+    dcterms:source tgs:Work.AltruisticPunishmentInHumans ;
+    .
+
+tgs:GameTheoryTerm.EvolutionaryGameTheory a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Evolutionary Game Theory"@en ;
+    skos:altLabel "Evolutionarily stable strategy"@en ;
+    skos:definition "Game theory applied to populations whose strategies spread or shrink according to how well they pay off, without assuming conscious choice: the study of which behaviors natural or cultural selection keeps."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Evolutionary_game_theory> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 12."@en ;
+    .
+
+tgs:GameTheoryTerm.MechanismDesign a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Mechanism Design"@en ;
+    skos:altLabel "Design of incentives"@en ;
+    skos:definition "Designing the rules of a game so that players pursuing their own interest produce the outcome the designer intends: incentive design, institutions and contracts."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Mechanism_design> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 14 (Design of Incentives)."@en ;
+    .
+
+tgs:GameTheoryTerm.Bargaining a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Bargaining"@en ;
+    skos:altLabel "Cooperative bargaining"@en ;
+    skos:altLabel "Nash bargaining"@en ;
+    skos:definition "How two or more parties divide a surplus they can only create, or a loss they can only avoid, together; outcomes depend on each side's alternatives, patience and commitments."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Cooperative_bargaining> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 17. The Wikipedia article on the bargaining problem redirects to Cooperative bargaining."@en ;
+    .
+
+tgs:GameTheoryTerm.SocialChoiceAndVoting a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Social Choice and Voting"@en ;
+    skos:altLabel "Strategic voting"@en ;
+    skos:definition "How individual preferences are combined into collective decisions, and how voting rules invite strategic behavior."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Social_choice_theory> ;
+    dcterms:source tgs:Work.GamesOfStrategy ;
+    skos:scopeNote "Games of Strategy, ch. 16 (Strategy and Voting)."@en ;
+    .
+
+tgs:GameTheoryTerm.BehavioralGameTheory a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Behavioral Game Theory"@en ;
+    skos:altLabel "Experimental game theory"@en ;
+    skos:definition "The study of how people actually play games in experiments and in life, shaped by fairness, social preferences, emotion and limited reasoning rather than the self-interested calculation classical theory assumes."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Behavioral_game_theory> ;
+    .
+
+tgs:GameTheoryTerm.StrongReciprocity a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Strong Reciprocity"@en ;
+    skos:altLabel "Altruistic punishment"@en ;
+    skos:definition "The tendency to cooperate with cooperators and to punish those who break norms, even at a personal cost and with no prospect of future gain; experiments show it can sustain cooperation that pure self-interest cannot."@en ;
+    skos:broader tgs:GameTheoryTerm.BehavioralGameTheory ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Strong_reciprocity> ;
+    dcterms:source tgs:Work.AltruisticPunishmentInHumans ;
+    .
+
+tgs:GameTheoryTerm.StrategicMoves a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Strategic Moves"@en ;
+    skos:altLabel "Commitments, threats and promises"@en ;
+    skos:definition "Actions taken to change the game itself, such as binding commitments, threats and promises, so that other players expect a different response and change their own choices."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Strategic_move> ;
+    dcterms:source tgs:Work.GamesOfStrategy, tgs:Work.TheStrategyOfConflict ;
+    skos:scopeNote "Games of Strategy, ch. 8; Schelling, The Strategy of Conflict (1960)."@en ;
+    .
+
+tgs:GameTheoryTerm.Brinkmanship a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Brinkmanship"@en ;
+    skos:altLabel "Brinksmanship"@en ;
+    skos:definition "Deliberately raising the shared risk of disaster, a threat that leaves something to chance, to force the other side to back down."@en ;
+    skos:broader tgs:GameTheoryTerm.StrategicMoves ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Brinkmanship> ;
+    dcterms:source tgs:Work.GamesOfStrategy, tgs:Work.TheStrategyOfConflict ;
+    skos:scopeNote "Games of Strategy, ch. 13 (Brinkmanship: The Cuban Missile Crisis). Wikipedia quotes Schelling's definition: 'manipulating the shared risk of war.'"@en ;
+    .
+
+tgs:GameTheoryTerm.FocalPoint a thinkr:GameTheoryTerm, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.GameTheoryMechanisms ;
+    skos:prefLabel "Focal Points"@en ;
+    skos:altLabel "Schelling point"@en ;
+    skos:definition "A choice people converge on without communicating because it stands out to everyone, which lets them coordinate on one of several possible stable outcomes."@en ;
+    skos:broader tgs:GameTheoryTerm.SubfieldsAndApplications ;
+    skos:closeMatch <https://en.wikipedia.org/wiki/Focal_point_(game_theory)> ;
+    dcterms:source tgs:Work.TheStrategyOfConflict ;
+    skos:scopeNote "Schelling, The Strategy of Conflict (1960), as cited by Wikipedia."@en ;
+    .
+
+tgs:GameTheoryTerm.Chicken skos:related tgs:GameTheoryTerm.Brinkmanship .
+tgs:GameTheoryTerm.StagHunt skos:related tgs:GameTheoryTerm.FocalPoint .
+tgs:GameTheoryTerm.PrisonersDilemma skos:related tgs:GameTheoryTerm.RepeatedGame .
+tgs:GameTheoryTerm.UltimatumGame skos:related tgs:GameTheoryTerm.StrongReciprocity .
+tgs:GameTheoryTerm.PrisonersDilemma skos:related tgs:GameTheoryTerm.CollectiveActionGame .
+
+
+tgs:ConceptScheme.GameTheoryMechanisms a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "Game Theory Mechanisms"@en ;
+    skos:definition "A small reference vocabulary of standard game-theory terms -- types of games, canonical games, and subfields -- used as the neutral layer for linking TGS concepts that share a strategic mechanism. Third-party, textbook terms, not TGS concepts."@en ;
+    dcterms:source tgs:Work.GamesOfStrategy, <https://en.wikipedia.org/wiki/Game_theory> ;
+    rdfs:seeAlso tgs:Concept.GameTheory ;
+    skos:hasTopConcept
+        tgs:GameTheoryTerm.CanonicalGames,
+        tgs:GameTheoryTerm.SubfieldsAndApplications,
+        tgs:GameTheoryTerm.TypesOfGames ;
+    .
+tgs:GameTheoryTerm.BehavioralGameTheory skos:narrower tgs:GameTheoryTerm.StrongReciprocity .
+tgs:GameTheoryTerm.CanonicalGames skos:narrower tgs:GameTheoryTerm.Chicken .
+tgs:GameTheoryTerm.CanonicalGames skos:narrower tgs:GameTheoryTerm.CollectiveActionGame .
+tgs:GameTheoryTerm.CanonicalGames skos:narrower tgs:GameTheoryTerm.PrisonersDilemma .
+tgs:GameTheoryTerm.CanonicalGames skos:narrower tgs:GameTheoryTerm.StagHunt .
+tgs:GameTheoryTerm.CanonicalGames skos:narrower tgs:GameTheoryTerm.UltimatumGame .
+tgs:GameTheoryTerm.CollectiveActionGame skos:narrower tgs:GameTheoryTerm.PublicGoodsGame .
+tgs:GameTheoryTerm.StrategicMoves skos:narrower tgs:GameTheoryTerm.Brinkmanship .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.Bargaining .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.BehavioralGameTheory .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.EvolutionaryGameTheory .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.FocalPoint .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.MechanismDesign .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.SocialChoiceAndVoting .
+tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.StrategicMoves .
+tgs:GameTheoryTerm.TypesOfGames skos:narrower tgs:GameTheoryTerm.IncompleteInformationGame .
+tgs:GameTheoryTerm.TypesOfGames skos:narrower tgs:GameTheoryTerm.RepeatedGame .

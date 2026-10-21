@@ -1,0 +1,16 @@
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX thinkr: <http://example.org/thinkr#>
+PREFIX tgs:    <http://example.org/tgs#>
+
+# Pairs of Nate Hagens and Daniel Schmachtenberger concepts that map to the same game-theory term
+SELECT ?mechanism ?nateConcept ?danielConcept
+WHERE {
+  VALUES ?map { skos:closeMatch skos:broadMatch skos:relatedMatch }
+  VALUES ?map2 { skos:closeMatch skos:broadMatch skos:relatedMatch }
+  ?n ?map ?t .  ?n thinkr:influencedBy tgs:Persona.NateHagens .
+  ?d ?map2 ?t . ?d thinkr:influencedBy tgs:Persona.DanielSchmachtenberger .
+  ?t a thinkr:GameTheoryTerm ; skos:prefLabel ?mechanism .
+  ?n skos:prefLabel ?nateConcept .
+  ?d skos:prefLabel ?danielConcept .
+}
+ORDER BY ?mechanism ?nateConcept
