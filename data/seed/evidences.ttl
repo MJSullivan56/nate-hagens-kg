@@ -544,20 +544,6 @@ tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 a thinkr:Evidence, owl:
     dcterms:description "Editorial reading of Nate Hagens's Disarmer archetype (Frankly_58) against the practice 'Community Reconciliation': Defusing local blame and scapegoating before it escalates. Nate set this reading aside in Frankly 58, so the LinkNote marks it as an editorial extension first used in WWNS #4, not Nate’s. Drafted by Claude at MJSullivan's request."@en ;
     prov:generatedAtTime "2026-10-21"^^xsd:date .
 
-tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
-    thinkr:confidence thinkr:ConfidenceType.Candidate ;
-    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    thinkr:citesEpisode tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
-    dcterms:description "Editorial reading of Nate Hagens's Disarmer archetype (Frankly_58) against the practice 'Political Advocacy': Frankly 159 names nuclear disarmament as one of four categories of real work and calls for \"a huge disarmament campaign, a huge peace campaign\"; matches the matrix supporter framing (publics stood behind past arms-control successes). Drafted by Claude at MJSullivan's request."@en ;
-    prov:generatedAtTime "2026-10-21"^^xsd:date .
-
-tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_159 a thinkr:Evidence, owl:NamedIndividual ;
-    thinkr:confidence thinkr:ConfidenceType.Candidate ;
-    thinkr:evidencePolarity thinkr:PolarityType.Supports ;
-    thinkr:citesEpisode tgs:Monologue.Frankly_159_TheRealWork ;
-    dcterms:description "Nate Hagens in Frankly_159 names nuclear disarmament as one of four categories of underrepresented real work and calls for 'a huge disarmament campaign, a huge peace campaign', which supports the Disarmer's link to political advocacy. Drafted by Claude at MJSullivan's request."@en ;
-    prov:generatedAtTime "2026-10-21"^^xsd:date .
-
 tgs:Evidence.Silvertongue_CommunityReconciliation_Frankly_58 a thinkr:Evidence, owl:NamedIndividual ;
     thinkr:confidence thinkr:ConfidenceType.Candidate ;
     thinkr:evidencePolarity thinkr:PolarityType.Supports ;

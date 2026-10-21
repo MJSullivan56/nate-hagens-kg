@@ -24,6 +24,11 @@ thinkr:Archetype a owl:Class ;
     rdfs:comment "One of the 27 human archetypes from Frankly_58's real Lord-of-the-Rings allegory, organized into 3 real timelines (business-as-usual, the 'bend or break' Fellowship, and the distant future) — see thinkr:activeInPhase for how each timeline maps onto the already-built thinkr:ResponsePhase system."@en ;
     skos:prefLabel "Archetype"@en .
 
+thinkr:hasStrongFitIn a owl:ObjectProperty ;
+    rdfs:domain thinkr:Archetype ; rdfs:range thinkr:InterventionSubdomain ;
+    rdfs:comment "Shortcut for the Strong-fit cells of the WWNS archetype matrix: the subdomains where this archetype is one of the strongest fits. The full rating, with the one-line role, is the matching thinkr:ArchetypeRole in archetyperoles.ttl."@en ;
+    skos:prefLabel "has strong fit in"@en .
+
 thinkr:morphsInto a owl:ObjectProperty ;
     rdfs:domain thinkr:Archetype ; rdfs:range thinkr:Archetype ;
     rdfs:comment "Hagens' own direct, specific real pairing — a business-as-usual Archetype's stated decline-counterpart under continued contraction, not an inferred or computed relationship. Deliberately NOT asserted for every Archetype: Preacher explicitly does not morph into something new per Hagens' own words ('the preacher will always exist... maybe with a lowercase p'), so no target is forced here."@en ;
@@ -142,6 +147,7 @@ tgs:Archetype.Silvertongue a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "A translator and diplomat between society's siloed, single-issue factions, at every level from local community to the UN and national governments — named by Hagens as one of the most urgently needed archetypes, without which he sees 'no hope.'"@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeTerm.CommunityReconciliation, tgs:PracticeTerm.NetworkWeaving, tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.ParticipatoryStrategies ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.DigitalCommons, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.TrustAndInformationCommons, tgs:InterventionSubdomain.NarrativeSovereignty, tgs:InterventionSubdomain.LandAndHousingReform ;
     .
 
 tgs:Archetype.Alchemist a thinkr:Archetype, owl:NamedIndividual ;
@@ -149,14 +155,16 @@ tgs:Archetype.Alchemist a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "Fluent in the real biophysical balance sheet underlying money and technology as markers for energy, materials, and ecosystem impact — prepares benign pathways for the real shrinkage Hagens expects between the financial-claim economy and the biophysical economy it claims to represent."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeCluster.SystemicFinance, tgs:PracticeCluster.AlternativeFinance, tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.4Returns ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:InterventionSubdomain.ProtectingEcologicalGains, tgs:InterventionSubdomain.LongTermMandateInstitutions, tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.LocalExchangeSystems, tgs:InterventionSubdomain.PostGrowthInstitutions, tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
     .
 
 tgs:Archetype.Disarmer a thinkr:Archetype, owl:NamedIndividual ;
     skos:prefLabel "The Disarmer"@en ;
     skos:definition "Real nuclear disarmament work, given the real backdrop of 12,000+ active nuclear warheads and live conflicts (Russia/Ukraine, Israel/Gaza) — Hagens frames the archetype as either a genuine peace activist or something more Machiavellian aimed at the same real reduction in catastrophic risk."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
-    skos:scopeNote "Verified against the Frankly_58 transcript [17:30], 2026-10-08: Nate first entertains a broader reading of the word -- 'we should disarm people with the truth and move to a different Overton window conversation' -- then explicitly sets it aside ('that's not what I had in mind') in favor of nuclear disarmament. Do not extend this archetype to polarization or tribalism: in Frankly_58 that role belongs to tgs:Archetype.Silvertongue ('we have a tribal temperament and social media has polarized and splintered...'). WWNS #4 used the Disarmer more broadly and said so in the text."@en ;
-    dcterms:relation tgs:PracticeTerm.CommunityReconciliation, tgs:PracticeTerm.PoliticalAdvocacy ;
+    skos:scopeNote "Verified against the Frankly_58 transcript [17:30], 2026-10-08: Nate first entertains a broader reading of the word -- 'we should disarm people with the truth and move to a different Overton window conversation' -- then explicitly sets it aside ('that's not what I had in mind') in favor of nuclear disarmament. Do not extend this archetype to polarization or tribalism: in Frankly_58 that role belongs to tgs:Archetype.Silvertongue ('we have a tribal temperament and social media has polarized and splintered...'). WWNS #4 used the Disarmer more broadly and said so in the text. Frankly_159 (tgs:Monologue.Frankly_159_TheRealWork) names nuclear disarmament as one of four categories of underrepresented real work, which Nate does mostly behind the scenes, and calls for 'a huge disarmament campaign, a huge peace campaign'. A dcterms:relation from this archetype to tgs:PracticeTerm.PoliticalAdvocacy was added and retracted on 2026-10-21: that practice is generic, so the link would have pointed any advocacy-related topic at the Disarmer. The archetype's supporter roles are now in the WWNS archetype matrix (thinkr:ArchetypeRole, archetyperoles.ttl)."@en ;
+    dcterms:relation tgs:PracticeTerm.CommunityReconciliation ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.DigitalCommons, tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.LongTermMandateInstitutions ;
     .
 
 tgs:Archetype.Muse a thinkr:Archetype, owl:NamedIndividual ;
@@ -164,6 +172,7 @@ tgs:Archetype.Muse a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "A source of inspiration without a specific goal — warmth, love, music, and kindness spreading through a community during a time of increasing chaos and despair."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.CulturalAndSpiritualPractices, tgs:PracticeTerm.CulturalHubOrLearningCenter ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.ArtsGriefAndSensemaking, tgs:InterventionSubdomain.ReconnectionToPlace, tgs:InterventionSubdomain.RitualAndBelonging, tgs:InterventionSubdomain.NarrativeSovereignty ;
     .
 
 tgs:Archetype.Effectivist a thinkr:Archetype, owl:NamedIndividual ;
@@ -171,6 +180,7 @@ tgs:Archetype.Effectivist a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "Someone who cares about real end results rather than the social accolades of conventional activism, making and actually executing plans rather than only demonstrating and signaling."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeTerm.DemonstratorSite, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.VentureCultivation ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.MedicalSupplyChains, tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.AntiCorruptionInfrastructure, tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.LocalExchangeSystems ;
     .
 
 tgs:Archetype.Barber a thinkr:Archetype, owl:NamedIndividual ;
@@ -178,6 +188,7 @@ tgs:Archetype.Barber a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "Someone who prioritizes real resource triage at every level, understanding that not all financial claims on reality will ever actually be honored — Hagens' own direct metaphor: 'there's going to be haircuts.'"@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.PortfolioDevelopment ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.MedicalSupplyChains, tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.ProtectingEcologicalGains, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.PostGrowthInstitutions, tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
     .
 
 tgs:Archetype.Governess a thinkr:Archetype, owl:NamedIndividual ;
@@ -185,6 +196,7 @@ tgs:Archetype.Governess a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "A real, deeply needed archetype for better collective decision-making — Hagens explicitly admits he is not himself an expert on what this actually requires, offered candidly rather than papered over."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeCluster.CommunityGovernance, tgs:PracticeTerm.DecisionMakingProcesses, tgs:PracticeTerm.GovernanceDesign, tgs:PracticeTerm.CommonsGovernanceProtocols, tgs:PracticeTerm.GovernanceBodies ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.DigitalCommons, tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.AntiCorruptionInfrastructure, tgs:InterventionSubdomain.LongTermMandateInstitutions, tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.PostGrowthInstitutions, tgs:InterventionSubdomain.LandAndHousingReform ;
     .
 
 tgs:Archetype.Wellspring a thinkr:Archetype, owl:NamedIndividual ;
@@ -192,6 +204,7 @@ tgs:Archetype.Wellspring a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "A central node of energy, enthusiasm, and support that others can draw on when discouraged — Hagens' own real example is Gandalf's role in the Fellowship, but explicitly notes it doesn't require a powerful or charismatic person, only 'a really strong, deep-running ethic.'"@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:PracticeTerm.CoachesAndLeaders, tgs:PracticeTerm.PeerLearning ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.RitualAndBelonging ;
     .
 
 tgs:Archetype.Catalyst a thinkr:Archetype, owl:NamedIndividual ;
@@ -199,6 +212,7 @@ tgs:Archetype.Catalyst a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "Hagens' own real, direct closing point: Frodo alone could not have carried the Ring to Mordor — it took Sam and Gollum, real Catalysts who shifted the story's outcome. Offered directly to listeners as a model for ordinary agency: 'you do your job, live with your family, enjoy your life, learn and pay attention... you never know when your actions could shift the larger story.'"@en ;
     thinkr:activeInPhase tgs:ResponsePhase.BendNotBreak ;
     dcterms:relation tgs:Concept.DistributedAgency, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.NetworkWeaving ;
+    thinkr:hasStrongFitIn tgs:InterventionSubdomain.MedicalSupplyChains, tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
     .
 
 

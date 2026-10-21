@@ -1,0 +1,2328 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#############################################
+# ADDED 2026-10-21 -- the WWNS archetype matrix (tgs:Work.WWNSArchetypeMatrix)
+# brought into the graph, at MJSullivan's request. One thinkr:ArchetypeRole
+# per rated cell: which archetype, which intervention subdomain, how well it
+# fits (thinkr:FitLevelType) and the role itself in one line (skos:definition),
+# the call to action WWNS articles draw on. Cells rated 'No clear role' are
+# left out. Strong fits are also asserted directly as
+# thinkr:hasStrongFitIn on the archetype (archetypes.ttl) for simple queries.
+# Roles are MJSullivan's editorial work, not Nate Hagens' statements.
+#############################################
+
+thinkr:ArchetypeRole a owl:Class ;
+    rdfs:comment "The role one archetype plays in one intervention subdomain, as rated in the WWNS archetype matrix: an n-ary node carrying the archetype, the subdomain, a fit level and a one-line call to action."@en ;
+    skos:prefLabel "Archetype Role"@en .
+
+thinkr:roleOfArchetype a owl:ObjectProperty ;
+    rdfs:domain thinkr:ArchetypeRole ; rdfs:range thinkr:Archetype ;
+    skos:prefLabel "role of archetype"@en .
+
+thinkr:roleInSubdomain a owl:ObjectProperty ;
+    rdfs:domain thinkr:ArchetypeRole ; rdfs:range thinkr:InterventionSubdomain ;
+    skos:prefLabel "role in subdomain"@en .
+
+thinkr:hasFitLevel a owl:ObjectProperty ;
+    rdfs:domain thinkr:ArchetypeRole ; rdfs:range thinkr:FitLevelType ;
+    skos:prefLabel "has fit level"@en .
+
+tgs:ArchetypeRole.Silvertongue_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Translate grid realities among utilities, regulators and neighbors who distrust one another."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Energy Systems)."@en .
+
+tgs:ArchetypeRole.Alchemist_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Show the real energy behind every budget line; plan for using less, not just cleaner."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Energy Systems)."@en .
+
+tgs:ArchetypeRole.Disarmer_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Back leaders and groups who choose diplomacy over force where fuel routes and chokepoints invite escalation."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Energy Systems). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make using less feel like shared care rather than sacrifice."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Energy Systems)."@en .
+
+tgs:ArchetypeRole.Effectivist_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Weatherize, add storage, cut demand; count kilowatt-hours saved, not pledges made."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Energy Systems). Used in WWNS #4."@en .
+
+tgs:ArchetypeRole.Barber_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Decide which loads stay on when supply tightens: heat, water and clinics first."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Energy Systems). Used in WWNS #4."@en .
+
+tgs:ArchetypeRole.Governess_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Set up community energy co-ops with fair, transparent decision rules."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Energy Systems). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Wellspring_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Keep the neighborhood energy group going through slow, unglamorous retrofits."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Energy Systems)."@en .
+
+tgs:ArchetypeRole.Catalyst_EnergySystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Energy Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EnergySystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Know which neighbor depends on powered medical equipment; check on them in an outage."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Energy Systems)."@en .
+
+tgs:ArchetypeRole.Silvertongue_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge farmers, environmentalists and city officials who see water differently."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Food and Water Systems)."@en .
+
+tgs:ArchetypeRole.Alchemist_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show what cheap food really costs in soil, water and fossil inputs."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Food and Water Systems)."@en .
+
+tgs:ArchetypeRole.Disarmer_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Support efforts to keep food and water from being used as weapons, and diplomacy over shared rivers."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Food and Water Systems). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Shared meals, harvest suppers and seed swaps that make local food a pleasure."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Food and Water Systems). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Effectivist_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Grow, preserve, harvest rainwater; help the food bank run its supply chain."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Food and Water Systems). Used in WWNS #3; #4."@en .
+
+tgs:ArchetypeRole.Barber_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Plan how scarce water is shared: drinking and food before lawns."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Food and Water Systems). Used in WWNS #4."@en .
+
+tgs:ArchetypeRole.Governess_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Watershed councils that give every user a voice."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Food and Water Systems)."@en .
+
+tgs:ArchetypeRole.Wellspring_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep the community garden going season after season."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Food and Water Systems)."@en .
+
+tgs:ArchetypeRole.Catalyst_FoodAndWaterSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Food and Water Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Know who on your street is short of food; say yes when the pantry calls."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Food and Water Systems)."@en .
+
+tgs:ArchetypeRole.Silvertongue_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Mediate between neighbors and developers in density and zoning fights."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Alchemist_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show the lifetime energy and debt cost of how we build."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Muse_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Porch concerts and block parties that turn housing into a neighborhood."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Effectivist_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Insulate, retrofit, share tools; make sure weatherization money actually gets spent."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Barber_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Put the most vulnerable homes first in line for repairs."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Governess_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Land-use processes neighbors can trust."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Wellspring_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Keep the neighborhood or tenants' association alive between crises."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Catalyst_HousingAndBuiltEnvironment a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Housing and Built Environment"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.HousingAndBuiltEnvironment ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Notice the neighbor whose house is failing and connect them with help."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Housing and Built Environment)."@en .
+
+tgs:ArchetypeRole.Silvertongue_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Translate among clinicians, administrators and patients during shortages."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Alchemist_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Expose the fragile global supply chains behind cheap medicines."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Disarmer_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support humanitarian corridors and keep medicine out of geopolitical leverage."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Medical and Pharmaceutical Supply Chains). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Bring warmth into clinics and care homes: music, visits, company."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Effectivist_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Stock a household medical kit, support local clinics and pharmacies."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Barber_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Triage scarce medicines and care fairly and openly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Governess_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Community health boards that set local priorities."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Wellspring_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Sustain volunteer health networks between emergencies."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Catalyst_MedicalSupplyChains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Medical and Pharmaceutical Supply Chains"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.MedicalSupplyChains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Take a first-aid class so you're ready when someone collapses."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Medical and Pharmaceutical Supply Chains)."@en .
+
+tgs:ArchetypeRole.Silvertongue_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Bridge drivers, shippers and towns over routes and costs."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Alchemist_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show how fuel prices ripple through every delivered good."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Disarmer_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Back diplomacy that keeps shipping lanes open without war."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Transportation and Logistics). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make walking, cycling and shared rides sociable."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Effectivist_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Organize ride-shares and a volunteer driver roster for medical appointments."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Barber_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Decide which deliveries and routes matter most when fuel is short."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Governess_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Regional transit planning that includes rural voices."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Wellspring_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Keep the volunteer driver network running year-round."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Catalyst_TransportationAndLogistics a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Transportation and Logistics"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TransportationAndLogistics ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Offer a ride when you see someone who needs one."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Transportation and Logistics)."@en .
+
+tgs:ArchetypeRole.Silvertongue_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Lower the temperature online; translate between factions in the spaces you use."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Digital Commons and Communication Infrastructure). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Alchemist_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Show the energy and material costs of data centers and AI."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Disarmer_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Back limits on AI-driven military escalation and automated warfare (Frankly #161)."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Digital Commons and Communication Infrastructure). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Share beauty and good news instead of outrage."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Effectivist_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Build or support community networks, newsletters and local forums."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Barber_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Decide which digital services are essential when power or bandwidth is short."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Governess_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Protect and fund the information infrastructure your community still controls."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Digital Commons and Communication Infrastructure). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Wellspring_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Moderate and sustain a healthy local forum."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Catalyst_DigitalCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Digital Commons and Communication Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DigitalCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Move a heated online argument into a face-to-face conversation."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Digital Commons and Communication Infrastructure)."@en .
+
+tgs:ArchetypeRole.Silvertongue_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Help aid feel like dignity rather than charity to those giving and receiving."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Alchemist_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Design pooled funds and time banks that move real resources."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Muse_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "A pie on the porch, a dinner in a hard week: warmth as aid."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Effectivist_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Volunteer with food banks and churches; drive people to appointments."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Barber_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Direct limited aid to the greatest need, fairly and openly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Governess_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Transparent community decisions about who gets help."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Wellspring_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Be the steady anchor a mutual-aid network relies on."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Catalyst_DignityInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Dignity Infrastructure and Mutual Aid"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DignityInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "When the food bank or church calls for help, say yes."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Dignity Infrastructure and Mutual Aid)."@en .
+
+tgs:ArchetypeRole.Silvertongue_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make the case for caregivers to employers and policymakers."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Alchemist_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Put unpaid care on the economic balance sheet where it belongs."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Muse_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Bring joy into elder care and childcare: songs, stories, visits."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Effectivist_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Organize care rotas and childcare co-ops."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Barber_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Prioritize scarce care hours where they matter most."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Governess_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Care cooperatives with fair, shared governance."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Wellspring_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Support exhausted caregivers; be the backup they can count on."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Catalyst_CareEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in The Care Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CareEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Check on the isolated elder next door."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x The Care Economy)."@en .
+
+tgs:ArchetypeRole.Silvertongue_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Connect job seekers, employers and trainers across divides."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Alchemist_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Help people see which livelihoods stay viable as surplus shrinks."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Disarmer_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support converting weapons-industry jobs to civilian work as budgets and priorities shift."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Skills and Livelihoods for a Contracting Economy). Used in WWNS #4 (used in a broader sense than Nate's (local blame and scapegoating)). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Celebrate craft; make learning practical skills a pleasure."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Effectivist_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Learn and teach practical skills: repair, growing, building."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Barber_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Decide which training programs get scarce funding."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Governess_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Local workforce planning with real community input."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Skills and Livelihoods for a Contracting Economy). Used in WWNS #4."@en .
+
+tgs:ArchetypeRole.Wellspring_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Mentor young people as entry-level jobs disappear (the broken apprenticeship)."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Catalyst_SkillsForContractingEconomy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Skills and Livelihoods for a Contracting Economy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SkillsForContractingEconomy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Take on an apprentice; open a door for one young person."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Skills and Livelihoods for a Contracting Economy)."@en .
+
+tgs:ArchetypeRole.Silvertongue_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Mediate between factions before tension turns to violence."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Alchemist_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Show how unequal claims on shrinking resources fuel resentment."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Disarmer_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Link local peace work to the groups reducing catastrophic violence."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Violence Prevention and Social Cohesion). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Music, food and festivals that cross lines of difference."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Effectivist_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Practical reciprocity: meals delivered, rides given, help offered."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Violence Prevention and Social Cohesion). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Barber_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make allocation decisions transparent so they don't breed resentment."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Governess_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Local decision-making that keeps everyone at the table."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Wellspring_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Host the regular gathering and keep it going."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Violence Prevention and Social Cohesion). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Catalyst_ViolencePreventionAndSocialCohesion a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Violence Prevention and Social Cohesion"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bring one person who wouldn't have come on their own."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Violence Prevention and Social Cohesion)."@en .
+
+tgs:ArchetypeRole.Silvertongue_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge landowners, hunters and conservationists."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Alchemist_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Count ecosystem services in budgets and land deals."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Disarmer_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support demilitarization that also protects habitat."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Biodiversity Defense and Corridor Creation). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bird walks and nature art that spark wonder."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Effectivist_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Restoration days, native planting, land-trust projects."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Barber_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Decide which habitats to protect first."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Governess_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Fair governance for land trusts and corridors."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Wellspring_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Sustain the volunteer stewardship crew."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Biodiversity Defense and Corridor Creation)."@en .
+
+tgs:ArchetypeRole.Catalyst_BiodiversityDefense a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Biodiversity Defense and Corridor Creation"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.BiodiversityDefense ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Join a citizen-science count; report what you see."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Biodiversity Defense and Corridor Creation). Used in WWNS #6."@en .
+
+tgs:ArchetypeRole.Silvertongue_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge farmers and environmentalists who distrust each other."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Alchemist_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show topsoil as capital being drawn down."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Muse_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Make work days festive; celebrate the first returning species."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Effectivist_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Compost, cover-crop, restore riparian buffers."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Barber_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Put limited restoration money where it does the most."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Governess_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Watershed councils that share decisions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Wellspring_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Keep the restoration crew coming back, year after year."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Soil, Land, and Water Regeneration). Used in WWNS #3."@en .
+
+tgs:ArchetypeRole.Catalyst_SoilAndWaterRegeneration a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Soil, Land, and Water Regeneration"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SoilAndWaterRegeneration ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Join the work day when you're invited."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Soil, Land, and Water Regeneration)."@en .
+
+tgs:ArchetypeRole.Silvertongue_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Translate the science among industry, regulators and worried families."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Alchemist_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Expose the costs that cheap plastics push onto bodies and ecosystems."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Muse_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make plastic-free living inventive rather than austere."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Effectivist_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Cut household exposure; organize refill and repair."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Barber_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Separate essential uses (medical) from avoidable ones."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Governess_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Local ordinances reached through a fair process."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Wellspring_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Sustain a local campaign through slow progress."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Catalyst_PlasticAndChemicalHazards a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Plastic and Chemical Hazards"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Share one practical swap with a neighbor."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Plastic and Chemical Hazards)."@en .
+
+tgs:ArchetypeRole.Silvertongue_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Explain water, nitrogen and biodiversity in terms people already care about."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Alchemist_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Push metrics beyond carbon to the full biophysical picture."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Disarmer_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Nuclear war would breach every boundary at once; support those working to prevent it."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Non-Climate Planetary Boundaries). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Art that makes invisible boundaries visible."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Effectivist_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Cut fertilizer runoff and water use where you have control."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Barber_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Rank interventions by the boundary risk they reduce."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Governess_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Institutions that track more than one metric."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Non-Climate Planetary Boundaries). Used in WWNS #6."@en .
+
+tgs:ArchetypeRole.Wellspring_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Keep a study or monitoring group going."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Non-Climate Planetary Boundaries). Used in WWNS #3."@en .
+
+tgs:ArchetypeRole.Catalyst_NonClimatePlanetaryBoundaries a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Non-Climate Planetary Boundaries"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Notice local warning signs, like algae blooms, and report them."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Non-Climate Planetary Boundaries)."@en .
+
+tgs:ArchetypeRole.Silvertongue_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Defend conservation gains across partisan lines."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Alchemist_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Show that nature is not a luxury to cut when budgets shrink."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Disarmer_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support conflict prevention so war does not undo hard-won ecological gains."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Protecting Ecological Gains from Economic Contraction). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Celebrate the gains publicly so people value them."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Effectivist_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Monitor protected areas and enforce the protections."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Barber_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Make sure ecology isn't the first haircut when budgets shrink."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Governess_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Write long-term protections into local law."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Wellspring_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Sustain the friends-of group that watches over a place."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Catalyst_ProtectingEcologicalGains a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Protecting Ecological Gains from Economic Contraction"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ProtectingEcologicalGains ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show up at the budget hearing when cuts threaten a park."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Protecting Ecological Gains from Economic Contraction)."@en .
+
+tgs:ArchetypeRole.Silvertongue_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Facilitate citizens' assemblies across divides."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Deliberative and Participatory Democracy). Used in WWNS #3; #4."@en .
+
+tgs:ArchetypeRole.Alchemist_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Bring biophysical literacy into public deliberation."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Disarmer_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Insist that war and nuclear policy are open to public deliberation; ask representatives where they stand."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Deliberative and Participatory Democracy). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make civic gatherings warm and welcoming."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Effectivist_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Organize the assembly and see its outcomes implemented."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Barber_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bring triage questions to the public openly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Governess_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Design the decision process itself."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Wellspring_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep participation from fading after the first meeting."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Deliberative and Participatory Democracy)."@en .
+
+tgs:ArchetypeRole.Catalyst_DeliberativeDemocracy a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Deliberative and Participatory Democracy"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.DeliberativeDemocracy ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Say yes when you're chosen, invited or asked to attend."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Deliberative and Participatory Democracy). Used in WWNS #3; #4."@en .
+
+tgs:ArchetypeRole.Silvertongue_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Translate between town hall and residents."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Alchemist_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Ground local budgets in real resources rather than growth assumptions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Disarmer_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Back a city or town resolution on reducing nuclear risk, as dozens of US councils have through Back from the Brink."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Subsidiarity and Local Governance Capacity). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Civic celebrations that make local government feel like ours."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Effectivist_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Run for local office or serve on a board."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Barber_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Set local priorities when revenue shrinks."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Governess_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Build the capacity for good local decisions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Wellspring_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep volunteer boards and committees staffed."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Catalyst_SubsidiarityAndLocalGovernance a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Subsidiarity and Local Governance Capacity"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Attend the meeting when an issue comes to a head."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Subsidiarity and Local Governance Capacity)."@en .
+
+tgs:ArchetypeRole.Silvertongue_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Explain accountability failures without partisan framing."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Anti-Corruption and Accountability Infrastructure). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Alchemist_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Follow the money."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Anti-Corruption and Accountability Infrastructure). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Disarmer_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Scrutinize arms spending and procurement, and back those who do."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Anti-Corruption and Accountability Infrastructure). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Satire and art that make accountability popular."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Effectivist_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Records requests and watchdog work."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Barber_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Cut wasteful or captured spending."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Governess_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Build transparency into how decisions get made."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Wellspring_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support whistleblowers through the long haul."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Catalyst_AntiCorruptionInfrastructure a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Anti-Corruption and Accountability Infrastructure"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.AntiCorruptionInfrastructure ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Report wrongdoing when you see it."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Anti-Corruption and Accountability Infrastructure)."@en .
+
+tgs:ArchetypeRole.Silvertongue_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Speak for future generations in present-day debates."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Alchemist_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Model long-term resource trajectories honestly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Disarmer_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Support arms-control institutions and treaties: the longest-horizon risk there is."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Long-Term Mandate Institutions). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Stories that connect people to their descendants."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Effectivist_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Build trusts, endowments and long-horizon plans."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Barber_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Weigh today's trade-offs against the future."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Governess_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Design future-generations offices and mandates."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Wellspring_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Sustain institutions across changes of leadership."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Catalyst_LongTermMandateInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Long-Term Mandate Institutions"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LongTermMandateInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Defend them when they come under threat."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Long-Term Mandate Institutions)."@en .
+
+tgs:ArchetypeRole.Silvertongue_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Translate between people who no longer trust the same sources."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Trust Rebuilding and the Information Commons). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Alchemist_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Explain energy and economic facts plainly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Disarmer_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Counter disinformation that inflames international conflict."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Trust Rebuilding and the Information Commons). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Share what's good and true, not only what's alarming."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Effectivist_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Support local journalism with money and time."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Barber_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Choose which information sources a community funds."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Governess_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Govern the information commons fairly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Wellspring_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Be the trusted, steady voice people turn to."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Catalyst_TrustAndInformationCommons a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Trust Rebuilding and the Information Commons"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Pass on verified information in a crisis."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Trust Rebuilding and the Information Commons)."@en .
+
+tgs:ArchetypeRole.Silvertongue_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge parents, teachers and boards in curriculum fights."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Alchemist_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Teach biophysical literacy: energy, money, materials."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Disarmer_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Teach the history and stakes of nuclear risk."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Education Redesign). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Teach through wonder, art and music."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Effectivist_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Start a learning program; mentor."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Barber_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Prioritize the skills that matter most."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Governess_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Community governance of schools."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Wellspring_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Be the teacher students lean on."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Catalyst_EducationRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Education Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.EducationRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Answer a young person's question; bring them along."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Education Redesign)."@en .
+
+tgs:ArchetypeRole.Silvertongue_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Translate grief and fear across divides."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Arts, Grief Work, and Collective Sensemaking)."@en .
+
+tgs:ArchetypeRole.Alchemist_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Bring wide-boundary facts into the conversation."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Arts, Grief Work, and Collective Sensemaking)."@en .
+
+tgs:ArchetypeRole.Disarmer_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make nuclear risk discussable without panic, so it stops being a movie trope (Frankly #159)."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Arts, Grief Work, and Collective Sensemaking). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Art, music and ritual that let people feel things together."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Arts, Grief Work, and Collective Sensemaking). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Effectivist_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Organize the gathering's logistics."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Arts, Grief Work, and Collective Sensemaking)."@en .
+
+tgs:ArchetypeRole.Governess_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Structure group conversations so every voice is heard."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Arts, Grief Work, and Collective Sensemaking)."@en .
+
+tgs:ArchetypeRole.Wellspring_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Hold the space over time."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Arts, Grief Work, and Collective Sensemaking). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Catalyst_ArtsGriefAndSensemaking a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Arts, Grief Work, and Collective Sensemaking"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Stay in the hard conversation; say yes to the gathering."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Arts, Grief Work, and Collective Sensemaking). Used in WWNS #5."@en .
+
+tgs:ArchetypeRole.Silvertongue_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge newcomers' and old-timers' stories of a place."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Reconnection to Place and Ecology)."@en .
+
+tgs:ArchetypeRole.Alchemist_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Map a place's real energy and material flows."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Reconnection to Place and Ecology)."@en .
+
+tgs:ArchetypeRole.Muse_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Walks, songs and local lore."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Reconnection to Place and Ecology). Used in WWNS #6."@en .
+
+tgs:ArchetypeRole.Effectivist_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Restoration and local-history projects."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Reconnection to Place and Ecology). Used in WWNS #6."@en .
+
+tgs:ArchetypeRole.Governess_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bioregional councils."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Reconnection to Place and Ecology)."@en .
+
+tgs:ArchetypeRole.Wellspring_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep the place-based group going."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Reconnection to Place and Ecology)."@en .
+
+tgs:ArchetypeRole.Catalyst_ReconnectionToPlace a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Reconnection to Place and Ecology"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.ReconnectionToPlace ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Learn your watershed's story and tell a neighbor."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Reconnection to Place and Ecology)."@en .
+
+tgs:ArchetypeRole.Silvertongue_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Shape rituals that bridge traditions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Ritual, Ceremony, and Belonging)."@en .
+
+tgs:ArchetypeRole.Disarmer_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep the remembrance of war's costs alive."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Ritual, Ceremony, and Belonging). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Ceremony, music and celebration."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Ritual, Ceremony, and Belonging)."@en .
+
+tgs:ArchetypeRole.Effectivist_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Handle the logistics of gatherings."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Ritual, Ceremony, and Belonging)."@en .
+
+tgs:ArchetypeRole.Wellspring_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Sustain community rituals year after year."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Ritual, Ceremony, and Belonging)."@en .
+
+tgs:ArchetypeRole.Catalyst_RitualAndBelonging a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Ritual, Ceremony, and Belonging"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.RitualAndBelonging ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show up for the funeral and the wedding."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Ritual, Ceremony, and Belonging)."@en .
+
+tgs:ArchetypeRole.Silvertongue_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Tell stories each faction can recognize itself in."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Alchemist_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Replace growth stories with biophysically honest ones."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Disarmer_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Counter stories that make war seem inevitable."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Narrative Sovereignty). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Make art and stories of a better future."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Effectivist_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Publish; record oral histories."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Barber_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Edit the story down to what matters."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Governess_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Community control of local media."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Wellspring_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep the story alive when it's unfashionable."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Catalyst_NarrativeSovereignty a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Narrative Sovereignty"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.NarrativeSovereignty ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Share the story that shifts someone's view."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Narrative Sovereignty)."@en .
+
+tgs:ArchetypeRole.Silvertongue_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Bridge members with different interests."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Cooperative and Commons-Based Ownership)."@en .
+
+tgs:ArchetypeRole.Alchemist_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Design co-op finance that matches real resources."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Cooperative and Commons-Based Ownership). Used in WWNS #3; #6."@en .
+
+tgs:ArchetypeRole.Muse_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Make co-op culture warm and welcoming."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Cooperative and Commons-Based Ownership)."@en .
+
+tgs:ArchetypeRole.Effectivist_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Start or join a co-op."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Cooperative and Commons-Based Ownership). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Barber_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Allocate shared resources fairly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Cooperative and Commons-Based Ownership)."@en .
+
+tgs:ArchetypeRole.Governess_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Co-op governance that works."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Cooperative and Commons-Based Ownership). Used in WWNS #6."@en .
+
+tgs:ArchetypeRole.Wellspring_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep members engaged."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Cooperative and Commons-Based Ownership)."@en .
+
+tgs:ArchetypeRole.Catalyst_CommonsBasedOwnership a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Cooperative and Commons-Based Ownership"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Join when you're invited."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Cooperative and Commons-Based Ownership). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Silvertongue_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Bridge merchants and residents."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Alchemist_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Design local currencies and time banks."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Muse_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Market days and swaps that are fun to attend."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Effectivist_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Set up a time bank; spend locally."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Barber_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Prioritize essential exchanges in hard times."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Governess_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Govern local-currency rules fairly."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Wellspring_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Keep the time bank active."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Catalyst_LocalExchangeSystems a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Local and Regional Exchange Systems"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LocalExchangeSystems ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Offer an hour of help."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Local and Regional Exchange Systems)."@en .
+
+tgs:ArchetypeRole.Silvertongue_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Translate post-growth ideas for skeptics."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Alchemist_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Design institutions that work without growth."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Disarmer_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Show how growth races feed arms races."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Post-Growth Institutional Design). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Muse_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Make 'enough' feel like abundance."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Effectivist_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Pilot a post-growth model locally."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Barber_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Plan contraction gracefully."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Governess_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Governance for steady-state institutions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Wellspring_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Sustain morale through contraction."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Catalyst_PostGrowthInstitutions a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Post-Growth Institutional Design"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.PostGrowthInstitutions ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Live it where neighbors can see."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Post-Growth Institutional Design)."@en .
+
+tgs:ArchetypeRole.Silvertongue_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Mediate among owners, renters and developers."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Alchemist_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Expose land-value and debt realities."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Muse_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Muse in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Muse ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Create shared spaces people love."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Muse x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Effectivist_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Build community land trusts."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Barber_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Prioritize housing for the most vulnerable."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Governess_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Fair land-use governance."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Land and Housing Reform). Used in WWNS #7."@en .
+
+tgs:ArchetypeRole.Wellspring_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Sustain tenant groups."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Catalyst_LandAndHousingReform a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Land and Housing Reform"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.LandAndHousingReform ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Offer a room when someone needs shelter."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Land and Housing Reform)."@en .
+
+tgs:ArchetypeRole.Silvertongue_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Silvertongue in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Silvertongue ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Explain financial risk without fear."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Silvertongue x Finance and Credit Redesign)."@en .
+
+tgs:ArchetypeRole.Alchemist_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Alchemist in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Alchemist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Prepare benign pathways as claims shrink toward reality."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Alchemist x Finance and Credit Redesign). Used in WWNS #4."@en .
+
+tgs:ArchetypeRole.Disarmer_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Disarmer in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Disarmer ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Move your money away from weapons that raise catastrophic risk."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Disarmer x Finance and Credit Redesign). Disarmer cells describe supporting those who do disarmament work, per the matrix."@en .
+
+tgs:ArchetypeRole.Effectivist_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Effectivist in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Effectivist ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Move savings to local banks and credit unions."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Effectivist x Finance and Credit Redesign)."@en .
+
+tgs:ArchetypeRole.Barber_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Barber in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Barber ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Strong ;
+    skos:definition "Decide which claims get honored: the haircut itself."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Barber x Finance and Credit Redesign)."@en .
+
+tgs:ArchetypeRole.Governess_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Governess in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Governess ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Governance of community finance."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Governess x Finance and Credit Redesign)."@en .
+
+tgs:ArchetypeRole.Wellspring_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Wellspring in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Wellspring ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Light ;
+    skos:definition "Support people losing savings."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Wellspring x Finance and Credit Redesign)."@en .
+
+tgs:ArchetypeRole.Catalyst_FinanceAndCreditRedesign a thinkr:ArchetypeRole, owl:NamedIndividual ;
+    skos:prefLabel "The Catalyst in Finance and Credit Redesign"@en ;
+    thinkr:roleOfArchetype tgs:Archetype.Catalyst ;
+    thinkr:roleInSubdomain tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    thinkr:hasFitLevel thinkr:FitLevelType.Moderate ;
+    skos:definition "Help a neighbor through a financial shock."@en ;
+    dcterms:source tgs:Work.WWNSArchetypeMatrix ;
+    skos:scopeNote "From the WWNS archetype matrix (cell: Catalyst x Finance and Credit Redesign)."@en .

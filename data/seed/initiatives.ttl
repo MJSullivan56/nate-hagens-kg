@@ -151,6 +151,7 @@ tgs:PracticeTerm.ClothingAndProductManufacturing a thinkr:PracticeTerm, owl:Name
     skos:definition "Making, repairing, and recycling textiles and products with attention to ecological materials, circular design, local manufacturing capacity, and fair labor conditions."@en ;
     skos:broader tgs:PracticeCluster.ServicesAndInfrastructure ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
     .
 
 tgs:PracticeTerm.CoachesAndLeaders a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -159,6 +160,7 @@ tgs:PracticeTerm.CoachesAndLeaders a thinkr:PracticeTerm, owl:NamedIndividual ;
     skos:definition "Individuals and roles that accompany communities and organizations through transition, holding space, mentoring, and enabling distributed leadership."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
     .
 
 tgs:PracticeTerm.CollectiveOwnershipModels a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -302,6 +304,7 @@ tgs:PracticeTerm.FormalScientificProcess a thinkr:PracticeTerm, owl:NamedIndivid
     skos:definition "Expert-led research and monitoring processes that provide data and insights to inform ecological management, planning, and policy."@en ;
     skos:broader tgs:PracticeCluster.WaysOfKnowing ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.TrustAndInformationCommons ;
     .
 
 tgs:PracticeTerm.GeographicAndEcologicalMapping a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -418,6 +421,7 @@ tgs:PracticeTerm.MaterialsTransformation a thinkr:PracticeTerm, owl:NamedIndivid
     skos:definition "Transforming local biomass and “waste” streams into materials and products; repair, reuse, and low-toxicity production loops that shorten supply chains and reduce extraction."@en ;
     skos:broader tgs:PracticeCluster.AgroBioeconomy ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:InterventionSubdomain.SkillsForContractingEconomy ;
     .
 
 tgs:PracticeTerm.MoreThanHumanKnowledge a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -471,6 +475,7 @@ tgs:PracticeTerm.PoliticalAdvocacy a thinkr:PracticeTerm, owl:NamedIndividual ;
     skos:definition "Engagement with policy and political systems to influence decisions, secure rights, redirect public investment, and scale regenerative practices aligned with bioregional goals."@en ;
     skos:broader tgs:PracticeCluster.LegalStewardship ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.LongTermMandateInstitutions ;
     .
 
 tgs:PracticeTerm.PortfolioDevelopment a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -605,6 +610,7 @@ tgs:PracticeTerm.SystemsAndResourceMapping a thinkr:PracticeTerm, owl:NamedIndiv
     skos:definition "Mapping the relationships between ecological, social, and economic systems, including community assets and challenges. Helps identify existing capacities, unmet needs, root causes, feedback loops, and leverage points for regenerative intervention."@en ;
     skos:broader tgs:PracticeCluster.MappingAndIndicators ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.ArtsGriefAndSensemaking ;
     .
 
 tgs:PracticeTerm.TerritorialMonitoring a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -631,6 +637,7 @@ tgs:PracticeTerm.TheoryU a thinkr:PracticeTerm, owl:NamedIndividual ;
     skos:definition "A systems-change methodology created by Otto Scharmer that helps groups co-sense and co- shape the future by moving through deep listening, reflection, and co-creation."@en ;
     skos:broader tgs:PracticeCluster.CommunityGovernance ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.ArtsGriefAndSensemaking, tgs:InterventionSubdomain.DeliberativeDemocracy ;
     .
 
 tgs:PracticeTerm.TraditionalEcologicalKnowledge a thinkr:PracticeTerm, owl:NamedIndividual ;
@@ -693,6 +700,7 @@ tgs:PracticeTerm.VentureCultivation a thinkr:PracticeTerm, owl:NamedIndividual ;
     skos:definition "Programs and organizations that develop investable, place-rooted enterprises and prepare them for funding—through cohort-based support, training, mentorship, storytelling, and ecosystem-building. These may include venture studios that create aligned regenerative projects to drive systems change and generate dealflow."@en ;
     skos:broader tgs:PracticeCluster.SystemicFinance ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    skos:relatedMatch tgs:InterventionSubdomain.FinanceAndCreditRedesign, tgs:InterventionSubdomain.CommonsBasedOwnership ;
     .
 
 tgs:PracticeTerm.VisitorExperiences a thinkr:PracticeTerm, owl:NamedIndividual ;

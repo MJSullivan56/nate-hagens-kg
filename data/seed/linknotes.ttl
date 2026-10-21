@@ -119,15 +119,6 @@ tgs:LinkNote.Disarmer_CommunityReconciliation a thinkr:LinkNote,
     thinkr:hasEvidence tgs:Evidence.Disarmer_CommunityReconciliation_Frankly_58 ;
     skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.CommunityReconciliation, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Uses the Disarmer in the broader sense first used in WWNS #4, \"What the Oil-Shock Numbers Leave Out\" (2026-10-08, https://medium.com/@jmichaelsullivan/wwns-4-what-the-oil-shock-numbers-leave-out-2ea6c300690f) (defusing local blame and scapegoating), which Nate Hagens set aside in Frankly_58 in favor of nuclear disarmament; see the scopeNote on tgs:Archetype.Disarmer. Stays Candidate until confirmed against episode text."@en .
 
-tgs:LinkNote.Disarmer_PoliticalAdvocacy a thinkr:LinkNote,
-        owl:NamedIndividual ;
-    thinkr:aboutObject tgs:PracticeTerm.PoliticalAdvocacy ;
-    thinkr:aboutSubject tgs:Archetype.Disarmer ;
-    thinkr:calculatedConfidence thinkr:ConfidenceType.Candidate ;
-    thinkr:hasEvidence tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_159,
-        tgs:Evidence.Disarmer_PoliticalAdvocacy_Frankly_58 ;
-    skos:scopeNote "Editorial link (added 2026-10-21) on the triple tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.PoliticalAdvocacy, from a reviewed proposal linking the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practices. Rated 'probable' in review; MJSullivan chose to keep all rows, including 'possible' ones. Stays Candidate until confirmed against episode text."@en .
-
 tgs:LinkNote.DiscountRatesAndPresentBias_MarcusAurelius a thinkr:LinkNote,
         owl:NamedIndividual ;
     thinkr:aboutObject tgs:Persona.MarcusAurelius ;

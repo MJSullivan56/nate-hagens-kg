@@ -355,3 +355,25 @@ thinkr:OppositionType.FriendlyCritique a thinkr:OppositionType, owl:NamedIndivid
 thinkr:OppositionType.OrganizedDoubt a thinkr:OppositionType, owl:NamedIndividual ;
     skos:prefLabel "Organized doubt"@en ;
     skos:definition "Documented, deliberate manufacture of uncertainty to delay action, as described in Merchants of Doubt. Use only with documentary evidence of the conduct, not because a position is unwelcome."@en .
+
+#############################################
+# FitLevelType (ADDED 2026-10-21)
+#############################################
+
+thinkr:FitLevelType a owl:Class, thinkr:Category ;
+    rdfs:comment "How well an archetype fits an intervention subdomain, as rated in the WWNS archetype matrix (tgs:Work.WWNSArchetypeMatrix). The matrix's fourth rating, 'No clear role', is not modeled: those pairings get no thinkr:ArchetypeRole at all. Closed enumeration via owl:oneOf."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( thinkr:FitLevelType.Strong thinkr:FitLevelType.Moderate thinkr:FitLevelType.Light ) ] ;
+    skos:prefLabel "Fit Level Type"@en .
+
+thinkr:FitLevelType.Strong a thinkr:FitLevelType, owl:NamedIndividual ;
+    skos:prefLabel "Strong fit"@en ;
+    skos:definition "One of the strongest fits for this subdomain: the archetype to reach for when an issue features only one or two archetypes per front. Shown in yellow on the published matrix."@en .
+
+thinkr:FitLevelType.Moderate a thinkr:FitLevelType, owl:NamedIndividual ;
+    skos:prefLabel "Moderate fit"@en ;
+    skos:definition "A real but secondary role for the archetype in this subdomain."@en .
+
+thinkr:FitLevelType.Light a thinkr:FitLevelType, owl:NamedIndividual ;
+    skos:prefLabel "Light fit"@en ;
+    skos:definition "A small or occasional role for the archetype in this subdomain."@en .

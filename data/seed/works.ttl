@@ -3493,6 +3493,14 @@ tgs:Work.RadikalEmotional a thinkr:Work, owl:NamedIndividual ;
     dct:isReferencedBy tgs:Interview.TGS_174_MarenUrner ;
     .
 
+tgs:Work.WWNSArchetypeMatrix a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "WWNS Archetype Matrix"@en ;
+    skos:altLabel "Archetypes by intervention facet"@en ;
+    rdfs:comment "MJSullivan's published grid for the What Would Nate Say? series: the nine Fellowship archetypes from Frankly_58 across the 30 intervention subdomains of the six fronts, each cell rated Strong, Moderate, Light or No clear role with a one-line role (a call to action). Every archetype can work on every front; the strong fits are the ones to reach for when an issue features only one or two archetypes per front. The Disarmer column describes how to support those doing disarmament work rather than doing it oneself. Modeled cell by cell as thinkr:ArchetypeRole individuals in archetyperoles.ttl."@en ;
+    dct:source <http://www.haywood-sullivan.com/wwns/archetypes/> ;
+    dct:references tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

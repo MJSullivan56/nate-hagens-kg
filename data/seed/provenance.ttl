@@ -3776,3 +3776,24 @@ tgs:RevisionEvent.ArchetypePracticeLinks a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Linked the nine Fellowship archetypes (Frankly_58) to Bioregioning Earth practice terms and clusters at MJSullivan's request, for use in the WWNS series: 27 dcterms:relation links, each with a Candidate LinkNote and Evidence. From a reviewed proposal; MJSullivan kept every row, including those rated 'possible'. One link (Disarmer to Community Reconciliation) uses the broader sense of the Disarmer from WWNS #4 and carries Qualifies evidence marking it as an editorial extension. Disarmer to Political Advocacy also cites Frankly_159."@en ;
     .
+
+tgs:RevisionEvent.WWNSArchetypeMatrix_Imported a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Work.WWNSArchetypeMatrix, thinkr:ArchetypeRole, thinkr:FitLevelType ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Brought MJSullivan's published WWNS archetype matrix into the graph at his request, approved from review sheet 6a: 255 thinkr:ArchetypeRole individuals (new file archetyperoles.ttl), one per rated cell, each with archetype, intervention subdomain, fit level (new enumeration thinkr:FitLevelType: Strong, Moderate, Light) and the one-line role as skos:definition. The 15 cells rated 'No clear role' are left out. 66 Strong fits also asserted as thinkr:hasStrongFitIn on the archetypes. New Work tgs:Work.WWNSArchetypeMatrix."@en ;
+    .
+
+tgs:RevisionEvent.Disarmer_PoliticalAdvocacy_Retracted a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Archetype.Disarmer ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Correction ;
+    thinkr:revisionNote "Retracted tgs:Archetype.Disarmer dcterms:relation tgs:PracticeTerm.PoliticalAdvocacy, added earlier the same day (tgs:RevisionEvent.ArchetypePracticeLinks), with its LinkNote and two Evidence individuals, approved from review sheet 6c. Political Advocacy is a generic practice, so the link pointed any advocacy-related topic at the Disarmer, whose advocacy is about nuclear arms only. The Frankly_159 evidence was moved into the Disarmer's scopeNote."@en ;
+    .
+
+tgs:RevisionEvent.PracticeTermSubdomainGaps_Closed a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.BioregioningEarth ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added 15 skos:relatedMatch links from eight Bioregioning Earth practice terms that had no direct link to any intervention subdomain (Political Advocacy, Clothing and Product Manufacturing, Materials Transformation, Coaches and Leaders, Theory U, Formal Scientific Process, Systems and Resource Mapping, Venture Cultivation), approved from review sheet 6e. Demonstrator Site deliberately gets none: a demonstrator can be about anything, and its initiatives reach their fronts through their topic terms."@en ;
+    .
