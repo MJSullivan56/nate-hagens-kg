@@ -1947,6 +1947,15 @@ tgs:Persona.ScottTinker a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "Professional only: they had 'recently just been introduced'. Nate says he spoke to six or seven people who know Tinker while preparing, all of whom praised his intellect and integrity but said his optimism sometimes bleeds into his analysis; the episode is framed as a conversation between people who disagree on several points."@en ;
     .
 
+tgs:Persona.BirgitteBischoff a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.BirgitteBischoff ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BirgitteBischoff ;
+    skos:prefLabel "Birgitte Bischoff"@en ;
+    rdfs:label "Birgitte Bischoff (persona)"@en ;
+    skos:scopeNote "Professional: introduced by a mutual friend; they had talked once before recording, and Nate follows her on LinkedIn. She calls herself 'still a learner' on the polycrisis, which the IFRC Europe region began working on after she read a Cascade Institute report."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

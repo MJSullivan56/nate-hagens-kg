@@ -2926,3 +2926,16 @@ tgs:Relationship.NateHagens_ScottTinker a thinkr:Relationship, owl:NamedIndividu
           thinkr:episode tgs:Interview.TGS_161_ScottTinker ;
           dcterms:date "2024-10-30"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'even though we've recently just been introduced to each other'; Tinker closes 'I'm available to people and to you, Nate, and look forward to carrying this dialogue forward.'"@en .
+
+tgs:Relationship.NateHagens_BirgitteBischoff a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.BirgitteBischoff ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Birgitte Bischoff"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_160_BirgitteBischoff ;
+          dcterms:date "2024-12-18"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'you and I talked once before this conversation'; 'It's no coincidence that our mutual friend introduced us.' Nate offers 'Let me know if I can help', and she would like to return in six months to a year to report on the IFRC's polycrisis work."@en .

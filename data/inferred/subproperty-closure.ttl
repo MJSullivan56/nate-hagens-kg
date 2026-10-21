@@ -55,6 +55,8 @@ tgs:Concept.BioticPump thinkr:relatesTo tgs:Persona.AnastassiaMakarieva,
         tgs:Persona.VictorGorshkov ;
     skos:note "Real theory co-developed by Anastassia Makarieva and the late Victor Gorshkov: forests actively drive atmospheric moisture transport and rainfall patterns over land, rather than being passive recipients of rain — condensation over dense forest canopy lowers air pressure, pulling moist ocean air inland. Challenges conventional climate models to treat vegetation as a dynamic driver of atmospheric processes, not a fixed background feature."@en .
 
+tgs:Concept.BundledPreparedness thinkr:relatesTo tgs:Persona.BirgitteBischoff .
+
 tgs:Concept.CarbonAllocationByUse thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz .
 
 tgs:Concept.CaringEconomics thinkr:relatesTo tgs:Persona.RianeEisler ;
@@ -222,6 +224,8 @@ tgs:Concept.HonorableHarvest thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 tgs:Concept.HumanExceptionalism thinkr:relatesTo tgs:Persona.ChristineWebb,
         tgs:Persona.RobinWallKimmerer .
 
+tgs:Concept.HumanitarianNeutralityAndAccess thinkr:relatesTo tgs:Persona.BirgitteBischoff .
+
 tgs:Concept.IAmBecauseWeAre thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.InServiceOfLife skos:note "Nate's own real, direct phrase, delivered in full definitional form in Frankly_92, distinguishing genuine service to Life (capital L — the full, deep-time continuity of complex life on Earth) from 'in service of life' in the lowercase sense (well-intentioned initiatives like wind farms, recycling, or the UN Sustainable Development Goals, which genuinely help but operate at a fundamentally smaller threshold). Rather than define capital-L service directly, Nate offers ten real, direct criteria for what is NOT in service of Life: (1) anything anthropocentric, caring only about human life; (2) anything reductionist, counting species without accounting for symbiosis and biocomplexity; (3) anything favoring simple life over complex life as though they were equivalent; (4) anything current-focused only, ignoring deep time (most climate models stop at 2099); (5) anything land-only-based, ignoring that oceans hold 70% of Earth's living habitat; (6) anything exoplanetary-focused (Mars colonization, immortal robot bodies, mind uploading) that writes off life on Earth itself; (7) anything causing irreversible species extinction; (8) anything allowing existential global threats (nuclear weapons) to continue; (9) interventions that fix one anthropocentric harm while worsening ecological harm overall (curing malaria without addressing the resulting pressure on rainforest habitat); and (10) growing the economic Superorganism itself, as opposed to slowing or shrinking its metabolism."@en .
@@ -313,6 +317,9 @@ tgs:Concept.PhantomCarryingCapacity thinkr:relatesTo tgs:Persona.WilliamCatton .
 tgs:Concept.PlanetaryBoundaries thinkr:relatesTo tgs:Persona.JohanRockstrom ;
     skos:note "Real, foundational scientific framework led by Johan Rockström and colleagues (originally published 2009), identifying nine distinct Earth-system processes with critical thresholds — climate change, biosphere integrity, land-system change, freshwater use, biogeochemical flows, ocean acidification, atmospheric aerosol loading, stratospheric ozone depletion, and novel entities (chemical pollution) — within which humanity and the biosphere can continue to develop safely. As of the framework's own 2023 update, six of nine boundaries have been exceeded."@en .
 
+tgs:Concept.Polycrisis thinkr:relatesTo tgs:Organization.CascadeInstitute,
+        tgs:Persona.BirgitteBischoff .
+
 tgs:Concept.PositiveSumInGroupNegativeSumToNature thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.PostTragic thinkr:relatesTo tgs:Persona.DanielSchmachtenberger ;
@@ -376,6 +383,8 @@ tgs:Concept.Schismogenesis thinkr:relatesTo tgs:Persona.GregoryBateson ;
     skos:note "Gregory Bateson's term (from his 1930s anthropological fieldwork) for a process in which relationships escalate through cumulative interaction — either symmetrically (both parties responding to each other's same behavior with more of the same, e.g. an arms race) or complementarily (parties responding with opposite behaviors that reinforce each other, e.g. dominance and submission), each pattern intensifying over time unless deliberately interrupted."@en .
 
 tgs:Concept.SecondPrecisionRevolution thinkr:relatesTo tgs:Persona.RobertPape .
+
+tgs:Concept.SelfActivatingVolunteerNetwork thinkr:relatesTo tgs:Persona.BirgitteBischoff .
 
 tgs:Concept.SevenFiresProphecy thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
@@ -667,7 +676,9 @@ tgs:Interview.TGS_15_DanielPauly dct:contributor tgs:Persona.DanielPauly ;
     dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/15-daniel-pauly> .
 
-tgs:Interview.TGS_160_BirgitteBischoff dct:source <https://www.thegreatsimplification.com/episode/160-birgitte-bischoff> .
+tgs:Interview.TGS_160_BirgitteBischoff dct:contributor tgs:Persona.BirgitteBischoff ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/160-birgitte-bischoff> .
 
 tgs:Interview.TGS_161_ScottTinker dct:contributor tgs:Persona.ScottTinker ;
     dct:creator tgs:Persona.NateHagens ;
@@ -2358,6 +2369,8 @@ tgs:Persona.SunilAmrith thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest 
 tgs:ScenarioFacet.TheGreatSimplification thinkr:logicallyDisjointWith tgs:ScenarioFacet.Mordor ;
     thinkr:relatesTo tgs:ScenarioFacet.GreenGrowth,
         tgs:ScenarioFacet.MadMax .
+
+tgs:Persona.BirgitteBischoff thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.IainMcGilchrist thinkr:hasNamedEntityType thinkr:PersonEntityType.Contributor,
         thinkr:PersonEntityType.Guest .

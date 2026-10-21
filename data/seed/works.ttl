@@ -3614,6 +3614,22 @@ tgs:Work.TowardsAnAppliedNetEnergyFramework a thinkr:Work, owl:NamedIndividual ;
     dct:source <http://www.thegreatsimplification.com/s/Nate_Hagens_Dissertation_Final_8_31_2010.pdf> ;
     .
 
+tgs:Work.IntroductionToPolycrisisAnalysis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Introduction to Polycrisis Analysis"@en ;
+    rdfs:comment "Cascade Institute guide (October 2024) setting out what a polycrisis is and how to analyze one: mapping the global systems involved, the causal links that entangle their crises, and the points where intervention could help. Linked in the TGS_160 show notes; Birgitte Bischoff says a Cascade Institute report started the IFRC Europe region's polycrisis work."@en ;
+    dct:publisher tgs:Organization.CascadeInstitute ;
+    dct:issued "2024-10"^^xsd:gYearMonth ;
+    dct:source <https://wfabhmdrpib5-u5525.pressidiumcdn.com/wp-content/uploads/2024/04/Introduction-to-Polycrisis-Analysis-Guide-October-2024.pdf> ;
+    .
+
+tgs:Work.FundamentalPrinciplesOfTheRedCross a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Fundamental Principles of the International Red Cross and Red Crescent Movement"@en ;
+    rdfs:comment "The seven principles adopted by the Movement in 1965 -- humanity, impartiality, neutrality, independence, voluntary service, unity and universality -- which every national society follows and which Birgitte Bischoff calls the basis of its auxiliary role with government."@en ;
+    dct:publisher tgs:Organization.IFRC ;
+    dct:issued "1965"^^xsd:gYear ;
+    dct:source <https://www.icrc.org/sites/default/files/topic/file_plus_list/4046-the_fundamental_principles_of_the_international_red_cross_and_red_crescent_movement.pdf> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3693,6 +3709,9 @@ tgs:Work.ForTheCommonGood
 tgs:Work.FromWhatIsToWhatIf
     dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
 
+tgs:Work.FundamentalPrinciplesOfTheRedCross
+    dct:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
+
 tgs:Work.FutureCouncilFilm
     dct:isReferencedBy tgs:PanelDiscussion.RR_13_FutureCouncil .
 
@@ -3713,6 +3732,9 @@ tgs:Work.IfAnyoneBuildsItEveryoneDies
 
 tgs:Work.InTheWakeOf911
     dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Work.IntroductionToPolycrisisAnalysis
+    dct:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
 
 tgs:Work.Ishmael
     dct:isReferencedBy tgs:Interview.TGS_232_CharlesEisenstein, tgs:Interview.TGS_76_DanielZetah, tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot .

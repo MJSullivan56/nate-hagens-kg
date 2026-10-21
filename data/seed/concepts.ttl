@@ -4342,6 +4342,54 @@ tgs:Concept.RadicalMiddle a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.Polycrisis a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.SystemsScience, tgs:Subject.Geopolitics ;
+    skos:prefLabel "Polycrisis"@en ;
+    skos:definition "A situation in which crises in several global systems -- climate, food, energy, finance, health, geopolitics -- become causally entangled, so that each amplifies the others and their combined harm is greater than the sum of the separate crises. Polycrisis analysis maps those systems and the links between them, to treat many challenges as one connected challenge rather than as isolated problems."@en ;
+    dcterms:source <https://cascadeinstitute.org> ;
+    thinkr:influencedBy tgs:Organization.CascadeInstitute, tgs:Persona.BirgitteBischoff ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_160. Developed by the Cascade Institute (tgs:Work.IntroductionToPolycrisisAnalysis). Birgitte Bischoff describes how COVID showed the IFRC that supply-chain, financial and mental-health crises had to be seen 'as one challenge', and how the IFRC Europe region began a polycrisis 'think and do tank'. Distinct from tgs:Concept.Metacrisis, which concerns the shared root causes beneath the crises; see also tgs:Concept.CoupledSystemicRisks and tgs:Work.GlobalPolycrisisCausalMechanisms."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.BundledPreparedness a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.SystemsScience, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Proactive about being proactive (bundled preparedness)"@en ;
+    skos:definition "Birgitte Bischoff's approach to preparing for an uncertain, crisis-prone future: rather than forecasting specific numbers or planning for each hazard separately ('11 different scenarios'), an organization prepares for interconnected crises in bundles -- spotting signals, mapping systemic risks, exploring several cross-sector scenarios through strategic foresight, and readying local people and tools that can switch to whatever comes ('if we can't fly, we roll in a car')."@en ;
+    dcterms:source <https://www.oecd.org/en/about/programmes/strategic-foresight.html> ;
+    thinkr:influencedBy tgs:Persona.BirgitteBischoff ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_160. 'Proactive about being proactive' is Nate's recollection of her phrase from their first conversation. She doubts long-range migration forecasts are meaningful -- 'whatever we plan for, something else is happening' -- yet argues bundled preparation is also less resource-hungry. For individuals it means taking responsibility locally: knowing your community and neighbors, preparing for the crises you know will hit your area, welcoming newcomers. Related: tgs:Concept.ScenarioThinking, tgs:Concept.Polycrisis."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.HumanitarianNeutralityAndAccess a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Humanitarian neutrality and access"@en ;
+    skos:definition "The standing of the Red Cross and Red Crescent: neither an NGO nor part of the UN, each national society works in its country as an independent auxiliary to the government under the Movement's principles of neutrality and impartiality. That standing gives it access to both sides of a conflict and a trusted, post-partisan brand that outlasts elections -- an asset built over decades that can be lost through a single wrongdoing, or by being misquoted or used in a political campaign."@en ;
+    dcterms:source <https://www.icrc.org/sites/default/files/topic/file_plus_list/4046-the_fundamental_principles_of_the_international_red_cross_and_red_crescent_movement.pdf> ;
+    thinkr:influencedBy tgs:Persona.BirgitteBischoff ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_160. Nate frames the Red Cross's unique assets as knowledge, network, brand and trust, and speed ('from crisis to response there's like one or two steps'). Bischoff adds that the IFRC also uses its reputation to advocate for rights-based, people-centred policy, including migration policy aligned with humanitarian principles. Source of the principles: tgs:Work.FundamentalPrinciplesOfTheRedCross."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.SelfActivatingVolunteerNetwork a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Self-activating volunteer network"@en ;
+    skos:definition "A standing network of local volunteers, trained and prepared in calm times, that mobilizes itself when a crisis hits instead of waiting for a headquarters or government to act. Volunteering rises in crises -- during COVID more people volunteered than Red Cross societies could absorb -- so an existing, trusted, locally present structure gives pro-social impulses somewhere to go."@en ;
+    dcterms:source <https://www.ifrc.org/our-work/health-and-care/community-health/communicable-diseases/covid-19> ;
+    thinkr:influencedBy tgs:Persona.BirgitteBischoff ;
+    skos:scopeNote "Minted 2026-10-21 for TGS_160. Birgitte Bischoff's example: as people fled Ukraine, volunteers in Ukraine, Poland, Romania and Moldova handed out tea, biscuits and diapers within days -- 'the power of having a network that can self activate.' Local volunteers are always the first responders. For her, volunteering is 'taking responsibility at local level'; 'you don't need to be... a humanitarian to be a human.' Related: tgs:Concept.DistributedAgency."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4371,6 +4419,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Bioregion,
         tgs:Concept.BioticPump,
         tgs:Concept.BrokenApprenticeship,
+        tgs:Concept.BundledPreparedness,
         tgs:Concept.CantillonEffect,
         tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CarbonDioxideRemoval,
@@ -4503,6 +4552,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.HoloceneClimateStability,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.HumanExceptionalism,
+        tgs:Concept.HumanitarianNeutralityAndAccess,
         tgs:Concept.HumanPredicament,
         tgs:Concept.HumanitysIcarusMoment,
         tgs:Concept.HyperAgents,
@@ -4584,6 +4634,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.PlanetaryAlbedoDecline,
         tgs:Concept.PlanetaryBoundaries,
         tgs:Concept.PollinatorDependence,
+        tgs:Concept.Polycrisis,
         tgs:Concept.PositiveSumInGroupNegativeSumToNature,
         tgs:Concept.PostTragic,
         tgs:Concept.PowerOfLifeVsPowerOverLife,
@@ -4635,6 +4686,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ScenarioThinking,
         tgs:Concept.Schismogenesis,
         tgs:Concept.SecondPrecisionRevolution,
+        tgs:Concept.SelfActivatingVolunteerNetwork,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenAIMacroRisks,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
@@ -4985,6 +5037,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EscalationTrap,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
+        tgs:Concept.HumanitarianNeutralityAndAccess,
         tgs:Concept.HyperAgents,
         tgs:Concept.LootableSurplus,
         tgs:Concept.MaximizingReturnsOnPower,
@@ -4992,6 +5045,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MultipolarTrap,
         tgs:Concept.OffshoreBalancing,
         tgs:Concept.OmniLose,
+        tgs:Concept.Polycrisis,
         tgs:Concept.PreemptivePeace,
         tgs:Concept.PunishmentStrategy,
         tgs:Concept.SecondPrecisionRevolution,
@@ -5017,6 +5071,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.Bioregion,
         tgs:Concept.BrokenApprenticeship,
+        tgs:Concept.BundledPreparedness,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CircleOfTrustLocalism,
         tgs:Concept.ClimateAsANormalProblem,
@@ -5085,6 +5140,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HighTouchGrounding,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.HumanExceptionalism,
+        tgs:Concept.HumanitarianNeutralityAndAccess,
         tgs:Concept.HumanitysIcarusMoment,
         tgs:Concept.HyperAgents,
         tgs:Concept.IAmBecauseWeAre,
@@ -5165,6 +5221,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RobustActions,
         tgs:Concept.RocksInTheRiver,
         tgs:Concept.Schismogenesis,
+        tgs:Concept.SelfActivatingVolunteerNetwork,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
         tgs:Concept.SevenFiresProphecy,
@@ -5221,6 +5278,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AtomsEnergyBits,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BundledPreparedness,
         tgs:Concept.CarryingCapacity,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.ClimateDashboard,
@@ -5269,6 +5327,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.NonZeroSumness,
         tgs:Concept.OmniLose,
         tgs:Concept.PersonalCompositeFutures,
+        tgs:Concept.Polycrisis,
         tgs:Concept.PrecautionaryPrinciple,
         tgs:Concept.PredicamentNotProblem,
         tgs:Concept.ProblemSolvingAsRacket,
@@ -5348,6 +5407,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.NaturalDeclineRate,
         tgs:Concept.PhantomCarryingCapacity,
         tgs:Concept.PlanetaryBoundaries,
+        tgs:Concept.Polycrisis,
         tgs:Concept.PositiveSumInGroupNegativeSumToNature,
         tgs:Concept.PowerVersusLife,
         tgs:Concept.PriceCostAndValue,
@@ -5425,6 +5485,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
+        tgs:Concept.BundledPreparedness,
         tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
@@ -5452,6 +5513,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GrowthImperative,
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HumanExceptionalism,
+        tgs:Concept.HumanitarianNeutralityAndAccess,
         tgs:Concept.InfrastructureSocialStructureSuperstructure,
         tgs:Concept.JevonsDividend,
         tgs:Concept.LeveragePoints,
@@ -5460,6 +5522,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MusicalChairsMoment,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.OvertonWindow,
+        tgs:Concept.Polycrisis,
         tgs:Concept.Pragmatopia,
         tgs:Concept.PrecautionaryPrinciple,
         tgs:Concept.ProblemSolvingAsRacket,
@@ -5469,6 +5532,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RealityParty,
         tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.RestraintByDesign,
+        tgs:Concept.SelfActivatingVolunteerNetwork,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenKeyInterventions,
@@ -5492,6 +5556,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
     skos:member tgs:Concept.AggregateProbability,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.BarbellEmpathy,
+        tgs:Concept.BundledPreparedness,
         tgs:Concept.CollapseResilience,
         tgs:Concept.DiningCar,
         tgs:Concept.DopamineHijackedCulture,
@@ -5527,6 +5592,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Rewilding,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RocksInTheRiver,
+        tgs:Concept.SelfActivatingVolunteerNetwork,
         tgs:Concept.SevenFiresProphecy,
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SolutionSpaceCube,
@@ -5774,6 +5840,12 @@ tgs:Concept.ResourcesVersusReserves skos:related tgs:Concept.PeakOil .
 tgs:Concept.ResourcesVersusReserves skos:related tgs:Concept.NaturalDeclineRate .
 tgs:Concept.DenseToMoreDenseTransition skos:related tgs:Concept.EnergyAdditionsNotTransitions .
 tgs:Concept.EnergyPoverty skos:related tgs:Concept.HavesAndHaveNots .
+tgs:Concept.Polycrisis skos:related tgs:Concept.Metacrisis .
+tgs:Concept.Polycrisis skos:related tgs:Concept.CoupledSystemicRisks .
+tgs:Concept.BundledPreparedness skos:related tgs:Concept.Polycrisis .
+tgs:Concept.BundledPreparedness skos:related tgs:Concept.ScenarioThinking .
+tgs:Concept.SelfActivatingVolunteerNetwork skos:related tgs:Concept.DistributedAgency .
+tgs:Concept.HumanitarianNeutralityAndAccess skos:related tgs:Concept.SelfActivatingVolunteerNetwork .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5804,6 +5876,9 @@ tgs:Concept.CorporationsAsMisalignedAI
     thinkr:complements tgs:Concept.CorporationAsObligateSociopath ;
     skos:related tgs:Concept.CorporationAsObligateSociopath .
 
+tgs:Concept.CoupledSystemicRisks
+    skos:related tgs:Concept.Polycrisis .
+
 tgs:Concept.CulturalAntibodies
     thinkr:complements tgs:Concept.PrematureCertainty .
 
@@ -5812,6 +5887,9 @@ tgs:Concept.CulturalMitochondria
 
 tgs:Concept.DeepEcology
     skos:related tgs:Concept.KinshipWorldview, tgs:Concept.Rewilding .
+
+tgs:Concept.DistributedAgency
+    skos:related tgs:Concept.SelfActivatingVolunteerNetwork .
 
 tgs:Concept.DividedBrain
     skos:related tgs:Concept.BattlesOfOurTime .
@@ -5933,7 +6011,7 @@ tgs:Concept.MetabolicHierarchyOfTheSuperorganism
     skos:related tgs:Concept.MaximizingReturnsOnPower .
 
 tgs:Concept.Metacrisis
-    skos:related tgs:Concept.ArrestedHumanDevelopment .
+    skos:related tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.Polycrisis .
 
 tgs:Concept.MultipolarTrap
     skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory .
@@ -5965,6 +6043,9 @@ tgs:Concept.PeakOil
 
 tgs:Concept.PersonalAgency
     skos:related tgs:Concept.LearnedHelplessness .
+
+tgs:Concept.Polycrisis
+    skos:related tgs:Concept.BundledPreparedness .
 
 tgs:Concept.PositiveSumInGroupNegativeSumToNature
     skos:related tgs:Concept.NonZeroSumness .
@@ -6010,6 +6091,12 @@ tgs:Concept.RightsOfNature
 
 tgs:Concept.RobustnessVsPerformance
     skos:related tgs:Concept.SuccessAsLongTermPersistence .
+
+tgs:Concept.ScenarioThinking
+    skos:related tgs:Concept.BundledPreparedness .
+
+tgs:Concept.SelfActivatingVolunteerNetwork
+    skos:related tgs:Concept.HumanitarianNeutralityAndAccess .
 
 tgs:Concept.ShadowOfTheSuperorganism
     thinkr:complements tgs:Concept.FragmentedConsciousness ;

@@ -842,6 +842,26 @@ tgs:Organization.BureauOfEconomicGeology a thinkr:Organization, owl:NamedIndivid
     dcterms:source <https://www.beg.utexas.edu> ;
     .
 
+tgs:Organization.IFRC a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "International Federation of Red Cross and Red Crescent Societies"@en ;
+    skos:altLabel "IFRC"@en ;
+    skos:definition "The umbrella organization of the world's Red Cross and Red Crescent national societies (one per country), which it supports, coordinates and represents; with the International Committee of the Red Cross it forms the International Red Cross and Red Crescent Movement. Its Europe region covers 53 national societies in Europe and Central Asia. Birgitte Bischoff counts some 16 million volunteers across the network."@en ;
+    dcterms:source <https://www.ifrc.org> ;
+    .
+
+tgs:Organization.DanishRedCross a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Danish Red Cross"@en ;
+    skos:altLabel "Dansk Røde Kors"@da ;
+    skos:definition "Denmark's Red Cross national society, a member of tgs:Organization.IFRC, working in Denmark as auxiliary to the Danish government and internationally; it hosts the IFRC Reference Centre for Psychosocial Support."@en ;
+    dcterms:source <https://en.rodekors.dk> ;
+    .
+
+tgs:Organization.CascadeInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Cascade Institute"@en ;
+    skos:definition "Canadian research centre at Royal Roads University, founded by Thomas Homer-Dixon, that studies converging global crises and develops polycrisis analysis as a method for identifying and intervening in them."@en ;
+    dcterms:source <https://cascadeinstitute.org> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -851,6 +871,9 @@ tgs:Organization.BeyondPlastics
 
 tgs:Organization.BureauOfEconomicGeology
     dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+
+tgs:Organization.CascadeInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
 
 tgs:Organization.CenterForHumaneTechnology
     dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
@@ -879,6 +902,9 @@ tgs:Organization.CrankyUncle
 tgs:Organization.CyberSecurityLabLouisville
     dcterms:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
 
+tgs:Organization.DanishRedCross
+    dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
+
 tgs:Organization.EarthSpeciesProject
     dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
 
@@ -893,6 +919,9 @@ tgs:Organization.ExxonMobil
 
 tgs:Organization.GlobalGuerrillasReport
     dcterms:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
+
+tgs:Organization.IFRC
+    dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
 
 tgs:Organization.InternationalBatesonInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_10_NoraBateson .

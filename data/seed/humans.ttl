@@ -2246,6 +2246,15 @@ tgs:Human.ScottTinker a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://www.beg.utexas.edu/people/scott-tinker> ;
     .
 
+tgs:Human.BirgitteBischoff a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Birgitte Bischoff"@en ;
+    skos:altLabel "Birgitte Bischoff Ebbesen"@en ;
+    rdfs:label "Birgitte Bischoff (human)"@en ;
+    rdfs:comment "Danish humanitarian; Regional Director for Europe of the International Federation of Red Cross and Red Crescent Societies, covering 53 national societies in Europe and Central Asia and responsible for the IFRC's strategic and operational coordination, membership services and humanitarian diplomacy in the region, including the response in and around Ukraine. Previously International Director of the Danish Red Cross and co-chair of the IFRC Reference Centre for Psychosocial Support. Her career began with a student job at the Danish Refugee Council; she joined the Red Cross just before the 2004 Indian Ocean tsunami and has worked in Asia, the Middle East and Somalia."@en ;
+    thinkr:memberOf tgs:Organization.IFRC, tgs:Organization.DanishRedCross ;
+    dct:source <https://www.ifrc.org/who-we-are/people-and-structures/global-leadership-team/regional-director-europe> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
