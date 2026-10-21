@@ -3804,3 +3804,10 @@ tgs:RevisionEvent.DevonDoughnut_Imported a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Added the Devon Doughnut as its own scheme at MJSullivan's request (new file devondoughnut.ttl, new class thinkr:DevonDoughnutDomain), approved from review sheets 1 and 6b: 22 domains plus four grouping nodes, names and paraphrases only because the source is CC BY-NC-SA and marked not for reuse elsewhere. 42 skos:relatedMatch links from domains to intervention subdomains, so every domain reaches a front. The two halves closeMatch the existing tgs:DoughnutHalf individuals. New Work tgs:Work.DevonDoughnutIndicatorCompilation; linked to tgs:Initiative.DevonDoughnutProject. Crosswalks to the California categories (sheet 2) and to Bioregioning Earth practices (sheet 3) not yet built."@en ;
     .
+
+tgs:RevisionEvent.DevonDoughnut_Crosswalks a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.DevonDoughnut, tgs:ConceptScheme.CaliforniaDoughnutIndicators, tgs:ConceptScheme.BioregioningEarth ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Crosswalked the Devon Doughnut at MJSullivan's request, approved from review sheets 2 and 3. Sheet 2: 28 links from Devon domains to California Doughnut categories (skos:closeMatch where the two measure the same thing, skos:relatedMatch where they share a system but measure different variables), matched on California's indicators rather than category names after MJSullivan queried five gap rows; only Access to Nature has no California counterpart. Sheet 3: 50 skos:relatedMatch links from Devon domains to Bioregioning Earth and One Earth practice terms, each drawn from Devon's own example pathways for action; two rows mapping to One Earth's textile-focused Recycle and Reuse were dropped in review. Review strength of every link is recorded in each domain's scopeNote."@en ;
+    .

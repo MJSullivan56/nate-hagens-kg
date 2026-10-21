@@ -961,6 +961,9 @@ tgs:PracticeTerm.OneEarth_CircularFibersheds
 tgs:PracticeTerm.OneEarth_CommunityAction
     skos:narrowMatch tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.NetworkWeaving, tgs:PracticeTerm.ParticipatoryStrategies .
 
+tgs:PracticeTerm.OneEarth_Composting
+    skos:relatedMatch tgs:DevonDoughnutDomain.Waste .
+
 tgs:PracticeTerm.OneEarth_DrylandIrrigation
     skos:relatedMatch tgs:PracticeTerm.WaterManagement .
 
@@ -970,8 +973,12 @@ tgs:PracticeTerm.OneEarth_EcosystemRestoration
 tgs:PracticeTerm.OneEarth_EducationAndCulture
     skos:narrowMatch tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.LearningPrograms, tgs:PracticeTerm.PeerLearning .
 
+tgs:PracticeTerm.OneEarth_ElectricTransport
+    skos:relatedMatch tgs:DevonDoughnutDomain.AirQuality .
+
 tgs:PracticeTerm.OneEarth_EnergyEfficiency
-    skos:narrower tgs:PracticeTerm.OneEarth_BuiltEnvironment, tgs:PracticeTerm.OneEarth_IndustriesAndServices, tgs:PracticeTerm.OneEarth_TransmissionAndStorage, tgs:PracticeTerm.OneEarth_TransportationEfficiency .
+    skos:narrower tgs:PracticeTerm.OneEarth_BuiltEnvironment, tgs:PracticeTerm.OneEarth_IndustriesAndServices, tgs:PracticeTerm.OneEarth_TransmissionAndStorage, tgs:PracticeTerm.OneEarth_TransportationEfficiency ;
+    skos:relatedMatch tgs:DevonDoughnutDomain.Energy .
 
 tgs:PracticeTerm.OneEarth_FinanceAndIncentives
     skos:narrowMatch tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.GrantsPrograms, tgs:PracticeTerm.InvestmentVehicles, tgs:PracticeTerm.PortfolioDevelopment, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.StructuringAndCapitalization, tgs:PracticeTerm.VentureCultivation .
@@ -980,7 +987,8 @@ tgs:PracticeTerm.OneEarth_FoodUpcycling
     skos:relatedMatch tgs:PracticeTerm.MaterialsTransformation .
 
 tgs:PracticeTerm.OneEarth_FoodWasteReduction
-    skos:narrower tgs:PracticeTerm.OneEarth_BioregionalSourcing, tgs:PracticeTerm.OneEarth_Composting, tgs:PracticeTerm.OneEarth_FoodUpcycling, tgs:PracticeTerm.OneEarth_MealPlanning, tgs:PracticeTerm.OneEarth_StorageAndLogistics, tgs:PracticeTerm.OneEarth_UrbanGardening .
+    skos:narrower tgs:PracticeTerm.OneEarth_BioregionalSourcing, tgs:PracticeTerm.OneEarth_Composting, tgs:PracticeTerm.OneEarth_FoodUpcycling, tgs:PracticeTerm.OneEarth_MealPlanning, tgs:PracticeTerm.OneEarth_StorageAndLogistics, tgs:PracticeTerm.OneEarth_UrbanGardening ;
+    skos:relatedMatch tgs:DevonDoughnutDomain.Waste .
 
 tgs:PracticeTerm.OneEarth_IndigenousTenure
     skos:relatedMatch tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.TraditionalEcologicalKnowledge .
@@ -991,8 +999,12 @@ tgs:PracticeTerm.OneEarth_LandConservation
 tgs:PracticeTerm.OneEarth_LegalEmpowerment
     skos:narrowMatch tgs:PracticeTerm.AgreementsAndLegalInstruments, tgs:PracticeTerm.RightsOfNature .
 
+tgs:PracticeTerm.OneEarth_MarineHabitats
+    skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth .
+
 tgs:PracticeTerm.OneEarth_OceanConservation
-    skos:narrower tgs:PracticeTerm.OneEarth_MarineCarbonSinks, tgs:PracticeTerm.OneEarth_MarineHabitats, tgs:PracticeTerm.OneEarth_ProtectedSeas, tgs:PracticeTerm.OneEarth_SustainableFisheries .
+    skos:narrower tgs:PracticeTerm.OneEarth_MarineCarbonSinks, tgs:PracticeTerm.OneEarth_MarineHabitats, tgs:PracticeTerm.OneEarth_ProtectedSeas, tgs:PracticeTerm.OneEarth_SustainableFisheries ;
+    skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth .
 
 tgs:PracticeTerm.OneEarth_PolicyAndGovernance
     skos:narrowMatch tgs:PracticeTerm.PoliticalAdvocacy .
@@ -1030,6 +1042,12 @@ tgs:PracticeTerm.OneEarth_SeedDiversity
 
 tgs:PracticeTerm.OneEarth_SmallholderFarming
     skos:relatedMatch tgs:PracticeTerm.FarmerSupport .
+
+tgs:PracticeTerm.OneEarth_SoilManagement
+    skos:relatedMatch tgs:DevonDoughnutDomain.SoilHealth .
+
+tgs:PracticeTerm.OneEarth_SustainableFisheries
+    skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth .
 
 tgs:PracticeTerm.OneEarth_SustainableGrazing
     skos:closeMatch tgs:PracticeTerm.RegenerativeGrazing .

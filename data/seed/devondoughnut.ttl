@@ -74,9 +74,10 @@ tgs:DevonDoughnutDomain.GreenhouseGasEmissions a thinkr:DevonDoughnutDomain, owl
     skos:prefLabel "Greenhouse Gas Emissions"@en ;
     skos:definition "How widely Devon sectors, groups and individuals have committed to reaching net-zero emissions; tracked through low-carbon travel choices and published net-zero plans."@en ;
     skos:note "Devon's one-word framing for this domain: 'Shifting the culture'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.FinanceAndCreditRedesign, tgs:IndicatorCategory.OzoneDepletion, tgs:PracticeTerm.PoliticalAdvocacy, tgs:PracticeTerm.RenewableEnergy ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm); Transportation and Logistics (probable); Finance and Credit Redesign (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm); Transportation and Logistics (probable); Finance and Credit Redesign (possible). California Doughnut categories (sheet 2): Climate Change (closeMatch, firm); Ozone Depletion (relatedMatch, possible). Bioregioning Earth and One Earth practices (sheet 3): Renewable Energy (possible); Political Advocacy (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.ClimateChange ;
     .
 
 tgs:DevonDoughnutDomain.PlasticPollution a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -85,9 +86,9 @@ tgs:DevonDoughnutDomain.PlasticPollution a thinkr:DevonDoughnutDomain, owl:Named
     skos:prefLabel "Plastic Pollution"@en ;
     skos:definition "Commitment across Devon to cutting plastic pollution, from teaching the 5 Rs in schools to shops dropping single-use plastics."@en ;
     skos:note "Devon's one-word framing for this domain: 'Rejecting'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:IndicatorCategory.ChemicalPollution, tgs:PracticeTerm.LearningPrograms ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Plastic and Chemical Hazards (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Plastic and Chemical Hazards (firm). California Doughnut categories (sheet 2): Chemical Pollution (relatedMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Learning Programs (possible)."@en ;
     .
 
 tgs:DevonDoughnutDomain.LandUse a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -96,9 +97,10 @@ tgs:DevonDoughnutDomain.LandUse a thinkr:DevonDoughnutDomain, owl:NamedIndividua
     skos:prefLabel "Land Use"@en ;
     skos:definition "Commitment to managing land for nature: keeping ground permeable, limiting farmland loss to development, and clustering woodland for connected ecosystems."@en ;
     skos:note "Devon's one-word framing for this domain: 'Diversifying'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.LandAndHousingReform, tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    skos:relatedMatch tgs:InterventionSubdomain.LandAndHousingReform, tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:PracticeTerm.HabitatConnectivity, tgs:PracticeTerm.RegenerativeAgriculture, tgs:PracticeTerm.TerritorialZoning ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Land and Housing Reform (probable); Biodiversity Defense and Corridor Creation (probable); Subsidiarity and Local Governance Capacity (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Land and Housing Reform (probable); Biodiversity Defense and Corridor Creation (probable); Subsidiarity and Local Governance Capacity (possible). California Doughnut categories (sheet 2): Land-Use Change (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Territorial Zoning (probable); Habitat Connectivity (probable); Regenerative Agriculture (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.LandUseChange ;
     .
 
 tgs:DevonDoughnutDomain.Waste a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -107,9 +109,9 @@ tgs:DevonDoughnutDomain.Waste a thinkr:DevonDoughnutDomain, owl:NamedIndividual 
     skos:prefLabel "Waste"@en ;
     skos:definition "Commitment to tackling waste, especially composting organics back to the land and reducing household waste sent to landfill or incineration."@en ;
     skos:note "Devon's one-word framing for this domain: 'Interrupting the cycle of harm'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:IndicatorCategory.ChemicalPollution, tgs:PracticeTerm.OneEarth_Composting, tgs:PracticeTerm.OneEarth_FoodWasteReduction ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (probable); Plastic and Chemical Hazards (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (probable); Plastic and Chemical Hazards (possible). California Doughnut categories (sheet 2): Chemical Pollution (relatedMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Composting (firm); Food Waste Reduction (probable)."@en ;
     .
 
 tgs:DevonDoughnutDomain.AirQuality a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -118,9 +120,10 @@ tgs:DevonDoughnutDomain.AirQuality a thinkr:DevonDoughnutDomain, owl:NamedIndivi
     skos:prefLabel "Air Quality"@en ;
     skos:definition "Commitment to cleaner air, chiefly by shifting car journeys to public transport and making pollution readings publicly visible."@en ;
     skos:note "Devon's one-word framing for this domain: 'Making it visible'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    skos:relatedMatch tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:IndicatorCategory.ConnectivityAndTransportation, tgs:PracticeTerm.EcologicalMonitoring, tgs:PracticeTerm.OneEarth_ElectricTransport, tgs:PracticeTerm.TransportationTransitions ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Transportation and Logistics (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Transportation and Logistics (firm); Non-Climate Planetary Boundaries (probable). California Doughnut categories (sheet 2): Air Pollution (closeMatch, firm); Connectivity & Transportation (relatedMatch, possible). Bioregioning Earth and One Earth practices (sheet 3): Transportation Transitions (firm); Electric Transport (probable); Ecological Monitoring (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.AirPollution ;
     .
 
 tgs:DevonDoughnutDomain.CoastAndMarineHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -129,9 +132,9 @@ tgs:DevonDoughnutDomain.CoastAndMarineHealth a thinkr:DevonDoughnutDomain, owl:N
     skos:prefLabel "Coast & Marine Health"@en ;
     skos:definition "Share of Devon seabed managed for ecosystem health, biodiversity and local fishing livelihoods, including protected no-fishing areas and community-supported fisheries."@en ;
     skos:note "Devon's one-word framing for this domain: 'Protecting'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:IndicatorCategory.BiodiversityLoss, tgs:IndicatorCategory.OceanAcidification, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.OneEarth_MarineHabitats, tgs:PracticeTerm.OneEarth_OceanConservation, tgs:PracticeTerm.OneEarth_SustainableFisheries ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Food and Water Systems (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Food and Water Systems (probable). California Doughnut categories (sheet 2): Ocean Acidification (relatedMatch, probable); Biodiversity Loss (relatedMatch, possible). Bioregioning Earth and One Earth practices (sheet 3): Sustainable Fisheries (firm); Marine Habitats (firm); Ocean Conservation (probable); Citizen or Community Science (probable)."@en ;
     .
 
 tgs:DevonDoughnutDomain.WaterbodyHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -140,9 +143,9 @@ tgs:DevonDoughnutDomain.WaterbodyHealth a thinkr:DevonDoughnutDomain, owl:NamedI
     skos:prefLabel "Waterbody Health"@en ;
     skos:definition "Share of Devon freshwater managed for health and biodiversity, with citizens monitoring rivers and polluters reporting incidents."@en ;
     skos:note "Devon's one-word framing for this domain: 'Reporting'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:IndicatorCategory.FreshwaterUse, tgs:IndicatorCategory.NitrogenAndPhosphorus, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.EcologicalMonitoring, tgs:PracticeTerm.WatershedRepair ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Non-Climate Planetary Boundaries (probable). California Doughnut categories (sheet 2): Freshwater Use (relatedMatch, probable); Nitrogen & Phosphorus (relatedMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Citizen or Community Science (firm); Watershed Repair (probable); Ecological Monitoring (probable)."@en ;
     .
 
 tgs:DevonDoughnutDomain.HabitatHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -151,9 +154,9 @@ tgs:DevonDoughnutDomain.HabitatHealth a thinkr:DevonDoughnutDomain, owl:NamedInd
     skos:prefLabel "Habitat Health"@en ;
     skos:definition "Share of land managed for habitat health, with hedgerows and verges managed as wildlife corridors joined into a recovery network."@en ;
     skos:note "Devon's one-word framing for this domain: 'Connecting up'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:IndicatorCategory.BiodiversityLoss, tgs:IndicatorCategory.LandUseChange, tgs:PracticeTerm.GeographicAndEcologicalMapping, tgs:PracticeTerm.HabitatConnectivity, tgs:PracticeTerm.VegetationPlanting ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm). California Doughnut categories (sheet 2): Biodiversity Loss (relatedMatch, probable); Land-Use Change (relatedMatch, possible). Bioregioning Earth and One Earth practices (sheet 3): Habitat Connectivity (firm); Geographic and Ecological Mapping (probable); Vegetation Planting (possible)."@en ;
     .
 
 tgs:DevonDoughnutDomain.SoilHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -162,9 +165,9 @@ tgs:DevonDoughnutDomain.SoilHealth a thinkr:DevonDoughnutDomain, owl:NamedIndivi
     skos:prefLabel "Soil Health"@en ;
     skos:definition "Share of land managed for soil health; regenerative farming and school citizen-science measures of soil microorganisms."@en ;
     skos:note "Devon's one-word framing for this domain: 'Micro-organisms'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:IndicatorCategory.ChemicalPollution, tgs:IndicatorCategory.NitrogenAndPhosphorus, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.OneEarth_SoilManagement, tgs:PracticeTerm.RegenerativeAgriculture ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Plastic and Chemical Hazards (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Plastic and Chemical Hazards (probable). California Doughnut categories (sheet 2): Chemical Pollution (relatedMatch, possible); Nitrogen & Phosphorus (relatedMatch, possible). Bioregioning Earth and One Earth practices (sheet 3): Regenerative Agriculture (firm); Soil Management (firm); Citizen or Community Science (probable)."@en ;
     .
 
 tgs:DevonDoughnutDomain.Biodiversity a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -172,9 +175,10 @@ tgs:DevonDoughnutDomain.Biodiversity a thinkr:DevonDoughnutDomain, owl:NamedIndi
     skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
     skos:prefLabel "Biodiversity"@en ;
     skos:definition "Share of land managed for biodiversity gain; chemical-free gardens, rewilded verges and field edges, and farmland managed for wildlife."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:PracticeTerm.CulturalAndSpiritualPractices, tgs:PracticeTerm.HabitatConnectivity, tgs:PracticeTerm.RegenerativeAgriculture ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Non-Climate Planetary Boundaries (probable). California Doughnut categories (sheet 2): Biodiversity Loss (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Habitat Connectivity (probable); Regenerative Agriculture (probable); Cultural and Spiritual Practices (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.BiodiversityLoss ;
     .
 
 tgs:DevonDoughnutDomain.Water a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -183,9 +187,10 @@ tgs:DevonDoughnutDomain.Water a thinkr:DevonDoughnutDomain, owl:NamedIndividual 
     skos:prefLabel "Water"@en ;
     skos:definition "How easily residents can get information on Devon water quality and quantity; household metering and community water monitoring."@en ;
     skos:note "Devon's one-word framing for this domain: 'Understanding'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.TrustAndInformationCommons, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.WaterManagement ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Trust Rebuilding and the Information Commons (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Trust Rebuilding and the Information Commons (possible). California Doughnut categories (sheet 2): Water & Sanitation (closeMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Citizen or Community Science (firm); Water Management (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.WaterAndSanitation ;
     .
 
 tgs:DevonDoughnutDomain.Food a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -194,9 +199,10 @@ tgs:DevonDoughnutDomain.Food a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
     skos:prefLabel "Food"@en ;
     skos:definition "How often producers and consumers in the region are directly connected; local sourcing by households, shops, schools and anchor institutions."@en ;
     skos:note "Devon's one-word framing for this domain: 'Re-connecting'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.LocalExchangeSystems ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.LocalExchangeSystems, tgs:PracticeTerm.CommunityFoodAccess, tgs:PracticeTerm.RegionalSourcing, tgs:PracticeTerm.ValueChainDevelopment ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Local and Regional Exchange Systems (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Local and Regional Exchange Systems (probable). California Doughnut categories (sheet 2): Food (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Regional Sourcing (firm); Community Food Access (probable); Value Chain Development (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Food ;
     .
 
 tgs:DevonDoughnutDomain.AccessToNature a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -205,9 +211,9 @@ tgs:DevonDoughnutDomain.AccessToNature a thinkr:DevonDoughnutDomain, owl:NamedIn
     skos:prefLabel "Access to Nature"@en ;
     skos:definition "How often people, especially young people, get guided time in nature, including nature prescribed for health."@en ;
     skos:note "Devon's one-word framing for this domain: 'Opening doors'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.ReconnectionToPlace ;
+    skos:relatedMatch tgs:InterventionSubdomain.ReconnectionToPlace, tgs:PracticeTerm.ImmersiveJourneys, tgs:PracticeTerm.LearningPrograms ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Reconnection to Place and Ecology (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Reconnection to Place and Ecology (firm). Bioregioning Earth and One Earth practices (sheet 3): Immersive Journeys (probable); Learning Programs (probable)."@en ;
     .
 
 tgs:DevonDoughnutDomain.HealthAndWellbeing a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -216,9 +222,10 @@ tgs:DevonDoughnutDomain.HealthAndWellbeing a thinkr:DevonDoughnutDomain, owl:Nam
     skos:prefLabel "Health & Wellbeing"@en ;
     skos:definition "Availability of open-ended, low-cost mental health support, including social prescribing (arts, sport, gardening)."@en ;
     skos:note "Devon's one-word framing for this domain: 'Responding'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.MedicalSupplyChains ;
+    skos:relatedMatch tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.MedicalSupplyChains, tgs:PracticeTerm.HealthAndSocialCare, tgs:PracticeTerm.StoryingPlace ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: The Care Economy (probable); Medical and Pharmaceutical Supply Chains (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: The Care Economy (probable); Medical and Pharmaceutical Supply Chains (possible). California Doughnut categories (sheet 2): Health (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Health and Social Care (firm); Storying Place (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Health ;
     .
 
 tgs:DevonDoughnutDomain.Education a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -227,9 +234,10 @@ tgs:DevonDoughnutDomain.Education a thinkr:DevonDoughnutDomain, owl:NamedIndivid
     skos:prefLabel "Education"@en ;
     skos:definition "Whether people feel equipped to tackle current problems; a more relevant, problem-solving curriculum."@en ;
     skos:note "Devon's one-word framing for this domain: 'Making it practical'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.EducationRedesign ;
+    skos:relatedMatch tgs:InterventionSubdomain.EducationRedesign, tgs:PracticeTerm.LearningPrograms ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Education Redesign (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Education Redesign (firm). California Doughnut categories (sheet 2): Education (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Learning Programs (firm)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Education ;
     .
 
 tgs:DevonDoughnutDomain.IncomeAndWork a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -238,9 +246,10 @@ tgs:DevonDoughnutDomain.IncomeAndWork a thinkr:DevonDoughnutDomain, owl:NamedInd
     skos:prefLabel "Income & Work"@en ;
     skos:definition "Share of people employed on a living wage; local careers and investment in green enterprise and skills."@en ;
     skos:note "Devon's one-word framing for this domain: 'Catching up'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    skos:relatedMatch tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:PracticeTerm.TrainingAndEmploymentPathways, tgs:PracticeTerm.VentureCultivation ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Skills and Livelihoods for a Contracting Economy (firm); Cooperative and Commons-Based Ownership (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Skills and Livelihoods for a Contracting Economy (firm); Cooperative and Commons-Based Ownership (possible). California Doughnut categories (sheet 2): Income & Work (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Training and Employment Pathways (firm); Venture Cultivation (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.IncomeAndWork ;
     .
 
 tgs:DevonDoughnutDomain.PoliticalVoice a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -249,9 +258,10 @@ tgs:DevonDoughnutDomain.PoliticalVoice a thinkr:DevonDoughnutDomain, owl:NamedIn
     skos:prefLabel "Political Voice"@en ;
     skos:definition "Whether people feel heard when they speak up; youth involvement in local decisions and participatory budgeting."@en ;
     skos:note "Devon's one-word framing for this domain: 'Listening'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    skos:relatedMatch tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:PracticeTerm.DecisionMakingProcesses, tgs:PracticeTerm.ParticipatoryStrategies ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Deliberative and Participatory Democracy (firm); Subsidiarity and Local Governance Capacity (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Deliberative and Participatory Democracy (firm); Subsidiarity and Local Governance Capacity (probable). California Doughnut categories (sheet 2): Political Voice (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Participatory Strategies (firm); Decision Making Processes (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.PoliticalVoice ;
     .
 
 tgs:DevonDoughnutDomain.Safety a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -260,9 +270,9 @@ tgs:DevonDoughnutDomain.Safety a thinkr:DevonDoughnutDomain, owl:NamedIndividual
     skos:prefLabel "Safety"@en ;
     skos:definition "How safe people feel in public and daily life, particularly from harassment and violence; reporting and response."@en ;
     skos:note "Devon's one-word framing for this domain: 'Responding'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:IndicatorCategory.PeaceAndJustice, tgs:PracticeTerm.HealthAndSocialCare ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (firm). California Doughnut categories (sheet 2): Peace & Justice (relatedMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Health and Social Care (possible)."@en ;
     .
 
 tgs:DevonDoughnutDomain.EquityAndEquality a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -271,9 +281,10 @@ tgs:DevonDoughnutDomain.EquityAndEquality a thinkr:DevonDoughnutDomain, owl:Name
     skos:prefLabel "Equity & Equality"@en ;
     skos:definition "Freedom from discrimination; civil-society anti-discrimination work in housing, jobs and education."@en ;
     skos:note "Devon's one-word framing for this domain: 'Considering everyone'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    skos:relatedMatch tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:PracticeTerm.CommunityReconciliation ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Dignity Infrastructure and Mutual Aid (probable); Violence Prevention and Social Cohesion (probable)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Dignity Infrastructure and Mutual Aid (probable); Violence Prevention and Social Cohesion (probable). California Doughnut categories (sheet 2): Equity (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Community Reconciliation (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Equity ;
     .
 
 tgs:DevonDoughnutDomain.CommunityConnectivity a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -281,9 +292,10 @@ tgs:DevonDoughnutDomain.CommunityConnectivity a thinkr:DevonDoughnutDomain, owl:
     skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
     skos:prefLabel "Community Connectivity"@en ;
     skos:definition "Communities building resilience through local networks, digital access, shared spaces and local economic activity."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:InterventionSubdomain.TrustAndInformationCommons, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.DignityInfrastructure ;
+    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:InterventionSubdomain.TrustAndInformationCommons, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.DignityInfrastructure, tgs:IndicatorCategory.ConnectivityAndTransportation, tgs:PracticeTerm.CulturalHubOrLearningCenter, tgs:PracticeTerm.NetworkWeaving ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (probable); Trust Rebuilding and the Information Commons (probable); Subsidiarity and Local Governance Capacity (possible); Dignity Infrastructure and Mutual Aid (possible)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (probable); Trust Rebuilding and the Information Commons (probable); Subsidiarity and Local Governance Capacity (possible); Dignity Infrastructure and Mutual Aid (possible). California Doughnut categories (sheet 2): Social Cohesion (closeMatch, probable); Connectivity & Transportation (relatedMatch, probable). Bioregioning Earth and One Earth practices (sheet 3): Network Weaving (firm); Cultural Hub or Learning Center (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.SocialCohesion ;
     .
 
 tgs:DevonDoughnutDomain.Housing a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -292,9 +304,10 @@ tgs:DevonDoughnutDomain.Housing a thinkr:DevonDoughnutDomain, owl:NamedIndividua
     skos:prefLabel "Housing"@en ;
     skos:definition "Ability of adults, especially young adults, to buy or rent decent affordable housing; pressure from second homes and buy-to-let."@en ;
     skos:note "Devon's one-word framing for this domain: 'Affording'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.LandAndHousingReform ;
+    skos:relatedMatch tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.LandAndHousingReform, tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.ConstructionAndHousing, tgs:PracticeTerm.PoliticalAdvocacy ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Housing and Built Environment (firm); Land and Housing Reform (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Housing and Built Environment (firm); Land and Housing Reform (firm). California Doughnut categories (sheet 2): Housing (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Construction and Housing (firm); Political Advocacy (probable); Collective Ownership Models (possible)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Housing ;
     .
 
 tgs:DevonDoughnutDomain.Energy a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
@@ -303,9 +316,10 @@ tgs:DevonDoughnutDomain.Energy a thinkr:DevonDoughnutDomain, owl:NamedIndividual
     skos:prefLabel "Energy"@en ;
     skos:definition "Share of energy from renewable sources; renewable tariffs, community energy reduction and local storage and grid capacity."@en ;
     skos:note "Devon's one-word framing for this domain: 'Switching'."@en ;
-    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:PracticeTerm.OneEarth_EnergyEfficiency, tgs:PracticeTerm.RenewableEnergy ;
     dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
-    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm)."@en ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm). California Doughnut categories (sheet 2): Energy (closeMatch, firm). Bioregioning Earth and One Earth practices (sheet 3): Renewable Energy (firm); Energy Efficiency (probable)."@en ;
+    skos:closeMatch tgs:IndicatorCategory.Energy ;
     .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====

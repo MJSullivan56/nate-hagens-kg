@@ -2815,4 +2815,91 @@ tgs:PracticeCluster.SystemicFinance
 
 tgs:PracticeCluster.WaysOfKnowing
     skos:narrower tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.CulturalAndSpiritualPractices, tgs:PracticeTerm.FormalScientificProcess, tgs:PracticeTerm.ImmersiveJourneys, tgs:PracticeTerm.LearningPrograms, tgs:PracticeTerm.MoreThanHumanKnowledge, tgs:PracticeTerm.PeerLearning, tgs:PracticeTerm.TraditionalEcologicalKnowledge .
+
+tgs:PracticeTerm.CitizenOrCommunityScience
+    skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth, tgs:DevonDoughnutDomain.SoilHealth, tgs:DevonDoughnutDomain.Water, tgs:DevonDoughnutDomain.WaterbodyHealth .
+
+tgs:PracticeTerm.CollectiveOwnershipModels
+    skos:relatedMatch tgs:DevonDoughnutDomain.Housing .
+
+tgs:PracticeTerm.CommunityFoodAccess
+    skos:relatedMatch tgs:DevonDoughnutDomain.Food .
+
+tgs:PracticeTerm.CommunityReconciliation
+    skos:relatedMatch tgs:DevonDoughnutDomain.EquityAndEquality .
+
+tgs:PracticeTerm.ConstructionAndHousing
+    skos:relatedMatch tgs:DevonDoughnutDomain.Housing .
+
+tgs:PracticeTerm.CulturalAndSpiritualPractices
+    skos:relatedMatch tgs:DevonDoughnutDomain.Biodiversity .
+
+tgs:PracticeTerm.CulturalHubOrLearningCenter
+    skos:relatedMatch tgs:DevonDoughnutDomain.CommunityConnectivity .
+
+tgs:PracticeTerm.DecisionMakingProcesses
+    skos:relatedMatch tgs:DevonDoughnutDomain.PoliticalVoice .
+
+tgs:PracticeTerm.EcologicalMonitoring
+    skos:relatedMatch tgs:DevonDoughnutDomain.AirQuality, tgs:DevonDoughnutDomain.WaterbodyHealth .
+
+tgs:PracticeTerm.GeographicAndEcologicalMapping
+    skos:relatedMatch tgs:DevonDoughnutDomain.HabitatHealth .
+
+tgs:PracticeTerm.HabitatConnectivity
+    skos:relatedMatch tgs:DevonDoughnutDomain.Biodiversity, tgs:DevonDoughnutDomain.HabitatHealth, tgs:DevonDoughnutDomain.LandUse .
+
+tgs:PracticeTerm.HealthAndSocialCare
+    skos:relatedMatch tgs:DevonDoughnutDomain.HealthAndWellbeing, tgs:DevonDoughnutDomain.Safety .
+
+tgs:PracticeTerm.ImmersiveJourneys
+    skos:relatedMatch tgs:DevonDoughnutDomain.AccessToNature .
+
+tgs:PracticeTerm.LearningPrograms
+    skos:relatedMatch tgs:DevonDoughnutDomain.AccessToNature, tgs:DevonDoughnutDomain.Education, tgs:DevonDoughnutDomain.PlasticPollution .
+
+tgs:PracticeTerm.NetworkWeaving
+    skos:relatedMatch tgs:DevonDoughnutDomain.CommunityConnectivity .
+
+tgs:PracticeTerm.ParticipatoryStrategies
+    skos:relatedMatch tgs:DevonDoughnutDomain.PoliticalVoice .
+
+tgs:PracticeTerm.PoliticalAdvocacy
+    skos:relatedMatch tgs:DevonDoughnutDomain.GreenhouseGasEmissions, tgs:DevonDoughnutDomain.Housing .
+
+tgs:PracticeTerm.RegenerativeAgriculture
+    skos:relatedMatch tgs:DevonDoughnutDomain.Biodiversity, tgs:DevonDoughnutDomain.LandUse, tgs:DevonDoughnutDomain.SoilHealth .
+
+tgs:PracticeTerm.RegionalSourcing
+    skos:relatedMatch tgs:DevonDoughnutDomain.Food .
+
+tgs:PracticeTerm.RenewableEnergy
+    skos:relatedMatch tgs:DevonDoughnutDomain.Energy, tgs:DevonDoughnutDomain.GreenhouseGasEmissions .
+
+tgs:PracticeTerm.StoryingPlace
+    skos:relatedMatch tgs:DevonDoughnutDomain.HealthAndWellbeing .
+
+tgs:PracticeTerm.TerritorialZoning
+    skos:relatedMatch tgs:DevonDoughnutDomain.LandUse .
+
+tgs:PracticeTerm.TrainingAndEmploymentPathways
+    skos:relatedMatch tgs:DevonDoughnutDomain.IncomeAndWork .
+
+tgs:PracticeTerm.TransportationTransitions
+    skos:relatedMatch tgs:DevonDoughnutDomain.AirQuality .
+
+tgs:PracticeTerm.ValueChainDevelopment
+    skos:relatedMatch tgs:DevonDoughnutDomain.Food .
+
+tgs:PracticeTerm.VegetationPlanting
+    skos:relatedMatch tgs:DevonDoughnutDomain.HabitatHealth .
+
+tgs:PracticeTerm.VentureCultivation
+    skos:relatedMatch tgs:DevonDoughnutDomain.IncomeAndWork .
+
+tgs:PracticeTerm.WaterManagement
+    skos:relatedMatch tgs:DevonDoughnutDomain.Water .
+
+tgs:PracticeTerm.WatershedRepair
+    skos:relatedMatch tgs:DevonDoughnutDomain.WaterbodyHealth .
 # ===== END DERIVED INVERSES =====
