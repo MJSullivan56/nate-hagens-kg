@@ -2062,3 +2062,233 @@ tgs:ConceptScheme.OneEarthBioregions2023 a skos:ConceptScheme, owl:NamedIndividu
         tgs:BiogeographicRealm.Oceanian,
         tgs:BiogeographicRealm.Palearctic ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:BiogeographicRealm.Afrotropic
+    skos:narrower tgs:BioregionalRealm.Afrotropics .
+
+tgs:BiogeographicRealm.Antarctic
+    skos:narrower tgs:BioregionalRealm.Antarctica .
+
+tgs:BiogeographicRealm.Australasian
+    skos:narrower tgs:BioregionalRealm.Australasia .
+
+tgs:BiogeographicRealm.Indomalayan
+    skos:narrower tgs:BioregionalRealm.Indomalaya .
+
+tgs:BiogeographicRealm.Nearctic
+    skos:narrower tgs:BioregionalRealm.NorthernAmerica, tgs:BioregionalRealm.SubarcticAmerica .
+
+tgs:BiogeographicRealm.Neotropic
+    skos:narrower tgs:BioregionalRealm.CentralAmericaAndCaribbean, tgs:BioregionalRealm.SouthernAmerica .
+
+tgs:BiogeographicRealm.Oceanian
+    skos:narrower tgs:BioregionalRealm.Oceania .
+
+tgs:BiogeographicRealm.Palearctic
+    skos:narrower tgs:BioregionalRealm.CentralEurasia, tgs:BioregionalRealm.EasternEurasia, tgs:BioregionalRealm.SouthernEurasia, tgs:BioregionalRealm.SubarcticEurasia, tgs:BioregionalRealm.WesternEurasia .
+
+tgs:BioregionalRealm.Afrotropics
+    skos:narrower tgs:BioregionalSubrealm.EquatorialAfrotropics, tgs:BioregionalSubrealm.HornOfAfrica, tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast, tgs:BioregionalSubrealm.SouthernAfrotropics, tgs:BioregionalSubrealm.SubEquatorialAfrotropics, tgs:BioregionalSubrealm.SubSaharanAfrotropics .
+
+tgs:BioregionalRealm.Antarctica
+    skos:narrower tgs:BioregionalSubrealm.AntarcticContinentAndIslands .
+
+tgs:BioregionalRealm.Australasia
+    skos:narrower tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia, tgs:BioregionalSubrealm.Australia, tgs:BioregionalSubrealm.NewZealand .
+
+tgs:BioregionalRealm.CentralAmericaAndCaribbean
+    skos:narrower tgs:BioregionalSubrealm.Caribbean, tgs:BioregionalSubrealm.CentralAmerica .
+
+tgs:BioregionalRealm.CentralEurasia
+    skos:narrower tgs:BioregionalSubrealm.AltaiSayanMountains, tgs:BioregionalSubrealm.CaspianSeaAndCentralAsianDeserts, tgs:BioregionalSubrealm.KazakhSteppesAndHemiborealForests, tgs:BioregionalSubrealm.PersianDesertsAndForests, tgs:BioregionalSubrealm.TienShanMountains .
+
+tgs:BioregionalRealm.EasternEurasia
+    skos:narrower tgs:BioregionalSubrealm.CentralEastAsianForests, tgs:BioregionalSubrealm.EastAsianDeserts, tgs:BioregionalSubrealm.JapaneseIslands, tgs:BioregionalSubrealm.MongolianGrasslands, tgs:BioregionalSubrealm.NortheastAsianForests, tgs:BioregionalSubrealm.TibetanPlateau .
+
+tgs:BioregionalRealm.Indomalaya
+    skos:narrower tgs:BioregionalSubrealm.IndianSubcontinent, tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia, tgs:BioregionalSubrealm.SoutheastAsianForests .
+
+tgs:BioregionalRealm.NorthernAmerica
+    skos:narrower tgs:BioregionalSubrealm.AmericanWest, tgs:BioregionalSubrealm.GreatPlains, tgs:BioregionalSubrealm.MexicanDrylands, tgs:BioregionalSubrealm.NorthPacificCoast, tgs:BioregionalSubrealm.NortheastAmericanForests, tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests .
+
+tgs:BioregionalRealm.Oceania
+    skos:narrower tgs:BioregionalSubrealm.OceanicIslands .
+
+tgs:BioregionalRealm.SouthernAmerica
+    skos:narrower tgs:BioregionalSubrealm.Amazonia, tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast, tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast, tgs:BioregionalSubrealm.SouthAmericanGrasslands, tgs:BioregionalSubrealm.UpperSouthAmerica .
+
+tgs:BioregionalRealm.SouthernEurasia
+    skos:narrower tgs:BioregionalSubrealm.GreaterArabianPeninsula, tgs:BioregionalSubrealm.NorthAfrica .
+
+tgs:BioregionalRealm.SubarcticAmerica
+    skos:narrower tgs:BioregionalSubrealm.Alaska, tgs:BioregionalSubrealm.CanadianBorealForests, tgs:BioregionalSubrealm.CanadianTundra, tgs:BioregionalSubrealm.Greenland .
+
+tgs:BioregionalRealm.SubarcticEurasia
+    skos:narrower tgs:BioregionalSubrealm.PalearcticTundra, tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests, tgs:BioregionalSubrealm.SeaOfOkhotskAndBeringTundraTaiga, tgs:BioregionalSubrealm.SiberiaAndEasternBorealForests .
+
+tgs:BioregionalRealm.WesternEurasia
+    skos:narrower tgs:BioregionalSubrealm.AngloCelticIsles, tgs:BioregionalSubrealm.BlackSeaForestsAndSteppe, tgs:BioregionalSubrealm.EuropeanMountainForests, tgs:BioregionalSubrealm.GreaterEuropeanForests, tgs:BioregionalSubrealm.Mediterranean .
+
+tgs:BioregionalSubrealm.Alaska
+    skos:narrower tgs:Bioregion.NA3, tgs:Bioregion.NA4, tgs:Bioregion.NA5 .
+
+tgs:BioregionalSubrealm.AltaiSayanMountains
+    skos:narrower tgs:Bioregion.PA36, tgs:Bioregion.PA37 .
+
+tgs:BioregionalSubrealm.Amazonia
+    skos:narrower tgs:Bioregion.NT16, tgs:Bioregion.NT17, tgs:Bioregion.NT18, tgs:Bioregion.NT19, tgs:Bioregion.NT20 .
+
+tgs:BioregionalSubrealm.AmericanWest
+    skos:narrower tgs:Bioregion.NA13, tgs:Bioregion.NA14, tgs:Bioregion.NA17, tgs:Bioregion.NA18, tgs:Bioregion.NA19 .
+
+tgs:BioregionalSubrealm.AndesMountainsAndPacificCoast
+    skos:narrower tgs:Bioregion.NT1, tgs:Bioregion.NT10, tgs:Bioregion.NT11, tgs:Bioregion.NT5, tgs:Bioregion.NT6, tgs:Bioregion.NT7, tgs:Bioregion.NT8, tgs:Bioregion.NT9 .
+
+tgs:BioregionalSubrealm.AngloCelticIsles
+    skos:narrower tgs:Bioregion.PA9 .
+
+tgs:BioregionalSubrealm.AntarcticContinentAndIslands
+    skos:narrower tgs:Bioregion.AN1, tgs:Bioregion.AN2, tgs:Bioregion.AN3 .
+
+tgs:BioregionalSubrealm.AustralasianIslandsAndEasternIndonesia
+    skos:narrower tgs:Bioregion.AU10, tgs:Bioregion.AU11, tgs:Bioregion.AU12, tgs:Bioregion.AU13, tgs:Bioregion.AU14, tgs:Bioregion.AU15 .
+
+tgs:BioregionalSubrealm.Australia
+    skos:narrower tgs:Bioregion.AU3, tgs:Bioregion.AU4, tgs:Bioregion.AU5, tgs:Bioregion.AU6, tgs:Bioregion.AU7, tgs:Bioregion.AU8, tgs:Bioregion.AU9 .
+
+tgs:BioregionalSubrealm.BlackSeaForestsAndSteppe
+    skos:narrower tgs:Bioregion.PA16, tgs:Bioregion.PA17 .
+
+tgs:BioregionalSubrealm.BrazilCerradoAndAtlanticCoast
+    skos:narrower tgs:Bioregion.NT12, tgs:Bioregion.NT13, tgs:Bioregion.NT14, tgs:Bioregion.NT15 .
+
+tgs:BioregionalSubrealm.CanadianBorealForests
+    skos:narrower tgs:Bioregion.NA6, tgs:Bioregion.NA7, tgs:Bioregion.NA8, tgs:Bioregion.NA9 .
+
+tgs:BioregionalSubrealm.CanadianTundra
+    skos:narrower tgs:Bioregion.NA2 .
+
+tgs:BioregionalSubrealm.Caribbean
+    skos:narrower tgs:Bioregion.NT26 .
+
+tgs:BioregionalSubrealm.CaspianSeaAndCentralAsianDeserts
+    skos:narrower tgs:Bioregion.PA32, tgs:Bioregion.PA33 .
+
+tgs:BioregionalSubrealm.CentralAmerica
+    skos:narrower tgs:Bioregion.NT24, tgs:Bioregion.NT25, tgs:Bioregion.NT27, tgs:Bioregion.NT28, tgs:Bioregion.NT29 .
+
+tgs:BioregionalSubrealm.CentralEastAsianForests
+    skos:narrower tgs:Bioregion.PA49, tgs:Bioregion.PA50, tgs:Bioregion.PA51, tgs:Bioregion.PA52, tgs:Bioregion.PA53 .
+
+tgs:BioregionalSubrealm.EastAsianDeserts
+    skos:narrower tgs:Bioregion.PA38, tgs:Bioregion.PA39, tgs:Bioregion.PA43 .
+
+tgs:BioregionalSubrealm.EquatorialAfrotropics
+    skos:narrower tgs:Bioregion.AT12, tgs:Bioregion.AT13, tgs:Bioregion.AT14, tgs:Bioregion.AT15, tgs:Bioregion.AT16, tgs:Bioregion.AT17, tgs:Bioregion.AT19, tgs:Bioregion.AT24 .
+
+tgs:BioregionalSubrealm.EuropeanMountainForests
+    skos:narrower tgs:Bioregion.PA13, tgs:Bioregion.PA14, tgs:Bioregion.PA15 .
+
+tgs:BioregionalSubrealm.GreatPlains
+    skos:narrower tgs:Bioregion.NA12, tgs:Bioregion.NA20, tgs:Bioregion.NA21 .
+
+tgs:BioregionalSubrealm.GreaterArabianPeninsula
+    skos:narrower tgs:Bioregion.PA26 .
+
+tgs:BioregionalSubrealm.GreaterEuropeanForests
+    skos:narrower tgs:Bioregion.PA10, tgs:Bioregion.PA11, tgs:Bioregion.PA12 .
+
+tgs:BioregionalSubrealm.Greenland
+    skos:narrower tgs:Bioregion.NA1 .
+
+tgs:BioregionalSubrealm.HornOfAfrica
+    skos:narrower tgs:Bioregion.AT21, tgs:Bioregion.AT22 .
+
+tgs:BioregionalSubrealm.IndianSubcontinent
+    skos:narrower tgs:Bioregion.IM1, tgs:Bioregion.IM2, tgs:Bioregion.IM3, tgs:Bioregion.IM4, tgs:Bioregion.IM5, tgs:Bioregion.IM6, tgs:Bioregion.IM7, tgs:Bioregion.IM8 .
+
+tgs:BioregionalSubrealm.JapaneseIslands
+    skos:narrower tgs:Bioregion.PA47 .
+
+tgs:BioregionalSubrealm.KazakhSteppesAndHemiborealForests
+    skos:narrower tgs:Bioregion.PA34, tgs:Bioregion.PA35 .
+
+tgs:BioregionalSubrealm.MadagascarAndEastAfricanCoast
+    skos:narrower tgs:Bioregion.AT3, tgs:Bioregion.AT4, tgs:Bioregion.AT5, tgs:Bioregion.AT6, tgs:Bioregion.AT7 .
+
+tgs:BioregionalSubrealm.MalaysiaAndWesternIndonesia
+    skos:narrower tgs:Bioregion.IM16, tgs:Bioregion.IM17, tgs:Bioregion.IM18 .
+
+tgs:BioregionalSubrealm.Mediterranean
+    skos:narrower tgs:Bioregion.PA18, tgs:Bioregion.PA19, tgs:Bioregion.PA20, tgs:Bioregion.PA21 .
+
+tgs:BioregionalSubrealm.MexicanDrylands
+    skos:narrower tgs:Bioregion.NA29, tgs:Bioregion.NA30 .
+
+tgs:BioregionalSubrealm.MongolianGrasslands
+    skos:narrower tgs:Bioregion.PA42, tgs:Bioregion.PA44 .
+
+tgs:BioregionalSubrealm.NewZealand
+    skos:narrower tgs:Bioregion.AU1, tgs:Bioregion.AU16, tgs:Bioregion.AU2 .
+
+tgs:BioregionalSubrealm.NorthAfrica
+    skos:narrower tgs:Bioregion.PA22, tgs:Bioregion.PA23, tgs:Bioregion.PA24, tgs:Bioregion.PA25 .
+
+tgs:BioregionalSubrealm.NorthPacificCoast
+    skos:narrower tgs:Bioregion.NA15, tgs:Bioregion.NA16, tgs:Bioregion.NA31 .
+
+tgs:BioregionalSubrealm.NortheastAmericanForests
+    skos:narrower tgs:Bioregion.NA10, tgs:Bioregion.NA11, tgs:Bioregion.NA23, tgs:Bioregion.NA24 .
+
+tgs:BioregionalSubrealm.NortheastAsianForests
+    skos:narrower tgs:Bioregion.PA45, tgs:Bioregion.PA46, tgs:Bioregion.PA48 .
+
+tgs:BioregionalSubrealm.OceanicIslands
+    skos:narrower tgs:Bioregion.OC1, tgs:Bioregion.OC10, tgs:Bioregion.OC11, tgs:Bioregion.OC2, tgs:Bioregion.OC3, tgs:Bioregion.OC4, tgs:Bioregion.OC5, tgs:Bioregion.OC6, tgs:Bioregion.OC7, tgs:Bioregion.OC8, tgs:Bioregion.OC9 .
+
+tgs:BioregionalSubrealm.PalearcticTundra
+    skos:narrower tgs:Bioregion.PA1, tgs:Bioregion.PA4 .
+
+tgs:BioregionalSubrealm.PersianDesertsAndForests
+    skos:narrower tgs:Bioregion.PA27, tgs:Bioregion.PA28, tgs:Bioregion.PA29, tgs:Bioregion.PA30 .
+
+tgs:BioregionalSubrealm.ScandinaviaAndWesternBorealForests
+    skos:narrower tgs:Bioregion.PA2, tgs:Bioregion.PA3, tgs:Bioregion.PA8 .
+
+tgs:BioregionalSubrealm.SeaOfOkhotskAndBeringTundraTaiga
+    skos:narrower tgs:Bioregion.PA5, tgs:Bioregion.PA6 .
+
+tgs:BioregionalSubrealm.SiberiaAndEasternBorealForests
+    skos:narrower tgs:Bioregion.PA7 .
+
+tgs:BioregionalSubrealm.SouthAmericanGrasslands
+    skos:narrower tgs:Bioregion.NT2, tgs:Bioregion.NT3, tgs:Bioregion.NT4 .
+
+tgs:BioregionalSubrealm.SoutheastAsianForests
+    skos:narrower tgs:Bioregion.IM10, tgs:Bioregion.IM11, tgs:Bioregion.IM12, tgs:Bioregion.IM13, tgs:Bioregion.IM14, tgs:Bioregion.IM15, tgs:Bioregion.IM9 .
+
+tgs:BioregionalSubrealm.SoutheastUSSavannasAndForests
+    skos:narrower tgs:Bioregion.NA22, tgs:Bioregion.NA25, tgs:Bioregion.NA26, tgs:Bioregion.NA27, tgs:Bioregion.NA28 .
+
+tgs:BioregionalSubrealm.SouthernAfrotropics
+    skos:narrower tgs:Bioregion.AT1, tgs:Bioregion.AT10, tgs:Bioregion.AT2, tgs:Bioregion.AT8, tgs:Bioregion.AT9 .
+
+tgs:BioregionalSubrealm.SubEquatorialAfrotropics
+    skos:narrower tgs:Bioregion.AT11, tgs:Bioregion.AT18 .
+
+tgs:BioregionalSubrealm.SubSaharanAfrotropics
+    skos:narrower tgs:Bioregion.AT20, tgs:Bioregion.AT23 .
+
+tgs:BioregionalSubrealm.TibetanPlateau
+    skos:narrower tgs:Bioregion.PA40, tgs:Bioregion.PA41 .
+
+tgs:BioregionalSubrealm.TienShanMountains
+    skos:narrower tgs:Bioregion.PA31 .
+
+tgs:BioregionalSubrealm.UpperSouthAmerica
+    skos:narrower tgs:Bioregion.NT21, tgs:Bioregion.NT22, tgs:Bioregion.NT23 .
+# ===== END DERIVED INVERSES =====

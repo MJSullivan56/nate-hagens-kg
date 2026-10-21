@@ -272,3 +272,56 @@ tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.Soc
 tgs:GameTheoryTerm.SubfieldsAndApplications skos:narrower tgs:GameTheoryTerm.StrategicMoves .
 tgs:GameTheoryTerm.TypesOfGames skos:narrower tgs:GameTheoryTerm.IncompleteInformationGame .
 tgs:GameTheoryTerm.TypesOfGames skos:narrower tgs:GameTheoryTerm.RepeatedGame .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:GameTheoryTerm.Brinkmanship
+    skos:related tgs:GameTheoryTerm.Chicken ;
+    skos:relatedMatch tgs:Concept.SevenKeyQuestionsOnNuclearConflict .
+
+tgs:GameTheoryTerm.Chicken
+    skos:relatedMatch tgs:Concept.SevenKeyQuestionsOnNuclearConflict .
+
+tgs:GameTheoryTerm.CollectiveActionGame
+    skos:closeMatch tgs:Concept.CollectiveActionProblem, tgs:Concept.SocialDilemma ;
+    skos:narrowMatch tgs:Concept.TragedyOfTheCommons ;
+    skos:related tgs:GameTheoryTerm.PrisonersDilemma ;
+    skos:relatedMatch tgs:Concept.MultipolarTrap, tgs:Concept.OstromDesignPrinciples .
+
+tgs:GameTheoryTerm.EvolutionaryGameTheory
+    skos:narrowMatch tgs:Concept.MultilevelSelection, tgs:Concept.PowerSeekingAndComplicity, tgs:Concept.TraitsOutcompeteValues .
+
+tgs:GameTheoryTerm.FocalPoint
+    skos:related tgs:GameTheoryTerm.StagHunt .
+
+tgs:GameTheoryTerm.MechanismDesign
+    skos:relatedMatch tgs:Concept.GlobalGovernanceWithoutGlobalGovernment, tgs:Concept.OstromDesignPrinciples, tgs:Concept.PublicChoiceTheory, tgs:Concept.RestraintByDesign .
+
+tgs:GameTheoryTerm.PrisonersDilemma
+    skos:narrowMatch tgs:Concept.MultipolarTrap ;
+    skos:relatedMatch tgs:Concept.OpportunityRiskAsymmetry, tgs:Concept.TechnologyIsNotValuesNeutral .
+
+tgs:GameTheoryTerm.RepeatedGame
+    skos:related tgs:GameTheoryTerm.PrisonersDilemma .
+
+tgs:GameTheoryTerm.SocialChoiceAndVoting
+    skos:relatedMatch tgs:Concept.PublicChoiceTheory .
+
+tgs:GameTheoryTerm.StagHunt
+    skos:relatedMatch tgs:Concept.ProsocialityUnderTheSuperorganism, tgs:Concept.ThreeTimelinesOfResponse .
+
+tgs:GameTheoryTerm.StrategicMoves
+    skos:narrowMatch tgs:Concept.PunishmentStrategy .
+
+tgs:GameTheoryTerm.StrongReciprocity
+    skos:related tgs:GameTheoryTerm.UltimatumGame ;
+    skos:relatedMatch tgs:Concept.ProsocialityUnderTheSuperorganism, tgs:Concept.ReverseDominanceHierarchy .
+
+tgs:GameTheoryTerm.TypesOfGames
+    skos:narrower tgs:GameTheoryTerm.ZeroSumGame .
+
+tgs:GameTheoryTerm.ZeroSumGame
+    skos:relatedMatch tgs:Concept.NonZeroSumness, tgs:Concept.OmniLose, tgs:Concept.PositiveSumInGroupNegativeSumToNature .
+# ===== END DERIVED INVERSES =====

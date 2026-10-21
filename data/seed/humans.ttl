@@ -2202,3 +2202,125 @@ tgs:Human.DougTompkins a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://www.bbc.com/news/world-latin-america-35048806> ;
     dct:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Human.AlanBlinder
+    dct:isReferencedBy tgs:Monologue.Frankly_99_TenCoreMythsOfBusinessSchools .
+
+tgs:Human.AlfredRusselWallace
+    dct:isReferencedBy tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax .
+
+tgs:Human.ArtBerman
+    dct:isReferencedBy tgs:Monologue.Frankly_141_WideBoundaryNews, tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk .
+
+tgs:Human.AtossaSoltani
+    dct:isReferencedBy tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot .
+
+tgs:Human.AudreyTang
+    dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
+
+tgs:Human.AzaRaskin
+    dct:isReferencedBy tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted .
+
+tgs:Human.DJWhite
+    dct:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
+
+tgs:Human.DanielPBrown
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Monologue.Frankly_95_TheParentAndThePendulum .
+
+tgs:Human.DanielSchmachtenberger
+    dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy, tgs:Monologue.Frankly_69_GoldilocksTechnology, tgs:Monologue.Frankly_96_TheEightFacesOfAI .
+
+tgs:Human.DavidSloanWilson
+    dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind .
+
+tgs:Human.DonellaMeadows
+    dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
+
+tgs:Human.EOWilson
+    dct:isReferencedBy tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
+
+tgs:Human.EdConway
+    dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor .
+
+tgs:Human.FrancisWeller
+    dct:isReferencedBy tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk .
+
+tgs:Human.GeoffreyWest
+    dct:isReferencedBy tgs:Monologue.Frankly_59_SevenMetaQuestionsAboutOurGlobalMetabolism .
+
+tgs:Human.GeorgeSoros
+    dct:isReferencedBy tgs:Monologue.Frankly_133_IranUsAndTheRest .
+
+tgs:Human.HermanDaly
+    dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Human.IlyaPrigogine
+    dct:isReferencedBy tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
+
+tgs:Human.JamesHansen
+    dct:isReferencedBy tgs:Monologue.Frankly_92_AIInServiceOfLife .
+
+tgs:Human.JaneGoodall
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.JoannaMacy
+    dct:isReferencedBy tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot .
+
+tgs:Human.JohanRockstrom
+    dct:isReferencedBy tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries .
+
+tgs:Human.JuliaCarabiasLillo
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.KatharineHayhoe
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.NoraBateson
+    dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
+
+tgs:Human.PaulEhrlich
+    dct:isReferencedBy tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits .
+
+tgs:Human.PierreTeilhardDeChardin
+    dct:isReferencedBy tgs:Monologue.Frankly_75_SomebodysGonnaWin .
+
+tgs:Human.RexWeyler
+    dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
+
+tgs:Human.RobinDunbar
+    dct:isReferencedBy tgs:Monologue.Frankly_94_SocialOvershoot .
+
+tgs:Human.RobinWallKimmerer
+    dct:isReferencedBy tgs:Interview.TGS_163_DougaldHine, tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Human.RomanKrznaric
+    dct:isReferencedBy tgs:Monologue.Frankly_69_GoldilocksTechnology .
+
+tgs:Human.StefanRahmstorf
+    dct:isReferencedBy tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax .
+
+tgs:Human.StephenJenkinson
+    dct:isReferencedBy tgs:Interview.TGS_163_DougaldHine, tgs:Monologue.Frankly_93_InformationBurnout .
+
+tgs:Human.SunitaNarain
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.SylviaEarle
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.ThichNhatHanh
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .
+
+tgs:Human.TristanHarris
+    dct:isReferencedBy tgs:Monologue.Frankly_128_UltraProcessedInformation .
+
+tgs:Human.VanessaAndreotti
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .
+
+tgs:Human.ZakStein
+    dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
+# ===== END DERIVED INVERSES =====

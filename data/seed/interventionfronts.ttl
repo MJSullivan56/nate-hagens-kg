@@ -313,3 +313,112 @@ tgs:ConceptScheme.SixFrontsOfIntervention a skos:ConceptScheme, owl:NamedIndivid
         tgs:InterventionFront.Infrastructure,
         tgs:InterventionFront.PovertyAndDisplacement ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:InterventionFront.CivicResilienceAndGovernance
+    skos:narrower tgs:InterventionSubdomain.AntiCorruptionInfrastructure, tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.LongTermMandateInstitutions, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.TrustAndInformationCommons .
+
+tgs:InterventionFront.CultureAndMeaning
+    skos:narrower tgs:InterventionSubdomain.ArtsGriefAndSensemaking, tgs:InterventionSubdomain.EducationRedesign, tgs:InterventionSubdomain.NarrativeSovereignty, tgs:InterventionSubdomain.ReconnectionToPlace, tgs:InterventionSubdomain.RitualAndBelonging .
+
+tgs:InterventionFront.EcologicalInterventions
+    skos:narrower tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries, tgs:InterventionSubdomain.PlasticAndChemicalHazards, tgs:InterventionSubdomain.ProtectingEcologicalGains, tgs:InterventionSubdomain.SoilAndWaterRegeneration .
+
+tgs:InterventionFront.EconomicTransition
+    skos:narrower tgs:InterventionSubdomain.CommonsBasedOwnership, tgs:InterventionSubdomain.FinanceAndCreditRedesign, tgs:InterventionSubdomain.LandAndHousingReform, tgs:InterventionSubdomain.LocalExchangeSystems, tgs:InterventionSubdomain.PostGrowthInstitutions .
+
+tgs:InterventionFront.Infrastructure
+    skos:narrower tgs:InterventionSubdomain.DigitalCommons, tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.MedicalSupplyChains, tgs:InterventionSubdomain.TransportationAndLogistics .
+
+tgs:InterventionFront.PovertyAndDisplacement
+    skos:narrower tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion .
+
+tgs:InterventionSubdomain.AntiCorruptionInfrastructure
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_LegalEmpowerment .
+
+tgs:InterventionSubdomain.ArtsGriefAndSensemaking
+    dcterms:isReferencedBy tgs:Interview.TGS_167_FrancisWeller ;
+    skos:relatedMatch tgs:PracticeTerm.ArtAndStorytelling .
+
+tgs:InterventionSubdomain.BiodiversityDefense
+    skos:relatedMatch tgs:PracticeTerm.EcologicalMonitoring, tgs:PracticeTerm.HabitatConnectivity, tgs:PracticeTerm.InterspeciesMutualism, tgs:PracticeTerm.OneEarth_BiologicalDiversity, tgs:PracticeTerm.OneEarth_EcosystemRestoration, tgs:PracticeTerm.OneEarth_LandConservation, tgs:PracticeTerm.OneEarth_SeedDiversity, tgs:PracticeTerm.OneEarth_WildlifeConnectivity, tgs:PracticeTerm.SeedsAndNurseries, tgs:PracticeTerm.SpeciesControl, tgs:PracticeTerm.VegetationPlanting .
+
+tgs:InterventionSubdomain.CareEconomy
+    skos:relatedMatch tgs:PracticeTerm.HealthAndSocialCare, tgs:PracticeTerm.OneEarth_PublicHealth .
+
+tgs:InterventionSubdomain.CommonsBasedOwnership
+    skos:relatedMatch tgs:PracticeTerm.AgreementsAndLegalInstruments, tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.CommonsGovernanceProtocols, tgs:PracticeTerm.ResourceHub .
+
+tgs:InterventionSubdomain.DeliberativeDemocracy
+    skos:relatedMatch tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.DecisionMakingProcesses, tgs:PracticeTerm.ParticipatoryStrategies .
+
+tgs:InterventionSubdomain.DignityInfrastructure
+    skos:relatedMatch tgs:PracticeTerm.CommunityFoodAccess, tgs:PracticeTerm.DisasterRelief, tgs:PracticeTerm.OneEarth_SocialJustice, tgs:PracticeTerm.UniversalBasicIncome .
+
+tgs:InterventionSubdomain.EducationRedesign
+    skos:relatedMatch tgs:PracticeTerm.CulturalHubOrLearningCenter, tgs:PracticeTerm.LearningPrograms, tgs:PracticeTerm.OneEarth_EducationAndCulture, tgs:PracticeTerm.OneEarth_YouthLeadership, tgs:PracticeTerm.PeerLearning .
+
+tgs:InterventionSubdomain.EnergySystems
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_EnergyEfficiency, tgs:PracticeTerm.OneEarth_RenewableHeat, tgs:PracticeTerm.OneEarth_RenewablePower, tgs:PracticeTerm.OneEarth_RenewableTransport, tgs:PracticeTerm.RenewableEnergy .
+
+tgs:InterventionSubdomain.FinanceAndCreditRedesign
+    skos:relatedMatch tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.GrantsPrograms, tgs:PracticeTerm.InvestmentVehicles, tgs:PracticeTerm.MutualCreditOrExchange, tgs:PracticeTerm.OneEarth_FinanceAndIncentives, tgs:PracticeTerm.PortfolioDevelopment, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.StructuringAndCapitalization .
+
+tgs:InterventionSubdomain.FoodAndWaterSystems
+    skos:relatedMatch tgs:PracticeTerm.CommunityFoodAccess, tgs:PracticeTerm.FarmerSupport, tgs:PracticeTerm.OneEarth_FoodWasteReduction, tgs:PracticeTerm.OneEarth_RegenerativeCroplands, tgs:PracticeTerm.OneEarth_SustainableRangelands, tgs:PracticeTerm.OneEarth_WaterStewardship, tgs:PracticeTerm.RegenerativeAgriculture, tgs:PracticeTerm.RegionalSourcing, tgs:PracticeTerm.WaterManagement .
+
+tgs:InterventionSubdomain.HousingAndBuiltEnvironment
+    skos:relatedMatch tgs:PracticeTerm.ConstructionAndHousing, tgs:PracticeTerm.OneEarth_BuiltEnvironment, tgs:PracticeTerm.OneEarth_EnergyEfficiency .
+
+tgs:InterventionSubdomain.LandAndHousingReform
+    skos:relatedMatch tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.OneEarth_IndigenousTenure, tgs:PracticeTerm.TerritorialZoning .
+
+tgs:InterventionSubdomain.LocalExchangeSystems
+    skos:relatedMatch tgs:PracticeTerm.LocalCurrencies, tgs:PracticeTerm.MutualCreditOrExchange, tgs:PracticeTerm.OneEarth_BioregionalSourcing, tgs:PracticeTerm.ValueChainDevelopment .
+
+tgs:InterventionSubdomain.LongTermMandateInstitutions
+    dcterms:isReferencedBy tgs:Interview.TGS_213_ChristineWebb ;
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_PolicyAndGovernance, tgs:PracticeTerm.RightsOfNature .
+
+tgs:InterventionSubdomain.NarrativeSovereignty
+    skos:relatedMatch tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.OneEarth_EducationAndCulture, tgs:PracticeTerm.StoryingPlace .
+
+tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_OceanConservation .
+
+tgs:InterventionSubdomain.PlasticAndChemicalHazards
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_CircularFibersheds, tgs:PracticeTerm.OneEarth_NaturalPestControl .
+
+tgs:InterventionSubdomain.PostGrowthInstitutions
+    skos:relatedMatch tgs:PracticeTerm.4Returns, tgs:PracticeTerm.DoughnutAssessment, tgs:PracticeTerm.SocioeconomicIndicators, tgs:PracticeTerm.UniversalBasicIncome .
+
+tgs:InterventionSubdomain.ProtectingEcologicalGains
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_LandConservation, tgs:PracticeTerm.OneEarth_OceanConservation, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.RightsOfNature, tgs:PracticeTerm.TerritorialMonitoring .
+
+tgs:InterventionSubdomain.ReconnectionToPlace
+    skos:relatedMatch tgs:PracticeTerm.GeographicAndEcologicalMapping, tgs:PracticeTerm.ImmersiveJourneys, tgs:PracticeTerm.MoreThanHumanKnowledge, tgs:PracticeTerm.OneEarth_UrbanBiodiversity, tgs:PracticeTerm.OneEarth_UrbanGardening, tgs:PracticeTerm.StoryingPlace, tgs:PracticeTerm.TraditionalEcologicalKnowledge, tgs:PracticeTerm.VisitorExperiences .
+
+tgs:InterventionSubdomain.RitualAndBelonging
+    skos:relatedMatch tgs:PracticeTerm.CulturalAndSpiritualPractices .
+
+tgs:InterventionSubdomain.SkillsForContractingEconomy
+    skos:relatedMatch tgs:PracticeTerm.FarmerSupport, tgs:PracticeTerm.OneEarth_CircularFibersheds, tgs:PracticeTerm.OneEarth_SustainableLivelihoods, tgs:PracticeTerm.TrainingAndEmploymentPathways .
+
+tgs:InterventionSubdomain.SoilAndWaterRegeneration
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_Composting, tgs:PracticeTerm.OneEarth_EcosystemRestoration, tgs:PracticeTerm.OneEarth_RegenerativeCroplands, tgs:PracticeTerm.OneEarth_SustainableRangelands, tgs:PracticeTerm.OneEarth_WaterStewardship, tgs:PracticeTerm.RegenerativeAgriculture, tgs:PracticeTerm.RegenerativeGrazing, tgs:PracticeTerm.VegetationPlanting, tgs:PracticeTerm.WaterManagement, tgs:PracticeTerm.WatershedRepair .
+
+tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance
+    skos:relatedMatch tgs:PracticeTerm.GovernanceBodies, tgs:PracticeTerm.GovernanceDesign, tgs:PracticeTerm.OneEarth_CommunityAction, tgs:PracticeTerm.OneEarth_PolicyAndGovernance, tgs:PracticeTerm.ParticipatoryStrategies, tgs:PracticeTerm.TerritorialZoning .
+
+tgs:InterventionSubdomain.TransportationAndLogistics
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_RenewableTransport, tgs:PracticeTerm.OneEarth_TransportationEfficiency, tgs:PracticeTerm.TransportationTransitions .
+
+tgs:InterventionSubdomain.TrustAndInformationCommons
+    skos:relatedMatch tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.KnowledgeArtefacts, tgs:PracticeTerm.NetworkWeaving, tgs:PracticeTerm.OneEarth_CommunityAction, tgs:PracticeTerm.OneEarth_ScienceAndIntelligence, tgs:PracticeTerm.SocialOrNetworkMapping .
+
+tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion
+    skos:relatedMatch tgs:PracticeTerm.CommunityReconciliation .
+# ===== END DERIVED INVERSES =====

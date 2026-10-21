@@ -137,3 +137,22 @@ tgs:ConceptScheme.TGSSiteSubjects a owl:NamedIndividual,
     skos:hasTopConcept tgs:Subject.EcologyAndEnvironment, tgs:Subject.EconomicsAndMonetary, tgs:Subject.EnergySystems, tgs:Subject.Geopolitics, tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
     .
 
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Subject.EcologyAndEnvironment
+    skos:narrower tgs:Subject.OvershootAndLimits .
+
+tgs:Subject.EconomicsAndMonetary
+    skos:narrower tgs:Subject.MonetarySystemAndGrowth .
+
+tgs:Subject.EnergySystems
+    skos:narrower tgs:Subject.EROIAndEnergyQuality .
+
+tgs:Subject.HumanBehavior
+    skos:narrower tgs:Subject.BehavioralEconomicsAndCognition, tgs:Subject.CommunityAndResponse .
+
+tgs:Subject.SystemsScience
+    skos:narrower tgs:Subject.SystemsFrameworks .
+# ===== END DERIVED INVERSES =====

@@ -5334,3 +5334,274 @@ tgs:Concept.DeepEcology skos:related tgs:Concept.RightsOfNature .
 tgs:Concept.EarnedHope skos:related tgs:Concept.Effectivism .
 tgs:Concept.EarnedHope skos:related tgs:Concept.RealityBasedHope .
 tgs:Concept.Rewilding skos:related tgs:Concept.DeepEcology .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Concept.AggregateProbability
+    thinkr:complements tgs:Concept.ImpossibleToHard .
+
+tgs:Concept.CarbonPulse
+    skos:related tgs:Concept.EnergyGDPCoupling .
+
+tgs:Concept.ConstructiveJournalism
+    skos:related tgs:Concept.AttentionEconomy .
+
+tgs:Concept.CorporationsAsMisalignedAI
+    thinkr:complements tgs:Concept.CorporationAsObligateSociopath ;
+    skos:related tgs:Concept.CorporationAsObligateSociopath .
+
+tgs:Concept.CulturalAntibodies
+    thinkr:complements tgs:Concept.PrematureCertainty .
+
+tgs:Concept.CulturalMitochondria
+    skos:related tgs:Concept.BattlesOfOurTime .
+
+tgs:Concept.DeepEcology
+    skos:related tgs:Concept.Rewilding .
+
+tgs:Concept.DividedBrain
+    skos:related tgs:Concept.BattlesOfOurTime .
+
+tgs:Concept.DominationPartnershipContinuum
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_GenderEquity .
+
+tgs:Concept.DopamineHijackedCulture
+    thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits .
+
+tgs:Concept.EducatingHyperAgents
+    thinkr:complements tgs:Concept.HyperAgents, tgs:Concept.PowerSeekingAndComplicity .
+
+tgs:Concept.Effectivism
+    skos:related tgs:Concept.BattlesOfOurTime, tgs:Concept.EarnedHope .
+
+tgs:Concept.EnergyBlindness
+    skos:related tgs:Concept.EnergyGDPCoupling .
+
+tgs:Concept.FifthLawOfThermodynamics
+    skos:related tgs:Concept.DissipativeStructures .
+
+tgs:Concept.FourHorsemenOfTheApocalypse
+    skos:related tgs:Concept.FourHorsemenOfThe2020s .
+
+tgs:Concept.GameTheory
+    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+
+tgs:Concept.GameTheoryFillsTheOughtGap
+    skos:related tgs:Concept.GameTheory .
+
+tgs:Concept.GreatSimplification
+    dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization .
+
+tgs:Concept.GrowthImperative
+    thinkr:complements tgs:Concept.EmbeddedGrowthObligation ;
+    skos:related tgs:Concept.EmbeddedGrowthObligation .
+
+tgs:Concept.HavesAndHaveNots
+    thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
+    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+
+tgs:Concept.HealingBeforeEngagement
+    thinkr:complements tgs:Concept.HeartWillMind .
+
+tgs:Concept.HeartWillMind
+    skos:related tgs:Concept.HeadHeartAndHands, tgs:Concept.HealingBeforeEngagement .
+
+tgs:Concept.HumanPredicament
+    skos:related tgs:Concept.RealityParty .
+
+tgs:Concept.HyperAgents
+    skos:related tgs:Concept.EducatingHyperAgents .
+
+tgs:Concept.ImaginalCells
+    thinkr:complements tgs:Concept.DiscretePhaseShift ;
+    skos:related tgs:Concept.DiscretePhaseShift .
+
+tgs:Concept.ImpossibleToHard
+    skos:related tgs:Concept.AggregateProbability .
+
+tgs:Concept.IntegratingThinkingAndFeeling
+    thinkr:complements tgs:Concept.HeartWillMind ;
+    skos:related tgs:Concept.HeartWillMind .
+
+tgs:Concept.IslandsOfCoherence
+    dcterms:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+
+tgs:Concept.JevonsDividend
+    thinkr:complements tgs:Concept.GeneralizedJevonsParadox, tgs:Concept.RestraintByDesign ;
+    skos:related tgs:Concept.GeneralizedJevonsParadox .
+
+tgs:Concept.JevonsParadox
+    skos:relatedMatch tgs:PracticeTerm.OneEarth_EnergyEfficiency, tgs:PracticeTerm.OneEarth_TransportationEfficiency .
+
+tgs:Concept.LearnedHelplessness
+    skos:related tgs:Concept.ConstructiveJournalism .
+
+tgs:Concept.LightTriad
+    skos:related tgs:Concept.DarkTriad .
+
+tgs:Concept.LocalizedSyntropySystemicEntropy
+    skos:related tgs:Concept.DissipativeStructures .
+
+tgs:Concept.LossAversion
+    skos:related tgs:Concept.AggregateCognitiveDissonance, tgs:Concept.ConfirmationBias, tgs:Concept.CulturalAntibodies .
+
+tgs:Concept.MaximumPowerPrinciple
+    thinkr:complements tgs:Concept.MaximizingReturnsOnPower ;
+    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.MaximizingReturnsOnPower .
+
+tgs:Concept.MetabolicHierarchyOfTheSuperorganism
+    thinkr:complements tgs:Concept.MaximizingReturnsOnPower ;
+    skos:related tgs:Concept.MaximizingReturnsOnPower .
+
+tgs:Concept.Metacrisis
+    skos:related tgs:Concept.ArrestedHumanDevelopment .
+
+tgs:Concept.MultipolarTrap
+    skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory .
+
+tgs:Concept.MusicalChairsMoment
+    skos:related tgs:Concept.LossAversion, tgs:Concept.MoneyAsClaimOnEnergy .
+
+tgs:Concept.NamedSolutionsDrawCounterResponse
+    thinkr:complements tgs:Concept.ImpossibleToHard ;
+    skos:related tgs:Concept.ImpossibleToHard .
+
+tgs:Concept.NonZeroSumness
+    skos:related tgs:Concept.GameTheory .
+
+tgs:Concept.OneMarshmallowRewardCircuits
+    skos:related tgs:Concept.DopamineHijackedCulture .
+
+tgs:Concept.OstromDesignPrinciples
+    skos:relatedMatch tgs:PracticeTerm.CommonsGovernanceProtocols, tgs:PracticeTerm.OneEarth_SustainableFisheries .
+
+tgs:Concept.PersonalAgency
+    skos:related tgs:Concept.LearnedHelplessness .
+
+tgs:Concept.PositiveSumInGroupNegativeSumToNature
+    skos:related tgs:Concept.NonZeroSumness .
+
+tgs:Concept.PowerSeekingAndComplicity
+    skos:related tgs:Concept.EducatingHyperAgents .
+
+tgs:Concept.PowerVersusLife
+    thinkr:complements tgs:Concept.MaximizingReturnsOnPower ;
+    thinkr:convergesWith tgs:Concept.ChaliceAndBladePower ;
+    skos:related tgs:Concept.BattlesOfOurTime, tgs:Concept.ChaliceAndBladePower, tgs:Concept.MaximizingReturnsOnPower .
+
+tgs:Concept.PredicamentNotProblem
+    skos:related tgs:Concept.RealityParty .
+
+tgs:Concept.PrematureCertainty
+    skos:related tgs:Concept.CulturalAntibodies .
+
+tgs:Concept.PriceCostAndValue
+    thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
+    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+
+tgs:Concept.ProgressTrap
+    skos:related tgs:Concept.NaiveProgress, tgs:Concept.Overshoot .
+
+tgs:Concept.ProsocialityUnderTheSuperorganism
+    thinkr:complements tgs:Concept.GameTheoryFillsTheOughtGap ;
+    skos:related tgs:Concept.Effectivism, tgs:Concept.GameTheoryFillsTheOughtGap .
+
+tgs:Concept.RealityBasedHope
+    skos:related tgs:Concept.EarnedHope .
+
+tgs:Concept.RestraintByDesign
+    skos:related tgs:Concept.JevonsDividend .
+
+tgs:Concept.RichInSocialCapital
+    thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits ;
+    skos:related tgs:Concept.OneMarshmallowRewardCircuits .
+
+tgs:Concept.RightsOfNature
+    skos:related tgs:Concept.DeepEcology ;
+    skos:relatedMatch tgs:PracticeTerm.RightsOfNature .
+
+tgs:Concept.ShadowOfTheSuperorganism
+    thinkr:complements tgs:Concept.FragmentedConsciousness ;
+    skos:related tgs:Concept.FragmentedConsciousness .
+
+tgs:Concept.SharedBroadcastPerturbation
+    thinkr:complements tgs:Concept.SensemakingPrerequisiteOfOpenSociety ;
+    skos:related tgs:Concept.SensemakingPrerequisiteOfOpenSociety .
+
+tgs:Concept.SolutionSpaceCube
+    thinkr:complements tgs:Concept.ThreeByThreeResponseGrid .
+
+tgs:Concept.SupernormalStimuli
+    thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits ;
+    skos:related tgs:Concept.AttentionEconomy, tgs:Concept.LossAversion, tgs:Concept.OneMarshmallowRewardCircuits .
+
+tgs:Concept.Superorganism
+    thinkr:complements tgs:Concept.MultipolarTrap ;
+    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.MultipolarTrap .
+
+tgs:Concept.SupplyChainFragility
+    skos:related tgs:Concept.JevonsParadox .
+
+tgs:Concept.TheFifteenHundred
+    thinkr:complements tgs:Concept.HyperAgents ;
+    skos:related tgs:Concept.HyperAgents .
+
+tgs:Concept.TheLastCanToKick
+    thinkr:complements tgs:Concept.HyperAgents ;
+    skos:related tgs:Concept.HyperAgents .
+
+tgs:Concept.TheoryOfChange
+    thinkr:complements tgs:Concept.EcologyOfTheoriesOfChange ;
+    skos:related tgs:Concept.EcologyOfTheoriesOfChange .
+
+tgs:Concept.ThreeByThreeResponseGrid
+    skos:related tgs:Concept.SolutionSpaceCube .
+
+tgs:Concept.ThreeTiersOfWealth
+    thinkr:complements tgs:Concept.MoneyAsMaximumOptionality ;
+    skos:related tgs:Concept.MoneyAsMaximumOptionality .
+
+tgs:Concept.ThreeTimelinesOfResponse
+    thinkr:complements tgs:Concept.ThreeByThreeResponseGrid ;
+    skos:related tgs:Concept.ThreeByThreeResponseGrid .
+
+tgs:Concept.TragedyOfTheCommons
+    skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory, tgs:Concept.OstromDesignPrinciples .
+
+tgs:Concept.TraitsOutcompeteValues
+    thinkr:complements tgs:Concept.PowerSeekingAndComplicity ;
+    skos:related tgs:Concept.PowerSeekingAndComplicity .
+
+tgs:Concept.TransmutingWealthIntoIncome
+    thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
+    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+
+tgs:Concept.TwelveInformationHazards
+    skos:related tgs:Concept.MusicalChairsMoment .
+
+tgs:Concept.TwoWaysOfKnowing
+    skos:relatedMatch tgs:PracticeTerm.TraditionalEcologicalKnowledge .
+
+tgs:Concept.UnintendedConsequences
+    thinkr:complements tgs:Concept.YellowTeaming .
+
+tgs:Concept.VerticalBehavioralStack
+    thinkr:complements tgs:Concept.FragmentedConsciousness ;
+    skos:related tgs:Concept.FragmentedConsciousness .
+
+tgs:Concept.WhatCantWontMightHappen
+    thinkr:complements tgs:Concept.ImpossibleToHard ;
+    skos:related tgs:Concept.ImpossibleToHard .
+
+tgs:Concept.WideBoundary
+    thinkr:complements tgs:Concept.HolisticExternalityAnalysis ;
+    skos:related tgs:Concept.Ecolate, tgs:Concept.HolisticExternalityAnalysis, tgs:Concept.UnintendedConsequences .
+
+tgs:Concept.WileECoyoteMoment
+    skos:related tgs:Concept.GreatSimplification, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.MusicalChairsMoment .
+
+tgs:Concept.YellowTeaming
+    skos:related tgs:Concept.UnintendedConsequences .
+# ===== END DERIVED INVERSES =====

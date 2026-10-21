@@ -577,3 +577,55 @@ tgs:PanelDiscussion.RR_27_AnEcologicalPsychology a thinkr:Episode, owl:NamedIndi
     thinkr:hasDiscussionSummary "The longest and most extended conversation among all built RRs — Nate's own words near the close: 'coming up on two hours, this is one of the longer conversations I've had this year.' Schwartz and Bednarek are visibly not just co-guests but active collaborators already deep in an ongoing dialogue of their own ('this is a conversation that I am currently having with Dick and I really love it,' Bednarek says at one point) — the complementary split is genuinely structural rather than just topical: Schwartz supplies the clinical, individual-level IFS framework directly, while Bednarek supplies its real extension into organizations, governments, and whole cultures via her own Systems Wayfinding work. The one moment of real, pointed challenge in the episode comes from Nate himself, not between the guests — he directly names the skepticism his own audience is likely to feel toward psychological frameworks given the podcast's usual material/energy/systems focus, asking bluntly how IFS could actually affect a trajectory driven by biophysical limits rather than individual psychology. Both guests take the challenge seriously rather than deflecting: Bednarek is explicit that 'no psychological approach can stop the unfolding of biodiversity loss that is already underway,' reframing the value as being about how humans meet what's coming rather than preventing it; Schwartz answers instead with his own long-term, admittedly 'grandiose' goal of IFS replacing the dominant paradigm for relating to the mind entirely. The episode's most candid moment is Schwartz's own disclosed intellectual and spiritual evolution, told live rather than summarized: he began the work as a self-described 'scientific atheist' and has only this year become openly willing to describe the IFS 'Self' as a 'particle state' of something larger that different spiritual traditions have independently pointed to under different names. Nate's own participation is unusually reflexive throughout — he explicitly narrates applying the framework to himself in real time ('I feel like I've been in self-energy since this conversation started'), and Schwartz risks a genuinely vulnerable, self-deprecating aside about being triggered by his own wife, fully aware she would later watch the recording."@en ;
     .
 
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:PanelDiscussion.RR_10_TheEcologyOfCommunication
+    dct:isReferencedBy tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+
+tgs:PanelDiscussion.RR_12_TheGlobalStakesOfTheUSElection
+    dct:isReferencedBy tgs:Monologue.Frankly_75_SomebodysGonnaWin .
+
+tgs:PanelDiscussion.RR_14_TheFutureIsLocal
+    dct:isReferencedBy tgs:Interview.TGS_139_DanielChristianWahl, tgs:Monologue.Frankly_93_InformationBurnout .
+
+tgs:PanelDiscussion.RR_15_ThePlasticCrisis
+    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:PanelDiscussion.RR_23_ThePlasticDetox .
+
+tgs:PanelDiscussion.RR_17_MovingFromApathyToAction
+    dct:isReferencedBy tgs:Interview.TGS_167_FrancisWeller, tgs:Interview.TGS_190_StephenJenkinson, tgs:Interview.TGS_197_OveHoeghGuldberg, tgs:Interview.TGS_232_CharlesEisenstein, tgs:Monologue.Frankly_140_APerspectiveFromLebanon, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+
+tgs:PanelDiscussion.RR_19_DarkTriad
+    dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon, tgs:Interview.TGS_210_PeterBrannen, tgs:Interview.TGS_211_JasonBradford, tgs:Interview.TGS_228_JohnChurchill, tgs:Interview.TGS_231_GregElliott, tgs:Interview.TGS_56_DavidSloanWilson, tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview, tgs:Monologue.Frankly_124_WideBoundaryNews, tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_157_DecentPeopleIndecentSystem, tgs:PanelDiscussion.RR_20_HackingHumanAttachment, tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace, tgs:PanelDiscussion.RR_26_WhyCommunityFails, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology .
+
+tgs:PanelDiscussion.RR_1_ElectricVehicles
+    dct:isReferencedBy tgs:Interview.TGS_176_PedroPrieto .
+
+tgs:PanelDiscussion.RR_20_HackingHumanAttachment
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Monologue.Frankly_128_UltraProcessedInformation, tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis .
+
+tgs:PanelDiscussion.RR_21_ArmsRaceOrTheHumanRace
+    dct:isReferencedBy tgs:Interview.TGS_94_ChuckWatson, tgs:Monologue.Frankly_127_WideBoundaryNews, tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars .
+
+tgs:PanelDiscussion.RR_22_CouldTheWestLoseTheResourceWars
+    dct:isReferencedBy tgs:Interview.TGS_223_MichaelEvery, tgs:Interview.TGS_227_SalMercogliano, tgs:Interview.TGS_233_RomanYampolskiy, tgs:PanelDiscussion.RR_16_TheMadScrambleForPower .
+
+tgs:PanelDiscussion.RR_23_ThePlasticDetox
+    dct:isReferencedBy tgs:Interview.TGS_2_ShannaSwan, tgs:Interview.TGS_89_SianSutherland, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:PanelDiscussion.RR_15_ThePlasticCrisis .
+
+tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization
+    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_155_WhoBrokeTheWorld, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse .
+
+tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis
+    dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .
+
+tgs:PanelDiscussion.RR_3_UnlearningEconomics
+    dct:isReferencedBy tgs:Interview.TGS_77_KateRaworth .
+
+tgs:PanelDiscussion.RR_6_FossilFreeFoodSystems
+    dct:isReferencedBy tgs:Interview.TGS_120_TomChi, tgs:Interview.TGS_46_VandanaShiva, tgs:Interview.TGS_76_DanielZetah .
+# ===== END DERIVED INVERSES =====

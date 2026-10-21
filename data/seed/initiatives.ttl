@@ -2772,3 +2772,38 @@ tgs:PracticeTerm.ArtAndStorytelling skos:broadMatch tgs:PracticeTerm.OneEarth_Ed
 tgs:PracticeTerm.NetworkWeaving skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
 tgs:PracticeTerm.ParticipatoryStrategies skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
 tgs:PracticeTerm.CongressingAndEvents skos:broadMatch tgs:PracticeTerm.OneEarth_CommunityAction .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:PracticeCluster.AgroBioeconomy
+    skos:narrower tgs:PracticeTerm.CommunityFoodAccess, tgs:PracticeTerm.FarmerSupport, tgs:PracticeTerm.MaterialsTransformation, tgs:PracticeTerm.RegenerativeAgriculture, tgs:PracticeTerm.RegenerativeGrazing, tgs:PracticeTerm.RegionalSourcing, tgs:PracticeTerm.ValueChainDevelopment .
+
+tgs:PracticeCluster.AlternativeFinance
+    skos:narrower tgs:PracticeTerm.LocalCurrencies, tgs:PracticeTerm.MutualCreditOrExchange, tgs:PracticeTerm.UniversalBasicIncome .
+
+tgs:PracticeCluster.CommunityGovernance
+    skos:narrower tgs:PracticeTerm.CoachesAndLeaders, tgs:PracticeTerm.CommonsGovernanceProtocols, tgs:PracticeTerm.CommunityReconciliation, tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.DecisionMakingProcesses, tgs:PracticeTerm.GovernanceBodies, tgs:PracticeTerm.GovernanceDesign, tgs:PracticeTerm.NetworkWeaving, tgs:PracticeTerm.ParticipatoryStrategies, tgs:PracticeTerm.TheoryU .
+
+tgs:PracticeCluster.EcosystemRegeneration
+    skos:narrower tgs:PracticeTerm.HabitatConnectivity, tgs:PracticeTerm.InterspeciesMutualism, tgs:PracticeTerm.SeedsAndNurseries, tgs:PracticeTerm.SpeciesControl, tgs:PracticeTerm.VegetationPlanting, tgs:PracticeTerm.WaterManagement, tgs:PracticeTerm.WatershedRepair .
+
+tgs:PracticeCluster.HubsAndCenters
+    skos:narrower tgs:PracticeTerm.CulturalHubOrLearningCenter, tgs:PracticeTerm.DemonstratorSite, tgs:PracticeTerm.ResourceHub .
+
+tgs:PracticeCluster.LegalStewardship
+    skos:narrower tgs:PracticeTerm.AgreementsAndLegalInstruments, tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.PoliticalAdvocacy, tgs:PracticeTerm.RightsOfNature, tgs:PracticeTerm.TerritorialZoning .
+
+tgs:PracticeCluster.MappingAndIndicators
+    skos:narrower tgs:PracticeTerm.4Returns, tgs:PracticeTerm.DoughnutAssessment, tgs:PracticeTerm.EcologicalMonitoring, tgs:PracticeTerm.GeographicAndEcologicalMapping, tgs:PracticeTerm.KnowledgeArtefacts, tgs:PracticeTerm.SocialOrNetworkMapping, tgs:PracticeTerm.SocioeconomicIndicators, tgs:PracticeTerm.StoryingPlace, tgs:PracticeTerm.SystemsAndResourceMapping, tgs:PracticeTerm.TerritorialMonitoring .
+
+tgs:PracticeCluster.ServicesAndInfrastructure
+    skos:narrower tgs:PracticeTerm.ClothingAndProductManufacturing, tgs:PracticeTerm.ConstructionAndHousing, tgs:PracticeTerm.DisasterRelief, tgs:PracticeTerm.HealthAndSocialCare, tgs:PracticeTerm.RenewableEnergy, tgs:PracticeTerm.TrainingAndEmploymentPathways, tgs:PracticeTerm.TransportationTransitions, tgs:PracticeTerm.VisitorExperiences .
+
+tgs:PracticeCluster.SystemicFinance
+    skos:narrower tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.GrantsPrograms, tgs:PracticeTerm.InvestmentVehicles, tgs:PracticeTerm.PortfolioDevelopment, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.StructuringAndCapitalization, tgs:PracticeTerm.VentureCultivation .
+
+tgs:PracticeCluster.WaysOfKnowing
+    skos:narrower tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.CulturalAndSpiritualPractices, tgs:PracticeTerm.FormalScientificProcess, tgs:PracticeTerm.ImmersiveJourneys, tgs:PracticeTerm.LearningPrograms, tgs:PracticeTerm.MoreThanHumanKnowledge, tgs:PracticeTerm.PeerLearning, tgs:PracticeTerm.TraditionalEcologicalKnowledge .
+# ===== END DERIVED INVERSES =====

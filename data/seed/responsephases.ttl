@@ -24,3 +24,11 @@ tgs:ResponsePhase.BendNotBreak a thinkr:ResponsePhase, owl:NamedIndividual ;
 tgs:ResponsePhase.StableAttractor a thinkr:ResponsePhase, owl:NamedIndividual ;
     skos:prefLabel "Phase C: The Stable Attractor"@en ;
     skos:definition "NOT a place reached by skipping past Phases A and B — Hagens states this directly, that those periods 'cannot be skipped.' Phase C is instead the destination that gives real meaning and direction to the work of A and B: regenerative, resilient, human-scale, embedded in local ecology, equitable in a way that does not depend on infinite growth to fund redistribution, and rich in meaning and social connection. Hagens' own real framing of who this world is for: the same values that animate opposition to capitalism, ecological destruction, and patriarchy actually have a real home here — not because they were declared into existence, but because the structures that produced their opposite failed and were replaced by something built painstakingly from inside the disruption itself, not after it."@en .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:ResponsePhase.BendNotBreak
+    <http://purl.org/dc/terms/isReferencedBy> tgs:Monologue.Frankly_100_AskNateAnything2025, tgs:Monologue.Frankly_107_ThisWeeksLearnings, tgs:Monologue.Frankly_110_WhatSlothsTeachUsAboutTheSuperorganism, tgs:Monologue.Frankly_115_InflationDeflationAndSimplification, tgs:Monologue.Frankly_58_FellowshipBendNotBreak .
+# ===== END DERIVED INVERSES =====

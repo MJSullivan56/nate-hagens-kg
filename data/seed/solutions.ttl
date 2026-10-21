@@ -926,3 +926,127 @@ tgs:ConceptScheme.OneEarthSolutions a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:PracticeCluster.OneEarth_NatureConservation,
         tgs:PracticeCluster.OneEarth_RegenerativeAgriculture ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:PracticeCluster.OneEarth_EnergyTransition
+    skos:closeMatch tgs:PracticeTerm.RenewableEnergy ;
+    skos:narrower tgs:PracticeTerm.OneEarth_EnergyEfficiency, tgs:PracticeTerm.OneEarth_RenewableHeat, tgs:PracticeTerm.OneEarth_RenewablePower, tgs:PracticeTerm.OneEarth_RenewableTransport .
+
+tgs:PracticeCluster.OneEarth_IntersectionalThemes
+    skos:narrower tgs:PracticeTerm.OneEarth_BiologicalDiversity, tgs:PracticeTerm.OneEarth_GenderEquity, tgs:PracticeTerm.OneEarth_PublicHealth, tgs:PracticeTerm.OneEarth_SocialJustice, tgs:PracticeTerm.OneEarth_SustainableLivelihoods, tgs:PracticeTerm.OneEarth_WaterStewardship, tgs:PracticeTerm.OneEarth_YouthLeadership .
+
+tgs:PracticeCluster.OneEarth_LeversOfChange
+    skos:narrower tgs:PracticeTerm.OneEarth_CommunityAction, tgs:PracticeTerm.OneEarth_EducationAndCulture, tgs:PracticeTerm.OneEarth_FinanceAndIncentives, tgs:PracticeTerm.OneEarth_LegalEmpowerment, tgs:PracticeTerm.OneEarth_PolicyAndGovernance, tgs:PracticeTerm.OneEarth_ScienceAndIntelligence, tgs:PracticeTerm.OneEarth_TechnologyAndProducts .
+
+tgs:PracticeCluster.OneEarth_NatureConservation
+    skos:narrower tgs:PracticeTerm.OneEarth_EcosystemRestoration, tgs:PracticeTerm.OneEarth_LandConservation, tgs:PracticeTerm.OneEarth_OceanConservation, tgs:PracticeTerm.OneEarth_WildlifeConnectivity .
+
+tgs:PracticeCluster.OneEarth_RegenerativeAgriculture
+    skos:closeMatch tgs:PracticeTerm.RegenerativeAgriculture ;
+    skos:narrower tgs:PracticeTerm.OneEarth_CircularFibersheds, tgs:PracticeTerm.OneEarth_FoodWasteReduction, tgs:PracticeTerm.OneEarth_RegenerativeCroplands, tgs:PracticeTerm.OneEarth_SustainableRangelands .
+
+tgs:PracticeTerm.OneEarth_BioregionalSourcing
+    skos:closeMatch tgs:PracticeTerm.RegionalSourcing .
+
+tgs:PracticeTerm.OneEarth_BuiltEnvironment
+    skos:closeMatch tgs:PracticeTerm.ConstructionAndHousing .
+
+tgs:PracticeTerm.OneEarth_CircularFibersheds
+    skos:broadMatch tgs:PracticeTerm.ClothingAndProductManufacturing ;
+    skos:narrower tgs:PracticeTerm.OneEarth_GreenTextiles, tgs:PracticeTerm.OneEarth_RecycleAndReuse, tgs:PracticeTerm.OneEarth_SustainableFiberAndPulp .
+
+tgs:PracticeTerm.OneEarth_CommunityAction
+    skos:narrowMatch tgs:PracticeTerm.CongressingAndEvents, tgs:PracticeTerm.NetworkWeaving, tgs:PracticeTerm.ParticipatoryStrategies .
+
+tgs:PracticeTerm.OneEarth_DrylandIrrigation
+    skos:relatedMatch tgs:PracticeTerm.WaterManagement .
+
+tgs:PracticeTerm.OneEarth_EcosystemRestoration
+    skos:narrower tgs:PracticeTerm.OneEarth_CoastalRestoration, tgs:PracticeTerm.OneEarth_ForestRecovery, tgs:PracticeTerm.OneEarth_GrasslandRestoration, tgs:PracticeTerm.OneEarth_MangroveRestoration, tgs:PracticeTerm.OneEarth_Reforestation, tgs:PracticeTerm.OneEarth_SpeciesRewilding, tgs:PracticeTerm.OneEarth_SustainableForestry, tgs:PracticeTerm.OneEarth_WetlandRestoration .
+
+tgs:PracticeTerm.OneEarth_EducationAndCulture
+    skos:narrowMatch tgs:PracticeTerm.ArtAndStorytelling, tgs:PracticeTerm.LearningPrograms, tgs:PracticeTerm.PeerLearning .
+
+tgs:PracticeTerm.OneEarth_EnergyEfficiency
+    skos:narrower tgs:PracticeTerm.OneEarth_BuiltEnvironment, tgs:PracticeTerm.OneEarth_IndustriesAndServices, tgs:PracticeTerm.OneEarth_TransmissionAndStorage, tgs:PracticeTerm.OneEarth_TransportationEfficiency .
+
+tgs:PracticeTerm.OneEarth_FinanceAndIncentives
+    skos:narrowMatch tgs:PracticeTerm.FinanceAssessments, tgs:PracticeTerm.GrantsPrograms, tgs:PracticeTerm.InvestmentVehicles, tgs:PracticeTerm.PortfolioDevelopment, tgs:PracticeTerm.ResultBasedMechanisms, tgs:PracticeTerm.StructuringAndCapitalization, tgs:PracticeTerm.VentureCultivation .
+
+tgs:PracticeTerm.OneEarth_FoodUpcycling
+    skos:relatedMatch tgs:PracticeTerm.MaterialsTransformation .
+
+tgs:PracticeTerm.OneEarth_FoodWasteReduction
+    skos:narrower tgs:PracticeTerm.OneEarth_BioregionalSourcing, tgs:PracticeTerm.OneEarth_Composting, tgs:PracticeTerm.OneEarth_FoodUpcycling, tgs:PracticeTerm.OneEarth_MealPlanning, tgs:PracticeTerm.OneEarth_StorageAndLogistics, tgs:PracticeTerm.OneEarth_UrbanGardening .
+
+tgs:PracticeTerm.OneEarth_IndigenousTenure
+    skos:relatedMatch tgs:PracticeTerm.CollectiveOwnershipModels, tgs:PracticeTerm.TraditionalEcologicalKnowledge .
+
+tgs:PracticeTerm.OneEarth_LandConservation
+    skos:narrower tgs:PracticeTerm.OneEarth_ClimateRefugia, tgs:PracticeTerm.OneEarth_IndigenousTenure, tgs:PracticeTerm.OneEarth_IntactWilderness, tgs:PracticeTerm.OneEarth_LandHabitats, tgs:PracticeTerm.OneEarth_MammalAssemblages, tgs:PracticeTerm.OneEarth_ProtectedLands, tgs:PracticeTerm.OneEarth_RaritySites, tgs:PracticeTerm.OneEarth_UrbanBiodiversity .
+
+tgs:PracticeTerm.OneEarth_LegalEmpowerment
+    skos:narrowMatch tgs:PracticeTerm.AgreementsAndLegalInstruments, tgs:PracticeTerm.RightsOfNature .
+
+tgs:PracticeTerm.OneEarth_OceanConservation
+    skos:narrower tgs:PracticeTerm.OneEarth_MarineCarbonSinks, tgs:PracticeTerm.OneEarth_MarineHabitats, tgs:PracticeTerm.OneEarth_ProtectedSeas, tgs:PracticeTerm.OneEarth_SustainableFisheries .
+
+tgs:PracticeTerm.OneEarth_PolicyAndGovernance
+    skos:narrowMatch tgs:PracticeTerm.PoliticalAdvocacy .
+
+tgs:PracticeTerm.OneEarth_PublicHealth
+    skos:relatedMatch tgs:PracticeTerm.HealthAndSocialCare .
+
+tgs:PracticeTerm.OneEarth_RecycleAndReuse
+    skos:relatedMatch tgs:PracticeTerm.MaterialsTransformation .
+
+tgs:PracticeTerm.OneEarth_Reforestation
+    skos:broadMatch tgs:PracticeTerm.VegetationPlanting .
+
+tgs:PracticeTerm.OneEarth_RegenerativeCroplands
+    skos:narrower tgs:PracticeTerm.OneEarth_Agritecture, tgs:PracticeTerm.OneEarth_Agroforestry, tgs:PracticeTerm.OneEarth_CropOptimization, tgs:PracticeTerm.OneEarth_CroplandRestoration, tgs:PracticeTerm.OneEarth_DrylandIrrigation, tgs:PracticeTerm.OneEarth_FarmAfforestation, tgs:PracticeTerm.OneEarth_NaturalPestControl, tgs:PracticeTerm.OneEarth_PerennialSuperfoods, tgs:PracticeTerm.OneEarth_Polyculture, tgs:PracticeTerm.OneEarth_SeedDiversity, tgs:PracticeTerm.OneEarth_SmallholderFarming, tgs:PracticeTerm.OneEarth_SoilManagement, tgs:PracticeTerm.OneEarth_SustainableBiochar, tgs:PracticeTerm.OneEarth_SustainableFertilizers, tgs:PracticeTerm.OneEarth_SustainableRiceFarming .
+
+tgs:PracticeTerm.OneEarth_RenewableHeat
+    skos:narrower tgs:PracticeTerm.OneEarth_DistrictHeat, tgs:PracticeTerm.OneEarth_ElectricHeat, tgs:PracticeTerm.OneEarth_GeothermalHeat, tgs:PracticeTerm.OneEarth_GreenHydrogenHeat, tgs:PracticeTerm.OneEarth_SolarHeat, tgs:PracticeTerm.OneEarth_SustainableBiomassHeat .
+
+tgs:PracticeTerm.OneEarth_RenewablePower
+    skos:narrower tgs:PracticeTerm.OneEarth_GeothermalPower, tgs:PracticeTerm.OneEarth_GreenHydrogenPower, tgs:PracticeTerm.OneEarth_OffshoreWind, tgs:PracticeTerm.OneEarth_OnshoreWind, tgs:PracticeTerm.OneEarth_SolarPhotovoltaic, tgs:PracticeTerm.OneEarth_SolarThermoelectric, tgs:PracticeTerm.OneEarth_SustainableBiomassPower, tgs:PracticeTerm.OneEarth_SustainableHydropower, tgs:PracticeTerm.OneEarth_WaveEnergy .
+
+tgs:PracticeTerm.OneEarth_RenewableTransport
+    skos:closeMatch tgs:PracticeTerm.TransportationTransitions ;
+    skos:narrower tgs:PracticeTerm.OneEarth_ElectricTransport, tgs:PracticeTerm.OneEarth_GreenHydrogenFuel, tgs:PracticeTerm.OneEarth_SustainableBiofuel, tgs:PracticeTerm.OneEarth_SustainableEFuel .
+
+tgs:PracticeTerm.OneEarth_RiversAndStreams
+    skos:broadMatch tgs:PracticeTerm.WatershedRepair .
+
+tgs:PracticeTerm.OneEarth_ScienceAndIntelligence
+    skos:narrowMatch tgs:PracticeTerm.CitizenOrCommunityScience, tgs:PracticeTerm.EcologicalMonitoring, tgs:PracticeTerm.FormalScientificProcess .
+
+tgs:PracticeTerm.OneEarth_SeedDiversity
+    skos:relatedMatch tgs:PracticeTerm.SeedsAndNurseries .
+
+tgs:PracticeTerm.OneEarth_SmallholderFarming
+    skos:relatedMatch tgs:PracticeTerm.FarmerSupport .
+
+tgs:PracticeTerm.OneEarth_SustainableGrazing
+    skos:closeMatch tgs:PracticeTerm.RegenerativeGrazing .
+
+tgs:PracticeTerm.OneEarth_SustainableLivelihoods
+    skos:relatedMatch tgs:PracticeTerm.TrainingAndEmploymentPathways .
+
+tgs:PracticeTerm.OneEarth_SustainableRangelands
+    skos:narrower tgs:PracticeTerm.OneEarth_HealthyFeed, tgs:PracticeTerm.OneEarth_MeatFreeProteins, tgs:PracticeTerm.OneEarth_PlanetarianDiet, tgs:PracticeTerm.OneEarth_Silvopasture, tgs:PracticeTerm.OneEarth_SustainableGrazing .
+
+tgs:PracticeTerm.OneEarth_WaterStewardship
+    skos:relatedMatch tgs:PracticeTerm.WaterManagement .
+
+tgs:PracticeTerm.OneEarth_WetlandRestoration
+    skos:broadMatch tgs:PracticeTerm.WatershedRepair .
+
+tgs:PracticeTerm.OneEarth_WildlifeConnectivity
+    skos:closeMatch tgs:PracticeTerm.HabitatConnectivity ;
+    skos:narrower tgs:PracticeTerm.OneEarth_BuffersAndGreenways, tgs:PracticeTerm.OneEarth_LandCorridors, tgs:PracticeTerm.OneEarth_MarineCorridors, tgs:PracticeTerm.OneEarth_RiversAndStreams .
+# ===== END DERIVED INVERSES =====

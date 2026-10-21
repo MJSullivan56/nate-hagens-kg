@@ -231,3 +231,71 @@ tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, owl:NamedIndividu
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Air Pollution"@en ;
     skos:definition "Tracks airborne concentrations of gases and microscopic solids dangerous to human lungs."@en .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:IndicatorCategory.AirPollution
+    skos:narrower tgs:Indicator.O3Pollution, tgs:Indicator.ParticulateMatter .
+
+tgs:IndicatorCategory.BiodiversityLoss
+    skos:narrower tgs:Indicator.AtRiskSpecies, tgs:Indicator.UnprotectedArea .
+
+tgs:IndicatorCategory.ChemicalPollution
+    skos:narrower tgs:Indicator.Landfill, tgs:Indicator.ToxicReleases .
+
+tgs:IndicatorCategory.ClimateChange
+    skos:narrower tgs:Indicator.GreenhouseGasEmissions, tgs:Indicator.NonRenewableElectricity .
+
+tgs:IndicatorCategory.ConnectivityAndTransportation
+    skos:narrower tgs:Indicator.InternetAccess, tgs:Indicator.TransitReportCard .
+
+tgs:IndicatorCategory.Education
+    skos:narrower tgs:Indicator.LiteracyRate, tgs:Indicator.StudentLoanDebt .
+
+tgs:IndicatorCategory.Energy
+    skos:narrower tgs:Indicator.EnergyBurden, tgs:Indicator.EnergyReliability .
+
+tgs:IndicatorCategory.Equity
+    skos:narrower tgs:Indicator.GenderPayGap, tgs:Indicator.RacialEquityIndex .
+
+tgs:IndicatorCategory.Food
+    skos:narrower tgs:Indicator.FoodInsecurity, tgs:Indicator.VegetablesPerDay .
+
+tgs:IndicatorCategory.FreshwaterUse
+    skos:narrower tgs:Indicator.GroundWater, tgs:Indicator.WaterFootprint .
+
+tgs:IndicatorCategory.Health
+    skos:narrower tgs:Indicator.HealthcareAffordability, tgs:Indicator.LifeExpectancy .
+
+tgs:IndicatorCategory.Housing
+    skos:narrower tgs:Indicator.Homelessness, tgs:Indicator.HousingBurden .
+
+tgs:IndicatorCategory.IncomeAndWork
+    skos:narrower tgs:Indicator.Poverty, tgs:Indicator.Unemployment .
+
+tgs:IndicatorCategory.LandUseChange
+    skos:narrower tgs:Indicator.EcologicalFootprint, tgs:Indicator.ForestCover .
+
+tgs:IndicatorCategory.NitrogenAndPhosphorus
+    skos:narrower tgs:Indicator.EutrophicationPotential, tgs:Indicator.NitrogenLeached .
+
+tgs:IndicatorCategory.OceanAcidification
+    skos:narrower tgs:Indicator.OceanPH, tgs:Indicator.SO2EqFootprint .
+
+tgs:IndicatorCategory.OzoneDepletion
+    skos:narrower tgs:Indicator.OzoneDepletingSubstances, tgs:Indicator.OzoneLayer .
+
+tgs:IndicatorCategory.PeaceAndJustice
+    skos:narrower tgs:Indicator.PoliceScorecard, tgs:Indicator.ViolentCrime .
+
+tgs:IndicatorCategory.PoliticalVoice
+    skos:narrower tgs:Indicator.RegisteredVoters, tgs:Indicator.VoterTurnout .
+
+tgs:IndicatorCategory.SocialCohesion
+    skos:narrower tgs:Indicator.IncomeInequality, tgs:Indicator.ReportNotHappy .
+
+tgs:IndicatorCategory.WaterAndSanitation
+    skos:narrower tgs:Indicator.SanitationAccess, tgs:Indicator.WaterQuality .
+# ===== END DERIVED INVERSES =====

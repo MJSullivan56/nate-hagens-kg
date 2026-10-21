@@ -3492,3 +3492,197 @@ tgs:Work.RadikalEmotional a thinkr:Work, owl:NamedIndividual ;
     dct:issued "2024"^^xsd:gYear ;
     dct:isReferencedBy tgs:Interview.TGS_174_MarenUrner ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Work.AIUnexplainableUnpredictableUncontrollable
+    dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
+
+tgs:Work.AgainstTheMachine
+    dct:isReferencedBy tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
+
+tgs:Work.Amazonia4
+    dct:isReferencedBy tgs:Interview.TGS_150_CarlosNobre .
+
+tgs:Work.AncientFutures
+    dct:isReferencedBy tgs:Interview.TGS_181_HelenaNorbergHodge .
+
+tgs:Work.ArtificialSuperintelligenceAFuturisticApproach
+    dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
+
+tgs:Work.Belly
+    dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.BitterHarvest
+    dct:isReferencedBy tgs:Interview.TGS_86_LisiKrall .
+
+tgs:Work.BottlenecksOf21stCentury
+    dct:isReferencedBy tgs:Interview.TGS_163_DougaldHine, tgs:Interview.TGS_177_ThomasCrowther, tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_49_SimonMichaux, tgs:Interview.TGS_51_DJWhite, tgs:Monologue.Frankly_110_WhatSlothsTeachUsAboutTheSuperorganism, tgs:Monologue.Frankly_147_HowToPlay5dChess, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse .
+
+tgs:Work.BraveNewWar
+    dct:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
+
+tgs:Work.BrettonWoodsIII
+    dct:isReferencedBy tgs:Interview.TGS_118_MichaelEvery .
+
+tgs:Work.BrokenMoney2023
+    dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
+
+tgs:Work.Combining
+    dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.DenialOfDeath
+    dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Work.DieWise
+    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
+
+tgs:Work.Disorder2022
+    dct:isReferencedBy tgs:Interview.TGS_98_HelenThompson .
+
+tgs:Work.DopamineNation
+    dct:isReferencedBy tgs:Interview.TGS_206_AnnaLembke .
+
+tgs:Work.DrillingDown
+    dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek .
+
+tgs:Work.EndTimes
+    dct:isReferencedBy tgs:Interview.TGS_164_PeterTurchin .
+
+tgs:Work.EnergyAndHumanAmbitions
+    dct:isReferencedBy tgs:Interview.TGS_18_ThomasMurphy .
+
+tgs:Work.ForTheCommonGood
+    dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .
+
+tgs:Work.FromWhatIsToWhatIf
+    dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
+
+tgs:Work.FutureCouncilFilm
+    dct:isReferencedBy tgs:PanelDiscussion.RR_13_FutureCouncil .
+
+tgs:Work.GoliathsCurse
+    dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp .
+
+tgs:Work.HistoryForTomorrow
+    dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric .
+
+tgs:Work.HowToFallInLoveWithTheFuture
+    dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
+
+tgs:Work.IfAnyoneBuildsItEveryoneDies
+    dct:isReferencedBy tgs:Interview.TGS_203_NateSoares .
+
+tgs:Work.InTheWakeOf911
+    dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Work.Ishmael
+    dct:isReferencedBy tgs:Interview.TGS_232_CharlesEisenstein, tgs:Interview.TGS_76_DanielZetah, tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot .
+
+tgs:Work.LeMondeSansFin
+    dct:isReferencedBy tgs:Interview.TGS_175_JeanMarcJancovici, tgs:Interview.TGS_84_JeanMarcJancovici .
+
+tgs:Work.LePlanDeTransformation
+    dct:isReferencedBy tgs:Interview.TGS_84_JeanMarcJancovici .
+
+tgs:Work.Matrimony
+    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
+
+tgs:Work.NewEconomyForTheBrazilianAmazon
+    dct:isReferencedBy tgs:Interview.TGS_151_AndreGuimaraes .
+
+tgs:Work.OilAndTheWesternEconomicCrisis
+    dct:isReferencedBy tgs:Interview.TGS_98_HelenThompson .
+
+tgs:Work.PewAmericansMorallyBad2026
+    dct:isReferencedBy tgs:Monologue.Frankly_140_APerspectiveFromLebanon .
+
+tgs:Work.PratiquementDurable
+    dct:isReferencedBy tgs:Interview.TGS_166_PeterStrack .
+
+tgs:Work.RealityBlind
+    dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_100_NateHagens, tgs:Interview.TGS_10_NoraBateson, tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_113_LynAlden, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_196_MeredithAngwin, tgs:Interview.TGS_208_XiyeBastida, tgs:Interview.TGS_34_KirilSokoloff, tgs:Interview.TGS_51_DJWhite, tgs:Interview.TGS_99_JeremyGrantham, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.ScenarioThinkingHistoricalEvolution
+    dct:isReferencedBy tgs:Monologue.Frankly_139_Part2FourVariables .
+
+tgs:Work.ShortingTheGrid
+    dct:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
+
+tgs:Work.TaoOfPhysics
+    dct:isReferencedBy tgs:Interview.TGS_138_FritjofCapra .
+
+tgs:Work.TheAscentOfHumanity
+    dct:isReferencedBy tgs:Interview.TGS_232_CharlesEisenstein .
+
+tgs:Work.TheDebunkingHandbook
+    dct:isReferencedBy tgs:Interview.TGS_212_JohnCook .
+
+tgs:Work.TheEndOfNature
+    dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Work.TheEndsOfTheWorld
+    dct:isReferencedBy tgs:Interview.TGS_210_PeterBrannen .
+
+tgs:Work.TheFutureIsRural
+    dct:isReferencedBy tgs:Interview.TGS_211_JasonBradford, tgs:Interview.TGS_24_JasonBradford .
+
+tgs:Work.TheMarketMyth
+    dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman .
+
+tgs:Work.TheMythOfTheMachine
+    dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp .
+
+tgs:Work.TheNordicSecret
+    dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman .
+
+tgs:Work.ThePopulationBomb
+    dct:isReferencedBy tgs:Interview.TGS_9_PaulEhrlich .
+
+tgs:Work.TheRighteousMind
+    dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt .
+
+tgs:Work.TheSpaceOfPossibleMindDesigns
+    dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
+
+tgs:Work.TheStoryOfCO2
+    dct:isReferencedBy tgs:Interview.TGS_210_PeterBrannen .
+
+tgs:Work.TheTransitionHandbook
+    dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
+
+tgs:Work.TheWayOfTheWhale
+    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Work.TheWorldWeCreate
+    dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman .
+
+tgs:Work.TheWormAtTheCore
+    dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Work.ThermalPowerAndClimateChange
+    dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek, tgs:Interview.TGS_225_TadPatzek .
+
+tgs:Work.ThinkingLikeAMountain
+    dct:isReferencedBy tgs:PanelDiscussion.RR_17_MovingFromApathyToAction .
+
+tgs:Work.TrueHuman
+    dct:isReferencedBy tgs:Interview.TGS_112_SamanthaSweetwater .
+
+tgs:Work.Ultrasocial2021
+    dct:isReferencedBy tgs:Interview.TGS_14_JohnGowdy .
+
+tgs:Work.ValuingTheEarth
+    dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .
+
+tgs:Work.WakingUp
+    dct:isReferencedBy tgs:Interview.TGS_216_SamHarris .
+
+tgs:Work.WildEdgeOfSorrow
+    dct:isReferencedBy tgs:Interview.TGS_167_FrancisWeller .
+
+tgs:Work.ZombiesInWesternCulture
+    dct:isReferencedBy tgs:Interview.TGS_158_JohnVervaeke .
+# ===== END DERIVED INVERSES =====

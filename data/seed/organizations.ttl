@@ -803,3 +803,77 @@ tgs:Organization.Patagonia a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.patagonia.com/company-history/> ;
     dcterms:isReferencedBy tgs:Interview.TGS_170_KristineTompkins ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Organization.BeyondPlastics
+    dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Organization.CenterForHumaneTechnology
+    dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
+
+tgs:Organization.CivilizationResearchInstitute
+    dcterms:hasPart tgs:Organization.ConsilienceProject .
+
+tgs:Organization.CommodityContext
+    dcterms:isReferencedBy tgs:Interview.TGS_218_RoryJohnston .
+
+tgs:Organization.Conjecture
+    dcterms:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
+
+tgs:Organization.ControlAI
+    dcterms:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
+
+tgs:Organization.CrankyUncle
+    dcterms:isReferencedBy tgs:Interview.TGS_212_JohnCook .
+
+tgs:Organization.CyberSecurityLabLouisville
+    dcterms:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
+
+tgs:Organization.EarthSpeciesProject
+    dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
+
+tgs:Organization.ElectricPowerResearchInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
+
+tgs:Organization.EleutherAI
+    dcterms:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
+
+tgs:Organization.GlobalGuerrillasReport
+    dcterms:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
+
+tgs:Organization.InternationalBatesonInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_10_NoraBateson .
+
+tgs:Organization.PlanetLabs
+    dcterms:isReferencedBy tgs:Interview.TGS_173_WillMarshall .
+
+tgs:Organization.PlanetaryGuardians
+    dcterms:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Organization.PostCarbonInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_24_JasonBradford .
+
+tgs:Organization.ReEarthInitiative
+    dcterms:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Organization.RecycleLebanon
+    dcterms:isReferencedBy tgs:Interview.TGS_73_JoslinFaithKehdy .
+
+tgs:Organization.Restor
+    dcterms:isReferencedBy tgs:Interview.TGS_177_ThomasCrowther .
+
+tgs:Organization.SkepticalScience
+    dcterms:isReferencedBy tgs:Interview.TGS_212_JohnCook .
+
+tgs:Organization.ThirdAct
+    dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Organization.ThreeFiftyOrg
+    dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+
+tgs:Organization.TransitionNetwork
+    dcterms:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
+# ===== END DERIVED INVERSES =====

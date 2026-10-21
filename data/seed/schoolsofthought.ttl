@@ -253,3 +253,32 @@ tgs:ConceptScheme.SchoolsOfThought a skos:ConceptScheme, owl:NamedIndividual ;
 # where both ends are SKOS concepts (applySkos2.py). Not a subproperty axiom, because those
 # properties also link concepts to Personas, Organizations and ScenarioFacets.
 tgs:SchoolOfThought.DegrowthMovement skos:related tgs:SchoolOfThought.TechnoOptimism .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:SchoolOfThought.Cornucopianism
+    skos:relatedMatch tgs:Concept.LimitsToGrowth .
+
+tgs:SchoolOfThought.DoughnutEconomics
+    dcterms:isReferencedBy tgs:Interview.TGS_100_NateHagens ;
+    skos:relatedMatch tgs:Concept.Overshoot .
+
+tgs:SchoolOfThought.Ecomodernism
+    skos:relatedMatch tgs:Concept.LimitsToGrowth .
+
+tgs:SchoolOfThought.NeoclassicalGrowthEconomics
+    skos:relatedMatch tgs:Concept.EnergyBlindness, tgs:Concept.LimitsToGrowth, tgs:Concept.TenCoreMythsOfBusinessSchools .
+
+tgs:SchoolOfThought.OrganizedClimateDoubt
+    skos:relatedMatch tgs:Concept.ClimateSensitivity .
+
+tgs:SchoolOfThought.TechnoOptimism
+    skos:narrower tgs:SchoolOfThought.EffectiveAccelerationism ;
+    skos:related tgs:SchoolOfThought.DegrowthMovement ;
+    skos:relatedMatch tgs:Concept.GreatSimplification, tgs:Concept.LimitsToGrowth, tgs:Concept.PrecautionaryPrinciple .
+
+tgs:SchoolOfThought.WarmData
+    dcterms:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData .
+# ===== END DERIVED INVERSES =====

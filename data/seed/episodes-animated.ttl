@@ -94,3 +94,14 @@ tgs:AnimatedVideo.Part4TheGreatSimplification a thinkr:Episode, owl:NamedIndivid
     dct:contributor "Joseph Navarra (Illustrator)"@en, "Mike Kriefski (Voice Coach)"@en, "Eric Borchardt (Voice Coach)"@en ;
     skos:scopeNote "Real backlink in this video's own official show notes to Art Berman's own real blog post, 'Addicted to Electricity: A Preview of The Great Simplification' — Art Berman is already a real, built Persona in this graph (RR-1, RR-16), but the blog post itself is a distinct real artifact from either of those; linked here as a direct URL rather than minted as its own Work individual, kept proportionate to its role as a single citation rather than a central source."@en ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:AnimatedVideo.Part2TheHumanSuperorganism
+    dct:isReferencedBy tgs:Monologue.Frankly_123_TheConsumptionPyramid .
+
+tgs:Series.GreatSimplificationAnimatedSeries
+    dct:isReferencedBy tgs:Interview.TGS_213_ChristineWebb, tgs:Monologue.Frankly_123_TheConsumptionPyramid .
+# ===== END DERIVED INVERSES =====

@@ -62,3 +62,7 @@ extraction/md_backups/
 ontology_2025-08-24.zip
 tgs_store/
 reports/
+# Protégé and merge_for_protege.py output at repo root
+/merged_for_protege.ttl
+/merged_for_protege.owl
+catalog-v001.xml

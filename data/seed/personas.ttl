@@ -1919,3 +1919,83 @@ tgs:Persona.KristineTompkins a thinkr:Persona, owl:NamedIndividual ;
     rdfs:label "Kristine Tompkins (persona)"@en ;
     skos:scopeNote "Kept Professional-only: they met a couple of weeks before recording, introduced by their mutual friend Randy Hayes of Rainforest Action Network (tgs:Human.RandyHayes); both wish they had met decades earlier and she closes 'We're gonna make up for it.' Nate calls her Kris throughout (transcribed 'Chris')."@en ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Persona.BayoAkomolafe
+    dct:isReferencedBy tgs:Monologue.Frankly_140_APerspectiveFromLebanon .
+
+tgs:Persona.CharlesGoodnight
+    dct:isReferencedBy tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview .
+
+tgs:Persona.DanielChristianWahl
+    dct:isReferencedBy tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
+
+tgs:Persona.DanielPauly
+    dct:isReferencedBy tgs:Interview.TGS_213_ChristineWebb .
+
+tgs:Persona.DanielSchmachtenberger
+    dct:isReferencedBy tgs:Interview.TGS_1_RichardGephardt, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_139_Part2FourVariables, tgs:PanelDiscussion.RR_17_MovingFromApathyToAction, tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis .
+
+tgs:Persona.DennisMeadows
+    dct:isReferencedBy tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse .
+
+tgs:Persona.EOWilson
+    dct:isReferencedBy tgs:Interview.TGS_230_OlivierHamant .
+
+tgs:Persona.IainMcGilchrist
+    dct:isReferencedBy tgs:Interview.TGS_122_ZakStein, tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
+
+tgs:Persona.JeremyGrantham
+    dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
+
+tgs:Persona.JoanDiamond
+    dct:isReferencedBy tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife .
+
+tgs:Persona.KirilSokoloff
+    dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
+
+tgs:Persona.LukeGromen
+    dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
+
+tgs:Persona.NancyMcWilliams
+    dct:isReferencedBy tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes .
+
+tgs:Persona.NoraBateson
+    dct:isReferencedBy tgs:Monologue.Frankly_147_HowToPlay5dChess, tgs:PanelDiscussion.RR_14_TheFutureIsLocal, tgs:PanelDiscussion.RR_25_WhyStandardizedTestingContributedToTheMetacrisis .
+
+tgs:Persona.PeterWard
+    dct:isReferencedBy tgs:Interview.TGS_15_DanielPauly .
+
+tgs:Persona.PriscillaTrinh
+    dct:isReferencedBy tgs:Interview.TGS_213_ChristineWebb, tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife .
+
+tgs:Persona.ReidMeloy
+    dct:isReferencedBy tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes .
+
+tgs:Persona.RichardSchwartz
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
+tgs:Persona.ShannaSwan
+    dct:isReferencedBy tgs:Interview.TGS_99_JeremyGrantham, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:PanelDiscussion.RR_15_ThePlasticCrisis .
+
+tgs:Persona.SianSutherland
+    dct:isReferencedBy tgs:Monologue.Frankly_132_FrameworkForAction, tgs:PanelDiscussion.RR_15_ThePlasticCrisis .
+
+tgs:Persona.SteveKeen
+    dct:isReferencedBy tgs:Monologue.Frankly_3_EnergyBlindness .
+
+tgs:Persona.VanessaAndreotti
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology, tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins .
+
+tgs:Persona.WendellBerry
+    dct:isReferencedBy tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
+
+tgs:Persona.WilliamRees
+    dct:isReferencedBy tgs:Interview.TGS_99_JeremyGrantham .
+
+tgs:Persona.ZakStein
+    dct:isReferencedBy tgs:Monologue.Frankly_132_FrameworkForAction .
+# ===== END DERIVED INVERSES =====

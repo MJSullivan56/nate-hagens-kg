@@ -95,3 +95,11 @@ tgs:PersonalIntervention.TrainLikeYoullBeNeeded a thinkr:PersonalIntervention, o
     skos:definition "Deliberately pushing oneself physically, intellectually, and spiritually in whatever way a person alone knows they specifically need — not generic self-help, per Hagens' own direct framing, but real preparation for a real future moment. His own words: 'the cultural mycelium underneath us will only be as strong as the humans that comprise it' — directly connected to his own real, still-unfolding 'Guide to Staying Human' series."@en ;
     dcterms:relation tgs:Monologue.Frankly_129_DesperatelySeekingAgency, tgs:Concept.DistributedAgency, tgs:ResponsePhase.BendNotBreak ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:PersonalIntervention.LowerDopaminePeaks
+    dcterms:isReferencedBy tgs:Monologue.Frankly_123_TheConsumptionPyramid .
+# ===== END DERIVED INVERSES =====
