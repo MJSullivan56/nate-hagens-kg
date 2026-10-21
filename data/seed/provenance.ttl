@@ -3797,3 +3797,10 @@ tgs:RevisionEvent.PracticeTermSubdomainGaps_Closed a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Added 15 skos:relatedMatch links from eight Bioregioning Earth practice terms that had no direct link to any intervention subdomain (Political Advocacy, Clothing and Product Manufacturing, Materials Transformation, Coaches and Leaders, Theory U, Formal Scientific Process, Systems and Resource Mapping, Venture Cultivation), approved from review sheet 6e. Demonstrator Site deliberately gets none: a demonstrator can be about anything, and its initiatives reach their fronts through their topic terms."@en ;
     .
+
+tgs:RevisionEvent.DevonDoughnut_Imported a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.DevonDoughnut, thinkr:DevonDoughnutDomain, tgs:Work.DevonDoughnutIndicatorCompilation ;
+    thinkr:revisionDate "2026-10-21"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Added the Devon Doughnut as its own scheme at MJSullivan's request (new file devondoughnut.ttl, new class thinkr:DevonDoughnutDomain), approved from review sheets 1 and 6b: 22 domains plus four grouping nodes, names and paraphrases only because the source is CC BY-NC-SA and marked not for reuse elsewhere. 42 skos:relatedMatch links from domains to intervention subdomains, so every domain reaches a front. The two halves closeMatch the existing tgs:DoughnutHalf individuals. New Work tgs:Work.DevonDoughnutIndicatorCompilation; linked to tgs:Initiative.DevonDoughnutProject. Crosswalks to the California categories (sheet 2) and to Bioregioning Earth practices (sheet 3) not yet built."@en ;
+    .

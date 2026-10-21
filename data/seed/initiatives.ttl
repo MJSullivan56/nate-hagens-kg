@@ -1178,6 +1178,7 @@ tgs:Initiative.DevonDoughnutProject a thinkr:Initiative, owl:NamedIndividual ;
     thinkr:listedInPracticeCluster tgs:PracticeCluster.MappingAndIndicators ;
     dcterms:description "In 2020, as the world grappled with the global pandemic, the BLC recognized an opportunity to reimagine their bioregion's future through Kate Raworth's Doughnut Economics model."@en ;
     dcterms:source tgs:Work.BioregioningEarthOntology ;
+    dcterms:relation tgs:ConceptScheme.DevonDoughnut, tgs:Work.DevonDoughnutIndicatorCompilation ;
     .
 
 tgs:Initiative.StoryOfPlace a thinkr:Initiative, owl:NamedIndividual ;

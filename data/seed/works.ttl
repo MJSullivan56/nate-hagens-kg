@@ -3501,6 +3501,14 @@ tgs:Work.WWNSArchetypeMatrix a thinkr:Work, owl:NamedIndividual ;
     dct:references tgs:Monologue.Frankly_58_FellowshipBendNotBreak ;
     .
 
+tgs:Work.DevonDoughnutIndicatorCompilation a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Devon Doughnut: Indicator Compilation"@en ;
+    rdfs:comment "The Bioregional Learning Centre's compilation of the Devon Doughnut (file dated 29 November 2021): 22 domains, each with an overall indicator, twin-track measures for citizens and for policy makers, and example pathways for action. Licensed CC BY-NC-SA 4.0 and marked not for reuse elsewhere, so the graph carries only its domain names and paraphrases (tgs:ConceptScheme.DevonDoughnut). Presented by Isabel Carlisle and Nick Paling at r3.0's Bioregional Carrying Capacity series, Session 5 (14 April 2025); the compilation was obtained from r3.0's session materials."@en ;
+    dct:creator tgs:Organization.BioregionalLearningCentreSouthDevon ;
+    dct:source <https://www.devondoughnut.org> ;
+    dct:relation tgs:Initiative.DevonDoughnutProject ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

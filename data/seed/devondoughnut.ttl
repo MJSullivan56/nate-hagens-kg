@@ -1,0 +1,326 @@
+@prefix thinkr: <http://example.org/thinkr#> .
+@prefix tgs: <http://example.org/tgs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#############################################
+# ADDED 2026-10-21 -- the Devon Doughnut (tgs:ConceptScheme.DevonDoughnut), at
+# MJSullivan's request, approved from review sheets 1 and 6b. The 22 domains
+# of the Bioregional Learning Centre's Devon Doughnut (2021), a doughnut
+# drawn for a bioregion rather than a nation or city: 10 ecological-ceiling
+# domains (5 'human action', 5 'condition') and 12 social-foundation domains.
+# LICENSING: the source compilation is CC BY-NC-SA 4.0 and marked not for
+# reuse elsewhere, so this file carries only domain names, Devon's one-word
+# framing for each, and Claude's own paraphrased definitions, with a link
+# back to devondoughnut.org. No indicator, measure or pathway text is copied.
+# Each domain links to the intervention subdomain(s) it belongs to by
+# skos:relatedMatch, which is how it reaches a front in the WWNS matrix.
+#############################################
+
+thinkr:DevonDoughnutDomain a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:comment "One of the domains of the Devon Doughnut, a bioregional doughnut for South Devon, UK, or one of its grouping nodes (the two halves and the two ecological-ceiling subgroups). Kept separate from thinkr:IndicatorCategory, which models the California Doughnut's 21 categories."@en ;
+    skos:prefLabel "Devon Doughnut Domain"@en .
+
+tgs:ConceptScheme.DevonDoughnut a skos:ConceptScheme, owl:NamedIndividual ;
+    skos:prefLabel "Devon Doughnut"@en ;
+    skos:definition "The Devon Doughnut's 22 domains: Doughnut Economics drawn for a bioregion (South Devon, UK) by the Bioregional Learning Centre, with measures for both citizens and policy makers and example pathways for action in every domain."@en ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    dcterms:creator tgs:Organization.BioregionalLearningCentreSouthDevon ;
+    dcterms:relation tgs:Initiative.DevonDoughnutProject ;
+    rdfs:seeAlso <https://www.devondoughnut.org> ;
+    skos:hasTopConcept tgs:DevonDoughnutDomain.EcologicalCeiling, tgs:DevonDoughnutDomain.SocialFoundation ;
+    .
+
+tgs:DevonDoughnutDomain.EcologicalCeiling a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:topConceptOf tgs:ConceptScheme.DevonDoughnut ;
+    skos:prefLabel "Ecological Ceiling (Devon)"@en ;
+    skos:definition "The Devon Doughnut's outer ring, split into domains of human action (pressures people can change) and domains of condition (the state of Devon's land, water and life)."@en ;
+    skos:closeMatch tgs:DoughnutHalf.EcologicalCeiling ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    .
+
+tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling ;
+    skos:prefLabel "Human Action (Devon ecological ceiling)"@en ;
+    skos:definition "Grouping node: the five ceiling domains measured by commitments and behaviour that put pressure on the living world."@en ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    .
+
+tgs:DevonDoughnutDomain.EcologicalCeiling_Condition a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling ;
+    skos:prefLabel "Condition (Devon ecological ceiling)"@en ;
+    skos:definition "Grouping node: the five ceiling domains measured by the health of Devon's coast, rivers, habitats, soil and wildlife."@en ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    .
+
+tgs:DevonDoughnutDomain.SocialFoundation a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:topConceptOf tgs:ConceptScheme.DevonDoughnut ;
+    skos:prefLabel "Social Foundation (Devon)"@en ;
+    skos:definition "The Devon Doughnut's inner ring: twelve domains of human wellbeing."@en ;
+    skos:closeMatch tgs:DoughnutHalf.SocialFoundation ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    .
+
+tgs:DevonDoughnutDomain.GreenhouseGasEmissions a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction ;
+    skos:prefLabel "Greenhouse Gas Emissions"@en ;
+    skos:definition "How widely Devon sectors, groups and individuals have committed to reaching net-zero emissions; tracked through low-carbon travel choices and published net-zero plans."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Shifting the culture'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems, tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.FinanceAndCreditRedesign ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm); Transportation and Logistics (probable); Finance and Credit Redesign (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.PlasticPollution a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction ;
+    skos:prefLabel "Plastic Pollution"@en ;
+    skos:definition "Commitment across Devon to cutting plastic pollution, from teaching the 5 Rs in schools to shops dropping single-use plastics."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Rejecting'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Plastic and Chemical Hazards (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.LandUse a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction ;
+    skos:prefLabel "Land Use"@en ;
+    skos:definition "Commitment to managing land for nature: keeping ground permeable, limiting farmland loss to development, and clustering woodland for connected ecosystems."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Diversifying'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.LandAndHousingReform, tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Land and Housing Reform (probable); Biodiversity Defense and Corridor Creation (probable); Subsidiarity and Local Governance Capacity (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Waste a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction ;
+    skos:prefLabel "Waste"@en ;
+    skos:definition "Commitment to tackling waste, especially composting organics back to the land and reducing household waste sent to landfill or incineration."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Interrupting the cycle of harm'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (probable); Plastic and Chemical Hazards (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.AirQuality a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction ;
+    skos:prefLabel "Air Quality"@en ;
+    skos:definition "Commitment to cleaner air, chiefly by shifting car journeys to public transport and making pollution readings publicly visible."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Making it visible'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.TransportationAndLogistics, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Transportation and Logistics (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.CoastAndMarineHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
+    skos:prefLabel "Coast & Marine Health"@en ;
+    skos:definition "Share of Devon seabed managed for ecosystem health, biodiversity and local fishing livelihoods, including protected no-fishing areas and community-supported fisheries."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Protecting'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.FoodAndWaterSystems ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Food and Water Systems (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.WaterbodyHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
+    skos:prefLabel "Waterbody Health"@en ;
+    skos:definition "Share of Devon freshwater managed for health and biodiversity, with citizens monitoring rivers and polluters reporting incidents."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Reporting'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.HabitatHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
+    skos:prefLabel "Habitat Health"@en ;
+    skos:definition "Share of land managed for habitat health, with hedgerows and verges managed as wildlife corridors joined into a recovery network."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Connecting up'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.SoilHealth a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
+    skos:prefLabel "Soil Health"@en ;
+    skos:definition "Share of land managed for soil health; regenerative farming and school citizen-science measures of soil microorganisms."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Micro-organisms'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.SoilAndWaterRegeneration, tgs:InterventionSubdomain.PlasticAndChemicalHazards ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Soil, Land, and Water Regeneration (firm); Plastic and Chemical Hazards (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Biodiversity a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.EcologicalCeiling_Condition ;
+    skos:prefLabel "Biodiversity"@en ;
+    skos:definition "Share of land managed for biodiversity gain; chemical-free gardens, rewilded verges and field edges, and farmland managed for wildlife."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.BiodiversityDefense, tgs:InterventionSubdomain.NonClimatePlanetaryBoundaries ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Biodiversity Defense and Corridor Creation (firm); Non-Climate Planetary Boundaries (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Water a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Water"@en ;
+    skos:definition "How easily residents can get information on Devon water quality and quantity; household metering and community water monitoring."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Understanding'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.TrustAndInformationCommons ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Trust Rebuilding and the Information Commons (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Food a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Food"@en ;
+    skos:definition "How often producers and consumers in the region are directly connected; local sourcing by households, shops, schools and anchor institutions."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Re-connecting'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.FoodAndWaterSystems, tgs:InterventionSubdomain.LocalExchangeSystems ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Food and Water Systems (firm); Local and Regional Exchange Systems (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.AccessToNature a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Access to Nature"@en ;
+    skos:definition "How often people, especially young people, get guided time in nature, including nature prescribed for health."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Opening doors'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.ReconnectionToPlace ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Reconnection to Place and Ecology (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.HealthAndWellbeing a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Health & Wellbeing"@en ;
+    skos:definition "Availability of open-ended, low-cost mental health support, including social prescribing (arts, sport, gardening)."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Responding'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.CareEconomy, tgs:InterventionSubdomain.MedicalSupplyChains ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: The Care Economy (probable); Medical and Pharmaceutical Supply Chains (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Education a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Education"@en ;
+    skos:definition "Whether people feel equipped to tackle current problems; a more relevant, problem-solving curriculum."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Making it practical'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.EducationRedesign ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Education Redesign (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.IncomeAndWork a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Income & Work"@en ;
+    skos:definition "Share of people employed on a living wage; local careers and investment in green enterprise and skills."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Catching up'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.SkillsForContractingEconomy, tgs:InterventionSubdomain.CommonsBasedOwnership ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Skills and Livelihoods for a Contracting Economy (firm); Cooperative and Commons-Based Ownership (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.PoliticalVoice a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Political Voice"@en ;
+    skos:definition "Whether people feel heard when they speak up; youth involvement in local decisions and participatory budgeting."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Listening'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.DeliberativeDemocracy, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Deliberative and Participatory Democracy (firm); Subsidiarity and Local Governance Capacity (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Safety a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Safety"@en ;
+    skos:definition "How safe people feel in public and daily life, particularly from harassment and violence; reporting and response."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Responding'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.EquityAndEquality a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Equity & Equality"@en ;
+    skos:definition "Freedom from discrimination; civil-society anti-discrimination work in housing, jobs and education."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Considering everyone'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.DignityInfrastructure, tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Dignity Infrastructure and Mutual Aid (probable); Violence Prevention and Social Cohesion (probable)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.CommunityConnectivity a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Community Connectivity"@en ;
+    skos:definition "Communities building resilience through local networks, digital access, shared spaces and local economic activity."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.ViolencePreventionAndSocialCohesion, tgs:InterventionSubdomain.TrustAndInformationCommons, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance, tgs:InterventionSubdomain.DignityInfrastructure ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Violence Prevention and Social Cohesion (probable); Trust Rebuilding and the Information Commons (probable); Subsidiarity and Local Governance Capacity (possible); Dignity Infrastructure and Mutual Aid (possible)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Housing a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Housing"@en ;
+    skos:definition "Ability of adults, especially young adults, to buy or rent decent affordable housing; pressure from second homes and buy-to-let."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Affording'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.HousingAndBuiltEnvironment, tgs:InterventionSubdomain.LandAndHousingReform ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Housing and Built Environment (firm); Land and Housing Reform (firm)."@en ;
+    .
+
+tgs:DevonDoughnutDomain.Energy a thinkr:DevonDoughnutDomain, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.DevonDoughnut ;
+    skos:broader tgs:DevonDoughnutDomain.SocialFoundation ;
+    skos:prefLabel "Energy"@en ;
+    skos:definition "Share of energy from renewable sources; renewable tariffs, community energy reduction and local storage and grid capacity."@en ;
+    skos:note "Devon's one-word framing for this domain: 'Switching'."@en ;
+    skos:relatedMatch tgs:InterventionSubdomain.EnergySystems ;
+    dcterms:source tgs:Work.DevonDoughnutIndicatorCompilation ;
+    skos:scopeNote "Subdomain links approved from review sheet 6b, with review strength: Energy Systems (firm)."@en ;
+    .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:DevonDoughnutDomain.EcologicalCeiling
+    skos:narrower tgs:DevonDoughnutDomain.EcologicalCeiling_Condition, tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction .
+
+tgs:DevonDoughnutDomain.EcologicalCeiling_Condition
+    skos:narrower tgs:DevonDoughnutDomain.Biodiversity, tgs:DevonDoughnutDomain.CoastAndMarineHealth, tgs:DevonDoughnutDomain.HabitatHealth, tgs:DevonDoughnutDomain.SoilHealth, tgs:DevonDoughnutDomain.WaterbodyHealth .
+
+tgs:DevonDoughnutDomain.EcologicalCeiling_HumanAction
+    skos:narrower tgs:DevonDoughnutDomain.AirQuality, tgs:DevonDoughnutDomain.GreenhouseGasEmissions, tgs:DevonDoughnutDomain.LandUse, tgs:DevonDoughnutDomain.PlasticPollution, tgs:DevonDoughnutDomain.Waste .
+
+tgs:DevonDoughnutDomain.SocialFoundation
+    skos:narrower tgs:DevonDoughnutDomain.AccessToNature, tgs:DevonDoughnutDomain.CommunityConnectivity, tgs:DevonDoughnutDomain.Education, tgs:DevonDoughnutDomain.Energy, tgs:DevonDoughnutDomain.EquityAndEquality, tgs:DevonDoughnutDomain.Food, tgs:DevonDoughnutDomain.HealthAndWellbeing, tgs:DevonDoughnutDomain.Housing, tgs:DevonDoughnutDomain.IncomeAndWork, tgs:DevonDoughnutDomain.PoliticalVoice, tgs:DevonDoughnutDomain.Safety, tgs:DevonDoughnutDomain.Water .
+# ===== END DERIVED INVERSES =====

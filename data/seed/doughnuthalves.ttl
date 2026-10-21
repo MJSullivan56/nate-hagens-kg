@@ -54,8 +54,10 @@ tgs:ConceptScheme.CaliforniaDoughnutIndicators a skos:ConceptScheme, owl:NamedIn
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
 
 tgs:DoughnutHalf.EcologicalCeiling
+    skos:closeMatch tgs:DevonDoughnutDomain.EcologicalCeiling ;
     skos:narrower tgs:IndicatorCategory.AirPollution, tgs:IndicatorCategory.BiodiversityLoss, tgs:IndicatorCategory.ChemicalPollution, tgs:IndicatorCategory.ClimateChange, tgs:IndicatorCategory.FreshwaterUse, tgs:IndicatorCategory.LandUseChange, tgs:IndicatorCategory.NitrogenAndPhosphorus, tgs:IndicatorCategory.OceanAcidification, tgs:IndicatorCategory.OzoneDepletion .
 
 tgs:DoughnutHalf.SocialFoundation
+    skos:closeMatch tgs:DevonDoughnutDomain.SocialFoundation ;
     skos:narrower tgs:IndicatorCategory.ConnectivityAndTransportation, tgs:IndicatorCategory.Education, tgs:IndicatorCategory.Energy, tgs:IndicatorCategory.Equity, tgs:IndicatorCategory.Food, tgs:IndicatorCategory.Health, tgs:IndicatorCategory.Housing, tgs:IndicatorCategory.IncomeAndWork, tgs:IndicatorCategory.PeaceAndJustice, tgs:IndicatorCategory.PoliticalVoice, tgs:IndicatorCategory.SocialCohesion, tgs:IndicatorCategory.WaterAndSanitation .
 # ===== END DERIVED INVERSES =====
