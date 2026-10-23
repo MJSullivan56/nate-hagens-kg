@@ -53,3 +53,20 @@ tgs:ScenarioDimension.EarthSystems a thinkr:ScenarioDimension, owl:NamedIndividu
     thinkr:yAxisLowLabel "High Climate Stress"@en ; thinkr:yAxisHighLabel "Moderate Climate Stress"@en ;
     skos:scopeNote "Axis labels confirmed directly from MJSullivan's own original screenshot of this framework's visual grid (Image 2, shared at the very start of this whole project) — the highest-confidence of the 4 Dimensions' axis assignments, sourced from the primary visual itself rather than inferred from prose."@en ;
     skos:definition "The state of the biosphere/climate. Per Part 4, Hagens treats this Dimension as structurally different from the other 3: humanity isn't starting from a neutral baseline (real ecological damage is already locked in), and severe Earth-system stress constrains what's achievable on every other Dimension rather than being just one more independent variable."@en .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:ScenarioDimension.EarthSystems
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioDimension.Economic
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioDimension.Geopolitical
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioDimension.PowerAndDistribution
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+# ===== END DERIVED INVERSES =====

@@ -246,7 +246,7 @@ tgs:IndicatorCategory.BiodiversityLoss
     skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth, tgs:DevonDoughnutDomain.HabitatHealth .
 
 tgs:IndicatorCategory.ChemicalPollution
-    skos:narrower tgs:Indicator.Landfill, tgs:Indicator.ToxicReleases ;
+    skos:narrower tgs:Indicator.ToxicChemicalsReleased, tgs:Indicator.ToxicPesticidesApplied ;
     skos:relatedMatch tgs:DevonDoughnutDomain.PlasticPollution, tgs:DevonDoughnutDomain.SoilHealth, tgs:DevonDoughnutDomain.Waste .
 
 tgs:IndicatorCategory.ClimateChange
@@ -274,7 +274,7 @@ tgs:IndicatorCategory.Food
     skos:narrower tgs:Indicator.FoodInsecurity, tgs:Indicator.VegetablesPerDay .
 
 tgs:IndicatorCategory.FreshwaterUse
-    skos:narrower tgs:Indicator.GroundWater, tgs:Indicator.WaterFootprint ;
+    skos:narrower tgs:Indicator.Groundwater, tgs:Indicator.WaterFootprint ;
     skos:relatedMatch tgs:DevonDoughnutDomain.WaterbodyHealth .
 
 tgs:IndicatorCategory.Health
@@ -299,7 +299,7 @@ tgs:IndicatorCategory.NitrogenAndPhosphorus
     skos:relatedMatch tgs:DevonDoughnutDomain.SoilHealth, tgs:DevonDoughnutDomain.WaterbodyHealth .
 
 tgs:IndicatorCategory.OceanAcidification
-    skos:narrower tgs:Indicator.OceanPH, tgs:Indicator.SO2EqFootprint ;
+    skos:narrower tgs:Indicator.AcidificationPotential, tgs:Indicator.OceanPH ;
     skos:relatedMatch tgs:DevonDoughnutDomain.CoastAndMarineHealth .
 
 tgs:IndicatorCategory.OzoneDepletion

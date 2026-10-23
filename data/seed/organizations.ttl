@@ -869,6 +869,13 @@ tgs:Organization.CentreForScienceAndEnvironment a thinkr:Organization, owl:Named
     dcterms:source <https://www.cseindia.org/> ;
     .
 
+tgs:Organization.CaliforniaDoughnutEconomicsCoalition a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "California Doughnut Economics Coalition"@en ;
+    skos:altLabel "CalDEC"@en ;
+    skos:definition "Coalition applying Kate Raworth's Doughnut Economics to California; publisher of The California Doughnut Snapshot and Report (2025), which measures the state against 42 social and ecological indicators. It gave MJSullivan permission on 2026-10-23 to use the report's data in Oikos Rising, with citation."@en ;
+    dcterms:source <https://caldec.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

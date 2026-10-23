@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix tgs: <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 
@@ -27,6 +28,18 @@ thinkr:Indicator a owl:Class ;
     rdfs:comment "One of the 42 specific, named metrics within the Doughnut Economics model (e.g. Water Quality, Greenhouse Gas Emissions), each belonging to one thinkr:IndicatorCategory."@en ;
     skos:prefLabel "Doughnut Indicator"@en .
 
+thinkr:shortfallPercent a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "shortfall percent"@en ;
+    skos:definition "How far a social-foundation indicator falls short of its threshold, as a percentage, as reported in the indicator's source (dcterms:source)."@en .
+
+thinkr:overshootPercent a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "overshoot percent"@en ;
+    skos:definition "How far an ecological-ceiling indicator exceeds its boundary, as a percentage, as reported in the indicator's source (dcterms:source); 0 means within the boundary."@en .
+
 #############################################
 # Water & Sanitation
 #############################################
@@ -37,7 +50,9 @@ tgs:Indicator.WaterQuality a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Water Quality"@en ;
-    skos:definition "The safety and cleanliness of public drinking water supplies, screening for toxic contaminants or pollutants."@en .
+    skos:definition "Share of people served by water systems that do not meet quality standards."@en ;
+    thinkr:shortfallPercent "2.2"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The safety and cleanliness of public drinking water supplies, screening for toxic contaminants or pollutants.'"@en .
 
 tgs:Indicator.SanitationAccess a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -45,7 +60,9 @@ tgs:Indicator.SanitationAccess a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Sanitation Access"@en ;
-    skos:definition "The availability of clean, functional sewage and wastewater infrastructure across communities."@en .
+    skos:definition "Share of people lacking basic sanitation."@en ;
+    thinkr:shortfallPercent "0.6"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The availability of clean, functional sewage and wastewater infrastructure across communities.'"@en .
 
 #############################################
 # Energy
@@ -57,7 +74,9 @@ tgs:Indicator.EnergyBurden a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Burden"@en ;
-    skos:definition "The percentage of household income spent strictly on electric, gas, and heating utility bills."@en .
+    skos:definition "Share of households whose energy bill is 10% or more of income."@en ;
+    thinkr:shortfallPercent "20"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of household income spent strictly on electric, gas, and heating utility bills.'"@en .
 
 tgs:Indicator.EnergyReliability a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -65,7 +84,9 @@ tgs:Indicator.EnergyReliability a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Reliability"@en ;
-    skos:definition "The frequency and duration of power outages or grid blackouts impacting residents."@en .
+    skos:definition "Share of the population in counties averaging six or more hours of power outage a year."@en ;
+    thinkr:shortfallPercent "7"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The frequency and duration of power outages or grid blackouts impacting residents.'"@en .
 
 #############################################
 # Connectivity & Transportation
@@ -77,7 +98,9 @@ tgs:Indicator.InternetAccess a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Internet Access"@en ;
-    skos:definition "The percentage of households with reliable, high-speed broadband connections."@en .
+    skos:definition "Share of households with no internet subscription, or a cellphone plan only."@en ;
+    thinkr:shortfallPercent "17"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of households with reliable, high-speed broadband connections.'"@en .
 
 tgs:Indicator.TransitReportCard a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -85,7 +108,9 @@ tgs:Indicator.TransitReportCard a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Transit Report Card"@en ;
-    skos:definition "A qualitative and structural evaluation of public transportation efficiency, coverage, and scheduling."@en .
+    skos:definition "Report-card scores for vehicle miles traveled and transit access."@en ;
+    thinkr:shortfallPercent "40"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A qualitative and structural evaluation of public transportation efficiency, coverage, and scheduling.'"@en .
 
 #############################################
 # Housing
@@ -97,7 +122,9 @@ tgs:Indicator.Homelessness a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Homelessness"@en ;
-    skos:definition "The per-capita rate of individuals experiencing unhoused or transient living situations."@en .
+    skos:definition "Point-in-time count of unhoused people, scaled to a shortfall."@en ;
+    thinkr:shortfallPercent "36"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The per-capita rate of individuals experiencing unhoused or transient living situations.'"@en .
 
 tgs:Indicator.HousingBurden a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -105,7 +132,9 @@ tgs:Indicator.HousingBurden a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Housing Burden"@en ;
-    skos:definition "The proportion of households spending more than 30% to 50% of their gross income on rent or mortgage payments."@en .
+    skos:definition "Share of renters paying more than 30% of income on housing."@en ;
+    thinkr:shortfallPercent "55"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of households spending more than 30% to 50% of their gross income on rent or mortgage payments.'"@en .
 
 #############################################
 # Equity
@@ -117,7 +146,9 @@ tgs:Indicator.GenderPayGap a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Gender Pay Gap"@en ;
-    skos:definition "The statistical difference in median earnings between men and women performing comparable work."@en .
+    skos:definition "Percentage difference in median full-time wages between women and men."@en ;
+    thinkr:shortfallPercent "13"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The statistical difference in median earnings between men and women performing comparable work.'"@en .
 
 tgs:Indicator.RacialEquityIndex a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -125,7 +156,9 @@ tgs:Indicator.RacialEquityIndex a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Racial Equity Index"@en ;
-    skos:definition "A multi-factor metric tracking institutional disparities in wealth, justice, and health across racial groups."@en .
+    skos:definition "Inclusion score on racial gaps in economic vitality, readiness and connectedness."@en ;
+    thinkr:shortfallPercent "40"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A multi-factor metric tracking institutional disparities in wealth, justice, and health across racial groups.'"@en .
 
 #############################################
 # Social Cohesion
@@ -137,7 +170,9 @@ tgs:Indicator.IncomeInequality a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Income Inequality"@en ;
-    skos:definition "The structural gap in distribution between the highest and lowest economic earning brackets (e.g. Gini Coefficient)."@en .
+    skos:definition "Share of people living in counties with a Gini index above 0.30."@en ;
+    thinkr:shortfallPercent "100"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The structural gap in distribution between the highest and lowest economic earning brackets (e.g. Gini Coefficient).'"@en .
 
 tgs:Indicator.ReportNotHappy a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -145,8 +180,9 @@ tgs:Indicator.ReportNotHappy a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Report Not Happy"@en ;
-    skos:definition "The percentage of surveyed residents reporting low baseline life satisfaction or chronic emotional distress."@en ;
-    skos:scopeNote "Name kept exactly as transcribed from the source report despite reading as informal/internal shorthand — see this file's own header note on source-fidelity naming."@en .
+    skos:definition "Share of people reporting they are 'not too happy'."@en ;
+    thinkr:shortfallPercent "26"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of surveyed residents reporting low baseline life satisfaction or chronic emotional distress.'"@en .
 
 #############################################
 # Food
@@ -158,7 +194,9 @@ tgs:Indicator.FoodInsecurity a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Food Insecurity"@en ;
-    skos:definition "The percentage of the population lacking consistent, reliable access to enough affordable, nutritious food."@en .
+    skos:definition "Share of households living with food insecurity."@en ;
+    thinkr:shortfallPercent "11"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the population lacking consistent, reliable access to enough affordable, nutritious food.'"@en .
 
 tgs:Indicator.VegetablesPerDay a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -166,7 +204,9 @@ tgs:Indicator.VegetablesPerDay a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Vegetables Per Day"@en ;
-    skos:definition "The average daily dietary intake of fresh produce per capita, serving as an indicator of public health."@en .
+    skos:definition "Share of adults eating less than one serving of vegetables a day."@en ;
+    thinkr:shortfallPercent "41"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average daily dietary intake of fresh produce per capita, serving as an indicator of public health.'"@en .
 
 #############################################
 # Health
@@ -178,7 +218,9 @@ tgs:Indicator.LifeExpectancy a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Life Expectancy"@en ;
-    skos:definition "The average number of years a newborn resident is expected to live based on current mortality rates."@en .
+    skos:definition "Share of the population living in counties with life expectancy below the OECD average (80.9 years)."@en ;
+    thinkr:shortfallPercent "32"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average number of years a newborn resident is expected to live based on current mortality rates.'"@en .
 
 tgs:Indicator.HealthcareAffordability a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -186,7 +228,9 @@ tgs:Indicator.HealthcareAffordability a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Healthcare Affordability"@en ;
-    skos:definition "The rate at which individuals delay or skip necessary medical care due to high out-of-pocket costs."@en .
+    skos:definition "Share of adults who delayed, skipped or reduced care because of cost."@en ;
+    thinkr:shortfallPercent "53"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate at which individuals delay or skip necessary medical care due to high out-of-pocket costs.'"@en .
 
 #############################################
 # Education
@@ -198,7 +242,9 @@ tgs:Indicator.LiteracyRate a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Literacy Rate"@en ;
-    skos:definition "The percentage of the adult population demonstrating functional reading and writing capabilities."@en .
+    skos:definition "Share of people aged 16 to 74 at or below literacy Level 1."@en ;
+    thinkr:shortfallPercent "28"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the adult population demonstrating functional reading and writing capabilities.'"@en .
 
 tgs:Indicator.StudentLoanDebt a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -206,7 +252,9 @@ tgs:Indicator.StudentLoanDebt a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Student Loan Debt"@en ;
-    skos:definition "The average volume of outstanding educational debt carried by individuals."@en .
+    skos:definition "Share of college graduates with student loan debt."@en ;
+    thinkr:shortfallPercent "46"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average volume of outstanding educational debt carried by individuals.'"@en .
 
 #############################################
 # Income & Work
@@ -218,15 +266,20 @@ tgs:Indicator.Poverty a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
     skos:prefLabel "Poverty"@en ;
-    skos:definition "The percentage of residents living below the state or federal minimum economic self-sufficiency standard."@en .
+    skos:definition "Share of people in poverty by the Supplemental Poverty Measure."@en ;
+    thinkr:shortfallPercent "15"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of residents living below the state or federal minimum economic self-sufficiency standard.'"@en .
 
 tgs:Indicator.Unemployment a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.IncomeAndWork ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
-    skos:prefLabel "Unemployment"@en ;
-    skos:definition "The share of the active labor force that is without work but actively seeking a job."@en .
+    skos:prefLabel "Unemployment (U-6)"@en ;
+    skos:altLabel "Unemployment"@en ;
+    skos:definition "Share unemployed, including those working part-time for economic reasons (the U-6 measure)."@en ;
+    thinkr:shortfallPercent "9"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The share of the active labor force that is without work but actively seeking a job.'"@en .
 
 #############################################
 # Peace & Justice
@@ -238,7 +291,9 @@ tgs:Indicator.ViolentCrime a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Violent Crime"@en ;
-    skos:definition "The rate of homicide, assault, robbery, and sexual offenses committed per capita."@en .
+    skos:definition "Share of people living in counties with more than 200 violent crimes per 100,000 residents."@en ;
+    thinkr:shortfallPercent "100"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate of homicide, assault, robbery, and sexual offenses committed per capita.'"@en .
 
 tgs:Indicator.PoliceScorecard a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -246,7 +301,9 @@ tgs:Indicator.PoliceScorecard a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Police Scorecard"@en ;
-    skos:definition "An index evaluating law enforcement agencies on use of force, racial disparities, and institutional accountability."@en .
+    skos:definition "Averaged score for police funding, accountability, violence and approach."@en ;
+    thinkr:shortfallPercent "65"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'An index evaluating law enforcement agencies on use of force, racial disparities, and institutional accountability.'"@en .
 
 #############################################
 # Political Voice
@@ -258,7 +315,9 @@ tgs:Indicator.VoterTurnout a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Voter Turnout"@en ;
-    skos:definition "The percentage of eligible voters who cast a ballot during major election cycles."@en .
+    skos:definition "Share of eligible voters who did not vote in 2020."@en ;
+    thinkr:shortfallPercent "40"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of eligible voters who cast a ballot during major election cycles.'"@en .
 
 tgs:Indicator.RegisteredVoters a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -266,7 +325,9 @@ tgs:Indicator.RegisteredVoters a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Registered Voters"@en ;
-    skos:definition "The proportion of eligible citizens officially signed up to participate in the democratic voting process."@en .
+    skos:definition "Share of eligible voters who are not registered."@en ;
+    thinkr:shortfallPercent "16"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of eligible citizens officially signed up to participate in the democratic voting process.'"@en .
 
 #############################################
 # Nitrogen & Phosphorus
@@ -278,7 +339,9 @@ tgs:Indicator.EutrophicationPotential a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Eutrophication Potential"@en ;
-    skos:definition "The risk of severe oxygen depletion in water bodies caused by nutrient enrichment (algal blooms)."@en .
+    skos:definition "Eutrophication potential footprint per capita."@en ;
+    thinkr:overshootPercent "657"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The risk of severe oxygen depletion in water bodies caused by nutrient enrichment (algal blooms).'"@en .
 
 tgs:Indicator.NitrogenLeached a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -286,7 +349,9 @@ tgs:Indicator.NitrogenLeached a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Nitrogen Leached"@en ;
-    skos:definition "The volume of excess agricultural nitrogen escaping into underground aquifers and surface waters."@en .
+    skos:definition "Nitrogen leached to groundwater per year."@en ;
+    thinkr:overshootPercent "209"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of excess agricultural nitrogen escaping into underground aquifers and surface waters.'"@en .
 
 #############################################
 # Ozone Depletion
@@ -298,7 +363,9 @@ tgs:Indicator.OzoneDepletingSubstances a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone-Depleting Substances"@en ;
-    skos:definition "The volume of regulated synthetic industrial chemicals (like CFCs) released into the air."@en .
+    skos:definition "Compliance with the Montreal Protocol."@en ;
+    thinkr:overshootPercent "0"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of regulated synthetic industrial chemicals (like CFCs) released into the air.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling."@en .
 
 tgs:Indicator.OzoneLayer a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -306,7 +373,9 @@ tgs:Indicator.OzoneLayer a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone Layer"@en ;
-    skos:definition "The density and health of stratospheric ozone, which filters out cancer-causing ultraviolet (UV) rays."@en .
+    skos:definition "Ozone layer thickness against the global average minimum thickness threshold."@en ;
+    thinkr:overshootPercent "0"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The density and health of stratospheric ozone, which filters out cancer-causing ultraviolet (UV) rays.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling."@en .
 
 #############################################
 # Biodiversity Loss
@@ -318,7 +387,9 @@ tgs:Indicator.UnprotectedArea a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "Unprotected Area"@en ;
-    skos:definition "The percentage of ecologically critical habitats lacking legal conservation safeguards against development."@en .
+    skos:definition "Share of land and sea area that is unprotected."@en ;
+    thinkr:overshootPercent "59"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The percentage of ecologically critical habitats lacking legal conservation safeguards against development.'"@en .
 
 tgs:Indicator.AtRiskSpecies a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -326,7 +397,9 @@ tgs:Indicator.AtRiskSpecies a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "At-Risk Species"@en ;
-    skos:definition "The count or proportion of native plant and animal species classified as threatened, endangered, or vulnerable."@en .
+    skos:definition "Share of animal and plant species at risk of extinction."@en ;
+    thinkr:overshootPercent "947"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The count or proportion of native plant and animal species classified as threatened, endangered, or vulnerable.'"@en .
 
 #############################################
 # Land-Use Change
@@ -338,7 +411,9 @@ tgs:Indicator.ForestCover a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Forest Cover"@en ;
-    skos:definition "The total land area blanketed by natural, undisturbed tree canopies."@en .
+    skos:definition "Share of land without forest cover, against a boundary of 75% of preindustrial cover."@en ;
+    thinkr:overshootPercent "28"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total land area blanketed by natural, undisturbed tree canopies.'"@en .
 
 tgs:Indicator.EcologicalFootprint a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -346,19 +421,24 @@ tgs:Indicator.EcologicalFootprint a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Ecological Footprint"@en ;
-    skos:definition "A measure of how much biologically productive land and water an economy requires to produce its consumed resources."@en .
+    skos:definition "Consumption-based ecological footprint in global hectares per capita."@en ;
+    thinkr:overshootPercent "351"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of how much biologically productive land and water an economy requires to produce its consumed resources.'"@en .
 
 #############################################
 # Freshwater Use
 #############################################
 
-tgs:Indicator.GroundWater a thinkr:Indicator, owl:NamedIndividual ;
+tgs:Indicator.Groundwater a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.FreshwaterUse ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
-    skos:prefLabel "Ground Water"@en ;
-    skos:definition "The extraction rate versus the recharge rate of underground aquifers."@en .
+    skos:prefLabel "Groundwater"@en ;
+    skos:altLabel "Ground Water"@en ;
+    skos:definition "Share of groundwater pumped from critically overdrafted basins."@en ;
+    thinkr:overshootPercent "63"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The extraction rate versus the recharge rate of underground aquifers.' Formerly tgs:Indicator.GroundWater."@en .
 
 tgs:Indicator.WaterFootprint a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -366,7 +446,9 @@ tgs:Indicator.WaterFootprint a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
     skos:prefLabel "Water Footprint"@en ;
-    skos:definition "The total volume of freshwater consumed directly and indirectly to manufacture goods and sustain consumer lifestyles."@en .
+    skos:definition "Blue water footprint per capita."@en ;
+    thinkr:overshootPercent "76"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total volume of freshwater consumed directly and indirectly to manufacture goods and sustain consumer lifestyles.'"@en .
 
 #############################################
 # Climate Change
@@ -378,7 +460,9 @@ tgs:Indicator.GreenhouseGasEmissions a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Greenhouse Gas Emissions"@en ;
-    skos:definition "The net volume of carbon dioxide, methane, and related gases released by human activity."@en .
+    skos:definition "Consumption-based greenhouse gas footprint per capita."@en ;
+    thinkr:overshootPercent "1890"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The net volume of carbon dioxide, methane, and related gases released by human activity.'"@en .
 
 tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -386,7 +470,9 @@ tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Non-Renewable Electricity"@en ;
-    skos:definition "The share of power generated using fossil fuels (coal, natural gas) relative to clean alternatives."@en .
+    skos:definition "Share of electricity not generated from solar, wind or geothermal."@en ;
+    thinkr:overshootPercent "62"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The share of power generated using fossil fuels (coal, natural gas) relative to clean alternatives.'"@en .
 
 #############################################
 # Ocean Acidification
@@ -398,35 +484,45 @@ tgs:Indicator.OceanPH a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
     skos:prefLabel "Ocean pH"@en ;
-    skos:definition "The declining scale of marine water alkalinity, which threatens shell-building organisms and coral reefs."@en .
+    skos:definition "Change in ocean pH compared with preindustrial levels."@en ;
+    thinkr:overshootPercent "91"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The declining scale of marine water alkalinity, which threatens shell-building organisms and coral reefs.'"@en .
 
-tgs:Indicator.SO2EqFootprint a thinkr:Indicator, owl:NamedIndividual ;
+tgs:Indicator.AcidificationPotential a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.OceanAcidification ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
-    skos:prefLabel "SO2-Eq Footprint"@en ;
-    skos:definition "A measure of sulfur dioxide equivalents released, tracking regional acidification risks in aquatic systems."@en .
+    skos:prefLabel "Acidification Potential"@en ;
+    skos:altLabel "SO2-Eq Footprint"@en ;
+    skos:definition "Acidification potential: SO2-equivalent footprint per capita."@en ;
+    thinkr:overshootPercent "520"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of sulfur dioxide equivalents released, tracking regional acidification risks in aquatic systems.' Formerly tgs:Indicator.SO2EqFootprint."@en .
 
 #############################################
 # Chemical Pollution
 #############################################
 
-tgs:Indicator.Landfill a thinkr:Indicator, owl:NamedIndividual ;
+tgs:Indicator.ToxicPesticidesApplied a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ChemicalPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
-    skos:prefLabel "Landfill"@en ;
-    skos:definition "The physical volume of solid municipal and industrial waste dumped into land disposal sites."@en .
+    skos:prefLabel "Toxic Pesticides Applied"@en ;
+    skos:definition "Share of high-risk toxins among the pesticides applied each year."@en ;
+    thinkr:overshootPercent "65"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The physical volume of solid municipal and industrial waste dumped into land disposal sites.' The report's page 11 lists this category's indicators as Landfill and Toxic Releases, but page 12 charts Toxic Pesticides Applied and Toxic Chemicals Released and carries their values; the graph follows page 12. This node was formerly tgs:Indicator.Landfill, minted from the page-11 list; Landfill is a different measure and is not kept as a label."@en .
 
-tgs:Indicator.ToxicReleases a thinkr:Indicator, owl:NamedIndividual ;
+tgs:Indicator.ToxicChemicalsReleased a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ChemicalPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
-    skos:prefLabel "Toxic Releases"@en ;
-    skos:definition "The mass of hazardous chemical compounds leaked into local soil, air, and waterways by industrial facilities."@en .
+    skos:prefLabel "Toxic Chemicals Released"@en ;
+    skos:altLabel "Toxic Releases"@en ;
+    skos:definition "Share of toxic chemicals released out of those produced each year."@en ;
+    thinkr:overshootPercent "13"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The mass of hazardous chemical compounds leaked into local soil, air, and waterways by industrial facilities.' Page 11 of the report calls it Toxic Releases; page 12, which carries the value, calls it Toxic Chemicals Released. Formerly tgs:Indicator.ToxicReleases."@en .
 
 #############################################
 # Air Pollution
@@ -437,8 +533,11 @@ tgs:Indicator.O3Pollution a thinkr:Indicator, owl:NamedIndividual ;
     skos:broader tgs:IndicatorCategory.AirPollution ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
-    skos:prefLabel "O3 (Ozone) Pollution"@en ;
-    skos:definition "Ground-level smog concentration, which acts as a respiratory irritant formed by vehicular and industrial emissions."@en .
+    skos:prefLabel "O3 Pollution"@en ;
+    skos:altLabel "O3 (Ozone) Pollution"@en ;
+    skos:definition "Share of air basins violating the 0.070 ppm ozone standard."@en ;
+    thinkr:overshootPercent "60"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Ground-level smog concentration, which acts as a respiratory irritant formed by vehicular and industrial emissions.'"@en .
 
 tgs:Indicator.ParticulateMatter a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
@@ -446,4 +545,6 @@ tgs:Indicator.ParticulateMatter a thinkr:Indicator, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
     skos:prefLabel "Particulate Matter"@en ;
-    skos:definition "Fine inhalable solids or droplets suspended in air (PM2.5 and PM10), originating from wildfire smoke, dust, and combustion."@en .
+    skos:definition "Share of air basins above 9 micrograms per cubic metre of PM2.5."@en ;
+    thinkr:overshootPercent "60"^^xsd:decimal ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Fine inhalable solids or droplets suspended in air (PM2.5 and PM10), originating from wildfire smoke, dust, and combustion.'"@en .

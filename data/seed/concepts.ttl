@@ -5952,6 +5952,9 @@ tgs:Concept.AggregateProbability
 tgs:Concept.AllostaticLoad
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
 
+tgs:Concept.Bioregion
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
 tgs:Concept.CarbonBudgetInequity
     skos:related tgs:Concept.EnvironmentAsDevelopment .
 
@@ -6038,7 +6041,7 @@ tgs:Concept.GiftEconomy
     skos:related tgs:Concept.HonorableHarvest .
 
 tgs:Concept.GreatSimplification
-    dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization ;
+    dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization, tgs:Work.OikosRising ;
     skos:relatedMatch tgs:Concept.CollapseResponseContinuum .
 
 tgs:Concept.GrowthImperative
@@ -6121,6 +6124,7 @@ tgs:Concept.Metacrisis
     skos:related tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.Polycrisis .
 
 tgs:Concept.MultipolarTrap
+    dcterms:isReferencedBy tgs:Work.OikosRising ;
     skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory .
 
 tgs:Concept.MusicalChairsMoment
@@ -6241,6 +6245,9 @@ tgs:Concept.TheoryOfChange
 
 tgs:Concept.ThingsOfValueThroughTheBottlenecks
     skos:related tgs:Concept.SevenFiresProphecy .
+
+tgs:Concept.ThirdAttractor
+    dcterms:isReferencedBy tgs:Work.OikosRising .
 
 tgs:Concept.ThreeByThreeResponseGrid
     skos:related tgs:Concept.SolutionSpaceCube .

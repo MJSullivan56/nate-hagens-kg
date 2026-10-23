@@ -233,3 +233,20 @@ tgs:ScenarioFacet.CivicIdeal thinkr:xAxisDivergentFrom tgs:ScenarioFacet.TheStew
 tgs:ScenarioFacet.TheStewardshipDeal thinkr:xAxisDivergentFrom tgs:ScenarioFacet.CivicIdeal .
 tgs:ScenarioFacet.ForcedFeudalism thinkr:yAxisDivergentFrom tgs:ScenarioFacet.TheStewardshipDeal .
 tgs:ScenarioFacet.TheStewardshipDeal thinkr:yAxisDivergentFrom tgs:ScenarioFacet.ForcedFeudalism .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:ScenarioFacet.GreenGrowth
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioFacet.MadMax
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioFacet.Mordor
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:ScenarioFacet.TheGreatSimplification
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+# ===== END DERIVED INVERSES =====

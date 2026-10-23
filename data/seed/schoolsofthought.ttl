@@ -262,7 +262,7 @@ tgs:SchoolOfThought.Cornucopianism
     skos:relatedMatch tgs:Concept.LimitsToGrowth .
 
 tgs:SchoolOfThought.DoughnutEconomics
-    dcterms:isReferencedBy tgs:Interview.TGS_100_NateHagens ;
+    dcterms:isReferencedBy tgs:Interview.TGS_100_NateHagens, tgs:Work.OikosRising ;
     skos:relatedMatch tgs:Concept.Overshoot .
 
 tgs:SchoolOfThought.Ecomodernism

@@ -30,7 +30,10 @@ thinkr:Work a owl:Class ;
 
 tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The California Doughnut Snapshot and Report"@en ;
-    rdfs:comment "Authors: Alaitz Aritza (data manager), Julian Kraus-Polk (editor), California Doughnut Economics Coalition. Published November 6, 2025, v1. Examines 42 social/ecological indicators across 21 categories; finds California overshooting 89% of ecological indicators (average overshoot 286%) while falling short on 100% of social indicators assessed. CC-BY 4.0 licensed — more permissive than most sources in this graph, direct quotation with attribution is explicitly permitted."@en ;
+    rdfs:comment "The California Doughnut Economics Coalition's 95-page report (version 1, published 6 November 2025), by Alaitz Aritza (data manager) and Julian Kraus-Polk (editor), with co-authors Franziska Raedeker, John Lydon, Jamie Chesbrough and Stephanie Luz Cordel; funded in part by the Cisco Foundation. Over 200 indicators were reviewed and 42 chosen, two in each of 21 categories: 24 social indicators in 12 social-foundation categories and 18 ecological indicators in 9 ceiling categories based on the planetary boundaries. Headline findings: 100% of social indicators in shortfall (average 34%) and 89% of ecological indicators in overshoot (average 286%); best social category Water & Sanitation, worst Peace & Justice; only Ozone Depletion within its ceiling, Climate Change the worst. Each indicator's value is recorded in the graph as thinkr:shortfallPercent or thinkr:overshootPercent. On page 11 the Chemical Pollution indicators are named Landfill and Toxic Releases, but page 12 charts Toxic Pesticides Applied and Toxic Chemicals Released; the graph follows page 12. Licensed CC BY 4.0; CalDEC also gave MJSullivan explicit permission on 2026-10-23 to use the data in Oikos Rising (tgs:Work.OikosRising), with citation. Contact: caldec@caldec.org."@en ;
+    dct:bibliographicCitation "Aritza, A., & Kraus-Polk, J. (2025). The California Doughnut Snapshot and Report (Version 1). California Doughnut Economics Coalition. https://zenodo.org/records/17540639. CC BY 4.0."@en ;
+    dct:publisher tgs:Organization.CaliforniaDoughnutEconomicsCoalition ;
+    dct:issued "2025-11-06"^^xsd:date ;
     dct:source <https://zenodo.org/records/17540639> ;
     dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
     .
@@ -3660,6 +3663,22 @@ tgs:Work.TimeInNatureAndWellbeing2019 a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.nature.com/articles/s41598-019-44097-3> ;
     .
 
+tgs:Work.OikosRising a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Oikos Rising"@en ;
+    rdfs:comment "A cooperative online game, designed by Michael J. Sullivan (MJSullivan), about keeping a real bioregion from sliding into Mordor or Mad Max. Players choose a bioregion and the political map laid over it, then steer four archetypes year by year, deciding which area of work each takes on, while Moloch (multipolar traps) and the Leviathan (centralized control) play against them as decks of cards; the goal is to hold The Great Simplification with stewardship for three years in a row. Region health is shown on a doughnut: Devon plays on the Devon Doughnut's 22 domains, with game-assumed starting values; California plays on the California Doughnut's 21 categories, starting from CalDEC's 2025 values compressed onto the game's 0-10 scale (tgs:Work.CaliforniaDoughnutReport2025, used with CalDEC's permission). It uses eight of the nine Phase B archetypes; the Disarmer is supported rather than played. Archetype roles and fit ratings are the designer's own reading of The Great Simplification, and the game is not endorsed by Nate Hagens. Private beta by invitation as of October 2026 (rules version cf480e); a non-commercial project."@en ;
+    dct:creator "Michael J. Sullivan" ;
+    dct:source <http://www.haywood-sullivan.com/oikos/> ;
+    dct:references tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.DevonDoughnutIndicatorCompilation, tgs:Work.WWNSArchetypeMatrix,
+        tgs:SchoolOfThought.DoughnutEconomics, tgs:Concept.Bioregion, tgs:Concept.MultipolarTrap,
+        tgs:Concept.ThirdAttractor, tgs:Concept.GreatSimplification, tgs:ScenarioDimension.Economic,
+        tgs:ScenarioDimension.PowerAndDistribution, tgs:ScenarioDimension.Geopolitical, tgs:ScenarioDimension.EarthSystems,
+        tgs:ScenarioFacet.TheGreatSimplification, tgs:ScenarioFacet.Mordor, tgs:ScenarioFacet.MadMax,
+        tgs:ScenarioFacet.GreenGrowth, tgs:Archetype.Silvertongue, tgs:Archetype.Alchemist,
+        tgs:Archetype.Muse, tgs:Archetype.Effectivist, tgs:Archetype.Barber,
+        tgs:Archetype.Governess, tgs:Archetype.Wellspring, tgs:Archetype.Catalyst,
+        tgs:Archetype.Disarmer ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3712,11 +3731,17 @@ tgs:Work.BrettonWoodsIII
 tgs:Work.BrokenMoney2023
     dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
 
+tgs:Work.CaliforniaDoughnutReport2025
+    dct:isReferencedBy tgs:Work.OikosRising .
+
 tgs:Work.Combining
     dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
 
 tgs:Work.DenialOfDeath
     dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon .
+
+tgs:Work.DevonDoughnutIndicatorCompilation
+    dct:isReferencedBy tgs:Work.OikosRising .
 
 tgs:Work.DieWise
     dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
@@ -3906,6 +3931,9 @@ tgs:Work.Ultrasocial2021
 
 tgs:Work.ValuingTheEarth
     dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .
+
+tgs:Work.WWNSArchetypeMatrix
+    dct:isReferencedBy tgs:Work.OikosRising .
 
 tgs:Work.WakingUp
     dct:isReferencedBy tgs:Interview.TGS_216_SamHarris .

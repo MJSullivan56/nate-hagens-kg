@@ -271,3 +271,35 @@ tgs:Archetype.Matriarch a thinkr:Archetype, owl:NamedIndividual ;
     skos:definition "A real bastion of feminine wisdom — longer-looking and more right-brain-centered than the dominant orientation of current society."@en ;
     thinkr:activeInPhase tgs:ResponsePhase.StableAttractor ;
     .
+
+# ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
+
+# Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Archetype.Alchemist
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Barber
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Catalyst
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Disarmer
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Effectivist
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Governess
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Muse
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Silvertongue
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Archetype.Wellspring
+    dcterms:isReferencedBy tgs:Work.OikosRising .
+# ===== END DERIVED INVERSES =====
