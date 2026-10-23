@@ -41,6 +41,8 @@ tgs:DoughnutHalf.EcologicalCeiling a thinkr:DoughnutHalf, owl:NamedIndividual ;
 
 tgs:ConceptScheme.CaliforniaDoughnutIndicators a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "California Doughnut Indicators"@en ;
+    skos:altLabel "CalDEC Doughnut"@en ;
+    skos:hiddenLabel "CalDEV"@en ;
     skos:definition "The Doughnut's two halves, the 21 indicator categories and 42 indicators of the California Doughnut Snapshot and Report."@en ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
