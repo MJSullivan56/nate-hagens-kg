@@ -3646,12 +3646,29 @@ tgs:Work.TheRiseOfTheNeoLocals a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://csestore.cse.org.in/usd/the-rise-of-the-neo-locals-a-generational-reversal-of-globalization.html> ;
     .
 
+tgs:Work.ActivistBurnoutClimateJusticeAustria a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Activist Burnout Among Climate Justice Activists in Austria"@en ;
+    rdfs:comment "Lord et al., Healthcare 13(16):2045 (2025): a study of burnout among climate justice activists. Listed as an Episode Foundation in the Frankly_163 show notes, for Nate's warning that people working on the metacrisis are 'burning the candle on both ends'."@en ;
+    dct:issued "2025"^^xsd:gYear ;
+    dct:source <https://www.mdpi.com/2227-9032/13/16/2045> ;
+    .
+
+tgs:Work.TimeInNatureAndWellbeing2019 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Spending at least 120 minutes a week in nature is associated with good health and wellbeing"@en ;
+    rdfs:comment "White et al., Scientific Reports 9:7730 (2019): in a large English survey, people who spent at least two hours a week in nature reported better health and wellbeing than those who spent none. Listed as an Episode Foundation in the Frankly_163 show notes, for Nate's daily time in nature."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:source <https://www.nature.com/articles/s41598-019-44097-3> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
 
 tgs:Work.AIUnexplainableUnpredictableUncontrollable
     dct:isReferencedBy tgs:Interview.TGS_233_RomanYampolskiy .
+
+tgs:Work.ActivistBurnoutClimateJusticeAustria
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Work.AgainstTheMachine
     dct:isReferencedBy tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
@@ -3789,7 +3806,7 @@ tgs:Work.PratiquementDurable
     dct:isReferencedBy tgs:Interview.TGS_166_PeterStrack .
 
 tgs:Work.RealityBlind
-    dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_100_NateHagens, tgs:Interview.TGS_10_NoraBateson, tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_113_LynAlden, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_196_MeredithAngwin, tgs:Interview.TGS_208_XiyeBastida, tgs:Interview.TGS_34_KirilSokoloff, tgs:Interview.TGS_51_DJWhite, tgs:Interview.TGS_99_JeremyGrantham, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+    dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_100_NateHagens, tgs:Interview.TGS_10_NoraBateson, tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_113_LynAlden, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_196_MeredithAngwin, tgs:Interview.TGS_208_XiyeBastida, tgs:Interview.TGS_34_KirilSokoloff, tgs:Interview.TGS_51_DJWhite, tgs:Interview.TGS_99_JeremyGrantham, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
 
 tgs:Work.ResilienceAdaptabilityTransformability
     dct:isReferencedBy tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
@@ -3874,6 +3891,9 @@ tgs:Work.ThermalPowerAndClimateChange
 
 tgs:Work.ThinkingLikeAMountain
     dct:isReferencedBy tgs:PanelDiscussion.RR_17_MovingFromApathyToAction .
+
+tgs:Work.TimeInNatureAndWellbeing2019
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Work.TowardsAnAppliedNetEnergyFramework
     dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .

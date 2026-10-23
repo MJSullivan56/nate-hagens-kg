@@ -4438,6 +4438,18 @@ tgs:Concept.DutyToHope a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
+tgs:Concept.FiveThingsThatKeepUsWhole a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Five Things That Keep Us Whole"@en ;
+    skos:altLabel "Nate's five things"@en ;
+    skos:definition "Nate's personal compass (Frankly_163) for staying grounded and authentic, and able to contribute, in turbulent times: (1) self-care -- sleep, exercise and nutrition, because burning out in this work undermines it; (2) slack with routine -- unstructured time to process and reflect without stimulation, held in daily routines; (3) daily time in nature, normal stimuli in a life full of supernormal ones; (4) deep friendship with people who see the unfolding tragedy, with whom he can be himself; and (5) meaningful work that tries to make the future better than the default. Together they let him be 'not my best self, but more my true self'."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/wp-content/uploads/2026/10/Frankly-163-Transcript-The-5-Most-Important-Things.docx.pdf> ;
+    skos:scopeNote "Minted 2026-10-23 for Frankly_163. Nate stresses these are his five, learned through 'reflection, practice, observation, failure, pattern recognition', not a universal formula, and that each listener's will differ; he asks what 'little Nate on your shoulder' knows. He pairs fun, joy and relaxation with deep meaningful work 'in a barbell way', and calls deep friendship his 'true north, burnout compass'. Related: tgs:Concept.SupernormalStimuli (nature as normal stimuli), tgs:Concept.AllostaticLoad and tgs:Concept.DefaultModeNetwork (why slack matters), tgs:Concept.RobustnessVsPerformance (Olivier Hamant on slack), tgs:Concept.FourCategoriesOfRealWork (the meaningful work), tgs:Concept.PersonalAgency. It is the personal layer beneath tgs:Monologue.Frankly_132_FrameworkForAction, whose foundation is inner work."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4567,6 +4579,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.FiveLensChess,
         tgs:Concept.FivePathwaysThroughDread,
         tgs:Concept.FivePathwaysToPresence,
+        tgs:Concept.FiveThingsThatKeepUsWhole,
         tgs:Concept.FourCategoriesOfRealWork,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
@@ -5177,6 +5190,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.FiveLensChess,
         tgs:Concept.FivePathwaysThroughDread,
         tgs:Concept.FivePathwaysToPresence,
+        tgs:Concept.FiveThingsThatKeepUsWhole,
         tgs:Concept.FourCategoriesOfRealWork,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfTheApocalypse,
@@ -5631,6 +5645,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Effectivism,
         tgs:Concept.Enoughness,
         tgs:Concept.ExosomaticEnergy,
+        tgs:Concept.FiveThingsThatKeepUsWhole,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.HeadHeartAndHands,
@@ -5697,6 +5712,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DutyToHope,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.Enoughness,
+        tgs:Concept.FiveThingsThatKeepUsWhole,
         tgs:Concept.FragmentedConsciousness,
         tgs:Concept.GameTheoreticVersusRealValue,
         tgs:Concept.GameTheoryFillsTheOughtGap,
@@ -5917,6 +5933,11 @@ tgs:Concept.EnvironmentAsDevelopment skos:related tgs:Concept.CarbonBudgetInequi
 tgs:Concept.CarbonBudgetInequity skos:related tgs:Concept.HavesAndHaveNots .
 tgs:Concept.DutyToHope skos:related tgs:Concept.RealityBasedHope .
 tgs:Concept.DutyToHope skos:related tgs:Concept.EarnedHope .
+tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.SupernormalStimuli .
+tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.AllostaticLoad .
+tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.RobustnessVsPerformance .
+tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.FourCategoriesOfRealWork .
+tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.PersonalAgency .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5927,6 +5948,9 @@ tgs:Concept.AgeOfRemembering
 
 tgs:Concept.AggregateProbability
     thinkr:complements tgs:Concept.ImpossibleToHard .
+
+tgs:Concept.AllostaticLoad
+    skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
 
 tgs:Concept.CarbonBudgetInequity
     skos:related tgs:Concept.EnvironmentAsDevelopment .
@@ -5997,6 +6021,9 @@ tgs:Concept.Enoughness
 
 tgs:Concept.FifthLawOfThermodynamics
     skos:related tgs:Concept.DissipativeStructures .
+
+tgs:Concept.FourCategoriesOfRealWork
+    skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
 
 tgs:Concept.FourHorsemenOfTheApocalypse
     skos:related tgs:Concept.FourHorsemenOfThe2020s .
@@ -6122,7 +6149,7 @@ tgs:Concept.PeakOil
     skos:related tgs:Concept.NaturalDeclineRate, tgs:Concept.ResourcesVersusReserves .
 
 tgs:Concept.PersonalAgency
-    skos:related tgs:Concept.LearnedHelplessness .
+    skos:related tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.LearnedHelplessness .
 
 tgs:Concept.Polycrisis
     skos:related tgs:Concept.BundledPreparedness .
@@ -6170,7 +6197,7 @@ tgs:Concept.RightsOfNature
     skos:relatedMatch tgs:PracticeTerm.RightsOfNature .
 
 tgs:Concept.RobustnessVsPerformance
-    skos:related tgs:Concept.SuccessAsLongTermPersistence .
+    skos:related tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.SuccessAsLongTermPersistence .
 
 tgs:Concept.ScenarioThinking
     skos:related tgs:Concept.BundledPreparedness .
@@ -6191,7 +6218,7 @@ tgs:Concept.SolutionSpaceCube
 
 tgs:Concept.SupernormalStimuli
     thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits ;
-    skos:related tgs:Concept.AttentionEconomy, tgs:Concept.LossAversion, tgs:Concept.OneMarshmallowRewardCircuits .
+    skos:related tgs:Concept.AttentionEconomy, tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.LossAversion, tgs:Concept.OneMarshmallowRewardCircuits .
 
 tgs:Concept.Superorganism
     thinkr:complements tgs:Concept.MultipolarTrap ;

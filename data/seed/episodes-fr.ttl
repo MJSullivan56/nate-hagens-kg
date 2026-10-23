@@ -3214,6 +3214,34 @@ tgs:Monologue.Frankly_162_SevenRungsOfARunawaySystem a thinkr:Episode, owl:Named
     skos:scopeNote "Built 2026-10-16, the day it was published, from the official transcript and show notes. The canonical URL follows the site's slug pattern but was not yet verifiable when built; the transcript URL is taken from the show notes. Rung count: Nate presents six rungs and then a seventh, biology, as 'the missing rung'; the title and show notes count seven. Spoken figures vs show notes (show notes trusted, per standing rule): federal gas tax spoken as 'eighteen cents' -- 18.4 cents per gallon; tax code favoring drilling 'for about a hundred years' -- breaks dating to 1916; pickup as best seller 'for over four decades' -- Ford F-Series, 44 straight years; 'Interstate Highway Act of 1956' is the Federal-Aid Highway Act of 1956; material consumption 'tripled' -- global material extraction tripled since 1970, from 30 to 106 billion tonnes. Attribution: Nate places rational ignorance with 'the same school of economists' as Buchanan and Tullock; the show notes credit Anthony Downs with coining the term. Only Buchanan received the Nobel Prize (1986). Transcription artifacts: 'status singles' is status signals; 'researching The Economist' is the economists the YouTube commenter pointed him to; 'Tulloch' is Tullock. Show-notes-only material not built: Mancur Olson's The Logic of Collective Action (concentrated benefits, diffuse costs), Kwame Anthony Appiah's The Honor Code, research on harnessing status motives for prosocial behavior (Van Vugt), the Easterlin paradox, lagom. Candidate concepts named but NOT minted: the information deficit model; behavioral symmetry (recorded inside tgs:Concept.PublicChoiceTheory); concentrated benefits and diffuse costs (inside tgs:Concept.SevenRungsOfARunawaySystem); the systems iceberg model. Not built: James Buchanan, Gordon Tullock, Simon Kuznets and Christopher Boehm as Humans. Nate flags possible future Franklys on elite defection and norm change, and on rent-seeking as net energy per capita plateaus; next week's announced topic is debt."@en ;
     .
 
+tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole a thinkr:Episode, owl:NamedIndividual ;
+    thinkr:createdDate "2026-10-23"^^xsd:date ;
+    thinkr:updatedDate "2026-10-23"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
+    thinkr:hasEpisodeSegment tgs:EpisodeSegment.Frankly ;
+    skos:prefLabel "5 Things That Keep Us Whole: Staying Grounded in an Unraveling World"@en ;
+    skos:definition "Nate turns inward: ahead of what he expects to be the most chaotic year of most listeners' lives, he shares the five things that keep him grounded and 'more my true self' -- self-care, slack with routine, daily time in nature, deep friendship, and meaningful work (tgs:Concept.FiveThingsThatKeepUsWhole) -- stressing that they are his, not a formula, and asking listeners to find their own five."@en ;
+    dct:created "2026-10-21"^^xsd:date ;
+    dct:issued "2026-10-23"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/frankly-original/163-5-things-that-keep-us-whole> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2026/10/Frankly-163-Transcript-The-5-Most-Important-Things.docx.pdf> ;
+    thinkr:discusses tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.SupernormalStimuli, tgs:Concept.AllostaticLoad,
+        tgs:Concept.DefaultModeNetwork, tgs:Concept.RobustnessVsPerformance, tgs:Concept.FourCategoriesOfRealWork,
+        tgs:Concept.PersonalAgency, tgs:Concept.Metacrisis, tgs:Concept.Polycrisis,
+        tgs:Concept.Superorganism ;
+    dct:references tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes, tgs:Monologue.Frankly_150_Part5PersonalLandscapes,
+        tgs:Monologue.Frankly_152_WatchWithBothEyesOpen, tgs:Monologue.Frankly_143_GuideToStayingHumanPart3, tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4,
+        tgs:Monologue.Frankly_156_AnAntidoteToDespair, tgs:Monologue.Frankly_159_TheRealWork, tgs:Monologue.Frankly_160_AStateOfTheWorldAddress,
+        tgs:Monologue.Frankly_161_HumanitysIcarusMoment, tgs:Monologue.Frankly_128_UltraProcessedInformation, tgs:Monologue.Frankly_93_InformationBurnout,
+        tgs:Monologue.Frankly_35_The10ThingsThatBringMeJoy, tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries, tgs:PanelDiscussion.RR_16_TheMadScrambleForPower,
+        tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_191_TaylorGuthrie, tgs:Interview.TGS_69_RobertLustig,
+        tgs:Work.RealityBlind, tgs:Work.ActivistBurnoutClimateJusticeAustria, tgs:Work.TimeInNatureAndWellbeing2019 ;
+    thinkr:hasDiscussionSummary "OPENING: Nate expects 2027 to be the most chaotic year of our lives, at least for those not already living through war or collapse (Iraq, Gaza, Ukraine, Madagascar, Haiti, Mozambique, Afghanistan). AI, climate, geopolitics and war, financial overshoot and energy depletion are each a big deal and are coalescing (tgs:Concept.Polycrisis, tgs:Concept.Metacrisis). What do we do as individuals? He is no expert -- he consults 'little Nate on my shoulder', an honest inner voice -- and he does not know you, so he offers his own five things. 1. SELF-CARE: exercise, sleep and nutrition. He knows several people working on the metacrisis who work 18-hour days, correctly sensing urgency but burning the candle at both ends; 'there are things I'd be willing to die for, but burning out in this work is not one of them' (tgs:Work.ActivistBurnoutClimateJusticeAustria). Trading your life for a better biosphere is only a thought experiment, with counterparty risk. He naps without guilt, needs an hour or more of raised heart rate (a two-and-a-half-hour bike ride after three weeks of travel), and has stopped drinking because it disrupts his sleep. 2. SLACK WITH ROUTINE: 'spaciousness' -- his partner teased him for the word, so he calls it slack: time with nothing in it so his busy mind and body can process and reflect without stimulation; without it his cortisol and base load of anxiety rise (tgs:Concept.AllostaticLoad), as when he was strung out around his nuclear-risk Frankly earlier in the year. It matters for the work too: if he communicates while in fight-or-flight, 'the transmission is as important as the facts', so he aims to be grounded and co-regulated on air. Too much slack is also bad: routine -- coffee, a mile-and-a-half dog walk morning and night, a sit spot, feeding the ducks and chickens -- anchors the circadian rhythm. 3. DAILY TIME IN NATURE: nature is normal stimuli in a life of supernormal stimuli, which shout louder (tgs:Concept.SupernormalStimuli); an hour among trees, moss and grass lets an ancestral kinship bubble up (tgs:Work.TimeInNatureAndWellbeing2019). He walks the dogs on 10 acres behind the office and a neighbouring family's land, though cows there make him anxious. 4. DEEP FRIENDSHIP: he can be polite with anyone, but can only be himself with people who recognise the slowly unfolding tragedy -- and who want its end to be much better than the default. At a recent 100-person environmental retreat with no last names or affiliations, he roomed with six people who for six days did not know who each other were: no posturing, jockeying for funding or performing, a glimpse of tribal life outside 'this performative superorganism culture'. Deep friendship is his 'true north, burnout compass'. 5. MEANINGFUL WORK: working, in a short life, on something worth the time -- making the future better than the default (tgs:Concept.FourCategoriesOfRealWork). He used to assume everyone wanted this; some people's meaning is 'stacking more digits in the bank'. He pairs fun, joy and relaxation with deep work 'in a barbell way'. CLOSING: with these five he feels most himself and things feel effortless. He acknowledges the privilege of a high-energy-per-capita country and hopes he uses it for something greater. He asks listeners what their own inner voice knows: what are your five things, how can you get more of them, and with more of them, what meaningful thing might you accomplish? More data-rich Franklys are coming."@en ;
+    skos:scopeNote "Built 2026-10-23, the day it was published, from the official transcript and show notes. Recorded 21 October 2026 per the show notes. The canonical URL follows the site's frankly-original slug pattern but was not verifiable when built; the transcript URL is from the show notes. Show-notes keywords: Human Behavior, Systems Science. Transcript slips: 'burning the candle on both ends' (both ends); 'little Carolyn or Jeff or Kevin or Christine' are Nate's stand-ins for each listener's inner voice, not people. Nate dates his nuclear-risk Frankly to 'May and June'; the show notes link Frankly_146, issued 16 June 2026. The 'beauty and the horror' Frankly he cites is Frankly_152 (24 July 2026). Not built: the environmental retreat (host unnamed), the show notes' practice links (sit spot, Best Possible Self, Good Grief Network's 10 steps, WOOP) and its many general reference links."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3222,7 +3250,7 @@ tgs:Monologue.Frankly_108_TheInfluenceOfPsychopaths
     dct:isReferencedBy tgs:Interview.TGS_199_SheldonSolomon, tgs:Interview.TGS_210_PeterBrannen, tgs:Interview.TGS_211_JasonBradford, tgs:Interview.TGS_228_JohnChurchill, tgs:Interview.TGS_56_DavidSloanWilson, tgs:Monologue.Frankly_107_ThisWeeksLearnings, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_112_TheQuadrupleBifurcation, tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes, tgs:Monologue.Frankly_157_DecentPeopleIndecentSystem, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
 
 tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries
-    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_111_TheThreeMostImportantWords
     dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
@@ -3258,7 +3286,7 @@ tgs:Monologue.Frankly_127_WideBoundaryNews
     dct:isReferencedBy tgs:Monologue.Frankly_130_WideBoundaryNews31026, tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_61_TheStraitOfHormuzAndTheSpice .
 
 tgs:Monologue.Frankly_128_UltraProcessedInformation
-    dct:isReferencedBy tgs:Interview.TGS_227_SalMercogliano, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+    dct:isReferencedBy tgs:Interview.TGS_227_SalMercogliano, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_129_DesperatelySeekingAgency
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
@@ -3267,7 +3295,7 @@ tgs:Monologue.Frankly_130_WideBoundaryNews31026
     dct:isReferencedBy tgs:Monologue.Frankly_131_IranEffectsLocalPreparednessAndEndOfEmpire .
 
 tgs:Monologue.Frankly_132_FrameworkForAction
-    dct:isReferencedBy tgs:Interview.TGS_234_SarahWilson, tgs:Monologue.Frankly_133_IranUsAndTheRest, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_154_UnordinaryInterventions, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind .
+    dct:isReferencedBy tgs:Interview.TGS_234_SarahWilson, tgs:Monologue.Frankly_133_IranUsAndTheRest, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_154_UnordinaryInterventions, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange
     dct:isReferencedBy tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4 .
@@ -3287,26 +3315,47 @@ tgs:Monologue.Frankly_139_Part2FourVariables
 tgs:Monologue.Frankly_140_APerspectiveFromLebanon
     dct:isReferencedBy tgs:Interview.TGS_222_BrettKencairn .
 
+tgs:Monologue.Frankly_143_GuideToStayingHumanPart3
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
 tgs:Monologue.Frankly_144_AWordICantSeemToUnderstand
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4 .
 
 tgs:Monologue.Frankly_146_UncomfortableQuestionsForUnsettledTimesPart4
-    dct:isReferencedBy tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange .
+    dct:isReferencedBy tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_147_HowToPlay5dChess
     dct:isReferencedBy tgs:Monologue.Frankly_155_WhoBrokeTheWorld .
 
+tgs:Monologue.Frankly_150_Part5PersonalLandscapes
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
 tgs:Monologue.Frankly_152_WatchWithBothEyesOpen
-    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+    dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous
     dct:isReferencedBy tgs:Monologue.Frankly_115_InflationDeflationAndSimplification .
 
+tgs:Monologue.Frankly_156_AnAntidoteToDespair
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
 tgs:Monologue.Frankly_157_DecentPeopleIndecentSystem
     dct:isReferencedBy tgs:Interview.TGS_234_SarahWilson .
 
+tgs:Monologue.Frankly_159_TheRealWork
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
+tgs:Monologue.Frankly_160_AStateOfTheWorldAddress
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
+tgs:Monologue.Frankly_161_HumanitysIcarusMoment
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
+
 tgs:Monologue.Frankly_23_MordorEconomy
     dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman, tgs:Interview.TGS_56_DavidSloanWilson, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits, tgs:Monologue.Frankly_56_PeakOilAIAndTheStraw, tgs:Monologue.Frankly_77_SevenPhilosophiesOnTheFuture, tgs:PanelDiscussion.RR_26_WhyCommunityFails, tgs:ScenarioFacet.Mordor .
+
+tgs:Monologue.Frankly_35_The10ThingsThatBringMeJoy
+    dct:isReferencedBy tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_37_JustStopOilPart1Gasoline
     dct:isPartOf tgs:Series.JustStopOil .
@@ -3363,13 +3412,13 @@ tgs:Monologue.Frankly_92_AIInServiceOfLife
     dct:isReferencedBy tgs:Monologue.Frankly_93_InformationBurnout .
 
 tgs:Monologue.Frankly_93_InformationBurnout
-    dct:isReferencedBy tgs:Interview.TGS_227_SalMercogliano, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
+    dct:isReferencedBy tgs:Interview.TGS_227_SalMercogliano, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
 
 tgs:Monologue.Frankly_94_SocialOvershoot
     dct:isReferencedBy tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous .
 
 tgs:Monologue.Frankly_97_TheSuperorganismIn7Minutes
-    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson, tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology .
+    dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson, tgs:Interview.TGS_230_OlivierHamant, tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_111_TheThreeMostImportantWords, tgs:Monologue.Frankly_132_FrameworkForAction, tgs:Monologue.Frankly_134_AWorldAtTheEdgeOfChange, tgs:Monologue.Frankly_137_OilThreeOhOne, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology .
 
 tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture
     dct:isReferencedBy tgs:Interview.TGS_115_PatrickKnodel, tgs:Monologue.Frankly_130_WideBoundaryNews31026, tgs:Monologue.Frankly_99_TenCoreMythsOfBusinessSchools .
