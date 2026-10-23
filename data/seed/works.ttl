@@ -36,6 +36,7 @@ tgs:Work.CaliforniaDoughnutReport2025 a thinkr:Work, owl:NamedIndividual ;
     dct:bibliographicCitation "Aritza, A., & Kraus-Polk, J. (2025). The California Doughnut Snapshot and Report (Version 1). California Doughnut Economics Coalition. https://zenodo.org/records/17540639. CC BY 4.0."@en ;
     dct:publisher tgs:Organization.CaliforniaDoughnutEconomicsCoalition ;
     dct:issued "2025-11-06"^^xsd:date ;
+    dct:relation tgs:Work.CaliforniaDoughnutIndicators2025 ;
     dct:source <https://zenodo.org/records/17540639> ;
     dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
     .
@@ -3679,6 +3680,16 @@ tgs:Work.OikosRising a thinkr:Work, owl:NamedIndividual ;
         tgs:Archetype.Muse, tgs:Archetype.Effectivist, tgs:Archetype.Barber,
         tgs:Archetype.Governess, tgs:Archetype.Wellspring, tgs:Archetype.Catalyst,
         tgs:Archetype.Disarmer ;
+    .
+
+tgs:Work.CaliforniaDoughnutIndicators2025 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "California Doughnut Indicators 2025"@en ;
+    rdfs:comment "The California Doughnut Economics Coalition's view-only companion spreadsheet to tgs:Work.CaliforniaDoughnutReport2025, with four tabs: Read Me (abstract and methods), Social, Ecological and Calculations. For each of the 42 indicators it gives the California value, the desirable threshold or ceiling, the shortfall or overshoot, the category average, the measurement and publication years, the data source with link, and notes. Method: targets come from the literature, from the indicator's own source where possible; social shortfalls are mostly percentage-point differences from an ambitious target (often 0%), and most ecological overshoots are value / ceiling - 1. Ecological footprints were estimated from the EPA's USEEIO state models (v1.0, GHG from v1.1). Copied by MJSullivan into CSVs on 2026-10-23, since the sheet is read-only; the graph's indicator values, thresholds and category averages come from it. Its README's worked examples differ from its tables in places (literacy, homelessness, greenhouse gases); the tables are used."@en ;
+    dct:publisher tgs:Organization.CaliforniaDoughnutEconomicsCoalition ;
+    dct:issued "2025"^^xsd:gYear ;
+    dct:relation tgs:Work.CaliforniaDoughnutReport2025 ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
+    dct:source <https://docs.google.com/spreadsheets/d/1uDvJsNbIMJbEMhPio4KzxKuxeIAPaDr8HRmII_kk36w> ;
     .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====

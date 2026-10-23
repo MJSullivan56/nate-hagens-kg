@@ -3895,3 +3895,10 @@ tgs:RevisionEvent.CaliforniaDoughnut_Synonyms a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
     thinkr:revisionNote "At MJSullivan's request, added synonyms for the California Doughnut scheme and report: altLabels using the coalition's acronym CalDEC (CalDEC Doughnut; CalDEC Doughnut Report), and the hiddenLabel CalDEV, MJSullivan's own shorthand, so searches for it find both without it being displayed as a name."@en ;
     .
+
+tgs:RevisionEvent.CaliforniaDoughnut_Thresholds a thinkr:RevisionEvent ;
+    thinkr:affects tgs:ConceptScheme.CaliforniaDoughnutIndicators, tgs:Work.CaliforniaDoughnutIndicators2025 ;
+    thinkr:revisionDate "2026-10-23"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "From CalDEC's companion indicator sheet, which MJSullivan copied to CSV: added to each of the 42 California indicators its observed value, threshold, unit, threshold basis, measurement and publication years, data and threshold source links and CalDEC's citation; replaced the report's rounded gaps with the sheet's figures; added each of the 21 categories' average shortfall or overshoot; minted tgs:Work.CaliforniaDoughnutIndicators2025. New properties: observedValue, thresholdValue, valueUnit, thresholdBasis, measurementYear, dataPublicationYear, hasDataSource, hasThresholdSource, dataSourceCitation, averageShortfallPercent, averageOvershootPercent. Disagreements between the sheet, its README, the report and caldec.org are noted on the indicators concerned."@en ;
+    .

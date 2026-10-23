@@ -34,6 +34,63 @@ thinkr:shortfallPercent a owl:DatatypeProperty ;
     skos:prefLabel "shortfall percent"@en ;
     skos:definition "How far a social-foundation indicator falls short of its threshold, as a percentage, as reported in the indicator's source (dcterms:source)."@en .
 
+thinkr:observedValue a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "observed value"@en ;
+    skos:definition "The indicator's measured value as published by its source, kept as text because some values are compound (land / sea), categorical (Yes) or counts with shares; read with thinkr:valueUnit."@en .
+
+thinkr:thresholdValue a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "threshold value"@en ;
+    skos:definition "The desirable level -- the social threshold or ecological ceiling -- the indicator is measured against, as published by its source (e.g. 0%, 0.985, <0.11, >276); read with thinkr:valueUnit and thinkr:thresholdBasis."@en .
+
+thinkr:valueUnit a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "value unit"@en ;
+    skos:definition "The unit in which thinkr:observedValue and thinkr:thresholdValue are expressed."@en .
+
+thinkr:thresholdBasis a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "threshold basis"@en ;
+    skos:definition "Where the threshold comes from and how the gap is calculated, in plain words."@en .
+
+thinkr:measurementYear a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "measurement year"@en ;
+    skos:definition "The year (or span) the observed value was measured, as given by the source."@en .
+
+thinkr:dataPublicationYear a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "data publication year"@en ;
+    skos:definition "The year the underlying data was published, as given by the source; may differ from thinkr:measurementYear."@en .
+
+thinkr:hasDataSource a owl:ObjectProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "has data source"@en ;
+    skos:definition "Web address of the primary data the observed value was taken from."@en .
+
+thinkr:hasThresholdSource a owl:ObjectProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "has threshold source"@en ;
+    skos:definition "Web address of the study or dataset the threshold value was taken from, where it differs from the data source."@en .
+
+thinkr:dataSourceCitation a owl:DatatypeProperty ;
+    rdfs:domain thinkr:Indicator ;
+    skos:prefLabel "data source citation"@en ;
+    skos:definition "The source's own citation for the indicator's data and threshold, as written by the indicator's publisher."@en .
+
+thinkr:averageShortfallPercent a owl:DatatypeProperty ;
+    rdfs:domain thinkr:IndicatorCategory ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "average shortfall percent"@en ;
+    skos:definition "The average shortfall of a social-foundation category's indicators, as published by the source."@en .
+
+thinkr:averageOvershootPercent a owl:DatatypeProperty ;
+    rdfs:domain thinkr:IndicatorCategory ;
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "average overshoot percent"@en ;
+    skos:definition "The average overshoot of an ecological-ceiling category's indicators, as published by the source; 0 means within the ceiling."@en .
+
 thinkr:overshootPercent a owl:DatatypeProperty ;
     rdfs:domain thinkr:Indicator ;
     rdfs:range xsd:decimal ;
@@ -47,22 +104,38 @@ thinkr:overshootPercent a owl:DatatypeProperty ;
 tgs:Indicator.WaterQuality a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.WaterAndSanitation ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Water Quality"@en ;
     skos:definition "Share of people served by water systems that do not meet quality standards."@en ;
     thinkr:shortfallPercent "2.2"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The safety and cleanliness of public drinking water supplies, screening for toxic contaminants or pollutants.'"@en .
+    thinkr:observedValue "883,169 = 2.2%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "people (share of population)" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2025" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/saferdashboard.html> ;
+    thinkr:dataSourceCitation "1) California State Water Resources Control Board. (n.d.). SAFER dashboard." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The safety and cleanliness of public drinking water supplies, screening for toxic contaminants or pollutants.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.SanitationAccess a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.WaterAndSanitation ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.WaterAndSanitation ;
     skos:prefLabel "Sanitation Access"@en ;
     skos:definition "Share of people lacking basic sanitation."@en ;
-    thinkr:shortfallPercent "0.6"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The availability of clean, functional sewage and wastewater infrastructure across communities.'"@en .
+    thinkr:shortfallPercent "0.57"^^xsd:decimal ;
+    thinkr:observedValue "214,930 = 0.57%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "share of population (%)" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2019" ;
+    thinkr:dataPublicationYear "2020" ;
+    thinkr:hasDataSource <https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2020.305833> ;
+    thinkr:dataSourceCitation "1) Capone, D., Cumming, O., Nichols, D., & Brown, J. (2020). Water and sanitation in urban America, 2017–2019. American journal of public health, 110(10), 1567-1572)" ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The availability of clean, functional sewage and wastewater infrastructure across communities.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. Sources disagree slightly: the indicator sheet gives 0.57% (214,930 people), its calculations tab and the report 0.6%, and caldec.org 0.5%; the graph uses 0.57."@en .
 
 #############################################
 # Energy
@@ -71,22 +144,38 @@ tgs:Indicator.SanitationAccess a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.EnergyBurden a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Energy ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Burden"@en ;
     skos:definition "Share of households whose energy bill is 10% or more of income."@en ;
-    thinkr:shortfallPercent "20"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of household income spent strictly on electric, gas, and heating utility bills.'"@en .
+    thinkr:shortfallPercent "19.6"^^xsd:decimal ;
+    thinkr:observedValue "19.6%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2022" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <http://www.homeenergyaffordabilitygap.com/03a_affordabilityData.html> ;
+    thinkr:dataSourceCitation "1) Fisher, Sheehan & Colton. (2023). Home Energy Affordability Gap: Current year data." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of household income spent strictly on electric, gas, and heating utility bills.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.EnergyReliability a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Energy ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Energy ;
     skos:prefLabel "Energy Reliability"@en ;
     skos:definition "Share of the population in counties averaging six or more hours of power outage a year."@en ;
-    thinkr:shortfallPercent "7"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The frequency and duration of power outages or grid blackouts impacting residents.'"@en .
+    thinkr:shortfallPercent "7.0"^^xsd:decimal ;
+    thinkr:observedValue "7%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://doi.org/10.6084/m9.figshare.24237376.v2> ;
+    thinkr:dataSourceCitation "1) Murphy, P. & Kwoka, B. (in preparation). Equity-adjusted value of lost load. Report for the Alfred P. Sloan Foundation. Uses data from: Brelsford, C., et al. (2023). The Environment for Analysis of Geo-Located Energy Information’s recorded electricity outages 2014-2023 (Version 2)." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The frequency and duration of power outages or grid blackouts impacting residents.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Connectivity & Transportation
@@ -95,22 +184,38 @@ tgs:Indicator.EnergyReliability a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.InternetAccess a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ConnectivityAndTransportation ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Internet Access"@en ;
     skos:definition "Share of households with no internet subscription, or a cellphone plan only."@en ;
-    thinkr:shortfallPercent "17"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of households with reliable, high-speed broadband connections.'"@en .
+    thinkr:shortfallPercent "16.9"^^xsd:decimal ;
+    thinkr:observedValue "16.9%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://data.census.gov/table?q=california%20without%20internet> ;
+    thinkr:dataSourceCitation "1) U.S. Census Bureau. (n.d.). California households without internet access [Data table]." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of households with reliable, high-speed broadband connections.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.TransitReportCard a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ConnectivityAndTransportation ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ConnectivityAndTransportation ;
     skos:prefLabel "Transit Report Card"@en ;
     skos:definition "Report-card scores for vehicle miles traveled and transit access."@en ;
-    thinkr:shortfallPercent "40"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A qualitative and structural evaluation of public transportation efficiency, coverage, and scheduling.'"@en .
+    thinkr:shortfallPercent "40.0"^^xsd:decimal ;
+    thinkr:observedValue "6" ;
+    thinkr:thresholdValue "10" ;
+    thinkr:valueUnit "score out of 10" ;
+    thinkr:thresholdBasis "A full score (10) on Transportation for America's Transit Report Card, using only its vehicle-miles-traveled and transit-access metrics; shortfall = 1 - score/10."@en ;
+    thinkr:measurementYear "2021" ;
+    thinkr:dataPublicationYear "2021" ;
+    thinkr:hasDataSource <https://t4america.org/transit-report-card/> ;
+    thinkr:dataSourceCitation "1) Transportation for America. (n.d.). Transit report card." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A qualitative and structural evaluation of public transportation efficiency, coverage, and scheduling.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Housing
@@ -119,22 +224,40 @@ tgs:Indicator.TransitReportCard a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.Homelessness a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Housing ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Homelessness"@en ;
     skos:definition "Point-in-time count of unhoused people, scaled to a shortfall."@en ;
-    thinkr:shortfallPercent "36"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The per-capita rate of individuals experiencing unhoused or transient living situations.'"@en .
+    thinkr:shortfallPercent "35.9"^^xsd:decimal ;
+    thinkr:observedValue "187,084 of 39,431,263 = 0.47%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "people (share of population)" ;
+    thinkr:thresholdBasis "0% of the population unhoused, on a scale where 100% shortfall is the highest credible OECD rate, Northern Ireland's 1.32% of population (OECD Family Database, HC3.1)."@en ;
+    thinkr:measurementYear "2024" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://files.hudexchange.info/reports/published/CoC_PopSub_State_CA_2024.pdf> ;
+    thinkr:hasThresholdSource <https://www.oecd.org/els/family/HC3-1-Population-experiencing-homelessness.pdf> ;
+    thinkr:dataSourceCitation "1) U.S. Department of Housing and Urban Development. (2024). Continuum of care homeless populations and subpopulations report: California 2024. 2) Target: OECD. (n.d.). HC3.1: Population experiencing homelessness. OECD Family Database." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The per-capita rate of individuals experiencing unhoused or transient living situations.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. CalDEC's README cites 0.87% and 0.46% in its worked example (giving about 34.85%); the indicator sheet uses 0.47% (187,084 of 39,431,263 in 2024), giving 35.9%, used here; the report rounds to 36%."@en .
 
 tgs:Indicator.HousingBurden a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Housing ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Housing ;
     skos:prefLabel "Housing Burden"@en ;
     skos:definition "Share of renters paying more than 30% of income on housing."@en ;
-    thinkr:shortfallPercent "55"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of households spending more than 30% to 50% of their gross income on rent or mortgage payments.'"@en .
+    thinkr:shortfallPercent "55.0"^^xsd:decimal ;
+    thinkr:observedValue "55%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2018" ;
+    thinkr:dataPublicationYear "2020?" ;
+    thinkr:hasDataSource <https://www.ppic.org/interactive/californians-and-the-housing-crisis/> ;
+    thinkr:dataSourceCitation "1) Public Policy Institute of California. (n.d.). Californians and the housing crisis [Interactive data]." ;
+    skos:altLabel "Housing Cost Burden"@en ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of households spending more than 30% to 50% of their gross income on rent or mortgage payments.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Equity
@@ -143,22 +266,38 @@ tgs:Indicator.HousingBurden a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.GenderPayGap a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Equity ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Gender Pay Gap"@en ;
     skos:definition "Percentage difference in median full-time wages between women and men."@en ;
-    thinkr:shortfallPercent "13"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The statistical difference in median earnings between men and women performing comparable work.'"@en .
+    thinkr:shortfallPercent "12.9"^^xsd:decimal ;
+    thinkr:observedValue "87.1%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Pay parity: women earn 100% of men's median wage for full-time, year-round work."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <https://www.census.gov/library/stories/2022/03/what-is-the-gender-wage-gap-in-your-state.html> ;
+    thinkr:dataSourceCitation "1) U.S. Census Bureau. (2023). What is the gender wage gap in your state?" ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The statistical difference in median earnings between men and women performing comparable work.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.RacialEquityIndex a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Equity ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Equity ;
     skos:prefLabel "Racial Equity Index"@en ;
     skos:definition "Inclusion score on racial gaps in economic vitality, readiness and connectedness."@en ;
-    thinkr:shortfallPercent "40"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A multi-factor metric tracking institutional disparities in wealth, justice, and health across racial groups.'"@en .
+    thinkr:shortfallPercent "40.0"^^xsd:decimal ;
+    thinkr:observedValue "60" ;
+    thinkr:thresholdValue "100" ;
+    thinkr:valueUnit "inclusion score out of 100" ;
+    thinkr:thresholdBasis "A perfect inclusion score (100) on PolicyLink and the USC Equity Research Institute's Racial Equity Index; only the inclusion score is used, since the doughnut's other indicators cover absolute performance."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://nationalequityatlas.org/research/racial_equity_index/index> ;
+    thinkr:dataSourceCitation "1) PolicyLink & USC Equity Research Institute. (2024). Racial Equity Index: Summary. National Equity Atlas." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'A multi-factor metric tracking institutional disparities in wealth, justice, and health across racial groups.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Social Cohesion
@@ -167,22 +306,39 @@ tgs:Indicator.RacialEquityIndex a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.IncomeInequality a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.SocialCohesion ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Income Inequality"@en ;
     skos:definition "Share of people living in counties with a Gini index above 0.30."@en ;
-    thinkr:shortfallPercent "100"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The structural gap in distribution between the highest and lowest economic earning brackets (e.g. Gini Coefficient).'"@en .
+    thinkr:shortfallPercent "100.0"^^xsd:decimal ;
+    thinkr:observedValue "0%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Everyone lives in a county with a Gini index below 0.30, the threshold used by Fanning et al. (2022), The social shortfall and ecological overshoot of nations."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <https://data.census.gov/table/ACSDT5Y2023.B19083?q=gini+in+california+counties> ;
+    thinkr:hasThresholdSource <https://static-content.springer.com/esm/art%3A10.1038%2Fs41893-021-00799-z/MediaObjects/41893_2021_799_MOESM1_ESM.pdf> ;
+    thinkr:dataSourceCitation "1) U.S. Census Bureau, U.S. Department of Commerce. (n.d.). Gini Index of Income Inequality, American Community Survey, ACS 5-Year Estimates Detailed Tables, Table B19083. 2) Target: Fanning, A., et al. (2022). The social shortfall and ecological overshoot of nations. Nat Sustain 5, 26–36 (2022). https://doi.org/10.1038/s41893-021-00799-z - Supplementary information 2.10." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The structural gap in distribution between the highest and lowest economic earning brackets (e.g. Gini Coefficient).' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.ReportNotHappy a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.SocialCohesion ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.SocialCohesion ;
     skos:prefLabel "Report Not Happy"@en ;
     skos:definition "Share of people reporting they are 'not too happy'."@en ;
-    thinkr:shortfallPercent "26"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of surveyed residents reporting low baseline life satisfaction or chronic emotional distress.'"@en .
+    thinkr:shortfallPercent "26.0"^^xsd:decimal ;
+    thinkr:observedValue "26%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.ppic.org/publication/ppic-statewide-survey-californians-and-their-government-september-2023/> ;
+    thinkr:dataSourceCitation "1) Baldassare, M., et al. (2023). PPIC Statewide Survey: Californians and Their Government. Public Policy Institute of California." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of surveyed residents reporting low baseline life satisfaction or chronic emotional distress.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Food
@@ -191,22 +347,38 @@ tgs:Indicator.ReportNotHappy a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.FoodInsecurity a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Food ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Food Insecurity"@en ;
     skos:definition "Share of households living with food insecurity."@en ;
-    thinkr:shortfallPercent "11"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the population lacking consistent, reliable access to enough affordable, nutritious food.'"@en .
+    thinkr:shortfallPercent "11.4"^^xsd:decimal ;
+    thinkr:observedValue "11.4%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/interactive-charts-and-highlights/#States> ;
+    thinkr:dataSourceCitation "1) U.S. Department of Agriculture, Economic Research Service. (n.d.). Interactive charts and highlights: Food security in the U.S." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the population lacking consistent, reliable access to enough affordable, nutritious food.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.VegetablesPerDay a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Food ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Food ;
     skos:prefLabel "Vegetables Per Day"@en ;
     skos:definition "Share of adults eating less than one serving of vegetables a day."@en ;
-    thinkr:shortfallPercent "41"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average daily dietary intake of fresh produce per capita, serving as an indicator of public health.'"@en .
+    thinkr:shortfallPercent "40.8"^^xsd:decimal ;
+    thinkr:observedValue "59.2%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "All adults (100%) eat at least one serving of vegetables a day."@en ;
+    thinkr:measurementYear "2022" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <https://www.cdph.ca.gov/Programs/CCDPHP/DCDIC/NEOPB/Pages/SNAPEdCountyProfileDashboard.aspx> ;
+    thinkr:dataSourceCitation "1) California Department of Public Health. (n.d.). California community obesity profiles." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average daily dietary intake of fresh produce per capita, serving as an indicator of public health.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. The report rounds the shortfall to 41%; the indicator sheet gives 40.8%, used here."@en .
 
 #############################################
 # Health
@@ -215,22 +387,39 @@ tgs:Indicator.VegetablesPerDay a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.LifeExpectancy a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Health ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Life Expectancy"@en ;
     skos:definition "Share of the population living in counties with life expectancy below the OECD average (80.9 years)."@en ;
-    thinkr:shortfallPercent "32"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average number of years a newborn resident is expected to live based on current mortality rates.'"@en .
+    thinkr:shortfallPercent "32.5"^^xsd:decimal ;
+    thinkr:observedValue "32.45%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "No one lives in a county with life expectancy below the OECD average (80.9 years, 2023, OECD Data Explorer)."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://www.countyhealthrankings.org/health-data/population-health-and-well-being/length-of-life/life-span/life-expectancy?state=06&tab=1&year=2023> ;
+    thinkr:hasThresholdSource <https://data-explorer.oecd.org/vis?lc=en&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_HEALTH_STAT%40DF_LE&df[ag]=OECD.ELS.HD&dq=.A.LFEXP..Y0._T.......&pd=2023%2C2023&to[TIME_PERIOD]=false&vw=tb> ;
+    thinkr:dataSourceCitation "1) County Health Rankings and Roadmaps. (n.d.). Life Expectancy - Life expectancy in California. Year: 2023. 2) Target: OECD Data Explorer. (n.d.) Parameters: Life Expectancy, 0 years, 2023." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average number of years a newborn resident is expected to live based on current mortality rates.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.HealthcareAffordability a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Health ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Health ;
     skos:prefLabel "Healthcare Affordability"@en ;
     skos:definition "Share of adults who delayed, skipped or reduced care because of cost."@en ;
-    thinkr:shortfallPercent "53"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate at which individuals delay or skip necessary medical care due to high out-of-pocket costs.'"@en .
+    thinkr:shortfallPercent "53.0"^^xsd:decimal ;
+    thinkr:observedValue "53%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <https://www.chcf.org/resource-center/understanding-californias-health-care-affordability-crisis/impact-on-californians/> ;
+    thinkr:dataSourceCitation "1) California Health Care Foundation. (n.d.). Understanding California’s health care affordability crisis: Impact on Californians." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate at which individuals delay or skip necessary medical care due to high out-of-pocket costs.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Education
@@ -239,22 +428,38 @@ tgs:Indicator.HealthcareAffordability a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.LiteracyRate a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Education ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Literacy Rate"@en ;
     skos:definition "Share of people aged 16 to 74 at or below literacy Level 1."@en ;
-    thinkr:shortfallPercent "28"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the adult population demonstrating functional reading and writing capabilities.'"@en .
+    thinkr:shortfallPercent "28.0"^^xsd:decimal ;
+    thinkr:observedValue "28%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%. CalDEC's README notes that an intermediate target of 11% (New Hampshire, the best-performing state) would give a 17% shortfall instead."@en ;
+    thinkr:measurementYear "2017" ;
+    thinkr:dataPublicationYear "2018?" ;
+    thinkr:hasDataSource <https://nces.ed.gov/surveys/piaac/skillsmap/src/PDF/STATE.pdf> ;
+    thinkr:dataSourceCitation "1) Institute of Education Sciences, National Center for Education Statistics. (n.d.). Comparison charts of state and county estimates: U.S. states. U.S. Department of Education." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of the adult population demonstrating functional reading and writing capabilities.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.StudentLoanDebt a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.Education ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.Education ;
     skos:prefLabel "Student Loan Debt"@en ;
     skos:definition "Share of college graduates with student loan debt."@en ;
-    thinkr:shortfallPercent "46"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average volume of outstanding educational debt carried by individuals.'"@en .
+    thinkr:shortfallPercent "46.0"^^xsd:decimal ;
+    thinkr:observedValue "46%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2020" ;
+    thinkr:dataPublicationYear "2021" ;
+    thinkr:hasDataSource <https://ticas.org/wp-content/uploads/2021/11/Student-Debt-for-College-Graduates-in-California.pdf> ;
+    thinkr:dataSourceCitation "1) The Institute for College Access & Success. (2021). Student debt for college graduates in California." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average volume of outstanding educational debt carried by individuals.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Income & Work
@@ -263,23 +468,39 @@ tgs:Indicator.StudentLoanDebt a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.Poverty a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.IncomeAndWork ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
     skos:prefLabel "Poverty"@en ;
     skos:definition "Share of people in poverty by the Supplemental Poverty Measure."@en ;
-    thinkr:shortfallPercent "15"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of residents living below the state or federal minimum economic self-sufficiency standard.'"@en .
+    thinkr:shortfallPercent "15.4"^^xsd:decimal ;
+    thinkr:observedValue "15.4%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2021-2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.census.gov/library/stories/2024/09/supplemental-poverty-measure-states.html> ;
+    thinkr:dataSourceCitation "1) U.S. Census Bureau. (2024). Supplemental poverty measure below official poverty rate in 32 states." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of residents living below the state or federal minimum economic self-sufficiency standard.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.Unemployment a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.IncomeAndWork ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.IncomeAndWork ;
     skos:prefLabel "Unemployment (U-6)"@en ;
     skos:altLabel "Unemployment"@en ;
     skos:definition "Share unemployed, including those working part-time for economic reasons (the U-6 measure)."@en ;
-    thinkr:shortfallPercent "9"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The share of the active labor force that is without work but actively seeking a job.'"@en .
+    thinkr:shortfallPercent "9.3"^^xsd:decimal ;
+    thinkr:observedValue "9.3%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.bls.gov/regions/west/news-release/laborunderutilization_california.htm> ;
+    thinkr:dataSourceCitation "1) Bureau of Labor Statistics. (2024). Alternative measures of labor underutilization in California—2023 annual averages. U.S. Department of Labor." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The share of the active labor force that is without work but actively seeking a job.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Peace & Justice
@@ -288,22 +509,39 @@ tgs:Indicator.Unemployment a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.ViolentCrime a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.PeaceAndJustice ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Violent Crime"@en ;
     skos:definition "Share of people living in counties with more than 200 violent crimes per 100,000 residents."@en ;
-    thinkr:shortfallPercent "100"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate of homicide, assault, robbery, and sexual offenses committed per capita.'"@en .
+    thinkr:shortfallPercent "99.9"^^xsd:decimal ;
+    thinkr:observedValue "99.9%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "No one lives in a county with more than 200 violent crimes per 100,000 residents, roughly the level of the best-performing US states (Pew Research Center, 2024). In 2023 only Sierra County, 0.1% of Californians, was below it; the statewide rate was 495."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://openjustice.doj.ca.gov/> ;
+    thinkr:hasThresholdSource <https://www.pewresearch.org/short-reads/2024/04/24/what-the-data-says-about-crime-in-the-us/> ;
+    thinkr:dataSourceCitation "1) California Department of Justice. (n.d.). OpenJustice: Crime data and statistics. 2) Target: Pew Research Center. (2024). What the data says about crime in the U.S." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The rate of homicide, assault, robbery, and sexual offenses committed per capita.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. The report and caldec.org round the shortfall to 100%; the indicator sheet gives 99.9%, used here."@en .
 
 tgs:Indicator.PoliceScorecard a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.PeaceAndJustice ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PeaceAndJustice ;
     skos:prefLabel "Police Scorecard"@en ;
     skos:definition "Averaged score for police funding, accountability, violence and approach."@en ;
-    thinkr:shortfallPercent "65"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'An index evaluating law enforcement agencies on use of force, racial disparities, and institutional accountability.'"@en .
+    thinkr:shortfallPercent "65.0"^^xsd:decimal ;
+    thinkr:observedValue "35%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "A full score (100%) on the Police Scorecard's averaged measures of police funding, accountability, violence and approach to law enforcement."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://policescorecard.org/ca> ;
+    thinkr:dataSourceCitation "1) Police Scorecard. (n.d.). California." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'An index evaluating law enforcement agencies on use of force, racial disparities, and institutional accountability.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Political Voice
@@ -312,22 +550,38 @@ tgs:Indicator.PoliceScorecard a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.VoterTurnout a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.PoliticalVoice ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Voter Turnout"@en ;
     skos:definition "Share of eligible voters who did not vote in 2020."@en ;
-    thinkr:shortfallPercent "40"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of eligible voters who cast a ballot during major election cycles.'"@en .
+    thinkr:shortfallPercent "40.0"^^xsd:decimal ;
+    thinkr:observedValue "60.0%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "100% of eligible voters vote."@en ;
+    thinkr:measurementYear "2024" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://elections.cdn.sos.ca.gov/sov/2024-general/sov/04-historical-voter-reg-general.pdf> ;
+    thinkr:dataSourceCitation "1) California Secretary of State. (n.d.) Elections and voter information - Election statistics - Historical Voter Registration and Participation in Statewide General Elections 1910-2024 (PDF) - November 2024 data." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The percentage of eligible voters who cast a ballot during major election cycles.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.RegisteredVoters a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.PoliticalVoice ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.PoliticalVoice ;
     skos:prefLabel "Registered Voters"@en ;
     skos:definition "Share of eligible voters who are not registered."@en ;
-    thinkr:shortfallPercent "16"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of eligible citizens officially signed up to participate in the democratic voting process.'"@en .
+    thinkr:shortfallPercent "16.0"^^xsd:decimal ;
+    thinkr:observedValue "16.0%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "Ambitious target of 0%."@en ;
+    thinkr:measurementYear "2024" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://elections.cdn.sos.ca.gov/ror/15day-presprim-2024/historical-reg-stats.pdf> ;
+    thinkr:dataSourceCitation "1) California Secretary of State. (2024). Historical voter registration statistics: 15-day report of registration." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The proportion of eligible citizens officially signed up to participate in the democratic voting process.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Nitrogen & Phosphorus
@@ -336,22 +590,39 @@ tgs:Indicator.RegisteredVoters a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.EutrophicationPotential a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.NitrogenAndPhosphorus ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Eutrophication Potential"@en ;
     skos:definition "Eutrophication potential footprint per capita."@en ;
     thinkr:overshootPercent "657"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The risk of severe oxygen depletion in water bodies caused by nutrient enrichment (algal blooms).'"@en .
+    thinkr:observedValue "219.6" ;
+    thinkr:thresholdValue "29" ;
+    thinkr:valueUnit "Kg N eq" ;
+    thinkr:thresholdBasis "29 kg N-eq per person, a planetary-boundary-based reference (Sala et al., 2020)."@en ;
+    thinkr:measurementYear "2020" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://cfpub.epa.gov/si/si_public_record_report.cfm?LAB=CESER&dirEntryID=360453> ;
+    thinkr:hasThresholdSource <https://doi.org/10.1016/j.jenvman.2020.110686> ;
+    thinkr:dataSourceCitation "1) Ingwersen, W., et al. (2024). USEEIO State Models v1.0 Environmentally-Extended Input-Output Models for U.S. States. U.S. Environmental Protection Agency, EPA/600/R-23/228. 2) Target: Sala, S., et al. (2020). Environmental sustainability of European production and consumption assessed against planetary boundaries. Journal of Environmental Management, 269, 110686." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The risk of severe oxygen depletion in water bodies caused by nutrient enrichment (algal blooms).' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.NitrogenLeached a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.NitrogenAndPhosphorus ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.NitrogenAndPhosphorus ;
     skos:prefLabel "Nitrogen Leached"@en ;
     skos:definition "Nitrogen leached to groundwater per year."@en ;
     thinkr:overshootPercent "209"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of excess agricultural nitrogen escaping into underground aquifers and surface waters.'"@en .
+    thinkr:observedValue "380,000" ;
+    thinkr:thresholdValue "123,000" ;
+    thinkr:valueUnit "Tonnes Nitrogen" ;
+    thinkr:thresholdBasis "123,000 tonnes a year, about a third of current leaching: the California Nitrogen Assessment (Tomich et al., 2016) says leaching must fall by 67%. Source figures in US tons converted to metric tonnes."@en ;
+    thinkr:measurementYear "2005" ;
+    thinkr:dataPublicationYear "2016" ;
+    thinkr:hasDataSource <https://asi.ucdavis.edu/sites/g/files/dgvnsk5751/files/inline-files/Executive%20Summary%20Layout_FINAL_reduced.pdf> ;
+    thinkr:dataSourceCitation "1) Tomich, T., et al. (2016). The California nitrogen assessment: challenges and solutions for people, agriculture, and the environment." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of excess agricultural nitrogen escaping into underground aquifers and surface waters.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Ozone Depletion
@@ -360,22 +631,39 @@ tgs:Indicator.NitrogenLeached a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.OzoneDepletingSubstances a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.OzoneDepletion ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone-Depleting Substances"@en ;
     skos:definition "Compliance with the Montreal Protocol."@en ;
     thinkr:overshootPercent "0"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of regulated synthetic industrial chemicals (like CFCs) released into the air.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling."@en .
+    thinkr:observedValue "Yes" ;
+    thinkr:thresholdValue "Yes" ;
+    thinkr:valueUnit "Yes/No" ;
+    thinkr:thresholdBasis "Compliance with the Montreal Protocol on ozone-depleting substances."@en ;
+    thinkr:measurementYear "2014" ;
+    thinkr:dataPublicationYear "2014" ;
+    thinkr:hasDataSource <https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols/ozone-depleting-substances-projects> ;
+    thinkr:dataSourceCitation "1) California Air Resources Board. (2014). Ozone-depleting substances projects. 2) California Air Resources Board. (2024). California Greenhouse Gas Emissions from 2000 to 2022: Trends of Emissions and Other Indicators. pp.32-34." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The volume of regulated synthetic industrial chemicals (like CFCs) released into the air.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.OzoneLayer a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.OzoneDepletion ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OzoneDepletion ;
     skos:prefLabel "Ozone Layer"@en ;
     skos:definition "Ozone layer thickness against the global average minimum thickness threshold."@en ;
     thinkr:overshootPercent "0"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The density and health of stratospheric ozone, which filters out cancer-causing ultraviolet (UV) rays.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling."@en .
+    thinkr:observedValue "284" ;
+    thinkr:thresholdValue ">276" ;
+    thinkr:valueUnit "Dobson Units" ;
+    thinkr:thresholdBasis "A global average ozone-layer thickness above 276 Dobson units (Richardson et al., 2023)."@en ;
+    thinkr:measurementYear "2020" ;
+    thinkr:dataPublicationYear "2022" ;
+    thinkr:hasDataSource <https://csl.noaa.gov/assessments/ozone/2022/downloads/2022OzoneAssessment.pdf> ;
+    thinkr:hasThresholdSource <https://www.science.org/doi/10.1126/sciadv.adh2458> ;
+    thinkr:dataSourceCitation "1) World Meteorological Organization (WMO). (2022). Scientific Assessment of Ozone Depletion: 2022, GAW Report No. 278, 509 pp. 2) Richardson, K., et al. (2023). Earth beyond six of nine planetary boundaries. Sci. Adv.9, eadh2458." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The density and health of stratospheric ozone, which filters out cancer-causing ultraviolet (UV) rays.' Not in overshoot: Ozone Depletion is the only ecological category within its ceiling. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. Measured 284 Dobson units, about 3% above the boundary, so not in overshoot; recorded as 0."@en .
 
 #############################################
 # Biodiversity Loss
@@ -384,22 +672,40 @@ tgs:Indicator.OzoneLayer a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.UnprotectedArea a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.BiodiversityLoss ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "Unprotected Area"@en ;
     skos:definition "Share of land and sea area that is unprotected."@en ;
     thinkr:overshootPercent "59"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The percentage of ecologically critical habitats lacking legal conservation safeguards against development.'"@en .
+    thinkr:observedValue "25.2% / 16.2%" ;
+    thinkr:thresholdValue "50% / 50%" ;
+    thinkr:valueUnit "% of land / % of sea" ;
+    thinkr:thresholdBasis "Half of land and half of sea area protected (Dinerstein et al., 2017). California protects 25.2% of land and 16.2% of sea, giving 50% and 68% overshoot, averaged to 59%."@en ;
+    thinkr:measurementYear "2024" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://resources.ca.gov/-/media/CNRA-Website/Files/2024_30x30_Pathways_Progress_Report.pdf> ;
+    thinkr:hasThresholdSource <https://pubmed.ncbi.nlm.nih.gov/28608869> ;
+    thinkr:dataSourceCitation "1) 30x30 California, Administration of Governor Gavin Newsom. (2024). Pathways to 30x30: California annual progress report. 2) Target: Dinerstein, E., et al. (2017). An ecoregion-based approach to protecting half the terrestrial realm. BioScience,67(6), 534-545." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The percentage of ecologically critical habitats lacking legal conservation safeguards against development.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. CalDEC's indicator sheet frames this as Protected Area, the share protected, against a 50% target."@en .
 
 tgs:Indicator.AtRiskSpecies a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.BiodiversityLoss ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.BiodiversityLoss ;
     skos:prefLabel "At-Risk Species"@en ;
     skos:definition "Share of animal and plant species at risk of extinction."@en ;
     thinkr:overshootPercent "947"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The count or proportion of native plant and animal species classified as threatened, endangered, or vulnerable.'"@en .
+    thinkr:observedValue "33.1% / 29.7%" ;
+    thinkr:thresholdValue "3%" ;
+    thinkr:valueUnit "% of animal / % of plant species" ;
+    thinkr:thresholdBasis "At most 3% of species at risk of extinction (Pimm et al., 2014). In California 33.1% of animal and 29.7% of plant species are at risk, giving 1,003% and 890% overshoot, averaged to 947%."@en ;
+    thinkr:measurementYear "2022" ;
+    thinkr:dataPublicationYear "2023" ;
+    thinkr:hasDataSource <https://www.natureserve.org/bif> ;
+    thinkr:hasThresholdSource <https://www.science.org/doi/10.1126/science.1246752> ;
+    thinkr:dataSourceCitation "1) NatureServe. (2023). Biodiversity in focus: United States edition. 2) Target: Pimm, S. L., et al. (2014). The biodiversity of species and their rates of extinction, distribution, and protection. Science, 344(6187), 1246752." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The count or proportion of native plant and animal species classified as threatened, endangered, or vulnerable.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Land-Use Change
@@ -408,22 +714,40 @@ tgs:Indicator.AtRiskSpecies a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.ForestCover a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.LandUseChange ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Forest Cover"@en ;
     skos:definition "Share of land without forest cover, against a boundary of 75% of preindustrial cover."@en ;
     thinkr:overshootPercent "28"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total land area blanketed by natural, undisturbed tree canopies.'"@en .
+    thinkr:observedValue "27%" ;
+    thinkr:thresholdValue "37.5%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "37.5% of land forested, based on keeping 75% of preindustrial forest cover (Richardson et al., 2023) with a preindustrial baseline from Holocene land-cover reconstructions (Dawson et al., 2024)."@en ;
+    thinkr:measurementYear "2022?" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://resources.ca.gov/-/media/CNRA-Website/Files/Initiatives/Expanding-Nature-Based-Solutions/Californias-NBS-Climate-Targets-2024.pdf> ;
+    thinkr:hasThresholdSource <https://www.science.org/doi/10.1126/sciadv.adh2458>, <https://cp.copernicus.org/preprints/cp-2024-6/> ;
+    thinkr:dataSourceCitation "1) California Natural Resources Agency. (2024). California’s Nature-Based Solutions Climate Targets. 2) Target: Richardson, K., et al. (2023). Earth beyond six of nine planetary boundaries.Sci. Adv.9, eadh2458(2023). 3) Target: Dawson, A., et al. (2024). Holocene land cover change in North America: Continental trends, regional drivers, and implications for vegetation-atmosphere feedbacks." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total land area blanketed by natural, undisturbed tree canopies.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.EcologicalFootprint a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.LandUseChange ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.LandUseChange ;
     skos:prefLabel "Ecological Footprint"@en ;
     skos:definition "Consumption-based ecological footprint in global hectares per capita."@en ;
     thinkr:overshootPercent "351"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of how much biologically productive land and water an economy requires to produce its consumed resources.'"@en .
+    thinkr:observedValue "6.68" ;
+    thinkr:thresholdValue "1.48" ;
+    thinkr:valueUnit "Global Hectares" ;
+    thinkr:thresholdBasis "1.48 global hectares per person, the world's per-person biocapacity (Global Footprint Network and Footprint Data Foundation, 2025)."@en ;
+    thinkr:measurementYear "2014" ;
+    thinkr:dataPublicationYear "2015" ;
+    thinkr:hasDataSource <https://www.footprintnetwork.org/2015/07/14/states/> ;
+    thinkr:hasThresholdSource <https://data.footprintnetwork.org/?_ga=2.183175654.1721104022.1750191477-498299788.1732985384#/countryTrends?cn=5001&type=BCpc,EFCpc> ;
+    thinkr:dataSourceCitation "1) Global Footprint Network. (2015). State of the States Report. 2) Target: Lo, K., et al. (2025). National Ecological Footprint and Biocapacity Accounts. Footprint Data Foundation & Global Footprint Network." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of how much biologically productive land and water an economy requires to produce its consumed resources.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Freshwater Use
@@ -432,23 +756,41 @@ tgs:Indicator.EcologicalFootprint a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.Groundwater a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.FreshwaterUse ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
     skos:prefLabel "Groundwater"@en ;
     skos:altLabel "Ground Water"@en ;
     skos:definition "Share of groundwater pumped from critically overdrafted basins."@en ;
     thinkr:overshootPercent "63"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The extraction rate versus the recharge rate of underground aquifers.' Formerly tgs:Indicator.GroundWater."@en .
+    thinkr:observedValue "63%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "0% of groundwater pumped from basins designated as critically overdrafted. The measurement dates from 2014, which CalDEC flags as old."@en ;
+    thinkr:measurementYear "2014" ;
+    thinkr:dataPublicationYear "2021" ;
+    thinkr:hasDataSource <https://data.cnra.ca.gov/dataset/calgw_update2020/resource/88dbb333-90c3-48f2-a247-7a4f84fce56d> ;
+    thinkr:dataSourceCitation "1) California Natural Resources Agency. (2021). California groundwater update 2020." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The extraction rate versus the recharge rate of underground aquifers.' Formerly tgs:Indicator.GroundWater. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.WaterFootprint a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.FreshwaterUse ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.FreshwaterUse ;
     skos:prefLabel "Water Footprint"@en ;
     skos:definition "Blue water footprint per capita."@en ;
     thinkr:overshootPercent "76"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total volume of freshwater consumed directly and indirectly to manufacture goods and sustain consumer lifestyles.'"@en .
+    thinkr:observedValue "870.3" ;
+    thinkr:thresholdValue "494" ;
+    thinkr:valueUnit "Cubic Meters H20" ;
+    thinkr:thresholdBasis "494 cubic metres per person per year: the global freshwater-use boundary of 4,000 cubic kilometres (Steffen et al., 2015) divided by the 2025 world population of 8.09 billion."@en ;
+    thinkr:measurementYear "2020" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=360453&Lab=CESER> ;
+    thinkr:hasThresholdSource <https://www.science.org/doi/10.1126/science.1259855> ;
+    thinkr:dataSourceCitation "1) Ingwersen, W., et al. (2024). USEEIO State Models v1.0 Environmentally-Extended Input-Output Models for U.S. States. U.S. Environmental Protection Agency, EPA/600/R-23/228. 2) Steffen, W., et al. (2015). Planetary boundaries: Guiding human development on a changing planet. Science, 347(6223), 1259855." ;
+    skos:altLabel "Blue Water Footprint"@en ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The total volume of freshwater consumed directly and indirectly to manufacture goods and sustain consumer lifestyles.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Climate Change
@@ -457,22 +799,40 @@ tgs:Indicator.WaterFootprint a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.GreenhouseGasEmissions a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ClimateChange ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Greenhouse Gas Emissions"@en ;
     skos:definition "Consumption-based greenhouse gas footprint per capita."@en ;
     thinkr:overshootPercent "1890"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The net volume of carbon dioxide, methane, and related gases released by human activity.'"@en .
+    thinkr:observedValue "19.6" ;
+    thinkr:thresholdValue "0.985" ;
+    thinkr:valueUnit "Tonnes CO2 eq" ;
+    thinkr:thresholdBasis "0.985 tonnes CO2-eq per person per year, a carrying-capacity-based reference (Bjorn and Hauschild, 2015); overshoot = 19.6 / 0.985 - 1."@en ;
+    thinkr:measurementYear "2019" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://pasteur.epa.gov/uploads/10.23719/1531923/CA.html> ;
+    thinkr:hasThresholdSource <https://doi.org/10.1007/s11367-015-0899-2> ;
+    thinkr:dataSourceCitation "1) EPA. (2024). Consumption-based greenhouse gas emissions results for the State of CA for 2012-2019. 2) Target: Bjørn, A., & Hauschild, M. (2015). Introducing carrying capacity-based normalisation in LCA: framework and development of references at midpoint level. The International Journal of Life Cycle Assessment, 20, 1005–1018." ;
+    skos:altLabel "Greenhouse Gas Footprint"@en ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The net volume of carbon dioxide, methane, and related gases released by human activity.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. CalDEC's README works the example as 1,870%; the arithmetic and the indicator sheet give 1,890%."@en .
 
 tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ClimateChange ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ClimateChange ;
     skos:prefLabel "Non-Renewable Electricity"@en ;
     skos:definition "Share of electricity not generated from solar, wind or geothermal."@en ;
     thinkr:overshootPercent "62"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The share of power generated using fossil fuels (coal, natural gas) relative to clean alternatives.'"@en .
+    thinkr:observedValue "38%" ;
+    thinkr:thresholdValue "100%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "100% of electricity from solar, wind and geothermal. Nuclear, biomass and hydropower are deliberately excluded because of their environmental impacts."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.eia.gov/state/analysis.php?sid=CA> ;
+    thinkr:dataSourceCitation "1) U.S. Energy Information Administration. (2024). California: State energy profile analysis." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The share of power generated using fossil fuels (coal, natural gas) relative to clean alternatives.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure. CalDEC's indicator sheet frames this as Renewable Electricity: 38% from solar, wind and geothermal against a 100% target."@en .
 
 #############################################
 # Ocean Acidification
@@ -481,23 +841,41 @@ tgs:Indicator.NonRenewableElectricity a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.OceanPH a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.OceanAcidification ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
     skos:prefLabel "Ocean pH"@en ;
     skos:definition "Change in ocean pH compared with preindustrial levels."@en ;
     thinkr:overshootPercent "91"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The declining scale of marine water alkalinity, which threatens shell-building organisms and coral reefs.'"@en .
+    thinkr:observedValue "0.21" ;
+    thinkr:thresholdValue "<0.11" ;
+    thinkr:valueUnit "pH" ;
+    thinkr:thresholdBasis "A pH change of less than 0.11 from preindustrial levels (Richardson et al., 2023)."@en ;
+    thinkr:measurementYear "2015" ;
+    thinkr:dataPublicationYear "2020" ;
+    thinkr:hasDataSource <https://doi.org/10.1038/s41561-019-0499-z> ;
+    thinkr:hasThresholdSource <https://doi.org/10.1126/sciadv.adh2458> ;
+    thinkr:dataSourceCitation "1) Osborne, E., et al. (2020). Decadal variability in twentieth-century ocean acidification in the California Current Ecosystem. Nat. Geosci. 13, 43–49. 2) Target: Richardson, K., et al.. (2023). Earth beyond six of nine planetary boundaries. Sci. Adv.9, eadh2458." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The declining scale of marine water alkalinity, which threatens shell-building organisms and coral reefs.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.AcidificationPotential a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.OceanAcidification ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.OceanAcidification ;
     skos:prefLabel "Acidification Potential"@en ;
     skos:altLabel "SO2-Eq Footprint"@en ;
     skos:definition "Acidification potential: SO2-equivalent footprint per capita."@en ;
     thinkr:overshootPercent "520"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of sulfur dioxide equivalents released, tracking regional acidification risks in aquatic systems.' Formerly tgs:Indicator.SO2EqFootprint."@en .
+    thinkr:observedValue "28.5" ;
+    thinkr:thresholdValue "4.6" ;
+    thinkr:valueUnit "Kg SO2 eq" ;
+    thinkr:thresholdBasis "4.6 kg SO2-eq per person, a planetary-boundary-based reference (Sala et al., 2020)."@en ;
+    thinkr:measurementYear "2020" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://cfpub.epa.gov/si/si_public_record_report.cfm?LAB=CESER&dirEntryID=360453> ;
+    thinkr:hasThresholdSource <https://doi.org/10.1016/j.jenvman.2020.110686> ;
+    thinkr:dataSourceCitation "1) Ingwersen, W., et al. (2024). USEEIO State Models v1.0 Environmentally-Extended Input-Output Models for U.S. States. U.S. Environmental Protection Agency, EPA/600/R-23/228. 2) Target: Sala, S., et al. (2020). Environmental sustainability of European production and consumption assessed against planetary boundaries. Journal of Environmental Management, Volume 269,2020,110686,ISSN 0301-4797." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'A measure of sulfur dioxide equivalents released, tracking regional acidification risks in aquatic systems.' Formerly tgs:Indicator.SO2EqFootprint. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Chemical Pollution
@@ -506,23 +884,39 @@ tgs:Indicator.AcidificationPotential a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.ToxicPesticidesApplied a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ChemicalPollution ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
     skos:prefLabel "Toxic Pesticides Applied"@en ;
     skos:definition "Share of high-risk toxins among the pesticides applied each year."@en ;
     thinkr:overshootPercent "65"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The physical volume of solid municipal and industrial waste dumped into land disposal sites.' The report's page 11 lists this category's indicators as Landfill and Toxic Releases, but page 12 charts Toxic Pesticides Applied and Toxic Chemicals Released and carries their values; the graph follows page 12. This node was formerly tgs:Indicator.Landfill, minted from the page-11 list; Landfill is a different measure and is not kept as a label."@en .
+    thinkr:observedValue "65%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "0% of pesticides applied in the high-risk toxicity category."@en ;
+    thinkr:measurementYear "2022" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://www.cdpr.ca.gov/wp-content/uploads/2024/12/pur_2022_data_summary.pdf> ;
+    thinkr:dataSourceCitation "1) California Department of Pesticide Regulation. (2024). Pesticide Use Annual Report, 2022 data summary." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The physical volume of solid municipal and industrial waste dumped into land disposal sites.' The report's page 11 lists this category's indicators as Landfill and Toxic Releases, but page 12 charts Toxic Pesticides Applied and Toxic Chemicals Released and carries their values; the graph follows page 12. This node was formerly tgs:Indicator.Landfill, minted from the page-11 list; Landfill is a different measure and is not kept as a label. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.ToxicChemicalsReleased a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.ChemicalPollution ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.ChemicalPollution ;
     skos:prefLabel "Toxic Chemicals Released"@en ;
     skos:altLabel "Toxic Releases"@en ;
     skos:definition "Share of toxic chemicals released out of those produced each year."@en ;
     thinkr:overshootPercent "13"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The mass of hazardous chemical compounds leaked into local soil, air, and waterways by industrial facilities.' Page 11 of the report calls it Toxic Releases; page 12, which carries the value, calls it Toxic Chemicals Released. Formerly tgs:Indicator.ToxicReleases."@en .
+    thinkr:observedValue "12.7%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "0% of toxic chemicals produced being released."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2024" ;
+    thinkr:hasDataSource <https://enviro.epa.gov/triexplorer/tri_factsheet.factsheet_forstate?pstate=CA&pyear=2023&pParent=TRI&pDataSet=TRIQ1> ;
+    thinkr:dataSourceCitation "2) U.S. Environmental Protection Agency. (2024). Toxics release inventory: California fact sheet, 2023." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'The mass of hazardous chemical compounds leaked into local soil, air, and waterways by industrial facilities.' Page 11 of the report calls it Toxic Releases; page 12, which carries the value, calls it Toxic Chemicals Released. Formerly tgs:Indicator.ToxicReleases. Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 #############################################
 # Air Pollution
@@ -531,20 +925,37 @@ tgs:Indicator.ToxicChemicalsReleased a thinkr:Indicator, owl:NamedIndividual ;
 tgs:Indicator.O3Pollution a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.AirPollution ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
     skos:prefLabel "O3 Pollution"@en ;
     skos:altLabel "O3 (Ozone) Pollution"@en ;
     skos:definition "Share of air basins violating the 0.070 ppm ozone standard."@en ;
     thinkr:overshootPercent "60"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Ground-level smog concentration, which acts as a respiratory irritant formed by vehicular and industrial emissions.'"@en .
+    thinkr:observedValue "60%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "No air basin violating the national 8-hour ozone standard of 0.070 ppm; in 2023, 9 of California's 15 air basins did."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://www.arb.ca.gov/adam/select8/sc8start.php> ;
+    thinkr:dataSourceCitation "1) California Air Resources Board. (n.d.). Air quality and emissions data. Ozone: 8-Hour Averages, National 0.070 Standard Design Value → select 2023, all California regions → select all air basins → calculate percent of air basins that violate the 0.07ppm limit." ;
+    skos:altLabel "Ozone Pollution"@en ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Ground-level smog concentration, which acts as a respiratory irritant formed by vehicular and industrial emissions.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 
 tgs:Indicator.ParticulateMatter a thinkr:Indicator, owl:NamedIndividual ;
     skos:inScheme tgs:ConceptScheme.CaliforniaDoughnutIndicators ;
     skos:broader tgs:IndicatorCategory.AirPollution ;
-    dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
+    dcterms:source tgs:Work.CaliforniaDoughnutReport2025, tgs:Work.CaliforniaDoughnutIndicators2025 ;
     thinkr:hasIndicatorCategory tgs:IndicatorCategory.AirPollution ;
     skos:prefLabel "Particulate Matter"@en ;
     skos:definition "Share of air basins above 9 micrograms per cubic metre of PM2.5."@en ;
     thinkr:overshootPercent "60"^^xsd:decimal ;
-    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Fine inhalable solids or droplets suspended in air (PM2.5 and PM10), originating from wildfire smoke, dust, and combustion.'"@en .
+    thinkr:observedValue "60%" ;
+    thinkr:thresholdValue "0%" ;
+    thinkr:valueUnit "%" ;
+    thinkr:thresholdBasis "No air basin above the federal annual PM2.5 standard of 9 micrograms per cubic metre, which is stricter than California's state standard."@en ;
+    thinkr:measurementYear "2023" ;
+    thinkr:dataPublicationYear "2025" ;
+    thinkr:hasDataSource <https://www.arb.ca.gov/adam/select8/sc8start.php> ;
+    thinkr:dataSourceCitation "1) California Air Resources Board. (n.d.). Air quality and emissions data. PM2.5: Annual Averages, National Design Value → select 2023, all California regions → select all air basins → calculate percent of air basins exceeding 9 ug/cubic meter." ;
+    skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage overshoot beyond the ecological ceiling. Earlier paraphrased definition: 'Fine inhalable solids or droplets suspended in air (PM2.5 and PM10), originating from wildfire smoke, dust, and combustion.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .

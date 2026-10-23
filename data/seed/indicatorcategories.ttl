@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix tgs: <http://example.org/tgs#> .
 @prefix thinkr: <http://example.org/thinkr#> .
 
@@ -36,6 +37,7 @@ tgs:IndicatorCategory.WaterAndSanitation a thinkr:IndicatorCategory, owl:NamedIn
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Water & Sanitation"@en ;
+    thinkr:averageShortfallPercent "1"^^xsd:decimal ;
     skos:definition "Measures access to clean, affordable, and safe infrastructure for hydration and hygiene."@en .
 
 tgs:IndicatorCategory.Energy a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -44,6 +46,7 @@ tgs:IndicatorCategory.Energy a thinkr:IndicatorCategory, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Energy"@en ;
+    thinkr:averageShortfallPercent "13"^^xsd:decimal ;
     skos:definition "Assesses the accessibility, cost, and reliability of the electrical grid and power resources."@en .
 
 tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -52,6 +55,7 @@ tgs:IndicatorCategory.ConnectivityAndTransportation a thinkr:IndicatorCategory, 
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Connectivity & Transportation"@en ;
+    thinkr:averageShortfallPercent "28"^^xsd:decimal ;
     skos:definition "Tracks the physical and digital mobility required to participate in modern society."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -64,6 +68,7 @@ tgs:IndicatorCategory.Housing a thinkr:IndicatorCategory, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Housing"@en ;
+    thinkr:averageShortfallPercent "45"^^xsd:decimal ;
     skos:definition "Evaluates residential security, stability, and affordability."@en .
 
 tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -72,6 +77,7 @@ tgs:IndicatorCategory.Equity a thinkr:IndicatorCategory, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Equity"@en ;
+    thinkr:averageShortfallPercent "26"^^xsd:decimal ;
     skos:definition "Measures systemic fairness and gaps in wealth or opportunity across demographics."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -84,6 +90,7 @@ tgs:IndicatorCategory.SocialCohesion a thinkr:IndicatorCategory, owl:NamedIndivi
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Social Cohesion"@en ;
+    thinkr:averageShortfallPercent "63"^^xsd:decimal ;
     skos:definition "Assesses community relationships, financial divides, and collective psychological wellbeing."@en .
 
 tgs:IndicatorCategory.Food a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -92,6 +99,7 @@ tgs:IndicatorCategory.Food a thinkr:IndicatorCategory, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Food"@en ;
+    thinkr:averageShortfallPercent "26"^^xsd:decimal ;
     skos:definition "Tracks nutritional health and physical access to sustaining diets."@en .
 
 tgs:IndicatorCategory.Health a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -100,6 +108,7 @@ tgs:IndicatorCategory.Health a thinkr:IndicatorCategory, owl:NamedIndividual ;
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Health"@en ;
+    thinkr:averageShortfallPercent "43"^^xsd:decimal ;
     skos:definition "Monitors physical longevity and medical system entry barriers."@en .
 
 tgs:IndicatorCategory.Education a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -108,6 +117,7 @@ tgs:IndicatorCategory.Education a thinkr:IndicatorCategory, owl:NamedIndividual 
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Education"@en ;
+    thinkr:averageShortfallPercent "37"^^xsd:decimal ;
     skos:definition "Measures academic achievement and the financial consequences of seeking it."@en .
 
 tgs:IndicatorCategory.IncomeAndWork a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -116,6 +126,7 @@ tgs:IndicatorCategory.IncomeAndWork a thinkr:IndicatorCategory, owl:NamedIndivid
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Income & Work"@en ;
+    thinkr:averageShortfallPercent "12"^^xsd:decimal ;
     skos:definition "Evaluates baseline financial security and formal employment opportunities."@en .
 
 tgs:IndicatorCategory.PeaceAndJustice a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -124,6 +135,7 @@ tgs:IndicatorCategory.PeaceAndJustice a thinkr:IndicatorCategory, owl:NamedIndiv
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Peace & Justice"@en ;
+    thinkr:averageShortfallPercent "82"^^xsd:decimal ;
     skos:definition "Assesses community safety, systemic violence, and institutional accountability."@en .
 
 tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -132,6 +144,7 @@ tgs:IndicatorCategory.PoliticalVoice a thinkr:IndicatorCategory, owl:NamedIndivi
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.SocialFoundation ;
     skos:prefLabel "Political Voice"@en ;
+    thinkr:averageShortfallPercent "28"^^xsd:decimal ;
     skos:definition "Tracks civic engagement and democratic representation."@en .
 
 #############################################
@@ -144,6 +157,7 @@ tgs:IndicatorCategory.NitrogenAndPhosphorus a thinkr:IndicatorCategory, owl:Name
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Nitrogen & Phosphorus"@en ;
+    thinkr:averageOvershootPercent "433"^^xsd:decimal ;
     skos:definition "Tracks the chemical overloading of biosphere networks due to industrial agricultural run-off."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -156,6 +170,7 @@ tgs:IndicatorCategory.OzoneDepletion a thinkr:IndicatorCategory, owl:NamedIndivi
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Ozone Depletion"@en ;
+    thinkr:averageOvershootPercent "0"^^xsd:decimal ;
     skos:definition "Monitors the degradation of the atmospheric layer that shields Earth from harmful solar radiation."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -168,6 +183,7 @@ tgs:IndicatorCategory.BiodiversityLoss a thinkr:IndicatorCategory, owl:NamedIndi
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Biodiversity Loss"@en ;
+    thinkr:averageOvershootPercent "503"^^xsd:decimal ;
     skos:definition "Measures the degradation of wildlife ecosystems and the extinction rate of organisms."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -180,6 +196,7 @@ tgs:IndicatorCategory.LandUseChange a thinkr:IndicatorCategory, owl:NamedIndivid
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Land-Use Change"@en ;
+    thinkr:averageOvershootPercent "190"^^xsd:decimal ;
     skos:definition "Tracks the conversion of natural wilderness into urban or agricultural zones."@en ;
     skos:scopeNote "Given a single top-level '#' heading (rather than '##') in MJSullivan's original markdown, alongside Ocean Acidification below — confirmed via cross-check against the 21-category count already established in tgs:Work.CaliforniaDoughnutReport2025's own rdfs:comment that this was a formatting slip, not an intentional 3rd-tier distinction; modeled here as a normal Ecological Ceiling category like its 8 siblings."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
@@ -193,6 +210,7 @@ tgs:IndicatorCategory.FreshwaterUse a thinkr:IndicatorCategory, owl:NamedIndivid
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Freshwater Use"@en ;
+    thinkr:averageOvershootPercent "70"^^xsd:decimal ;
     skos:definition "Monitors the consumption and depletion of finite freshwater sources."@en ;
     thinkr:hasAlternateTerm [ a thinkr:AlternateTerm ;
         thinkr:hasAlternateTermType tgs:AlternateTermType.CloseMatch ;
@@ -205,6 +223,7 @@ tgs:IndicatorCategory.ClimateChange a thinkr:IndicatorCategory, owl:NamedIndivid
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Climate Change"@en ;
+    thinkr:averageOvershootPercent "976"^^xsd:decimal ;
     skos:definition "Tracks the heating of Earth's atmosphere via greenhouse gas accumulation."@en .
 
 tgs:IndicatorCategory.OceanAcidification a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -213,6 +232,7 @@ tgs:IndicatorCategory.OceanAcidification a thinkr:IndicatorCategory, owl:NamedIn
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Ocean Acidification"@en ;
+    thinkr:averageOvershootPercent "305"^^xsd:decimal ;
     skos:definition "Measures chemical shifts in marine environments caused by absorbing human carbon output."@en ;
     skos:scopeNote "Same markdown-heading-level note as Land-Use Change above — modeled as a normal Ecological Ceiling category, not a 3rd tier."@en .
 
@@ -222,6 +242,7 @@ tgs:IndicatorCategory.ChemicalPollution a thinkr:IndicatorCategory, owl:NamedInd
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Chemical Pollution"@en ;
+    thinkr:averageOvershootPercent "39"^^xsd:decimal ;
     skos:definition "Monitors the accumulation of synthetic, toxic, and non-biodegradable waste in the environment."@en .
 
 tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, owl:NamedIndividual ;
@@ -230,6 +251,7 @@ tgs:IndicatorCategory.AirPollution a thinkr:IndicatorCategory, owl:NamedIndividu
     dcterms:source tgs:Work.CaliforniaDoughnutReport2025 ;
     thinkr:hasDoughnutHalf tgs:DoughnutHalf.EcologicalCeiling ;
     skos:prefLabel "Air Pollution"@en ;
+    thinkr:averageOvershootPercent "60"^^xsd:decimal ;
     skos:definition "Tracks airborne concentrations of gases and microscopic solids dangerous to human lungs."@en .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
