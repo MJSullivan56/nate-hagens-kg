@@ -1592,7 +1592,7 @@ tgs:Relationship.NateHagens_BillPlotkin a thinkr:Relationship, owl:NamedIndividu
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_146_BillPlotkin ;
           dcterms:date "2024-09-16"^^xsd:date ] ;
-    skos:scopeNote "Professional — no personal-relationship evidence available yet, since this episode's own transcript hasn't been reviewed in this pass (only the real, independently-confirmed guest appearance itself). Worth revisiting once TGS_146's own transcript is available."@en ;
+    skos:scopeNote "Direct textual evidence (TGS_146): 'I hadn't heard your name until a year or two ago, and now I've heard it like a hundred times. We have many mutual colleagues'; Nate had just read Nature and the Human Soul, which Plotkin required before agreeing to the interview, and Plotkin emailed the night before asking to open with a poem. A friend of Nate's had attended one of Plotkin's seminars. Nate treats the episode as 'an introduction to your work' and promises to have him back: 'To be continued.'"@en ;
     .
 
 #############################################

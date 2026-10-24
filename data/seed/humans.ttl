@@ -1095,6 +1095,8 @@ tgs:Human.BillPlotkin a thinkr:Human,
     rdfs:label "Bill Plotkin (human)"@en ;
     owl:sameAs <https://www.animas.org/about-us/our-founder/> ;
     rdfs:comment "American eco-depth psychologist, wilderness guide, and self-described agent of cultural evolution; founder, Animas Valley Institute (southwest Colorado, 1980/1981), guiding thousands of people through nature-based initiatory passages, including a contemporary Western adaptation of the pan-cultural vision fast. PhD, psychology, University of Colorado Boulder; earlier career as a research psychologist (studying nonordinary states of consciousness), university psychology professor, psychotherapist, rock musician, and whitewater river guide. Real, direct origin story for his current work: in 1979, during a solo winter ascent of an Adirondack peak, he experienced what he calls a 'call to spiritual adventure' that led him to leave academia. Author of 'Soulcraft: Crossing into the Mysteries of Nature and Psyche,' 'Nature and the Human Soul: Cultivating Wholeness and Community in a Fragmented World,' 'Wild Mind: A Field Guide to the Human Psyche,' and 'The Journey of Soul Initiation: A Field Guide for Visionaries, Evolutionaries, and Revolutionaries.'"@en ;
+    thinkr:memberOf tgs:Organization.AnimasValleyInstitute ;
+    dct:source <https://www.animas.org/about-us/our-founder/> ;
     .
 
 #############################################
@@ -2313,6 +2315,9 @@ tgs:Human.DJWhite
 tgs:Human.DanielPBrown
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Monologue.Frankly_95_TheParentAndThePendulum .
 
+tgs:Human.DanielQuinn
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
 tgs:Human.DanielSchmachtenberger
     dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_184_ConnorLeahy, tgs:Monologue.Frankly_69_GoldilocksTechnology, tgs:Monologue.Frankly_96_TheEightFacesOfAI .
 
@@ -2364,6 +2369,9 @@ tgs:Human.JoannaMacy
 tgs:Human.JohanRockstrom
     dct:isReferencedBy tgs:Monologue.Frankly_109_PeakOilPonziSchemesAndPlanetaryBoundaries .
 
+tgs:Human.JosephCampbell
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
 tgs:Human.JuliaCarabiasLillo
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
 
@@ -2384,6 +2392,9 @@ tgs:Human.NoraBateson
 
 tgs:Human.PaulEhrlich
     dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits .
+
+tgs:Human.PaulShepard
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
 
 tgs:Human.PierreTeilhardDeChardin
     dct:isReferencedBy tgs:Monologue.Frankly_75_SomebodysGonnaWin .

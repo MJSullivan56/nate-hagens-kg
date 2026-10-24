@@ -293,6 +293,8 @@ tgs:Concept.KinshipWorldview thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 tgs:Concept.KleibersLaw thinkr:relatesTo tgs:Persona.MaxKleiber ;
     skos:note "Max Kleiber's 1932 empirical finding that an organism's basal metabolic rate scales to roughly the 3/4 power of its body mass, not the 2/3 power a simple surface-area argument would predict — one of the few genuine quantitative laws in biology, still without a fully settled theoretical explanation, and used in this graph's own source material as a real biological analogy for economic/systemic energy-scaling arguments."@en .
 
+tgs:Concept.KnowingVersusKnowingAbout thinkr:relatesTo tgs:Persona.NateHagens .
+
 tgs:Concept.LandscapeOfPossibleFutures thinkr:relatesTo tgs:Persona.ConradWaddington ;
     skos:note "Hagens' own application of the landscape metaphor (valleys, ridges, switchbacks, erosion) to civilizational futures — see tgs:Monologue.Frankly_145_Part3UphillFutures for the full framework. Adapts Conrad Waddington's epigenetic landscape (originally a model of cellular differentiation) to a different domain entirely — a genuine reframing, not a direct reuse, hence HagensConcept despite the explicit external inspiration."@en .
 
@@ -350,6 +352,8 @@ tgs:Concept.OstromDesignPrinciples thinkr:relatesTo tgs:Concept.TragedyOfTheComm
 
 tgs:Concept.Overshoot thinkr:relatesTo tgs:Persona.WilliamCatton ;
     skos:note "The condition of a population/economy consuming renewable and non-renewable resources faster than natural systems can regenerate or absorb waste from them, borrowed from systems ecology (Catton, Meadows) and applied to the global economy."@en .
+
+tgs:Concept.PathoAdolescentSociety thinkr:relatesTo tgs:Persona.BillPlotkin .
 
 tgs:Concept.PeakOil thinkr:relatesTo tgs:Persona.MKingHubbert ;
     skos:note "The point at which the maximum rate of petroleum extraction is reached, after which production enters terminal decline — a formative concept in Hagens' background (he worked as a peak oil analyst before founding The Great Simplification) and foundational to his energy-decline framing."@en .
@@ -456,6 +460,8 @@ tgs:Concept.SolarGeoengineeringGovernance thinkr:relatesTo tgs:Persona.TedParson
 tgs:Concept.SolarRadiationModification thinkr:relatesTo tgs:Persona.TedParson ;
     skos:note "Cooling the planet by reflecting more sunlight back to space, most studied as stratospheric aerosol injection of sulfates, mimicking volcanic eruptions such as Mount Pinatubo. The idea was first raised in a 1965 report to President Lyndon Johnson. Kelly Erhart (TGS_204) calls it the only researched emergency brake for runaway warming, not a solution: it does not address the causes, its regional effects are poorly bounded, and it is at best an insurance policy or a way to buy time. She rejects the 'rogue billionaire' scenario as convenient but incorrect, since sustained deployment would take a nation state, and argues that governance (who decides, who bears the regional consequences) requires research first, especially by Global South researchers. Ted Parson, interviewed by Nate the day before, puts the chance of eventual deployment at 90%."@en .
 
+tgs:Concept.SoulAsUniqueEcologicalNiche thinkr:relatesTo tgs:Persona.BillPlotkin .
+
 tgs:Concept.SpaceOfTheNecessary thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.StrawSiphonSieve skos:note "Nate's own real, direct three-part model (Frankly-119, extending Frankly-56's own earlier straw metaphor) for what technology actually does to real wealth -- defined here explicitly as usable energy, organized matter, and the stocks and flows that make life possible, not money, which is only a real, direct claim on that wealth. (1) The straw: technology increases the rate at which stocks of the natural world are drawn down -- his own real, direct food-system example, the Haber-Bosch process, widened the nitrogen straw so dramatically that roughly half the nitrogen in a human body today originates from fossil fuels. (2) The siphon: gains from that faster extraction concentrate via real, structural network effects (capital rewards those who can finance it, data compounds, early advantage reinforces itself) and via real, direct choke points -- narrow gates (ports, app stores, platforms) where the toolmaker becomes the rent-taker without needing to produce more value, just control access to it. (3) The sieve: technology filters long-term wealth away from the rest of life and toward one species, and within that species toward a narrow subset -- humans now consume roughly 40% of Earth's net primary productivity, and the built technosphere now outweighs all living biomass combined. Real, direct closing extension: debt is named directly as a fourth, social form of the same pattern (a straw pulling future resources into the present, a siphon concentrating returns to those who can issue credit), and AI is analyzed as the newest technology running through this same real, direct three-part structure, but in the cognitive rather than physical economy."@en .
@@ -488,6 +494,8 @@ tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact thinkr:relatesTo tgs:Persona.Dan
 
 tgs:Concept.ToxicityCrisis thinkr:relatesTo tgs:Persona.JeremyGrantham,
         tgs:Persona.ShannaSwan .
+
+tgs:Concept.TrueAdulthood thinkr:relatesTo tgs:Persona.BillPlotkin .
 
 tgs:Concept.TwoCategoriesOfTechnology thinkr:relatesTo tgs:Persona.NateHagens .
 
@@ -2452,6 +2460,8 @@ tgs:Persona.SunitaNarain thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest
 tgs:Persona.AlexisZeigler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.ScottTinker thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.BillPlotkin thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.RianeEisler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

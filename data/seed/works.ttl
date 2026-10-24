@@ -1510,7 +1510,7 @@ tgs:Work.TheHiddenHalfOfNature a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.TheParableOfTheTribes a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Parable of the Tribes"@en ;
-    rdfs:comment "Book by Andrew Bard Schmookler (1984). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    rdfs:comment "Book by Andrew Bard Schmookler (1984). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). Plotkin cites it, with Daniel Quinn's Ishmael and Paul Shepard's books, as an account of how the crisis began thousands of years ago (TGS_146)."@en ;
     dct:issued "1984"^^xsd:gYear ;
     dct:identifier "urn:isbn:9780520048744" ;
     dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;
@@ -2276,7 +2276,7 @@ tgs:Work.Behave a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.WildMind a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Wild Mind"@en ;
-    rdfs:comment "Book by Bill Plotkin (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    rdfs:comment "Book by Bill Plotkin (2013). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). Plotkin recommends it as an introduction: it maps the psyche's facets of wholeness and its inner protectors (sub-personalities such as the inner critic), with many experiential exercises; the 'Wild Mind work' is, he says, akin to but more complete than Internal Family Systems because it was mapped on nature's templates of wholeness (TGS_146)."@en ;
     dct:creator tgs:Human.BillPlotkin ;
     dct:issued "2013"^^xsd:gYear ;
     dct:identifier "urn:isbn:9781608681785" ;
@@ -2641,7 +2641,7 @@ tgs:Work.TheTelomereEffect a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.Soulcraft a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Soulcraft"@en ;
-    rdfs:comment "Book by Bill Plotkin (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    rdfs:comment "Book by Bill Plotkin (2003). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). Plotkin's first book, which he says came before Wild Mind (TGS_146)."@en ;
     dct:creator tgs:Human.BillPlotkin ;
     dct:issued "2003"^^xsd:gYear ;
     dct:identifier "urn:isbn:9781577314226" ;
@@ -2661,7 +2661,7 @@ tgs:Work.ScaleTheUniversalLawsOfGrowth a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.TheJourneyOfSoulInitiation a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "The Journey of Soul Initiation"@en ;
-    rdfs:comment "Book by Bill Plotkin (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    rdfs:comment "Book by Bill Plotkin (2021). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). Plotkin's fourth book, which details what happens in the cocoon stage, the journey of soul initiation (TGS_146)."@en ;
     dct:creator tgs:Human.BillPlotkin ;
     dct:issued "2021"^^xsd:gYear ;
     dct:identifier "urn:isbn:9781608687015" ;
@@ -3002,7 +3002,7 @@ tgs:Work.RadicalKabbalah a thinkr:Work, owl:NamedIndividual ;
 
 tgs:Work.NatureAndTheHumanSoul a thinkr:Work, owl:NamedIndividual ;
     skos:prefLabel "Nature and the Human Soul"@en ;
-    rdfs:comment "Book by Bill Plotkin (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    rdfs:comment "Book by Bill Plotkin (2006). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). The book Nate read before the interview; it sets out the eight-stage soulcentric developmental wheel (tgs:Concept.EcocentricDevelopmentalWheel), with stories from individuals, and the contrasting egocentric wheel (TGS_146)."@en ;
     dct:creator tgs:Human.BillPlotkin ;
     dct:issued "2006"^^xsd:gYear ;
     dct:identifier "urn:isbn:9781577315513" ;
@@ -3042,8 +3042,9 @@ tgs:Work.CarpeDiemRegained a thinkr:Work, owl:NamedIndividual ;
     .
 
 tgs:Work.LookToTheMountains a thinkr:Work, owl:NamedIndividual ;
-    skos:prefLabel "Look to the Mountains"@en ;
-    rdfs:comment "Book by Greg Cajete (1994). Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; not yet confirmed against the episode's own show notes."@en ;
+    skos:prefLabel "Look to the Mountain: An Ecology of Indigenous Education"@en ;
+    skos:altLabel "Look to the Mountains"@en ;
+    rdfs:comment "Book by Gregory (Greg) Cajete, Tewa educator from Santa Clara Pueblo, New Mexico (Kivakí Press, 1994); Plotkin calls it 'Look to the Mountains'. Added from the community list 'Books referenced in the Podcast' (tgs:Work.TGSBooksList), which places it in TGS episode 146; confirmed by the TGS_146 show notes and transcript (2026-10-24). Plotkin cites Cajete's books as describing Native North American cultural ways that correspond to his eight stages (TGS_146)."@en ;
     dct:issued "1994"^^xsd:gYear ;
     dct:identifier "urn:isbn:9781882308651" ;
     dct:source <https://d3ngex8q79bk55.cloudfront.net/evo-uploads/user/73056/post/new/TGS_books-1-1.html> ;

@@ -942,9 +942,19 @@ tgs:Organization.NRhythm a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.nrhythm.co/> ;
     .
 
+tgs:Organization.AnimasValleyInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Animas Valley Institute"@en ;
+    skos:altLabel "Animas"@en ;
+    skos:definition "Organization in southwest Colorado founded by Bill Plotkin, which since 1980 has guided thousands of people on nature-based journeys of soul initiation; its stated mission is cultural regeneration, and its part of that is stages of human development. In TGS_146 Plotkin describes about 20 guides offering five-day and longer experiential immersions in 15 to 20 countries, and two training programs (one of about 100 trainees, including the Soulcraft Apprenticeship and Initiation Program, and one of about 25). 'Animas' is Spanish for souls."@en ;
+    dcterms:source <https://www.animas.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
+
+tgs:Organization.AnimasValleyInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
 
 tgs:Organization.BeyondPlastics
     dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .

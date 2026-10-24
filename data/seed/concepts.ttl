@@ -676,7 +676,7 @@ tgs:Concept.EcocentricDevelopmentalWheel a thinkr:Concept, owl:NamedIndividual ;
     skos:prefLabel "Ecocentric (Soulcentric) Developmental Wheel"@en ;
     skos:definition "Plotkin's eight-stage model of healthy human development, each stage paired with a human archetype and an earth archetype: (1) Innocent in the Nest — early childhood; (2) Explorer in the Garden — middle childhood; (3) Thespian at the Oasis — early adolescence; (4) Wanderer in the Cocoon — late adolescence, the stage of soul initiation, which 'most contemporary people never reach'; (5) Apprentice at the Wellspring — early adulthood; (6) Artisan in the Wild Orchard — late adulthood; (7) Master in the Grove of Elders — early elderhood; (8) Sage in the Mountain Cave — late elderhood. Explicitly contrasted with an 'egocentric wheel' modeling the stages most contemporary people actually go through instead, most of them stalled in an unhealthy version of stage 3."@en ;
     dcterms:subject tgs:Subject.HumanBehavior ;
-    skos:scopeNote "Plotkin's own real prior art cited as convergent, non-Western evidence for this model: Malidoma Somé's account of Dagara initiation rites, Martín Prechtel's account of Tzutujil Maya culture, and Gregory Cajete's writing on Native American educational traditions — none of the three built as Personas this pass."@en ;
+    skos:scopeNote "Plotkin's own real prior art cited as convergent, non-Western evidence for this model: Malidoma Somé's account of Dagara initiation rites, Martín Prechtel's account of Tzutujil Maya culture, and Gregory Cajete's writing on Native American educational traditions — none of the three built as Personas. Plotkin says he would not name any intact contemporary culture that lives this way, since contact with what Riane Eisler calls dominator societies would undermine it (tgs:Concept.DominationPartnershipContinuum). Most contemporary people get stuck in an unhealthy version of stage three; healthy early childhood requires parents in stage five (initiated adults); each stage has two developmental tasks, a nature task and a culture task, and later stages are not 'better' than earlier ones. Plotkin learned the eighth stage from Thomas Berry, then in it. Related: tgs:Concept.TrueAdulthood, tgs:Concept.SoulAsUniqueEcologicalNiche."@en ;
     thinkr:influencedBy tgs:Persona.BillPlotkin ;
     .
 
@@ -687,7 +687,7 @@ tgs:Concept.ArrestedHumanDevelopment a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "Plotkin's own direct causal claim, stated as this episode's central thesis: 'the root cause [of the metacrisis] is arrested human development' — also termed 'systemic human development oppression.' Distinct from tgs:Concept.Metacrisis itself (the pattern of interconnected crises) by proposing a specific generative mechanism behind it, located in human developmental psychology rather than economic or ecological systems directly."@en ;
     dcterms:subject tgs:Subject.HumanBehavior ;
     thinkr:relatesTo tgs:Concept.Metacrisis ;
-    skos:scopeNote "A real, single-episode claim — not yet independently corroborated elsewhere in this graph. Flagged for revisiting if it recurs, matching this graph's own recurrence-based minting discipline."@en ;
+    skos:scopeNote "From TGS_146, where Plotkin says more than 95 percent of contemporary people never reach true adulthood (tgs:Concept.TrueAdulthood) and calls this the oppression beneath racial, sexual and class-based oppressions. His hopeful corollary: each person is evolved to grow through the soulcentric stages, and someone who never had support can catch up in a few years with modest help. Related: tgs:Concept.PathoAdolescentSociety."@en ;
     thinkr:influencedBy tgs:Persona.BillPlotkin ;
     .
 
@@ -698,7 +698,7 @@ tgs:Concept.GreatTurning a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "The shift from an industrial growth society to a life-sustaining civilization, through holding actions, new structures and a change in consciousness."@en ;
     thinkr:extendedDefinition "Joanna Macy's framework, explained by Plotkin in real depth (not a passing citation): the shift from an 'Industrial Growth Society' toward a 'life-sustaining civilization,' unfolding across three simultaneous dimensions — (1) holding actions to save as much life as possible now, (2) building the structural and technical foundations for healthier systems (food, energy, governance), and (3) a shift in consciousness and values, which Plotkin explicitly connects back to tgs:Concept.EcologicalAwakening and his own developmental wheel. Macy pairs this with 'the Great Unraveling' — the ongoing collapse of existing systems — as two faces of the same real historical moment, not opposed processes."@en ;
     dcterms:subject tgs:Subject.SystemsFrameworks ;
-    skos:scopeNote "Real external source, not a Hagens or Plotkin coinage — Joanna Macy is cited directly by name throughout as its originator. Macy herself not yet built as a Persona in this graph (cited here and, separately, in Frankly_142's own scopeNote as a deferred candidate)."@en ;
+    skos:scopeNote "Real external source, not a Hagens or Plotkin coinage — Joanna Macy is cited directly by name throughout as its originator. Macy is now tgs:Persona.JoannaMacy. In TGS_146 Plotkin, who calls her his friend and teacher, offers its three dimensions as his advice for the polycrisis: do something that supports the Great Turning, which is 'even better than therapy' (after James Hillman)."@en ;
     thinkr:influencedBy tgs:Persona.JoannaMacy ;
     .
 
@@ -4749,6 +4749,54 @@ tgs:Concept.CompostingTheSurplus a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
+tgs:Concept.SoulAsUniqueEcologicalNiche a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Soul as a unique ecological niche"@en ;
+    skos:definition "Bill Plotkin's definition of soul, which he says differs from almost anyone else's: not a metaphysical spark that enters and leaves the body, nor simply depth or heart, but a creature's unique ecological niche -- its unique way of serving and enhancing life. Just as every species has a niche and 'life serves life', so does every individual of every species; some indigenous traditions call this our 'original instructions'. A soul can never be defined as a social role, job or career, only pointed to by metaphor, a 'mythopoetic identity' (the poem one was born to be); the ego's work in adulthood is to find 'delivery systems' -- roles, vocations, projects -- that carry it into the world. The soul stays the same for life; the delivery systems can change with culture and climate."@en ;
+    dcterms:source <https://www.animas.org/glossary-to-language-of-soul-canyon/#Soul> ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_146. The closest prior definition he found is Stephen Harrod Buhner's: each creature is 'a unique ecological communication'. Plotkin's own first encounter with soul came after four days of fasting in a wild place, when a butterfly flew by and he heard the words 'cocoon weaver', which became his work of guiding people through the cocoon stage. He says some colleagues think using the word soul this way was his greatest mistake and others his greatest move; he insists on finding contemporary Western forms rather than copying indigenous traditions. He cites William Stafford's 'thread you follow'. More than 95 percent of contemporary people, he estimates, are consciously disconnected from their soul. In answer to Nate's question about being born on the upslope of the carbon pulse (tgs:Concept.CarbonPulse), he says the soul does not change, only how it is delivered. Related: tgs:Concept.EcocentricDevelopmentalWheel, tgs:Concept.TrueAdulthood, tgs:Work.TheJourneyOfSoulInitiation."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.TrueAdulthood a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "True adulthood"@en ;
+    skos:definition "Bill Plotkin's three-part definition of an adult in the soulcentric sense, as distinct from everyday 'maturity' (being responsible, dependable, kind, generous, able to hold a job), which he says any healthy 15-year-old could manage: (1) experiencing one's membership in the larger Earth community as one's primary membership, deeper than nation, ethnicity, religion or even family; (2) having had one or more experiences, which the West would call mystical, of one's unique place in that community -- an encounter with soul; and (3) having cultivated one or more delivery systems for offering that place as a gift to others. Each part is the achievement of a stage: healthy early adolescence, late adolescence (the cocoon) and early adulthood, often through apprenticeship to an artisan or master."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/146-bill-plotkin> ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_146. He estimates more than 95 percent of contemporary people never reach it, and not many more reach late adolescence (tgs:Concept.ArrestedHumanDevelopment). True elders, rarer still, care for the soul of the more-than-human community and make sure the human village keeps the rest of the Earth community healthy; 'we all can see what happens in the world when we don't have true elders.' Nate says Plotkin is the fourth or fifth thinker in a few weeks to tell him we need to grow up and be adults. Related: tgs:Concept.SoulAsUniqueEcologicalNiche, tgs:Concept.EcocentricDevelopmentalWheel, tgs:Concept.PathoAdolescentSociety."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.PathoAdolescentSociety a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Patho-adolescent society"@en ;
+    skos:definition "Bill Plotkin's term for contemporary industrial societies -- 'pathological adolescent' or 'patho-adolescent egocentric' societies, also the Industrial Growth Society or consumer-conformist society -- in which most people follow his 'egocentric wheel' and stall in an unhealthy early adolescence. He sees two steps beyond them: to life-sustaining societies, which needs a large share of people (perhaps not even 50 percent, given positive tipping points) to be ecologically awakened and could take a generation or two; and then to mature, life-enhancing societies, with perhaps 20 percent true elders and 20 to 25 percent initiated adults, which will take a deep-time perspective of seven generations or so."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/146-bill-plotkin> ;
+    thinkr:influencedBy tgs:Persona.BillPlotkin ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_146. Bluntly, he says 'our society is never going to grow up': it is psychospiritually terminal however advanced its technology, arts and sciences, and he points to Vanessa Andreotti's Hospicing Modernity (tgs:Work.HospicingModernity). What remains is to support ecological awakening now (tgs:Concept.EcologicalAwakening), joining the first dimension of Joanna Macy's Great Turning (tgs:Concept.GreatTurning), while small communities raise children toward true adulthood as seeds of future healthy societies. He traces the crisis back thousands of years (Ishmael, The Parable of the Tribes, Paul Shepard). His magic wand would make every primary educational system nature-based, many of them forest schools: 'even just 20 or 30 years from now, everything would be different.' Related: tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.TrueAdulthood, tgs:Concept.ThingsOfValueThroughTheBottlenecks."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.KnowingVersusKnowingAbout a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Knowing versus knowing about"@en ;
+    skos:definition "Nate Hagens' distinction between knowing about something -- being able to recite the facts and tell the stories -- and knowing it, which carries an embodied sense that it is true and a felt reality and gravity. In TGS_146 he applies it to what people experience over several days in person on the land, as opposed to hearing it described; Bill Plotkin agrees and gives ecological awakening as the best example, since one can understand ecology from a professor's class without ever having the experience."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/146-bill-plotkin> ;
+    thinkr:influencedBy tgs:Persona.NateHagens ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_146. Nate says he has 'increasingly' come to draw this distinction in conversations and in his work. It connects to his argument earlier in the episode that art, poetry and nature are at the root of the crises, fusing the limbic and cognitive systems so we can respond commensurately with the stakes, and that a poem can shift a listener from fight-or-flight toward a parasympathetic state. He also says a 75- to 90-minute podcast is itself not an example of adult or elder communication. Related: tgs:Concept.EcologicalAwakening, tgs:Concept.TwoWaysOfKnowing."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4955,6 +5003,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.KinshipJourney,
         tgs:Concept.KinshipWorldview,
         tgs:Concept.KleibersLaw,
+        tgs:Concept.KnowingVersusKnowingAbout,
         tgs:Concept.LandscapeOfPossibleFutures,
         tgs:Concept.LayersOfInvisibleWealth,
         tgs:Concept.LeapfroggingDevelopment,
@@ -5007,6 +5056,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Overshoot,
         tgs:Concept.OvertonWindow,
         tgs:Concept.Panpsychism,
+        tgs:Concept.PathoAdolescentSociety,
         tgs:Concept.PeakOil,
         tgs:Concept.PeakSensemaking,
         tgs:Concept.PerpetualMulligans,
@@ -5096,6 +5146,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.SolarGeoengineeringGovernance,
         tgs:Concept.SolarRadiationModification,
         tgs:Concept.SolutionSpaceCube,
+        tgs:Concept.SoulAsUniqueEcologicalNiche,
         tgs:Concept.SpaceOfTheNecessary,
         tgs:Concept.StinglessBees,
         tgs:Concept.StrawSiphonSieve,
@@ -5130,6 +5181,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.TragedyOfTheCommons,
         tgs:Concept.TraitsOutcompeteValues,
         tgs:Concept.TransmutingWealthIntoIncome,
+        tgs:Concept.TrueAdulthood,
         tgs:Concept.TwelveInformationHazards,
         tgs:Concept.TwentyControlKnobs,
         tgs:Concept.TwoCategoriesOfTechnology,
@@ -5292,6 +5344,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.ShiftingBaselineSyndrome,
         tgs:Concept.SocialLimitsToGrowthBeforePhysical,
         tgs:Concept.SolarRadiationModification,
+        tgs:Concept.SoulAsUniqueEcologicalNiche,
         tgs:Concept.StinglessBees,
         tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.SuperPollutants,
@@ -5580,6 +5633,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.JevonsDividend,
         tgs:Concept.KinshipJourney,
         tgs:Concept.KinshipWorldview,
+        tgs:Concept.KnowingVersusKnowingAbout,
         tgs:Concept.LayersOfInvisibleWealth,
         tgs:Concept.LearnedHelplessness,
         tgs:Concept.LifeEthic,
@@ -5608,6 +5662,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.OvertonWindow,
         tgs:Concept.Panpsychism,
+        tgs:Concept.PathoAdolescentSociety,
         tgs:Concept.PeakSensemaking,
         tgs:Concept.PersonalAgency,
         tgs:Concept.PersonalCompositeFutures,
@@ -5667,6 +5722,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SocialDilemma,
         tgs:Concept.SoftFeudalism,
         tgs:Concept.SolutionSpaceCube,
+        tgs:Concept.SoulAsUniqueEcologicalNiche,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.SuperorganismFreeZones,
         tgs:Concept.SystemsTeachConservation,
@@ -5684,6 +5740,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ThreeTimelinesOfResponse,
         tgs:Concept.ToxicityCrisis,
         tgs:Concept.TraitsOutcompeteValues,
+        tgs:Concept.TrueAdulthood,
         tgs:Concept.TwelveInformationHazards,
         tgs:Concept.TwentyControlKnobs,
         tgs:Concept.UltraProcessedInformation,
@@ -5764,6 +5821,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.NonZeroSumness,
         tgs:Concept.OmniLose,
+        tgs:Concept.PathoAdolescentSociety,
         tgs:Concept.PersonalCompositeFutures,
         tgs:Concept.Polycrisis,
         tgs:Concept.PrecautionaryPrinciple,
@@ -5991,6 +6049,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.OvertonWindow,
+        tgs:Concept.PathoAdolescentSociety,
         tgs:Concept.Polycrisis,
         tgs:Concept.Pragmatopia,
         tgs:Concept.PrecautionaryPrinciple,
@@ -6138,12 +6197,14 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IntelligenceBoundByWisdom,
         tgs:Concept.KinshipJourney,
         tgs:Concept.KinshipWorldview,
+        tgs:Concept.KnowingVersusKnowingAbout,
         tgs:Concept.LearnedHelplessness,
         tgs:Concept.LightTriad,
         tgs:Concept.LogicOfSeparation,
         tgs:Concept.LossAversion,
         tgs:Concept.NaiveProgress,
         tgs:Concept.OneMarshmallowRewardCircuits,
+        tgs:Concept.PathoAdolescentSociety,
         tgs:Concept.PostTragic,
         tgs:Concept.PowerOfLifeVsPowerOverLife,
         tgs:Concept.PowerSeekingAndComplicity,
@@ -6160,12 +6221,14 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SevenFiresProphecy,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.SharedBroadcastPerturbation,
+        tgs:Concept.SoulAsUniqueEcologicalNiche,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TechnologyIsNotValuesNeutral,
         tgs:Concept.TheFifteenHundred,
         tgs:Concept.TheLastCanToKick,
         tgs:Concept.TraitsOutcompeteValues,
+        tgs:Concept.TrueAdulthood,
         tgs:Concept.VerticalBehavioralStack,
         tgs:Concept.WideBoundarySovereignty ;
     .
@@ -6383,6 +6446,15 @@ tgs:Concept.GrowthDoubleBind skos:related tgs:Concept.GrowthImperative .
 tgs:Concept.GrowthDoubleBind skos:related tgs:Concept.EmbeddedGrowthObligation .
 tgs:Concept.EfficiencyResilienceBalance skos:related tgs:Concept.CollapseResilience .
 tgs:Concept.CompostingTheSurplus skos:related tgs:Concept.MoneyAsClaimOnEnergy .
+tgs:Concept.SoulAsUniqueEcologicalNiche skos:related tgs:Concept.EcocentricDevelopmentalWheel .
+tgs:Concept.SoulAsUniqueEcologicalNiche skos:related tgs:Concept.TrueAdulthood .
+tgs:Concept.TrueAdulthood skos:related tgs:Concept.ArrestedHumanDevelopment .
+tgs:Concept.TrueAdulthood skos:related tgs:Concept.EcocentricDevelopmentalWheel .
+tgs:Concept.PathoAdolescentSociety skos:related tgs:Concept.ArrestedHumanDevelopment .
+tgs:Concept.PathoAdolescentSociety skos:related tgs:Concept.GreatTurning .
+tgs:Concept.PathoAdolescentSociety skos:related tgs:Concept.EcologicalAwakening .
+tgs:Concept.KnowingVersusKnowingAbout skos:related tgs:Concept.EcologicalAwakening .
+tgs:Concept.KnowingVersusKnowingAbout skos:related tgs:Concept.TwoWaysOfKnowing .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -6396,6 +6468,9 @@ tgs:Concept.AggregateProbability
 
 tgs:Concept.AllostaticLoad
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
+
+tgs:Concept.ArrestedHumanDevelopment
+    skos:related tgs:Concept.PathoAdolescentSociety, tgs:Concept.TrueAdulthood .
 
 tgs:Concept.AttentionEconomy
     skos:related tgs:Concept.InformationCultureTransitions .
@@ -6467,6 +6542,12 @@ tgs:Concept.DopamineHijackedCulture
 tgs:Concept.EarnedHope
     skos:related tgs:Concept.DutyToHope .
 
+tgs:Concept.EcocentricDevelopmentalWheel
+    skos:related tgs:Concept.SoulAsUniqueEcologicalNiche, tgs:Concept.TrueAdulthood .
+
+tgs:Concept.EcologicalAwakening
+    skos:related tgs:Concept.KnowingVersusKnowingAbout, tgs:Concept.PathoAdolescentSociety .
+
 tgs:Concept.EcologicalFootprint
     skos:related tgs:Concept.CarryingCapacity .
 
@@ -6524,6 +6605,9 @@ tgs:Concept.GiftEconomy
 tgs:Concept.GreatSimplification
     dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization, tgs:Work.OikosRising ;
     skos:relatedMatch tgs:Concept.CollapseResponseContinuum .
+
+tgs:Concept.GreatTurning
+    skos:related tgs:Concept.PathoAdolescentSociety .
 
 tgs:Concept.GrowthDoubleBind
     skos:related tgs:Concept.RegenerativeEconomics .
@@ -6788,10 +6872,14 @@ tgs:Concept.TransmutingWealthIntoIncome
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
     skos:related tgs:Concept.GameTheoreticVersusRealValue, tgs:Concept.HicksianProfit .
 
+tgs:Concept.TrueAdulthood
+    skos:related tgs:Concept.SoulAsUniqueEcologicalNiche .
+
 tgs:Concept.TwelveInformationHazards
     skos:related tgs:Concept.MusicalChairsMoment .
 
 tgs:Concept.TwoWaysOfKnowing
+    skos:related tgs:Concept.KnowingVersusKnowingAbout ;
     skos:relatedMatch tgs:PracticeTerm.TraditionalEcologicalKnowledge .
 
 tgs:Concept.UnintendedConsequences

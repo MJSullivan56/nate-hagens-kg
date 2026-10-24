@@ -936,10 +936,11 @@ tgs:Persona.FrancisWeller a thinkr:Persona, owl:NamedIndividual ;
 
 tgs:Persona.BillPlotkin a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.BillPlotkin ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
     thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_BillPlotkin ;
     skos:prefLabel "Bill Plotkin"@en ;
     rdfs:label "Bill Plotkin (persona)"@en ;
-    skos:scopeNote "Built 2026-08-13 after 3 independent real citations across separate builds this session (RR-17, Frankly_132, TGS_167) all deferred him — MJSullivan's own direct instruction: 'at this point I don't see why not mint Bill Plotkin as a persona.' Real prior TGS episode (#146, 'Ecological Awakening: A Path Toward Holistic Adulthood') built as a stub — see tgs:Interview.TGS_146_BillPlotkin — not yet fleshed out from its own real transcript."@en .
+    skos:scopeNote "Built 2026-08-13 after 3 independent real citations across separate builds this session (RR-17, Frankly_132, TGS_167) all deferred him — MJSullivan's own direct instruction: 'at this point I don't see why not mint Bill Plotkin as a persona.' Real prior TGS episode (#146, 'Ecological Awakening: A Path Toward Holistic Adulthood') see tgs:Interview.TGS_146_BillPlotkin, built 2026-08-24 and enriched 2026-10-24 from its transcript and show notes. Professional: Nate says he had not heard Plotkin's name until a year or two before, then heard it 'like a hundred times' through many mutual colleagues; Plotkin required him to read Nature and the Human Soul before agreeing to come on. He calls Joanna Macy his friend and teacher, and has met Richard Schwartz."@en .
 
 tgs:Persona.ChristineWebb a thinkr:Persona, owl:NamedIndividual ;
     thinkr:actsThrough tgs:Human.ChristineWebb ;
@@ -2009,6 +2010,9 @@ tgs:Persona.JeremyGrantham
 tgs:Persona.JoanDiamond
     dct:isReferencedBy tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife .
 
+tgs:Persona.JoannaMacy
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
 tgs:Persona.KirilSokoloff
     dct:isReferencedBy tgs:Interview.TGS_113_LynAlden .
 
@@ -2030,7 +2034,13 @@ tgs:Persona.PriscillaTrinh
 tgs:Persona.ReidMeloy
     dct:isReferencedBy tgs:Monologue.Frankly_125_UncomfortableQuestionsInUnstableTimes .
 
+tgs:Persona.RianeEisler
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
 tgs:Persona.RichardSchwartz
+    dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
+
+tgs:Persona.SamanthaSweetwater
     dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin .
 
 tgs:Persona.ShannaSwan
