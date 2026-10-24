@@ -2976,3 +2976,16 @@ tgs:Relationship.NateHagens_ChristianSawyer a thinkr:Relationship, owl:NamedIndi
           thinkr:episode tgs:Interview.TGS_156_ChristianSawyer ;
           dcterms:date "2024-11-07"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'You're a listener who reached out to us'; Nate closes 'please stay in touch'."@en .
+
+tgs:Relationship.NateHagens_JohnFullerton a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.JohnFullerton ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with John Fullerton"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_149_JohnFullerton ;
+          dcterms:date "2024-10-10"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'we have known each other for a long time, but only spoken more, recently'. Nate says he has built up over a dozen questions, 'so this might have to be a two part interview', and closes: 'we will certainly continue this conversation my friend'. An answer from this episode is replayed in the 2024 wrap-up, tgs:Interview.TGS_157_BestOfTgs."@en .

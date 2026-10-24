@@ -2268,6 +2268,14 @@ tgs:Human.ChristianSawyer a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://groundparty.beehiiv.com/> ;
     .
 
+tgs:Human.JohnFullerton a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "John Fullerton"@en ;
+    rdfs:label "John Fullerton (human)"@en ;
+    rdfs:comment "Unconventional economist, impact investor, writer and teacher; architect of Regenerative Economics, first set out in his 2015 booklet 'Regenerative Capitalism: How Universal Patterns and Principles Will Shape the New Economy'. Spent about 20 years at what he calls 'the old JPMorgan', straight out of college, rising to Managing Director and working in derivatives (he helped with the Long-Term Capital Management unwind); he left in 2001, at 41, after the Chase merger, with no plan. Founded the Capital Institute in 2010 to reimagine economics and finance in service to life, and teaches courses on regenerative economics and regenerative finance. Chairman of New Day Enterprises, PBC; co-founder of Grasslands, LLC, which practises holistic planned grazing; board member of the Savory Institute and Stone Acres Farm."@en ;
+    thinkr:memberOf tgs:Organization.CapitalInstitute, tgs:Organization.GrasslandsLLC, tgs:Organization.SavoryInstitute ;
+    dct:source <https://capitalinstitute.org/director/john-fullerton/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -2282,7 +2290,7 @@ tgs:Human.AndrewMillison
     dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Human.Aristotle
-    dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_161_ScottTinker .
 
 tgs:Human.ArtBerman
     dct:isReferencedBy tgs:Monologue.Frankly_141_WideBoundaryNews, tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk .
@@ -2306,13 +2314,16 @@ tgs:Human.DanielPBrown
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Monologue.Frankly_95_TheParentAndThePendulum .
 
 tgs:Human.DanielSchmachtenberger
-    dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy, tgs:Monologue.Frankly_69_GoldilocksTechnology, tgs:Monologue.Frankly_96_TheEightFacesOfAI .
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_184_ConnorLeahy, tgs:Monologue.Frankly_69_GoldilocksTechnology, tgs:Monologue.Frankly_96_TheEightFacesOfAI .
 
 tgs:Human.DavidSloanWilson
     dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind .
 
 tgs:Human.DonellaMeadows
-    dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
+
+tgs:Human.EFSchumacher
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Human.EOWilson
     dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
@@ -2322,6 +2333,9 @@ tgs:Human.EdConway
 
 tgs:Human.FrancisWeller
     dct:isReferencedBy tgs:Monologue.Frankly_83_ArtificialIntelligenceAndTheLostArk .
+
+tgs:Human.FritjofCapra
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Human.GeoffreyWest
     dct:isReferencedBy tgs:Monologue.Frankly_59_SevenMetaQuestionsAboutOurGlobalMetabolism .
@@ -2333,7 +2347,7 @@ tgs:Human.HagaiLevine
     dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Human.HermanDaly
-    dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
+    dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben, tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Human.IlyaPrigogine
     dct:isReferencedBy tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
@@ -2353,8 +2367,14 @@ tgs:Human.JohanRockstrom
 tgs:Human.JuliaCarabiasLillo
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
 
+tgs:Human.KateRaworth
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
+
 tgs:Human.KatharineHayhoe
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+
+tgs:Human.LynnMargulis
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Human.MKingHubbert
     dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker, tgs:Interview.TGS_162_JeanBaptisteFressoz .
@@ -2403,6 +2423,9 @@ tgs:Human.TristanHarris
 
 tgs:Human.VanessaAndreotti
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .
+
+tgs:Human.WesJackson
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Human.ZakStein
     dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .

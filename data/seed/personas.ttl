@@ -1966,6 +1966,15 @@ tgs:Persona.ChristianSawyer a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "A TGS listener who reached out to the show; Nate introduces him as 'a TGS listener'. He offered to help listeners start their own work groups through a Slack group linked in the show notes."@en ;
     .
 
+tgs:Persona.JohnFullerton a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.JohnFullerton ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_JohnFullerton ;
+    skos:prefLabel "John Fullerton"@en ;
+    rdfs:label "John Fullerton (persona)"@en ;
+    skos:scopeNote "Professional: Nate says they have known each other a long time but only spoken more recently. Both left Wall Street careers (Fullerton at JPMorgan, Nate at Salomon Brothers), and both credit Herman Daly's For the Common Good among the books that changed them. Fullerton calls Daly one of his intellectual heroes and a personal friend, and Donella Meadows one of their 'mutual teachers'."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

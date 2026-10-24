@@ -917,6 +917,31 @@ tgs:Organization.ProjectLiberty a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.projectliberty.io/> ;
     .
 
+tgs:Organization.CapitalInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Capital Institute"@en ;
+    skos:definition "Organization founded by John Fullerton in 2010, dedicated to the bold reimagination of economics and finance in service to life. It develops Regenerative Economics (tgs:Concept.RegenerativeEconomics) and its eight principles, publishes Finance for a Regenerative World, and runs online courses on regenerative economics and on finance for a regenerative economy. It is a partner within nRhythm (TGS_149)."@en ;
+    dcterms:source <https://capitalinstitute.org/> ;
+    .
+
+tgs:Organization.GrasslandsLLC a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Grasslands, LLC"@en ;
+    skos:altLabel "Grasslands"@en ;
+    skos:definition "Company co-founded by John Fullerton that applies holistic planned grazing (tgs:Concept.HolisticPlannedGrazing) on large grasslands. Fullerton says he saw with his own eyes that the practice works; standing on a Montana ridge with Allan Savory, he conceived the idea of regenerative economics (TGS_149)."@en ;
+    dcterms:source <https://www.grasslands-llc.com/> ;
+    .
+
+tgs:Organization.SavoryInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Savory Institute"@en ;
+    skos:definition "Organization founded on Allan Savory's work that promotes holistic management and holistic planned grazing (tgs:Concept.HolisticPlannedGrazing) to regenerate grasslands. John Fullerton sits on its board."@en ;
+    dcterms:source <https://savory.global/> ;
+    .
+
+tgs:Organization.NRhythm a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "nRhythm"@en ;
+    skos:definition "Consultancy through which John Fullerton and his partners implement regenerative economics inside small organizations, starting with an organization's culture rather than greening its supply chain, on the premise that every organization is itself a living system. The Capital Institute is a partner within it; Fullerton reports 'lots of success' turning extractive organizations into regenerative ones (TGS_149)."@en ;
+    dcterms:source <https://www.nrhythm.co/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -926,6 +951,9 @@ tgs:Organization.BeyondPlastics
 
 tgs:Organization.BureauOfEconomicGeology
     dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
+
+tgs:Organization.CapitalInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Organization.CascadeInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
@@ -990,6 +1018,9 @@ tgs:Organization.GlobalGuerrillasReport
 tgs:Organization.GranthamFoundation
     dcterms:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
+tgs:Organization.GrasslandsLLC
+    dcterms:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
+
 tgs:Organization.IFRC
     dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
 
@@ -998,6 +1029,9 @@ tgs:Organization.InternationalBatesonInstitute
 
 tgs:Organization.LivingEnergyFarm
     dcterms:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
+
+tgs:Organization.NRhythm
+    dcterms:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Organization.PlanetLabs
     dcterms:isReferencedBy tgs:Interview.TGS_173_WillMarshall .
@@ -1022,6 +1056,9 @@ tgs:Organization.RecycleLebanon
 
 tgs:Organization.Restor
     dcterms:isReferencedBy tgs:Interview.TGS_177_ThomasCrowther .
+
+tgs:Organization.SavoryInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Organization.SkepticalScience
     dcterms:isReferencedBy tgs:Interview.TGS_212_JohnCook .

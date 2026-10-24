@@ -3733,6 +3733,37 @@ tgs:Work.FiveThirtyFiveNotOne a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.amazon.com/535-Not-1-Richard-Gephardt/dp/1667849654> ;
     .
 
+tgs:Work.RegenerativeCapitalism2015 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Regenerative Capitalism: How Universal Patterns and Principles Will Shape the New Economy"@en ;
+    rdfs:comment "John Fullerton's 2015 booklet, published by the Capital Institute, in which he first set out Regenerative Economics: an economy understood as a living system and redesigned around eight principles drawn from living systems science (tgs:Concept.EightPrinciplesOfARegenerativeEconomy)."@en ;
+    dct:creator tgs:Human.JohnFullerton ;
+    dct:issued "2015"^^xsd:gYear ;
+    dct:source <https://capitalinstitute.org/wp-content/uploads/2015/04/2015-Regenerative-Capitalism-4-20-15-final.pdf> ;
+    .
+
+tgs:Work.FinanceForARegenerativeWorld a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Finance for a Regenerative World"@en ;
+    rdfs:comment "John Fullerton's long paper, 'really a book' available as a PDF, from the Capital Institute. He deliberately did not call it 'regenerative finance' because he is not sure such a thing exists; he believes a financial system can serve a regenerative economy, but it will not look like the current one (TGS_149)."@en ;
+    dct:creator tgs:Human.JohnFullerton ;
+    dct:source <https://capitalinstitute.org/wp-content/uploads/2018/11/Regen-Finan-RVSD-Interactive_FINAL2.0.pdf> ;
+    .
+
+tgs:Work.HolismAndEvolution a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Holism and Evolution"@en ;
+    rdfs:comment "Jan Smuts' 1926 book, which introduced the term 'holism': the tendency in nature to form wholes greater than the sum of their parts. Allan Savory pointed John Fullerton to it, and Fullerton recommends it (calling it 'ecology and evolution, I believe'); he repeats the story that Einstein told Smuts that relativity and holism would shape the future course of civilization (TGS_149)."@en ;
+    dct:creator "Jan Smuts" ;
+    dct:issued "1926"^^xsd:gYear ;
+    dct:source <https://en.wikipedia.org/wiki/Holism_and_Evolution> ;
+    .
+
+tgs:Work.TheTheoryOfTheLeisureClass a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Theory of the Leisure Class"@en ;
+    rdfs:comment "Thorstein Veblen's 1899 study of conspicuous consumption, linked in the TGS_149 show notes when Nate recalls Veblen's distinction between the industrial and the pecuniary parts of the economy, the latter 'just money moving around money' (tgs:Concept.Chrematistics)."@en ;
+    dct:creator "Thorstein Veblen" ;
+    dct:issued "1899"^^xsd:gYear ;
+    dct:source <https://moglen.law.columbia.edu/LCS/theoryleisureclass.pdf> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3806,11 +3837,14 @@ tgs:Work.Disorder2022
 tgs:Work.DopamineNation
     dct:isReferencedBy tgs:Interview.TGS_206_AnnaLembke .
 
+tgs:Work.DoughnutEconomics
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
+
 tgs:Work.DrillingDown
     dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek .
 
 tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism
-    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_159_SunitaNarain, tgs:Interview.TGS_171_AlexisZeigler .
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_159_SunitaNarain, tgs:Interview.TGS_171_AlexisZeigler .
 
 tgs:Work.EmpoweringCommunities
     dct:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
@@ -3826,6 +3860,9 @@ tgs:Work.EnergyAndHumanAmbitions
 
 tgs:Work.ExcretaMatters
     dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+
+tgs:Work.FinanceForARegenerativeWorld
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Work.FiveThirtyFiveNotOne
     dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
@@ -3857,6 +3894,9 @@ tgs:Work.GreenIllusions
 tgs:Work.HistoryForTomorrow
     dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric .
 
+tgs:Work.HolismAndEvolution
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
+
 tgs:Work.HowToFallInLoveWithTheFuture
     dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
 
@@ -3879,7 +3919,7 @@ tgs:Work.LePlanDeTransformation
     dct:isReferencedBy tgs:Interview.TGS_84_JeanMarcJancovici .
 
 tgs:Work.LimitsToGrowth1972
-    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_162_JeanBaptisteFressoz .
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Work.Matrimony
     dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
@@ -3901,6 +3941,9 @@ tgs:Work.PratiquementDurable
 
 tgs:Work.RealityBlind
     dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_100_NateHagens, tgs:Interview.TGS_10_NoraBateson, tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_113_LynAlden, tgs:Interview.TGS_14_JohnGowdy, tgs:Interview.TGS_196_MeredithAngwin, tgs:Interview.TGS_208_XiyeBastida, tgs:Interview.TGS_34_KirilSokoloff, tgs:Interview.TGS_51_DJWhite, tgs:Interview.TGS_99_JeremyGrantham, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole, tgs:PanelDiscussion.RR_11_TalesFromTheCarbonPulse, tgs:PanelDiscussion.RR_26_WhyCommunityFails .
+
+tgs:Work.RegenerativeCapitalism2015
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Work.ResilienceAdaptabilityTransformability
     dct:isReferencedBy tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
@@ -3970,6 +4013,9 @@ tgs:Work.TheSpaceOfPossibleMindDesigns
 
 tgs:Work.TheStoryOfCO2
     dct:isReferencedBy tgs:Interview.TGS_210_PeterBrannen .
+
+tgs:Work.TheTheoryOfTheLeisureClass
+    dct:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Work.TheTransitionHandbook
     dct:isReferencedBy tgs:Interview.TGS_224_RobHopkins .

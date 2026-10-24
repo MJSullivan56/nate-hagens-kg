@@ -1749,7 +1749,7 @@ tgs:Concept.RegenerativeFinance a thinkr:Concept, owl:NamedIndividual ;
     skos:definition "An aspirational field, in Matthew Monahan's words in TGS_226 'more of a Schelling point' than a fixed definition, that asks how money and financial systems could put life back at the center, restoring ecosystem health and aligning the economy with the conditions for life rather than working against them. It builds on John Fullerton's regenerative economics. Monahan identifies three failures it must address in current funding: it is top-down and abstract (carbon credits and net-zero pledges that never reach local stewards), siloed (philanthropy, impact investing and government in separate buckets, with nonprofits competing and re-applying), and low-trust (missing feedback loops). His responses include bottom-up, community-defined funding, interoperable data that projects own, trust and reputation infrastructure, and, cautiously, complementary currencies and public blockchains. The open risk Nate raises is that pricing and trading nature more accurately could extend the same growth and commodification logic; Monahan therefore starts with gifts rather than ecological credits."@en ;
     dcterms:source <https://blog.toucan.earth/what-is-refi-regenerative-finance/> ;
     thinkr:influencedBy tgs:Persona.MatthewMonahan ;
-    skos:scopeNote "Minted 2026-10-13 for TGS_226. Related: tgs:Concept.QuadraticFunding, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.GrowthImperative; see also tgs:Interview.TGS_149_JohnFullerton."@en ;
+    skos:scopeNote "Minted 2026-10-13 for TGS_226. Related: tgs:Concept.QuadraticFunding, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.GrowthImperative; see also tgs:Interview.TGS_149_JohnFullerton and tgs:Concept.RegenerativeEconomics; in TGS_149 Fullerton says he is not sure regenerative finance exists, and calls finance regenerative only for capital holders an oxymoron."@en ;
     .
 
 tgs:Concept.QuadraticFunding a thinkr:Concept, owl:NamedIndividual ;
@@ -4629,6 +4629,126 @@ tgs:Concept.RankedChoiceVoting a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.RegenerativeEconomics a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Regenerative economics"@en ;
+    skos:definition "John Fullerton's 'idea, seeking to become a discipline', built on the foundation of ecological economics but leaving its purely materialist paradigm. It rests on three premises: (1) the human economy is a living system, made of humans and their tools and embedded in the living Earth; (2) living systems science can now articulate the patterns and principles by which life works, which are tendencies rather than physical laws and repeat across scales; and (3) an economy that is to last indefinitely must therefore follow those same patterns, or be the only exception to them. Beneath its eight principles lies a shift from reductionist to holistic thinking. Its aim is to create the conditions for health and 'let go of the outcome': aligning with how life works manifests potential that cannot be forecast in advance, as a degraded grassland regenerates under holistic management. Like a doctor checking blood pressure and pulse rather than asking for push-ups, it would manage an economy by intrinsic indicators of health rather than by target outcomes."@en ;
+    dcterms:source <https://capitalinstitute.org/fundamentals-of-regenerative-economics/> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. First set out in tgs:Work.RegenerativeCapitalism2015 and taught by tgs:Organization.CapitalInstitute. Fullerton conceived it on a Montana ridge with Allan Savory: if holistic management works in grasslands (tgs:Concept.HolisticPlannedGrazing), why not in the global economy? He credits Herman Daly's ecological economics as its foundation and concedes it 'has nothing new to say' about overshoot (tgs:Concept.Overshoot); its difference is the regenerative paradigm, a metamorphosis whose butterfly 'we don't know' yet. He sees it unfolding fractally: the self and inner work, then bioregions, then small organizations (tgs:Organization.NRhythm), and last, and hardest, whole economies, through a phase shift (tgs:Concept.DiscretePhaseShift). Nate equates the reductionist-holistic shift with his narrow versus wide boundary thinking (tgs:Concept.WideBoundary) and asks how we get from here to there, the 'miracle in the middle' he finds missing in regenerative, degrowth and doughnut frameworks alike. Related: tgs:Concept.RegenerativeFinance, tgs:Concept.LeveragePoints (Meadows' paradigm as the deepest leverage point)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.EightPrinciplesOfARegenerativeEconomy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Eight principles of a regenerative economy"@en ;
+    skos:definition "John Fullerton's eight first principles, drawn from living systems science, for an economy that works the way life works, resting on a prior shift from reductionist to holistic thinking: (1) in right relationship -- everything is connected and interdependent, so exchanges should be of mutual benefit rather than extraction; (2) views wealth holistically -- many forms of capital to be balanced, rather than treating money as wealth and maximizing it; (3) innovative, adaptive, responsive -- innovation that helps the organism adapt to a changing context, not innovation for its own sake; (4) empowered participation -- every part must be empowered to participate for the health of the whole, a design principle rather than a moral choice, as feet and toes share the circulation of oxygen; (5) honors community and place -- living systems happen in place, the home of bioregional and local economies; (6) edge effect abundance -- novelty and diversity arise where systems meet, as at an ecotone, and between disciplines; (7) robust circulatory flow -- of matter, energy and above all information, with healthy inputs and outputs, a richer idea than the circular economy; and (8) seeks balance -- dynamic balance, including between power and constraint and between efficiency and resilience."@en ;
+    dcterms:source <https://capitalinstitute.org/8-principles-regenerative-economy/> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Fullerton stresses that there are 'no right first principles': listing them is itself reductionist, fingers pointing at the moon not to be confused with the moon. In TGS_149 he names them in a different order, with right relationship as most fundamental; the labels here follow the Capital Institute's published list. Examples he gives: speculation violates right relationship because it always has one winner and one loser; inequality and poverty are failures of empowered participation; the internet is 'the most powerful example of emergent regenerative technology' in our lifetimes, but its advertising and data-extraction business models are degenerative; we grossly violate robust circulation through carbon emissions; and restoring the balance between power and constraint is 'a stumper'. Related: tgs:Concept.RegenerativeEconomics, tgs:Concept.EfficiencyResilienceBalance, tgs:Concept.Bioregion, tgs:Concept.FinanceAlgorithm."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.Chrematistics a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Chrematistics (versus oikonomia)"@en ;
+    skos:definition "Aristotle's distinction, as John Fullerton learned it from Herman Daly and John Cobb's For the Common Good, between oikonomia -- the management of the household, the root of both 'economics' and 'ecology', and what economics is really about -- and chrematistics, the art of using money to make money, which Aristotle called unnatural. Fullerton, reading it at one in the morning, recognized 'that's what I do'. Today, he says, we do not distinguish the real economy from the financial economy: a 12 percent risk-adjusted return from high-frequency trading counts the same as one from a wind farm, and we call hedge-fund speculators 'investors'."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Chrematistics> ;
+    thinkr:influencedBy tgs:Persona.Aristotle, tgs:Persona.HermanDaly, tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Nate had read For the Common Good (tgs:Work.ForTheCommonGood) but did not remember the word. He adds Thorstein Veblen's similar distinction between the industrial and the pecuniary parts of the economy, the latter 'just money moving around money' (tgs:Work.TheTheoryOfTheLeisureClass), and calls finance 'one of the protrusions on the body of the economic superorganism'. He also qualifies Aristotle: making money from money is only the proximate goal; the ultimate goal is power, a larger share of resources, and money is linked to energy (tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.MaximumPowerPrinciple), which is not so unnatural, though at this scale it is unhealthy. Fullerton says the chapter is chapter seven. The word gives a counterpart to oikos, the household root also behind the Oikos Rising game name."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.FinanceAlgorithm a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "The finance algorithm"@en ;
+    skos:definition "John Fullerton's name for the logic of modern finance, spawned by neoclassical economics, that treats money as if it were wealth and is designed to maximize a single form of capital, financial capital, which it does very well, at the expense of the other forms of wealth (natural, social, cultural and human). Alongside the myth of separation that allows neoclassical economics to take hold, he calls it 'very much the root cause of the polycrisis', and he describes the financial system as probably the biggest obstacle to the natural emergence of a regenerative economy."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Fullerton's own vantage: as a derivatives specialist he broke risks into parts managed on separate desks, 'and then suddenly you have a financial crisis'. Speculation and high-frequency trading make Wall Street 'super efficient' at extracting returns, through leverage, leaving a brittle system that would have collapsed without the central banks (tgs:Concept.EfficiencyResilienceBalance); he proposes a financial transaction tax (tgs:Concept.FinancialTransactionTax). Nate counters that today's 'regenerative finance' is regenerative for the capital holders, not the whole economy; Fullerton calls that an oxymoron, since it violates right relationship and holistic wealth and eventually undermines its host. Nate asks whether finance is a tumor whose removal would kill the host; Fullerton thinks not. Related: tgs:Concept.Chrematistics, tgs:Concept.LogicOfSeparation, tgs:Concept.Polycrisis, tgs:Concept.RegenerativeFinance."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.GrowthDoubleBind a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    skos:prefLabel "The growth double bind"@en ;
+    skos:definition "What John Fullerton calls 'the double bind of all time': exponential growth works, at least in the short term -- fortunes are made and government budgets funded -- and any hint of slowing growth, let alone shrinking, brings recession and unemployment, because we are 'leveraged to growth in more ways than we realize'; yet if we keep growing we will collapse not only the economy but the ecology and civilization as we know it. He says some talk of degrowth and limits to growth ignores the first half: the system demands growth to stay a system."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. He reached it after reading The Limits to Growth (tgs:Work.LimitsToGrowth1972), 'the proverbial spear in the chest', and ecological economics; he concluded that if constraint and redistribution were the whole answer, 'we're seriously screwed', and searched for a way out, which became regenerative economics (tgs:Concept.RegenerativeEconomics). He credits Nate's conversations with Daniel Schmachtenberger for game-theorizing the double bind more fully than he can. Related: tgs:Concept.GrowthImperative, tgs:Concept.EmbeddedGrowthObligation, tgs:Concept.LimitsToGrowth."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.NewtonianFoundationsOfEconomics a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Newtonian foundations of neoclassical economics"@en ;
+    skos:definition "John Fullerton's argument that neoclassical economics was literally built on, not merely influenced by, the mechanistic, clockwork-universe worldview of Newtonian physics, and has never been updated: Irving Fisher's work maps the particle of Newtonian physics onto the individual of economics, 'literally with an arrow'. Later mainstream economics, Keynes included, 'patched the wobbles', as astronomers who placed Earth at the centre explained the planets' wobbles rather than question the assumption. The result is a discipline that treats a living system as a machine, speaks of mechanisms and dials, and expects a policy to produce a forecast outcome."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. His exhibit: the economics prize awarded to Yale's William Nordhaus for work suggesting about three and a half degrees of warming as optimal because less would cost too much, though Nordhaus understands the climate science; Fullerton notes that the prize is the Swedish central bank's, not a 'legitimate' Nobel. Nate cites Corey Bradshaw (tgs:Interview.TGS_136_CoreyBradshaw) that three degrees might cost half of Earth's species, and notes that about 240 million students are enrolled in colleges, many taking Econ 101. Herman Daly once challenged Fullerton to find the word 'scale' in any neoclassical textbook. Related: tgs:Concept.RegenerativeEconomics, tgs:Concept.WideBoundary."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.EfficiencyResilienceBalance a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.SystemsScience, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Efficiency-resilience balance"@en ;
+    skos:definition "The finding, from process ecologist Robert (Bob) Ulanowicz's empirical work on living systems, that sustainable ecosystems balance efficiency against resilience: their health traces an inverted-U curve, skewed toward resilience. John Fullerton contrasts this with economics, which is 'all about maximizing efficiency': globalization and just-in-time inventory pursue efficiency at the expense of resilience, so supply chains can crater the whole economy, and Wall Street became super-efficient at extracting returns on financial capital but left the system brittle."@en ;
+    dcterms:source <https://www.bcb.gov.br/pgbcb/122011/revista_pgbc_vol5_num2.pdf#page=103> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Fullerton places it within his principle of balance (tgs:Concept.EightPrinciplesOfARegenerativeEconomy). This passage supplies the episode's teaser. Nate's answer is that the system is likely to collapse or at least shrink, the onset of the Great Simplification, though AI may kick the can a bit further. Related: tgs:Concept.CollapseResilience, tgs:Concept.FinanceAlgorithm."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.FinancialTransactionTax a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Financial transaction tax"@en ;
+    skos:definition "A small tax on financial transactions, an old idea once called the Tobin tax, meant to 'throw a little sand in the gears' of speculation. John Fullerton spent about two years after the 2008 crash writing about it and lobbying in Washington, arguing that it would make very short-term, rapid trading uneconomic. Speculation, he says, always has one winner and one loser, violating right relationship; market making plays a productive role, but taken to an extreme, with trillions of dollars of purely speculative capital flowing daily, it becomes extractive -- and high-frequency trading 'uses the most power'."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Financial_transaction_tax> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Asked whether it could pass in the next five to seven years, Fullerton says he cannot see it: after the crisis there was a desire to get back at Wall Street, which has faded. Until people come to see the economy and financial system as living systems, his policy arguments 'won't even register', because they are seen through the mechanistic Newtonian lens (tgs:Concept.NewtonianFoundationsOfEconomics). Related: tgs:Concept.FinanceAlgorithm, tgs:Concept.Chrematistics."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.HolisticPlannedGrazing a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Holistic planned grazing"@en ;
+    skos:definition "Allan Savory's practice, sometimes called mob or rotational grazing, of moving herbivores across large grasslands to mimic how wild herds once worked: biomimicry that regenerates bare, degraded land into healthy ecosystems, often within one or two seasons. Because the context of a living system is always changing, it relies on holistic decision-making: set goals, then monitor for where things are going wrong and adapt, rather than holding variables constant. John Fullerton says he saw with his own eyes that it works, while conventional scientists say it does not because it cannot be tested reductively."@en ;
+    dcterms:source <https://savory.global/wp-content/uploads/2017/02/about-holistic-planned-grazing.pdf> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Fullerton calls Savory 'somewhat controversial' and says he takes 'a lot of spears in his back' for questioning Western scientific method; he co-founded tgs:Organization.GrasslandsLLC to use the practice and sits on the board of tgs:Organization.SavoryInstitute. It inspired regenerative economics (tgs:Concept.RegenerativeEconomics). Restoration is not yet regeneration, he says, but is the path to it; Nate adds that it is necessary but not sufficient, since we cannot regenerate from dust. Related: tgs:PracticeTerm.RegenerativeGrazing, tgs:PracticeTerm.RegenerativeAgriculture."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.CompostingTheSurplus a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Composting the surplus"@en ;
+    skos:definition "John Fullerton's phrase for redirecting concentrated private wealth -- the surplus of a few people's fortunes -- back into regenerating life while its holders are alive, 'repurposing the surplus, composting the surplus, literally', which he calls 'the holy grail' many have aimed at. Asked whether billionaires could exist in a regenerative economy, he says he doesn't think so, but that he has far less of a problem with billionaires existing than with their surplus not being composted before they die."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> ;
+    thinkr:influencedBy tgs:Persona.JohnFullerton ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_149. Nate agrees: never has an individual or family controlled so much surplus energy through money, more than Cleopatra or the kings of old, and wealth is the power to influence things, so a change of consciousness among such people is 'a terrible thing to waste'; he worries that the people who amass such fortunes are self-selected not to have it. His story: ecologically literate wealthy people who say they are focused on their investments so they can contribute more later. Fullerton's own turning point was a New York Times story about Walter Annenberg giving away most of his fortune: he decided he did not want to work his whole life to become a philanthropist. Related: tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.ThreeTiersOfWealth."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4669,6 +4789,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.CaringEconomics,
         tgs:Concept.CarryingCapacity,
         tgs:Concept.ChaliceAndBladePower,
+        tgs:Concept.Chrematistics,
         tgs:Concept.CircleOfTrustLocalism,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.CivilizationalSharpeRatio,
@@ -4687,6 +4808,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.ComplexSystemsThinking,
         tgs:Concept.ComplexityCollapse,
+        tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ConfirmationBias,
         tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConservationThroughLivelihoods,
@@ -4737,8 +4859,10 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
         tgs:Concept.Effectivism,
+        tgs:Concept.EfficiencyResilienceBalance,
         tgs:Concept.EightFacesOfAI,
         tgs:Concept.EightForcesOnPrices,
+        tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EightWorldviewLenses,
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
@@ -4761,6 +4885,8 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FifthLawOfThermodynamics,
+        tgs:Concept.FinanceAlgorithm,
+        tgs:Concept.FinancialTransactionTax,
         tgs:Concept.FiveLensChess,
         tgs:Concept.FivePathwaysThroughDread,
         tgs:Concept.FivePathwaysToPresence,
@@ -4789,6 +4915,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.GrammarOfAnimacy,
         tgs:Concept.GreatSimplification,
         tgs:Concept.GreatTurning,
+        tgs:Concept.GrowthDoubleBind,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.HeadHeartAndHands,
@@ -4799,6 +4926,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.HicksianProfit,
         tgs:Concept.HighTouchGrounding,
         tgs:Concept.HolisticExternalityAnalysis,
+        tgs:Concept.HolisticPlannedGrazing,
         tgs:Concept.HoloceneClimateStability,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.HumanExceptionalism,
@@ -4866,6 +4994,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.NarrowGoalAchieving,
         tgs:Concept.NaturalDeclineRate,
         tgs:Concept.NatureBasedPackaging,
+        tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.NonDuality,
         tgs:Concept.NonZeroSumness,
         tgs:Concept.OceanAlkalinityEnhancement,
@@ -4922,6 +5051,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.RecursiveAbstraction,
         tgs:Concept.RedQueenEffect,
         tgs:Concept.RedefiningSuccess,
+        tgs:Concept.RegenerativeEconomics,
         tgs:Concept.RegenerativeFinance,
         tgs:Concept.RelativeFitnessSpiteFramework,
         tgs:Concept.RentSeeking,
@@ -5123,6 +5253,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EcologicalAwakening,
         tgs:Concept.EcologicalSecurity,
+        tgs:Concept.EfficiencyResilienceBalance,
         tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FourPillarsOfCivilization,
@@ -5130,6 +5261,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.GiftEconomy,
         tgs:Concept.GlacierStabilization,
         tgs:Concept.GrammarOfAnimacy,
+        tgs:Concept.HolisticPlannedGrazing,
         tgs:Concept.HoloceneClimateStability,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.InServiceOfLife,
@@ -5195,11 +5327,13 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.CantillonEffect,
         tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CaringEconomics,
+        tgs:Concept.Chrematistics,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.CivilizationalSharpeRatio,
         tgs:Concept.ClimateCreditCrunch,
         tgs:Concept.CodedCapital,
         tgs:Concept.CollectiveActionProblem,
+        tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ContextBasedSustainability,
         tgs:Concept.ContinuityValueOfProvision,
         tgs:Concept.CorporationAsObligateSociopath,
@@ -5208,7 +5342,9 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CustodianshipOverOwnership,
         tgs:Concept.DetoxifyingCapitalism,
+        tgs:Concept.EfficiencyResilienceBalance,
         tgs:Concept.EightForcesOnPrices,
+        tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyPoverty,
@@ -5216,10 +5352,13 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.Enoughness,
         tgs:Concept.EnvironmentAsDevelopment,
         tgs:Concept.ExtendedProducerResponsibility,
+        tgs:Concept.FinanceAlgorithm,
+        tgs:Concept.FinancialTransactionTax,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GameTheoreticVersusRealValue,
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GiftEconomy,
+        tgs:Concept.GrowthDoubleBind,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HavesAndHaveNots,
         tgs:Concept.HicksianProfit,
@@ -5230,11 +5369,13 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.MoneyAsClaimOnEnergy,
         tgs:Concept.MoneyAsMaximumOptionality,
         tgs:Concept.MusicalChairsMoment,
+        tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.OpportunityRiskAsymmetry,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.PriceCostAndValue,
         tgs:Concept.ProblemSolvingAsRacket,
         tgs:Concept.QuadraticFunding,
+        tgs:Concept.RegenerativeEconomics,
         tgs:Concept.RegenerativeFinance,
         tgs:Concept.RentSeeking,
         tgs:Concept.SocialDilemma,
@@ -5358,6 +5499,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
         tgs:Concept.CommunityScaleRenewables,
+        tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ConfirmationBias,
         tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConservationThroughLivelihoods,
@@ -5584,6 +5726,8 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DiscretePhaseShift,
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EcologicalFootprint,
+        tgs:Concept.EfficiencyResilienceBalance,
+        tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.Enantiodromia,
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.FifthLawOfThermodynamics,
@@ -5593,8 +5737,10 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.GreatSimplification,
         tgs:Concept.GreatTurning,
+        tgs:Concept.GrowthDoubleBind,
         tgs:Concept.HealingVsDying,
         tgs:Concept.HolisticExternalityAnalysis,
+        tgs:Concept.HolisticPlannedGrazing,
         tgs:Concept.HumanPredicament,
         tgs:Concept.HumanitysIcarusMoment,
         tgs:Concept.InformationCultureTransitions,
@@ -5615,6 +5761,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MultipolarTrap,
         tgs:Concept.NamedSolutionsDrawCounterResponse,
         tgs:Concept.NarrowGoalAchieving,
+        tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.NonZeroSumness,
         tgs:Concept.OmniLose,
         tgs:Concept.PersonalCompositeFutures,
@@ -5626,6 +5773,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PublicChoiceTheory,
         tgs:Concept.ReAgentificationOfTheWorld,
         tgs:Concept.RecursiveAbstraction,
+        tgs:Concept.RegenerativeEconomics,
         tgs:Concept.RewritingTheRulesOfTheSuperorganism,
         tgs:Concept.RiskSingularity,
         tgs:Concept.RobustActions,
@@ -5673,6 +5821,8 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DirectDriveSolar,
         tgs:Concept.DissipativeStructures,
+        tgs:Concept.EfficiencyResilienceBalance,
+        tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
@@ -5687,8 +5837,10 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GiftEconomy,
         tgs:Concept.GreatSimplification,
+        tgs:Concept.GrowthDoubleBind,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HicksianProfit,
+        tgs:Concept.HolisticPlannedGrazing,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.JevonsDividend,
         tgs:Concept.JevonsParadox,
@@ -5712,6 +5864,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RealityParty,
         tgs:Concept.Rebuildables,
         tgs:Concept.RecursiveAbstraction,
+        tgs:Concept.RegenerativeEconomics,
         tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.Rewilding,
         tgs:Concept.ShadowOfTheSuperorganism,
@@ -5746,6 +5899,7 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GameTheoryFillsTheOughtGap,
         tgs:Concept.GeneralizedJevonsParadox,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
+        tgs:Concept.GrowthDoubleBind,
         tgs:Concept.HyperAgents,
         tgs:Concept.JevonsParadox,
         tgs:Concept.MaximizingReturnsOnPower,
@@ -5790,11 +5944,13 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CaringEconomics,
         tgs:Concept.ChaliceAndBladePower,
+        tgs:Concept.Chrematistics,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.CollapseResilience,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.ComplexityCollapse,
+        tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.ContextBasedSustainability,
@@ -5806,11 +5962,15 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DominationPartnershipContinuum,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
+        tgs:Concept.EfficiencyResilienceBalance,
+        tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.EnvironmentAsDevelopment,
+        tgs:Concept.FinanceAlgorithm,
+        tgs:Concept.FinancialTransactionTax,
         tgs:Concept.FourCornerstonesOfPartnership,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GiftEconomy,
@@ -5828,6 +5988,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MetabolicHierarchyOfTheSuperorganism,
         tgs:Concept.MoneyAsMaximumOptionality,
         tgs:Concept.MusicalChairsMoment,
+        tgs:Concept.NewtonianFoundationsOfEconomics,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.OvertonWindow,
         tgs:Concept.Polycrisis,
@@ -5840,6 +6001,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RadicalMiddle,
         tgs:Concept.RankedChoiceVoting,
         tgs:Concept.RealityParty,
+        tgs:Concept.RegenerativeEconomics,
         tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.SelfActivatingVolunteerNetwork,
@@ -5889,6 +6051,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HealingBeforeEngagement,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HighTouchGrounding,
+        tgs:Concept.HolisticPlannedGrazing,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.ImaginalCells,
         tgs:Concept.InServiceOfLife,
@@ -5938,6 +6101,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CollapseResponseContinuum,
+        tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ConfirmationBias,
         tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConstructiveJournalism,
@@ -6202,6 +6366,23 @@ tgs:Concept.SelfGovernmentModel skos:related tgs:Concept.SensemakingPrerequisite
 tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.AttentionEconomy .
 tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.EpistemicCommons .
 tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.SelfGovernmentModel .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.EightPrinciplesOfARegenerativeEconomy .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.RegenerativeFinance .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.HolisticPlannedGrazing .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.NewtonianFoundationsOfEconomics .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.WideBoundary .
+tgs:Concept.RegenerativeEconomics skos:related tgs:Concept.GrowthDoubleBind .
+tgs:Concept.EightPrinciplesOfARegenerativeEconomy skos:related tgs:Concept.EfficiencyResilienceBalance .
+tgs:Concept.Chrematistics skos:related tgs:Concept.FinanceAlgorithm .
+tgs:Concept.Chrematistics skos:related tgs:Concept.MoneyAsClaimOnEnergy .
+tgs:Concept.FinanceAlgorithm skos:related tgs:Concept.FinancialTransactionTax .
+tgs:Concept.FinanceAlgorithm skos:related tgs:Concept.LogicOfSeparation .
+tgs:Concept.FinanceAlgorithm skos:related tgs:Concept.Polycrisis .
+tgs:Concept.FinanceAlgorithm skos:related tgs:Concept.EfficiencyResilienceBalance .
+tgs:Concept.GrowthDoubleBind skos:related tgs:Concept.GrowthImperative .
+tgs:Concept.GrowthDoubleBind skos:related tgs:Concept.EmbeddedGrowthObligation .
+tgs:Concept.EfficiencyResilienceBalance skos:related tgs:Concept.CollapseResilience .
+tgs:Concept.CompostingTheSurplus skos:related tgs:Concept.MoneyAsClaimOnEnergy .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -6236,6 +6417,9 @@ tgs:Concept.CarryingCapacity
 
 tgs:Concept.CircleOfTrustLocalism
     skos:related tgs:Concept.CommunityScaleRenewables, tgs:Concept.ProSocialPrepping .
+
+tgs:Concept.CollapseResilience
+    skos:related tgs:Concept.EfficiencyResilienceBalance .
 
 tgs:Concept.CollapseResponseContinuum
     skos:narrower tgs:Concept.CollapseResilience .
@@ -6292,6 +6476,15 @@ tgs:Concept.EducatingHyperAgents
 tgs:Concept.Effectivism
     skos:related tgs:Concept.BattlesOfOurTime, tgs:Concept.EarnedHope .
 
+tgs:Concept.EfficiencyResilienceBalance
+    skos:related tgs:Concept.EightPrinciplesOfARegenerativeEconomy, tgs:Concept.FinanceAlgorithm .
+
+tgs:Concept.EightPrinciplesOfARegenerativeEconomy
+    skos:related tgs:Concept.RegenerativeEconomics .
+
+tgs:Concept.EmbeddedGrowthObligation
+    skos:related tgs:Concept.GrowthDoubleBind .
+
 tgs:Concept.EnergyAdditionsNotTransitions
     skos:related tgs:Concept.DenseToMoreDenseTransition, tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
 
@@ -6306,6 +6499,12 @@ tgs:Concept.EpistemicCommons
 
 tgs:Concept.FifthLawOfThermodynamics
     skos:related tgs:Concept.DissipativeStructures .
+
+tgs:Concept.FinanceAlgorithm
+    skos:related tgs:Concept.Chrematistics .
+
+tgs:Concept.FinancialTransactionTax
+    skos:related tgs:Concept.FinanceAlgorithm .
 
 tgs:Concept.FourCategoriesOfRealWork
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
@@ -6326,9 +6525,12 @@ tgs:Concept.GreatSimplification
     dcterms:isReferencedBy tgs:Monologue.Frankly_58_FellowshipBendNotBreak, tgs:PanelDiscussion.RR_24_TheFantasyOfSpaceColonization, tgs:Work.OikosRising ;
     skos:relatedMatch tgs:Concept.CollapseResponseContinuum .
 
+tgs:Concept.GrowthDoubleBind
+    skos:related tgs:Concept.RegenerativeEconomics .
+
 tgs:Concept.GrowthImperative
     thinkr:complements tgs:Concept.EmbeddedGrowthObligation ;
-    skos:related tgs:Concept.EmbeddedGrowthObligation .
+    skos:related tgs:Concept.EmbeddedGrowthObligation, tgs:Concept.GrowthDoubleBind .
 
 tgs:Concept.HavesAndHaveNots
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
@@ -6342,6 +6544,9 @@ tgs:Concept.HeartWillMind
 
 tgs:Concept.HicksianProfit
     skos:related tgs:Concept.DetoxifyingCapitalism .
+
+tgs:Concept.HolisticPlannedGrazing
+    skos:related tgs:Concept.RegenerativeEconomics .
 
 tgs:Concept.HonorableHarvest
     skos:related tgs:Concept.SevenGenerationsThinking .
@@ -6397,6 +6602,9 @@ tgs:Concept.LightTriad
 tgs:Concept.LocalizedSyntropySystemicEntropy
     skos:related tgs:Concept.DissipativeStructures .
 
+tgs:Concept.LogicOfSeparation
+    skos:related tgs:Concept.FinanceAlgorithm .
+
 tgs:Concept.LossAversion
     skos:related tgs:Concept.AggregateCognitiveDissonance, tgs:Concept.ConfirmationBias, tgs:Concept.CulturalAntibodies .
 
@@ -6411,6 +6619,9 @@ tgs:Concept.MetabolicHierarchyOfTheSuperorganism
 tgs:Concept.Metacrisis
     skos:related tgs:Concept.ArrestedHumanDevelopment, tgs:Concept.Polycrisis .
 
+tgs:Concept.MoneyAsClaimOnEnergy
+    skos:related tgs:Concept.Chrematistics, tgs:Concept.CompostingTheSurplus .
+
 tgs:Concept.MultipolarTrap
     dcterms:isReferencedBy tgs:Work.OikosRising ;
     skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory .
@@ -6424,6 +6635,9 @@ tgs:Concept.NamedSolutionsDrawCounterResponse
 
 tgs:Concept.NaturalDeclineRate
     skos:related tgs:Concept.ResourcesVersusReserves .
+
+tgs:Concept.NewtonianFoundationsOfEconomics
+    skos:related tgs:Concept.RegenerativeEconomics .
 
 tgs:Concept.NonZeroSumness
     skos:related tgs:Concept.GameTheory .
@@ -6444,7 +6658,7 @@ tgs:Concept.PersonalAgency
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.LearnedHelplessness .
 
 tgs:Concept.Polycrisis
-    skos:related tgs:Concept.BundledPreparedness .
+    skos:related tgs:Concept.BundledPreparedness, tgs:Concept.FinanceAlgorithm .
 
 tgs:Concept.PositiveSumInGroupNegativeSumToNature
     skos:related tgs:Concept.NonZeroSumness .
@@ -6482,6 +6696,9 @@ tgs:Concept.RankedChoiceVoting
 
 tgs:Concept.RealityBasedHope
     skos:related tgs:Concept.DutyToHope, tgs:Concept.EarnedHope .
+
+tgs:Concept.RegenerativeFinance
+    skos:related tgs:Concept.RegenerativeEconomics .
 
 tgs:Concept.RestraintByDesign
     skos:related tgs:Concept.HonorableHarvest, tgs:Concept.JevonsDividend .
@@ -6593,7 +6810,7 @@ tgs:Concept.WhatWeDesignDesignsUsBack
 
 tgs:Concept.WideBoundary
     thinkr:complements tgs:Concept.HolisticExternalityAnalysis ;
-    skos:related tgs:Concept.Ecolate, tgs:Concept.HolisticExternalityAnalysis, tgs:Concept.UnintendedConsequences .
+    skos:related tgs:Concept.Ecolate, tgs:Concept.HolisticExternalityAnalysis, tgs:Concept.RegenerativeEconomics, tgs:Concept.UnintendedConsequences .
 
 tgs:Concept.WideBoundarySunkCost
     skos:related tgs:Concept.AbundantEnergyEnablesBadDesign .

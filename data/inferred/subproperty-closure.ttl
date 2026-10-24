@@ -73,6 +73,10 @@ tgs:Concept.CarryingCapacity thinkr:relatesTo tgs:Persona.WilliamCatton .
 tgs:Concept.ChaliceAndBladePower thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "From The Chalice and the Blade (1987), restated in TGS_116. The symbols are often misread as standing for the sexes; Eisler says that misreading itself comes from the rigid gender stereotypes of domination systems. 'The battle for our future is not between right and left... It's between these two configurations.' Her advice to listeners: 'remember that you have power, the power of the chalice' -- the advances against child labor and for human rights came from small, usually unpopular groups."@en .
 
+tgs:Concept.Chrematistics thinkr:relatesTo tgs:Persona.Aristotle,
+        tgs:Persona.HermanDaly,
+        tgs:Persona.JohnFullerton .
+
 tgs:Concept.CircleOfTrustLocalism thinkr:relatesTo tgs:Persona.ElinorOstrom .
 
 tgs:Concept.CivilizationalOptionality thinkr:relatesTo tgs:Persona.IndyJohar .
@@ -102,6 +106,8 @@ tgs:Concept.CommunityScaleRenewables thinkr:relatesTo tgs:Persona.AlexisZeigler 
 tgs:Concept.ComplexSystemsThinking skos:note "The general toolkit of concepts Hagens draws on for reasoning about civilizational dynamics: systems move in fits and starts rather than smoothly; ecological phase shifts exhibit path dependency (once crossed, a threshold is not easily uncrossed); non-linear causality and feedback loops mean small inputs can produce disproportionate effects; and real tipping points (ice sheets, soil systems, per the Global Tipping Points Report 2025) can be crossed well before they become visible in conventional metrics."@en .
 
 tgs:Concept.ComplexityCollapse thinkr:relatesTo tgs:Persona.JosephTainter .
+
+tgs:Concept.CompostingTheSurplus thinkr:relatesTo tgs:Persona.JohnFullerton .
 
 tgs:Concept.ConsciousCulturalEvolution thinkr:relatesTo tgs:Persona.AlexisZeigler .
 
@@ -177,6 +183,10 @@ tgs:Concept.EcologicalSecurity thinkr:relatesTo tgs:Persona.RodSchoonover .
 
 tgs:Concept.Effectivism thinkr:relatesTo tgs:Persona.NateHagens .
 
+tgs:Concept.EfficiencyResilienceBalance thinkr:relatesTo tgs:Persona.JohnFullerton .
+
+tgs:Concept.EightPrinciplesOfARegenerativeEconomy thinkr:relatesTo tgs:Persona.JohnFullerton .
+
 tgs:Concept.EliteOverproduction thinkr:relatesTo tgs:Persona.PeterTurchin .
 
 tgs:Concept.EnergyAdditionsNotTransitions thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz ;
@@ -201,6 +211,10 @@ tgs:Concept.EpigeneticLandscape thinkr:relatesTo tgs:Persona.ConradWaddington .
 tgs:Concept.EscalationTrap thinkr:relatesTo tgs:Persona.RobertPape .
 
 tgs:Concept.ExosomaticEnergy thinkr:relatesTo tgs:Persona.NateHagens .
+
+tgs:Concept.FinanceAlgorithm thinkr:relatesTo tgs:Persona.JohnFullerton .
+
+tgs:Concept.FinancialTransactionTax thinkr:relatesTo tgs:Persona.JohnFullerton .
 
 tgs:Concept.FourCornerstonesOfPartnership thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "Eisler's theory of change (TGS_116; the last chapter of tgs:Work.NurturingOurHumanity): short-term tactics are not enough without long-term strategies aimed at the four cornerstones. Childhood and family come first, because the first five years shape the brain, and a child in a domination family learns that violence by the stronger against the weaker is normal and moral, and learns the hidden system of gendered values; her first priority is ending violence against children in families, backed by authoritative rather than authoritarian parenting. Gender is 'a primary social, economic, and family organizing principle,' not a women's issue: as the status of women rises, so does the status of values coded feminine, such as caring and nonviolence, so men vote for caring policies too. Economics must value care (tgs:Concept.CaringEconomics). Story and language must change: original sin and the selfish gene are 'the same story' -- we are bad, so we must be controlled from the top. She notes that those pushing back against partnership invest heavily in exactly these long-term strategies -- family control, rigid gender roles."@en .
@@ -229,6 +243,8 @@ tgs:Concept.GreatSimplification thinkr:relatesTo tgs:SchoolOfThought.TechnoOptim
 tgs:Concept.GreatTurning thinkr:relatesTo tgs:Persona.JoannaMacy ;
     skos:note "Joanna Macy's framework, explained by Plotkin in real depth (not a passing citation): the shift from an 'Industrial Growth Society' toward a 'life-sustaining civilization,' unfolding across three simultaneous dimensions — (1) holding actions to save as much life as possible now, (2) building the structural and technical foundations for healthier systems (food, energy, governance), and (3) a shift in consciousness and values, which Plotkin explicitly connects back to tgs:Concept.EcologicalAwakening and his own developmental wheel. Macy pairs this with 'the Great Unraveling' — the ongoing collapse of existing systems — as two faces of the same real historical moment, not opposed processes."@en .
 
+tgs:Concept.GrowthDoubleBind thinkr:relatesTo tgs:Persona.JohnFullerton .
+
 tgs:Concept.HeadHeartAndHands thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.HerosJourney thinkr:relatesTo tgs:Persona.JosephCampbell .
@@ -236,6 +252,8 @@ tgs:Concept.HerosJourney thinkr:relatesTo tgs:Persona.JosephCampbell .
 tgs:Concept.HicksianProfit thinkr:relatesTo tgs:Persona.JeremyGrantham .
 
 tgs:Concept.HighTouchGrounding thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
+
+tgs:Concept.HolisticPlannedGrazing thinkr:relatesTo tgs:Persona.JohnFullerton .
 
 tgs:Concept.HoloceneClimateStability thinkr:relatesTo tgs:Persona.NateHagens .
 
@@ -315,6 +333,8 @@ tgs:Concept.NaturalDeclineRate thinkr:relatesTo tgs:Persona.ScottTinker .
 
 tgs:Concept.NatureBasedPackaging thinkr:relatesTo tgs:Persona.WesCarter .
 
+tgs:Concept.NewtonianFoundationsOfEconomics thinkr:relatesTo tgs:Persona.JohnFullerton .
+
 tgs:Concept.OceanAlkalinityEnhancement thinkr:relatesTo tgs:Persona.KellyErhart .
 
 tgs:Concept.OmniLose thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
@@ -380,6 +400,8 @@ tgs:Concept.RecursiveAbstraction thinkr:relatesTo tgs:Persona.DanielSchmachtenbe
 tgs:Concept.RedQueenEffect skos:note "A real, direct term coined for oil-depletion economics (Frankly-109 credits 'Rune Likvern' and The Oil Drum, circa 2012), borrowed from the Red Queen's own real line to Alice in 'Through the Looking-Glass' -- 'it takes all the running you can do, to keep in the same place.' Real, direct application: as existing oil wells decline, ever-more new wells must be drilled just to hold total production flat, let alone grow it -- shown directly via stacked charts of each year's new-well production layered on top of the accumulating decline of all prior years' wells. The same real, direct dynamic is noted as applying to natural gas as well."@en .
 
 tgs:Concept.RedefiningSuccess thinkr:relatesTo tgs:Persona.RutgerBregman .
+
+tgs:Concept.RegenerativeEconomics thinkr:relatesTo tgs:Persona.JohnFullerton .
 
 tgs:Concept.RegenerativeFinance thinkr:relatesTo tgs:Persona.MatthewMonahan .
 
@@ -668,7 +690,9 @@ tgs:Interview.TGS_148_RichardGephardt dct:contributor tgs:Persona.RichardGephard
     dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/148-richard-gephardt> .
 
-tgs:Interview.TGS_149_JohnFullerton dct:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> .
+tgs:Interview.TGS_149_JohnFullerton dct:contributor tgs:Persona.JohnFullerton ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> .
 
 tgs:Interview.TGS_14_JohnGowdy dct:contributor tgs:Persona.JohnGowdy ;
     dct:creator tgs:Persona.NateHagens ;
@@ -2267,8 +2291,6 @@ tgs:Persona.DennisMeadows thinkr:hasNamedEntityType thinkr:PersonEntityType.Gues
 
 tgs:Persona.HelenThompson thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
-tgs:Persona.HermanDaly thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
 tgs:Persona.JaneMuncke thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.JosephTainter thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2325,6 +2347,8 @@ tgs:Concept.OneMarshmallowRewardCircuits thinkr:relatesTo tgs:Concept.DopamineHi
     skos:note "Daniel Schmachtenberger's framing (Bend Not Break Part 3, TGS_31), after the marshmallow experiment, of how a market economy exploits evolved reward. In evolutionary settings, rewards came only with evolutionarily relevant work and with the deeper nourishment they were bound to. Supply-side incentives strip the reward from both: fast food delivers salt, fat and sugar without fiber or micronutrients (people dying of obesity are also micronutrient-starved, so the hunger deepens); porn delivers sexual reward without intimacy; social media delivers connection without the conflict-and-repair of real friendship. These are 'pseudosatisfiers.' Two-marshmallow circuits involve self-application and delayed, healthier gratification. The same split applies to understanding: quick certainty is a one-marshmallow reward (tgs:Concept.PrematureCertainty), and psychedelics can be 'one-marshmallows to spirituality.'"@en .
 
 tgs:Persona.AndrewHolecek thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.HermanDaly thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.JeanMarcJancovici thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
@@ -2439,6 +2463,8 @@ tgs:ScenarioFacet.GreenGrowth thinkr:logicallyDisjointWith tgs:ScenarioFacet.Mad
         tgs:ScenarioFacet.TheGreatSimplification .
 
 tgs:Persona.ArtBerman thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.JohnFullerton thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.RobinWallKimmerer thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
