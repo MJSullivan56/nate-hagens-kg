@@ -4450,12 +4450,74 @@ tgs:Concept.FiveThingsThatKeepUsWhole a thinkr:Concept, thinkr:HagensConcept, ow
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
+tgs:Concept.DirectDriveSolar a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems ;
+    skos:prefLabel "Direct-drive solar"@en ;
+    skos:definition "Wiring DC motors and appliances straight to photovoltaic panels, with no batteries or inverters in between. DC permanent-magnet motors tolerate wide voltage swings, so many loads can share one array: each added motor slows the rest a little, but they keep working, even on a cloudy day. At Living Energy Farm a 1,400-watt, 180-volt array runs a metal shop, well pump, refrigerator, cooking and blowers that push solar heat under the floors. Paired with thermal storage (hot water, warm floors, well-insulated refrigerators), it largely replaces batteries."@en ;
+    dcterms:source <https://solar.lowtechmagazine.com/2023/08/direct-solar-power-off-grid-without-batteries/> ;
+    thinkr:influencedBy tgs:Persona.AlexisZeigler ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_171. Alexis Zeigler's approach. Universal motors in ordinary appliances run on DC once a 50-cent snubber is added to the switch; belt-driven shop tools just swap motors. Solar well pumps are a mature market, but no good direct-drive washing machine exists commercially. He argues DC suits a decentralized world of scarcer, intermittent energy, while AC won because it made it easy to push power long distances from central plants and sell energy. Related: tgs:Concept.CommunityScaleRenewables."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
+tgs:Concept.CommunityScaleRenewables a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Renewables scale at ten people"@en ;
+    skos:altLabel "Energy-independent cooperative housing"@en ;
+    skos:definition "Alexis Zeigler's rule that renewable energy works best at community scale, ten people at minimum: a solar hot-water, heating or DC system costing thousands of dollars for one household can serve 10 or 20 people with small changes, so sharing the investment and its use makes renewables affordable and effective. His proposed form for people who will not share kitchens and bathrooms is energy-independent cooperative housing ('off-grid condos'): private apartments with shared thermal systems and a DC microgrid, kept running by a paid caretaker in place of a monthly energy bill."@en ;
+    dcterms:source <https://livingenergyfarm.org/energy-independent-cooperative-housing-to-address-climate-change-and-affordability/> ;
+    thinkr:influencedBy tgs:Persona.AlexisZeigler ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_171. Zeigler says 'rich people don't want it and poor people can't afford it', so Living Energy Farm has taken the technology to the tropics (Puerto Rico, Jamaica, planned Zambia), where thermal loads are lower and people are more used to sharing; NGOs and engineers, he says, export grid systems and American lifestyles instead. Single-family homes gain little from DC; the advantage is at community scale. Related: tgs:Concept.DirectDriveSolar, tgs:Concept.CircleOfTrustLocalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.AbundantEnergyEnablesBadDesign a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EnergySystems, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "Abundant energy enables bad design"@en ;
+    skos:definition "Alexis Zeigler's argument that cheap, abundant energy -- fossil fuels and AC grid power -- 'enables, encourages, empowers bad design across the board': thin-walled houses that leak energy are livable only because huge amounts of power can be pumped into them, so design ignores energy or gives it token consideration. His order of priorities: first where buildings are in relation to everything else, so people live near work, shops and each other; second conservation, which is always cheaper than production; and only third the energy supply. Renewable energy thrown at a badly designed '10,000-watt lifestyle' makes a mess."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/171-alexis-zeigler> ;
+    thinkr:influencedBy tgs:Persona.AlexisZeigler ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_171. Examples: a straw-bale passive-solar house uses perhaps 70 to 80% less energy at about the same price; an air fryer is an 'energy bomb', the opposite of an insulated solar-electric cooker; about 60 devices plugged in around the clock take some 12% of US household power. He credits Ozzie Zehner's Green Illusions (tgs:Work.GreenIllusions) for the point about location. Nate links it to the sunk cost of existing infrastructure (tgs:Concept.WideBoundarySunkCost). Related: tgs:Concept.EnergyBlindness."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.SystemsTeachConservation a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Systems that teach conservation"@en ;
+    skos:definition "Alexis Zeigler's observation that infrastructure trains its users: a system that stores its energy -- water pumped into tanks while the sun shines, heat stored in floors and tanks -- teaches people within days to water the garden in the morning and keep doors closed in winter, while on-demand grid and thermostat systems teach people to consume. 'The system teaches you to conserve,' Zeigler says; Nate adds, 'and our system teaches us to consume.' Hence his all-or-none rule: never back up renewable systems with fossil ones, because people come to rely on the easy fossil backup and the renewable system is abandoned."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/171-alexis-zeigler> ;
+    thinkr:influencedBy tgs:Persona.AlexisZeigler ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_171. He has seen solar hot-water systems used as preheaters for gas or electric heaters dropped within years, and battery-and-inverter off-grid homes abandoned as too expensive, and will not consult on projects with fossil energy going in: 'you don't put chocolate and broccoli on the table at the same time.' Related: tgs:Concept.WhatWeDesignDesignsUsBack (Indy Johar's version of the idea)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.ConsciousCulturalEvolution a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Conscious cultural evolution"@en ;
+    skos:definition "Alexis Zeigler's phrase for the change he would make with a magic wand: helping people understand how human culture evolved with energy and food supplies, and how much of our cultural story suppresses inconvenient reality, so that cultural evolution -- which today happens unconsciously, as the superorganism runs on its own -- can be steered deliberately, from the ground up, through economic and spiritual localization."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/171-alexis-zeigler> ;
+    thinkr:influencedBy tgs:Persona.AlexisZeigler ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_171. He calls the approach 'guerrilla macro-managing', managing from the bottom up, and ties it to a nature-centred spirituality: 'take God back' and see it 'in the bushes', heaven on Earth rather than in the sky. It is also the topic he would choose for a return episode: the evolution of human culture in relation to energy and food. Related: tgs:Concept.Superorganism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:creator "Compiled by MJSullivan from The Great Simplification" ;
     skos:hasTopConcept
+        tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AgeOfRemembering,
         tgs:Concept.AIAsMetacrisisAccelerant,
         tgs:Concept.ActorlessThreats,
@@ -4503,9 +4565,11 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
+        tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.ComplexSystemsThinking,
         tgs:Concept.ComplexityCollapse,
         tgs:Concept.ConfirmationBias,
+        tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConservationThroughLivelihoods,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.ContextBasedSustainability,
@@ -4530,6 +4594,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DieselPoweredCivilization,
         tgs:Concept.DiningCar,
+        tgs:Concept.DirectDriveSolar,
         tgs:Concept.DiscountRatesAndPresentBias,
         tgs:Concept.DiscretePhaseShift,
         tgs:Concept.DispatchablePower,
@@ -4785,6 +4850,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.SuperorganismFreeZones,
         tgs:Concept.SupplyChainFragility,
         tgs:Concept.Symmathesy,
+        tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TechnologyIsNotValuesNeutral,
         tgs:Concept.TechnologyJengaTower,
         tgs:Concept.TenCoreMythsOfBusinessSchools,
@@ -4906,6 +4972,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
     skos:prefLabel "TGS concepts: Ecology and Environment"@en ;
     dcterms:subject tgs:Subject.EcologyAndEnvironment ;
     skos:member tgs:Concept.AerosolMasking,
+        tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AgeOfRemembering,
         tgs:Concept.AlternativeStableStates,
         tgs:Concept.Bioregion,
@@ -5058,13 +5125,16 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Energy Systems"@en ;
     dcterms:subject tgs:Subject.EnergySystems ;
     skos:member tgs:Concept.BindingTheJevonsParadox,
+        tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.BiophysicalGauntlet,
         tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CarbonPulse,
+        tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CrudeOil,
         tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DieselPoweredCivilization,
+        tgs:Concept.DirectDriveSolar,
         tgs:Concept.DispatchablePower,
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EarthEnergyImbalance,
@@ -5093,6 +5163,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.SevenAIMacroRisks,
         tgs:Concept.Sobriety,
+        tgs:Concept.SystemsTeachConservation,
         tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact,
         tgs:Concept.TwoCategoriesOfTechnology ;
     .
@@ -5152,7 +5223,9 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CollectiveMaturity,
         tgs:Concept.Communing,
+        tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.ConfirmationBias,
+        tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConservationThroughLivelihoods,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CorporationAsObligateSociopath,
@@ -5314,6 +5387,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SolutionSpaceCube,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.SuperorganismFreeZones,
+        tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TechnologyIsNotValuesNeutral,
         tgs:Concept.TenLensesOfInformationBifurcation,
         tgs:Concept.TerrorManagementTheory,
@@ -5361,6 +5435,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CollapseResilience,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.ComplexSystemsThinking,
+        tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ContextBasedSustainability,
         tgs:Concept.CoupledSystemicRisks,
         tgs:Concept.DefaultModeNetwork,
@@ -5443,6 +5518,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Biophysical lens"@en ;
     skos:member tgs:Concept.AtomsEnergyBits,
+        tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
         tgs:Concept.CarbonBudgetInequity,
@@ -5451,6 +5527,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ComplexityCollapse,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.DenseToMoreDenseTransition,
+        tgs:Concept.DirectDriveSolar,
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EnergyAdditionsNotTransitions,
         tgs:Concept.EnergyBlindness,
@@ -5555,6 +5632,7 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Institutional lens"@en ;
     skos:member tgs:Concept.AdvancePolicy,
+        tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BattlesOfOurTime,
@@ -5568,7 +5646,9 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.CollapseResilience,
         tgs:Concept.CollapseResponseContinuum,
+        tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.ComplexityCollapse,
+        tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.ContextBasedSustainability,
         tgs:Concept.CorporationAsObligateSociopath,
@@ -5636,7 +5716,9 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.BarbellEmpathy,
         tgs:Concept.BundledPreparedness,
         tgs:Concept.CollapseResilience,
+        tgs:Concept.CommunityScaleRenewables,
         tgs:Concept.DiningCar,
+        tgs:Concept.DirectDriveSolar,
         tgs:Concept.DopamineHijackedCulture,
         tgs:Concept.DutyToHope,
         tgs:Concept.EarnedHope,
@@ -5677,6 +5759,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SevenKeyInterventions,
         tgs:Concept.SolutionSpaceCube,
         tgs:Concept.SuperorganismFreeZones,
+        tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TheLastCanToKick,
         tgs:Concept.TheoryOfChange,
         tgs:Concept.ThingsOfValueThroughTheBottlenecks,
@@ -5698,6 +5781,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.ConfirmationBias,
+        tgs:Concept.ConsciousCulturalEvolution,
         tgs:Concept.ConstructiveJournalism,
         tgs:Concept.CulturalAntibodies,
         tgs:Concept.DarkTriad,
@@ -5754,6 +5838,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.SupernormalStimuli,
+        tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TechnologyIsNotValuesNeutral,
         tgs:Concept.TheFifteenHundred,
         tgs:Concept.TheLastCanToKick,
@@ -5938,6 +6023,12 @@ tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.AllostaticLoad .
 tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.RobustnessVsPerformance .
 tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.FourCategoriesOfRealWork .
 tgs:Concept.FiveThingsThatKeepUsWhole skos:related tgs:Concept.PersonalAgency .
+tgs:Concept.DirectDriveSolar skos:related tgs:Concept.CommunityScaleRenewables .
+tgs:Concept.AbundantEnergyEnablesBadDesign skos:related tgs:Concept.EnergyBlindness .
+tgs:Concept.AbundantEnergyEnablesBadDesign skos:related tgs:Concept.WideBoundarySunkCost .
+tgs:Concept.SystemsTeachConservation skos:related tgs:Concept.WhatWeDesignDesignsUsBack .
+tgs:Concept.CommunityScaleRenewables skos:related tgs:Concept.CircleOfTrustLocalism .
+tgs:Concept.ConsciousCulturalEvolution skos:related tgs:Concept.Superorganism .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -5964,8 +6055,14 @@ tgs:Concept.CarbonPulse
 tgs:Concept.CarryingCapacity
     skos:related tgs:Concept.ContextBasedSustainability, tgs:Concept.PhantomCarryingCapacity .
 
+tgs:Concept.CircleOfTrustLocalism
+    skos:related tgs:Concept.CommunityScaleRenewables .
+
 tgs:Concept.CollapseResponseContinuum
     skos:narrower tgs:Concept.CollapseResilience .
+
+tgs:Concept.CommunityScaleRenewables
+    skos:related tgs:Concept.DirectDriveSolar .
 
 tgs:Concept.ConstructiveJournalism
     skos:related tgs:Concept.AttentionEconomy .
@@ -6017,7 +6114,7 @@ tgs:Concept.EnergyAdditionsNotTransitions
     skos:related tgs:Concept.DenseToMoreDenseTransition, tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
 
 tgs:Concept.EnergyBlindness
-    skos:related tgs:Concept.EnergyGDPCoupling .
+    skos:related tgs:Concept.AbundantEnergyEnablesBadDesign, tgs:Concept.EnergyGDPCoupling .
 
 tgs:Concept.Enoughness
     skos:related tgs:Concept.GiftEconomy, tgs:Concept.HonorableHarvest .
@@ -6226,7 +6323,7 @@ tgs:Concept.SupernormalStimuli
 
 tgs:Concept.Superorganism
     thinkr:complements tgs:Concept.MultipolarTrap ;
-    skos:related tgs:Concept.DissipativeStructures, tgs:Concept.EnergySymbiosis, tgs:Concept.MultipolarTrap .
+    skos:related tgs:Concept.ConsciousCulturalEvolution, tgs:Concept.DissipativeStructures, tgs:Concept.EnergySymbiosis, tgs:Concept.MultipolarTrap .
 
 tgs:Concept.SupplyChainFragility
     skos:related tgs:Concept.JevonsParadox .
@@ -6288,9 +6385,15 @@ tgs:Concept.WhatCantWontMightHappen
     thinkr:complements tgs:Concept.ImpossibleToHard ;
     skos:related tgs:Concept.ImpossibleToHard .
 
+tgs:Concept.WhatWeDesignDesignsUsBack
+    skos:related tgs:Concept.SystemsTeachConservation .
+
 tgs:Concept.WideBoundary
     thinkr:complements tgs:Concept.HolisticExternalityAnalysis ;
     skos:related tgs:Concept.Ecolate, tgs:Concept.HolisticExternalityAnalysis, tgs:Concept.UnintendedConsequences .
+
+tgs:Concept.WideBoundarySunkCost
+    skos:related tgs:Concept.AbundantEnergyEnablesBadDesign .
 
 tgs:Concept.WileECoyoteMoment
     skos:related tgs:Concept.GreatSimplification, tgs:Concept.MoneyAsClaimOnEnergy, tgs:Concept.MusicalChairsMoment .

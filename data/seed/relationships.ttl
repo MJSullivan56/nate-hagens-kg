@@ -2166,6 +2166,7 @@ tgs:Relationship.NateHagens_AlexisZeigler a thinkr:Relationship, owl:NamedIndivi
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_171_AlexisZeigler ;
           dcterms:date "2025-03-05"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'We have indirectly known each other for a very long time. You used to email us when I managed The Oil Drum 15 years ago.' Zeigler says he has followed Nate's work for a long time; Nate says he will have to come visit."@en ;
     .
 
 tgs:Relationship.NateHagens_AnnaLembke a thinkr:Relationship, owl:NamedIndividual ;

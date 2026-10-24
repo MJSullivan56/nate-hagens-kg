@@ -20,6 +20,8 @@ tgs:AnimatedVideo.TGS_182_TheSystemsScience dct:creator tgs:Persona.NateHagens ;
 
 tgs:Concept.AIAsMetacrisisAccelerant thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
+tgs:Concept.AbundantEnergyEnablesBadDesign thinkr:relatesTo tgs:Persona.AlexisZeigler .
+
 tgs:Concept.ActorlessThreats thinkr:relatesTo tgs:Persona.RodSchoonover .
 
 tgs:Concept.AdvancePolicy thinkr:relatesTo tgs:Persona.NateHagens,
@@ -93,9 +95,13 @@ tgs:Concept.CollectiveActionProblem thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.Communing thinkr:relatesTo tgs:Persona.NoraBateson .
 
+tgs:Concept.CommunityScaleRenewables thinkr:relatesTo tgs:Persona.AlexisZeigler .
+
 tgs:Concept.ComplexSystemsThinking skos:note "The general toolkit of concepts Hagens draws on for reasoning about civilizational dynamics: systems move in fits and starts rather than smoothly; ecological phase shifts exhibit path dependency (once crossed, a threshold is not easily uncrossed); non-linear causality and feedback loops mean small inputs can produce disproportionate effects; and real tipping points (ice sheets, soil systems, per the Global Tipping Points Report 2025) can be crossed well before they become visible in conventional metrics."@en .
 
 tgs:Concept.ComplexityCollapse thinkr:relatesTo tgs:Persona.JosephTainter .
+
+tgs:Concept.ConsciousCulturalEvolution thinkr:relatesTo tgs:Persona.AlexisZeigler .
 
 tgs:Concept.ConstructiveJournalism thinkr:relatesTo tgs:Persona.MarenUrner .
 
@@ -130,6 +136,8 @@ tgs:Concept.DieselPoweredCivilization thinkr:relatesTo tgs:Persona.ArtBerman,
         tgs:Persona.BalazsMatics .
 
 tgs:Concept.DiningCar thinkr:relatesTo tgs:Persona.NateHagens .
+
+tgs:Concept.DirectDriveSolar thinkr:relatesTo tgs:Persona.AlexisZeigler .
 
 tgs:Concept.DiscountRatesAndPresentBias thinkr:relatesTo tgs:Persona.MarcusAurelius .
 
@@ -426,6 +434,8 @@ tgs:Concept.SupplyChainFragility thinkr:relatesTo tgs:Persona.EdConway ;
     skos:note "Modern global supply chains are far more concentrated, specialized, and fragile than they appear — a small number of hyper-specialized, often invisible 'pinch points' (a single factory, a single region, a single material) can be genuinely load-bearing for enormous downstream systems, disproportionate to their own small economic footprint. Real evidenced cases: the 1915 UK 'Glass Famine' (an entire domestic industry allowed to wither, then found existentially necessary within a few years, per tgs:Interview.TGS_127_EdConway); a single Birmingham factory supplying roughly half the world's automotive rearview-mirror electrodes; the 2011 Fukushima earthquake halting Ford's US truck production over a single specialized paint pigment. The mechanism Ed Conway identifies: modern comparative-advantage-driven specialization increases aggregate efficiency while increasing structural fragility — 'you have these factories which are uber-specialised... and they're pinch points. Until those pinch points explode, you don't really know about it.'"@en .
 
 tgs:Concept.Symmathesy thinkr:relatesTo tgs:Persona.NoraBateson .
+
+tgs:Concept.SystemsTeachConservation thinkr:relatesTo tgs:Persona.AlexisZeigler .
 
 tgs:Concept.TechnologyIsNotValuesNeutral thinkr:relatesTo tgs:Organization.ConsilienceProject,
         tgs:Persona.DanielSchmachtenberger ;
@@ -2078,8 +2088,6 @@ tgs:Concept.YellowTeaming thinkr:relatesTo tgs:Concept.UnintendedConsequences,
         tgs:Organization.ConsilienceProject,
         tgs:Persona.DanielSchmachtenberger .
 
-tgs:Persona.AlexisZeigler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
 tgs:Persona.AndreGuimaraes thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.AnnaLembke thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2392,6 +2400,8 @@ tgs:Persona.JoshFarley thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 tgs:Persona.KellyErhart thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.SunitaNarain thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.AlexisZeigler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.ScottTinker thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

@@ -3692,6 +3692,20 @@ tgs:Work.CaliforniaDoughnutIndicators2025 a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://docs.google.com/spreadsheets/d/1uDvJsNbIMJbEMhPio4KzxKuxeIAPaDr8HRmII_kk36w> ;
     .
 
+tgs:Work.EmpoweringCommunities a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Empowering Communities"@en ;
+    rdfs:comment "Alexis Zeigler's short book, free as a PDF, documenting Living Energy Farm's direct-drive solar, thermal storage and cooperative design; he calls it the best single overview of the farm's approach (TGS_171)."@en ;
+    dct:creator tgs:Human.AlexisZeigler ;
+    dct:source <https://conev.org/empoweringcommunities14.pdf> ;
+    .
+
+tgs:Work.GreenIllusions a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Green Illusions: The Dirty Secrets of Clean Energy and the Future of Environmentalism"@en ;
+    rdfs:comment "Book by Ozzie Zehner (University of Nebraska Press, 2012) arguing that renewable energy cannot sustain current consumption and that where and how we live matters more than how energy is generated. Alexis Zeigler cites Zehner's point that what matters most is not the house but where it sits in relation to everything else (TGS_171)."@en ;
+    dct:issued "2012"^^xsd:gYear ;
+    dct:source <https://www.nebraskapress.unl.edu/nebraska-paperback/9780803237759/green-illusions/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3769,7 +3783,10 @@ tgs:Work.DrillingDown
     dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek .
 
 tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism
-    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain, tgs:Interview.TGS_171_AlexisZeigler .
+
+tgs:Work.EmpoweringCommunities
+    dct:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
 
 tgs:Work.EndTimes
     dct:isReferencedBy tgs:Interview.TGS_164_PeterTurchin .
@@ -3797,6 +3814,9 @@ tgs:Work.GatheringMoss
 
 tgs:Work.GoliathsCurse
     dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
+
+tgs:Work.GreenIllusions
+    dct:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
 
 tgs:Work.HistoryForTomorrow
     dct:isReferencedBy tgs:Interview.TGS_142_RomanKrznaric .

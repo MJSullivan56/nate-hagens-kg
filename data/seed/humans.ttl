@@ -1431,7 +1431,9 @@ tgs:Human.PeterStrack a thinkr:Human, owl:NamedIndividual ;
 tgs:Human.AlexisZeigler a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Alexis Zeigler"@en ;
     rdfs:label "Alexis Zeigler (human)"@en ;
-    rdfs:comment "Self-taught activist, builder, mechanic, writer, and orchardist. Organized numerous political, environmental, and economic localization campaigns. Since 2010, has worked to build and grow Living Energy Farm, a zero-fossil-fuel, mostly self-sufficient farm prioritizing collective living principles, aiming to make sustainable technologies accessible regardless of income. Author of 'Empowering Communities.'"@en ;
+    rdfs:comment "Self-taught activist, builder, mechanic, writer and orchardist who has organized many campaigns on political, environmental and economic localization. Grew up on a farm in Georgia, where he learned to make do with few tools; did not attend college; moved at 18 to the Twin Oaks intentional community in Virginia, where he met his wife. Since 2010 has built Living Energy Farm, a zero-fossil-fuel, mostly self-sufficient cooperative farm, where he works mainly on technical innovation: direct-drive solar appliances, a simplified combine harvester, and the farm's orchards of persimmons, jujubes and pears. Aims to make sustainable technologies accessible regardless of income. Author of Empowering Communities."@en ;
+    thinkr:memberOf tgs:Organization.LivingEnergyFarm ;
+    dct:source <https://livingenergyfarm.org/> ;
     .
 
 tgs:Human.AnnaLembke a thinkr:Human, owl:NamedIndividual ;

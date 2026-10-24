@@ -876,6 +876,20 @@ tgs:Organization.CaliforniaDoughnutEconomicsCoalition a thinkr:Organization, owl
     dcterms:source <https://caldec.org/> ;
     .
 
+tgs:Organization.LivingEnergyFarm a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Living Energy Farm"@en ;
+    skos:altLabel "LEF"@en ;
+    skos:definition "A zero-fossil-fuel, off-grid cooperative farm community in Louisa County, Virginia, founded in 2010 by Alexis Zeigler and others. It grows about 75 to 80% of its own food and earns income from organic, open-pollinated seed, running on direct-drive solar electricity, solar thermal storage and biogas at about 300 watts per person. Its sister project, Living Energy Lights, sells direct-drive equipment at cost and runs projects in Puerto Rico and Jamaica."@en ;
+    dcterms:source <https://livingenergyfarm.org/> ;
+    .
+
+tgs:Organization.TwinOaks a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Twin Oaks Community"@en ;
+    skos:altLabel "Twin Oaks"@en ;
+    skos:definition "An income-sharing intentional community of about 100 people in Louisa County, Virginia, founded in 1967 with Kat Kinkade among its founders. Members have private bedrooms but share housing, income and work. Alexis Zeigler moved there at 18, and Living Energy Farm grew up nearby."@en ;
+    dcterms:source <https://www.twinoaks.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -943,6 +957,9 @@ tgs:Organization.IFRC
 tgs:Organization.InternationalBatesonInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_10_NoraBateson .
 
+tgs:Organization.LivingEnergyFarm
+    dcterms:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
+
 tgs:Organization.PlanetLabs
     dcterms:isReferencedBy tgs:Interview.TGS_173_WillMarshall .
 
@@ -970,6 +987,9 @@ tgs:Organization.SkepticalScience
 tgs:Organization.SwitchEnergyAlliance
     dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
+tgs:Organization.TheOilDrum
+    dcterms:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
+
 tgs:Organization.ThirdAct
     dcterms:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
 
@@ -978,4 +998,7 @@ tgs:Organization.ThreeFiftyOrg
 
 tgs:Organization.TransitionNetwork
     dcterms:isReferencedBy tgs:Interview.TGS_224_RobHopkins .
+
+tgs:Organization.TwinOaks
+    dcterms:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
 # ===== END DERIVED INVERSES =====
