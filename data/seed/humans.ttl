@@ -1121,6 +1121,7 @@ tgs:Human.RichardGephardt a thinkr:Human,
     rdfs:label "Richard Gephardt (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Dick_Gephardt> ;
     rdfs:comment "American attorney, lobbyist, and politician (b. January 31, 1941, St. Louis, Missouri); Democratic member, US House of Representatives, Missouri's 3rd district (1977-2005) — 28 years in Congress. House Majority Leader (1989-1995); House Minority Leader (1995-2003). Twice sought the Democratic presidential nomination (1988, 2004). President and CEO, Gephardt Group (later Gephardt Government Affairs), founded 2005. Real early career: precinct captain (1968), Alderman for St. Louis's 14th Ward (1971-1976). BS, Northwestern University (1962); JD, University of Michigan Law School (1965). Author of 'An Even Better Place' and 'The American Immigrant: The Outsiders,' among others. Board service includes Ford Motor Company, US Steel Corporation, Spirit AeroSystems, Centene Corporation, and Chair, Board of Trustees, Scripps Research Institute; founder, Gephardt Institute for Civic and Community Engagement at Washington University in St. Louis."@en ;
+    thinkr:memberOf tgs:Organization.GephardtInstitute ;
     .
 
 #############################################
@@ -2293,7 +2294,7 @@ tgs:Human.AudreyTang
     dct:isReferencedBy tgs:Interview.TGS_184_ConnorLeahy .
 
 tgs:Human.AzaRaskin
-    dct:isReferencedBy tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted .
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt, tgs:Monologue.Frankly_118_TheThingsWeTakeForGranted .
 
 tgs:Human.ChrisKeefer
     dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
@@ -2398,7 +2399,7 @@ tgs:Human.ThichNhatHanh
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill, tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Human.TristanHarris
-    dct:isReferencedBy tgs:Monologue.Frankly_128_UltraProcessedInformation .
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt, tgs:Monologue.Frankly_128_UltraProcessedInformation .
 
 tgs:Human.VanessaAndreotti
     dct:isReferencedBy tgs:Interview.TGS_228_JohnChurchill .

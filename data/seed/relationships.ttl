@@ -1627,8 +1627,13 @@ tgs:Relationship.NateHagens_RichardGephardt a thinkr:Relationship, owl:NamedIndi
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_1_RichardGephardt ;
-          dcterms:date "2021-12-17"^^xsd:date ] ;
-    skos:scopeNote "Real, direct evidence for BOTH relationship types, not inferred: Nate's own words, 'I've known you for a few years' and 'We work together on a project called advance policy' — a real, ongoing collaboration distinct from this podcast appearance itself, not just guest rapport. This was Gephardt's own real first-ever podcast appearance of any kind, per this episode's own official description."@en ;
+          dcterms:date "2021-12-17"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_148_RichardGephardt ;
+          dcterms:date "2024-10-17"^^xsd:date ] ;
+    skos:scopeNote "Real, direct evidence for BOTH relationship types, not inferred: Nate's own words, 'I've known you for a few years' and 'We work together on a project called advance policy' — a real, ongoing collaboration distinct from this podcast appearance itself, not just guest rapport. This was Gephardt's own real first-ever podcast appearance of any kind, per this episode's own official description. Second appearance TGS_148 (recorded 17 October 2024): Nate calls him 'a friend and a patriot', recalls working with him on energy and climate and in 2020 on stimulus programs that would help poor people, and on Advance Policy; Gephardt also works with Tristan Harris on social media and AI."@en ;
     .
 
 #############################################

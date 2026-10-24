@@ -4593,6 +4593,42 @@ tgs:Concept.MagicWandQuestion a thinkr:Concept, thinkr:HagensConcept, owl:NamedI
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
     .
 
+tgs:Concept.SelfGovernmentModel a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.Geopolitics ;
+    skos:prefLabel "Self-government versus the authoritarian model"@en ;
+    skos:definition "Richard Gephardt's framing of democracy, a word he avoids as hard to pin down: a system of self-government in which the people are paramount and, in a republic, rule through elected representatives -- the only alternative being 'the authoritarian model', one person making all decisions. It survives only if citizens keep participating, respect opponents they violently disagree with, accept the rule of law and trust elections as they would trust referees in a football game, and if losers 'grudgingly accept' compromises because the process was fair."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/148-richard-gephardt> ;
+    thinkr:influencedBy tgs:Persona.RichardGephardt ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_148. His evidence: Franklin's 'a republic, if you can keep it'; Churchill's 'the worst form of government except for all the others'; millions risking their lives to come to the US. His greatest worry is that millions no longer trust elections and many see opponents as evil, unworthy of respect. Big things in Congress happen only through compromise ('two-thirds of a loaf is better than no loaf'); his book tgs:Work.FiveThirtyFiveNotOne is about the losers' consent. Remedies: ranked-choice voting (tgs:Concept.RankedChoiceVoting), campaign finance reform, young volunteers in politics, and the Golden Rule: reach out and listen to someone you disagree with. Related: tgs:Concept.SensemakingPrerequisiteOfOpenSociety."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.InformationCultureTransitions a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Information-culture transitions"@en ;
+    skos:definition "Richard Gephardt's historical argument that each new communication technology first destabilizes self-government before society learns to use it: the printing press brought the Bible, newspapers and the Reformation but also witch hunts; radio let Hitler 'brainwash' Germany; each time, trusted curators -- journalists -- eventually emerged to tell people what was 'pretty much true'. Social media is the biggest change in human history: 'eight billion people are journalists', amplified by algorithms that keep people 'angry, anxious and upset 24/7' -- the seed of a house divided against itself."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/148-richard-gephardt> ;
+    thinkr:influencedBy tgs:Persona.RichardGephardt ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_148. Early humans lived in bands of about a hundred and knew whom to believe. Gephardt says people must 'assert our agency over our information culture' and supports efforts such as the Center for Humane Technology (Tristan Harris, Aza Raskin) and tgs:Organization.ProjectLiberty's algorithm-free 'Internet 2.0'. He believes his own district's shift to the right owes more to the information culture than to changed people. Nate: if we cannot agree on what is true, we cannot solve energy, climate or geopolitics. Related: tgs:Concept.AttentionEconomy, tgs:Concept.EpistemicCommons."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.RankedChoiceVoting a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Ranked-choice voting"@en ;
+    skos:definition "An electoral system in which voters rank candidates and votes transfer in rounds until one has a majority, often replacing separate party primaries. Richard Gephardt favours it as the best answer to gerrymandering's 'bulletproof' districts -- where computers now let both parties draw seats in which only the primary matters -- because it tends to elect more moderate, centrist candidates able to compromise."@en ;
+    dcterms:source <https://fairvote.org/our-reforms/ranked-choice-voting/> ;
+    thinkr:influencedBy tgs:Persona.RichardGephardt ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_148. He contrasts the hunches of 1970s redistricting with today's household-level data, and notes that only a few House and Senate races are now truly competitive. Related: tgs:Concept.SelfGovernmentModel, tgs:InterventionSubdomain.SubsidiarityAndLocalGovernance."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4774,6 +4810,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.IdealParentCulturalEcologicalProtocols,
         tgs:Concept.ImaginalCells,
         tgs:Concept.ImpossibleToHard,
+        tgs:Concept.InformationCultureTransitions,
         tgs:Concept.InServiceOfLife,
         tgs:Concept.InactionPlanForNature,
         tgs:Concept.IndustrialEraEducation,
@@ -4875,6 +4912,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.QuadraticFunding,
         tgs:Concept.RadicalHospitality,
         tgs:Concept.RadicalMiddle,
+        tgs:Concept.RankedChoiceVoting,
         tgs:Concept.RationalIgnorance,
         tgs:Concept.ReAgentificationOfTheWorld,
         tgs:Concept.ReAimingTheStatusDrive,
@@ -4904,6 +4942,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.Schismogenesis,
         tgs:Concept.SecondPrecisionRevolution,
         tgs:Concept.SelfActivatingVolunteerNetwork,
+        tgs:Concept.SelfGovernmentModel,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenAIMacroRisks,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
@@ -5284,6 +5323,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PreemptivePeace,
         tgs:Concept.PunishmentStrategy,
         tgs:Concept.SecondPrecisionRevolution,
+        tgs:Concept.SelfGovernmentModel,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SolarGeoengineeringGovernance,
         tgs:Concept.SolarRadiationModification,
@@ -5390,6 +5430,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ImpossibleToHard,
         tgs:Concept.InactionPlanForNature,
         tgs:Concept.IndustrialEraEducation,
+        tgs:Concept.InformationCultureTransitions,
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.Intellectology,
         tgs:Concept.IntelligenceBoundByWisdom,
@@ -5447,6 +5488,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.QuadraticFunding,
         tgs:Concept.RadicalHospitality,
         tgs:Concept.RadicalMiddle,
+        tgs:Concept.RankedChoiceVoting,
         tgs:Concept.RationalIgnorance,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RealityBasedHope,
@@ -5465,6 +5507,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RocksInTheRiver,
         tgs:Concept.Schismogenesis,
         tgs:Concept.SelfActivatingVolunteerNetwork,
+        tgs:Concept.SelfGovernmentModel,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenDialsOfInstitutionalPsychopathy,
         tgs:Concept.SevenFiresProphecy,
@@ -5554,6 +5597,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HumanPredicament,
         tgs:Concept.HumanitysIcarusMoment,
+        tgs:Concept.InformationCultureTransitions,
         tgs:Concept.InfrastructureSocialStructureSuperstructure,
         tgs:Concept.InstitutionalDarkMatter,
         tgs:Concept.IntelligenceBoundByWisdom,
@@ -5776,6 +5820,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HumanExceptionalism,
         tgs:Concept.HumanitarianNeutralityAndAccess,
+        tgs:Concept.InformationCultureTransitions,
         tgs:Concept.InfrastructureSocialStructureSuperstructure,
         tgs:Concept.JevonsDividend,
         tgs:Concept.LeapfroggingDevelopment,
@@ -5793,10 +5838,12 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ProSocialPrepping,
         tgs:Concept.PublicChoiceTheory,
         tgs:Concept.RadicalMiddle,
+        tgs:Concept.RankedChoiceVoting,
         tgs:Concept.RealityParty,
         tgs:Concept.ResourcesVersusReserves,
         tgs:Concept.RestraintByDesign,
         tgs:Concept.SelfActivatingVolunteerNetwork,
+        tgs:Concept.SelfGovernmentModel,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenGenerationsThinking,
         tgs:Concept.SevenKeyInterventions,
@@ -5921,6 +5968,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IAmBecauseWeAre,
         tgs:Concept.ImaginalCells,
         tgs:Concept.ImpossibleToHard,
+        tgs:Concept.InformationCultureTransitions,
         tgs:Concept.InServiceOfLife,
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.IntelligenceBoundByWisdom,
@@ -6149,6 +6197,11 @@ tgs:Concept.DetoxifyingCapitalism skos:related tgs:Concept.TragedyOfTheCommons .
 tgs:Concept.UnintentionalCommunity skos:related tgs:Concept.ProSocialPrepping .
 tgs:Concept.ProSocialPrepping skos:related tgs:Concept.RichInSocialCapital .
 tgs:Concept.ProSocialPrepping skos:related tgs:Concept.CircleOfTrustLocalism .
+tgs:Concept.SelfGovernmentModel skos:related tgs:Concept.RankedChoiceVoting .
+tgs:Concept.SelfGovernmentModel skos:related tgs:Concept.SensemakingPrerequisiteOfOpenSociety .
+tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.AttentionEconomy .
+tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.EpistemicCommons .
+tgs:Concept.InformationCultureTransitions skos:related tgs:Concept.SelfGovernmentModel .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -6162,6 +6215,9 @@ tgs:Concept.AggregateProbability
 
 tgs:Concept.AllostaticLoad
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
+
+tgs:Concept.AttentionEconomy
+    skos:related tgs:Concept.InformationCultureTransitions .
 
 tgs:Concept.BabyBust
     skos:related tgs:Concept.ToxicityCrisis .
@@ -6244,6 +6300,9 @@ tgs:Concept.EnergyBlindness
 
 tgs:Concept.Enoughness
     skos:related tgs:Concept.GiftEconomy, tgs:Concept.HonorableHarvest .
+
+tgs:Concept.EpistemicCommons
+    skos:related tgs:Concept.InformationCultureTransitions .
 
 tgs:Concept.FifthLawOfThermodynamics
     skos:related tgs:Concept.DissipativeStructures .
@@ -6418,6 +6477,9 @@ tgs:Concept.ProsocialityUnderTheSuperorganism
     thinkr:complements tgs:Concept.GameTheoryFillsTheOughtGap ;
     skos:related tgs:Concept.Effectivism, tgs:Concept.GameTheoryFillsTheOughtGap .
 
+tgs:Concept.RankedChoiceVoting
+    skos:related tgs:Concept.SelfGovernmentModel .
+
 tgs:Concept.RealityBasedHope
     skos:related tgs:Concept.DutyToHope, tgs:Concept.EarnedHope .
 
@@ -6440,6 +6502,12 @@ tgs:Concept.ScenarioThinking
 
 tgs:Concept.SelfActivatingVolunteerNetwork
     skos:related tgs:Concept.HumanitarianNeutralityAndAccess .
+
+tgs:Concept.SelfGovernmentModel
+    skos:related tgs:Concept.InformationCultureTransitions .
+
+tgs:Concept.SensemakingPrerequisiteOfOpenSociety
+    skos:related tgs:Concept.SelfGovernmentModel .
 
 tgs:Concept.ShadowOfTheSuperorganism
     thinkr:complements tgs:Concept.FragmentedConsciousness ;

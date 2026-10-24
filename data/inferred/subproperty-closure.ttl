@@ -252,6 +252,8 @@ tgs:Concept.InServiceOfLife skos:note "Nate's own real, direct phrase, delivered
 
 tgs:Concept.IndustrialEraEducation thinkr:relatesTo tgs:Persona.RosaVasquezEspinoza .
 
+tgs:Concept.InformationCultureTransitions thinkr:relatesTo tgs:Persona.RichardGephardt .
+
 tgs:Concept.InfrastructureSocialStructureSuperstructure thinkr:relatesTo tgs:Persona.DanielSchmachtenberger,
         tgs:Persona.MarvinHarris ;
     skos:note "Daniel Schmachtenberger's three-layer model of a civilization, used in TGS_132 to show why technology alone cannot solve climate change. Infrastructure is the technology (efficient machines, renewable energy); social structure is law and economic incentives; superstructure is culture -- what people value, which is the basis of what can be codified into law. In the episode he points out the move he and Nate have just made: starting with technical fixes, realizing they require changes to law and incentives, then realizing those require changes in values. 'It takes superstructure, social structure and infrastructure altogether'; technology 'only plays a meaningful role as a part of that integrated suite.'"@en .
@@ -365,6 +367,8 @@ tgs:Concept.PunishmentStrategy thinkr:relatesTo tgs:Persona.RobertPape .
 
 tgs:Concept.RadicalMiddle thinkr:relatesTo tgs:Persona.ScottTinker .
 
+tgs:Concept.RankedChoiceVoting thinkr:relatesTo tgs:Persona.RichardGephardt .
+
 tgs:Concept.ReAgentificationOfTheWorld thinkr:relatesTo tgs:Persona.IndyJohar .
 
 tgs:Concept.RealityParty thinkr:relatesTo tgs:Persona.NateHagens .
@@ -407,6 +411,8 @@ tgs:Concept.Schismogenesis thinkr:relatesTo tgs:Persona.GregoryBateson ;
 tgs:Concept.SecondPrecisionRevolution thinkr:relatesTo tgs:Persona.RobertPape .
 
 tgs:Concept.SelfActivatingVolunteerNetwork thinkr:relatesTo tgs:Persona.BirgitteBischoff .
+
+tgs:Concept.SelfGovernmentModel thinkr:relatesTo tgs:Persona.RichardGephardt .
 
 tgs:Concept.SevenFiresProphecy thinkr:relatesTo tgs:Persona.RobinWallKimmerer .
 
@@ -659,6 +665,7 @@ tgs:Interview.TGS_147_IndyJohar dct:contributor tgs:Persona.IndyJohar ;
     dct:source <https://www.thegreatsimplification.com/episode/147-indy-johar> .
 
 tgs:Interview.TGS_148_RichardGephardt dct:contributor tgs:Persona.RichardGephardt ;
+    dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/148-richard-gephardt> .
 
 tgs:Interview.TGS_149_JohnFullerton dct:source <https://www.thegreatsimplification.com/episode/149-john-fullerton> .

@@ -3726,6 +3726,13 @@ tgs:Work.TheGreatDemographicReversal a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://blogs.lse.ac.uk/businessreview/2020/09/18/the-great-demographic-reversal-and-what-it-means-for-the-economy/> ;
     .
 
+tgs:Work.FiveThirtyFiveNotOne a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "535 Not 1"@en ;
+    rdfs:comment "Richard Gephardt's book, partly autobiographical, whose title refers to the 535 members of Congress as against one ruler. He wrote it to convey his awe that American self-government has repeatedly reached compromises that about half the country disliked yet accepted, because the process was fair (TGS_148)."@en ;
+    dct:creator tgs:Human.RichardGephardt ;
+    dct:source <https://www.amazon.com/535-Not-1-Richard-Gephardt/dp/1667849654> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3819,6 +3826,9 @@ tgs:Work.EnergyAndHumanAmbitions
 
 tgs:Work.ExcretaMatters
     dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+
+tgs:Work.FiveThirtyFiveNotOne
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
 
 tgs:Work.ForTheCommonGood
     dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .

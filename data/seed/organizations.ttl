@@ -904,6 +904,19 @@ tgs:Organization.GranthamFoundation a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.granthamfoundation.org/> ;
     .
 
+tgs:Organization.GephardtInstitute a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Gephardt Institute for Civic and Community Engagement"@en ;
+    skos:altLabel "Gephardt Institute"@en ;
+    skos:definition "Institute at Washington University in St. Louis, founded by Richard Gephardt about 20 years before TGS_148, that promotes civic engagement and public service among students; Gephardt meets its students every month or two and says they are 'far better than my generation'."@en ;
+    dcterms:source <https://gephardtinstitute.wustl.edu/> ;
+    .
+
+tgs:Organization.ProjectLiberty a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Project Liberty"@en ;
+    skos:definition "Initiative to build a more open internet in which people control their data, without engagement-maximizing algorithms; in 2024 it organized a 'people's bid' to buy TikTok's US operations and move them onto that infrastructure. Richard Gephardt was helping it (TGS_148)."@en ;
+    dcterms:source <https://www.projectliberty.io/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -918,7 +931,7 @@ tgs:Organization.CascadeInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
 
 tgs:Organization.CenterForHumaneTechnology
-    dcterms:isReferencedBy tgs:Interview.TGS_22_AzaRaskin .
+    dcterms:isReferencedBy tgs:Interview.TGS_148_RichardGephardt, tgs:Interview.TGS_22_AzaRaskin .
 
 tgs:Organization.CenterForNativePeoplesAndTheEnvironment
     dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
@@ -968,6 +981,9 @@ tgs:Organization.ExxonMobil
 tgs:Organization.GMO
     dcterms:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
+tgs:Organization.GephardtInstitute
+    dcterms:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
+
 tgs:Organization.GlobalGuerrillasReport
     dcterms:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
 
@@ -994,6 +1010,9 @@ tgs:Organization.PlantBabyPlant
 
 tgs:Organization.PostCarbonInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_24_JasonBradford .
+
+tgs:Organization.ProjectLiberty
+    dcterms:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
 
 tgs:Organization.ReEarthInitiative
     dcterms:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .

@@ -2604,14 +2604,28 @@ tgs:Interview.TGS_147_IndyJohar a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_148_RichardGephardt a thinkr:Episode, owl:NamedIndividual ;
     thinkr:createdDate "2026-09-12"^^xsd:date ;
-    thinkr:updatedDate "2026-09-12"^^xsd:date ;
+    thinkr:updatedDate "2026-10-24"^^xsd:date ;
     thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
     thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
-    skos:prefLabel "Richard Gephardt"@en ;
-    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, guest name, and canonical URL confirmed via this session's own site inventory; real episode title not yet independently confirmed beyond the guest's own name. No transcript or show notes processed yet; no further real content built. Real, direct link: tgs:Persona.RichardGephardt already exists in this graph -- linked directly rather than left disconnected."@en ;
-    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/148-richard-gephardt> ;
+    thinkr:hasHostIntroduction "Today's guest is Richard Gephardt, a retired politician who was a member of the U.S. Congress for 28 years, as both the majority and minority leader of the Democratic House of Representatives. He also ran for president of the United States in 1988 and 2004. Dick has had a long and storied career in public service, which continues today in his eighties, where he's working on issues of democracy and social media and polarization and climate change, among others. I've worked with Dick on a bipartisan project called Advance Bipartisan Policy, which is trying to look two or three steps ahead at the macro policy interventions that our society and our government are going to need as we face The Great Simplification in coming decades. I asked Leader Gephardt to join me today to offer his deep experience and his personal deep study of democracy to discuss the importance of civility among the American people ahead of our upcoming election next week. As tensions continue to rise, our democratic systems and our country's ability to self-govern are increasingly under pressure. Though he is an old-school Democrat, this is a nonpartisan message, where he emphasizes that regardless of who wins, the response to this election will have ripple effects on our social fabric, the stability of the United States as a democracy, and our position as a global leader. With that, no matter who you're voting for, please welcome Leader Richard Gephardt."@en ;
+    skos:prefLabel "Richard Gephardt: \"Preserving Democracy: A Call for Civility\""@en ;
+    skos:definition "Nate's second conversation with former House Majority Leader Richard Gephardt, recorded three weeks before the 2024 US election, on civility and the survival of self-government. Gephardt argues that democracy fails when citizens stop respecting opponents and trusting elections -- like a football game without referees -- and traces today's polarization mainly to the information culture of social media and algorithms, the latest of the communication shocks that began with the printing press. He recommends ranked-choice voting, campaign finance reform, young people in public service, and the Golden Rule: reach out and listen to someone you disagree with."@en ;
+    dct:created "2024-10-17"^^xsd:date ;
+    dct:issued "2024-10-30"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasGuest tgs:Persona.RichardGephardt ;
-    dct:references tgs:Work.535Not1 ;
+    thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/148-richard-gephardt> ;
+    thinkr:hasTranscript <https://www.thegreatsimplification.com/wp-content/uploads/2024/10/TGS148DickGephardtTranscript.docx.pdf> ;
+    thinkr:hasReplay <https://www.youtube.com/watch?v=0GCsetQh7Yk> ;
+    thinkr:discusses tgs:Concept.SelfGovernmentModel, tgs:Concept.InformationCultureTransitions, tgs:Concept.RankedChoiceVoting,
+        tgs:Concept.AdvancePolicy, tgs:Concept.AttentionEconomy, tgs:Concept.EpistemicCommons,
+        tgs:Concept.SensemakingPrerequisiteOfOpenSociety ;
+    dct:references tgs:Interview.TGS_1_RichardGephardt, tgs:Interview.TGS_16_TristanHarris, tgs:Interview.TGS_22_AzaRaskin,
+        tgs:Organization.CenterForHumaneTechnology, tgs:Organization.ProjectLiberty, tgs:Organization.GephardtInstitute,
+        tgs:Work.FiveThirtyFiveNotOne, tgs:Human.TristanHarris, tgs:Human.AzaRaskin ;
+    thinkr:hasDiscussionSummary "CONTEXT: Nate has worked with Gephardt on energy and climate, on 2020 stimulus programs for poor people, and on Advance Policy (tgs:Concept.AdvancePolicy); Gephardt works with Tristan Harris on social media and AI. SELF-GOVERNMENT: he prefers 'self-government' to 'democracy': the people are paramount, ruling through elected representatives; the 1789 US experiment applied to far more people than Athens or Rome and has lasted almost 250 years -- 'a republic, if you can keep it' (Franklin) requires participation every day; millions risking their lives to come to the US are the best testimony; Churchill's 'worst form of government except for all the others'; the alternative is 'the authoritarian model' (tgs:Concept.SelfGovernmentModel). CIVILITY: his greatest worry is that people hate and refuse to respect those they disagree with, and that millions distrust the electoral process; elections need referees, as football does; Democrats raised doubts about Ohio in 2004, Trump's side about 2020, where some 60 lawsuits failed yet many House members still voted against certification; everyone must live with the rule of law. COMPETITION: gerrymandering, now precise with computers, gives both parties 'bulletproof' districts where only the primary matters; ranked-choice voting elects more centrist candidates (tgs:Concept.RankedChoiceVoting); nothing big passes Congress without compromise. Asked whether his 35-year-old self could win today, he says no: his old Missouri area has moved right. INFORMATION CULTURE: social media is the biggest change in human history, bigger than the printing press (Bible, Reformation, witch hunts), radio (Hitler) or television; journalists eventually became trusted curators, but now 'eight billion people are journalists' and AI-driven algorithms keep people angry 24/7 (tgs:Concept.InformationCultureTransitions, tgs:Concept.AttentionEconomy). Nate: without agreement on what is true we cannot address energy, climate or geopolitics (tgs:Concept.EpistemicCommons). Hope: the Center for Humane Technology (tgs:Organization.CenterForHumaneTechnology) and Project Liberty's bid for TikTok to build an 'Internet 2.0' without algorithms or data mining (tgs:Organization.ProjectLiberty); people must assert agency over their information culture and give up hatred. THE GOLDEN RULE: his mother told him at five to treat others as he would like to be treated; his advice: 'reach out and listen to someone'. As leader in 1989 he expanded the leadership to 60 members from far left to far right, meeting nightly for two hours to listen to one another. REFORMS AND HOPE: most young members of Congress in both parties are good people; campaign finance reform passed when John McCain came to his office to win over Republicans; inspired by John F. Kennedy, he runs the Gephardt Institute at Washington University (tgs:Organization.GephardtInstitute), whose students are 'far better than my generation'. His book 535 Not 1 (tgs:Work.FiveThirtyFiveNotOne): half the country disliked each compromise but accepted it because the process was fair. Without self-government, he says, humans will not solve the problems needed to survive. CIVIL WAR: worried but not very; the 1960s, with riots and assassinations, were worse; about 80 million eligible Americans did not vote in 2020. WARS: Ukraine and Gaza could spin into nuclear exchange; Clausewitz; Sunni-Shia enmity. FISCAL: US debt rose $500 billion in two weeks of October, past $35 trillion; health care costs drive the budget. CLOSING: no violence -- cycles of violence end only when everyone is dead; be kind and listen; a possible next book, 'Be Selfish': treat others as you would be treated, because good comes back."@en ;
+    skos:scopeNote "Built 2026-10-24 from the official transcript and show notes, replacing the 2026-09-12 stub in place. Gephardt's second appearance (first: tgs:Interview.TGS_1_RichardGephardt, which the show notes link). Recorded 17 October 2024, released 30 October 2024. Transcript (auto-generated) corrections: 'Asa Raskin' is Aza Raskin; 'nine 2004' is 2004; 'rank choice' is ranked-choice; a stray 'D. L.' and 'INFORMTATION' ignored. The show notes' '1979 US Constitution' is a typo; Gephardt says 1789, when the Constitution took effect (written 1787). Spoken figures recorded rather than corrected: 'like 60 or 80' lawsuits over 2020; 'like a hundred and fifty' House members who would not certify (about 139 House members objected to at least one state); '80 million' registered and qualified people who did not vote in 2020 (usually given as eligible non-voters); Nate's 'twenty to 25 percent' of GDP for health care (show notes: 17.3% in 2022); the 'Clifton Park' area in his redistricting anecdote. Not built: Benjamin Franklin, Winston Churchill, John McCain, John F. Kennedy and Carl von Clausewitz as Humans; the Gephardt Group."@en ;
     .
 
 tgs:Interview.TGS_149_JohnFullerton a thinkr:Episode, owl:NamedIndividual ;
@@ -4915,6 +4929,9 @@ tgs:Interview.TGS_146_BillPlotkin
 tgs:Interview.TGS_147_IndyJohar
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
+tgs:Interview.TGS_148_RichardGephardt
+    dct:references tgs:Work.535Not1 .
+
 tgs:Interview.TGS_149_JohnFullerton
     dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
 
@@ -4954,6 +4971,9 @@ tgs:Interview.TGS_167_FrancisWeller
 tgs:Interview.TGS_169_AudreyTang
     dct:isReferencedBy tgs:Interview.TGS_173_WillMarshall, tgs:Interview.TGS_184_ConnorLeahy, tgs:Interview.TGS_206_AnnaLembke, tgs:Monologue.Frankly_114_DirectionalAdvice .
 
+tgs:Interview.TGS_16_TristanHarris
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
+
 tgs:Interview.TGS_171_AlexisZeigler
     dct:isReferencedBy tgs:Monologue.Frankly_100_AskNateAnything2025, tgs:Monologue.Frankly_93_InformationBurnout .
 
@@ -4989,6 +5009,9 @@ tgs:Interview.TGS_199_SheldonSolomon
 
 tgs:Interview.TGS_19_SimonMichaux
     dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor, tgs:Interview.TGS_68_SimonMichaux .
+
+tgs:Interview.TGS_1_RichardGephardt
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt .
 
 tgs:Interview.TGS_202_SamanthaSweetwater
     dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson .
@@ -5036,7 +5059,7 @@ tgs:Interview.TGS_225_TadPatzek
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Interview.TGS_22_AzaRaskin
-    dct:isReferencedBy tgs:Interview.TGS_173_WillMarshall, tgs:Monologue.Frankly_128_UltraProcessedInformation .
+    dct:isReferencedBy tgs:Interview.TGS_148_RichardGephardt, tgs:Interview.TGS_173_WillMarshall, tgs:Monologue.Frankly_128_UltraProcessedInformation .
 
 tgs:Interview.TGS_230_OlivierHamant
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_155_WhoBrokeTheWorld, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
