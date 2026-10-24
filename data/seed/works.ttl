@@ -3706,6 +3706,26 @@ tgs:Work.GreenIllusions a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://www.nebraskapress.unl.edu/nebraska-paperback/9780803237759/green-illusions/> ;
     .
 
+tgs:Work.GranthamToxicityPodcastNote a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Jeremy Grantham's podcast note on toxicity"@en ;
+    rdfs:comment "Jeremy Grantham's note on toxicity, fertility and population, published with TGS_155, a precursor to the white paper on toxicity (draft title: increasing toxicity and the threat to capitalism and life itself) that the show notes say was due in January 2025. Nate quotes the draft on countries soon competing for immigrants."@en ;
+    dct:source <http://www.thegreatsimplification.com/s/Jeremy-Grantham-Podcast-Note.pdf> ;
+    .
+
+tgs:Work.EmptyPlanet a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Empty Planet: The Shock of Global Population Decline"@en ;
+    rdfs:comment "Book by Darrell Bricker and John Ibbitson (2019) arguing that world population will soon peak and decline because of falling fertility. Jeremy Grantham calls it otherwise splendid but notes it ignores toxicity (TGS_155)."@en ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:source <https://www.amazon.com/Empty-Planet-Global-Population-Decline/dp/1472142950> ;
+    .
+
+tgs:Work.TheGreatDemographicReversal a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Great Demographic Reversal"@en ;
+    rdfs:comment "Charles Goodhart and Manoj Pradhan's argument (book, 2020) that ageing populations will end decades of falling inflation and interest rates. Cited by Jeremy Grantham in TGS_155 as another treatment of population change that leaves out toxicity."@en ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:source <https://blogs.lse.ac.uk/businessreview/2020/09/18/the-great-demographic-reversal-and-what-it-means-for-the-economy/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3783,10 +3803,13 @@ tgs:Work.DrillingDown
     dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek .
 
 tgs:Work.EconomicsForTheFutureBeyondTheSuperorganism
-    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain, tgs:Interview.TGS_171_AlexisZeigler .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_159_SunitaNarain, tgs:Interview.TGS_171_AlexisZeigler .
 
 tgs:Work.EmpoweringCommunities
     dct:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
+
+tgs:Work.EmptyPlanet
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Work.EndTimes
     dct:isReferencedBy tgs:Interview.TGS_164_PeterTurchin .
@@ -3814,6 +3837,9 @@ tgs:Work.GatheringMoss
 
 tgs:Work.GoliathsCurse
     dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
+
+tgs:Work.GranthamToxicityPodcastNote
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Work.GreenIllusions
     dct:isReferencedBy tgs:Interview.TGS_171_AlexisZeigler .
@@ -3843,7 +3869,7 @@ tgs:Work.LePlanDeTransformation
     dct:isReferencedBy tgs:Interview.TGS_84_JeanMarcJancovici .
 
 tgs:Work.LimitsToGrowth1972
-    dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
 tgs:Work.Matrimony
     dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
@@ -3902,6 +3928,9 @@ tgs:Work.TheEndsOfTheWorld
 tgs:Work.TheFutureIsRural
     dct:isReferencedBy tgs:Interview.TGS_211_JasonBradford, tgs:Interview.TGS_24_JasonBradford .
 
+tgs:Work.TheGreatDemographicReversal
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
+
 tgs:Work.TheMarketMyth
     dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman .
 
@@ -3912,7 +3941,7 @@ tgs:Work.TheNordicSecret
     dct:isReferencedBy tgs:Interview.TGS_48_TomasBjorkman .
 
 tgs:Work.ThePopulationBomb
-    dct:isReferencedBy tgs:Interview.TGS_9_PaulEhrlich .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_9_PaulEhrlich .
 
 tgs:Work.TheRighteousMind
     dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt .

@@ -3909,3 +3909,17 @@ tgs:RevisionEvent.TGS_171_Enrichment a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
     thinkr:revisionNote "Enriched the 2026-08-31 build from the official transcript and show notes at MJSullivan's request: added the host introduction and references, rewrote the definition and discussion summary (correcting the attribution of the gunpowder analogy), expanded discusses from one concept to fourteen, and rewrote the scope note. Expanded Zeigler's bio and added memberOf; added the relationship's evidence note. Minted Organizations LivingEnergyFarm and TwinOaks, Works EmpoweringCommunities and GreenIllusions, and five concepts: DirectDriveSolar, CommunityScaleRenewables, AbundantEnergyEnablesBadDesign, SystemsTeachConservation and ConsciousCulturalEvolution."@en ;
     .
+
+tgs:RevisionEvent.TGS_155_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_155_JeremyGrantham, tgs:Human.JeremyGrantham, tgs:Relationship.NateHagens_JeremyGrantham ;
+    thinkr:revisionDate "2026-10-23"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub in place. Added the TGS_155 appearance to the existing Grantham relationship and memberOf GMO and the Grantham Foundation to his Human. Minted Organizations GMO and GranthamFoundation; Works GranthamToxicityPodcastNote, EmptyPlanet and TheGreatDemographicReversal; and four concepts: ToxicityCrisis, BabyBust, DetoxifyingCapitalism and HicksianProfit."@en ;
+    .
+
+tgs:RevisionEvent.TGS_156_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_156_ChristianSawyer, tgs:Human.ChristianSawyer, tgs:Persona.ChristianSawyer ;
+    thinkr:revisionDate "2026-10-23"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub in place. Minted tgs:Human.ChristianSawyer, tgs:Persona.ChristianSawyer and tgs:Relationship.NateHagens_ChristianSawyer (Professional), and two concepts: UnintentionalCommunity (Sawyer) and ProSocialPrepping (Nate's Bend Not Break bucket)."@en ;
+    .

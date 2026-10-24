@@ -1532,8 +1532,13 @@ tgs:Relationship.NateHagens_JeremyGrantham a thinkr:Relationship, owl:NamedIndiv
           thinkr:subjectRole thinkr:InteractionRole.Host ;
           thinkr:objectRole thinkr:InteractionRole.Guest ;
           thinkr:episode tgs:Interview.TGS_99_JeremyGrantham ;
-          dcterms:date "2023-10-24"^^xsd:date ] ;
-    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript, though genuinely warm: Nate's own opening frames having 'long ago followed' Grantham's research going back to his own Oil Drum days, and closes wanting him back 'maybe as a round table guest.' Grantham, in turn, offers direct, substantial praise for the podcast's long-term potential impact."@en .
+          dcterms:date "2023-10-24"^^xsd:date ],
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_155_JeremyGrantham ;
+          dcterms:date "2024-11-05"^^xsd:date ] ;
+    skos:scopeNote "Professional — no explicit personal-friendship language found in this transcript, though genuinely warm: Nate's own opening frames having 'long ago followed' Grantham's research going back to his own Oil Drum days, and closes wanting him back 'maybe as a round table guest.' Grantham, in turn, offers direct, substantial praise for the podcast's long-term potential impact. Second appearance TGS_155 (recorded 5 November 2024): they had met briefly in New York during Climate Week, where Nate saw Jane Goodall thank Grantham for his environmental work; still no friendship language, so it stays Professional."@en .
 
 #############################################
 # ADDED 2026-08-13 — surfaced via the Animated Series credits and
@@ -2953,3 +2958,16 @@ tgs:Relationship.NateHagens_SunitaNarain a thinkr:Relationship, owl:NamedIndivid
           thinkr:episode tgs:Interview.TGS_159_SunitaNarain ;
           dcterms:date "2024-12-04"^^xsd:date ] ;
     skos:scopeNote "Direct textual evidence: 'she and I have never met before this conversation. We have a mutual friend'; 'This is our first conversation.' She offers to send Nate a PDF of her book on the neo-locals, and he invites her back."@en .
+
+tgs:Relationship.NateHagens_ChristianSawyer a thinkr:Relationship, owl:NamedIndividual ;
+    thinkr:hasSubject tgs:Persona.NateHagens ;
+    thinkr:hasObject tgs:Persona.ChristianSawyer ;
+    thinkr:hasRelationshipType thinkr:RelationshipType.Professional ;
+    skos:prefLabel "Nate Hagens' professional relationship with Christian Sawyer"@en ;
+    thinkr:hasInteraction
+        [ a thinkr:PodcastAppearance ;
+          thinkr:subjectRole thinkr:InteractionRole.Host ;
+          thinkr:objectRole thinkr:InteractionRole.Guest ;
+          thinkr:episode tgs:Interview.TGS_156_ChristianSawyer ;
+          dcterms:date "2024-11-07"^^xsd:date ] ;
+    skos:scopeNote "Direct textual evidence: 'You're a listener who reached out to us'; Nate closes 'please stay in touch'."@en .

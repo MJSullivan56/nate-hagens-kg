@@ -4511,6 +4511,77 @@ tgs:Concept.ConsciousCulturalEvolution a thinkr:Concept, owl:NamedIndividual ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.ToxicityCrisis a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
+    skos:prefLabel "The toxicity crisis (endocrine disruption)"@en ;
+    skos:definition "Jeremy Grantham's term for the spread of toxic industrial chemicals -- pesticide residues, plasticizers such as phthalates, PFAS and thousands of untested compounds -- through food, homes and bodies, and especially of endocrine-disrupting chemicals that interfere with hormones. He argues it is more dangerous, faster-moving and less recognized than climate change: it lowers sex drive and fertility, and the sperm count of men in rich countries has fallen from perhaps 140 million per millilitre in hunter-gatherer times to about 100 by 1972 and about 30 today, declining at about 2.6% a year this century and accelerating. About 15% of couples now need help to conceive."@en ;
+    dcterms:source <http://www.thegreatsimplification.com/s/Jeremy-Grantham-Podcast-Note.pdf> ;
+    thinkr:influencedBy tgs:Persona.JeremyGrantham, tgs:Persona.ShannaSwan ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_155. Evidence Grantham cites: small Harvard and Massachusetts General studies in which men eating the most pesticide-laden produce had half the sperm count of the least, and women in fertility treatment had 37% versus 67% live births; Roundup's additives make it more toxic than glyphosate alone, yet only the active ingredient must be tested; the EU has banned about 1,400 cosmetic chemicals, Canada about 450, the US 11. Unlike climate, toxicity is local: countries that ban toxins will see better health and longevity quickly. Shanna Swan stresses plasticizers, Grantham agricultural residues, others PFAS. Insects are especially sensitive (tgs:Concept.InsectDecline). Related: tgs:Concept.BabyBust."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.BabyBust a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "The baby bust"@en ;
+    skos:definition "The fast, worldwide fall in births that Jeremy Grantham sees as the most neglected long-term risk: driven so far mostly by choice -- the cost and stress of raising children and women's reasonable unwillingness to give up careers in unequal, consumerist societies -- and increasingly by toxicity. Global births peaked at about 142 million a year a decade ago and are falling by about 1.2 million a year; South Korea's births fell 6.1% in a single year, Japan has fewer births than when records began despite three times the population, and at those rates countries move toward eight grandparents per grandchild. With no experience of 'managing downwards', he expects some societies to become unviable, countries to compete for immigrants and some to forbid emigration."@en ;
+    dcterms:source <http://www.thegreatsimplification.com/s/Jeremy-Grantham-Podcast-Note.pdf> ;
+    thinkr:influencedBy tgs:Persona.JeremyGrantham ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_155. Grantham's paradoxes: the population needs to fall to perhaps 2 to 3 billion for sustainability, and no democracy would have chosen that, yet it is happening by accident -- too fast in places. Pensions come out of each year's GDP, so care of the old will compete with the young; feeling poorer will weaken willingness to pay for climate action. Pronatalist policies (Hungary, South Korea, Sweden, 'Do it for Denmark') have largely failed. Machines and AI can replace work but not consumption, on which capitalism depends. Contrast tgs:Work.ThePopulationBomb; related tgs:Concept.ToxicityCrisis, tgs:Concept.DetoxifyingCapitalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.DetoxifyingCapitalism a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Detoxifying capitalism"@en ;
+    skos:definition "Jeremy Grantham's two-part remedy for the toxicity crisis: detoxify the environment -- in principle easy, by banning the worst industrial chemicals, pesticides and plastics and substituting bio-derived materials -- and detoxify capitalism, which will take generations: a culture that recognizes a finite planet and protects the commons capitalism has no mechanism to protect. He names those commons as clean water, clean air, living soil and, newly, a fertility rate of 2.1, without which a society shrinks out of existence. Only government, 'the policeman at the corner of Broad and Wall', can protect them, and only with mass public support to outvote corporate influence."@en ;
+    dcterms:source <http://www.thegreatsimplification.com/s/Jeremy-Grantham-Podcast-Note.pdf> ;
+    thinkr:influencedBy tgs:Persona.JeremyGrantham ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_155. He contrasts Milton Friedman's doctrine that a business's only responsibility is to shareholders, which he says makes corporations sociopathic, and John Hicks' definition of profit as what remains after maintaining all one started with: by that measure we have made no money for decades, because depleted resources and toxified environments are not counted (tgs:Concept.HicksianProfit). His first step as 'toxicity czar': a team of scientists picks the worst 20% of chemicals to phase out within two years. Related: tgs:Concept.ToxicityCrisis, tgs:Concept.TragedyOfTheCommons, tgs:Concept.TheFifteenHundred (his plea to the very rich)."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.HicksianProfit a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EconomicsAndMonetary ;
+    skos:prefLabel "Hicksian profit (income that maintains capital)"@en ;
+    skos:definition "Economist John Hicks' definition of income or profit as what is left at the end of a period after keeping intact everything one started with. Applied to the economy, it means subtracting the cost of replacing depleted resources such as copper and oil and of cleaning up pollution such as PFAS; Jeremy Grantham argues that by this measure industrial economies 'have not made any money for at least the last few decades' but run at a substantial loss, borne by society, other species and future generations while corporations book short-term profits."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/John_Hicks> ;
+    thinkr:influencedBy tgs:Persona.JeremyGrantham ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_155. Hicks set out the concept in Value and Capital (1939); Grantham calls him the most important British economist after Keynes. Related: tgs:Concept.TransmutingWealthIntoIncome, tgs:Concept.DetoxifyingCapitalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.UnintentionalCommunity a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Unintentional community"@en ;
+    skos:definition "Christian Sawyer's half-joking name for a community with no shared ideology or shared property: neighbours scattered across a rural valley who meet regularly to help one another. In his Cochise County group, 15 to 35 people (once 70) gather every first and third Sunday for three seasons a year at a member's property for a morning 'work party' on earthen building, geodesic domes, gardens or earthworks, then share lunch; the host directs the work and feeds everyone. No money changes hands: 'I go to your place and help you build, and when it's my turn, you come to my place.' Nate calls it 'postmodern, non-religious Amish light'."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/156-christian-sawyer> ;
+    thinkr:influencedBy tgs:Persona.ChristianSawyer ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_156. Practices: quarterly planning meetings; Slack and Discord for logistics; newcomers help for a full season before hosting; 'only invite people you would trust to invite other people'; politics rarely discussed ('the political potluck'). The farmers' market works as a Schelling point for finding like-minded people (tgs:GameTheoryTerm.FocalPoint); building social capital means being sociable, saying yes to invitations and, once, cycling three hours to a potluck. The group's one hard lesson was asking a member to leave. Contrast intentional communities such as tgs:Organization.TwinOaks. Related: tgs:Concept.ProSocialPrepping, tgs:Concept.RichInSocialCapital."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.ProSocialPrepping a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Pro-social prepping"@en ;
+    skos:definition "Nate Hagens's name for one bucket of his 'Bend Not Break' portfolio of responses: preparing for disruption not with 'guns and beans and bullion' but by building social capital -- trusted local relationships, shared skills and mutual help that make a community more resilient whatever shock arrives."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/156-christian-sawyer> ;
+    skos:scopeNote "Minted 2026-10-23 for TGS_156. Nate names it in TGS_156, where Christian Sawyer's work parties are his example; he names another bucket, 'libraries of healing', for the mental-health crisis he expects in the next five to ten years. Related: tgs:Concept.UnintentionalCommunity, tgs:Concept.RichInSocialCapital, tgs:Concept.CircleOfTrustLocalism."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4533,6 +4604,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BabyBust,
         tgs:Concept.BarbellEmpathy,
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
@@ -4592,6 +4664,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DefaultModeNetwork,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DenseToMoreDenseTransition,
+        tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.DieselPoweredCivilization,
         tgs:Concept.DiningCar,
         tgs:Concept.DirectDriveSolar,
@@ -4676,6 +4749,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.HealingVsDying,
         tgs:Concept.HeartWillMind,
         tgs:Concept.HerosJourney,
+        tgs:Concept.HicksianProfit,
         tgs:Concept.HighTouchGrounding,
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HoloceneClimateStability,
@@ -4781,6 +4855,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ProgressNarrativeAsApologism,
         tgs:Concept.ProgressTrap,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
+        tgs:Concept.ProSocialPrepping,
         tgs:Concept.ProtectTheIrreversible,
         tgs:Concept.PublicChoiceTheory,
         tgs:Concept.PunishmentStrategy,
@@ -4870,6 +4945,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ThreeRisksThreeResponses,
         tgs:Concept.ThreeTiersOfWealth,
         tgs:Concept.ThreeTimelinesOfResponse,
+        tgs:Concept.ToxicityCrisis,
         tgs:Concept.TragedyOfTheCommons,
         tgs:Concept.TraitsOutcompeteValues,
         tgs:Concept.TransmutingWealthIntoIncome,
@@ -4881,6 +4957,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.UneconomicGrowth,
         tgs:Concept.UnicornStrategies,
         tgs:Concept.UnintendedConsequences,
+        tgs:Concept.UnintentionalCommunity,
         tgs:Concept.Untax,
         tgs:Concept.UphillAndDownhillFutures,
         tgs:Concept.VerticalBehavioralStack,
@@ -5039,6 +5116,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.TheLastCanToKick,
         tgs:Concept.ThingsOfValueThroughTheBottlenecks,
         tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact,
+        tgs:Concept.ToxicityCrisis,
         tgs:Concept.TragedyOfTheCommons,
         tgs:Concept.TransmutingWealthIntoIncome,
         tgs:Concept.TwoWaysOfKnowing,
@@ -5059,6 +5137,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
     skos:member tgs:Concept.AdvancePolicy,
         tgs:Concept.AtomsEnergyBits,
         tgs:Concept.AttentionEconomy,
+        tgs:Concept.BabyBust,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.BiophysicalPyramid,
         tgs:Concept.BrokenApprenticeship,
@@ -5077,6 +5156,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.CostConvenienceComfort,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CustodianshipOverOwnership,
+        tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.EightForcesOnPrices,
         tgs:Concept.EmbeddedGrowthObligation,
         tgs:Concept.EnergyGDPCoupling,
@@ -5091,6 +5171,7 @@ tgs:Collection.Subject_EconomicsAndMonetary a skos:Collection, owl:NamedIndividu
         tgs:Concept.GiftEconomy,
         tgs:Concept.GrowthImperative,
         tgs:Concept.HavesAndHaveNots,
+        tgs:Concept.HicksianProfit,
         tgs:Concept.JevonsDividend,
         tgs:Concept.LifeEnnoblingEconomics,
         tgs:Concept.LocalizedSyntropySystemicEntropy,
@@ -5209,6 +5290,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AuthenticProgress,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BabyBust,
         tgs:Concept.BarbellEmpathy,
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.Bioregion,
@@ -5239,6 +5321,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DarknessDeficitDisorder,
         tgs:Concept.DeepEcology,
         tgs:Concept.DenialLearnedInDominationFamilies,
+        tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.DiningCar,
         tgs:Concept.DiscountRatesAndPresentBias,
         tgs:Concept.DistributedAgency,
@@ -5344,6 +5427,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ProgressNarrativeAsApologism,
         tgs:Concept.ProgressTrap,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
+        tgs:Concept.ProSocialPrepping,
         tgs:Concept.PublicChoiceTheory,
         tgs:Concept.PunishmentStrategy,
         tgs:Concept.PurityVsEffectiveness,
@@ -5400,11 +5484,13 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ThreeRisksThreeResponses,
         tgs:Concept.ThreeTiersOfWealth,
         tgs:Concept.ThreeTimelinesOfResponse,
+        tgs:Concept.ToxicityCrisis,
         tgs:Concept.TraitsOutcompeteValues,
         tgs:Concept.TwelveInformationHazards,
         tgs:Concept.TwentyControlKnobs,
         tgs:Concept.UltraProcessedInformation,
         tgs:Concept.UnintendedConsequences,
+        tgs:Concept.UnintentionalCommunity,
         tgs:Concept.UphillAndDownhillFutures,
         tgs:Concept.VerticalBehavioralStack,
         tgs:Concept.WalrusMovementBlindspots,
@@ -5519,6 +5605,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Biophysical lens"@en ;
     skos:member tgs:Concept.AtomsEnergyBits,
         tgs:Concept.AbundantEnergyEnablesBadDesign,
+        tgs:Concept.BabyBust,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
         tgs:Concept.CarbonBudgetInequity,
@@ -5544,6 +5631,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GiftEconomy,
         tgs:Concept.GreatSimplification,
         tgs:Concept.GrowthImperative,
+        tgs:Concept.HicksianProfit,
         tgs:Concept.HonorableHarvest,
         tgs:Concept.JevonsDividend,
         tgs:Concept.JevonsParadox,
@@ -5577,6 +5665,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ThingsOfValueThroughTheBottlenecks,
         tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact,
         tgs:Concept.ThreeTiersOfWealth,
+        tgs:Concept.ToxicityCrisis,
         tgs:Concept.TransmutingWealthIntoIncome,
         tgs:Concept.TwoCategoriesOfTechnology,
         tgs:Concept.VerticalBehavioralStack,
@@ -5635,6 +5724,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AxiologicalDesign,
+        tgs:Concept.BabyBust,
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.BindingTheJevonsParadox,
         tgs:Concept.Bioregion,
@@ -5655,6 +5745,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CorporationsAsMisalignedAI,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CulturalAntibodies,
+        tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.DominationPartnershipContinuum,
         tgs:Concept.EcologyOfTheoriesOfChange,
         tgs:Concept.EducatingHyperAgents,
@@ -5668,6 +5759,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.GiftEconomy,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.GrowthImperative,
+        tgs:Concept.HicksianProfit,
         tgs:Concept.HolisticExternalityAnalysis,
         tgs:Concept.HumanExceptionalism,
         tgs:Concept.HumanitarianNeutralityAndAccess,
@@ -5685,6 +5777,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PrecautionaryPrinciple,
         tgs:Concept.ProblemSolvingAsRacket,
         tgs:Concept.ProsocialityUnderTheSuperorganism,
+        tgs:Concept.ProSocialPrepping,
         tgs:Concept.PublicChoiceTheory,
         tgs:Concept.RadicalMiddle,
         tgs:Concept.RealityParty,
@@ -5702,8 +5795,10 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ThirdAttractor,
         tgs:Concept.ThreeByThreeResponseGrid,
         tgs:Concept.ThreeTimelinesOfResponse,
+        tgs:Concept.ToxicityCrisis,
         tgs:Concept.TransmutingWealthIntoIncome,
         tgs:Concept.UnintendedConsequences,
+        tgs:Concept.UnintentionalCommunity,
         tgs:Concept.Untax,
         tgs:Concept.WileECoyoteMoment,
         tgs:Concept.YellowTeaming ;
@@ -5747,6 +5842,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.PowerOfLifeVsPowerOverLife,
         tgs:Concept.PowerVersusLife,
         tgs:Concept.PriceCostAndValue,
+        tgs:Concept.ProSocialPrepping,
         tgs:Concept.RadicalMiddle,
         tgs:Concept.ReAimingTheStatusDrive,
         tgs:Concept.RestorationAndRestoryation,
@@ -5765,6 +5861,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ThingsOfValueThroughTheBottlenecks,
         tgs:Concept.ThreeTimelinesOfResponse,
         tgs:Concept.UnintendedConsequences,
+        tgs:Concept.UnintentionalCommunity,
         tgs:Concept.WhatCantWontMightHappen,
         tgs:Concept.WideBoundary,
         tgs:Concept.WideBoundarySovereignty ;
@@ -6029,6 +6126,15 @@ tgs:Concept.AbundantEnergyEnablesBadDesign skos:related tgs:Concept.WideBoundary
 tgs:Concept.SystemsTeachConservation skos:related tgs:Concept.WhatWeDesignDesignsUsBack .
 tgs:Concept.CommunityScaleRenewables skos:related tgs:Concept.CircleOfTrustLocalism .
 tgs:Concept.ConsciousCulturalEvolution skos:related tgs:Concept.Superorganism .
+tgs:Concept.ToxicityCrisis skos:related tgs:Concept.BabyBust .
+tgs:Concept.ToxicityCrisis skos:related tgs:Concept.InsectDecline .
+tgs:Concept.BabyBust skos:related tgs:Concept.DetoxifyingCapitalism .
+tgs:Concept.DetoxifyingCapitalism skos:related tgs:Concept.HicksianProfit .
+tgs:Concept.HicksianProfit skos:related tgs:Concept.TransmutingWealthIntoIncome .
+tgs:Concept.DetoxifyingCapitalism skos:related tgs:Concept.TragedyOfTheCommons .
+tgs:Concept.UnintentionalCommunity skos:related tgs:Concept.ProSocialPrepping .
+tgs:Concept.ProSocialPrepping skos:related tgs:Concept.RichInSocialCapital .
+tgs:Concept.ProSocialPrepping skos:related tgs:Concept.CircleOfTrustLocalism .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -6043,6 +6149,9 @@ tgs:Concept.AggregateProbability
 tgs:Concept.AllostaticLoad
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole .
 
+tgs:Concept.BabyBust
+    skos:related tgs:Concept.ToxicityCrisis .
+
 tgs:Concept.Bioregion
     dcterms:isReferencedBy tgs:Work.OikosRising .
 
@@ -6056,7 +6165,7 @@ tgs:Concept.CarryingCapacity
     skos:related tgs:Concept.ContextBasedSustainability, tgs:Concept.PhantomCarryingCapacity .
 
 tgs:Concept.CircleOfTrustLocalism
-    skos:related tgs:Concept.CommunityScaleRenewables .
+    skos:related tgs:Concept.CommunityScaleRenewables, tgs:Concept.ProSocialPrepping .
 
 tgs:Concept.CollapseResponseContinuum
     skos:narrower tgs:Concept.CollapseResilience .
@@ -6085,6 +6194,9 @@ tgs:Concept.CulturalMitochondria
 
 tgs:Concept.DeepEcology
     skos:related tgs:Concept.KinshipWorldview, tgs:Concept.Rewilding .
+
+tgs:Concept.DetoxifyingCapitalism
+    skos:related tgs:Concept.BabyBust .
 
 tgs:Concept.DistributedAgency
     skos:related tgs:Concept.SelfActivatingVolunteerNetwork .
@@ -6155,6 +6267,9 @@ tgs:Concept.HealingBeforeEngagement
 tgs:Concept.HeartWillMind
     skos:related tgs:Concept.HeadHeartAndHands, tgs:Concept.HealingBeforeEngagement .
 
+tgs:Concept.HicksianProfit
+    skos:related tgs:Concept.DetoxifyingCapitalism .
+
 tgs:Concept.HonorableHarvest
     skos:related tgs:Concept.SevenGenerationsThinking .
 
@@ -6173,6 +6288,9 @@ tgs:Concept.ImaginalCells
 
 tgs:Concept.ImpossibleToHard
     skos:related tgs:Concept.AggregateProbability .
+
+tgs:Concept.InsectDecline
+    skos:related tgs:Concept.ToxicityCrisis .
 
 tgs:Concept.IntegratingThinkingAndFeeling
     thinkr:complements tgs:Concept.HeartWillMind ;
@@ -6276,6 +6394,9 @@ tgs:Concept.PriceCostAndValue
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
     skos:related tgs:Concept.GameTheoreticVersusRealValue .
 
+tgs:Concept.ProSocialPrepping
+    skos:related tgs:Concept.UnintentionalCommunity .
+
 tgs:Concept.ProgressTrap
     skos:related tgs:Concept.NaiveProgress, tgs:Concept.Overshoot .
 
@@ -6291,7 +6412,7 @@ tgs:Concept.RestraintByDesign
 
 tgs:Concept.RichInSocialCapital
     thinkr:complements tgs:Concept.OneMarshmallowRewardCircuits ;
-    skos:related tgs:Concept.OneMarshmallowRewardCircuits .
+    skos:related tgs:Concept.OneMarshmallowRewardCircuits, tgs:Concept.ProSocialPrepping .
 
 tgs:Concept.RightsOfNature
     skos:related tgs:Concept.DeepEcology ;
@@ -6358,7 +6479,7 @@ tgs:Concept.ThreeTimelinesOfResponse
     skos:related tgs:Concept.ThreeByThreeResponseGrid .
 
 tgs:Concept.TragedyOfTheCommons
-    skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.GameTheory, tgs:Concept.OstromDesignPrinciples .
+    skos:related tgs:Concept.CollectiveActionProblem, tgs:Concept.DetoxifyingCapitalism, tgs:Concept.GameTheory, tgs:Concept.OstromDesignPrinciples .
 
 tgs:Concept.TraitsOutcompeteValues
     thinkr:complements tgs:Concept.PowerSeekingAndComplicity ;
@@ -6366,7 +6487,7 @@ tgs:Concept.TraitsOutcompeteValues
 
 tgs:Concept.TransmutingWealthIntoIncome
     thinkr:complements tgs:Concept.GameTheoreticVersusRealValue ;
-    skos:related tgs:Concept.GameTheoreticVersusRealValue .
+    skos:related tgs:Concept.GameTheoreticVersusRealValue, tgs:Concept.HicksianProfit .
 
 tgs:Concept.TwelveInformationHazards
     skos:related tgs:Concept.MusicalChairsMoment .

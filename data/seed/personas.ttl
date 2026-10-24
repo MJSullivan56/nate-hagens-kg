@@ -1957,6 +1957,15 @@ tgs:Persona.BirgitteBischoff a thinkr:Persona, owl:NamedIndividual ;
     skos:scopeNote "Professional: introduced by a mutual friend; they had talked once before recording, and Nate follows her on LinkedIn. She calls herself 'still a learner' on the polycrisis, which the IFRC Europe region began working on after she read a Cascade Institute report."@en ;
     .
 
+tgs:Persona.ChristianSawyer a thinkr:Persona, owl:NamedIndividual ;
+    thinkr:actsThrough tgs:Human.ChristianSawyer ;
+    thinkr:hasPersonEntityType thinkr:PersonEntityType.Guest ;
+    thinkr:hasProfessionalRelationship tgs:Relationship.NateHagens_ChristianSawyer ;
+    skos:prefLabel "Christian Sawyer"@en ;
+    rdfs:label "Christian Sawyer (persona)"@en ;
+    skos:scopeNote "A TGS listener who reached out to the show; Nate introduces him as 'a TGS listener'. He offered to help listeners start their own work groups through a Slack group linked in the show notes."@en ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

@@ -890,6 +890,20 @@ tgs:Organization.TwinOaks a thinkr:Organization, owl:NamedIndividual ;
     dcterms:source <https://www.twinoaks.org/> ;
     .
 
+tgs:Organization.GMO a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "GMO"@en ;
+    skos:altLabel "Grantham, Mayo, Van Otterloo & Co."@en ;
+    skos:definition "Boston-based investment management firm co-founded in 1977 by Jeremy Grantham, known for its long-term, mean-reversion asset-allocation forecasts and Grantham's quarterly letters on bubbles, resource depletion and climate."@en ;
+    dcterms:source <https://www.gmo.com/> ;
+    .
+
+tgs:Organization.GranthamFoundation a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Grantham Foundation for the Protection of the Environment"@en ;
+    skos:altLabel "Grantham Foundation"@en ;
+    skos:definition "Environmental foundation co-founded in 1989 by Jeremy Grantham and Hannelore Grantham; it funds climate, biodiversity and toxicity work, including Shanna Swan's research on endocrine disruptors and the Society for the Protection of Underground Networks (SPUN)."@en ;
+    dcterms:source <https://www.granthamfoundation.org/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -917,6 +931,9 @@ tgs:Organization.CitizenPotawatomiNation
 
 tgs:Organization.CivilizationResearchInstitute
     dcterms:hasPart tgs:Organization.ConsilienceProject .
+
+tgs:Organization.ClubOfRome
+    dcterms:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Organization.CommodityContext
     dcterms:isReferencedBy tgs:Interview.TGS_218_RoryJohnston .
@@ -948,8 +965,14 @@ tgs:Organization.EleutherAI
 tgs:Organization.ExxonMobil
     dcterms:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
 
+tgs:Organization.GMO
+    dcterms:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
+
 tgs:Organization.GlobalGuerrillasReport
     dcterms:isReferencedBy tgs:Interview.TGS_110_JohnRobb .
+
+tgs:Organization.GranthamFoundation
+    dcterms:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Organization.IFRC
     dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .

@@ -45,6 +45,8 @@ tgs:Concept.AuthenticProgress thinkr:relatesTo tgs:Organization.ConsilienceProje
 
 tgs:Concept.AxiologicalDesign thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
+tgs:Concept.BabyBust thinkr:relatesTo tgs:Persona.JeremyGrantham .
+
 tgs:Concept.BarbellEmpathy thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.BattlesOfOurTime thinkr:relatesTo tgs:Persona.NateHagens .
@@ -131,6 +133,8 @@ tgs:Concept.DefaultModeNetwork skos:note "The brain-region network active during
 tgs:Concept.DenialLearnedInDominationFamilies thinkr:relatesTo tgs:Persona.RianeEisler .
 
 tgs:Concept.DenseToMoreDenseTransition thinkr:relatesTo tgs:Persona.ScottTinker .
+
+tgs:Concept.DetoxifyingCapitalism thinkr:relatesTo tgs:Persona.JeremyGrantham .
 
 tgs:Concept.DieselPoweredCivilization thinkr:relatesTo tgs:Persona.ArtBerman,
         tgs:Persona.BalazsMatics .
@@ -228,6 +232,8 @@ tgs:Concept.GreatTurning thinkr:relatesTo tgs:Persona.JoannaMacy ;
 tgs:Concept.HeadHeartAndHands thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.HerosJourney thinkr:relatesTo tgs:Persona.JosephCampbell .
+
+tgs:Concept.HicksianProfit thinkr:relatesTo tgs:Persona.JeremyGrantham .
 
 tgs:Concept.HighTouchGrounding thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
@@ -452,11 +458,16 @@ tgs:Concept.ThirdAttractor thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
+tgs:Concept.ToxicityCrisis thinkr:relatesTo tgs:Persona.JeremyGrantham,
+        tgs:Persona.ShannaSwan .
+
 tgs:Concept.TwoCategoriesOfTechnology thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.TwoWaysOfKnowing thinkr:relatesTo tgs:Persona.RosaVasquezEspinoza .
 
 tgs:Concept.UneconomicGrowth thinkr:relatesTo tgs:Persona.HermanDaly .
+
+tgs:Concept.UnintentionalCommunity thinkr:relatesTo tgs:Persona.ChristianSawyer .
 
 tgs:Concept.Untax thinkr:relatesTo tgs:Persona.NateHagens .
 
@@ -677,9 +688,12 @@ tgs:Interview.TGS_154_JaneMuncke dct:contributor tgs:Persona.JaneMuncke ;
     dct:source <https://www.thegreatsimplification.com/episode/154-jane-muncke> .
 
 tgs:Interview.TGS_155_JeremyGrantham dct:contributor tgs:Persona.JeremyGrantham ;
+    dct:creator tgs:Persona.NateHagens ;
     dct:source <https://www.thegreatsimplification.com/episode/155-jeremy-grantham> .
 
-tgs:Interview.TGS_156_ChristianSawyer dct:source <https://www.thegreatsimplification.com/episode/156-christian-sawyer> .
+tgs:Interview.TGS_156_ChristianSawyer dct:contributor tgs:Persona.ChristianSawyer ;
+    dct:creator tgs:Persona.NateHagens ;
+    dct:source <https://www.thegreatsimplification.com/episode/156-christian-sawyer> .
 
 tgs:Interview.TGS_157_BestOfTgs dct:source <https://www.thegreatsimplification.com/episode/157-best-of-tgs> .
 
@@ -2236,6 +2250,8 @@ tgs:Concept.ThreeByThreeResponseGrid thinkr:relatesTo tgs:Concept.SolutionSpaceC
 tgs:Persona.AnastassiaMakarieva thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.ChrisKeefer thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
+tgs:Persona.ChristianSawyer thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.DavidSloanWilson thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 

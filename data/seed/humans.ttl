@@ -1047,6 +1047,7 @@ tgs:Human.JeremyGrantham a thinkr:Human,
     rdfs:label "Jeremy Grantham (human)"@en ;
     owl:sameAs <https://en.wikipedia.org/wiki/Jeremy_Grantham> ;
     rdfs:comment "British investor (b. Robert Jeremy Goltho Grantham, October 6, 1938, Ware, Hertfordshire, England); co-founder and long-term investment strategist, GMO LLC (est. 1977, Boston) — a major asset management firm known for calling the 2000 and 2008 bubbles via a mean-reversion/'super bubble' framework. Earlier, economist at Royal Dutch Shell; co-founder, Batterymarch Financial Management (1969, early commercial indexing). BA, University of Sheffield; MBA, Harvard Business School. With wife Hannelore, co-founded the Grantham Foundation for the Protection of the Environment (1997), to which the couple has committed ~98% of their net worth. Member, American Academy of Arts and Sciences; CBE (2016); Carnegie Medal for Philanthropy (2017). Real, direct funder of tgs:Persona.ShannaSwan's sperm-decline research (already a real, built Persona in this graph)."@en ;
+    thinkr:memberOf tgs:Organization.GMO, tgs:Organization.GranthamFoundation ;
     .
 
 #############################################
@@ -2259,6 +2260,13 @@ tgs:Human.BirgitteBischoff a thinkr:Human, owl:NamedIndividual ;
     dct:source <https://www.ifrc.org/who-we-are/people-and-structures/global-leadership-team/regional-director-europe> ;
     .
 
+tgs:Human.ChristianSawyer a thinkr:Human, owl:NamedIndividual ;
+    skos:prefLabel "Christian Sawyer"@en ;
+    rdfs:label "Christian Sawyer (human)"@en ;
+    rdfs:comment "Local organizer, community lobbyist, sustainable home builder, musician, researcher and groundwater activist in the Sulphur Springs Valley of Cochise County, rural southeast Arizona. Writes for the Arizona Agenda, where he is a part-time copy editor and journalist, and publishes Ground Party Papers, a local newsletter on off-grid, alternative building and local policy. Earlier: a year in an AmeriCorps Conservation Corps, musician and office-plant technician in New York, and lead researcher on a Bisbee startup's techno-economic study of solar panels over canals. A longtime TGS listener who helped build a homesteader work-party network in his valley."@en ;
+    dct:source <https://groundparty.beehiiv.com/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -2306,7 +2314,7 @@ tgs:Human.DonellaMeadows
     dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind, tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
 
 tgs:Human.EOWilson
-    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_239_RobinWallKimmerer, tgs:Monologue.Frankly_98_TenQualitiesThatCouldChangeTheFuture .
 
 tgs:Human.EdConway
     dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor .
@@ -2320,6 +2328,9 @@ tgs:Human.GeoffreyWest
 tgs:Human.GeorgeSoros
     dct:isReferencedBy tgs:Monologue.Frankly_133_IranUsAndTheRest .
 
+tgs:Human.HagaiLevine
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
+
 tgs:Human.HermanDaly
     dct:isReferencedBy tgs:Interview.TGS_102_BillMcKibben .
 
@@ -2330,7 +2341,7 @@ tgs:Human.JamesHansen
     dct:isReferencedBy tgs:Monologue.Frankly_92_AIInServiceOfLife .
 
 tgs:Human.JaneGoodall
-    dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_208_XiyeBastida .
 
 tgs:Human.JoannaMacy
     dct:isReferencedBy tgs:Monologue.Frankly_74_TheLamentOfTheBigfoot .
@@ -2351,7 +2362,7 @@ tgs:Human.NoraBateson
     dct:isReferencedBy tgs:Monologue.Frankly_60_SeventeenThingsIAm100PercentCertainAbout .
 
 tgs:Human.PaulEhrlich
-    dct:isReferencedBy tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits .
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Monologue.Frankly_34_LimitsToPodcastingAboutLimits .
 
 tgs:Human.PierreTeilhardDeChardin
     dct:isReferencedBy tgs:Monologue.Frankly_75_SomebodysGonnaWin .
@@ -2367,6 +2378,9 @@ tgs:Human.RobinWallKimmerer
 
 tgs:Human.RomanKrznaric
     dct:isReferencedBy tgs:Monologue.Frankly_69_GoldilocksTechnology .
+
+tgs:Human.ShannaSwan
+    dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
 
 tgs:Human.StefanRahmstorf
     dct:isReferencedBy tgs:Monologue.Frankly_72_WhatIfClimateChangeWasAHoax .
