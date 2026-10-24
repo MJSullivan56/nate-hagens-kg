@@ -2791,12 +2791,27 @@ tgs:Interview.TGS_156_ChristianSawyer a thinkr:Episode, owl:NamedIndividual ;
 
 tgs:Interview.TGS_157_BestOfTgs a thinkr:Episode, owl:NamedIndividual ;
     thinkr:createdDate "2026-09-12"^^xsd:date ;
-    thinkr:updatedDate "2026-09-12"^^xsd:date ;
-    thinkr:hasEpisodeType thinkr:EpisodeType.Interview ;
+    thinkr:updatedDate "2026-10-24"^^xsd:date ;
+    thinkr:hasEpisodeType thinkr:EpisodeType.Monologue ;
     thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow ;
-    skos:prefLabel "Best Of Tgs"@en ;
-    skos:definition "Real, direct minimal stub (2026-09-12) -- real number, title, and canonical URL confirmed via this session's own site inventory; a real, special/topical episode, not a standard named-guest interview. No transcript or show notes processed yet; no further real content built."@en ;
+    thinkr:hasHostIntroduction "Greetings, and happy holidays and winter solstice. We have had another incredible year on this podcast, filled with fantastic humans as guests who've provided deep insights into our world, the human predicament and the road ahead. As you all know, every episode I ask my guests this question: if you could wave a magic wand and there was no personal recourse to your decision, what is one thing that you would do to improve human and planetary futures? So as 2024 comes to an end, I thought it would be nice to compile and share a highlight reel of some of our guests' answers to this question. I hope you find this meaningful and inspiring, and I invite you to share what you would do if you had a magic wand in the comments. A bit of housekeeping: as Christmas and New Year's this year fall on Wednesdays, there will be no episode out on those weeks, also to give my wonderful staff a break, so our next full episode will be with John Vervaeke on the meaning crisis on January 8th, one of my best conversations of the year, and there are many other wonderful ones on deck after that. Lastly, I want to thank all of you, the community of The Great Simplification. I hope you've learned as much from this journey with our guests as I have. If you would like to support ongoing work in this space and this channel for the coming year, please head to TheGreatSimplification.com; donate can also be found in the show description for this episode. Thank you, happy holidays, onwards, and see you next year."@en ;
+    skos:prefLabel "Best of TGS 2024: guests' magic wand answers"@en ;
+    skos:altLabel "Best Of Tgs"@en ;
+    skos:definition "The end-of-2024 compilation: after a short message from Nate, fourteen guests from the year's episodes answer his closing 'magic wand' question (tgs:Concept.MagicWandQuestion). Answers range from removing money from politics, ending human-caused extinction and teaching people how life works and where human nature comes from, to a generational shift in leadership, everyone belonging to three communities, daily meditation, safe food packaging, a world population of one billion, a world constitution against overshoot, and rebalancing the masculine and the feminine."@en ;
+    dct:created "2024-12-22"^^xsd:date ;
+    dct:issued "2024-12-22"^^xsd:date ;
+    dct:subject tgs:Subject.HumanBehavior, tgs:Subject.EconomicsAndMonetary ;
+    thinkr:hasHost tgs:Persona.NateHagens ;
     thinkr:hasCanonicalSource <https://www.thegreatsimplification.com/episode/157-best-of-tgs> ;
+    thinkr:discusses tgs:Concept.MagicWandQuestion, tgs:Concept.Overshoot, tgs:Concept.Polycrisis,
+        tgs:Concept.BabyBust, tgs:Concept.Bioregion ;
+    dct:references tgs:Interview.TGS_138_FritjofCapra, tgs:Interview.TGS_131_JoeRoman, tgs:Interview.TGS_111_SandraFaber,
+        tgs:Interview.TGS_64_AndrewMillison, tgs:Interview.TGS_137_MamphelaRamphele, tgs:Interview.TGS_135_JanineBenyus,
+        tgs:Interview.TGS_149_JohnFullerton, tgs:Interview.TGS_109_AshleyHodgson, tgs:Interview.TGS_129_JonathanRowson,
+        tgs:Interview.TGS_104_JaneMuncke, tgs:Interview.TGS_99_JeremyGrantham, tgs:Interview.TGS_53_WilliamRees,
+        tgs:Interview.TGS_60_NinaSimons, tgs:Interview.TGS_133_CaseyCampHorinek ;
+    thinkr:hasDiscussionSummary "NATE'S INTRO: 2024 brought 54 guests, 18 Reality Roundtable panelists and 31 Franklys (per the show notes); no episodes on Christmas or New Year's Day; next, John Vervaeke on the meaning crisis (tgs:Interview.TGS_158_JohnVervaeke); thanks to the community and a request for support. THE ANSWERS, in show-note order: Fritjof Capra (tgs:Interview.TGS_138_FritjofCapra) -- no money in politics, ending the institutionalized corruption built into the US system. Joe Roman (tgs:Interview.TGS_131_JoeRoman) -- human-caused extinction, perhaps a thousand times the background rate, brought back to zero; a conservation biologist is like a doctor, and people must decide, as with whales, that it matters. Sandra Faber (tgs:Interview.TGS_111_SandraFaber) -- give everyone the big picture of how the universe and life evolved, culminating in an understanding of human nature, which we should teach the young rather than treat as a mystery. Andrew Millison (tgs:Interview.TGS_64_AndrewMillison) -- that everyone has an experience of oneness with the universe and sheds their illusions. Mamphela Ramphele (tgs:Interview.TGS_137_MamphelaRamphele) -- a generational shift in the leadership of countries, continents and multilateral institutions, with young women leading alongside young men; and education that helps people fall in love with their places. Janine Benyus (tgs:Interview.TGS_135_JanineBenyus) -- one course for everyone on how life works, restoring the watershed literacy elders once passed on. John Fullerton (tgs:Interview.TGS_149_JohnFullerton) -- wake people up to the regenerative paradigm; the myth of separation underlies neoclassical economics and the 'finance algorithm' at the root of the polycrisis (tgs:Concept.Polycrisis). Ashley Hodgson (tgs:Interview.TGS_109_AshleyHodgson) -- everyone belonging to three communities they know well enough to handle crises together, the infrastructure for a new economy; three, so that speaking up risks only part of one's social world. Jonathan Rowson (tgs:Interview.TGS_129_JonathanRowson) -- a daily meditation or yoga practice of half an hour to an hour; and a future that sees the animal industry as an abomination, more vegetarian with occasional ritual meals. Jane Muncke (tgs:Interview.TGS_104_JaneMuncke) -- fully safe food packaging, with no known hazardous or untested chemicals, on the precautionary principle; or everyone working a day or two a year growing food. Jeremy Grantham (tgs:Interview.TGS_99_JeremyGrantham) -- a world population of one billion: with 1900's population and today's technology 'we've made it', with 1900's technology and today's population 'we're toast' (tgs:Concept.BabyBust). William Rees (tgs:Interview.TGS_53_WilliamRees) -- a new constitution for the world based on avoiding overshoot (tgs:Concept.Overshoot): redistribute natural wealth while cutting consumption 45 to 50% overall and 75 to 80% in rich countries, for perhaps 1 to 2 billion people living well in perpetuity. Nina Simons (tgs:Interview.TGS_60_NinaSimons) -- rebalance the masculine and the feminine in people, culture and institutions, and shift from counting things to mapping relationships; her father said a life is measured by how many people you touch and help move toward love. Casey Camp-Horinek (tgs:Interview.TGS_133_CaseyCampHorinek) -- 'we're waving a magic wand right now': sharing, encouraging, listening and learning go out into the universe."@en ;
+    skos:scopeNote "Built 2026-10-24 from the transcript and show notes, replacing the 2026-09-12 stub in place. A compilation rather than an interview, so typed as a Monologue in the main feed; no guests are asserted, since the clips are excerpts of earlier episodes, which are listed as references. Published 22 December 2024 (the show notes give the same date for recording). The published title was not in the materials provided; the label is descriptive. The transcript has no speaker labels and little punctuation (MJSullivan added some); answers are attributed by matching the show-note timestamps to the transcript's order and content, so the boundaries between consecutive clips -- especially Faber/Millison, Ramphele/Benyus and the Rowson clip with two answers -- are inferred. The clips' source episodes come from the show notes (Millison's links to TGS_64; Grantham's to TGS_99). Transcript corrections: 'John Veri' is John Vervaeke; 'magic want' is wand; 'bod well' and 'orre well' are bode well; 'haard is' is hazardous; 'Isles' is aisles; 'wreck recognize' is recognize. Not built: Personas for the nine compilation guests who do not yet have one (Roman, Faber, Ramphele, Benyus, Fullerton, Hodgson, Rowson, Simons, Camp-Horinek); their episodes are still stubs."@en ;
     .
 
 tgs:Interview.TGS_158_JohnVervaeke a thinkr:Episode, owl:NamedIndividual ;
@@ -4813,8 +4828,17 @@ tgs:Interview.TGS_101_ShaleOilAndTheSlurpingSound
 tgs:Interview.TGS_103_PeterBrannen
     dct:isReferencedBy tgs:Monologue.Frankly_92_AIInServiceOfLife .
 
+tgs:Interview.TGS_104_JaneMuncke
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
+
+tgs:Interview.TGS_109_AshleyHodgson
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
+
 tgs:Interview.TGS_10_NoraBateson
     dct:isReferencedBy tgs:Interview.Frankly_20_KeepingWarmData, tgs:Interview.TGS_169_AudreyTang, tgs:Monologue.Frankly_92_AIInServiceOfLife, tgs:PanelDiscussion.RR_2_DeeperEcology .
+
+tgs:Interview.TGS_111_SandraFaber
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
 
 tgs:Interview.TGS_112_SamanthaSweetwater
     dct:isReferencedBy tgs:Monologue.Frankly_147_HowToPlay5dChess .
@@ -4855,17 +4879,29 @@ tgs:Interview.TGS_126_AVisionForBetterment
 tgs:Interview.TGS_127_EdConway
     dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor, tgs:Interview.TGS_215_ChrisKeefer, tgs:Interview.TGS_227_SalMercogliano .
 
+tgs:Interview.TGS_129_JonathanRowson
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
+
 tgs:Interview.TGS_12_DennisMeadows
     dct:isReferencedBy tgs:Interview.TGS_164_PeterTurchin, tgs:Interview.TGS_77_KateRaworth, tgs:Monologue.Frankly_122_ACountryOfGeniuses, tgs:Monologue.Frankly_139_Part2FourVariables .
+
+tgs:Interview.TGS_131_JoeRoman
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
+
+tgs:Interview.TGS_133_CaseyCampHorinek
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
 
 tgs:Interview.TGS_134_JohanRockstrom
     dct:isReferencedBy tgs:Interview.TGS_208_XiyeBastida, tgs:Monologue.Frankly_64_TwentyControlKnobs .
 
 tgs:Interview.TGS_135_JanineBenyus
-    dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs, tgs:Interview.TGS_239_RobinWallKimmerer .
+
+tgs:Interview.TGS_137_MamphelaRamphele
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
 
 tgs:Interview.TGS_138_FritjofCapra
-    dct:isReferencedBy tgs:Monologue.Frankly_140_APerspectiveFromLebanon .
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs, tgs:Monologue.Frankly_140_APerspectiveFromLebanon .
 
 tgs:Interview.TGS_139_DanielChristianWahl
     dct:isReferencedBy tgs:Monologue.Frankly_158_WhatWouldChangeMyMind .
@@ -4878,6 +4914,9 @@ tgs:Interview.TGS_146_BillPlotkin
 
 tgs:Interview.TGS_147_IndyJohar
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
+
+tgs:Interview.TGS_149_JohnFullerton
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
 
 tgs:Interview.TGS_14_JohnGowdy
     dct:isReferencedBy tgs:Interview.TGS_56_DavidSloanWilson, tgs:Interview.TGS_86_LisiKrall, tgs:Monologue.Frankly_126_HumanityAsDrJekyllAndMrHyde .
@@ -5039,7 +5078,7 @@ tgs:Interview.TGS_51_DJWhite
     dct:isReferencedBy tgs:Interview.TGS_168_DanOConnor, tgs:Interview.TGS_208_XiyeBastida, tgs:Monologue.Frankly_153_WhenTruthBecomesHazardous, tgs:Monologue.Frankly_56_PeakOilAIAndTheStraw, tgs:Monologue.Frankly_92_AIInServiceOfLife .
 
 tgs:Interview.TGS_53_WilliamRees
-    dct:isReferencedBy tgs:Interview.TGS_68_SimonMichaux .
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs, tgs:Interview.TGS_68_SimonMichaux .
 
 tgs:Interview.TGS_54_TheStealthAdjustmentOfOil
     dct:isReferencedBy tgs:Interview.TGS_98_HelenThompson, tgs:Monologue.Frankly_23_MordorEconomy, tgs:PanelDiscussion.RR_1_ElectricVehicles .
@@ -5053,8 +5092,11 @@ tgs:Interview.TGS_58_OliviaLazard
 tgs:Interview.TGS_59_JonathanHaidt
     dct:isReferencedBy tgs:Interview.TGS_110_JohnRobb, tgs:Interview.TGS_206_AnnaLembke, tgs:Interview.TGS_212_JohnCook .
 
+tgs:Interview.TGS_60_NinaSimons
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs .
+
 tgs:Interview.TGS_64_AndrewMillison
-    dct:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+    dct:isReferencedBy tgs:Interview.TGS_157_BestOfTgs, tgs:Interview.TGS_159_SunitaNarain .
 
 tgs:Interview.TGS_69_RobertLustig
     dct:isReferencedBy tgs:Interview.TGS_234_SarahWilson, tgs:Monologue.Frankly_163_FiveThingsThatKeepUsWhole .
@@ -5093,7 +5135,7 @@ tgs:Interview.TGS_98_HelenThompson
     dct:isReferencedBy tgs:Interview.TGS_152_HelenThompson .
 
 tgs:Interview.TGS_99_JeremyGrantham
-    dct:isReferencedBy tgs:Interview.TGS_103_PeterBrannen, tgs:Interview.TGS_104_JaneMuncke, tgs:Interview.TGS_134_JohanRockstrom, tgs:Interview.TGS_154_JaneMuncke, tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_164_PeterTurchin, tgs:Interview.TGS_91_LukeGromen, tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife .
+    dct:isReferencedBy tgs:Interview.TGS_103_PeterBrannen, tgs:Interview.TGS_104_JaneMuncke, tgs:Interview.TGS_134_JohanRockstrom, tgs:Interview.TGS_154_JaneMuncke, tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_157_BestOfTgs, tgs:Interview.TGS_164_PeterTurchin, tgs:Interview.TGS_91_LukeGromen, tgs:Monologue.Frankly_80_ThankYouForRuiningMyLife .
 
 tgs:Interview.TGS_9_PaulEhrlich
     dct:isReferencedBy tgs:Interview.TGS_22_AzaRaskin, tgs:Interview.TGS_234_SarahWilson, tgs:Interview.TGS_28_JoanDiamond .

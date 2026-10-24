@@ -3923,3 +3923,10 @@ tgs:RevisionEvent.TGS_156_FullBuild a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
     thinkr:revisionNote "Full build from the official transcript and show notes, replacing the 2026-09-12 stub in place. Minted tgs:Human.ChristianSawyer, tgs:Persona.ChristianSawyer and tgs:Relationship.NateHagens_ChristianSawyer (Professional), and two concepts: UnintentionalCommunity (Sawyer) and ProSocialPrepping (Nate's Bend Not Break bucket)."@en ;
     .
+
+tgs:RevisionEvent.TGS_157_FullBuild a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_157_BestOfTgs, tgs:Concept.MagicWandQuestion ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.InitialBuild ;
+    thinkr:revisionNote "Built the end-of-2024 magic wand compilation from MJSullivan's partly punctuated transcript and the show notes, replacing the 2026-09-12 stub; retyped from Interview to Monologue (IRI unchanged), referenced the source episodes of the fourteen guests' clips, and minted tgs:Concept.MagicWandQuestion."@en ;
+    .

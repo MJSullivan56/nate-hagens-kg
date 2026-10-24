@@ -4582,6 +4582,17 @@ tgs:Concept.ProSocialPrepping a thinkr:Concept, thinkr:HagensConcept, owl:NamedI
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal, thinkr:AnalyticalLensType.Institutional ;
     .
 
+tgs:Concept.MagicWandQuestion a thinkr:Concept, thinkr:HagensConcept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "The magic wand question"@en ;
+    skos:definition "The question Nate Hagens asks every guest near the end of an interview: 'If you could wave a magic wand, and there was no personal recourse to your decision, what is one thing you would do to improve human and planetary futures?' The answers form a running catalogue of what guests see as the most important lever, from removing money from politics to reconnecting people with nature."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/157-best-of-tgs> ;
+    skos:scopeNote "Minted 2026-10-24 for TGS_157, the 2024 compilation of guests' answers. It is one of a set of standing closing questions (advice for listeners, advice for young people, what the guest cares most about, a topic for a return visit). Guests sometimes reframe it -- Christian Sawyer (TGS_156) asked what the superorganism should leave behind -- or decline it, as Sunita Narain (TGS_159) did: 'persistence, perseverance and tenacity' are the only wand."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PracticalPersonal ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
@@ -4794,6 +4805,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.LootableSurplus,
         tgs:Concept.LossAversion,
         tgs:Concept.LoveWisdom,
+        tgs:Concept.MagicWandQuestion,
         tgs:Concept.MarketReflexivity,
         tgs:Concept.MaximizeImpactNotMinimizeFootprint,
         tgs:Concept.MaximizingReturnsOnPower,
@@ -5393,6 +5405,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.LootableSurplus,
         tgs:Concept.LossAversion,
         tgs:Concept.LoveWisdom,
+        tgs:Concept.MagicWandQuestion,
         tgs:Concept.MaximizeImpactNotMinimizeFootprint,
         tgs:Concept.MigrationAsHumanNorm,
         tgs:Concept.MitigationDeterrence,
@@ -5835,6 +5848,7 @@ tgs:Collection.Lens_PracticalPersonal a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.IntegratingThinkingAndFeeling,
         tgs:Concept.IslandsOfCoherence,
         tgs:Concept.LearnedHelplessness,
+        tgs:Concept.MagicWandQuestion,
         tgs:Concept.MaximizeImpactNotMinimizeFootprint,
         tgs:Concept.MoralAmbition,
         tgs:Concept.NamedSolutionsDrawCounterResponse,
