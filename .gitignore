@@ -25,6 +25,7 @@ data/generated/
 
 # Downloaded transcripts (large, regeneratable — keep the repo lean;
 # store the fetch list/script instead, not the PDFs themselves)
+extraction/*
 extraction/transcripts_raw/
 extraction/substack_summaries_raw/
 extraction/cited_sources_raw/
@@ -33,7 +34,8 @@ extraction/transcripts_text_cache/
 extraction/transcripts_text_cache_pre_cleaned
 extraction/intro_segments/
 extraction/Roundtables/
-extraction/intro_candidates.csv
+extraction/Roundtables/
+extraction/TRANSCRIPTS*
 extraction/*.pdf
 
 # Episode-shape pipeline (extraction/shape/): the scripts and the shape

@@ -399,7 +399,7 @@ tgs:Indicator.LifeExpectancy a thinkr:Indicator, owl:NamedIndividual ;
     thinkr:measurementYear "2023" ;
     thinkr:dataPublicationYear "2025" ;
     thinkr:hasDataSource <https://www.countyhealthrankings.org/health-data/population-health-and-well-being/length-of-life/life-span/life-expectancy?state=06&tab=1&year=2023> ;
-    thinkr:hasThresholdSource <https://data-explorer.oecd.org/vis?lc=en&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_HEALTH_STAT%40DF_LE&df[ag]=OECD.ELS.HD&dq=.A.LFEXP..Y0._T.......&pd=2023%2C2023&to[TIME_PERIOD]=false&vw=tb> ;
+    thinkr:hasThresholdSource <https://data-explorer.oecd.org/vis?lc=en&df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_HEALTH_STAT%40DF_LE&df%5Bag%5D=OECD.ELS.HD&dq=.A.LFEXP..Y0._T.......&pd=2023%2C2023&to%5BTIME_PERIOD%5D=false&vw=tb> ;
     thinkr:dataSourceCitation "1) County Health Rankings and Roadmaps. (n.d.). Life Expectancy - Life expectancy in California. Year: 2023. 2) Target: OECD Data Explorer. (n.d.) Parameters: Life Expectancy, 0 years, 2023." ;
     skos:scopeNote "Definition and value from the California Doughnut Snapshot (pp. 9-12), updated 2026-10-23; the value is the report's percentage shortfall below the social foundation. Earlier paraphrased definition: 'The average number of years a newborn resident is expected to live based on current mortality rates.' Value, threshold, years and sources from CalDEC's companion indicator sheet (tgs:Work.CaliforniaDoughnutIndicators2025), added 2026-10-23; the gap now uses the sheet's unrounded figure."@en .
 

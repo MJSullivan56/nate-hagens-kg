@@ -4168,7 +4168,7 @@ tgs:Concept.KinshipWorldview a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
     skos:prefLabel "Kinship worldview"@en ;
     skos:definition "Seeing other beings as relatives within a web of kin rather than as property beneath humans: the self extends, through permeable boundaries, to the plants that feed us, the minerals in our bones and the forest we live in -- what Robin Wall Kimmerer calls 'the great green we' -- so that self-interest becomes the interest of the whole. Expressed in the phrase 'all my relations', and set against the pyramid of human exceptionalism."@en ;
-    dcterms:source <https://doi.org/10.1890/1051-0761(2000)010[1327:KEIPOT]2.0.CO;2> ;
+    dcterms:source <https://doi.org/10.1890/1051-0761(2000)010%5B1327:KEIPOT%5D2.0.CO;2> ;
     thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
     skos:scopeNote "Minted 2026-10-21 for TGS_239. The dcterms:source is Enrique Salmón's 'Kincentric Ecology' (2000), linked in the show notes. Kimmerer offers it as one explanation for why biodiversity declines less on lands stewarded by Indigenous peoples; Nate asks whether lower population density might also explain it, and she agrees many factors contribute. Nate compares it to Thich Nhat Hanh's interbeing and to the Reality Roundtable's 'when does the apple become me' (RR_2). Related but distinct: tgs:Concept.KinshipJourney (Samantha Sweetwater's alternative to the hero's journey)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;

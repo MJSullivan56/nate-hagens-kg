@@ -3951,3 +3951,136 @@ tgs:RevisionEvent.TGS_146_Enrichment a thinkr:RevisionEvent ;
     thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
     thinkr:revisionNote "Enriched from the official transcript and show notes: added hasHostIntroduction, hasDiscussionSummary and a rewritten definition and scopeNote; added discusses and references. Added hasPersonEntityType Guest to Bill Plotkin's Persona and updated its scopeNote; memberOf and dct:source on his Human; replaced the placeholder Relationship scopeNote with transcript evidence. Minted Organization AnimasValleyInstitute and four concepts: SoulAsUniqueEcologicalNiche, TrueAdulthood, PathoAdolescentSociety and KnowingVersusKnowingAbout (a HagensConcept). Confirmed six community-list Works against the episode (Look to the Mountain retitled) and updated stale notes on ArrestedHumanDevelopment, EcocentricDevelopmentalWheel and GreatTurning."@en ;
     .
+
+tgs:RevisionEvent.TGS_222to225_HostIntroductions a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_222_BrettKencairn, tgs:Interview.TGS_223_MichaelEvery, tgs:Interview.TGS_224_RobHopkins, tgs:Interview.TGS_225_TadPatzek ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction (Nate's spoken introduction, from the cleaned [INTRO] sections of transcripts supplied by MJS) to TGS_222 (Brett KenCairn), TGS_223 (Michael Every), TGS_224 (Rob Hopkins) and TGS_225 (Tad Patzek). Removed PDF page-break artifacts ('1 The Great Simplification'); small corrections: 'a-and' to 'and' and a lower-case sentence start (TGS_223), 'cumulated' to 'culminated' (TGS_225). Kept as spoken: Nate's gloss of the film Demain as 'future' (it means tomorrow) in TGS_224."@en ;
+    .
+
+tgs:RevisionEvent.TGS_219_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_219_TadPatzek ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_219 (Tad Patzek, first appearance) from the [INTRO] text supplied by MJS. Corrections: 'lowest K' to Lois K.; 'Hubbard' to Hubbert; 'Patsick' to Patzek; 'accumulated his life's research' to culminated (matching the near-identical TGS_225 introduction); 'great Simplification' to The Great Simplification; light punctuation."@en ;
+    .
+
+tgs:RevisionEvent.TGS_216_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_216_SamHarris ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_216 (Sam Harris) from the [INTRO] text supplied by MJS. Corrections: 'neuroscientists' to neuroscientist; the broken sentence 'as well as. The host of a Top 10 podcast making sense, he explores' to 'as well as the host of the top-10 podcast Making Sense, where he explores'; 'Waking up' to Waking Up; list commas (Tibetan, Indian, Burmese; meditation, awareness, and non-duality)."@en ;
+    .
+
+tgs:RevisionEvent.TGS_215_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_215_ChrisKeefer ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_215 (Chris Keefer, return appearance) from the [INTRO] text supplied by MJS. Corrections: commas around 'especially damage in the natural gas fields and infrastructure' and 'for better or for worse'; 'western' to Western; the fragment 'As we crest the peak of the carbon pulse.' joined to the preceding sentence."@en ;
+    .
+
+tgs:RevisionEvent.TGS_214_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_214_TristanHarris ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_214 (Tristan Harris, return appearance) from the [INTRO] text supplied by MJS. Corrections: 'Za Raskin' to Aza Raskin; 'Trisana, I' to 'Tristan and I'; 'cost irreparable harm' to cause; run-on and broken sentences repaired ('one of my favorite episodes we've recorded all year, and probably in the top 10 of all time'; 'the podcast Your Undivided Attention, which consistently ranks in the top 10 technology podcasts on Apple'); 'Time 100 Next ... to Rolling Stone' joined with 'and'; titles capitalized. The documentary title is given as Nate speaks it ('The AI Doc: How I Became an AI Apocaloptimist'), not checked against the release title."@en ;
+    .
+
+tgs:RevisionEvent.TGS_213_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_213_ChristineWebb ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_213 (Christine Webb) from the [INTRO] text supplied by MJS. Corrections: misplaced sentence breaks repaired ('our. Shared sense' and 'our place. Among them critically' to 'our place among them. Critically'); 'in we, which we find ourselves' to 'in which we find ourselves'; book title capitalized as The Arrogant Ape: The Myth of Human Exceptionalism and Why It Matters; 'culminated with' to 'culminated in'; list and hyphenation punctuation. Also added the missing thinkr:hasEpisodeSegment tgs:EpisodeSegment.MainShow."@en ;
+    .
+
+tgs:RevisionEvent.TGS_210_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_210_PeterBrannen ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_210 (Peter Brannen, return appearance) from the [INTRO] text supplied by MJS. Corrections: 'Klug Center' to Kluge Center; book titles capitalized (The Ends of the World: Volcanic Apocalypses, Lethal Oceans, and Our Quest to Understand Earth's Past Mass Extinctions; The Story of CO2 Is the Story of Everything) and the broken sentences around them joined; 'Carbon in earth and human's history' to 'carbon in Earth's and humans' history'."@en ;
+    .
+
+tgs:RevisionEvent.TGS_207_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_207_CraigTindale ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_207 (Craig Tindale) from the [INTRO] text supplied by MJS. Corrections: 'Oracle IBM' to Oracle, IBM; 'data direct technologies' to DataDirect Technologies; 'east to West' to East-to-West; 'energy technology' read as the list 'energy, technology'; broken closing sentences repaired ('This conversation was. Refreshing to me it was clear and a potent take' and 'I hope you learn and made you think' to 'I hope it makes you learn and think as much as it did me'); 'superpowers competing interest' to superpowers' competing interests; light agreement fixes."@en ;
+    .
+
+tgs:RevisionEvent.TGS_206_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_206_AnnaLembke ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_206 (Anna Lembke) from the [INTRO] text supplied by MJS. Corrections: 'Lemke' to Lembke; 'Doula Diagnosis Clinic' to Dual Diagnosis Clinic; book title as Dopamine Nation: Finding Balance in the Age of Indulgence; 'great Simplification' to Great Simplification; hyphenation (clinician-scholar, peer-reviewed, addiction-focused, jam-packed) and commas."@en ;
+    .
+
+tgs:RevisionEvent.TGS_203_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_203_NateSoares ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_203 (Nate Soares) from the [INTRO] text supplied by MJS. Corrections: 'Eliezer Kowski' to Eliezer Yudkowsky; book title as If Anyone Builds It, Everyone Dies: Why Superhuman AI Would Kill Us All; 'power seeking in incentives in the smarter than human AIs' to 'power-seeking incentives in smarter-than-human AIs'; 'super intelligence' to superintelligence; 'this chat channel' to this channel; the fragment 'Which is a species level extinction' joined to its sentence; hyphenation. Kept as spoken: the stray 'You can find the link to subscribe in the show description', apparently left over from an edited-out Substack mention."@en ;
+    .
+
+tgs:RevisionEvent.TGS_199_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_199_SheldonSolomon ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_199 (Sheldon Solomon) from the [INTRO] text supplied by MJS. Corrections: 'Tom Budzinski' to Tom Pyszczynski; book titles as In the Wake of 9/11: The Psychology of Terror and The Worm at the Core: On the Role of Death in Life; 'off requested' to oft-requested; hyphenation (decades-long, must-watch) and commas."@en ;
+    .
+
+tgs:RevisionEvent.TGS_198_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_198_StacyMitchell ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_198 (Stacy Mitchell) from the [INTRO] text supplied by MJS. Corrections: 'Stacey' to Stacy (her spelling); 'co-executive Director' to co-executive director; 'at the national level in including forming a congressional investigation' to 'at the national level, including informing a congressional investigation'; missing final period before 'With that'."@en ;
+    .
+
+tgs:RevisionEvent.TGS_197_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_197_OveHoeghGuldberg ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_197 (Ove Hoegh-Guldberg) from the [INTRO] text supplied by MJS. Corrections: 'Ove Goldberg' to Ove Hoegh-Guldberg; 'marine biologists and climate scientists' to the singular; 'which you combined on our website, The Great Simplification dot com' to 'which you can find on our website, thegreatsimplification.com'; misplaced sentence breaks repaired ('the fundamentals. Of coral reefs' and 'as we know them today. A topic'); 'earth's' to Earth's. Kept as spoken: the 1999 paper 'predicted the total loss of coral reefs by 2050'."@en ;
+    .
+
+tgs:RevisionEvent.TGS_194_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_194_LukeKemp ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_194 (Luke Kemp, return appearance) from the [INTRO] text supplied by MJS. Corrections: book title as Goliath's Curse: The History and Future of Societal Collapse; 'was just a released' to 'was just released'; 'Center for Study of Existential Risk at Darwin College' to 'Centre for the Study of Existential Risk and at Darwin College' (CSER and Darwin College are separate Cambridge bodies); sentence fragments joined ('With this new book...', 'What we typically call civilizations.'); 'few thousands of years' to 'few thousand years'; 'carries' to carry."@en ;
+    .
+
+tgs:RevisionEvent.TGS_193_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_193_AnastassiaMakarieva ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_193 (Anastassia Makarieva) from the [INTRO] text supplied by MJS. Corrections: 'Anastasia Eva' to Anastassia Makarieva throughout; 'Victor Goroff' to Victor Gorshkov (tgs:Persona.VictorGorshkov); 'atmospheric moisture, transport effectively' to 'atmospheric moisture transport, effectively'; 'which will link right here' to 'which we'll link right here'; misplaced sentence breaks repaired ('I have long thought. The biotic pump theory'; 'stopped me cold. the lack of empathy'); trailing repeated name ('Dr. Anastasia. Eva. Anastasia.') reduced to one; round table to roundtable. Kept as spoken: 'forgetting that she lives in Russia, with the United States being at war'."@en ;
+    .
+
+tgs:RevisionEvent.TGS_191_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_191_TaylorGuthrie ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_191 (Taylor Guthrie) from the [INTRO] text supplied by MJS. Corrections: 'research focus' to focused; 'how an attention and value systems' to 'how attention and value systems'; 'public facing content in including' to 'public-facing content, including'; the fragment 'get in the way. Of these ideals.' joined; list commas (social media, status-seeking, and consumerism) and hyphenation (consumption-driven). The lecture series name 'the Cellular Republic' is kept as given, not checked."@en ;
+    .
+
+tgs:RevisionEvent.TGS_190_HostIntroduction a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_190_StephenJenkinson ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_190 (Stephen Jenkinson) from the [INTRO] text supplied by MJS. Corrections: 'Natalie Roy Stephen' to 'Nathalie Roy, Stephen' (also corrected Natalie to Nathalie in tgs:Organization.OrphanWisdomSchool, matching his Human); 'Steven' to Stephen; 'authors' to author; the broken 'die well skills. He believes that our culture has forgotten. Today.' rejoined as one sentence; book titles as Die Wise: A Manifesto for Sanity and Soul and Matrimony: Ritual, Culture, and the Heart's Work (as already in works.ttl); stray capitals (Modernity's, Fears, Ending) lowered."@en ;
+    .
+
+tgs:RevisionEvent.TGS_178to188_HostIntroductions a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_178_AndrewMillison, tgs:Interview.TGS_180_ZakStein, tgs:Interview.TGS_181_HelenaNorbergHodge, tgs:Interview.TGS_188_LynAlden ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_178 (Andrew Millison), TGS_180 (Zak Stein), TGS_181 (Helena Norberg-Hodge) and TGS_188 (Lyn Alden) from the [INTRO] text supplied by MJS. Corrections -- TGS_178: 'Andrew Millen' to Andrew Millison; 'Andrew Millen is, instructor ... for the last 15 years' to 'Andrew Millison has been an instructor ... for the last 15 years'; 'founded the OSU Permaculture Design' to 'founded OSU Permaculture Design'; the run-together sentences around 'description of this episode as my own podcast grows. It is my hope ... the responses. Our human predicament' repaired; 'individuals in small groups' to 'individuals and small groups'; 'demonstrates' to demonstrate; leading timestamp removed; TGS_180: 'Consillience project' to Consilience Project; book title as Education in a Time Between Worlds; leading timestamp removed; sentence capitals; TGS_181: 'Laak' to Ladakh; 'Global Eco Village Network' to Global Ecovillage Network; 'Norberg Hodge' to Norberg-Hodge; 'The Great Simplification.com' to thegreatsimplification.com; 'institute for the study of energy and our futures' to Institute for the Study of Energy and Our Future; 'a pioneer for' to 'a pioneer of'; 'thank you for helping being a part' to 'thank you for being a part'; capitalization of Local Futures' description and The Economics of Happiness; TGS_188: 'ego Death Capital' to Ego Death Capital; 'broken Money about the past, present, and Future of Money through the Lens of Technology' to 'Broken Money, about the past, present, and future of money through the lens of technology' (full title in tgs:Work.BrokenMoney); missing period before 'With that'."@en ;
+    .
+
+tgs:RevisionEvent.TGS_167to177_HostIntroductions a thinkr:RevisionEvent ;
+    thinkr:affects tgs:Interview.TGS_167_FrancisWeller, tgs:Interview.TGS_169_AudreyTang, tgs:Interview.TGS_175_JeanMarcJancovici, tgs:Interview.TGS_177_ThomasCrowther ;
+    thinkr:revisionDate "2026-10-24"^^xsd:date ;
+    thinkr:revisionKind thinkr:RevisionKindType.Enrichment ;
+    thinkr:revisionNote "Added thinkr:hasHostIntroduction to TGS_167 (Francis Weller), TGS_169 (Audrey Tang), TGS_175 (Jean-Marc Jancovici) and TGS_177 (Thomas Crowther) from the [INTRO] text supplied by MJS. Corrections -- TGS_167: 'for discussion' to 'for a discussion'; the fragment 'introduced the healing work of ritual. To thousands of people' joined; 'Wisdom Bridge' to WisdomBridge; 'Francis work' to Francis's work; the run-on 'with each other.in the middle of this chaos ... for those of you who are questioning' split into sentences; 'climate, topics' to 'climate topics'; hyphenation (best-selling, soul-centered, non-human). Also added the missing thinkr:hasEpisodeSegment MainShow; TGS_169: 'with the gold to' to 'with the goal to'; the fragment 'their past. Successful projects' joined; the sentence break moved so that 'In a global environment where...' begins the sentence ending in 'effective policy changes'. Kept as spoken: 'digital ambassador-at-large' (her title is Cyber Ambassador-at-Large, as on her Human record); TGS_175: 'Carbon four' to Carbone 4; 'Mines Paris Tech' to Mines ParisTech; 'Christopher Blaine' to Christophe Blain; 'his American version of the Book World Without End ... graphic novel. That is illustrated' to 'the American version of the book World Without End ... graphic novel that is illustrated'; 'biophysical macro resource constrained' punctuated; missing period before 'With that'; TGS_177: 'Crower' and 'Crowder' to Crowther (also Crowther Lab); 'Restore' to Restor (tgs:Organization.Restor); 'chair of the Advisory Council, the United Nations Decade on ecosystem restoration' to 'chair of the advisory council of the United Nations Decade on Ecosystem Restoration'; the misplaced breaks 'estimating. There are around 3 trillion trees. Globally, his follow-up' repaired; 'atmosphere carbon' to atmospheric; 'To date this paper sparked' to 'To date, this paper has sparked'; 'a young global leader' to a Young Global Leader."@en ;
+    .
