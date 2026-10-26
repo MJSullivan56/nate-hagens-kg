@@ -1256,12 +1256,15 @@ tgs:Human.LukeKemp a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Luke Kemp"@en ;
     rdfs:label "Luke Kemp (human)"@en ;
     rdfs:comment "Research Affiliate, Centre for the Study of Existential Risk (CSER) and Darwin College, University of Cambridge. Research focuses on the history and future of extreme global risk. Has advised the WHO and other international institutions; work covered by the BBC, New York Times, and The New Yorker. PhD in International Relations and BA (Interdisciplinary Studies, first class honours), Australian National University. Author of tgs:Work.GoliathsCurse (Penguin, 2025), the product of roughly seven years of research."@en ;
+    thinkr:memberOf tgs:Organization.CentreForTheStudyOfExistentialRisk ;
+    dct:source <https://www.cser.ac.uk/team/luke-kemp/> ;
     .
 
 tgs:Human.HelenThompson a thinkr:Human, owl:NamedIndividual ;
     skos:prefLabel "Helen Thompson"@en ;
     rdfs:label "Helen Thompson (human)"@en ;
     rdfs:comment "Professor of Political Economy, Cambridge University. Research focuses on the political economy of energy and the long history behind the democratic, economic, and geopolitical disruptions of the 21st century. Regular panelist, Talking Politics; columnist, New Statesman; co-presenter, UnHerd's podcast 'These Times.' Author of tgs:Work.Disorder2022 and tgs:Work.OilAndTheWesternEconomicCrisis. Real, direct personal origin for her energy focus: born 1967 in Britain; her first memory of national life is the winter of 1974, age seven, her mother cooking by candlelight during the UK's real, widespread power cuts — a formative, visceral early sense of energy's direct impact on daily life, though she didn't connect it to her scholarship until around 2013."@en ;
+    thinkr:memberOf tgs:AcademicInstitution.UniversityOfCambridge ;
     .
 
 tgs:Human.ChrisKeefer a thinkr:Human, owl:NamedIndividual ;

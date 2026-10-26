@@ -63,6 +63,10 @@ tgs:AcademicInstitution.SUNYCollegeOfEnvironmentalScienceAndForestry a thinkr:Ac
     skos:altLabel "SUNY ESF"@en ;
     rdfs:comment "State University of New York college in Syracuse, New York, where tgs:Human.RobinWallKimmerer earned her BS in botany, has taught for over 30 years as SUNY Distinguished Teaching Professor of Environmental Biology, and founded the Center for Native Peoples and the Environment (TGS_239)."@en .
 
+tgs:AcademicInstitution.UniversityOfCambridge a thinkr:AcademicInstitution, owl:NamedIndividual ;
+    skos:prefLabel "University of Cambridge"@en ;
+    rdfs:comment "Where Helen Thompson is Professor of Political Economy (TGS_98, TGS_152), and home of the Centre for the Study of Existential Risk (tgs:Organization.CentreForTheStudyOfExistentialRisk), where Luke Kemp is a research affiliate."@en .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.

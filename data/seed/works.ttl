@@ -3765,6 +3765,44 @@ tgs:Work.TheTheoryOfTheLeisureClass a thinkr:Work, owl:NamedIndividual ;
     dct:source <https://moglen.law.columbia.edu/LCS/theoryleisureclass.pdf> ;
     .
 
+tgs:Work.TheseTimesPodcast a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "These Times"@en ;
+    rdfs:comment "Weekly podcast by Helen Thompson and journalist Tom McTague, ranging over politics, economics and geopolitics; in the year before TGS_152 the Middle East was its most frequent topic. Thompson says preparing it is how she keeps up with events, reading back through notes from earlier episodes to judge what in each week matters most."@en ;
+    dct:creator tgs:Human.HelenThompson ;
+    .
+
+tgs:Work.ClimateEndgame2022 a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Climate Endgame: Exploring Catastrophic Climate Change Scenarios"@en ;
+    rdfs:comment "Paper by Luke Kemp and colleagues (PNAS, 2022) arguing that catastrophic climate scenarios, including warming above 3 degrees, cascading risks and contributions to global collapse or extinction, are dangerously under-studied, and proposing a research agenda. Kemp says the most receptive audience was actuaries and insurers, while some climate scientists, Michael Mann among them, dismissed it as doomerism (TGS_153)."@en ;
+    dct:creator tgs:Human.LukeKemp ;
+    dct:issued "2022"^^xsd:gYear ;
+    dct:source <https://doi.org/10.1073/pnas.2108146119> ;
+    .
+
+tgs:Work.ThePrecipice a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Precipice: Existential Risk and the Future of Humanity"@en ;
+    rdfs:comment "Toby Ord's 2020 book, which estimates a one-in-six chance of existential catastrophe this century. Luke Kemp cites it among several published probability estimates in which he puts no stock, since forecasting works for well-defined, short-horizon questions rather than complex, century-long ones (TGS_153)."@en ;
+    dct:creator "Toby Ord" ;
+    dct:issued "2020"^^xsd:gYear ;
+    dct:source <https://en.wikipedia.org/wiki/The_Precipice:_Existential_Risk_and_the_Future_of_Humanity> ;
+    .
+
+tgs:Work.VulnerableWorldHypothesis a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "The Vulnerable World Hypothesis"@en ;
+    rdfs:comment "Nick Bostrom's 2019 paper (Global Policy) imagining technologies so easy to misuse that only mass surveillance and preemptive policing could prevent catastrophe, illustrated with wearable 'freedom tags'. Luke Kemp calls it a weird thought experiment used to justify severe policy, exactly the kind of idea that appeals to security elites (tgs:Concept.StompReflex; TGS_153)."@en ;
+    dct:creator "Nick Bostrom" ;
+    dct:issued "2019"^^xsd:gYear ;
+    dct:source <https://doi.org/10.1111/1758-5899.12718> ;
+    .
+
+tgs:Work.SixDegrees a thinkr:Work, owl:NamedIndividual ;
+    skos:prefLabel "Six Degrees: Our Future on a Hotter Planet"@en ;
+    rdfs:comment "Mark Lynas's 2007 book describing the world at each additional degree of warming. Reading it, together with seeing the 2009 Copenhagen climate summit as a student delegate, gave Luke Kemp his first 'crisis moment' (TGS_153)."@en ;
+    dct:creator "Mark Lynas" ;
+    dct:issued "2007"^^xsd:gYear ;
+    dct:source <https://en.wikipedia.org/wiki/Six_Degrees:_Our_Future_on_a_Hotter_Planet> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -3819,6 +3857,9 @@ tgs:Work.BrokenMoney2023
 
 tgs:Work.CaliforniaDoughnutReport2025
     dct:isReferencedBy tgs:Work.OikosRising .
+
+tgs:Work.ClimateEndgame2022
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
 
 tgs:Work.Combining
     dct:isReferencedBy tgs:PanelDiscussion.RR_26_WhyCommunityFails .
@@ -3884,7 +3925,7 @@ tgs:Work.GatheringMoss
     dct:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .
 
 tgs:Work.GoliathsCurse
-    dct:isReferencedBy tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp, tgs:Interview.TGS_194_LukeKemp, tgs:Work.BioregionalCarryingCapacitiesPluriversalMRV, tgs:Work.GiftOfTheTurtleIslandBioregionalCongress .
 
 tgs:Work.GranthamToxicityPodcastNote
     dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham .
@@ -3925,6 +3966,9 @@ tgs:Work.LimitsToGrowth1972
 tgs:Work.Matrimony
     dct:isReferencedBy tgs:Interview.TGS_190_StephenJenkinson .
 
+tgs:Work.MerchantsOfDoubt
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
+
 tgs:Work.MoreAndMoreAndMore
     dct:isReferencedBy tgs:Interview.TGS_162_JeanBaptisteFressoz .
 
@@ -3957,6 +4001,9 @@ tgs:Work.ScenarioThinkingHistoricalEvolution
 
 tgs:Work.ShortingTheGrid
     dct:isReferencedBy tgs:Interview.TGS_196_MeredithAngwin .
+
+tgs:Work.SixDegrees
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
 
 tgs:Work.SwitchFilm
     dct:isReferencedBy tgs:Interview.TGS_161_ScottTinker .
@@ -3997,6 +4044,9 @@ tgs:Work.TheNordicSecret
 tgs:Work.ThePopulationBomb
     dct:isReferencedBy tgs:Interview.TGS_155_JeremyGrantham, tgs:Interview.TGS_9_PaulEhrlich .
 
+tgs:Work.ThePrecipice
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
+
 tgs:Work.TheRighteousMind
     dct:isReferencedBy tgs:Interview.TGS_59_JonathanHaidt .
 
@@ -4033,6 +4083,9 @@ tgs:Work.TheWormAtTheCore
 tgs:Work.ThermalPowerAndClimateChange
     dct:isReferencedBy tgs:Interview.TGS_219_TadPatzek, tgs:Interview.TGS_225_TadPatzek .
 
+tgs:Work.TheseTimesPodcast
+    dct:isReferencedBy tgs:Interview.TGS_152_HelenThompson .
+
 tgs:Work.ThinkingLikeAMountain
     dct:isReferencedBy tgs:PanelDiscussion.RR_17_MovingFromApathyToAction .
 
@@ -4050,6 +4103,9 @@ tgs:Work.Ultrasocial2021
 
 tgs:Work.ValuingTheEarth
     dct:isReferencedBy tgs:Interview.TGS_6_HermanDaly .
+
+tgs:Work.VulnerableWorldHypothesis
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
 
 tgs:Work.WWNSArchetypeMatrix
     dct:isReferencedBy tgs:Work.OikosRising .

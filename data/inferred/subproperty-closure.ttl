@@ -20,6 +20,8 @@ tgs:AnimatedVideo.TGS_182_TheSystemsScience dct:creator tgs:Persona.NateHagens ;
 
 tgs:Concept.AIAsMetacrisisAccelerant thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
+tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor thinkr:relatesTo tgs:Persona.HelenThompson .
+
 tgs:Concept.AbundantEnergyEnablesBadDesign thinkr:relatesTo tgs:Persona.AlexisZeigler .
 
 tgs:Concept.ActorlessThreats thinkr:relatesTo tgs:Persona.RodSchoonover .
@@ -70,6 +72,8 @@ tgs:Concept.CaringEconomics thinkr:relatesTo tgs:Persona.RianeEisler ;
 
 tgs:Concept.CarryingCapacity thinkr:relatesTo tgs:Persona.WilliamCatton .
 
+tgs:Concept.CausalChainOfExistentialRisk thinkr:relatesTo tgs:Persona.LukeKemp .
+
 tgs:Concept.ChaliceAndBladePower thinkr:relatesTo tgs:Persona.RianeEisler ;
     skos:note "From The Chalice and the Blade (1987), restated in TGS_116. The symbols are often misread as standing for the sexes; Eisler says that misreading itself comes from the rigid gender stereotypes of domination systems. 'The battle for our future is not between right and left... It's between these two configurations.' Her advice to listeners: 'remember that you have power, the power of the chalice' -- the advances against child labor and for human rights came from small, usually unpopular groups."@en .
 
@@ -88,6 +92,8 @@ tgs:Concept.ClimateCreditCrunch thinkr:relatesTo tgs:Persona.GuntherThallinger .
 tgs:Concept.ClimateDashboard thinkr:relatesTo tgs:Persona.KellyErhart .
 
 tgs:Concept.ClimateMigration thinkr:relatesTo tgs:Persona.SunilAmrith .
+
+tgs:Concept.ClimateRiskRealism thinkr:relatesTo tgs:Persona.LukeKemp .
 
 tgs:Concept.CodedCapital thinkr:relatesTo tgs:Persona.IndyJohar .
 
@@ -135,6 +141,8 @@ tgs:Concept.DarkRetreat thinkr:relatesTo tgs:Persona.AndrewHolecek .
 tgs:Concept.DarknessDeficitDisorder thinkr:relatesTo tgs:Persona.AndrewHolecek .
 
 tgs:Concept.DefaultModeNetwork skos:note "The brain-region network active during self-referential processing, theory of mind, mind-wandering, and mental time travel — anti-correlated with the task-positive network (TPN), which handles direct engaged attention. Chronic DMN dominance is measurably linked to reduced hippocampal grey matter, higher anxiety/depression, and diminished sensory processing."@en .
+
+tgs:Concept.DemocratizingRiskDecisions thinkr:relatesTo tgs:Persona.LukeKemp .
 
 tgs:Concept.DenialLearnedInDominationFamilies thinkr:relatesTo tgs:Persona.RianeEisler .
 
@@ -192,6 +200,8 @@ tgs:Concept.EliteOverproduction thinkr:relatesTo tgs:Persona.PeterTurchin .
 tgs:Concept.EnergyAdditionsNotTransitions thinkr:relatesTo tgs:Persona.JeanBaptisteFressoz ;
     skos:note "The claim that there has never been a true energy transition -- one dominant source replacing another -- only energy additions: each new source (coal, oil, gas, hydro, nuclear, now wind and solar) has been layered on top of earlier ones, whose use has stayed flat or kept rising. Stated directly by Art Berman in TGS-237 ('there never has been an energy transition... we never transitioned from anything to anything'), with the supporting evidence the show notes attach: traditional biomass use is roughly double its 1800 level (Art said about the same) and coal use is at record highs globally. Berman's practical point is about mindset: the investment world assumes substitution, for which there is no historical precedent -- which does not make it impossible, only low-probability, especially in the near term. Scholarly basis: tgs:Work.EnergyTransitionsOrAdditions (York and Bell, 2019), which argues that renewable growth has so far expanded total energy production rather than displacing fossil fuels, and that calling it a 'transition' is misleading and could inhibit policy aimed at actually reducing fossil fuel use."@en .
 
+tgs:Concept.EnergyAndGreatPowerSuccession thinkr:relatesTo tgs:Persona.HelenThompson .
+
 tgs:Concept.EnergyGDPCoupling thinkr:relatesTo tgs:Persona.NateHagens .
 
 tgs:Concept.EnergyPoverty thinkr:relatesTo tgs:Persona.ScottTinker .
@@ -209,6 +219,8 @@ tgs:Concept.EnvironmentAsDevelopment thinkr:relatesTo tgs:Persona.SunitaNarain .
 tgs:Concept.EpigeneticLandscape thinkr:relatesTo tgs:Persona.ConradWaddington .
 
 tgs:Concept.EscalationTrap thinkr:relatesTo tgs:Persona.RobertPape .
+
+tgs:Concept.ExistentialRisk thinkr:relatesTo tgs:Persona.LukeKemp .
 
 tgs:Concept.ExosomaticEnergy thinkr:relatesTo tgs:Persona.NateHagens .
 
@@ -337,6 +349,8 @@ tgs:Concept.NatureBasedPackaging thinkr:relatesTo tgs:Persona.WesCarter .
 
 tgs:Concept.NewtonianFoundationsOfEconomics thinkr:relatesTo tgs:Persona.JohnFullerton .
 
+tgs:Concept.OPECPlusCohesion thinkr:relatesTo tgs:Persona.HelenThompson .
+
 tgs:Concept.OceanAlkalinityEnhancement thinkr:relatesTo tgs:Persona.KellyErhart .
 
 tgs:Concept.OmniLose thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
@@ -423,6 +437,8 @@ tgs:Concept.RewritingTheRulesOfTheSuperorganism thinkr:relatesTo tgs:Persona.Rod
 
 tgs:Concept.RightsOfNature skos:note "The legal and ethical movement to recognize ecosystems, species or natural features (rivers, mountains, whales) as holders of rights or legal persons, rather than property. In TGS_226 Matthew Monahan highlights two mountains in Ma Earth's third funding round: Taranaki Maunga in Aotearoa New Zealand, granted personhood through a treaty settlement between the Crown and Māori, which can steward its own funds; and Pyramid Mountain, the first US mountain to own itself, governed through a guardianship council, along with rights-of-whales initiatives. The show notes link it to Nate's earlier episode with Pella Thiel on ecocide law and the rights of nature."@en .
 
+tgs:Concept.RiskHomeostasis thinkr:relatesTo tgs:Persona.ChuckWatson .
+
 tgs:Concept.RiskSingularity thinkr:relatesTo tgs:Persona.DanielSchmachtenberger .
 
 tgs:Concept.RobustnessVsPerformance skos:note "Olivier Hamant's own real, central, defining distinction (TGS-230): performance is efficacy plus efficiency -- reaching a goal with the least means; robustness is a system's capacity to remain stable and viable despite fluctuation. Real, direct argument: evolution does not select for the most efficient organism, it selects for the most robust one -- species surviving millions of years have to withstand fluctuation long before they can afford to specialize. Human civilization inverted this: cheap, abundant fossil energy substituted an 'abundance of resources' safety net for the real safety net living systems actually use (diversity, redundancy, cooperation), producing what Hamant calls, borrowing Charles Perrow's real term, a 'normal accident' -- a system so complex and interdependent that failure becomes inevitable, not exceptional. Real, direct four determinants of robustness Hamant names explicitly: redundancy (a real plan B), heterogeneity (plan B genuinely different from plan A, not a duplicate), link to the living (dependence on local, living systems rather than only extracted minerals), and deep link to the local territory (social, economic, and material embeddedness in a specific place). Real, direct three-principle synthesis, in Hamant's own words the actual root lesson underneath all three: circularity, cooperation, and robustness itself -- explicitly named as prerequisites for navigating the 21st century 'with joy,' not mere survival tactics."@en .
@@ -463,6 +479,8 @@ tgs:Concept.SolarRadiationModification thinkr:relatesTo tgs:Persona.TedParson ;
 tgs:Concept.SoulAsUniqueEcologicalNiche thinkr:relatesTo tgs:Persona.BillPlotkin .
 
 tgs:Concept.SpaceOfTheNecessary thinkr:relatesTo tgs:Persona.IndyJohar .
+
+tgs:Concept.StompReflex thinkr:relatesTo tgs:Persona.LukeKemp .
 
 tgs:Concept.StrawSiphonSieve skos:note "Nate's own real, direct three-part model (Frankly-119, extending Frankly-56's own earlier straw metaphor) for what technology actually does to real wealth -- defined here explicitly as usable energy, organized matter, and the stocks and flows that make life possible, not money, which is only a real, direct claim on that wealth. (1) The straw: technology increases the rate at which stocks of the natural world are drawn down -- his own real, direct food-system example, the Haber-Bosch process, widened the nitrogen straw so dramatically that roughly half the nitrogen in a human body today originates from fossil fuels. (2) The siphon: gains from that faster extraction concentrate via real, structural network effects (capital rewards those who can finance it, data compounds, early advantage reinforces itself) and via real, direct choke points -- narrow gates (ports, app stores, platforms) where the toolmaker becomes the rent-taker without needing to produce more value, just control access to it. (3) The sieve: technology filters long-term wealth away from the rest of life and toward one species, and within that species toward a narrow subset -- humans now consume roughly 40% of Earth's net primary productivity, and the built technosphere now outweighs all living biomass combined. Real, direct closing extension: debt is named directly as a fourth, social form of the same pattern (a straw pulling future resources into the present, a siphon concentrating returns to those who can issue credit), and AI is analyzed as the newest technology running through this same real, direct three-part structure, but in the cognitive rather than physical economy."@en .
 
@@ -510,6 +528,8 @@ tgs:Concept.Untax thinkr:relatesTo tgs:Persona.NateHagens .
 tgs:Concept.WarAndTheClimateCrisis thinkr:relatesTo tgs:Persona.SunilAmrith .
 
 tgs:Concept.WarmingInducedEmissions thinkr:relatesTo tgs:Persona.KellyErhart .
+
+tgs:Concept.WesternEnergyHypocrisy thinkr:relatesTo tgs:Persona.HelenThompson .
 
 tgs:Concept.WetBulbTemperature skos:note "A single measure combining heat and humidity: the lowest temperature to which air can be cooled by evaporating water into it, which is how hot conditions feel to a body cooling itself by sweating. The higher the dew point, the more moisture in the air and the harder it is for sweat to evaporate. At a sustained wet-bulb temperature of about 35 C (95 F), humans can no longer cool themselves even in shade with a breeze and unlimited water, which is why rising dew points and wet-bulb events are a growing concern in a warming world."@en .
 
@@ -2297,8 +2317,6 @@ tgs:Persona.DavidSloanWilson thinkr:hasNamedEntityType thinkr:PersonEntityType.G
 
 tgs:Persona.DennisMeadows thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
-tgs:Persona.HelenThompson thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
 tgs:Persona.JaneMuncke thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.JosephTainter thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2363,8 +2381,6 @@ tgs:Persona.JeanMarcJancovici thinkr:hasNamedEntityType thinkr:PersonEntityType.
 tgs:Persona.JohanRockstrom thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.KristineTompkins thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
-
-tgs:Persona.LukeKemp thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.PeterTurchin thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
@@ -2459,6 +2475,8 @@ tgs:Persona.SunitaNarain thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest
 
 tgs:Persona.AlexisZeigler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
+tgs:Persona.HelenThompson thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
+
 tgs:Persona.ScottTinker thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:Persona.BillPlotkin thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
@@ -2467,6 +2485,8 @@ tgs:Persona.RianeEisler thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest 
 
 tgs:Concept.LimitsToGrowth thinkr:relatesTo tgs:Persona.DennisMeadows,
         tgs:Persona.DonellaMeadows .
+
+tgs:Persona.LukeKemp thinkr:hasNamedEntityType thinkr:PersonEntityType.Guest .
 
 tgs:ScenarioFacet.GreenGrowth thinkr:logicallyDisjointWith tgs:ScenarioFacet.MadMax ;
     thinkr:relatesTo tgs:ScenarioFacet.Mordor,

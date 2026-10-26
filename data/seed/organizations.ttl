@@ -949,6 +949,13 @@ tgs:Organization.AnimasValleyInstitute a thinkr:Organization, owl:NamedIndividua
     dcterms:source <https://www.animas.org/> ;
     .
 
+tgs:Organization.CentreForTheStudyOfExistentialRisk a thinkr:Organization, owl:NamedIndividual ;
+    skos:prefLabel "Centre for the Study of Existential Risk"@en ;
+    skos:altLabel "CSER"@en ;
+    skos:definition "Research centre at the University of Cambridge studying risks that could lead to human extinction or civilizational collapse. Luke Kemp, a research affiliate, says that housing specialists in AI, synthetic biology, climate and philosophy in one department makes the field more integrated than most academic disciplines (TGS_153). Other centres he names: Oxford's Future of Humanity Institute (closed in 2024), the Future of Life Institute, the Stanford Existential Risks Initiative and the University of Chicago's Existential Risk Laboratory."@en ;
+    dcterms:source <https://www.cser.ac.uk/> ;
+    .
+
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
 # Each triple below mirrors a hand-authored one elsewhere in data/seed/.
@@ -966,7 +973,7 @@ tgs:Organization.CapitalInstitute
     dcterms:isReferencedBy tgs:Interview.TGS_149_JohnFullerton .
 
 tgs:Organization.CascadeInstitute
-    dcterms:isReferencedBy tgs:Interview.TGS_160_BirgitteBischoff .
+    dcterms:isReferencedBy tgs:Interview.TGS_153_LukeKemp, tgs:Interview.TGS_160_BirgitteBischoff .
 
 tgs:Organization.CenterForHumaneTechnology
     dcterms:isReferencedBy tgs:Interview.TGS_148_RichardGephardt, tgs:Interview.TGS_22_AzaRaskin .
@@ -976,6 +983,9 @@ tgs:Organization.CenterForNativePeoplesAndTheEnvironment
 
 tgs:Organization.CentreForScienceAndEnvironment
     dcterms:isReferencedBy tgs:Interview.TGS_159_SunitaNarain .
+
+tgs:Organization.CentreForTheStudyOfExistentialRisk
+    dcterms:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
 
 tgs:Organization.CitizenPotawatomiNation
     dcterms:isReferencedBy tgs:Interview.TGS_239_RobinWallKimmerer .

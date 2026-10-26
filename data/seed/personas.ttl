@@ -1986,6 +1986,9 @@ tgs:Persona.BayoAkomolafe
 tgs:Persona.CharlesGoodnight
     dct:isReferencedBy tgs:Monologue.Frankly_113_ElevenDiscoveriesThatChangedMyWorldview .
 
+tgs:Persona.ChuckWatson
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
+
 tgs:Persona.DanielChristianWahl
     dct:isReferencedBy tgs:Monologue.Frankly_120_TheCreatureInTheMachine .
 
@@ -2051,6 +2054,9 @@ tgs:Persona.SianSutherland
 
 tgs:Persona.SteveKeen
     dct:isReferencedBy tgs:Monologue.Frankly_3_EnergyBlindness .
+
+tgs:Persona.TomMurphy
+    dct:isReferencedBy tgs:Interview.TGS_153_LukeKemp .
 
 tgs:Persona.VanessaAndreotti
     dct:isReferencedBy tgs:Interview.TGS_146_BillPlotkin, tgs:PanelDiscussion.RR_27_AnEcologicalPsychology, tgs:PanelDiscussion.RR_5_FoodAndCommunityInTheRuins .

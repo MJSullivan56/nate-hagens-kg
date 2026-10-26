@@ -4168,7 +4168,7 @@ tgs:Concept.KinshipWorldview a thinkr:Concept, owl:NamedIndividual ;
     dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.EcologyAndEnvironment ;
     skos:prefLabel "Kinship worldview"@en ;
     skos:definition "Seeing other beings as relatives within a web of kin rather than as property beneath humans: the self extends, through permeable boundaries, to the plants that feed us, the minerals in our bones and the forest we live in -- what Robin Wall Kimmerer calls 'the great green we' -- so that self-interest becomes the interest of the whole. Expressed in the phrase 'all my relations', and set against the pyramid of human exceptionalism."@en ;
-    dcterms:source <https://doi.org/10.1890/1051-0761(2000)010%5B1327:KEIPOT%5D2.0.CO;2> ;
+    dcterms:source <https://doi.org/10.1890/1051-0761(2000)010[1327:KEIPOT]2.0.CO;2> ;
     thinkr:influencedBy tgs:Persona.RobinWallKimmerer ;
     skos:scopeNote "Minted 2026-10-21 for TGS_239. The dcterms:source is Enrique Salmón's 'Kincentric Ecology' (2000), linked in the show notes. Kimmerer offers it as one explanation for why biodiversity declines less on lands stewarded by Indigenous peoples; Nate asks whether lower population density might also explain it, and she agrees many factors contribute. Nate compares it to Thich Nhat Hanh's interbeing and to the Reality Roundtable's 'when does the apple become me' (RR_2). Related but distinct: tgs:Concept.KinshipJourney (Samantha Sweetwater's alternative to the hero's journey)."@en ;
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
@@ -4797,12 +4797,133 @@ tgs:Concept.KnowingVersusKnowingAbout a thinkr:Concept, thinkr:HagensConcept, ow
     thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
     .
 
+tgs:Concept.RiskHomeostasis a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Risk homeostasis"@en ;
+    skos:definition "The tendency, after a warned-of risk repeatedly fails to materialize, to adjust psychologically and accept more risk -- 'so let's just go back to watching Monday night football and ordering pizza.' Nate uses it for the public's fading energy awareness: the 2022 energy shock made energy vivid, but because the Middle East wars since October 2023 have not brought the feared oil shock (an Iran war closing the Strait of Hormuz and sending oil to $250 or $300 a barrel), attention has drifted back, though the risks remain."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/152-helen-thompson> ;
+    thinkr:influencedBy tgs:Persona.ChuckWatson ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_152 and TGS_153. The term is Gerald Wilde's; Nate credits Chuck Watson's TGS appearances for it (TGS_153). In TGS_152 Helen Thompson describes the same fade: people 'get a grip for a while and then think, oh, it's gone away.' In TGS_153 Luke Kemp doubts that such cognitive biases explain inaction on existential risks: surveys show strong public majorities for climate action, bans on lethal autonomous weapons and nuclear disarmament, and the main obstacle to climate action, he says, has been the fossil fuel industry. Related: tgs:Concept.EnergyBlindness."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
+    skos:prefLabel "The 2019 Abqaiq attack as Saudi Arabia's 'Pearl Harbor'"@en ;
+    skos:definition "Helen Thompson's reading of the September 2019 Iranian attack on Saudi oil facilities as 'a Pearl Harbor moment' for Saudi Arabia: a direct attack that American air defenses failed to stop, followed by Putin mocking the Saudis and Americans beside Iran's president, and an American response (the killing of General Soleimani) that gave Saudi Arabia no better security guarantee. Because its oil facilities are existential to it, Saudi Arabia will not risk a repeat; in 2024 it moved closer to Iran and signalled that its airspace was off-limits for attacks on Iranian oil, which she believes made Netanyahu understand the limits of an Israeli strike on Iran."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/152-helen-thompson> ;
+    thinkr:influencedBy tgs:Persona.HelenThompson ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_152. Thompson's broader point is that the United States remains bound up with Middle Eastern oil, and that oil, not only the Biden administration's wish to avoid a price spike before the 2024 election, constrained how Washington restrained Israel. Her suggested policy: avoid any all-out Iran-Israel confrontation, and keep Saudi Arabia from drifting into rapprochement with Iran, perhaps through a stronger American security guarantee, though the attack happened on Trump's watch. Related: tgs:Concept.OPECPlusCohesion."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.OPECPlusCohesion a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
+    skos:prefLabel "OPEC+ cohesion over sectarian divides"@en ;
+    skos:definition "Helen Thompson's argument that the Middle Eastern members of BRICS are best understood through OPEC+, whose members, Sunni Saudi Arabia and Shia Iran included, have repeatedly set aside their differences to cooperate in controlling the price of oil since autumn 2016. The arrangement survived Putin's gloating after the 2019 attacks on Saudi oil facilities, Mohammed bin Salman's March 2020 price war (repaired with Trump's help), and American pressure after Russia invaded Ukraine; shared oil interests, she says, 'overwhelm quite a lot of other considerations.'"@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/152-helen-thompson> ;
+    thinkr:influencedBy tgs:Persona.HelenThompson ;
+    skos:scopeNote "Minted 2026-10-26 for Nate asks whether the Sunni-Shia split within BRICS (about half the world's population, a third of its GDP and, he says, half of oil exports) will matter; Thompson answers 'to some extent', but less than the cartel's common interest. Related: tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor, tgs:Interview.TGS_92_BricsStrategicPetroleumReserveMetaphysics."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.WesternEnergyHypocrisy a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Western energy hypocrisy"@en ;
+    skos:definition "Helen Thompson's account of why much of the non-Western world grew angry with Western governments before the Gaza war: in the 2022 gas crisis, after Russia cut Nord Stream 1 flows, European governments including the UK kept coal plants open and burned more coal, months after lecturing developing countries at the COP26 summit to phase out coal; they outbid poorer Asian countries such as Pakistan for liquefied natural gas; and then boasted of how well Europe had coped. Perceived hypocrisy over civilian killing in Gaza landed on top of this anger over energy."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/152-helen-thompson> ;
+    thinkr:influencedBy tgs:Persona.HelenThompson ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_152. Nate adds that Europe also benefited from a very warm winter. Thompson frames it within her view that Western discourse has an 'innocence' about the bloody formation of its own states, which leads it to project a distorted, moralized narrative onto conflicts over borders and states still being fought in the Middle East. Related: tgs:Concept.EnergyAndGreatPowerSuccession."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.EnergyAndGreatPowerSuccession a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.Geopolitics, tgs:Subject.EnergySystems ;
+    skos:prefLabel "Energy and great-power succession"@en ;
+    skos:definition "Helen Thompson's reading of the twentieth century's geopolitical shifts through each power's relationship to oil: Britain, which had coal, lacked oil at home and largely in its empire when the age of oil began, while the United States had it, which helps explain why America superseded the British Empire; Russia also had oil early, the Soviet Union was the world's largest producer by the mid-1970s, and the 1986 oil price crash, hitting Soviet fiscal weaknesses and food-import needs, helped accelerate its end. Energy ages do not end, but the source that matters most geopolitically changes, and she doubts a shift from a unipolar to a multipolar world can come peacefully."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/152-helen-thompson> ;
+    thinkr:influencedBy tgs:Persona.HelenThompson ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_152. Her current read: shale gives the United States considerable short-term advantages, while China is strong in non-fossil energy and its manufacturing but has acute fossil-fuel vulnerabilities; the lion's share of usable oil reserves lies in the Middle East and Russia (which also has the best shale prospects outside the US), so resource conflicts there will deepen, including US efforts to curb Russian energy exports such as Arctic LNG 2. In 'a race between depletion of the Permian Basin and electrification of transport', depletion wins. She links the revival of nuclear power to AI's electricity demands (and to nuclear submarines). Nate agrees that ages are additive (tgs:Concept.EnergyAdditionsNotTransitions) and adds that oil from the Permian has thousands of uses beyond fuel. Related: tgs:Concept.PeakOil."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Biophysical, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.ExistentialRisk a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.SystemsScience, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Existential risk"@en ;
+    skos:definition "In Luke Kemp's usage, a basket of three outcomes -- human extinction, permanent collapse of global society, and lock-in of a societal dystopia such as a global surveillance dictatorship -- each resting on value judgments. He treats it as a property of a whole socio-technical system rather than of single hazards, using the IPCC's four determinants of risk: the threat, the vulnerability, the exposure and the response. Climate change is not simply 'an existential risk': three degrees in a world of good governance, high trust and adaptive technology differs greatly from three degrees in a world of conflict, runaway technology and distrust."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/153-luke-kemp> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_153. The usual threat list is climate change, superintelligent AI, nuclear weapons, engineered pandemics and 'natural' risks such as asteroids and supervolcanoes, though none is purely natural, since harm depends on vulnerability. The term was coined by Nick Bostrom in 2002 as anything that stops humanity reaching 'technological maturity' (maximal economic productivity and control over nature); the early field was transhumanist, utilitarian and longtermist, a bent Nate contrasts with Bill Plotkin's ecological maturity (tgs:Interview.TGS_146_BillPlotkin). Kemp says almost nothing is known about how the risks combine (nuclear winter and climate modellers rarely talk), and wants integrated catastrophe assessments; Nate's 'X-risk singularity' question echoes tgs:Concept.RiskSingularity. Kemp distinguishes forecasting from foresight and puts no stock in published probabilities (Toby Ord's one in six, Martin Rees's coin flip). Related: tgs:Concept.CausalChainOfExistentialRisk, tgs:Concept.Polycrisis."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.Biophysical ;
+    .
+
+tgs:Concept.CausalChainOfExistentialRisk a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.SystemsScience, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Threats, producers, drivers and root causes"@en ;
+    skos:definition "Luke Kemp's four-level causal map of existential risk, which he calls the field's biggest blind spot ('cause blindness'): the threats (AI, climate change, nuclear weapons, engineered pandemics); the producers who create them, highly concentrated, secretive and economically powerful (two countries hold 89% of nuclear warheads, about ten account for over 80% of emissions, three companies lead frontier AI); the drivers that push those producers (arms races, races to the bottom, tragedies of the commons, which he calls 'Goliath traps'); and the root causes beneath them (status competition, the dark triad, the authoritarian impulse and the corrupting effect of power, combined with lootable resources that let dominance hierarchies form). Interventions are needed at every level, and the root causes are the most neglected."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/153-luke-kemp> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_153, previewing tgs:Work.GoliathsCurse. Nate identifies the root level with the economic superorganism (tgs:Concept.Superorganism); Kemp agrees 'eventually'. He holds individuals accountable too ('hate the game and the player'). Examples of producers resisting regulation: AI leaders who signed the 2023 extinction-risk statement yet opposed California's SB 1047, which Governor Newsom vetoed; fossil fuel companies and 3M and DuPont burying evidence on climate and PFAS. AI acts as an accelerant across all of them (tgs:Concept.AIAsMetacrisisAccelerant). His four research priorities: integrated catastrophe assessments, risk-risk trade-offs of responses, root causes, and scrutiny of researchers' ties to risk producers. Related: tgs:Concept.LootableSurplus, tgs:Concept.DarkTriad, tgs:Concept.MultipolarTrap, tgs:Concept.TragedyOfTheCommons."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.GameTheoretic, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.StompReflex a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.Geopolitics ;
+    skos:prefLabel "The stomp reflex"@en ;
+    skos:definition "Luke Kemp's term (from his article of that name) for the characteristic elite response to crisis: centralize power, reduce transparency at the top, impose draconian measures and surveil and police those below -- paired with an 'authoritarian impulse' that leads threatened people to accept it. Disaster research points the other way: mass panic is largely a myth, ordinary people respond with pro-sociality and ingenuity, and the documented problem is elite panic, as after 9/11, which brought two wars and mass surveillance."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/153-luke-kemp> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_153. Kemp worries that existential-risk research itself can feed the reflex, for example arguments that engineered pandemics require mass surveillance, as in Nick Bostrom's vulnerable world hypothesis (tgs:Work.VulnerableWorldHypothesis). He finds Bostrom's information-hazard worry overstated: the barrier for a would-be bioterrorist is resources and capability, not information (tgs:Concept.TwelveInformationHazards). Nate links the reflex to hierarchy built on lootable surpluses and turbocharged by fossil fuels, digital money and AI. Related: tgs:Concept.DemocratizingRiskDecisions, tgs:Concept.CausalChainOfExistentialRisk."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional, thinkr:AnalyticalLensType.PsychologicalInner ;
+    .
+
+tgs:Concept.ClimateRiskRealism a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.EcologyAndEnvironment, tgs:Subject.HumanBehavior ;
+    skos:prefLabel "Climate risk realism (versus doomerism)"@en ;
+    skos:definition "The distinction Luke Kemp and a co-author draw between doomerism -- treating the worst outcome as inevitable and usually imminent ('buy some beans, get some guns') -- and risk realism: recognizing that extreme, low-probability scenarios could be catastrophic and, because they are so consequential, deserve far more attention, as any insurer or risk manager would insist. Lumping the two together, he says, is toxic, and when serious research on extreme scenarios is missing, 'bullshit fills the void.'"@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/153-luke-kemp> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_153. Why mainstream climate science under-studies catastrophic warming, in Kemp's account: the Paris targets steer grants toward 1.5 to 2 degrees; a culture of 'erring on the side of least drama' after attacks by the merchants of doubt (tgs:Work.MerchantsOfDoubt); the IPCC's consensus process; and the difficulty of modelling six degrees or risk cascades. After tgs:Work.ClimateEndgame2022, Michael Mann still called the authors doomers, while actuaries and insurers were the most receptive. Nate defines his own stance the same way: doom is part of his probability distribution, but a doomer is certain of it. Kemp tells activist friends who expect the end within a decade or two that there is no evidence for that."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.PsychologicalInner, thinkr:AnalyticalLensType.Institutional ;
+    .
+
+tgs:Concept.DemocratizingRiskDecisions a thinkr:Concept, owl:NamedIndividual ;
+    skos:inScheme tgs:ConceptScheme.TGSConcepts ;
+    skos:topConceptOf tgs:ConceptScheme.TGSConcepts ;
+    dcterms:subject tgs:Subject.HumanBehavior, tgs:Subject.SystemsScience ;
+    skos:prefLabel "Democratizing risk decisions"@en ;
+    skos:definition "Luke Kemp's answer to the magic wand question -- 'democratize everything' -- illustrated by imagining the 1945 Trinity test decided not by physicists and officials, who went ahead despite a calculated, tiny chance of igniting the atmosphere and even took bets on it, but by a jury of randomly selected citizens, briefed that the risk could not be ruled out and that Nazi Germany was no longer building a bomb. Such a jury, he says, would refuse, and many existential risks become 'blindingly simple and obvious' when ordinary people with sober information, who will not profit, make the call."@en ;
+    dcterms:source <https://www.thegreatsimplification.com/episode/153-luke-kemp> ;
+    thinkr:influencedBy tgs:Persona.LukeKemp ;
+    skos:scopeNote "Minted 2026-10-26 for TGS_153. His evidence that inclusive institutions build resilience: Peter Peregrine's study of societies through the Late Antique Little Ice Age, where inclusiveness predicted outcomes better than the amount of cooling; the disaster-management finding that local involvement improves responses; the social connections that civic life builds; and the superior judgment of large, diverse groups. Nate adds that social connections are hoardable but not lootable; Kemp says economic power is the fungible form that buys every other kind. He calls the United States 'a thermonuclear monarchy', since one person can launch a nuclear strike, and urges voters to make existential risk an electoral issue, learn how nuclear winter works, divest from 'agents of doom', and take Hippocratic and Maimonides oaths in their careers: do no harm, then make things better. He cites Leo Szilard for the ignition calculation (it is usually credited to Edward Teller's team). Related: tgs:Concept.StompReflex, tgs:Concept.MagicWandQuestion."@en ;
+    thinkr:hasAnalyticalLens thinkr:AnalyticalLensType.Institutional ;
+    .
+
 tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
     skos:prefLabel "TGS Concepts"@en ;
     skos:definition "Ideas discussed on The Great Simplification: Nate Hagens' own concepts (see tgs:Collection.HagensConcepts) and the theories of guests and others that the show treats as central. Flat by design: Nate states few broader/narrower relations, so every concept is a top concept, and browsing groups are given as skos:Collection by site subject and by analytical lens."@en ;
     dcterms:source <https://www.thegreatsimplification.com> ;
     dcterms:creator "Compiled by MJSullivan from The Great Simplification" ;
     skos:hasTopConcept
+        tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor,
         tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AgeOfRemembering,
         tgs:Concept.AIAsMetacrisisAccelerant,
@@ -4836,6 +4957,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.CarbonPulse,
         tgs:Concept.CaringEconomics,
         tgs:Concept.CarryingCapacity,
+        tgs:Concept.CausalChainOfExistentialRisk,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.Chrematistics,
         tgs:Concept.CircleOfTrustLocalism,
@@ -4845,6 +4967,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.ClimateCreditCrunch,
         tgs:Concept.ClimateDashboard,
         tgs:Concept.ClimateMigration,
+        tgs:Concept.ClimateRiskRealism,
         tgs:Concept.ClimateSensitivity,
         tgs:Concept.ClimateTippingPoints,
         tgs:Concept.CodedCapital,
@@ -4879,6 +5002,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.DarknessDeficitDisorder,
         tgs:Concept.DeepEcology,
         tgs:Concept.DefaultModeNetwork,
+        tgs:Concept.DemocratizingRiskDecisions,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DenseToMoreDenseTransition,
         tgs:Concept.DetoxifyingCapitalism,
@@ -4917,6 +5041,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EmpathyHandicap,
         tgs:Concept.Enantiodromia,
         tgs:Concept.EnergyAdditionsNotTransitions,
+        tgs:Concept.EnergyAndGreatPowerSuccession,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
@@ -4930,6 +5055,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.EpigeneticLandscape,
         tgs:Concept.EpistemicCommons,
         tgs:Concept.EscalationTrap,
+        tgs:Concept.ExistentialRisk,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.ExtendedProducerResponsibility,
         tgs:Concept.FifthLawOfThermodynamics,
@@ -5050,6 +5176,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.OffshoreBalancing,
         tgs:Concept.OmniLose,
         tgs:Concept.OneMarshmallowRewardCircuits,
+        tgs:Concept.OPECPlusCohesion,
         tgs:Concept.OpportunityRiskAsymmetry,
         tgs:Concept.OriginalTripleInformationHazard,
         tgs:Concept.OstromDesignPrinciples,
@@ -5114,6 +5241,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.RewritingTheRulesOfTheSuperorganism,
         tgs:Concept.RichInSocialCapital,
         tgs:Concept.RightsOfNature,
+        tgs:Concept.RiskHomeostasis,
         tgs:Concept.RiskSingularity,
         tgs:Concept.RobustActions,
         tgs:Concept.RobustnessVsPerformance,
@@ -5149,6 +5277,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.SoulAsUniqueEcologicalNiche,
         tgs:Concept.SpaceOfTheNecessary,
         tgs:Concept.StinglessBees,
+        tgs:Concept.StompReflex,
         tgs:Concept.StrawSiphonSieve,
         tgs:Concept.SuccessAsLongTermPersistence,
         tgs:Concept.SuperPollutants,
@@ -5197,6 +5326,7 @@ tgs:ConceptScheme.TGSConcepts a skos:ConceptScheme, owl:NamedIndividual ;
         tgs:Concept.WalrusMovementBlindspots,
         tgs:Concept.WarAndTheClimateCrisis,
         tgs:Concept.WarmingInducedEmissions,
+        tgs:Concept.WesternEnergyHypocrisy,
         tgs:Concept.WetBulbTemperature,
         tgs:Concept.Wetware,
         tgs:Concept.WhatCantWontMightHappen,
@@ -5294,6 +5424,7 @@ tgs:Collection.Subject_EcologyAndEnvironment a skos:Collection, owl:NamedIndivid
         tgs:Concept.ClimateCreditCrunch,
         tgs:Concept.ClimateDashboard,
         tgs:Concept.ClimateMigration,
+        tgs:Concept.ClimateRiskRealism,
         tgs:Concept.ClimateSensitivity,
         tgs:Concept.ClimateTippingPoints,
         tgs:Concept.ComplexityCollapse,
@@ -5451,6 +5582,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Energy Systems"@en ;
     dcterms:subject tgs:Subject.EnergySystems ;
     skos:member tgs:Concept.BindingTheJevonsParadox,
+        tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor,
         tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.BiophysicalGauntlet,
         tgs:Concept.CarbonAllocationByUse,
@@ -5465,6 +5597,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EarthEnergyImbalance,
         tgs:Concept.EnergyAdditionsNotTransitions,
+        tgs:Concept.EnergyAndGreatPowerSuccession,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyGrowthRateDependence,
@@ -5480,6 +5613,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.JevonsParadox,
         tgs:Concept.LeapfroggingDevelopment,
         tgs:Concept.NaturalDeclineRate,
+        tgs:Concept.OPECPlusCohesion,
         tgs:Concept.PeakOil,
         tgs:Concept.PerpetualMulligans,
         tgs:Concept.PhantomCarryingCapacity,
@@ -5491,6 +5625,7 @@ tgs:Collection.Subject_EnergySystems a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Sobriety,
         tgs:Concept.SystemsTeachConservation,
         tgs:Concept.ThreeCirclesOfAIEnvironmentalImpact,
+        tgs:Concept.WesternEnergyHypocrisy,
         tgs:Concept.TwoCategoriesOfTechnology ;
     .
 
@@ -5498,11 +5633,13 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Geopolitics"@en ;
     dcterms:subject tgs:Subject.Geopolitics ;
     skos:member tgs:Concept.ActorlessThreats,
+        tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor,
         tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CollapseFromThePeriphery,
         tgs:Concept.CorrelationOfForceAndMeans,
         tgs:Concept.EcologicalSecurity,
         tgs:Concept.EliteOverproduction,
+        tgs:Concept.EnergyAndGreatPowerSuccession,
         tgs:Concept.EscalationTrap,
         tgs:Concept.GlobalGovernanceWithoutGlobalGovernment,
         tgs:Concept.HumanitarianNeutralityAndAccess,
@@ -5513,6 +5650,7 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MultipolarTrap,
         tgs:Concept.OffshoreBalancing,
         tgs:Concept.OmniLose,
+        tgs:Concept.OPECPlusCohesion,
         tgs:Concept.Polycrisis,
         tgs:Concept.PreemptivePeace,
         tgs:Concept.PunishmentStrategy,
@@ -5521,7 +5659,9 @@ tgs:Collection.Subject_Geopolitics a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SolarGeoengineeringGovernance,
         tgs:Concept.SolarRadiationModification,
+        tgs:Concept.StompReflex,
         tgs:Concept.ThirdAttractor,
+        tgs:Concept.WesternEnergyHypocrisy,
         tgs:Concept.WarAndTheClimateCrisis ;
     .
 
@@ -5542,10 +5682,12 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.Bioregion,
         tgs:Concept.BrokenApprenticeship,
         tgs:Concept.BundledPreparedness,
+        tgs:Concept.CausalChainOfExistentialRisk,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.CircleOfTrustLocalism,
         tgs:Concept.ClimateAsANormalProblem,
         tgs:Concept.ClimateMigration,
+        tgs:Concept.ClimateRiskRealism,
         tgs:Concept.CollapseResilience,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CollectiveActionProblem,
@@ -5567,6 +5709,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.DarkTriad,
         tgs:Concept.DarknessDeficitDisorder,
         tgs:Concept.DeepEcology,
+        tgs:Concept.DemocratizingRiskDecisions,
         tgs:Concept.DenialLearnedInDominationFamilies,
         tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.DiningCar,
@@ -5589,6 +5732,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.Enoughness,
         tgs:Concept.EpistemicCommons,
+        tgs:Concept.ExistentialRisk,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FiveLensChess,
         tgs:Concept.FivePathwaysThroughDread,
@@ -5700,6 +5844,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RewardPredictionError,
         tgs:Concept.RichInSocialCapital,
+        tgs:Concept.RiskHomeostasis,
         tgs:Concept.RobustActions,
         tgs:Concept.RocksInTheRiver,
         tgs:Concept.Schismogenesis,
@@ -5723,6 +5868,7 @@ tgs:Collection.Subject_HumanBehavior a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SoftFeudalism,
         tgs:Concept.SolutionSpaceCube,
         tgs:Concept.SoulAsUniqueEcologicalNiche,
+        tgs:Concept.StompReflex,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.SuperorganismFreeZones,
         tgs:Concept.SystemsTeachConservation,
@@ -5768,6 +5914,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BundledPreparedness,
         tgs:Concept.CarryingCapacity,
+        tgs:Concept.CausalChainOfExistentialRisk,
         tgs:Concept.CivilizationalOptionality,
         tgs:Concept.ClimateDashboard,
         tgs:Concept.ClimateSensitivity,
@@ -5780,6 +5927,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.ContextBasedSustainability,
         tgs:Concept.CoupledSystemicRisks,
         tgs:Concept.DefaultModeNetwork,
+        tgs:Concept.DemocratizingRiskDecisions,
         tgs:Concept.DiscretePhaseShift,
         tgs:Concept.DissipativeStructures,
         tgs:Concept.EcologicalFootprint,
@@ -5787,6 +5935,7 @@ tgs:Collection.Subject_SystemsScience a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.Enantiodromia,
         tgs:Concept.EpigeneticLandscape,
+        tgs:Concept.ExistentialRisk,
         tgs:Concept.FifthLawOfThermodynamics,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.FragmentedConsciousness,
@@ -5882,6 +6031,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EfficiencyResilienceBalance,
         tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EnergyAdditionsNotTransitions,
+        tgs:Concept.EnergyAndGreatPowerSuccession,
         tgs:Concept.EnergyBlindness,
         tgs:Concept.EnergyGDPCoupling,
         tgs:Concept.EnergyPoverty,
@@ -5890,6 +6040,7 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EnergySymbiosis,
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.EpigeneticLandscape,
+        tgs:Concept.ExistentialRisk,
         tgs:Concept.ExosomaticEnergy,
         tgs:Concept.FourHorsemenOfThe2020s,
         tgs:Concept.GeneralizedJevonsParadox,
@@ -5945,6 +6096,8 @@ tgs:Collection.Lens_Biophysical a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Game Theoretic lens"@en ;
     skos:member tgs:Concept.AIAsMetacrisisAccelerant,
+        tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor,
+        tgs:Concept.CausalChainOfExistentialRisk,
         tgs:Concept.CollectiveActionProblem,
         tgs:Concept.CorporationAsObligateSociopath,
         tgs:Concept.CorporationsAsMisalignedAI,
@@ -5969,6 +6122,7 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.NarrowGoalAchieving,
         tgs:Concept.NonZeroSumness,
         tgs:Concept.OmniLose,
+        tgs:Concept.OPECPlusCohesion,
         tgs:Concept.OpportunityRiskAsymmetry,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.PositiveSumInGroupNegativeSumToNature,
@@ -5990,6 +6144,7 @@ tgs:Collection.Lens_GameTheoretic a skos:Collection, owl:NamedIndividual ;
 tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
     skos:prefLabel "TGS concepts: Institutional lens"@en ;
     skos:member tgs:Concept.AdvancePolicy,
+        tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor,
         tgs:Concept.AbundantEnergyEnablesBadDesign,
         tgs:Concept.AttentionEconomy,
         tgs:Concept.AxiologicalDesign,
@@ -6001,9 +6156,11 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CarbonAllocationByUse,
         tgs:Concept.CarbonBudgetInequity,
         tgs:Concept.CaringEconomics,
+        tgs:Concept.CausalChainOfExistentialRisk,
         tgs:Concept.ChaliceAndBladePower,
         tgs:Concept.Chrematistics,
         tgs:Concept.CivilizationalOptionality,
+        tgs:Concept.ClimateRiskRealism,
         tgs:Concept.CollapseResilience,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CommunityScaleRenewables,
@@ -6016,6 +6173,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.CorporationsAsMisalignedAI,
         tgs:Concept.CostOfExtractionPricing,
         tgs:Concept.CulturalAntibodies,
+        tgs:Concept.DemocratizingRiskDecisions,
         tgs:Concept.DetoxifyingCapitalism,
         tgs:Concept.DominationPartnershipContinuum,
         tgs:Concept.EcologyOfTheoriesOfChange,
@@ -6024,9 +6182,11 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.EightPrinciplesOfARegenerativeEconomy,
         tgs:Concept.EliteOverproduction,
         tgs:Concept.EmbeddedGrowthObligation,
+        tgs:Concept.EnergyAndGreatPowerSuccession,
         tgs:Concept.EnergyPoverty,
         tgs:Concept.EnergyTransitionNarrative,
         tgs:Concept.EnvironmentAsDevelopment,
+        tgs:Concept.ExistentialRisk,
         tgs:Concept.FinanceAlgorithm,
         tgs:Concept.FinancialTransactionTax,
         tgs:Concept.FourCornerstonesOfPartnership,
@@ -6047,6 +6207,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.MoneyAsMaximumOptionality,
         tgs:Concept.MusicalChairsMoment,
         tgs:Concept.NewtonianFoundationsOfEconomics,
+        tgs:Concept.OPECPlusCohesion,
         tgs:Concept.OstromDesignPrinciples,
         tgs:Concept.OvertonWindow,
         tgs:Concept.PathoAdolescentSociety,
@@ -6071,6 +6232,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.SocialLimitsToGrowthBeforePhysical,
         tgs:Concept.SolutionSpaceCube,
+        tgs:Concept.StompReflex,
         tgs:Concept.SuperorganismFreeZones,
         tgs:Concept.TheFifteenHundred,
         tgs:Concept.ThirdAttractor,
@@ -6081,6 +6243,7 @@ tgs:Collection.Lens_Institutional a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.UnintendedConsequences,
         tgs:Concept.UnintentionalCommunity,
         tgs:Concept.Untax,
+        tgs:Concept.WesternEnergyHypocrisy,
         tgs:Concept.WileECoyoteMoment,
         tgs:Concept.YellowTeaming ;
     .
@@ -6159,6 +6322,7 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.AxiologicalDesign,
         tgs:Concept.BattlesOfOurTime,
         tgs:Concept.ChaliceAndBladePower,
+        tgs:Concept.ClimateRiskRealism,
         tgs:Concept.CollapseResponseContinuum,
         tgs:Concept.CompostingTheSurplus,
         tgs:Concept.ConfirmationBias,
@@ -6217,11 +6381,13 @@ tgs:Collection.Lens_PsychologicalInner a skos:Collection, owl:NamedIndividual ;
         tgs:Concept.RestorationAndRestoryation,
         tgs:Concept.ReverseDominanceHierarchy,
         tgs:Concept.RichInSocialCapital,
+        tgs:Concept.RiskHomeostasis,
         tgs:Concept.SensemakingPrerequisiteOfOpenSociety,
         tgs:Concept.SevenFiresProphecy,
         tgs:Concept.ShadowOfTheSuperorganism,
         tgs:Concept.SharedBroadcastPerturbation,
         tgs:Concept.SoulAsUniqueEcologicalNiche,
+        tgs:Concept.StompReflex,
         tgs:Concept.SupernormalStimuli,
         tgs:Concept.SystemsTeachConservation,
         tgs:Concept.TechnologyIsNotValuesNeutral,
@@ -6455,6 +6621,20 @@ tgs:Concept.PathoAdolescentSociety skos:related tgs:Concept.GreatTurning .
 tgs:Concept.PathoAdolescentSociety skos:related tgs:Concept.EcologicalAwakening .
 tgs:Concept.KnowingVersusKnowingAbout skos:related tgs:Concept.EcologicalAwakening .
 tgs:Concept.KnowingVersusKnowingAbout skos:related tgs:Concept.TwoWaysOfKnowing .
+tgs:Concept.RiskHomeostasis skos:related tgs:Concept.EnergyBlindness .
+tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor skos:related tgs:Concept.OPECPlusCohesion .
+tgs:Concept.WesternEnergyHypocrisy skos:related tgs:Concept.EnergyAndGreatPowerSuccession .
+tgs:Concept.EnergyAndGreatPowerSuccession skos:related tgs:Concept.EnergyAdditionsNotTransitions .
+tgs:Concept.EnergyAndGreatPowerSuccession skos:related tgs:Concept.PeakOil .
+tgs:Concept.ExistentialRisk skos:related tgs:Concept.CausalChainOfExistentialRisk .
+tgs:Concept.ExistentialRisk skos:related tgs:Concept.RiskSingularity .
+tgs:Concept.ExistentialRisk skos:related tgs:Concept.Polycrisis .
+tgs:Concept.CausalChainOfExistentialRisk skos:related tgs:Concept.LootableSurplus .
+tgs:Concept.CausalChainOfExistentialRisk skos:related tgs:Concept.DarkTriad .
+tgs:Concept.CausalChainOfExistentialRisk skos:related tgs:Concept.Superorganism .
+tgs:Concept.StompReflex skos:related tgs:Concept.DemocratizingRiskDecisions .
+tgs:Concept.StompReflex skos:related tgs:Concept.TwelveInformationHazards .
+tgs:Concept.ClimateRiskRealism skos:related tgs:Concept.ExistentialRisk .
 
 # ===== BEGIN DERIVED INVERSES (scripts/derive/compute_inverses.py; do not edit by hand) =====
 
@@ -6490,6 +6670,9 @@ tgs:Concept.CarbonPulse
 tgs:Concept.CarryingCapacity
     skos:related tgs:Concept.ContextBasedSustainability, tgs:Concept.PhantomCarryingCapacity .
 
+tgs:Concept.CausalChainOfExistentialRisk
+    skos:related tgs:Concept.ExistentialRisk .
+
 tgs:Concept.CircleOfTrustLocalism
     skos:related tgs:Concept.CommunityScaleRenewables, tgs:Concept.ProSocialPrepping .
 
@@ -6521,8 +6704,14 @@ tgs:Concept.CulturalAntibodies
 tgs:Concept.CulturalMitochondria
     skos:related tgs:Concept.BattlesOfOurTime .
 
+tgs:Concept.DarkTriad
+    skos:related tgs:Concept.CausalChainOfExistentialRisk .
+
 tgs:Concept.DeepEcology
     skos:related tgs:Concept.KinshipWorldview, tgs:Concept.Rewilding .
+
+tgs:Concept.DemocratizingRiskDecisions
+    skos:related tgs:Concept.StompReflex .
 
 tgs:Concept.DetoxifyingCapitalism
     skos:related tgs:Concept.BabyBust .
@@ -6567,16 +6756,22 @@ tgs:Concept.EmbeddedGrowthObligation
     skos:related tgs:Concept.GrowthDoubleBind .
 
 tgs:Concept.EnergyAdditionsNotTransitions
-    skos:related tgs:Concept.DenseToMoreDenseTransition, tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
+    skos:related tgs:Concept.DenseToMoreDenseTransition, tgs:Concept.EnergyAndGreatPowerSuccession, tgs:Concept.EnergySymbiosis, tgs:Concept.EnergyTransitionNarrative .
+
+tgs:Concept.EnergyAndGreatPowerSuccession
+    skos:related tgs:Concept.WesternEnergyHypocrisy .
 
 tgs:Concept.EnergyBlindness
-    skos:related tgs:Concept.AbundantEnergyEnablesBadDesign, tgs:Concept.EnergyGDPCoupling .
+    skos:related tgs:Concept.AbundantEnergyEnablesBadDesign, tgs:Concept.EnergyGDPCoupling, tgs:Concept.RiskHomeostasis .
 
 tgs:Concept.Enoughness
     skos:related tgs:Concept.GiftEconomy, tgs:Concept.HonorableHarvest .
 
 tgs:Concept.EpistemicCommons
     skos:related tgs:Concept.InformationCultureTransitions .
+
+tgs:Concept.ExistentialRisk
+    skos:related tgs:Concept.ClimateRiskRealism .
 
 tgs:Concept.FifthLawOfThermodynamics
     skos:related tgs:Concept.DissipativeStructures .
@@ -6689,6 +6884,9 @@ tgs:Concept.LocalizedSyntropySystemicEntropy
 tgs:Concept.LogicOfSeparation
     skos:related tgs:Concept.FinanceAlgorithm .
 
+tgs:Concept.LootableSurplus
+    skos:related tgs:Concept.CausalChainOfExistentialRisk .
+
 tgs:Concept.LossAversion
     skos:related tgs:Concept.AggregateCognitiveDissonance, tgs:Concept.ConfirmationBias, tgs:Concept.CulturalAntibodies .
 
@@ -6726,6 +6924,9 @@ tgs:Concept.NewtonianFoundationsOfEconomics
 tgs:Concept.NonZeroSumness
     skos:related tgs:Concept.GameTheory .
 
+tgs:Concept.OPECPlusCohesion
+    skos:related tgs:Concept.AbqaiqAttackAsSaudiPearlHarbor .
+
 tgs:Concept.OneMarshmallowRewardCircuits
     skos:related tgs:Concept.DopamineHijackedCulture .
 
@@ -6736,13 +6937,13 @@ tgs:Concept.Overshoot
     skos:related tgs:Concept.CarryingCapacity .
 
 tgs:Concept.PeakOil
-    skos:related tgs:Concept.NaturalDeclineRate, tgs:Concept.ResourcesVersusReserves .
+    skos:related tgs:Concept.EnergyAndGreatPowerSuccession, tgs:Concept.NaturalDeclineRate, tgs:Concept.ResourcesVersusReserves .
 
 tgs:Concept.PersonalAgency
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.LearnedHelplessness .
 
 tgs:Concept.Polycrisis
-    skos:related tgs:Concept.BundledPreparedness, tgs:Concept.FinanceAlgorithm .
+    skos:related tgs:Concept.BundledPreparedness, tgs:Concept.ExistentialRisk, tgs:Concept.FinanceAlgorithm .
 
 tgs:Concept.PositiveSumInGroupNegativeSumToNature
     skos:related tgs:Concept.NonZeroSumness .
@@ -6795,6 +6996,9 @@ tgs:Concept.RightsOfNature
     skos:related tgs:Concept.DeepEcology ;
     skos:relatedMatch tgs:PracticeTerm.RightsOfNature .
 
+tgs:Concept.RiskSingularity
+    skos:related tgs:Concept.ExistentialRisk .
+
 tgs:Concept.RobustnessVsPerformance
     skos:related tgs:Concept.FiveThingsThatKeepUsWhole, tgs:Concept.SuccessAsLongTermPersistence .
 
@@ -6827,7 +7031,7 @@ tgs:Concept.SupernormalStimuli
 
 tgs:Concept.Superorganism
     thinkr:complements tgs:Concept.MultipolarTrap ;
-    skos:related tgs:Concept.ConsciousCulturalEvolution, tgs:Concept.DissipativeStructures, tgs:Concept.EnergySymbiosis, tgs:Concept.MultipolarTrap .
+    skos:related tgs:Concept.CausalChainOfExistentialRisk, tgs:Concept.ConsciousCulturalEvolution, tgs:Concept.DissipativeStructures, tgs:Concept.EnergySymbiosis, tgs:Concept.MultipolarTrap .
 
 tgs:Concept.SupplyChainFragility
     skos:related tgs:Concept.JevonsParadox .
@@ -6876,7 +7080,7 @@ tgs:Concept.TrueAdulthood
     skos:related tgs:Concept.SoulAsUniqueEcologicalNiche .
 
 tgs:Concept.TwelveInformationHazards
-    skos:related tgs:Concept.MusicalChairsMoment .
+    skos:related tgs:Concept.MusicalChairsMoment, tgs:Concept.StompReflex .
 
 tgs:Concept.TwoWaysOfKnowing
     skos:related tgs:Concept.KnowingVersusKnowingAbout ;
